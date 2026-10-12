@@ -89,6 +89,11 @@ def is_ok(entry):
 
 UNVERIFIED_ADMITTED = ("published", "cf_protected_published", "failing", "unverified")
 
+# PULSAR_ADMIT_CF=1: Cloudflare korumalı ama canlı (cf_protected_published, failing değil) kaynaklar da
+# yayınlanır. Uygulama Cloudflare'i kendi WebView'ında çözer; CI koşucusu çözemediği için bu kaynakları
+# "doğrulanmamış" sayıyorduk.
+ADMIT_CF = os.environ.get("PULSAR_ADMIT_CF") == "1"
+
 
 def is_publishable(entry, include_unverified=False, allow_multilang=False):
     """Publication gate for the JAR, the Mihon mirror and their index 'sources' lists.
@@ -100,5 +105,7 @@ def is_publishable(entry, include_unverified=False, allow_multilang=False):
     if is_multilang(entry) and not allow_multilang:
         return False
     if is_ok(entry):
+        return True
+    if ADMIT_CF and entry.get("status") == "cf_protected_published" and not entry.get("failing"):
         return True
     return bool(include_unverified) and entry.get("status") in UNVERIFIED_ADMITTED
