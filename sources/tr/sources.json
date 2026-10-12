@@ -1,32 +1,7 @@
 {
-  "generatedAt": "2026-10-12T10:35:14+00:00",
-  "count": 184,
+  "generatedAt": "2026-10-12T15:36:46+00:00",
+  "count": 168,
   "sources": [
-    {
-      "id": "3hentai.net",
-      "name": "3Hentai",
-      "domain": "3hentai.net",
-      "baseUrl": "https://3hentai.net",
-      "engine": null,
-      "nsfw": true,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.hentai3",
-          "version": "1.6.5",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/8ef06cd-0/tachiyomi-all.hentai3-v1.6.5.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
-      ]
-    },
     {
       "id": "adumanga.com",
       "name": "TempestScans",
@@ -41,7 +16,8 @@
           "parser": "TEMPESTSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/TempestScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "adumanga",
@@ -61,8 +37,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "alternative": {
         "domain": "koplo77-irama.com",
         "how": "moved_to",
@@ -91,7 +67,8 @@
           "parser": "AFRODITSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/AfroditScans.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "afroditscans",
@@ -111,37 +88,12 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
         "kotatsu",
         "nyora"
-      ]
-    },
-    {
-      "id": "akuma.moe",
-      "name": "Akuma",
-      "domain": "akuma.moe",
-      "baseUrl": "https://akuma.moe",
-      "engine": null,
-      "nsfw": true,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.akuma",
-          "version": "1.6.10",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/bdcf84f/tachiyomi-all.akuma-v1.6.10.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
       ]
     },
     {
@@ -158,7 +110,8 @@
           "parser": "ALLIED_FANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/AlliedFansub.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "ALLIED_FANSUB",
@@ -178,8 +131,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -203,7 +156,8 @@
           "parser": "ALUCARDSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/AlucardScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "ALUCARDSCANS",
@@ -223,8 +177,8 @@
         "http": 525,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -256,7 +210,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -280,7 +234,8 @@
           "parser": "ANIKIGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Anikiga.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "ANIKIGA",
@@ -300,7 +255,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -322,7 +277,8 @@
           "parser": "ANISA_MANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/AnisaManga.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "ANISA_MANGA",
@@ -342,8 +298,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -363,7 +319,8 @@
           "parser": "ARAZNOVEL",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/ArazNovel.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "ARAZNOVEL",
@@ -383,7 +340,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -408,7 +365,8 @@
           "parser": "ARCURAFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/ArcuraFansub.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "arcurafansub",
@@ -428,7 +386,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -450,7 +408,8 @@
           "parser": "ARMONISCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/ArmoniScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "ARMONISCANS",
@@ -470,8 +429,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -491,7 +450,8 @@
           "parser": "ASEMIFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/AsemiFansub.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "asemifansub",
@@ -511,8 +471,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -536,16 +496,17 @@
           "parser": "ASURASCANSTR",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/AsuraScansTR.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "ASURASCANSTR",
-          "broken": true,
-          "brokenReason": "domain does not resolve",
+          "broken": false,
+          "brokenReason": null,
           "cfWall": null,
           "antiBot": null,
           "engine": "madara",
-          "deadInLiveness": true
+          "deadInLiveness": false
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
@@ -556,8 +517,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -578,7 +539,8 @@
           "parser": "ATHENAMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/AthenaManga.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "athenamanga",
@@ -598,8 +560,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -619,7 +581,8 @@
           "parser": "AYATOON",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/Ayatoon.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "ayatoon",
@@ -639,8 +602,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -671,7 +634,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -691,7 +654,8 @@
           "parser": "CULTURESUBS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/CultureSubs.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "culturesubs",
@@ -711,8 +675,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -736,7 +700,8 @@
           "parser": "DIAMONDFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/DiamondFansub.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "DIAMONDFANSUB",
@@ -756,7 +721,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -783,14 +748,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='dom4lfansub.online', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='dom4lfansub.online', port=443) at 0x7f82f08007d0>, 'Con",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='dom4lfansub.online', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='dom4lfansub.online', port=443) at 0x7f23a7d5ae70>, 'Con",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "mihon"
       ]
@@ -809,7 +774,8 @@
           "parser": "DOMALFANSB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/DomalFansb.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "DOMALFANSB",
@@ -829,8 +795,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "alternative": {
         "domain": "qemow.com",
         "how": "moved_to",
@@ -839,31 +805,6 @@
       "upstreams": [
         "kotatsu",
         "nyora"
-      ]
-    },
-    {
-      "id": "dragonball-multiverse.com",
-      "name": "Dragon Ball Multiverse",
-      "domain": "dragonball-multiverse.com",
-      "baseUrl": "https://www.dragonball-multiverse.com",
-      "engine": null,
-      "nsfw": false,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.dragonballmultiverse",
-          "version": "1.6.0",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/24bc6c2/tachiyomi-all.dragonballmultiverse-v1.6.0.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
       ]
     },
     {
@@ -884,7 +825,8 @@
           "parser": "ELDERMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/ElderManga.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -896,7 +838,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -917,7 +859,8 @@
           "parser": "ELECEEDTURKIYE",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/EleceedTurkiye.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -929,8 +872,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 3,
       "alternative": {
         "domain": "nabicix.com",
         "how": "moved_to",
@@ -954,7 +897,8 @@
           "parser": "EPIKMAN",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/zeistmanga/tr/EpikMan.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "epikman",
@@ -974,8 +918,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1006,7 +950,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1026,7 +970,8 @@
           "parser": "ESOMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/EsoManga.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "ESOMANGA",
@@ -1040,14 +985,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_unrelated: live.sportsvot.com",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
-        "status": "parked",
+        "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1067,7 +1012,8 @@
           "parser": "DECCALSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/DeccalScans.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "DECCALSCANS",
@@ -1087,8 +1033,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1112,7 +1058,8 @@
           "parser": "GAFELAND",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/Gafeland.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "gafeland",
@@ -1132,7 +1079,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1158,7 +1105,8 @@
           "parser": "GAIATOON",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/GaiaToon.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "gaiatoon",
@@ -1178,7 +1126,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1204,7 +1152,8 @@
           "parser": "GARCIAMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/GarciaManga.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "GARCIAMANGA",
@@ -1224,7 +1173,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1246,7 +1195,8 @@
           "parser": "GHOSTFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/GhostFansub.kt",
           "broken": true,
-          "brokenReason": "Redirect to @GRIMELEK"
+          "brokenReason": "Redirect to @GRIMELEK",
+          "lang": "tr"
         },
         "catalog": {
           "id": "GHOSTFANSUB",
@@ -1266,8 +1216,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1298,32 +1248,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
-      ]
-    },
-    {
-      "id": "globalcomix.com",
-      "name": "GlobalComix",
-      "domain": "globalcomix.com",
-      "baseUrl": "https://globalcomix.com",
-      "engine": null,
-      "nsfw": false,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.globalcomix",
-          "version": "1.6.0",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/24bc6c2/tachiyomi-all.globalcomix-v1.6.0.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1347,7 +1272,8 @@
           "parser": "GOLGEBAHCESI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/Golgebahcesi.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "golgebahcesi",
@@ -1367,8 +1293,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -1389,7 +1315,8 @@
           "parser": "ROBINMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/RobinManga.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "robinmanga",
@@ -1409,8 +1336,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1430,7 +1357,8 @@
           "parser": "GUNCEL_MANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/GuncelManga.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "GUNCEL_MANGA",
@@ -1450,8 +1378,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "alternative": {
         "domain": "afreebitco.in",
         "how": "moved_to",
@@ -1467,7 +1395,7 @@
       "name": "Hattori Manga",
       "domain": "hattorimanga.net",
       "baseUrl": "https://hattorimanga.net",
-      "engine": "mangathemesia",
+      "engine": null,
       "nsfw": true,
       "scope": "tr_native",
       "formats": {
@@ -1487,7 +1415,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1518,7 +1446,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1538,7 +1466,8 @@
           "parser": "HAYALISTIC",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Hayalistic.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "HAYALISTIC",
@@ -1558,8 +1487,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1590,32 +1519,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
-      ]
-    },
-    {
-      "id": "hentaihand.com",
-      "name": "HentaiHand",
-      "domain": "hentaihand.com",
-      "baseUrl": "https://hentaihand.com",
-      "engine": null,
-      "nsfw": true,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.hentaihand",
-          "version": "1.6.1",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/ce0c3b4/tachiyomi-all.hentaihand-v1.6.1.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1635,7 +1539,8 @@
           "parser": "HOIFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/HoiFansub.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "HOIFANSUB",
@@ -1649,14 +1554,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='hoifansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='hoifansub.com', port=443) at 0x7f82f00d01a0>, 'Connection to",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='hoifansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='hoifansub.com', port=443) at 0x7f23a7dca150>, 'Connection to",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1687,7 +1592,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1707,7 +1612,8 @@
           "parser": "IMPARATORMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/ImparatorManga.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "IMPARATORMANGA",
@@ -1727,8 +1633,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1748,7 +1654,8 @@
           "parser": "JELLYRING",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Jellyring.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "JELLYRING",
@@ -1768,8 +1675,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1789,16 +1696,17 @@
           "parser": "JIANGZAITOON",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Jiangzaitoon.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "JIANGZAITOON",
-          "broken": true,
-          "brokenReason": "domain does not resolve",
+          "broken": false,
+          "brokenReason": null,
           "cfWall": null,
           "antiBot": null,
           "engine": "madara",
-          "deadInLiveness": true
+          "deadInLiveness": false
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
@@ -1809,8 +1717,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1821,7 +1729,7 @@
       "name": "JuraTempest",
       "domain": "juratempe.st",
       "baseUrl": "https://juratempe.st",
-      "engine": null,
+      "engine": "mangathemesia",
       "nsfw": false,
       "scope": "tr_native",
       "formats": {
@@ -1841,7 +1749,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1861,7 +1769,8 @@
           "parser": "KABUSMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/KabusManga.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "KABUSMANGA",
@@ -1881,8 +1790,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1902,7 +1811,8 @@
           "parser": "KEDI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Kedi.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "KEDI",
@@ -1922,8 +1832,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1954,7 +1864,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1974,7 +1884,8 @@
           "parser": "KORELISCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/KoreliScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -1986,8 +1897,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "alternative": {
         "domain": "nabicix.com",
         "how": "same_key",
@@ -2011,7 +1922,8 @@
           "parser": "KUROIMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/KuroiManga.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "KUROIMANGA",
@@ -2031,7 +1943,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -2063,7 +1975,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2102,7 +2014,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -2123,7 +2035,8 @@
           "parser": "LAVINIAFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/LaviniaFansub.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -2135,8 +2048,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "alternative": {
         "domain": "laviniafansub.shop",
         "how": "same_key",
@@ -2160,7 +2073,8 @@
           "parser": "LILYUMFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/LilyumFansub.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -2172,8 +2086,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu"
       ]
@@ -2207,8 +2121,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "nyora"
       ]
@@ -2238,32 +2152,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
-      ]
-    },
-    {
-      "id": "lunarx.to",
-      "name": "Lunar Manga",
-      "domain": "lunarx.to",
-      "baseUrl": "https://lunarx.to",
-      "engine": null,
-      "nsfw": false,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.lunaranime",
-          "version": "1.6.0",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/4217666-0/tachiyomi-all.lunaranime-v1.6.0.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2283,7 +2172,8 @@
           "parser": "MANGAAY",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/MangaAy.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -2295,8 +2185,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu"
       ]
@@ -2315,16 +2205,17 @@
           "parser": "MANGASEHRI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Mangasehri.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "MANGASEHRI",
-          "broken": false,
-          "brokenReason": null,
+          "broken": true,
+          "brokenReason": "domain does not resolve",
           "cfWall": "B",
           "antiBot": "cloudflare",
           "engine": "madara",
-          "deadInLiveness": false
+          "deadInLiveness": true
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
@@ -2335,8 +2226,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2360,7 +2251,8 @@
           "parser": "MANGASEHRINET",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MangaSehriNet.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "MANGASEHRINET",
@@ -2380,8 +2272,8 @@
         "http": 523,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -2407,12 +2299,8 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
+      "unverified": true,
+      "reason": "http 403",
       "lastChecked": "2026-10-12T10:35:14+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
@@ -2433,7 +2321,8 @@
           "parser": "ADONISFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/AdonisFansub.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "adonisfansub",
@@ -2453,7 +2342,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -2485,7 +2374,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2516,32 +2405,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
-      ]
-    },
-    {
-      "id": "mangaball.com",
-      "name": "Manga Ball",
-      "domain": "mangaball.com",
-      "baseUrl": "https://mangaball.com",
-      "engine": null,
-      "nsfw": false,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.mangaball",
-          "version": "1.6.4",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/6512a2e/tachiyomi-all.mangaball-v1.6.4.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2561,7 +2425,8 @@
           "parser": "MANGACIM",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/Mangacim.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "mangacim",
@@ -2581,8 +2446,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "alternative": {
         "domain": "mangacix.net",
         "how": "similar_key",
@@ -2607,7 +2472,8 @@
           "parser": "MANGACIX",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/Mangacix.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -2619,8 +2485,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "alternative": {
         "domain": "mangacix.net",
         "how": "same_key",
@@ -2659,8 +2525,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "nyora"
       ]
@@ -2683,7 +2549,8 @@
           "parser": "MANGA_DENIZI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mmrcms/tr/MangaDenizi.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "manga_denizi",
@@ -2703,37 +2570,12 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
         "kotatsu",
         "nyora"
-      ]
-    },
-    {
-      "id": "mangadex.org",
-      "name": "MangaDex",
-      "domain": "mangadex.org",
-      "baseUrl": "https://mangadex.org",
-      "engine": null,
-      "nsfw": false,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.mangadex",
-          "version": "1.6.0",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/8ef06cd-0/tachiyomi-all.mangadex-v1.6.0.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
       ]
     },
     {
@@ -2761,32 +2603,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
-      ]
-    },
-    {
-      "id": "mangadot.net",
-      "name": "MangaDot",
-      "domain": "mangadot.net",
-      "baseUrl": "https://mangadot.net",
-      "engine": null,
-      "nsfw": false,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.en.mangadotnet",
-          "version": "1.6.25",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/1319949/tachiyomi-en.mangadotnet-v1.6.25.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2817,7 +2634,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2837,7 +2654,8 @@
           "parser": "MANGAEFENDISI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/Mangaefendisi.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "mangaefendisi",
@@ -2857,8 +2675,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2893,8 +2711,8 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "nyora"
       ]
@@ -2913,7 +2731,8 @@
           "parser": "GLORYMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/GloryManga.kt",
           "broken": true,
-          "brokenReason": "Redirect to @MANGAGEZGINI"
+          "brokenReason": "Redirect to @MANGAGEZGINI",
+          "lang": "tr"
         },
         "catalog": {
           "id": "GLORYMANGA",
@@ -2927,14 +2746,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_parking_subdomain: ww38.mangagezgini.site",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='mangagezgini.site', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mangagezgini.site', port=443) at 0x7f23a7c78d10>, 'Conne",
       "probe": {
-        "status": "parked",
+        "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2954,7 +2773,8 @@
           "parser": "MANGAGEZGINI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MangaGezgini.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -2966,8 +2786,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu"
       ]
@@ -2986,7 +2806,8 @@
           "parser": "MANGAKAZANI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MangaKazani.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "mangakazani",
@@ -3006,8 +2827,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3027,7 +2848,8 @@
           "parser": "MANGAKINGS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MangaKings.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "mangakings",
@@ -3047,8 +2869,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3068,7 +2890,8 @@
           "parser": "MANGAKOLEJI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MangaKoleji.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "mangakoleji",
@@ -3088,8 +2911,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3120,32 +2943,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
-      ]
-    },
-    {
-      "id": "mangamillion.shueisha.co.jp",
-      "name": "Manga Million",
-      "domain": "mangamillion.shueisha.co.jp",
-      "baseUrl": "https://mangamillion.shueisha.co.jp",
-      "engine": null,
-      "nsfw": false,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.mangamillion",
-          "version": "1.6.1",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/2ba5b61/tachiyomi-all.mangamillion-v1.6.1.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3180,8 +2978,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "alternative": {
         "domain": "mangaoku.org",
         "how": "same_key",
@@ -3205,7 +3003,8 @@
           "parser": "MANGAOKU",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Mangaoku.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "MANGAOKU",
@@ -3219,14 +3018,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_parking_subdomain: ww16.mangaoku.info",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='mangaoku.info', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mangaoku.info', port=443) at 0x7f23a7c37710>, 'Connection to",
       "probe": {
-        "status": "parked",
-        "http": 200,
+        "status": "dead",
+        "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3246,7 +3045,8 @@
           "parser": "ATIKROST",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Atikrost.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -3258,8 +3058,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "alternative": {
         "domain": "mangaoku.com.tr",
         "how": "moved_to",
@@ -3283,7 +3083,8 @@
           "parser": "MANGAOKUSANA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MangaOkusana.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "MANGAOKUSANA",
@@ -3303,8 +3104,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3324,7 +3125,8 @@
           "parser": "MANGAOKUTR",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/Mangaokutr.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "mangaokutr",
@@ -3344,8 +3146,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3376,7 +3178,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3396,7 +3198,8 @@
           "parser": "MANGARUHU",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MangaRuhu.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "MANGARUHU",
@@ -3416,7 +3219,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -3437,7 +3240,8 @@
           "parser": "MANGASIGINAGI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MangaSiginagi.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "mangasiginagi",
@@ -3451,14 +3255,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_unrelated: live.sportsvot.com",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
-        "status": "parked",
+        "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3478,7 +3282,8 @@
           "parser": "MANGATILKISI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MangaTilkisi.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -3490,8 +3295,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "alternative": {
         "domain": "tilkiscans.com",
         "how": "same_key",
@@ -3515,7 +3320,8 @@
           "parser": "MANGATR",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MangaTr.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "MANGATR",
@@ -3535,13 +3341,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
-      "alternative": {
-        "domain": "manga-tr.com",
-        "how": "same_key",
-        "confidence": "medium"
-      },
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3565,7 +3366,8 @@
           "parser": "MANGAWOW",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MangaWow.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "MANGAWOW",
@@ -3585,7 +3387,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3611,7 +3413,8 @@
           "parser": "MANGAWT",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Mangawt.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "MANGAWT",
@@ -3631,7 +3434,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3658,14 +3461,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "http 523",
+      "reason": "timeout: ReadTimeout: HTTPSConnectionPool(host='mangazure.net', port=443): Read timed out. (read timeout=15)",
       "probe": {
         "status": "dead",
-        "http": 523,
+        "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "mihon"
       ]
@@ -3695,7 +3498,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3715,7 +3518,8 @@
           "parser": "MANWE",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Manwe.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "MANWE",
@@ -3756,7 +3560,8 @@
           "parser": "MERLINSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MerlinScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -3768,7 +3573,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3793,7 +3598,8 @@
           "parser": "MIKROKOSMOSFB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/zeistmanga/tr/Mikrokosmosfb.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "mikrokosmosfb",
@@ -3806,20 +3612,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
-      "reason": "redirect_unrelated: google.com",
+      "status": "published",
+      "reason": "http 200",
       "probe": {
-        "status": "parked",
-        "http": 429,
+        "status": "ok",
+        "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 2,
-      "alternative": {
-        "domain": "google.com",
-        "how": "moved_to",
-        "confidence": "high"
-      },
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -3840,7 +3641,8 @@
           "parser": "MILASUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MilaSub.kt",
           "broken": true,
-          "brokenReason": "Content not found or removed"
+          "brokenReason": "Content not found or removed",
+          "lang": "tr"
         },
         "catalog": {
           "id": "MILASUB",
@@ -3860,8 +3662,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3892,7 +3694,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3931,7 +3733,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3952,7 +3754,8 @@
           "parser": "MINDAFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MindaFansub.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -3964,8 +3767,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu"
       ]
@@ -3995,7 +3798,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4015,24 +3818,25 @@
           "parser": "MOONDAISY_SCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MoonDaisyScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_unrelated: expireddomains.com",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='moondaisyscans.biz', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='moondaisyscans.biz', port=443) at 0x7f23a7dc91c0>, 'Con",
       "probe": {
-        "status": "parked",
-        "http": 200,
+        "status": "dead",
+        "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 3,
       "alternative": {
-        "domain": "expireddomains.com",
-        "how": "moved_to",
-        "confidence": "high"
+        "domain": "moondaisyscans.pro",
+        "how": "same_key",
+        "confidence": "medium"
       },
       "upstreams": [
         "kotatsu"
@@ -4071,7 +3875,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4092,7 +3896,8 @@
           "parser": "MUGIMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MugiManga.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "MUGIMANGA",
@@ -4112,36 +3917,11 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "kotatsu",
         "nyora"
-      ]
-    },
-    {
-      "id": "myreadingmanga.info",
-      "name": "MyReadingManga",
-      "domain": "myreadingmanga.info",
-      "baseUrl": "https://myreadingmanga.info",
-      "engine": null,
-      "nsfw": true,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.myreadingmanga",
-          "version": "1.6.0",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/bdcf84f/tachiyomi-all.myreadingmanga-v1.6.0.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
       ]
     },
     {
@@ -4177,7 +3957,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4198,7 +3978,8 @@
           "parser": "NABISCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/NabiScans.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "NABISCANS",
@@ -4218,36 +3999,11 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
-      ]
-    },
-    {
-      "id": "namicomi.com",
-      "name": "NamiComi",
-      "domain": "namicomi.com",
-      "baseUrl": "https://namicomi.com",
-      "engine": null,
-      "nsfw": false,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.namicomi",
-          "version": "1.6.0",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/1319949/tachiyomi-all.namicomi-v1.6.0.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
       ]
     },
     {
@@ -4269,39 +4025,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "http 502",
       "probe": {
-        "status": "ok",
-        "http": 200,
+        "status": "dead",
+        "http": 502,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
-      ]
-    },
-    {
-      "id": "nhentai.com",
-      "name": "nHentai.com (unoriginal)",
-      "domain": "nhentai.com",
-      "baseUrl": "https://nhentai.com",
-      "engine": null,
-      "nsfw": true,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.nhentaicom",
-          "version": "1.6.1",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/ce0c3b4/tachiyomi-all.nhentaicom-v1.6.1.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "mihon"
       ]
@@ -4324,7 +4056,8 @@
           "parser": "NIRVANAMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/NirvanaManga.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "nirvanamanga",
@@ -4344,7 +4077,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4385,7 +4118,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4406,7 +4139,8 @@
           "parser": "NIVERAFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/NiveraFansub.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -4418,7 +4152,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -4438,7 +4172,8 @@
           "parser": "NOXSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/NoxScans.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "noxscans",
@@ -4458,8 +4193,13 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
+      "alternative": {
+        "domain": "nyxscans.com",
+        "how": "similar_key",
+        "confidence": "low"
+      },
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4479,7 +4219,8 @@
           "parser": "NYXMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/NyxManga.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -4491,20 +4232,15 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
-      "alternative": {
-        "domain": "nyxscans.com",
-        "how": "same_key",
-        "confidence": "medium"
-      },
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "kotatsu"
       ]
     },
     {
       "id": "nyxscans.com",
-      "name": "NyxManga",
+      "name": "Nyx Scans",
       "domain": "nyxscans.com",
       "baseUrl": "https://nyxscans.com",
       "engine": "mangareader",
@@ -4512,7 +4248,13 @@
       "scope": "tr_native",
       "formats": {
         "mihon": null,
-        "jar": null,
+        "jar": {
+          "parser": "NYXSCANS",
+          "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/iken/en/NyxScans.kt",
+          "broken": false,
+          "brokenReason": null,
+          "lang": "en"
+        },
         "catalog": {
           "id": "nyxmanga",
           "broken": false,
@@ -4531,14 +4273,10 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
-      "alternative": {
-        "domain": "nyxmanga.com",
-        "how": "same_key",
-        "confidence": "medium"
-      },
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
+        "kotatsu",
         "nyora"
       ]
     },
@@ -4567,7 +4305,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4587,7 +4325,8 @@
           "parser": "OPIATOON",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/OpiaToon.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "OPIATOON",
@@ -4607,8 +4346,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "alternative": {
         "domain": "opiatoon.shop",
         "how": "same_key",
@@ -4644,7 +4383,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4675,32 +4414,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
-      ]
-    },
-    {
-      "id": "panda.chaika.moe",
-      "name": "PandaChaika",
-      "domain": "panda.chaika.moe",
-      "baseUrl": "https://panda.chaika.moe",
-      "engine": null,
-      "nsfw": true,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.pandachaika",
-          "version": "1.6.0",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/bdcf84f/tachiyomi-all.pandachaika-v1.6.0.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4731,7 +4445,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4755,7 +4469,8 @@
           "parser": "PATIMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/PatiManga.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "patimanga",
@@ -4775,7 +4490,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4797,7 +4512,8 @@
           "parser": "PIEDPIPERFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/PiedpiperFansub.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "PIEDPIPERFANSUB",
@@ -4811,14 +4527,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_parking_subdomain: ww17.piedpiperfansub.me",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='piedpiperfansub.me', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='piedpiperfansub.me', port=443) at 0x7f23a8735460>, 'Con",
       "probe": {
-        "status": "parked",
-        "http": 200,
+        "status": "dead",
+        "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4838,7 +4554,8 @@
           "parser": "PIEDPIPERFANSUBYY",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/PiedPiperFansubyy.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "PIEDPIPERFANSUBYY",
@@ -4858,8 +4575,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4879,7 +4596,8 @@
           "parser": "PRUNUSSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/PrunusScans.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "prunusscans",
@@ -4899,8 +4617,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4920,7 +4638,8 @@
           "parser": "RAGNARSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Ragnarscans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "RAGNARSCANS",
@@ -4940,7 +4659,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -4972,7 +4691,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4996,7 +4715,8 @@
           "parser": "RAINDROPTEAMFAN",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/Raindropteamfan.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "raindropteamfan",
@@ -5016,8 +4736,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -5038,7 +4758,8 @@
           "parser": "RUYAMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/RuyaManga.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -5050,7 +4771,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -5089,7 +4810,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5110,7 +4831,8 @@
           "parser": "SADSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/SadScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -5122,7 +4844,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -5142,7 +4864,8 @@
           "parser": "SARCASMSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/SarcasmScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "SARCASMSCANS",
@@ -5156,14 +4879,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_unrelated: live.sportsvot.com",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
-        "status": "parked",
+        "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5183,7 +4906,8 @@
           "parser": "HYPERIONSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/HyperionScans.kt",
           "broken": true,
-          "brokenReason": "Original site closed"
+          "brokenReason": "Original site closed",
+          "lang": "tr"
         },
         "catalog": {
           "id": "hyperionscans",
@@ -5197,14 +4921,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_unrelated: get.alwaysafepro.com",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
-        "status": "parked",
+        "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5228,7 +4952,8 @@
           "parser": "SEREINSCAN",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/SereinScan.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "sereinscan",
@@ -5248,7 +4973,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5274,7 +4999,8 @@
           "parser": "SHADOWCEVIRI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/zeistmanga/tr/ShadowCeviri.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "shadowceviri",
@@ -5294,13 +5020,8 @@
         "http": 429,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
-      "alternative": {
-        "domain": "google.com",
-        "how": "moved_to",
-        "confidence": "high"
-      },
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -5325,7 +5046,8 @@
           "parser": "SHIJIESCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/ShijieScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "shijiescans",
@@ -5345,8 +5067,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -5382,7 +5104,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "nyora"
@@ -5413,7 +5135,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5433,7 +5155,8 @@
           "parser": "GRIMELEK",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Grimelek.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -5445,8 +5168,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "alternative": {
         "domain": "siyahmelek.fun",
         "how": "same_key",
@@ -5481,7 +5204,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5501,7 +5224,8 @@
           "parser": "SNSCOEURTURKEY",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/zeistmanga/tr/SnscoeurTurkey.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "snscoeurturkey",
@@ -5515,19 +5239,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_unrelated: google.com",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
-        "status": "parked",
-        "http": 429,
-        "functional": null
+        "status": "ok",
+        "http": 200,
+        "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 2,
-      "alternative": {
-        "domain": "google.com",
-        "how": "moved_to",
-        "confidence": "high"
-      },
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5547,7 +5266,8 @@
           "parser": "STRAYFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/StrayFansub.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "STRAYFANSUB",
@@ -5561,14 +5281,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_parking_subdomain: ww38.strayfansub.com",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='strayfansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='strayfansub.com', port=443) at 0x7f23a7ea0290>, 'Connectio",
       "probe": {
-        "status": "parked",
+        "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5588,7 +5308,8 @@
           "parser": "SUMMERTOON",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/SummerToon.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "summertoon",
@@ -5608,8 +5329,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "alternative": {
         "domain": "summertoons.net",
         "how": "same_key",
@@ -5645,7 +5366,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5676,7 +5397,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5700,7 +5421,8 @@
           "parser": "TAROTSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/TarotScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "tarotscans",
@@ -5720,7 +5442,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5742,7 +5464,8 @@
           "parser": "TEMPESTFANSUBNET",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/TempestFansubNet.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "tempestfansubnet",
@@ -5762,8 +5485,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5783,7 +5506,8 @@
           "parser": "TEMPESTFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/TempestfansubParser.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "tempestfansub",
@@ -5803,8 +5527,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5828,7 +5552,8 @@
           "parser": "TENSHIMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/TenshiManga.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -5840,7 +5565,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5865,7 +5590,8 @@
           "parser": "TILKISCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/TilkiScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "MANGATILKISI",
@@ -5885,7 +5611,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5907,7 +5633,8 @@
           "parser": "TIMENAIGHT",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Timenaight.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "TIMENAIGHT",
@@ -5927,8 +5654,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5948,7 +5675,8 @@
           "parser": "TITANMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/TitanManga.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "TITANMANGA",
@@ -5968,8 +5696,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5993,7 +5721,8 @@
           "parser": "TONIZUTOON",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Tonizutoon.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "TONIZUTOON",
@@ -6013,7 +5742,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6046,7 +5775,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6070,7 +5799,8 @@
           "parser": "TORTUGACEVIRI",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/TortugaCeviri.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "TORTUGACEVIRI",
@@ -6090,7 +5820,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6123,7 +5853,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6147,7 +5877,8 @@
           "parser": "TRMANGAOKU",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/TrMangaOku.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "TRMANGAOKU",
@@ -6167,7 +5898,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6189,7 +5920,8 @@
           "parser": "TRWEBTOON",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/TrWebtoon.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -6201,8 +5933,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 3,
       "alternative": {
         "domain": "trmanga.com",
         "how": "moved_to",
@@ -6230,7 +5962,8 @@
           "parser": "LUNASCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/LunaScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "LUNASCANS",
@@ -6250,37 +5983,12 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
         "kotatsu",
         "nyora"
-      ]
-    },
-    {
-      "id": "universe.leagueoflegends.com",
-      "name": "League of Legends",
-      "domain": "universe.leagueoflegends.com",
-      "baseUrl": "https://universe.leagueoflegends.com/tr_tr/comic/",
-      "engine": null,
-      "nsfw": false,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.leagueoflegends",
-          "version": "1.6.0",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/24bc6c2/tachiyomi-all.leagueoflegends-v1.6.0.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
       ]
     },
     {
@@ -6301,7 +6009,8 @@
           "parser": "UZAYMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/UzayManga.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -6313,7 +6022,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6334,7 +6043,8 @@
           "parser": "VIYAFANSUB",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/ViyaFansub.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "VIYAFANSUB",
@@ -6354,8 +6064,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6379,7 +6089,8 @@
           "parser": "ROMANTIKMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/RomantikManga.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "ROMANTIKMANGA",
@@ -6399,7 +6110,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6421,7 +6132,8 @@
           "parser": "CLOVERMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/CloverManga.kt",
           "broken": true,
-          "brokenReason": "Redirect to @WEBTOONHATTI"
+          "brokenReason": "Redirect to @WEBTOONHATTI",
+          "lang": "tr"
         },
         "catalog": {
           "id": "CLOVERMANGA",
@@ -6435,19 +6147,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_parking_subdomain: ww17.webtoonhatti.me",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='webtoonhatti.me', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='webtoonhatti.me', port=443) at 0x7f23a91499d0>, 'Connectio",
       "probe": {
-        "status": "parked",
-        "http": 200,
+        "status": "dead",
+        "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
-      "alternative": {
-        "domain": "ww17.webtoonhatti.me",
-        "how": "moved_to",
-        "confidence": "high"
-      },
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6478,7 +6185,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6498,7 +6205,8 @@
           "parser": "WEBTOONTR",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Webtoontr.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "WEBTOONTR",
@@ -6518,36 +6226,11 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
         "nyora"
-      ]
-    },
-    {
-      "id": "xcomic.me",
-      "name": "XCOMIC",
-      "domain": "xcomic.me",
-      "baseUrl": "https://xcomic.me",
-      "engine": null,
-      "nsfw": false,
-      "scope": "multilang",
-      "formats": {
-        "mihon": {
-          "pkg": "eu.kanade.tachiyomi.extension.all.xcomic",
-          "version": "1.6.9",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/63ac848/tachiyomi-all.xcomic-v1.6.9.apk"
-        },
-        "jar": null,
-        "catalog": null
-      },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded_multilang",
-      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "mihon"
       ]
     },
     {
@@ -6564,7 +6247,8 @@
           "parser": "YAOIBAR",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/YaoiBar.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -6576,8 +6260,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu"
       ]
@@ -6611,8 +6295,8 @@
         "http": 523,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "nyora"
       ]
@@ -6642,7 +6326,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6662,7 +6346,8 @@
           "parser": "YAOIFLIX",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/YaoiFlix.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "YAOIFLIX",
@@ -6682,8 +6367,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 3,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 4,
       "alternative": {
         "domain": "qemow.com",
         "how": "moved_to",
@@ -6712,7 +6397,8 @@
           "parser": "YAOIMANGAOKU",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/YaoiMangaOku.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "YAOIMANGAOKU",
@@ -6732,7 +6418,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6754,7 +6440,8 @@
           "parser": "YAOITR",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/YaoiTr.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": null
       },
@@ -6766,8 +6453,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu"
       ]
@@ -6801,8 +6488,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "nyora"
       ]
@@ -6821,7 +6508,8 @@
           "parser": "YETISKINRUYAMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/YetiskinRuyaManga.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "YETISKINRUYAMANGA",
@@ -6841,8 +6529,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6862,7 +6550,8 @@
           "parser": "ZAMANMANGA",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/ZamanManga.kt",
           "broken": true,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "ZAMANMANGA",
@@ -6882,8 +6571,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-12T15:36:46+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6903,7 +6592,8 @@
           "parser": "ZENITHSCANS",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/ZenithScans.kt",
           "broken": false,
-          "brokenReason": null
+          "brokenReason": null,
+          "lang": "tr"
         },
         "catalog": {
           "id": "zenithscans",
@@ -6923,7 +6613,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T10:35:14+00:00",
+      "lastChecked": "2026-10-12T15:36:46+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
