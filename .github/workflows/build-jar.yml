@@ -219,7 +219,8 @@ jobs:
           SAVE="$(mktemp -d)"
           mkdir -p "$SAVE/state" "$SAVE/apk"
           cp jar/state/${BUCKET}.* "$SAVE/state/"
-          cp -r jar/apk/. "$SAVE/apk/"
+          JARNAME="$(echo "${BUCKET}" | tr _ -)"
+          cp "jar/apk/${JARNAME}.jar" "$SAVE/apk/"
           for i in 1 2 3 4 5 6; do
             git fetch origin "${BRANCH}"
             git reset --hard "origin/${BRANCH}"
