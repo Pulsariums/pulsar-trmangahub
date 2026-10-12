@@ -46,12 +46,16 @@ PARKING_MARKERS = ("this domain is for sale", "domain is for sale", "buy this do
                    "domain parking", "parked free", "sedoparking", "dan.com/buy",
                    "hugedomains.com", "alan adı satılık", "bu alan adı satılık", "domain satılık")
 ENGINE_FINGERPRINTS = (
-    ("madara", ("wp-content/themes/madara", "madara-core", "wp-manga")),
-    ("mangathemesia", ("mangareader", "ts-breadcrumb", "wp-content/themes/mangareader", "themesia")),
+    ("madara", ("wp-content/themes/madara", "madara-core", "wp-manga", "wp-content/plugins/wp-manga",
+                "manga-chapters-holder", "page-item-detail")),
+    ("mangathemesia", ("mangareader", "ts-breadcrumb", "wp-content/themes/mangareader", "themesia",
+                       "ts_reader", "listupd", "bsx")),
     ("initmanga", ("initmanga",)),
 )
 # Catalog engine names that are equivalent to a detected engine name.
 ENGINE_ALIASES = {"mangareader": "mangathemesia"}
+# Engines a catalog hint may name; used for the functional check when detection finds nothing.
+HINT_ENGINES = ("madara", "mangathemesia", "initmanga")
 # Engine-specific listing check: (paths tried in order, markers that prove a manga listing).
 # A marker is only searched in the body of a 2xx/3xx response.
 FUNCTIONAL_CHECKS = {
@@ -82,6 +86,13 @@ def canonical_engine(name):
         return None
     low = str(name).strip().lower()
     return ENGINE_ALIASES.get(low, low)
+
+
+def engine_hint_of(src):
+    """Engine named by an upstream record (engine or formats.catalog.engine), if it is a HINT_ENGINES name."""
+    raw = src.get("engine") or ((src.get("formats") or {}).get("catalog") or {}).get("engine")
+    name = canonical_engine(raw)
+    return name if name in HINT_ENGINES else None
 
 
 def check_functional(session, domain, engine):
@@ -192,7 +203,7 @@ def fetch_once(session, url):
     return result
 
 
-def probe_domain(session, domain, attempts=ATTEMPTS):
+def probe_domain(session, domain, attempts=ATTEMPTS, engine_hint=None):
     url = f"https://{domain}/"
     final = None
     for attempt in range(1, attempts + 1):
@@ -215,20 +226,27 @@ def probe_domain(session, domain, attempts=ATTEMPTS):
         final = record
         if not retry:
             break
+    engine_source = "detected" if final["engine_detected"] != "unknown" else None
     if final["status"] == "ok":
-        functional, reason = check_functional(session, domain, final["engine_detected"])
+        engine = final["engine_detected"]
+        hint = canonical_engine(engine_hint)
+        if engine == "unknown" and hint in HINT_ENGINES:
+            engine = hint
+            engine_source = "hint"
+        functional, reason = check_functional(session, domain, engine)
     else:
         functional, reason = None, f"not checked: status {final['status']}"
     final["functional"] = functional
     final["functional_reason"] = reason
+    final["engine_source"] = engine_source
     final["domain"] = domain
     return final
 
 
-def probe_one(domain, make_session=requests.Session):
+def probe_one(domain, make_session=requests.Session, engine_hint=None):
     with make_session() as session:
         session.headers.update(HEADERS)
-        return probe_domain(session, domain)
+        return probe_domain(session, domain, engine_hint=engine_hint)
 
 
 def main(argv=None):
@@ -251,10 +269,15 @@ def main(argv=None):
     if args.limit:
         records = records[:args.limit]
     domains = sorted({s["domain"] for s in records})
+    hints = {}
+    for src in records:
+        hint = engine_hint_of(src)
+        if hint and src["domain"] not in hints:
+            hints[src["domain"]] = hint
 
     probes = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(probe_one, dom): dom for dom in domains}
+        futures = {pool.submit(probe_one, dom, engine_hint=hints.get(dom)): dom for dom in domains}
         for fut in concurrent.futures.as_completed(futures):
             dom = futures[fut]
             try:
@@ -263,7 +286,8 @@ def main(argv=None):
                 probes[dom] = {"domain": dom, "status": "dead", "reason": f"probe crashed: {_short(exc)}",
                                "http": None, "finalUrl": None, "moved_to": None,
                                "engine_detected": "unknown", "ms": None, "attempts": 0,
-                               "functional": None, "functional_reason": "probe crashed"}
+                               "functional": None, "functional_reason": "probe crashed",
+                               "engine_source": None}
 
     results = []
     for src in records:
@@ -284,6 +308,7 @@ def main(argv=None):
             "engine_detected": probe["engine_detected"],
             "catalog_engine": catalog_engine,
             "engine_mismatch": mismatch,
+            "engine_source": probe.get("engine_source"),
             "functional": probe.get("functional"),
             "functional_reason": probe.get("functional_reason"),
             "ms": probe["ms"],

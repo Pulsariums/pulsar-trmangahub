@@ -12,6 +12,8 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 import build  # noqa: E402
 
+DNS_REASON = "dns: NameResolutionError: Failed to resolve"
+
 
 def src(domain, name=None, mihon=True, jar=False, engine=None):
     key = domain.split(".")[0]
@@ -75,7 +77,7 @@ class StatusRuleTests(unittest.TestCase):
         domains = ["ok.tr", "cf.tr", "dead.tr", "parked.tr", "wrong.tr", "blk.tr", "oth.tr"]
         sources = [src(d) for d in domains]
         rows = [prow("ok.tr", "ok", functional=True), prow("cf.tr", "cf_protected"),
-                prow("dead.tr", "dead"), prow("parked.tr", "parked"),
+                prow("dead.tr", "dead", reason=DNS_REASON), prow("parked.tr", "parked"),
                 prow("wrong.tr", "ok", functional=False, reason="http 200"),
                 prow("blk.tr", "blocked"), prow("oth.tr", "other")]
         # Keep the safety switch quiet: one blocked out of seven is fine, dead 2/7 is fine.
@@ -87,7 +89,7 @@ class StatusRuleTests(unittest.TestCase):
         self.assertEqual(by["cf.tr"]["status"], "cf_protected_published")
         self.assertEqual(by["dead.tr"]["status"], "quarantined")
         self.assertEqual(by["parked.tr"]["status"], "quarantined")
-        self.assertEqual(by["wrong.tr"]["status"], "quarantined")
+        self.assertEqual(by["wrong.tr"]["status"], "failing")
         self.assertTrue(by["wrong.tr"]["reason"].startswith("functional_false"))
         self.assertEqual(by["blk.tr"]["status"], "unverified")
         self.assertTrue(by["blk.tr"]["unverified"])
@@ -157,7 +159,7 @@ class AlternativeTests(unittest.TestCase):
     def test_alternative_attached_and_listed_while_original_stays_quarantined(self):
         domains = [f"x{i}.tr" for i in range(10)]
         sources = [src(d) for d in domains]
-        rows = [prow("x0.tr", "dead")] + ok_rows(domains[1:])
+        rows = [prow("x0.tr", "dead", reason=DNS_REASON)] + ok_rows(domains[1:])
         alts = {"x0.tr": {"candidate": "x0-new.tr", "how": "moved_to", "confidence": "high",
                           "probe": {"status": "ok", "functional": True}}}
         with tempfile.TemporaryDirectory() as tmp:
@@ -177,7 +179,7 @@ class AlternativeTests(unittest.TestCase):
 
     def test_candidate_null_is_not_attached(self):
         domains = [f"y{i}.tr" for i in range(10)]
-        rows = [prow("y0.tr", "dead")] + ok_rows(domains[1:])
+        rows = [prow("y0.tr", "dead", reason=DNS_REASON)] + ok_rows(domains[1:])
         alts = {"y0.tr": {"candidate": None, "tried": []}}
         with tempfile.TemporaryDirectory() as tmp:
             make_root(tmp, [src(d) for d in domains], rows, alts=alts)
@@ -236,6 +238,135 @@ class SafetySwitchTests(unittest.TestCase):
             self.assertEqual(build.main(["--root", tmp]), 1)
 
 
+def run_build(target_rows, sources=None, prev_entries=None):
+    """Run build on target_rows plus eight ok filler domains (keeps the safety switch quiet).
+
+    Returns (entries by id, published.json, REPORT.md text).
+    """
+    targets = [r["domain"] for r in target_rows]
+    fillers = [f"fill{i}.tr" for i in range(8)]
+    all_sources = sources if sources is not None else [src(d) for d in targets]
+    all_sources = all_sources + [src(d) for d in fillers]
+    rows = list(target_rows) + ok_rows(fillers)
+    prev = {"sources": prev_entries} if prev_entries is not None else None
+    with tempfile.TemporaryDirectory() as tmp:
+        make_root(tmp, all_sources, rows, prev=prev)
+        code = build.main(["--root", tmp])
+        assert code == 0, code
+        by = {e["id"]: e for e in read_out(tmp, "sources.json")["sources"]}
+        pub = read_out(tmp, "published.json")
+        report = _read_text(os.path.join(tmp, "sources", "tr", "REPORT.md"))
+    return by, pub, report
+
+
+def prev_entry(domain, status, failures=0):
+    return {"id": domain, "status": status, "firstSeen": "2026-01-01T00:00:00+00:00",
+            "consecutiveFailures": failures}
+
+
+class FailureToleranceTests(unittest.TestCase):
+    def test_non_immediate_failure_without_history_is_failing_and_not_published(self):
+        by, pub, _ = run_build([prow("t.tr", "dead", reason="timeout: ReadTimeout")])
+        self.assertEqual(by["t.tr"]["status"], "failing")
+        self.assertEqual(by["t.tr"]["consecutiveFailures"], 1)
+        self.assertNotIn("failing", by["t.tr"])
+        self.assertNotIn("t.tr", [m["domain"] for m in pub["mihon"]])
+
+    def test_published_source_stays_published_while_failing(self):
+        by, pub, _ = run_build([prow("t.tr", "dead", reason="connect: ConnectionError")],
+                               prev_entries=[prev_entry("t.tr", "published", 1)])
+        self.assertEqual(by["t.tr"]["status"], "published")
+        self.assertTrue(by["t.tr"]["failing"])
+        self.assertEqual(by["t.tr"]["consecutiveFailures"], 2)
+        self.assertIn("t.tr", [m["domain"] for m in pub["mihon"]])
+
+    def test_cf_protected_published_stays_while_failing(self):
+        by, pub, _ = run_build([prow("t.tr", "dead", reason="http 500")],
+                               prev_entries=[prev_entry("t.tr", "cf_protected_published", 0)])
+        self.assertEqual(by["t.tr"]["status"], "cf_protected_published")
+        self.assertTrue(by["t.tr"]["failing"])
+
+    def test_third_consecutive_failure_quarantines(self):
+        by, pub, _ = run_build([prow("t.tr", "dead", reason="http 523")],
+                               prev_entries=[prev_entry("t.tr", "published", 2)])
+        self.assertEqual(by["t.tr"]["status"], "quarantined")
+        self.assertEqual(by["t.tr"]["consecutiveFailures"], 3)
+        self.assertNotIn("t.tr", [m["domain"] for m in pub["mihon"]])
+
+    def test_functional_false_counts_as_failure(self):
+        by, _, _ = run_build([prow("t.tr", "ok", functional=False, reason="http 200")],
+                             prev_entries=[prev_entry("t.tr", "published", 0)])
+        self.assertEqual(by["t.tr"]["status"], "published")
+        self.assertTrue(by["t.tr"]["failing"])
+        self.assertEqual(by["t.tr"]["consecutiveFailures"], 1)
+
+    def test_success_resets_failure_count_and_clears_failing(self):
+        by, pub, _ = run_build([prow("t.tr", "ok", functional=True)],
+                               prev_entries=[prev_entry("t.tr", "failing", 2)])
+        self.assertEqual(by["t.tr"]["status"], "published")
+        self.assertEqual(by["t.tr"]["consecutiveFailures"], 0)
+        self.assertNotIn("failing", by["t.tr"])
+
+    def test_dns_failure_quarantines_immediately(self):
+        by, _, _ = run_build([prow("t.tr", "dead", reason=DNS_REASON)],
+                             prev_entries=[prev_entry("t.tr", "published", 0)])
+        self.assertEqual(by["t.tr"]["status"], "quarantined")
+
+    def test_parked_quarantines_immediately(self):
+        by, _, _ = run_build([prow("t.tr", "parked")], prev_entries=[prev_entry("t.tr", "published", 0)])
+        self.assertEqual(by["t.tr"]["status"], "quarantined")
+
+    def test_http_404_and_410_quarantine_immediately(self):
+        for code in (404, 410):
+            row = prow("t.tr", "dead", reason=f"http {code}")
+            row["http"] = code
+            by, _, _ = run_build([row], prev_entries=[prev_entry("t.tr", "published", 0)])
+            self.assertEqual(by["t.tr"]["status"], "quarantined", code)
+
+    def test_blocked_row_is_unverified_not_failure(self):
+        by, _, _ = run_build([prow("t.tr", "blocked")], prev_entries=[prev_entry("t.tr", "published", 1)])
+        self.assertEqual(by["t.tr"]["status"], "published")
+        self.assertTrue(by["t.tr"]["unverified"])
+        self.assertEqual(by["t.tr"]["consecutiveFailures"], 1)
+
+
+class MultilangScopeTests(unittest.TestCase):
+    def _multilang(self, domain):
+        s = src(domain)
+        s["scope"] = "multilang"
+        return s
+
+    def test_multilang_is_excluded_and_not_counted_by_safety_switch(self):
+        ml = [f"ml{i}.tr" for i in range(5)]
+        sources = [self._multilang(d) for d in ml]
+        rows = [prow(d, "dead", reason=DNS_REASON) for d in ml]
+        by, pub, report = run_build(rows, sources=sources)
+        self.assertEqual(by["ml0.tr"]["status"], "excluded_multilang")
+        self.assertEqual(by["ml0.tr"]["scope"], "multilang")
+        self.assertNotIn("ml0.tr", [m["domain"] for m in pub["mihon"]])
+        self.assertIn("- excluded_multilang: 5", report)
+
+    def test_multilang_dead_rows_do_not_trigger_cancel(self):
+        ml = [f"mc{i}.tr" for i in range(6)]
+        sources = [self._multilang(d) for d in ml] + [src(f"keep{i}.tr") for i in range(4)]
+        rows = [prow(d, "dead") for d in ml] + ok_rows([f"keep{i}.tr" for i in range(4)])
+        with tempfile.TemporaryDirectory() as tmp:
+            make_root(tmp, sources, rows)
+            self.assertEqual(build.main(["--root", tmp]), 0)
+
+    def test_multilang_gets_no_alternative(self):
+        sources = [self._multilang("ml.tr")]
+        alts = {"ml.tr": {"candidate": "x.tr", "how": "moved_to", "confidence": "high"}}
+        with tempfile.TemporaryDirectory() as tmp:
+            make_root(tmp, sources + [src(f"f{i}.tr") for i in range(9)],
+                      [prow("ml.tr", "dead", reason=DNS_REASON)] + ok_rows([f"f{i}.tr" for i in range(9)]),
+                      alts=alts)
+            build.main(["--root", tmp])
+            by = {e["id"]: e for e in read_out(tmp, "sources.json")["sources"]}
+        self.assertNotIn("alternative", by["ml.tr"])
+        self.assertEqual(by["ml.tr"]["status"], "excluded_multilang")
+
+
 class OutputTests(unittest.TestCase):
     def test_mihon_and_jar_sections_list_published_only(self):
         sources = [src("m.tr", mihon=True, jar=False), src("j.tr", mihon=False, jar=True),
@@ -256,7 +387,7 @@ class OutputTests(unittest.TestCase):
 
     def test_report_has_summary_and_change_section(self):
         domains = [f"r{i}.tr" for i in range(10)]
-        rows = [prow("r0.tr", "dead")] + ok_rows(domains[1:])
+        rows = [prow("r0.tr", "dead", reason=DNS_REASON)] + ok_rows(domains[1:])
         prev = {"sources": [{"id": "r0.tr", "status": "published", "firstSeen": "2026-01-01T00:00:00+00:00",
                              "consecutiveFailures": 0}]}
         with tempfile.TemporaryDirectory() as tmp:

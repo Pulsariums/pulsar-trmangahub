@@ -225,7 +225,7 @@ class AliasTests(unittest.TestCase):
         fake = {"status": "ok", "reason": "http 200", "http": 200, "finalUrl": "https://k.tr/",
                 "moved_to": None, "engine_detected": "mangathemesia", "ms": 1, "attempts": 1,
                 "functional": True, "functional_reason": "x"}
-        res = _run_main_with(rows, lambda domain: fake)
+        res = _run_main_with(rows, lambda domain, **kw: fake)
         self.assertFalse(res[0]["engine_mismatch"])
         self.assertEqual(res[0]["catalog_engine"], "mangareader")
 
@@ -234,8 +234,99 @@ class AliasTests(unittest.TestCase):
         fake = {"status": "ok", "reason": "http 200", "http": 200, "finalUrl": "https://k.tr/",
                 "moved_to": None, "engine_detected": "mangathemesia", "ms": 1, "attempts": 1,
                 "functional": None, "functional_reason": "x"}
-        res = _run_main_with(rows, lambda domain: fake)
+        res = _run_main_with(rows, lambda domain, **kw: fake)
         self.assertTrue(res[0]["engine_mismatch"])
+
+
+class ExtendedFingerprintTests(unittest.TestCase):
+    def test_new_madara_markers(self):
+        self.assertEqual(probe.detect_engine("<link href='/wp-content/plugins/wp-manga/x.js'>"), "madara")
+        self.assertEqual(probe.detect_engine("<div class='manga-chapters-holder'>"), "madara")
+        self.assertEqual(probe.detect_engine("<div class='page-item-detail'>"), "madara")
+
+    def test_new_mangathemesia_markers(self):
+        self.assertEqual(probe.detect_engine("<div id='ts_reader.run'>"), "mangathemesia")
+        self.assertEqual(probe.detect_engine("<div class='listupd'>"), "mangathemesia")
+        self.assertEqual(probe.detect_engine("<div class='bsx'>"), "mangathemesia")
+
+    def test_initmanga_unchanged(self):
+        self.assertEqual(probe.detect_engine("<script src='/initmanga.js'>"), "initmanga")
+
+
+class EngineHintTests(unittest.TestCase):
+    def test_unknown_with_madara_hint_runs_madara_functional_check(self):
+        session = FakeSession(
+            FakeResponse(200, b"<html>plain landing page</html>", url="https://h.tr/"),
+            FakeResponse(200, b"<div class='page-item-detail'>x</div>", url="https://h.tr/manga/"))
+        res = probe.probe_domain(session, "h.tr", engine_hint="madara")
+        self.assertEqual(res["status"], "ok")
+        self.assertEqual(res["engine_detected"], "unknown")
+        self.assertEqual(res["engine_source"], "hint")
+        self.assertIs(res["functional"], True)
+        self.assertEqual(session.calls[1][0], "https://h.tr/manga/")
+
+    def test_mangareader_hint_is_aliased_to_mangathemesia(self):
+        session = FakeSession(
+            FakeResponse(200, b"<html>plain</html>", url="https://h.tr/"),
+            FakeResponse(200, b"<div class='listupd'>", url="https://h.tr/manga/?page=1"))
+        res = probe.probe_domain(session, "h.tr", engine_hint="MangaReader")
+        self.assertIs(res["functional"], True)
+        self.assertEqual(res["engine_source"], "hint")
+        self.assertEqual(session.calls[1][0], "https://h.tr/manga/?page=1")
+
+    def test_detected_engine_wins_over_hint(self):
+        session = FakeSession(
+            FakeResponse(200, b"<div class='ts-breadcrumb'>", url="https://d.tr/"),
+            FakeResponse(200, b"<div class='bsx'>", url="https://d.tr/manga/?page=1"))
+        res = probe.probe_domain(session, "d.tr", engine_hint="madara")
+        self.assertEqual(res["engine_detected"], "mangathemesia")
+        self.assertEqual(res["engine_source"], "detected")
+        self.assertEqual(session.calls[1][0], "https://d.tr/manga/?page=1")
+
+    def test_unknown_engine_hint_is_ignored(self):
+        session = FakeSession(FakeResponse(200, b"<html>plain</html>", url="https://u.tr/"))
+        res = probe.probe_domain(session, "u.tr", engine_hint="heancms")
+        self.assertIsNone(res["functional"])
+        self.assertIsNone(res["engine_source"])
+        self.assertEqual(len(session.calls), 1)
+
+    def test_cf_protected_skips_functional_even_with_hint(self):
+        session = FakeSession(FakeResponse(503, b"<html>x</html>", headers={"cf-mitigated": "challenge"}))
+        res = probe.probe_domain(session, "cf.tr", engine_hint="madara")
+        self.assertEqual(res["status"], "cf_protected")
+        self.assertIsNone(res["functional"])
+        self.assertIsNone(res["engine_source"])
+        self.assertEqual(len(session.calls), 1)
+
+    def test_hint_without_listing_marker_gives_false(self):
+        session = FakeSession(
+            FakeResponse(200, b"<html>plain</html>", url="https://h.tr/"),
+            FakeResponse(200, b"<html>nothing</html>", url="https://h.tr/manga/"),
+            FakeResponse(200, b"<html>nothing</html>", url="https://h.tr/"))
+        res = probe.probe_domain(session, "h.tr", engine_hint="madara")
+        self.assertIs(res["functional"], False)
+        self.assertEqual(res["engine_source"], "hint")
+
+    def test_engine_hint_of_reads_engine_then_catalog(self):
+        self.assertEqual(probe.engine_hint_of({"engine": "madara"}), "madara")
+        self.assertEqual(probe.engine_hint_of({"formats": {"catalog": {"engine": "mangareader"}}}),
+                         "mangathemesia")
+        self.assertIsNone(probe.engine_hint_of({"engine": "custom"}))
+        self.assertIsNone(probe.engine_hint_of({}))
+
+    def test_main_passes_upstream_hint_to_probe_one(self):
+        rows = [{"key": "k", "name": "K", "domain": "k.tr", "engine": "mangareader", "formats": {}}]
+        seen = {}
+
+        def fake(domain, engine_hint=None, **kw):
+            seen[domain] = engine_hint
+            return {"status": "ok", "reason": "http 200", "http": 200, "finalUrl": "https://k.tr/",
+                    "moved_to": None, "engine_detected": "unknown", "ms": 1, "attempts": 1,
+                    "functional": True, "functional_reason": "x", "engine_source": "hint"}
+
+        res = _run_main_with(rows, fake)
+        self.assertEqual(seen, {"k.tr": "mangathemesia"})
+        self.assertEqual(res[0]["engine_source"], "hint")
 
 
 def _run_main_with(source_rows, fake_probe_one):

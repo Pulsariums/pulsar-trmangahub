@@ -4,13 +4,12 @@
 Inputs (under <root>/data): upstream_tr.json, probe_results.json, alternatives.json (optional)
 Outputs (under <root>/sources/tr): sources.json, published.json, REPORT.md
 
-Status rules (keyed by domain):
-  probe ok, functional != false  -> published
-  probe ok, functional == false  -> quarantined (reason functional_false)
-  probe cf_protected             -> cf_protected_published
-  probe dead / parked            -> quarantined (+ alternative when one was found)
-  probe blocked / other / none   -> previous status kept, unverified=true
-                                    (no previous status: status "unverified")
+Status rules (keyed by domain) live in rules.py: evaluate() decides published,
+cf_protected_published, failing (kept out of publication until it reaches the failure
+threshold), or quarantined (immediately for dns/parked/404/410). Probe blocked, other
+or missing results keep the previous status with unverified=true (no previous status:
+status "unverified"). scope "multilang" sources get status excluded_multilang and are
+never probed into publication, searched for alternatives or counted by the safety switch.
 
 Safety switch: if more than 40% of probed domains are dead, or more than 40% are
 blocked, nothing is written and the script exits with code 2 (EXIT_CANCEL).
@@ -22,11 +21,14 @@ import os
 import sys
 from datetime import datetime, timezone
 
+import rules
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 EXIT_CANCEL = 2
 MAX_SHARE = 0.40
-PUBLISHED_STATUSES = ("published", "cf_protected_published")
+PUBLISHED_STATUSES = rules.PUBLISHED_STATUSES
+EXCLUDED_STATUS = "excluded_multilang"
 VOLATILE_KEYS = ("generatedAt", "lastChecked")
 
 
@@ -67,9 +69,9 @@ def unique_by_domain(rows):
     return out
 
 
-def safety_check(probe_rows):
-    """Return (ok, reason). Counts are over unique probed domains."""
-    domains = unique_by_domain(probe_rows)
+def safety_check(probe_rows, excluded=frozenset()):
+    """Return (ok, reason). Counts are over unique probed domains, minus excluded (multilang) ones."""
+    domains = {dom: row for dom, row in unique_by_domain(probe_rows).items() if dom not in excluded}
     total = len(domains)
     if total == 0:
         return False, "probe sonucu yok (0 domain)"
@@ -82,25 +84,9 @@ def safety_check(probe_rows):
     return True, f"dead {dead}/{total}, blocked {blocked}/{total}"
 
 
-def classify(probe_row):
-    """Return (status, reason, unverified) for a probe row, or None when not verified."""
-    if probe_row is None:
-        return None
-    status = probe_row.get("status")
-    if status == "ok":
-        if probe_row.get("functional") is False:
-            return "quarantined", f"functional_false: {probe_row.get('functional_reason')}", False
-        return "published", probe_row.get("reason"), False
-    if status == "cf_protected":
-        return "cf_protected_published", probe_row.get("reason"), False
-    if status in ("dead", "parked"):
-        return "quarantined", probe_row.get("reason"), False
-    return None  # blocked, other, or anything unexpected
-
-
 def build_entry(src, probe_row, prev, alt_map, now):
     domain = src["domain"]
-    verdict = classify(probe_row)
+    scope = "multilang" if rules.is_multilang(src) else "tr_native"
     engine = src.get("engine") or ((src.get("formats") or {}).get("catalog") or {}).get("engine")
     if not engine and probe_row and probe_row.get("engine_detected") not in (None, "unknown"):
         engine = probe_row["engine_detected"]
@@ -112,10 +98,19 @@ def build_entry(src, probe_row, prev, alt_map, now):
         "baseUrl": src.get("baseUrl") or f"https://{domain}",
         "engine": engine,
         "nsfw": bool(src.get("nsfw")),
+        "scope": scope,
         "formats": src.get("formats") or {"mihon": None, "jar": None, "catalog": None},
         "firstSeen": (prev or {}).get("firstSeen") or now,
     }
 
+    if scope == "multilang":
+        entry["status"] = EXCLUDED_STATUS
+        entry["reason"] = "çok dilli paket (tr dışı diller); yayınlanmaz"
+        entry["consecutiveFailures"] = 0
+        entry["upstreams"] = src.get("upstreams") or []
+        return entry
+
+    verdict = rules.evaluate(probe_row, prev)
     if verdict is None:
         # Not verified this run: keep the previous state and label it.
         entry["status"] = (prev or {}).get("status") or "unverified"
@@ -130,19 +125,18 @@ def build_entry(src, probe_row, prev, alt_map, now):
             entry["alternative"] = {"domain": alt["candidate"], "how": alt["how"],
                                     "confidence": alt["confidence"]}
     else:
-        status, reason, _ = verdict
-        entry["status"] = status
-        entry["reason"] = reason
+        entry["status"] = verdict["status"]
+        entry["reason"] = verdict["reason"]
         entry["probe"] = {
             "status": probe_row.get("status"),
             "http": probe_row.get("http"),
             "functional": probe_row.get("functional"),
         }
         entry["lastChecked"] = now
-        failed = status == "quarantined"
-        prev_fail = (prev or {}).get("consecutiveFailures", 0)
-        entry["consecutiveFailures"] = prev_fail + 1 if failed else 0
-        if status == "quarantined":
+        entry["consecutiveFailures"] = verdict["consecutiveFailures"]
+        if verdict["failing"]:
+            entry["failing"] = True
+        if verdict["status"] == "quarantined":
             alt = alt_map.get(domain) or {}
             if alt.get("candidate"):
                 entry["alternative"] = {"domain": alt["candidate"], "how": alt["how"],
@@ -209,7 +203,8 @@ def diff_changes(prev_entries, entries):
 
 
 def count_statuses(entries):
-    counts = {"published": 0, "cf_protected_published": 0, "quarantined": 0, "unverified": 0}
+    counts = {"published": 0, "cf_protected_published": 0, "quarantined": 0, "unverified": 0,
+              "failing": 0, EXCLUDED_STATUS: 0}
     for e in entries:
         counts[e["status"]] = counts.get(e["status"], 0) + 1
     return counts
@@ -232,6 +227,7 @@ def render_report(entries, alts, probe_meta, changes, nodomain, unverified_count
     lines.append(f"| quarantined (karantina) | {counts['quarantined']} |")
     lines.append(f"| unverified (bu run doğrulanamadı) | {counts['unverified']} |")
     lines.append("")
+    lines.append(f"- excluded_multilang: {counts[EXCLUDED_STATUS]}")
     lines.append(f"- Domain'li toplam kaynak: {len(entries)}; domain'siz (yayınlanmadı): {len(nodomain)}")
     lines.append(f"- Karantinadaki kaynaklardan alternatif bulunan: {len(with_alt)}; "
                  f"bulunamayan: {len(not_found)}")
@@ -285,7 +281,9 @@ def main(argv=None):
     prev_doc = load_json(os.path.join(out_dir, "sources.json"), default={}) or {}
 
     probe_rows = probes.get("results", [])
-    ok, reason = safety_check(probe_rows)
+    excluded = {s["domain"] for s in upstream.get("sources", [])
+                if s.get("domain") and rules.is_multilang(s)}
+    ok, reason = safety_check(probe_rows, excluded)
     if not ok:
         print(f"IPTAL: yayınlama durduruldu - {reason}", file=sys.stderr)
         print("Hiçbir dosya değiştirilmedi.", file=sys.stderr)
@@ -342,7 +340,8 @@ def main(argv=None):
     print(f"Output: {out_dir}")
     print(f"  safety: {reason}")
     print(f"  published={counts['published']} cf={counts['cf_protected_published']} "
-          f"quarantined={counts['quarantined']} unverified={counts['unverified']} "
+          f"quarantined={counts['quarantined']} failing={counts['failing']} "
+          f"excluded_multilang={counts[EXCLUDED_STATUS]} unverified={counts['unverified']} "
           f"via_alternative={len(published['via_alternative'])}")
     print(f"  changes: {({k: len(v) for k, v in changes.items()})}")
     return 0

@@ -70,7 +70,8 @@ class EndToEndTests(unittest.TestCase):
         ids = {e["id"] for e in sources["sources"]}
         self.assertEqual(len(ids), 40)
         statuses = {e["status"] for e in sources["sources"]}
-        self.assertTrue(statuses <= {"published", "cf_protected_published", "quarantined", "unverified"})
+        self.assertTrue(statuses <= {"published", "cf_protected_published", "quarantined", "failing",
+                                     "unverified"})
         for dom, entry in alts.items():
             self.assertIn("candidate", entry)
         found = [e for e in sources["sources"] if e.get("alternative")]

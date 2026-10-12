@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Find a working replacement domain for each broken Turkish manga source.
 
-Input:  data/upstream_tr.json, data/probe_results.json
+Input:  data/upstream_tr.json, data/probe_results.json, sources/tr/sources.json (previous
+        run, for the failure count; optional)
 Output: data/alternatives.json  ({broken_domain: {candidate, how, confidence, probe}}
         or {candidate: null, tried: [...]} when nothing works)
 
-A source is broken when its probe status is dead or parked, or when it answers
-ok but probe reports functional == false. Candidates are tried in this order:
+A source is broken only when rules.evaluate() quarantines it this run (so a source that
+is still failing below the threshold gets no search). Multilang sources are never searched
+and never offered as candidates. Candidates are tried in this order:
   1. moved_to host from the probe            (how=moved_to,   confidence=high)
   2. altDomains from Nyora                   (how=altDomains, confidence=high)
   3. other source with the same key          (how=same_key,   confidence=medium)
@@ -25,17 +27,13 @@ import os
 import sys
 
 import probe
+import rules
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
+PREV_SOURCES_PATH = os.path.join(BASE_DIR, "sources", "tr", "sources.json")
 
 SIMILAR_MIN = 0.85
-BROKEN_STATUSES = ("dead", "parked")
-
-
-def is_broken(row):
-    return row.get("status") in BROKEN_STATUSES or (
-        row.get("status") == "ok" and row.get("functional") is False)
 
 
 def norm_name(name):
@@ -50,9 +48,10 @@ def build_candidates(domain, src_records, sources, probe_row):
     """Return an ordered list of {domain, how, confidence} without duplicates."""
     out = []
     seen = {domain}
+    multilang = {s["domain"] for s in sources if s.get("domain") and rules.is_multilang(s)}
 
     def add(cand, how, confidence):
-        if cand and cand not in seen:
+        if cand and cand not in seen and cand not in multilang:
             seen.add(cand)
             out.append({"domain": cand, "how": how, "confidence": confidence})
 
@@ -66,7 +65,8 @@ def build_candidates(domain, src_records, sources, probe_row):
     key = primary.get("key") or ""
     name = norm_name(primary.get("name"))
     engine = engine_of(primary)
-    others = [s for s in sources if s.get("domain") and s["domain"] != domain]
+    others = [s for s in sources if s.get("domain") and s["domain"] != domain
+              and not rules.is_multilang(s)]
 
     def same_engine_first(items):
         return sorted(items, key=lambda o: not (engine and engine_of(o) == engine))
@@ -135,8 +135,19 @@ def load_inputs(data_dir):
     return upstream.get("sources", []), probes.get("results", [])
 
 
-def run(sources, probe_rows, prober):
-    """Return the alternatives mapping for every broken domain."""
+def load_prev_by_id(path):
+    """Previous build's entries keyed by id; empty when the file does not exist yet."""
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as fh:
+        return {e["id"]: e for e in json.load(fh).get("sources", [])}
+
+
+def run(sources, probe_rows, prober, prev_by_id=None):
+    """Return the alternatives mapping for every quarantined domain.
+
+    prev_by_id maps domain -> entry from the previous sources.json (used for the failure count).
+    """
     rows_by_domain = {}
     for row in probe_rows:
         rows_by_domain.setdefault(row["domain"], row)
@@ -149,9 +160,12 @@ def run(sources, probe_rows, prober):
     result = {}
     for domain in sorted(rows_by_domain):
         row = rows_by_domain[domain]
-        if not is_broken(row):
-            continue
         src_records = records_by_domain.get(domain) or [{"key": row.get("key"), "name": row.get("name")}]
+        if any(rules.is_multilang(s) for s in src_records):
+            continue
+        verdict = rules.evaluate(row, (prev_by_id or {}).get(domain))
+        if not verdict or verdict["status"] != "quarantined":
+            continue
         result[domain] = find_alternative(domain, src_records, sources, row, cache)
     return result, cache
 
@@ -169,16 +183,19 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description="Find alternative domains for broken TR sources.")
     parser.add_argument("--data-dir", default=DATA_DIR)
     parser.add_argument("--out", default=None, help="default: <data-dir>/alternatives.json")
+    parser.add_argument("--prev", default=PREV_SOURCES_PATH,
+                        help="previous sources.json (same file build.py reads)")
     args = parser.parse_args(argv)
     out_path = args.out or os.path.join(args.data_dir, "alternatives.json")
 
     try:
         sources, probe_rows = load_inputs(args.data_dir)
+        prev_by_id = load_prev_by_id(args.prev)
     except (OSError, ValueError) as exc:
         print(f"ERROR cannot read inputs: {exc}", file=sys.stderr)
         return 1
 
-    result, cache = run(sources, probe_rows, probe.probe_one)
+    result, cache = run(sources, probe_rows, probe.probe_one, prev_by_id)
     write_json(out_path, result)
 
     found = sum(1 for v in result.values() if v.get("candidate"))

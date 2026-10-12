@@ -13,18 +13,25 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import alternatives  # noqa: E402
 import probe  # noqa: E402
 
+DNS = "dns: NameResolutionError: Failed to resolve"
 
-def src(key, name, domain, engine=None, alt=(), upstreams=("mihon",)):
+
+def src(key, name, domain, engine=None, alt=(), upstreams=("mihon",), scope="tr_native"):
     return {"key": key, "name": name, "domain": domain, "baseUrl": f"https://{domain}",
             "engine": engine, "formats": {"mihon": None, "jar": None, "catalog": None},
-            "nsfw": False, "upstreams": list(upstreams), "altDomains": list(alt)}
+            "nsfw": False, "upstreams": list(upstreams), "altDomains": list(alt), "scope": scope}
 
 
-def row(domain, status, functional=None, moved_to=None, engine_detected="unknown", key=None, name=None):
+def row(domain, status, functional=None, moved_to=None, engine_detected="unknown", key=None, name=None,
+        reason=None, http=None):
     return {"key": key or domain.split(".")[0], "name": name or domain, "domain": domain,
-            "status": status, "reason": status, "http": 200 if status == "ok" else None,
+            "status": status, "reason": reason or status, "http": http if http is not None else (200 if status == "ok" else None),
             "finalUrl": None, "moved_to": moved_to, "engine_detected": engine_detected,
             "functional": functional, "functional_reason": None}
+
+
+def prev(domain, status, failures):
+    return {domain: {"id": domain, "status": status, "consecutiveFailures": failures}}
 
 
 def prober_from(table, calls=None):
@@ -44,19 +51,53 @@ OK_TABLE = {"ok.tr": {"status": "ok", "functional": True, "http": 200, "finalUrl
 
 
 class SelectionTests(unittest.TestCase):
-    def test_broken_selection_rules(self):
-        rows = [row("dead.tr", "dead"), row("parked.tr", "parked"),
+    def test_quarantined_selection_rules(self):
+        rows = [row("dead.tr", "dead", reason=DNS), row("parked.tr", "parked"),
                 row("wrongfunc.tr", "ok", functional=False),
                 row("cf.tr", "cf_protected"), row("other.tr", "other"), row("blocked.tr", "blocked"),
                 row("good.tr", "ok", functional=True), row("unk.tr", "ok", functional=None)]
         sources = [src(r["key"], r["name"], r["domain"]) for r in rows]
         result, _ = alternatives.run(sources, rows, prober_from({}))
-        self.assertEqual(sorted(result), ["dead.tr", "parked.tr", "wrongfunc.tr"])
+        # wrongfunc is a first failure, so it is failing (not quarantined) and gets no search.
+        self.assertEqual(sorted(result), ["dead.tr", "parked.tr"])
+
+    def test_plain_dead_is_failing_until_threshold(self):
+        rows = [row("dead.tr", "dead", reason="timeout: ReadTimeout")]
+        sources = [src("dead", "Dead", "dead.tr")]
+        result, _ = alternatives.run(sources, rows, prober_from({}), prev("dead.tr", "published", 1))
+        self.assertEqual(result, {})
+        result, _ = alternatives.run(sources, rows, prober_from({}), prev("dead.tr", "published", 2))
+        self.assertIn("dead.tr", result)
+
+    def test_functional_false_searched_only_at_threshold(self):
+        rows = [row("wrong.tr", "ok", functional=False)]
+        sources = [src("wrong", "Wrong", "wrong.tr")]
+        result, _ = alternatives.run(sources, rows, prober_from({}), prev("wrong.tr", "failing", 1))
+        self.assertEqual(result, {})  # second failure: still failing
+        result, _ = alternatives.run(sources, rows, prober_from({}), prev("wrong.tr", "failing", 2))
+        self.assertIn("wrong.tr", result)
+
+    def test_multilang_source_is_never_searched(self):
+        rows = [row("ml.tr", "dead", reason=DNS)]
+        sources = [src("ml", "ML", "ml.tr", scope="multilang")]
+        calls = []
+        result, _ = alternatives.run(sources, rows, prober_from({}, calls))
+        self.assertEqual(result, {})
+        self.assertEqual(calls, [])
+
+    def test_multilang_source_is_not_offered_as_candidate(self):
+        rows = [row("old.tr", "dead", reason=DNS)]
+        sources = [src("old", "Old", "old.tr", alt=["ml.tr"]),
+                   src("old", "Old", "ml.tr", scope="multilang")]
+        calls = []
+        result, _ = alternatives.run(sources, rows, prober_from({}, calls))
+        self.assertNotIn("ml.tr", calls)
+        self.assertIsNone(result["old.tr"]["candidate"])
 
 
 class CandidateTests(unittest.TestCase):
     def test_moved_to_is_first_and_high(self):
-        rows = [row("old.tr", "dead", moved_to="new.tr")]
+        rows = [row("old.tr", "dead", moved_to="new.tr", reason=DNS)]
         sources = [src("old", "Old", "old.tr"), src("old", "Old", "other.tr")]
         table = {"new.tr": {"status": "ok", "functional": True, "http": 200}}
         result, _ = alternatives.run(sources, rows + [row("other.tr", "ok", functional=True)],
@@ -76,7 +117,7 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(result["old.tr"]["confidence"], "high")
 
     def test_same_key_is_medium_and_prefers_same_engine(self):
-        rows = [row("old.tr", "dead")]
+        rows = [row("old.tr", "dead", reason=DNS)]
         sources = [src("olds", "Olds", "old.tr", engine="madara"),
                    src("olds", "Olds", "mangaish.tr", engine="mangathemesia"),
                    src("olds", "Olds", "madarish.tr", engine="madara")]
@@ -89,7 +130,7 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(result["old.tr"]["confidence"], "medium")
 
     def test_similar_key_is_low_and_threshold_respected(self):
-        rows = [row("old.tr", "dead")]
+        rows = [row("old.tr", "dead", reason=DNS)]
         sources = [src("mangaoku", "Manga Oku", "old.tr"),
                    src("mangaokuu", "Manga Okuu", "close.tr"),
                    src("zzzzqqqq", "Other", "far.tr")]
@@ -101,7 +142,7 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(result["old.tr"]["confidence"], "low")
 
     def test_same_name_is_medium(self):
-        rows = [row("old.tr", "dead")]
+        rows = [row("old.tr", "dead", reason=DNS)]
         sources = [src("alpha", "Ortak Ad", "old.tr"), src("beta", "ortak  ad", "named.tr")]
         table = {"named.tr": {"status": "ok", "functional": True, "http": 200}}
         result, _ = alternatives.run(sources, rows, prober_from(table))
@@ -109,7 +150,7 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(result["old.tr"]["confidence"], "medium")
 
     def test_functional_false_candidate_is_skipped(self):
-        rows = [row("old.tr", "dead")]
+        rows = [row("old.tr", "dead", reason=DNS)]
         sources = [src("old", "Old", "old.tr", alt=["bad.tr", "good.tr"])]
         table = {"bad.tr": {"status": "ok", "functional": False, "http": 200},
                  "good.tr": {"status": "ok", "functional": True, "http": 200}}
@@ -117,7 +158,7 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(result["old.tr"]["candidate"], "good.tr")
 
     def test_not_found_writes_tried_list(self):
-        rows = [row("old.tr", "dead", moved_to="gone.tr")]
+        rows = [row("old.tr", "dead", moved_to="gone.tr", reason=DNS)]
         sources = [src("old", "Old", "old.tr", alt=["cf.tr"])]
         table = {"gone.tr": {"status": "dead"}, "cf.tr": {"status": "cf_protected"}}
         result, _ = alternatives.run(sources, rows, prober_from(table))
@@ -127,7 +168,7 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(entry["tried"][1]["status"], "cf_protected")
 
     def test_candidate_equal_to_broken_domain_is_skipped(self):
-        rows = [row("old.tr", "dead", moved_to="old.tr")]
+        rows = [row("old.tr", "dead", moved_to="old.tr", reason=DNS)]
         sources = [src("old", "Old", "old.tr")]
         calls = []
         result, _ = alternatives.run(sources, rows, prober_from({}, calls))
@@ -138,7 +179,7 @@ class CandidateTests(unittest.TestCase):
 
 class CacheTests(unittest.TestCase):
     def test_same_candidate_probed_once_per_run(self):
-        rows = [row("a.tr", "dead"), row("b.tr", "dead")]
+        rows = [row("a.tr", "dead", reason=DNS), row("b.tr", "dead", reason=DNS)]
         sources = [src("a", "A", "a.tr", alt=["shared.tr"]), src("b", "B", "b.tr", alt=["shared.tr"])]
         calls = []
         table = {"shared.tr": {"status": "ok", "functional": True, "http": 200}}
@@ -152,7 +193,7 @@ class CacheTests(unittest.TestCase):
 class MainTests(unittest.TestCase):
     def test_main_writes_flat_mapping_with_default_prober(self):
         upstream = {"sources": [src("old", "Old", "old.tr", alt=["new.tr"])]}
-        probes = {"meta": {}, "results": [row("old.tr", "dead")]}
+        probes = {"meta": {}, "results": [row("old.tr", "dead", reason=DNS)]}
         with tempfile.TemporaryDirectory() as tmp:
             with open(os.path.join(tmp, "upstream_tr.json"), "w", encoding="utf-8") as fh:
                 json.dump(upstream, fh)
@@ -160,7 +201,7 @@ class MainTests(unittest.TestCase):
                 json.dump(probes, fh)
             fake = {"status": "ok", "functional": True, "http": 200, "finalUrl": "https://new.tr/"}
             with mock.patch.object(probe, "probe_one", return_value=fake) as p:
-                code = alternatives.main(["--data-dir", tmp])
+                code = alternatives.main(["--data-dir", tmp, "--prev", os.path.join(tmp, "none.json")])
             self.assertEqual(code, 0)
             p.assert_called_once_with("new.tr")
             with open(os.path.join(tmp, "alternatives.json"), encoding="utf-8") as fh:
@@ -169,6 +210,23 @@ class MainTests(unittest.TestCase):
         self.assertEqual(out["old.tr"]["how"], "altDomains")
         self.assertEqual(out["old.tr"]["confidence"], "high")
         self.assertEqual(out["old.tr"]["probe"]["status"], "ok")
+
+    def test_main_reads_previous_sources_for_failure_count(self):
+        upstream = {"sources": [src("old", "Old", "old.tr", alt=["new.tr"])]}
+        probes = {"meta": {}, "results": [row("old.tr", "dead", reason="timeout: ReadTimeout")]}
+        with tempfile.TemporaryDirectory() as tmp:
+            with open(os.path.join(tmp, "upstream_tr.json"), "w", encoding="utf-8") as fh:
+                json.dump(upstream, fh)
+            with open(os.path.join(tmp, "probe_results.json"), "w", encoding="utf-8") as fh:
+                json.dump(probes, fh)
+            with open(os.path.join(tmp, "prev.json"), "w", encoding="utf-8") as fh:
+                json.dump({"sources": [{"id": "old.tr", "status": "published", "consecutiveFailures": 2}]}, fh)
+            fake = {"status": "ok", "functional": True, "http": 200, "finalUrl": "https://new.tr/"}
+            with mock.patch.object(probe, "probe_one", return_value=fake):
+                alternatives.main(["--data-dir", tmp, "--prev", os.path.join(tmp, "prev.json")])
+            with open(os.path.join(tmp, "alternatives.json"), encoding="utf-8") as fh:
+                out = json.load(fh)
+        self.assertEqual(out["old.tr"]["candidate"], "new.tr")
 
     def test_missing_inputs_exit_1(self):
         with tempfile.TemporaryDirectory() as tmp:

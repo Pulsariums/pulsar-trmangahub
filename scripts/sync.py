@@ -80,7 +80,7 @@ def make_key(name, domain=None):
     return text
 
 
-def make_record(upstream, name, domain, base_url, engine, nsfw, formats, alt_domains=()):
+def make_record(upstream, name, domain, base_url, engine, nsfw, formats, alt_domains=(), scope="tr_native"):
     return {
         "upstream": upstream,
         "name": (name or "").strip(),
@@ -90,6 +90,7 @@ def make_record(upstream, name, domain, base_url, engine, nsfw, formats, alt_dom
         "nsfw": bool(nsfw),
         "formats": formats,
         "altDomains": [d for d in alt_domains if d],
+        "scope": scope,
     }
 
 
@@ -122,16 +123,17 @@ def parse_mihon(index):
         resources = ext.get("resources") or {}
         mihon = {"pkg": pkg, "version": ext.get("versionName"), "apkUrl": resources.get("apkUrl")}
         nsfw = "NSFW" in (ext.get("contentWarning") or "").upper()
+        scope = "tr_native" if pkg.startswith(MIHON_TR_PREFIX) else "multilang"
         candidates = tr_sources or sources[:1]
         if not candidates:
             records.append(make_record("mihon", ext.get("name"), None, None, None, nsfw,
-                                       {"mihon": mihon}))
+                                       {"mihon": mihon}, scope=scope))
             continue
         for src in candidates:
             home = (src.get("homeUrl") or "").strip() or None
             domain = normalize_domain(home)
             records.append(make_record("mihon", src.get("name") or ext.get("name"), domain, home,
-                                       None, nsfw, {"mihon": dict(mihon)}))
+                                       None, nsfw, {"mihon": dict(mihon)}, scope=scope))
     return records, len(extensions)
 
 
@@ -201,7 +203,8 @@ def parse_kotatsu(repo):
                         domain = normalize_domain(lit.group(1))
                 record = make_record("kotatsu", title, domain, None, engine, "HENTAI" in rest,
                                      {"jar": {"parser": parser_id, "file": rel, "broken": broken,
-                                              "brokenReason": reason_m.group(1) if reason_m else None}})
+                                              "brokenReason": reason_m.group(1) if reason_m else None}},
+                                     scope="tr_native")
                 records.append(record)
     return records, scanned
 
@@ -230,7 +233,7 @@ def parse_nyora(catalog, liveness):
         }
         records.append(make_record("nyora", row.get("name") or row.get("id"), domain,
                                    f"https://{domain}" if domain else None, row.get("engine"),
-                                   row.get("nsfw"), {"catalog": catalog_entry}, alt))
+                                   row.get("nsfw"), {"catalog": catalog_entry}, alt, scope="tr_native"))
     return records
 
 
@@ -257,7 +260,7 @@ def merge_records(records):
         if target is None:
             target = {"key": key, "name": rec["name"], "domain": None, "baseUrl": None,
                       "engine": None, "formats": {"mihon": None, "jar": None, "catalog": None},
-                      "nsfw": False, "upstreams": [], "_alt": []}
+                      "nsfw": False, "scope": "multilang", "upstreams": [], "_alt": []}
             targets.append(target)
 
         if rec["domain"]:
@@ -276,6 +279,8 @@ def merge_records(records):
         if rec["engine"] and (target["engine"] is None or rec["upstream"] == "nyora"):
             target["engine"] = rec["engine"]
         target["nsfw"] = target["nsfw"] or rec["nsfw"]
+        if rec.get("scope") == "tr_native":
+            target["scope"] = "tr_native"
         if rec["upstream"] not in target["upstreams"]:
             target["upstreams"].append(rec["upstream"])
         for fmt, value in rec["formats"].items():
@@ -304,6 +309,7 @@ def finalize(targets):
             "engine": t["engine"],
             "formats": t["formats"],
             "nsfw": t["nsfw"],
+            "scope": t["scope"],
             "upstreams": t["upstreams"],
             "altDomains": t["_alt"],
         })
