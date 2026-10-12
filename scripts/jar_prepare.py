@@ -311,6 +311,27 @@ def delete_and_rescue(files, kept):
     return deleted, sorted(rescued)
 
 
+GROUPLE_BRANCH_RE = re.compile(r"^[ \t]*in\s+\w+\.domains\s*->\s*MangaParserSource\.(\w+)[ \t]*\r?\n", re.M)
+
+
+def prune_dangling_refs(upstream, removed_ids):
+    """Silinen parser sınıflarına/enum sabitlerine bağlı kalan `when` dallarını (GroupleParser) temizle."""
+    pruned = []
+    for root, _dirs, names in os.walk(os.path.join(upstream, "src")):
+        for name in names:
+            if not name.endswith(".kt"):
+                continue
+            path = os.path.join(root, name)
+            text = read_text(path)
+            if "MangaParserSource." not in text:
+                continue
+            new = GROUPLE_BRANCH_RE.sub(lambda m: "" if m.group(1) in removed_ids else m.group(0), text)
+            if new != text:
+                write_text(path, new)
+                pruned.append(os.path.relpath(path, upstream))
+    return pruned
+
+
 def strip_code(text):
     return STRIP_RE.sub(" ", text)
 
@@ -371,6 +392,7 @@ def main(argv=None):
         allow_multilang, args.nsfw, exclude)
     all_ids = set(file_of)
     deleted, rescued = delete_and_rescue(files, kept)
+    pruned_refs = prune_dangling_refs(upstream, all_ids - kept)
 
     extras = []
     if args.extra_parsers:
@@ -393,6 +415,7 @@ def main(argv=None):
         "extra_sources": extras,
         "removed_ids": sorted(all_ids - kept),
         "rescued_files": rescued,
+        "pruned_refs": pruned_refs,
         "patched_domains": patched,
         "patch_failed": patch_failed,
         "counts": {

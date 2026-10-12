@@ -170,14 +170,8 @@ jobs:
             echo "Derleme başarılı."
             echo "fallback=0" >> "$GITHUB_OUTPUT"
           else
-            echo "::warning::Derleme başarısız; yalnızca yamalarla yedek yol deneniyor."
-            rm -rf upstream
-            git clone --depth 1 https://github.com/Kotatsu-Redo/kotatsu-parsers-redo.git upstream
-            python scripts/jar_prepare.py --upstream upstream --patch-only $EXTRA_ARGS $EXCLUDE_ARGS \
-              --sources "$SOURCES_FILE" --include-unverified "$INCLUDE_UNVERIFIED" \
-              --allow-multilang "$ALLOW_MULTILANG" --nsfw "$NSFW_MODE"
-            (cd upstream && chmod +x gradlew && ./gradlew jar --no-daemon)
-            echo "fallback=1" >> "$GITHUB_OUTPUT"
+            echo "::error::Seçimli derleme başarısız. Seçilmemiş (tüm parserları içeren) jar yayımlanmaz."
+            exit 1
           fi
 
       - name: D8 ile dex üret ve plugin.jar paketle
