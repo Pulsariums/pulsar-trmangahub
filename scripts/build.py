@@ -5,8 +5,8 @@ Inputs (under <root>/data): upstream_tr.json, probe_results.json, alternatives.j
 Outputs, per bucket, under <root>/sources/<bucket>: sources.json, published.json, REPORT.md
 
 Buckets:
-  tr      scope tr_native only (sources/tr). Feeds turkce/jar and turkce/mihon.
-  global  every scope (sources/global). Feeds global/jar; scope multilang sources live only here.
+  tr      scope tr_native only (sources/tr). Feeds jar/ (tr, tr_nsfw) and turkce/mihon.
+  global  every scope (sources/global). Feeds jar/ (global, global_nsfw); scope multilang sources live only here.
 Every bucket has its own SAFETY_RATIO check over the domains it contains.
 
 Status rules (keyed by domain) live in rules.py: evaluate() decides published,

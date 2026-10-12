@@ -1,4 +1,4 @@
-name: 'Jar derle: Kototoro JAR depoları (turkce, global, ozel)'
+name: 'Jar derle: Kototoro JAR deposu (tr, tr-nsfw, global, global-nsfw)'
 
 on:
   schedule:
@@ -6,12 +6,12 @@ on:
   workflow_dispatch:
     inputs:
       bolum:
-        description: 'Derlenecek bölüm: turkce (yalnız Türkçe), global (tüm diller), ozel (Kaynak ekle parser''ları) veya hepsi'
+        description: 'Derlenecek paket: hepsi, tr (Türkçe), tr_nsfw (Türkçe NSFW), global (Türkçe hariç), global_nsfw (Türkçe hariç NSFW)'
         type: choice
-        options: [hepsi, turkce, global, ozel]
+        options: [hepsi, tr, tr_nsfw, global, global_nsfw]
         default: hepsi
       mode:
-        description: 'Seçim modu: alive (yayındaki/çalışan) veya all_tr (tüm TR kaynaklar; yalnız turkce için anlamlı)'
+        description: 'Seçim modu: alive (yayındaki/çalışan) veya all_tr (tüm TR kaynaklar; yalnız tr ve tr_nsfw için anlamlı, global paketlerde daima alive)'
         type: choice
         options: ['alive', 'all_tr']
         default: 'alive'
@@ -33,7 +33,7 @@ on:
         type: boolean
         default: false
       publish:
-        description: 'Derlemeyi ilgili bölüm klasöründe commit edip gönder'
+        description: 'Derlemeyi jar/ klasöründe commit edip gönder'
         type: boolean
         default: true
 
@@ -51,15 +51,15 @@ jobs:
     outputs:
       buckets: ${{ steps.plan.outputs.buckets }}
     steps:
-      - name: Bölüm listesini çıkar
+      - name: Paket listesini çıkar
         id: plan
         env:
           BOLUM: ${{ inputs.bolum || 'hepsi' }}
         run: |
           case "$BOLUM" in
-            hepsi) list='["turkce","global","ozel"]' ;;
-            turkce|global|ozel) list="[\"$BOLUM\"]" ;;
-            *) echo "::error::Bilinmeyen bölüm: $BOLUM"; exit 1 ;;
+            hepsi) list='["tr","tr_nsfw","global","global_nsfw"]' ;;
+            tr|tr_nsfw|global|global_nsfw) list="[\"$BOLUM\"]" ;;
+            *) echo "::error::Bilinmeyen paket: $BOLUM"; exit 1 ;;
           esac
           echo "buckets=$list" >> "$GITHUB_OUTPUT"
 
@@ -83,19 +83,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Bölüm ayarlarını çöz
+      - name: Paket ayarlarını çöz
         run: |
           case "$BUCKET" in
-            turkce) out=turkce/jar;  src=sources/tr/sources.json;     multi=0; extra="" ;;
-            global) out=global/jar;  src=sources/global/sources.json; multi=1; extra="" ;;
-            ozel)   out=ozel/jar;    src=sources/tr/sources.json;     multi=0; extra=generated ;;
-            *) echo "::error::Bilinmeyen bölüm: $BUCKET"; exit 1 ;;
+            tr)          src=sources/tr/sources.json;     multi=0; nsfw=none; excl="";   extra=generated ;;
+            tr_nsfw)     src=sources/tr/sources.json;     multi=0; nsfw=only; excl="";   extra=generated ;;
+            global)      src=sources/global/sources.json; multi=1; nsfw=none; excl=tr; extra="" ;;
+            global_nsfw) src=sources/global/sources.json; multi=1; nsfw=only; excl=tr; extra="" ;;
+            *) echo "::error::Bilinmeyen paket: $BUCKET"; exit 1 ;;
           esac
           {
-            echo "OUT_DIR=$out"
+            echo "OUT_DIR=jar"
             echo "SOURCES_FILE=$src"
             echo "ALLOW_MULTILANG=$multi"
             echo "EXTRA_DIR=$extra"
+            echo "NSFW_MODE=$nsfw"
+            echo "EXCLUDE_LANG=$excl"
           } >> "$GITHUB_ENV"
 
       - uses: actions/setup-python@v5
@@ -110,12 +113,14 @@ jobs:
           repository: Kotatsu-Redo/kotatsu-parsers-redo
           path: upstream
 
-      - name: 'Hazırla: yama, seçim, domain onarımı ve ozel parser ekleme'
+      - name: 'Hazırla: yama, seçim, domain onarımı ve özel parser ekleme'
         run: |
           MODE_ARG="$MODE"
+          case "$BUCKET" in global|global_nsfw) MODE_ARG=alive ;; esac
           EXTRA_ARGS=""
-          if [ "$BUCKET" = "ozel" ]; then MODE_ARG=none; fi
           if [ -n "$EXTRA_DIR" ]; then EXTRA_ARGS="--extra-parsers $EXTRA_DIR"; fi
+          EXCLUDE_ARGS=""
+          if [ -n "$EXCLUDE_LANG" ]; then EXCLUDE_ARGS="--exclude-lang $EXCLUDE_LANG"; fi
           python scripts/jar_prepare.py \
             --upstream upstream \
             --sources "$SOURCES_FILE" \
@@ -124,7 +129,9 @@ jobs:
             --apply-alternatives "$APPLY_ALTERNATIVES" \
             --include-unverified "$INCLUDE_UNVERIFIED" \
             --allow-multilang "$ALLOW_MULTILANG" \
+            --nsfw "$NSFW_MODE" \
             $EXTRA_ARGS \
+            $EXCLUDE_ARGS \
             --report data/jar_prepare.json
 
       - name: Yayınlanacak kaynak var mı
@@ -132,7 +139,7 @@ jobs:
         run: |
           has=$(python3 -c 'import json; p=json.load(open("data/jar_prepare.json", encoding="utf-8")); print(1 if p.get("kept_ids") else 0)')
           echo "has=$has" >> "$GITHUB_OUTPUT"
-          if [ "$has" = "0" ]; then echo "Yayınlanabilir kaynak yok; dizin boş index ile yazılacak."; fi
+          if [ "$has" = "0" ]; then echo "Yayınlanabilir kaynak yok; paket indeksten çıkarılacak."; fi
 
       - name: 'Karar ver: derleme gerekiyor mu'
         id: decide
@@ -141,7 +148,7 @@ jobs:
           python scripts/jar_publish.py decide \
             --upstream upstream \
             --prepare data/jar_prepare.json \
-            --info "$OUT_DIR/build_info.json" \
+            --info "$OUT_DIR/state/$BUCKET.build_info.json" \
             --force "$FORCE"
 
       - name: JDK 17
@@ -157,6 +164,8 @@ jobs:
         run: |
           EXTRA_ARGS=""
           if [ -n "$EXTRA_DIR" ]; then EXTRA_ARGS="--extra-parsers $EXTRA_DIR"; fi
+          EXCLUDE_ARGS=""
+          if [ -n "$EXCLUDE_LANG" ]; then EXCLUDE_ARGS="--exclude-lang $EXCLUDE_LANG"; fi
           if (cd upstream && chmod +x gradlew && ./gradlew jar --no-daemon); then
             echo "Derleme başarılı."
             echo "fallback=0" >> "$GITHUB_OUTPUT"
@@ -164,8 +173,9 @@ jobs:
             echo "::warning::Derleme başarısız; yalnızca yamalarla yedek yol deneniyor."
             rm -rf upstream
             git clone --depth 1 https://github.com/Kotatsu-Redo/kotatsu-parsers-redo.git upstream
-            python scripts/jar_prepare.py --upstream upstream --patch-only $EXTRA_ARGS \
-              --sources "$SOURCES_FILE" --include-unverified "$INCLUDE_UNVERIFIED"
+            python scripts/jar_prepare.py --upstream upstream --patch-only $EXTRA_ARGS $EXCLUDE_ARGS \
+              --sources "$SOURCES_FILE" --include-unverified "$INCLUDE_UNVERIFIED" \
+              --allow-multilang "$ALLOW_MULTILANG" --nsfw "$NSFW_MODE"
             (cd upstream && chmod +x gradlew && ./gradlew jar --no-daemon)
             echo "fallback=1" >> "$GITHUB_OUTPUT"
           fi
@@ -188,7 +198,7 @@ jobs:
           "$D8_PATH" --release --lib "$ANDROID_JAR" --output dex upstream/build/libs/*.jar
           (cd dex && jar cvf ../plugin.jar classes.dex)
 
-      - name: Dizini ve bölüm klasörünü yaz
+      - name: Paketi ve indeksi yaz
         if: steps.count.outputs.has == '0' || steps.decide.outputs.build == 'true'
         env:
           FALLBACK: ${{ steps.build.outputs.fallback || '0' }}
@@ -202,19 +212,19 @@ jobs:
             --fallback "$FALLBACK" \
             --sources "$SOURCES_FILE"
 
-      - name: Bölüm klasörünü dala gönder
+      - name: jar/ klasörünü dala gönder
         if: (steps.count.outputs.has == '0' || steps.decide.outputs.build == 'true') && env.PUBLISH == 'true'
         env:
           BRANCH: ${{ github.ref_name }}
         run: |
           git config user.name "pulsar-trmangahub-bot"
           git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
-          git add "$OUT_DIR"
+          git add jar
           if git diff --cached --quiet; then
             echo "Değişiklik yok, commit atılmadı."
             exit 0
           fi
-          git commit -m "chore(jar): ${BUCKET} eklenti güncellendi"
+          git commit -m "chore(jar): ${BUCKET} paketi güncellendi"
           for i in 1 2 3; do
             git pull --rebase origin "${BRANCH}" && git push origin "HEAD:${BRANCH}" && exit 0
             sleep $((i*5))

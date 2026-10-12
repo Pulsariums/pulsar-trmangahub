@@ -28,6 +28,11 @@ class HelperTests(unittest.TestCase):
         lines = report.table(["A", "B"], [("x|y", "l1\nl2")])
         self.assertEqual(lines[2], "| x\\|y | l1 l2 |")
 
+    def test_jar_bucket_paths_cover_four_packages(self):
+        self.assertEqual(set(report.JAR_BUCKET_PATHS), {"tr", "tr_nsfw", "global", "global_nsfw"})
+        info_rel, _ = report.JAR_BUCKET_PATHS["global"]
+        self.assertEqual(info_rel, os.path.join("jar", "state", "global.build_info.json"))
+
     def test_reason_prefix(self):
         self.assertEqual(report.reason_prefix("dns: Name or service not known"), "dns")
         self.assertEqual(report.reason_prefix("http 503; cloudflare"), "http 503")
@@ -57,10 +62,11 @@ class SectionTests(unittest.TestCase):
             patcher = mock.patch.object(report, name, path)
             patcher.start()
             self.addCleanup(patcher.stop)
-        # Jar section reads <BASE_DIR>/<bucket dir>/build_info.json; point both into the temp dir.
+        # Jar section reads <BASE_DIR>/jar/state/<bucket>.build_info.json; point both into the temp dir.
         for name, value in (("BASE_DIR", self.dir),
-                            ("JAR_BUCKET_PATHS", {b: ("", "sources.json")
-                                                  for b in ("turkce", "global", "ozel")})):
+                            ("JAR_BUCKET_PATHS", {b: (os.path.join("jar", "state", f"{b}.build_info.json"),
+                                                      "sources.json")
+                                                  for b in ("tr", "tr_nsfw", "global", "global_nsfw")})):
             patcher = mock.patch.object(report, name, value)
             patcher.start()
             self.addCleanup(patcher.stop)
@@ -194,10 +200,11 @@ class SectionTests(unittest.TestCase):
             "patched_domains": [{"id": "BTWO", "old": "old.b", "new": "new.b", "confidence": "high"}],
             "counts": {"kept": 2, "removed_ids": 3, "deleted_files": 4, "rescued_files": 1,
                        "patched_domains": 1, "patch_failed": 0}})
-        write(os.path.join(self.dir, "build_info.json"), {"jarBytes": 1234, "jarSha256": "ff00",
-                                                "builtAt": "2026-10-12T00:00:00Z", "runNumber": 7})
+        os.makedirs(os.path.join(self.dir, "jar", "state"))
+        write(os.path.join(self.dir, "jar", "state", "tr.build_info.json"),
+              {"jarBytes": 1234, "jarSha256": "ff00", "builtAt": "2026-10-12T00:00:00Z", "runNumber": 7})
         env = {"JAR_BUILD": "true", "JAR_REASON": "parmak izi değişti", "JAR_BUILD_OUTCOME": "success",
-               "JAR_FALLBACK": "1", "JAR_MODE": "alive", "GITHUB_REPOSITORY": "o/r"}
+               "JAR_FALLBACK": "1", "JAR_MODE": "alive", "JAR_BUCKET": "tr", "GITHUB_REPOSITORY": "o/r"}
         out = self.run_main(["jar"], env)
         self.assertIn("## Jar derleme raporu", out)
         self.assertIn("✅ Derlendi (parmak izi değişti)", out)
@@ -208,7 +215,18 @@ class SectionTests(unittest.TestCase):
         self.assertIn("| old.b | new.b | high |", out)
         self.assertIn("| sha256 | ff00 |", out)
         self.assertIn("| BTWO | B | new.b | quarantined |", out)
-        self.assertIn("https://raw.githubusercontent.com/o/r/main/<bölüm>/jar", out)
+        self.assertIn("https://raw.githubusercontent.com/o/r/main/jar`", out)
+        self.assertIn("tr, tr_nsfw, global, global_nsfw", out)
+        self.assertNotIn("turkce", out)
+        self.assertNotIn("ozel", out)
+
+    def test_jar_section_reads_bucket_specific_state(self):
+        os.makedirs(os.path.join(self.dir, "jar", "state"))
+        write(os.path.join(self.dir, "jar", "state", "global_nsfw.build_info.json"),
+              {"jarBytes": 99, "jarSha256": "ab", "builtAt": "2026-10-12T01:00:00Z", "runNumber": 9})
+        out = self.run_main(["jar"], {"JAR_BUILD": "true", "JAR_BUCKET": "global_nsfw"})
+        self.assertIn("| sha256 | ab |", out)
+        self.assertIn("| Çalıştırma no | 9 |", out)
 
     def test_jar_section_missing_files_does_not_crash(self):
         out = self.run_main(["jar"], {"JAR_BUILD": "false", "JAR_REASON": "parmak izi aynı, atlandı"})

@@ -253,9 +253,17 @@ def add_section(_args=None):
 
 
 JAR_PREPARE_PATH = os.path.join(BASE_DIR, "data", "jar_prepare.json")
-JAR_BUCKET_PATHS = {"turkce": ("turkce/jar", os.path.join("sources", "tr", "sources.json")),
-                    "global": ("global/jar", os.path.join("sources", "global", "sources.json")),
-                    "ozel": ("ozel/jar", os.path.join("sources", "tr", "sources.json"))}
+JAR_REPO_DIR = "jar"
+JAR_BUCKET_PATHS = {
+    "tr": (os.path.join(JAR_REPO_DIR, "state", "tr.build_info.json"), os.path.join("sources", "tr", "sources.json")),
+    "tr_nsfw": (os.path.join(JAR_REPO_DIR, "state", "tr_nsfw.build_info.json"),
+                os.path.join("sources", "tr", "sources.json")),
+    "global": (os.path.join(JAR_REPO_DIR, "state", "global.build_info.json"),
+               os.path.join("sources", "global", "sources.json")),
+    "global_nsfw": (os.path.join(JAR_REPO_DIR, "state", "global_nsfw.build_info.json"),
+                    os.path.join("sources", "global", "sources.json")),
+}
+JAR_DEFAULT_BUCKET = "tr"
 JAR_ROWS = 150
 JAR_ENV_SETTINGS = (("JAR_BUCKET", "Bölüm"), ("JAR_MODE", "Mod"), ("JAR_INCLUDE_BROKEN", "Bozuk kaynaklar dahil"),
                     ("JAR_APPLY_ALTERNATIVES", "Alternatif domain politikası"),
@@ -280,10 +288,10 @@ def jar_decision_text():
 
 
 def jar_section(_args=None):
-    bucket = env_text("JAR_BUCKET") or "turkce"
-    out_rel, sources_rel = JAR_BUCKET_PATHS.get(bucket, JAR_BUCKET_PATHS["turkce"])
+    bucket = env_text("JAR_BUCKET") or JAR_DEFAULT_BUCKET
+    info_rel, sources_rel = JAR_BUCKET_PATHS.get(bucket, JAR_BUCKET_PATHS[JAR_DEFAULT_BUCKET])
     prep = load_json(JAR_PREPARE_PATH)
-    info = load_json(os.path.join(BASE_DIR, out_rel, "build_info.json"))
+    info = load_json(os.path.join(BASE_DIR, info_rel))
     sources = load_json(os.path.join(BASE_DIR, sources_rel))
     entries = (sources or {}).get("sources") or []
     lines = ["## Jar derleme raporu", "", "### Karar", "", jar_decision_text(), ""]
@@ -322,7 +330,7 @@ def jar_section(_args=None):
 
     lines += ["### Jar", ""]
     if info is None:
-        lines += [f"{out_rel}/build_info.json yok (derleme atlandı ya da henüz yok).", ""]
+        lines += [f"{info_rel} yok (derleme atlandı ya da henüz yok).", ""]
     else:
         lines += table(["Alan", "Değer"], [
             ("Boyut (bayt)", info.get("jarBytes")), ("sha256", info.get("jarSha256")),
@@ -353,9 +361,10 @@ def jar_section(_args=None):
     slug = env_text("GITHUB_REPOSITORY") or "<GITHUB_REPOSITORY>"
     lines += ["### Kototoro'ya ekleme", "",
               "1. Ayarlar → İçerik Kaynakları → Eklentiler → JAR Depoları → Depo ekle yolunu izleyin.",
-              f"2. Bölüm adresi: `https://raw.githubusercontent.com/{slug}/main/<bölüm>/jar` "
-              "(bölüm: turkce, global veya ozel).",
-              "3. Depo özel iken adres çalışmaz; depo herkese açık olduğunda çalışır.", ""]
+              f"2. Depo adresi: `https://raw.githubusercontent.com/{slug}/main/{JAR_REPO_DIR}`",
+              "3. Depo eklendikten sonra paketler listesinden istediğiniz paketi ayrı ayrı indirin: "
+              "tr, tr_nsfw, global, global_nsfw.",
+              "4. Depo özel iken adres çalışmaz; depo herkese açık olduğunda çalışır.", ""]
     return lines
 
 

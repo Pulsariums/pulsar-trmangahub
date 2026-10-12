@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""Kototoro JAR yayın alt komutları: decide, index ve readme.
+"""Kototoro JAR yayın alt komutları: decide, index, merge-index ve readme.
 
-decide: derleme gerekip gerekmediğine karar verir. Karar stdout'a ve GITHUB_OUTPUT'a
-        'build=true|false' ve 'reason=...' olarak yazılır.
-index:  --bucket turkce|global|ozel için plugin.jar, index.min.json, build_info.json ve README.md
-        yazar. Yayınlanabilir kaynak yoksa index.min.json '[]' olur ve jar gerekmez.
-readme: yalnızca README.md yazar.
+decide:      derleme gerekip gerekmediğine karar verir. Karar stdout'a ve GITHUB_OUTPUT'a
+             'build=true|false' ve 'reason=...' olarak yazılır.
+index:       --bucket tr|tr_nsfw|global|global_nsfw için <out>/apk/<jar> yazar, bucket girdisini
+             <out>/state/<bucket>.entry.json ve build_info'yu <out>/state/<bucket>.build_info.json
+             dosyalarına yazar, ardından <out>/index.min.json'u yeniden birleştirir. Yayınlanabilir
+             kaynak yoksa bucket girdisi null olur ve jar gerekmez.
+merge-index: <out>/index.min.json dosyasını state/ girdilerinden yeniden yazar.
+readme:      <out>/README.md dosyasını yazar.
 """
 
 import argparse
@@ -21,28 +24,21 @@ import jar_prepare  # noqa: E402
 import rules  # noqa: E402
 
 PKG = "org.pulsarium.trmangahub"
-JAR_NAME = "plugin.jar"
 REPO_SLUG_FALLBACK = "<GITHUB_REPOSITORY>"
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+JAR_DIR = "jar"
 
-# One JAR repository per bucket. turkce keeps the original package id so installs update in place.
 BUCKETS = {
-    "turkce": {"name": "Pulsar TR Manga Hub", "pkg": PKG, "lang": "tr", "path": "turkce/jar",
-               "sources": os.path.join("sources", "tr", "sources.json"),
-               "what": "Türkçe (tr_native) kaynakları içeren Kototoro JAR eklentisi.",
-               "bucket_label": "Türkçe"},
-    "global": {"name": "Pulsar Global Manga Hub", "pkg": PKG + ".global", "lang": "all",
-               "path": "global/jar",
-               "sources": os.path.join("sources", "global", "sources.json"),
-               "what": "Kotatsu-Redo parser'larının tüm dillerini içeren Kototoro JAR eklentisi. "
-                       "Yalnızca probe'dan geçen (ok) kaynaklar yayınlanır.",
-               "bucket_label": "Global"},
-    "ozel": {"name": "Pulsar Özel Manga Hub", "pkg": PKG + ".ozel", "lang": "tr", "path": "ozel/jar",
-             "sources": os.path.join("sources", "tr", "sources.json"),
-             "what": "Kaynak ekle akışıyla üretilen, yalnızca Türkçe özel siteler için parser'lar. "
-                     "Üretilmiş parser yoksa dizin boştur ([]).",
-             "bucket_label": "Özel"},
+    "tr": {"name": "Pulsar TR Manga Hub", "pkg": PKG, "lang": "tr", "nsfw": 0, "jar": "tr.jar"},
+    "tr_nsfw": {"name": "Pulsar TR Manga Hub (NSFW)", "pkg": PKG + ".trnsfw", "lang": "tr", "nsfw": 1,
+                "jar": "tr-nsfw.jar"},
+    "global": {"name": "Pulsar Global Manga Hub", "pkg": PKG + ".global", "lang": "all", "nsfw": 0,
+               "jar": "global.jar"},
+    "global_nsfw": {"name": "Pulsar Global Manga Hub (NSFW)", "pkg": PKG + ".globalnsfw", "lang": "all",
+                    "nsfw": 1, "jar": "global-nsfw.jar"},
 }
+BUCKET_ORDER = ("tr", "tr_nsfw", "global", "global_nsfw")
+GLOBAL_BUCKETS = ("global", "global_nsfw")
 
 
 def fail(message):
@@ -56,6 +52,12 @@ def load_json_or_none(path):
             return json.load(fh)
     except (OSError, ValueError):
         return None
+
+
+def write_json(path, payload, **kwargs):
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(payload, fh, ensure_ascii=False, **kwargs)
+        fh.write("\n")
 
 
 def load_prepare(path):
@@ -112,123 +114,126 @@ def cmd_decide(args):
     return 0
 
 
-def readme_text(slug, bucket):
-    info = BUCKETS[bucket]
-    url = f"https://raw.githubusercontent.com/{slug}/main/{info['path']}"
-    return f"""# Pulsar TR Manga Hub: {info['bucket_label']} Kototoro eklentisi
+def readme_text(slug):
+    url = f"https://raw.githubusercontent.com/{slug}/main/{JAR_DIR}"
+    return f"""# Pulsar Manga Hub JAR paketleri
 
-{info['what']}
-`.github/workflows/build-jar.yml` iş akışı bu klasörü günceller.
+Bu depo Kototoro için dört ayrı JAR paketi içerir. Her paket Kototoro'da ayrı olarak indirilebilir.
+
+| Paket | Kapsam |
+| --- | --- |
+| `tr` | Yalnız Türkçe kaynaklar, NSFW olmayan |
+| `tr_nsfw` | Yalnız Türkçe kaynaklar, NSFW |
+| `global` | Türkçe dışındaki tüm diller, NSFW olmayan |
+| `global_nsfw` | Türkçe dışındaki tüm diller, NSFW |
+
+Kaynak ekle akışıyla eklenen özel Türkçe siteler de NSFW bayrağına göre `tr` veya `tr_nsfw` paketine girer.
 
 ## Kototoro'ya ekleme
 
-1. Kototoro'yu açın ve **Ayarlar → İçerik Kaynakları → Eklentiler → JAR Depoları → Depo ekle** yolunu izleyin.
-2. Adres olarak şunu girin:
+1. Kototoro'da **Paketler** bölümünü açın.
+2. Depo adresi olarak şunu kullanın:
 
    `{url}`
 
-3. Depo eklendikten sonra kaynaklar Kototoro içinde görünür.
+3. İstediğiniz paketi seçip indirin.
 
-Not: Depo özel (private) iken bu adres çalışmaz. Depo herkese açık (public) yapıldığında çalışır.
-
-## Lisans
-
-Upstream proje Kotatsu-Redo/kotatsu-parsers-redo, GPL-3.0 lisanslıdır. Bu depodaki kaynak
-dönüşümleri ve derleme tarifi `.github/workflows/build-jar.yml` ile açıktır.
-
-## Uyarı
-
-Resmi Kotatsu uygulaması harici jar desteklemez. Bu eklentiyi kullanmak için Kototoro gerekir.
-
-## Dosyalar
-
-- `index.min.json`: eklenti dizini
-- `apk/plugin.jar`: derlenmiş eklenti (dizin boşsa yok)
-- `build_info.json`: derleme bilgileri (parmak izi, upstream commit, sha256)
+`index.min.json` tüm paketlerin dizinidir. Paket dosyaları `apk/` altındadır ve
+`.github/workflows/build-jar.yml` iş akışı tarafından güncellenir.
 """
 
 
-def placeholder_index():
-    return "[]\n"
-
-
 def index_sources(prep, by_parser, bucket, include_unverified):
-    """Return the index 'sources' list for one bucket. Each item keeps its own language code."""
+    """Return the index 'sources' list for one package. Each item keeps its own language code."""
     kept = sorted(prep.get("kept_ids") or [])
     langs = prep.get("langs") or {}
     extras = {x["id"]: x for x in (prep.get("extra_sources") or [])}
+    allow_multilang = bucket in GLOBAL_BUCKETS
     sources = []
     for pid in kept:
         if pid in extras:
             x = extras[pid]
-            sources.append({"name": x.get("name") or pid, "id": pid, "lang": x.get("lang") or "tr"})
+            name = x.get("name") or pid
+            lang = x.get("lang") or "tr"
+        else:
+            entries = [e for e in by_parser.get(pid, [])
+                       if rules.is_publishable(e, include_unverified, allow_multilang=allow_multilang)]
+            if not entries:
+                continue
+            name = entries[0].get("name") or pid
+            lang = langs.get(pid) or bucket_lang(bucket)
+        if not lang_fits(bucket, lang):
             continue
-        entries = [e for e in by_parser.get(pid, [])
-                   if rules.is_publishable(e, include_unverified, allow_multilang=bucket == "global")]
-        if not entries:
-            continue
-        name = entries[0].get("name") or pid
-        sources.append({"name": name, "id": pid, "lang": langs.get(pid) or bucket_lang(bucket)})
+        sources.append({"name": name, "id": pid, "lang": lang})
     return sources
+
+
+def lang_fits(bucket, lang):
+    is_tr = lang == "tr"
+    return not is_tr if bucket in GLOBAL_BUCKETS else is_tr
 
 
 def bucket_lang(bucket):
     return BUCKETS[bucket]["lang"]
 
 
-def nsfw_of(prep, sources_ids, by_parser):
-    extras = {x["id"]: x for x in (prep.get("extra_sources") or [])}
-    for pid in sources_ids:
-        if pid in extras and extras[pid].get("nsfw"):
-            return 1
-        if any(e.get("nsfw") for e in by_parser.get(pid, [])):
-            return 1
-    return 0
+def merge_index(out):
+    entries = []
+    for bucket in BUCKET_ORDER:
+        entry = load_json_or_none(os.path.join(out, "state", f"{bucket}.entry.json"))
+        if isinstance(entry, dict):
+            entries.append(entry)
+    os.makedirs(out, exist_ok=True)
+    with open(os.path.join(out, "index.min.json"), "w", encoding="utf-8") as fh:
+        json.dump(entries, fh, ensure_ascii=False, separators=(",", ":"))
+        fh.write("\n")
+    return entries
 
 
 def cmd_index(args):
     prep = load_prepare(args.prepare)
     bucket = args.bucket
-    info_meta = BUCKETS[bucket]
+    meta = BUCKETS[bucket]
     patched = prep.get("patched_domains") or []
     kept = sorted(prep.get("kept_ids") or [])
     by_parser = jar_prepare.load_sources(args.sources)
     include_unverified = bool(prep.get("include_unverified"))
     sources = index_sources(prep, by_parser, bucket, include_unverified)
 
-    os.makedirs(args.out, exist_ok=True)
-    apk_dir = os.path.join(args.out, "apk")
-    dest = os.path.join(apk_dir, JAR_NAME)
+    state_dir = os.path.join(args.out, "state")
+    dest = os.path.join(args.out, "apk", meta["jar"])
+    entry_path = os.path.join(state_dir, f"{bucket}.entry.json")
+    info_path = os.path.join(state_dir, f"{bucket}.build_info.json")
+    os.makedirs(state_dir, exist_ok=True)
     if not sources:
-        # Nothing publishable: the directory is an empty index and carries no jar.
+        # Nothing publishable: this package is absent from the index and carries no jar.
         if os.path.isfile(dest):
             os.remove(dest)
-        with open(os.path.join(args.out, "index.min.json"), "w", encoding="utf-8") as fh:
-            fh.write(placeholder_index())
+        if os.path.isfile(info_path):
+            os.remove(info_path)
+        write_json(entry_path, None)
+        merge_index(args.out)
         return 0
 
     if not os.path.isfile(args.jar):
         fail(f"jar dosyası yok: {args.jar}")
-    os.makedirs(apk_dir, exist_ok=True)
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
     shutil.copyfile(args.jar, dest)
 
     run = args.run_number
-    index = [{
-        "name": info_meta["name"],
-        "pkg": info_meta["pkg"],
+    write_json(entry_path, {
+        "name": meta["name"],
+        "pkg": meta["pkg"],
         "version": f"1.0.{run}",
         "code": run,
-        "apk": JAR_NAME,
-        "lang": info_meta["lang"],
-        "nsfw": nsfw_of(prep, [s["id"] for s in sources], by_parser),
+        "apk": meta["jar"],
+        "lang": meta["lang"],
+        "nsfw": meta["nsfw"],
         "sources": sources,
-    }]
-    with open(os.path.join(args.out, "index.min.json"), "w", encoding="utf-8") as fh:
-        json.dump(index, fh, ensure_ascii=False, separators=(",", ":"))
-        fh.write("\n")
+    }, separators=(",", ":"))
 
     commit = prep.get("upstream_commit")
-    info = {
+    write_json(info_path, {
         "bucket": bucket,
         "fingerprint": fingerprint(commit, kept, patched),
         "upstream_commit": commit,
@@ -239,21 +244,21 @@ def cmd_index(args):
         "patchedDomains": patched,
         "fallback": args.fallback,
         "runNumber": run,
-    }
-    with open(os.path.join(args.out, "build_info.json"), "w", encoding="utf-8") as fh:
-        json.dump(info, fh, ensure_ascii=False, indent=2)
-        fh.write("\n")
+    }, indent=2)
+    merge_index(args.out)
+    return 0
 
-    with open(os.path.join(args.out, "README.md"), "w", encoding="utf-8") as fh:
-        fh.write(readme_text(repo_slug(), bucket))
+
+def cmd_merge_index(args):
+    merge_index(args.out)
     return 0
 
 
 def cmd_readme(args):
-    """Write only README.md for a bucket (used for the empty placeholder directories)."""
+    """Write the single README.md of the JAR directory."""
     os.makedirs(args.out, exist_ok=True)
     with open(os.path.join(args.out, "README.md"), "w", encoding="utf-8") as fh:
-        fh.write(readme_text(repo_slug(), args.bucket))
+        fh.write(readme_text(repo_slug()))
     return 0
 
 
@@ -268,7 +273,7 @@ def build_parser():
     dec.add_argument("--force", type=int, choices=[0, 1], default=0)
     dec.set_defaults(func=cmd_decide)
 
-    idx = sub.add_parser("index", help="bucket klasörünü yaz")
+    idx = sub.add_parser("index", help="paket jar'ını, girdisini ve index.min.json'u yaz")
     idx.add_argument("--bucket", required=True, choices=sorted(BUCKETS))
     idx.add_argument("--prepare", required=True)
     idx.add_argument("--jar", default="plugin.jar")
@@ -278,8 +283,11 @@ def build_parser():
     idx.add_argument("--sources", default=os.path.join(BASE_DIR, "sources", "tr", "sources.json"))
     idx.set_defaults(func=cmd_index)
 
-    rd = sub.add_parser("readme", help="yalnızca bucket README.md dosyasını yaz")
-    rd.add_argument("--bucket", required=True, choices=sorted(BUCKETS))
+    mg = sub.add_parser("merge-index", help="state/ girdilerinden index.min.json yaz")
+    mg.add_argument("--out", required=True)
+    mg.set_defaults(func=cmd_merge_index)
+
+    rd = sub.add_parser("readme", help="yalnızca README.md dosyasını yaz")
     rd.add_argument("--out", required=True)
     rd.set_defaults(func=cmd_readme)
     return parser

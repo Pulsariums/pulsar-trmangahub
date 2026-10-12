@@ -70,6 +70,12 @@ def source(sid, parser, status, scope="tr_native", broken=False, failing=None, a
     return entry
 
 
+def nsfw_source(sid, parser, status, domain):
+    entry = source(sid, parser, status, domain=domain)
+    entry["nsfw"] = True
+    return entry
+
+
 SOURCES = [
     source("trone", "TRONE", "published"),
     source("trtwo", "TRTWO", "quarantined"),
@@ -265,6 +271,87 @@ class JarPrepareTests(unittest.TestCase):
         self.assertIn("oldthree.tr", self.read(os.path.join(SITE, "madara", "tr", "TrThree.kt")))
         self.assertTrue(self.exists(os.path.join(SITE, "madara", "tr", "TrNoLit.kt")))
         self.assertFalse(os.path.exists(self.report))
+
+    def add_nsfw_parser(self):
+        path = os.path.join(SITE, "madara", "tr", "TrNsfw.kt")
+        self.write_upstream({**FILES, path: '@MangaSourceParser("TRNSFW", "TrNsfw", "tr")\n'
+                                            'class TrNsfw : MadaraParser("nsfw.tr")\n'})
+        self.write_sources(SOURCES + [nsfw_source("trnsfw", "TRNSFW", "published", domain="nsfw.tr")])
+        return path
+
+    def test_nsfw_any_keeps_nsfw_and_safe_parsers(self):
+        self.add_nsfw_parser()
+        report = self.run_prepare()
+        self.assertIn("TRNSFW", report["kept_ids"])
+        self.assertIn("TRONE", report["kept_ids"])
+        self.assertEqual(report["nsfw"], "any")
+        self.assertEqual(report["exclude_lang"], [])
+
+    def test_nsfw_only_keeps_nsfw_parsers_and_deletes_the_rest(self):
+        path = self.add_nsfw_parser()
+        report = self.run_prepare("--nsfw", "only")
+        self.assertEqual(report["kept_ids"], ["TRNSFW"])
+        self.assertEqual(report["nsfw"], "only")
+        self.assertTrue(self.exists(path))
+        self.assertFalse(self.exists(os.path.join(SITE, "madara", "tr", "TrOne.kt")))
+        self.assertIn("TRONE", report["removed_ids"])
+
+    def test_nsfw_none_drops_nsfw_parsers(self):
+        path = self.add_nsfw_parser()
+        report = self.run_prepare("--nsfw", "none")
+        self.assertIn("TRONE", report["kept_ids"])
+        self.assertNotIn("TRNSFW", report["kept_ids"])
+        self.assertIn("TRNSFW", report["removed_ids"])
+        self.assertFalse(self.exists(path))
+
+    def test_exclude_lang_drops_listed_language(self):
+        self.add_nsfw_parser()
+        report = self.run_prepare("--allow-multilang", "1", "--exclude-lang", "tr")
+        self.assertIn("ENONE", report["kept_ids"])
+        self.assertNotIn("TRONE", report["kept_ids"])
+        self.assertNotIn("TRNSFW", report["kept_ids"])
+        self.assertEqual(report["exclude_lang"], ["tr"])
+
+    def test_exclude_lang_list_is_normalized(self):
+        self.add_nsfw_parser()
+        report = self.run_prepare("--allow-multilang", "1", "--exclude-lang", " TR , ,en")
+        self.assertEqual(report["exclude_lang"], ["en", "tr"])
+        self.assertNotIn("ENONE", report["kept_ids"])
+        self.assertNotIn("TRONE", report["kept_ids"])
+
+    def test_nsfw_filter_applies_to_extra_parsers(self):
+        self.write_sources(SOURCES + [source("ozel", "OZNSFW", "published", domain="ozel.tr")])
+        gen = self.make_extra(parser="OZNSFW", body=(
+            '@MangaSourceParser("OZNSFW", "Oz Nsfw", "tr", ContentType.HENTAI)\n'
+            'class OzelOne : MadaraParser("ozel.tr")\n'))
+        report = self.run_prepare("--mode", "none", "--extra-parsers", gen, "--nsfw", "none")
+        self.assertEqual(report["extra_sources"], [])
+        self.assertEqual(report["kept_ids"], [])
+        self.write_upstream(FILES)
+        gen = self.make_extra(parser="OZNSFW", body=(
+            '@MangaSourceParser("OZNSFW", "Oz Nsfw", "tr", ContentType.HENTAI)\n'
+            'class OzelOne : MadaraParser("ozel.tr")\n'))
+        report = self.run_prepare("--mode", "none", "--extra-parsers", gen, "--nsfw", "only")
+        self.assertEqual(report["kept_ids"], ["OZNSFW"])
+        self.assertTrue(report["extra_sources"][0]["nsfw"])
+
+    def test_exclude_lang_applies_to_extra_parsers(self):
+        self.write_sources(SOURCES + [source("ozel", "OZELONE", "published", domain="ozel.tr")])
+        report = self.run_prepare("--mode", "none", "--extra-parsers", self.make_extra(),
+                                  "--exclude-lang", "tr")
+        self.assertEqual(report["extra_sources"], [])
+        self.assertEqual(report["kept_ids"], [])
+
+    def test_patch_only_fallback_applies_nsfw_to_extras(self):
+        self.write_sources(SOURCES + [source("ozel", "OZNSFW", "published", domain="ozel.tr")])
+        gen = self.make_extra(parser="OZNSFW", body=(
+            '@MangaSourceParser("OZNSFW", "Oz Nsfw", "tr", ContentType.HENTAI)\n'
+            'class OzelOne : MadaraParser("ozel.tr")\n'))
+        args = ["--upstream", self.upstream, "--sources", self.sources, "--patch-only",
+                "--extra-parsers", gen, "--nsfw", "none"]
+        self.assertEqual(jar_prepare.main(args), 0)
+        copied = [f for dp, _, fs in os.walk(self.upstream) for f in fs if f == "OzelOne.kt"]
+        self.assertEqual(copied, [])
 
     def test_patch_only_fails_on_missing_patch_target(self):
         self.write_upstream({k: v for k, v in FILES.items() if not k.endswith("Broken.kt")})

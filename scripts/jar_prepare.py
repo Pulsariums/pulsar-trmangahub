@@ -17,8 +17,11 @@ Steps, in order:
      must not collide with any upstream id.
   f) report: JSON written to --report
 
---mode none selects no upstream parser (used by the ozel bucket: only extras are built).
---allow-multilang 1 admits non-tr scope sources (global bucket).
+--mode none selects no upstream parser (only extras are built).
+--allow-multilang 1 admits non-tr scope sources (global packages).
+--nsfw any|only|none keeps all, only nsfw, or only non-nsfw parsers and extras. A parser is nsfw
+  when any of its entries is.
+--exclude-lang drops parsers and extras whose language code is in the comma separated list.
 """
 
 import argparse
@@ -151,8 +154,20 @@ def patch_domain(file_info, old, new):
     return count
 
 
+def parse_list(value):
+    return sorted({item.strip().lower() for item in (value or "").split(",") if item.strip()})
+
+
+def keep_candidate(nsfw, lang, nsfw_mode, exclude_lang):
+    if nsfw_mode == "only" and not nsfw:
+        return False
+    if nsfw_mode == "none" and nsfw:
+        return False
+    return (lang or "").lower() not in exclude_lang
+
+
 def select_and_repair(files, by_parser, mode, include_broken, policy, include_unverified=False,
-                      allow_multilang=False):
+                      allow_multilang=False, nsfw_mode="any", exclude_lang=()):
     file_of = {}
     lang_of = {}
     broken_of = {}
@@ -175,6 +190,9 @@ def select_and_repair(files, by_parser, mode, include_broken, policy, include_un
         if mode == "all_tr" and lang_of[pid] != "tr":
             continue
         if (broken_of[pid] or jar_broken(entries)) and not include_broken:
+            continue
+        nsfw = any(bool(e.get("nsfw")) for e in entries)
+        if not keep_candidate(nsfw, lang_of[pid], nsfw_mode, exclude_lang):
             continue
         kept.add(pid)
 
@@ -319,6 +337,10 @@ def main(argv=None):
                         help="non-tr scope kaynakları da dahil et (global bucket, varsayılan 0)")
     parser.add_argument("--extra-parsers", default="",
                         help="generated/ kökü: ozel <domain>/jar/*.kt parser dosyalarını ekle")
+    parser.add_argument("--nsfw", choices=["any", "only", "none"], default="any",
+                        help="any: hepsi; only: yalnız nsfw; none: yalnız nsfw olmayan (varsayılan any)")
+    parser.add_argument("--exclude-lang", default="",
+                        help="virgülle ayrılmış dil kodları; bu dillerdeki parser ve extras atlanır")
     parser.add_argument("--report", default=os.path.join(BASE_DIR, "data", "jar_prepare.json"))
     parser.add_argument("--patch-only", action="store_true",
                         help="yalnızca yamaları uygula; seçim, silme ve domain onarımı yapma")
@@ -329,13 +351,15 @@ def main(argv=None):
         fail(f"upstream klasörü yok: {upstream}")
 
     apply_patches(upstream)
+    exclude = parse_list(args.exclude_lang)
     if args.patch_only:
         # Fallback build: no selection or deletion, but ozel extras are still copied in.
         if args.extra_parsers:
             taken = {ann["id"] for info in scan_annotated(upstream) for ann in info["anns"]}
-            copy_extras(upstream, scan_extras(os.path.abspath(args.extra_parsers),
-                                              load_entries(args.sources), bool(args.include_unverified)),
-                        taken)
+            found = scan_extras(os.path.abspath(args.extra_parsers), load_entries(args.sources),
+                                bool(args.include_unverified))
+            found = [x for x in found if keep_candidate(x["nsfw"], x["lang"], args.nsfw, exclude)]
+            copy_extras(upstream, found, taken)
         return 0
     files = scan_annotated(upstream)
     entries = load_entries(args.sources)
@@ -344,13 +368,14 @@ def main(argv=None):
     allow_multilang = bool(args.allow_multilang)
     file_of, kept, patched, patch_failed, lang_of = select_and_repair(
         files, by_parser, args.mode, args.include_broken, args.apply_alternatives, include_unverified,
-        allow_multilang)
+        allow_multilang, args.nsfw, exclude)
     all_ids = set(file_of)
     deleted, rescued = delete_and_rescue(files, kept)
 
     extras = []
     if args.extra_parsers:
         found = scan_extras(os.path.abspath(args.extra_parsers), entries, include_unverified)
+        found = [x for x in found if keep_candidate(x["nsfw"], x["lang"], args.nsfw, exclude)]
         extras = copy_extras(upstream, found, all_ids)
         kept |= {x["id"] for x in extras}
         for x in extras:
@@ -361,6 +386,8 @@ def main(argv=None):
         "mode": args.mode,
         "include_unverified": include_unverified,
         "allow_multilang": allow_multilang,
+        "nsfw": args.nsfw,
+        "exclude_lang": exclude,
         "kept_ids": sorted(kept),
         "langs": {pid: lang_of.get(pid, "tr") for pid in sorted(kept)},
         "extra_sources": extras,
