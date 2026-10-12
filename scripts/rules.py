@@ -97,6 +97,39 @@ ADMIT_CF = os.environ.get("PULSAR_ADMIT_CF") == "1"
 # PULSAR_ADMIT_ALL=1: canlı test için aday modu; karantinadakiler dahil her statüdeki kaynak seçilir.
 ADMIT_ALL = os.environ.get("PULSAR_ADMIT_ALL") == "1"
 
+# PULSAR_LIVE_GATE=1: canlı test geçmişi (data/live/history.json) hakemdir. Son canlı testi geçen kaynak
+# yayınlanır; "cloudflare" hatası kesin sonuç sayılmaz (CI koşucusu CF'yi geçemez), kaynak CF'li canlı
+# statüdeyse yayınlanmaya devam eder; diğer hata sınıfları (parse, empty, http_gone, dns...) yayından çıkarır.
+LIVE_GATE = os.environ.get("PULSAR_LIVE_GATE") == "1"
+LIVE_HISTORY = os.environ.get("PULSAR_LIVE_HISTORY") or os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "live", "history.json")
+_live_cache = None
+
+
+def _live():
+    global _live_cache
+    if _live_cache is None:
+        import json
+        try:
+            with open(LIVE_HISTORY, encoding="utf-8") as fh:
+                _live_cache = json.load(fh)
+        except (OSError, ValueError):
+            _live_cache = {}
+    return _live_cache
+
+
+def live_verdict(entry):
+    """True: canlı test geçti, False: canlı test kaldı, None: sonuç yok veya kesin değil."""
+    parser = (((entry.get("formats") or {}).get("jar")) or {}).get("parser")
+    rec = _live().get(parser) if parser else None
+    if not rec:
+        return None
+    if rec.get("ok_streak", 0) >= 1:
+        return True
+    if rec.get("error_class") == "cloudflare":
+        return None
+    return False
+
 
 def is_publishable(entry, include_unverified=False, allow_multilang=False):
     """Publication gate for the JAR, the Mihon mirror and their index 'sources' lists.
@@ -107,6 +140,12 @@ def is_publishable(entry, include_unverified=False, allow_multilang=False):
     Turkish bucket and the Mihon mirror keep the default. excluded entries never qualify."""
     if is_multilang(entry) and not allow_multilang:
         return False
+    if LIVE_GATE and not ADMIT_ALL:
+        verdict = live_verdict(entry)
+        if verdict is True:
+            return entry.get("status") != "excluded"
+        if verdict is False:
+            return False
     if ADMIT_ALL and entry.get("status") in ("published", "cf_protected_published", "failing", "unverified",
                                               "quarantined"):
         return True
