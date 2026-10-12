@@ -127,3 +127,13 @@ atmaz ve "Senkron iptal edildi" issue'su açar.
 - Upstream'deki `@Broken` işaretleri yayın kararında kullanılmaz; yalnızca probe sonucu belirler.
 - Motor parmak izi ve işlevsel kontrol, sitelerin HTML yapısına bağlıdır; site tasarımı
   değişirse yanlış `functional: false` üretebilir.
+
+## Depo bağlantıları
+
+Kototoro ve Mihon'a eklemek için iki adres:
+
+- Kototoro (JAR): `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/repo`
+- Mihon (APK): `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/repo-mihon`
+
+Mihon deposu, `.github/workflows/build-mihon.yml` ile 6 saatte bir keiyoushi/extensions
+deposundaki Türkçe eklentilerden üretilir (`scripts/mihon_publish.py`).

@@ -1,0 +1,52 @@
+name: 'Mihon deposu: Türkçe APK aynası'
+
+on:
+  schedule:
+    - cron: '27 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Aynayı repo-mihon klasörüne commit edip gönder'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-tr-sources
+  cancel-in-progress: false
+
+jobs:
+  mihon:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PUBLISH: ${{ inputs.publish || github.event_name == 'schedule' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 'Türkçe Mihon APK''lerini aynala'
+        run: python3 -I scripts/mihon_publish.py
+
+      - name: Mihon klasörünü dala gönder
+        if: env.PUBLISH == 'true'
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git add repo-mihon
+          if git diff --cached --quiet; then
+            echo "Değişiklik yok, commit atılmadı."
+            exit 0
+          fi
+          git -c user.name=pulsarium -c user.email=pulsariums@gmail.com commit -m "chore(mihon): Türkçe Mihon deposu güncellendi"
+          for i in 1 2 3; do
+            git pull --rebase origin "${BRANCH}" && git push origin "HEAD:${BRANCH}" && exit 0
+            sleep $((i*5))
+          done
+          echo "Push başarısız oldu" >&2
+          exit 1
