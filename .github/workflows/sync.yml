@@ -1,0 +1,87 @@
+name: sync-tr-sources
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: sync-tr-sources
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Collect upstream sources
+        run: python scripts/sync.py
+
+      - name: Probe domains
+        run: python scripts/probe.py
+
+      - name: Find alternatives for broken domains
+        run: python scripts/alternatives.py
+
+      - name: Build published lists (safety switch)
+        id: build
+        run: |
+          set +e
+          python scripts/build.py
+          rc=$?
+          set -e
+          if [ "$rc" -eq 2 ]; then
+            echo "cancelled=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          elif [ "$rc" -ne 0 ]; then
+            exit "$rc"
+          fi
+          echo "cancelled=false" >> "$GITHUB_OUTPUT"
+
+      - name: Commit changes to the current branch
+        if: steps.build.outputs.cancelled == 'false'
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "pulsar-trmangahub-bot"
+          git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
+          git add sources/tr
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(sync): TR kaynakları güncellendi"
+          for i in 1 2 3; do
+            git pull --rebase origin "${BRANCH}" && git push origin "HEAD:${BRANCH}" && exit 0
+            sleep $((i*5))
+          done
+          echo "Push başarısız oldu" >&2
+          exit 1
+
+      - name: Open issue when the sync was cancelled
+        if: steps.build.outputs.cancelled == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          title="Senkron iptal edildi"
+          existing=$(gh issue list --state open --json title,number \
+            -q ".[] | select(.title==\"${title}\") | .number" | head -n 1)
+          if [ -n "$existing" ]; then
+            echo "Open issue #${existing} already exists; not creating another."
+            exit 0
+          fi
+          gh issue create --title "$title" --body "Güvenlik şalteri devreye girdi: TR kaynak yayını bu run'da iptal edildi ve hiçbir dosya değiştirilmedi. Nedeni için bu workflow run'ının build adımındaki IPTAL satırına bakın. Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
