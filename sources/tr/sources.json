@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T09:21:52+00:00",
+  "generatedAt": "2026-10-12T09:34:03+00:00",
   "count": 186,
   "sources": [
     {
@@ -9,6 +9,7 @@
       "baseUrl": "https://3hentai.net",
       "engine": null,
       "nsfw": true,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.hentai3",
@@ -19,14 +20,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -39,6 +34,7 @@
       "baseUrl": "https://adumanga.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -59,14 +55,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -79,6 +76,7 @@
       "baseUrl": "https://afroditscans.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.afroditscans",
@@ -109,7 +107,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -124,6 +122,7 @@
       "baseUrl": "https://akuma.moe",
       "engine": null,
       "nsfw": true,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.akuma",
@@ -134,10 +133,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "unverified",
-      "unverified": true,
-      "reason": "http 403",
-      "lastChecked": null,
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -150,6 +147,7 @@
       "baseUrl": "https://alliedfansub.net",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -169,15 +167,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='alliedfansub.net', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: un",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -190,6 +188,7 @@
       "baseUrl": "https://alucardscans.com",
       "engine": "signedrest",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.alucardscans",
@@ -213,15 +212,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "http 525",
       "probe": {
         "status": "dead",
         "http": 525,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -235,6 +234,7 @@
       "baseUrl": "https://www.amangaplanet.com.tr",
       "engine": "mangathemesia",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.amangaplanet",
@@ -252,7 +252,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -265,6 +265,7 @@
       "baseUrl": "https://anikiga.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.anikiga",
@@ -295,7 +296,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -310,6 +311,7 @@
       "baseUrl": "https://anisamanga.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -336,8 +338,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -350,6 +352,7 @@
       "baseUrl": "https://araznovel.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -376,7 +379,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -390,6 +393,7 @@
       "baseUrl": "https://arcurafansub.com",
       "engine": "mangareader",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.arcurafansub",
@@ -420,7 +424,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -435,6 +439,7 @@
       "baseUrl": "https://armoniscans.net",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -454,15 +459,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "timeout: ReadTimeout: HTTPSConnectionPool(host='www.autismsupportnetwork.com', port=443): Read timed out. (read timeout=15)",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -475,6 +480,7 @@
       "baseUrl": "https://asemifansub.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -499,9 +505,9 @@
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -515,6 +521,7 @@
       "baseUrl": "https://asurascans.com.tr",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.asurascanstr",
@@ -545,8 +552,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -560,6 +567,7 @@
       "baseUrl": "https://athenamanga.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -580,14 +588,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -600,6 +609,7 @@
       "baseUrl": "https://ayatoon.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -619,15 +629,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='ayatoon.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)'))",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -640,6 +650,7 @@
       "baseUrl": "https://caprazmanga.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.caprazmanga",
@@ -657,7 +668,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -670,6 +681,7 @@
       "baseUrl": "https://culturesubs.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -696,8 +708,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -710,6 +722,7 @@
       "baseUrl": "https://diamondfansub.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.diamondfansub",
@@ -740,7 +753,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -755,6 +768,7 @@
       "baseUrl": "https://dom4lfansub.online",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.domalfansub",
@@ -765,20 +779,15 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='dom4lfansub.online', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='dom4lfansub.online', port=443) at 0x7f071b34c050>, 'Con",
+      "status": "failing",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='dom4lfansub.online', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='dom4lfansub.online', port=443) at 0x7f35477c7110>, 'Con",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
-      "alternative": {
-        "domain": "domalfansb.com.tr",
-        "how": "same_key",
-        "confidence": "medium"
-      },
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "mihon"
       ]
@@ -790,6 +799,7 @@
       "baseUrl": "https://domalfansb.com.tr",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -810,14 +820,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -830,6 +841,7 @@
       "baseUrl": "https://www.dragonball-multiverse.com",
       "engine": null,
       "nsfw": false,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.dragonballmultiverse",
@@ -840,14 +852,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -860,6 +866,7 @@
       "baseUrl": "https://eldermanga.com",
       "engine": "custom",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.eldermanga",
@@ -882,7 +889,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -896,6 +903,7 @@
       "baseUrl": "https://eleceedturkiye.com",
       "engine": "custom",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -914,7 +922,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -927,6 +935,7 @@
       "baseUrl": "https://epikman.ga",
       "engine": "zeistmanga",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -953,8 +962,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -967,6 +976,7 @@
       "baseUrl": "https://eskimangalar.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.eskimangalar",
@@ -984,7 +994,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -997,6 +1007,7 @@
       "baseUrl": "https://esomanga.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1017,14 +1028,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1037,6 +1049,7 @@
       "baseUrl": "https://fuchscans.com",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1063,8 +1076,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1077,6 +1090,7 @@
       "baseUrl": "https://gafeland.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.gafeland",
@@ -1107,7 +1121,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1122,6 +1136,7 @@
       "baseUrl": "https://gaiatoon.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.gaiatoon",
@@ -1152,7 +1167,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1167,6 +1182,7 @@
       "baseUrl": "https://garciamanga.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.garciamanga",
@@ -1195,9 +1211,9 @@
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1212,6 +1228,7 @@
       "baseUrl": "https://ghostfansub.co",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1238,8 +1255,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1252,6 +1269,7 @@
       "baseUrl": "https://ghostoon.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.ghosthentai",
@@ -1269,7 +1287,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1282,6 +1300,7 @@
       "baseUrl": "https://globalcomix.com",
       "engine": null,
       "nsfw": false,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.globalcomix",
@@ -1292,14 +1311,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1312,6 +1325,7 @@
       "baseUrl": "https://golgebahcesi.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.golgebahcesi",
@@ -1336,14 +1350,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -1357,6 +1372,7 @@
       "baseUrl": "https://guildknives.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1376,15 +1392,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='guildknives.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1397,6 +1413,7 @@
       "baseUrl": "https://guncelmanga.net",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1417,14 +1434,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1437,6 +1455,7 @@
       "baseUrl": "https://hattorimanga.net",
       "engine": null,
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.hattorimanga",
@@ -1454,7 +1473,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1467,6 +1486,7 @@
       "baseUrl": "https://hattoriscans.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.hattoriscans",
@@ -1484,7 +1504,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1497,6 +1517,7 @@
       "baseUrl": "https://hayalistic.com.tr",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1523,8 +1544,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1537,6 +1558,7 @@
       "baseUrl": "https://hayalistic.online",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.hayalistic",
@@ -1554,7 +1576,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1567,6 +1589,7 @@
       "baseUrl": "https://hentaihand.com",
       "engine": null,
       "nsfw": true,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.hentaihand",
@@ -1577,14 +1600,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1597,6 +1614,7 @@
       "baseUrl": "https://hoifansub.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1616,15 +1634,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='hoifansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='hoifansub.com', port=443) at 0x7f071818e7e0>, 'Connection to",
+      "status": "failing",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='hoifansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='hoifansub.com', port=443) at 0x7f354781a1b0>, 'Connection to",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1637,6 +1655,7 @@
       "baseUrl": "https://holyscans.com.tr",
       "engine": null,
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.holyscans",
@@ -1654,7 +1673,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1667,6 +1686,7 @@
       "baseUrl": "https://imparatormanga.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1693,8 +1713,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1707,6 +1727,7 @@
       "baseUrl": "https://jellyring.co",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1733,8 +1754,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1747,6 +1768,7 @@
       "baseUrl": "https://jiangzaitoon.top",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1773,8 +1795,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1787,6 +1809,7 @@
       "baseUrl": "https://juratempe.st",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.juratempest",
@@ -1804,7 +1827,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1817,6 +1840,7 @@
       "baseUrl": "https://kabusmanga.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1836,15 +1860,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "timeout: ReadTimeout: HTTPSConnectionPool(host='kabusmanga.com', port=443): Read timed out. (read timeout=15)",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1857,6 +1881,7 @@
       "baseUrl": "https://kedi.to",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1883,8 +1908,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1897,6 +1922,7 @@
       "baseUrl": "https://korelimanga.com",
       "engine": "initmanga",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.korelimanga",
@@ -1914,7 +1940,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1927,6 +1953,7 @@
       "baseUrl": "https://koreliscans.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1938,20 +1965,15 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='koreliscans.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: una",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
-      "alternative": {
-        "domain": "nabicix.com",
-        "how": "same_key",
-        "confidence": "medium"
-      },
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu"
       ]
@@ -1963,6 +1985,7 @@
       "baseUrl": "https://kuroimanga.com",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -1989,7 +2012,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -2003,6 +2026,7 @@
       "baseUrl": "https://kuroimanga.site",
       "engine": null,
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.kuroimanga",
@@ -2020,7 +2044,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2033,6 +2057,7 @@
       "baseUrl": "https://laviniafansub.shop",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.laviniafansub",
@@ -2058,7 +2083,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -2072,6 +2097,7 @@
       "baseUrl": "https://laviniafansub.site",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2083,20 +2109,15 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='laviniafansub.site', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: ",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
-      "alternative": {
-        "domain": "laviniafansub.shop",
-        "how": "same_key",
-        "confidence": "medium"
-      },
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu"
       ]
@@ -2108,6 +2129,7 @@
       "baseUrl": "https://lilyumfansub.com.tr",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2126,8 +2148,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu"
       ]
@@ -2139,6 +2161,7 @@
       "baseUrl": "https://lilyumfansub.pro",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": null,
@@ -2153,15 +2176,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='lilyumfansub.pro', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')))",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "nyora"
       ]
@@ -2173,6 +2196,7 @@
       "baseUrl": "https://limonmanga.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.limonmanga",
@@ -2190,7 +2214,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2203,6 +2227,7 @@
       "baseUrl": "https://lunarx.to",
       "engine": null,
       "nsfw": false,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.lunaranime",
@@ -2213,14 +2238,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 200; cloudflare challenge page",
-      "probe": {
-        "status": "cf_protected",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2233,6 +2252,7 @@
       "baseUrl": "https://manga-ay.com",
       "engine": "custom",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2244,15 +2264,15 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='manga-ay.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)')",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu"
       ]
@@ -2264,6 +2284,7 @@
       "baseUrl": "https://manga-sehri.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2290,8 +2311,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2304,6 +2325,7 @@
       "baseUrl": "https://manga-sehri.net",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangasehrinet",
@@ -2327,15 +2349,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "http 523",
       "probe": {
         "status": "dead",
         "http": 523,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -2349,6 +2371,7 @@
       "baseUrl": "https://manga-tr.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangatr",
@@ -2375,6 +2398,7 @@
       "baseUrl": "https://manga.adonisfansub.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2401,7 +2425,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -2415,6 +2439,7 @@
       "baseUrl": "https://manga.araznovel.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.araznovel",
@@ -2432,7 +2457,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2445,6 +2470,7 @@
       "baseUrl": "https://mangabahcesi.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangaship",
@@ -2462,7 +2488,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2473,8 +2499,9 @@
       "name": "Manga Ball",
       "domain": "mangaball.com",
       "baseUrl": "https://mangaball.com",
-      "engine": null,
+      "engine": "mangathemesia",
       "nsfw": false,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.mangaball",
@@ -2485,14 +2512,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 403; cloudflare challenge page",
-      "probe": {
-        "status": "cf_protected",
-        "http": 403,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2505,6 +2526,7 @@
       "baseUrl": "https://mangacim.com.tr",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2531,8 +2553,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "alternative": {
         "domain": "mangacix.net",
         "how": "similar_key",
@@ -2550,6 +2572,7 @@
       "baseUrl": "https://mangacix.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2568,8 +2591,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "alternative": {
         "domain": "mangacix.net",
         "how": "same_key",
@@ -2586,6 +2609,7 @@
       "baseUrl": "https://mangacix.net",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": null,
@@ -2601,14 +2625,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "nyora"
       ]
@@ -2620,6 +2645,7 @@
       "baseUrl": "https://mangadenizi.net",
       "engine": "mmrcms",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangadenizi",
@@ -2650,7 +2676,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -2665,6 +2691,7 @@
       "baseUrl": "https://mangadex.org",
       "engine": null,
       "nsfw": false,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.mangadex",
@@ -2675,14 +2702,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2695,6 +2716,7 @@
       "baseUrl": "https://mangadiyari.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangadiyari",
@@ -2712,7 +2734,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2725,6 +2747,7 @@
       "baseUrl": "https://mangadot.net",
       "engine": null,
       "nsfw": false,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.en.mangadotnet",
@@ -2735,14 +2758,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2755,6 +2772,7 @@
       "baseUrl": "https://mangadusleri.mom",
       "engine": null,
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangadusleri",
@@ -2772,7 +2790,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2785,6 +2803,7 @@
       "baseUrl": "https://mangaefendisi.net",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2811,8 +2830,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2825,6 +2844,7 @@
       "baseUrl": "https://mangagezgini.online",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": null,
@@ -2846,7 +2866,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "nyora"
@@ -2859,6 +2879,7 @@
       "baseUrl": "https://mangagezgini.site",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2878,15 +2899,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='ww38.mangagezgini.site', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='ww38.mangagezgini.site', port=443) at 0x7f071b31a03",
+      "status": "failing",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='ww38.mangagezgini.site', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='ww38.mangagezgini.site', port=443) at 0x7f35446647d",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2899,6 +2920,7 @@
       "baseUrl": "https://mangagezginim.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2917,8 +2939,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu"
       ]
@@ -2930,6 +2952,7 @@
       "baseUrl": "https://mangakazani.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2949,15 +2972,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='mangakazani.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: una",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2970,6 +2993,7 @@
       "baseUrl": "https://mangakings.com.tr",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -2996,8 +3020,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3010,6 +3034,7 @@
       "baseUrl": "https://mangakoleji.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3029,15 +3054,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='mangakoleji.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: una",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3050,6 +3075,7 @@
       "baseUrl": "https://mangakusu.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangakusu",
@@ -3067,7 +3093,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3080,6 +3106,7 @@
       "baseUrl": "https://mangamillion.shueisha.co.jp",
       "engine": null,
       "nsfw": false,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.mangamillion",
@@ -3090,14 +3117,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3110,6 +3131,7 @@
       "baseUrl": "https://mangaoku.com.tr",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": null,
@@ -3125,14 +3147,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "nyora"
       ]
@@ -3144,6 +3167,7 @@
       "baseUrl": "https://mangaoku.info",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3170,8 +3194,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3184,6 +3208,7 @@
       "baseUrl": "https://mangaoku.org",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3196,14 +3221,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu"
       ]
@@ -3215,6 +3241,7 @@
       "baseUrl": "https://mangaokusana.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3234,15 +3261,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='mangaokusana.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: un",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3255,6 +3282,7 @@
       "baseUrl": "https://mangaokutr.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3273,8 +3301,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu"
       ]
@@ -3286,6 +3314,7 @@
       "baseUrl": "https://mangaokutr.net",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": null,
@@ -3307,8 +3336,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "nyora"
       ]
@@ -3320,6 +3349,7 @@
       "baseUrl": "https://www.mangaportali.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangaportali",
@@ -3337,7 +3367,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3350,6 +3380,7 @@
       "baseUrl": "https://mangaruhu.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3376,7 +3407,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -3390,6 +3421,7 @@
       "baseUrl": "https://mangasiginagi.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3410,14 +3442,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3430,6 +3463,7 @@
       "baseUrl": "https://mangatilkisi.net",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3448,8 +3482,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "alternative": {
         "domain": "tilkiscans.com",
         "how": "same_key",
@@ -3466,6 +3500,7 @@
       "baseUrl": "https://mangatr.app",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3485,15 +3520,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='mangatr.app', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable ",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3506,6 +3541,7 @@
       "baseUrl": "https://mangawow.org",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangawow",
@@ -3536,7 +3572,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3551,6 +3587,7 @@
       "baseUrl": "https://mangawt.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangawt",
@@ -3581,7 +3618,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3596,6 +3633,7 @@
       "baseUrl": "https://mangazure.net",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangazure",
@@ -3606,15 +3644,15 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "http 523",
       "probe": {
         "status": "dead",
         "http": 523,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "mihon"
       ]
@@ -3626,6 +3664,7 @@
       "baseUrl": "https://mangtto.com",
       "engine": null,
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangitto",
@@ -3643,7 +3682,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3656,6 +3695,7 @@
       "baseUrl": "https://manwe.pro",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3692,6 +3732,7 @@
       "baseUrl": "https://merlinscans.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3710,7 +3751,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -3723,6 +3764,7 @@
       "baseUrl": "https://merlintoon.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.merlinscans",
@@ -3740,7 +3782,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3753,6 +3795,7 @@
       "baseUrl": "https://mikrokosmosfb.blogspot.com",
       "engine": "zeistmanga",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mikrokosmosfansub",
@@ -3776,10 +3819,14 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "unverified",
-      "unverified": true,
-      "reason": "http 429",
-      "lastChecked": null,
+      "status": "published",
+      "reason": "http 200",
+      "probe": {
+        "status": "ok",
+        "http": 200,
+        "functional": null
+      },
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3794,6 +3841,7 @@
       "baseUrl": "https://milascans.tr",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3813,15 +3861,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='milascans.tr', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3834,6 +3882,7 @@
       "baseUrl": "https://millascan.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.milasub",
@@ -3851,7 +3900,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3864,6 +3913,7 @@
       "baseUrl": "https://mindafansub.dev",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mindafansub",
@@ -3889,7 +3939,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3903,6 +3953,7 @@
       "baseUrl": "https://mindafansub.online",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3914,15 +3965,15 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: ConnectionError: HTTPSConnectionPool(host='mindafansub.online', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='mindafansub.online', port=443): Failed to establish a ne",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu"
       ]
@@ -3934,6 +3985,7 @@
       "baseUrl": "https://monomanga.com.tr",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.monomanga",
@@ -3951,7 +4003,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3964,6 +4016,7 @@
       "baseUrl": "https://moondaisyscans.biz",
       "engine": "mangareader",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -3982,7 +4035,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -3995,6 +4048,7 @@
       "baseUrl": "https://moondaisyscans.pro",
       "engine": "mangareader",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.moondaisyscans",
@@ -4020,7 +4074,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4034,6 +4088,7 @@
       "baseUrl": "https://mugimanga.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -4054,14 +4109,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4074,6 +4130,7 @@
       "baseUrl": "https://myreadingmanga.info",
       "engine": null,
       "nsfw": true,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.myreadingmanga",
@@ -4084,14 +4141,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 403; cloudflare challenge page",
-      "probe": {
-        "status": "cf_protected",
-        "http": 403,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4104,6 +4155,7 @@
       "baseUrl": "https://www.nabicix.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.koreliscans",
@@ -4129,7 +4181,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4143,6 +4195,7 @@
       "baseUrl": "https://nabiscans.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -4169,8 +4222,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4183,6 +4236,7 @@
       "baseUrl": "https://namicomi.com",
       "engine": null,
       "nsfw": false,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.namicomi",
@@ -4193,14 +4247,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4213,6 +4261,7 @@
       "baseUrl": "https://nemesisscans.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.nemesisscans",
@@ -4230,7 +4279,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4243,6 +4292,7 @@
       "baseUrl": "https://nhentai.com",
       "engine": null,
       "nsfw": true,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.nhentaicom",
@@ -4253,14 +4303,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 200; cloudflare challenge page",
-      "probe": {
-        "status": "cf_protected",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4273,6 +4317,7 @@
       "baseUrl": "https://nirvanamanga.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.nirvanamanga",
@@ -4301,9 +4346,9 @@
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4318,6 +4363,7 @@
       "baseUrl": "https://niverafansub.one",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.niverafansub",
@@ -4343,7 +4389,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4357,6 +4403,7 @@
       "baseUrl": "https://niverafansub.org",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -4375,7 +4422,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -4388,6 +4435,7 @@
       "baseUrl": "https://noxscans.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -4407,15 +4455,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='noxscans.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')))",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4428,6 +4476,7 @@
       "baseUrl": "https://nyxmanga.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -4440,14 +4489,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu"
       ]
@@ -4459,6 +4509,7 @@
       "baseUrl": "https://nyxscans.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": null,
@@ -4474,14 +4525,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "nyora"
       ]
@@ -4493,6 +4545,7 @@
       "baseUrl": "https://okutoon.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.okutoon",
@@ -4510,7 +4563,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4523,6 +4576,7 @@
       "baseUrl": "https://opiatoon.art",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -4549,8 +4603,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "alternative": {
         "domain": "opiatoon.shop",
         "how": "same_key",
@@ -4568,6 +4622,7 @@
       "baseUrl": "https://opiatoon.shop",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.opiatoon",
@@ -4585,7 +4640,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4598,6 +4653,7 @@
       "baseUrl": "https://orimanga.net",
       "engine": "initmanga",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.orimanga",
@@ -4615,7 +4671,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4628,6 +4684,7 @@
       "baseUrl": "https://panda.chaika.moe",
       "engine": null,
       "nsfw": true,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.pandachaika",
@@ -4638,14 +4695,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4658,6 +4709,7 @@
       "baseUrl": "https://paradoxscans.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.paradoxscans",
@@ -4675,7 +4727,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4688,6 +4740,7 @@
       "baseUrl": "https://www.patimanga.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.patimanga",
@@ -4718,7 +4771,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4733,6 +4786,7 @@
       "baseUrl": "https://piedpiperfansub.me",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -4753,14 +4807,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4773,6 +4828,7 @@
       "baseUrl": "https://piedpiperfansubyy.me",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -4792,15 +4848,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='ww38.piedpiperfansubyy.me', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='ww38.piedpiperfansubyy.me', port=443) at 0x7f071",
+      "status": "failing",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='piedpiperfansubyy.me', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='piedpiperfansubyy.me', port=443) at 0x7f35477e45f0>, ",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4813,6 +4869,7 @@
       "baseUrl": "https://prunusscans.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -4839,8 +4896,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4853,6 +4910,7 @@
       "baseUrl": "https://ragnarscans.com",
       "engine": "initmanga",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -4879,7 +4937,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -4893,6 +4951,7 @@
       "baseUrl": "https://ragnarscans.net",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.ragnarscans",
@@ -4910,7 +4969,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4923,6 +4982,7 @@
       "baseUrl": "https://www.raindropteamfan.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.raindropfansub",
@@ -4947,14 +5007,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -4968,6 +5029,7 @@
       "baseUrl": "https://ruyamanga.net",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -4986,7 +5048,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -4999,6 +5061,7 @@
       "baseUrl": "https://www.ruyamanga2.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.ruyamanga",
@@ -5024,7 +5087,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5038,6 +5101,7 @@
       "baseUrl": "https://sadscans.com",
       "engine": "custom",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -5056,7 +5120,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -5069,6 +5133,7 @@
       "baseUrl": "https://sarcasmscans.com",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -5089,14 +5154,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5109,6 +5175,7 @@
       "baseUrl": "https://seraphmanga.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -5128,14 +5195,14 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
+      "status": "cf_protected_published",
+      "reason": "http 200; cloudflare challenge page",
       "probe": {
-        "status": "ok",
+        "status": "cf_protected",
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -5149,6 +5216,7 @@
       "baseUrl": "https://sereinscan.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.sereinscan",
@@ -5179,7 +5247,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5194,6 +5262,7 @@
       "baseUrl": "https://shadowceviri.blogspot.com",
       "engine": "zeistmanga",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.shadowceviri",
@@ -5217,11 +5286,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "unverified",
-      "unverified": true,
-      "reason": "http 429",
-      "lastChecked": null,
-      "consecutiveFailures": 0,
+      "status": "failing",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
+      "probe": {
+        "status": "ok",
+        "http": 200,
+        "functional": false
+      },
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -5235,6 +5308,7 @@
       "baseUrl": "https://shijiescans.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.shijiescans",
@@ -5258,15 +5332,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
         "status": "ok",
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -5280,6 +5354,7 @@
       "baseUrl": "https://siyahmelek.fun",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": null,
@@ -5301,7 +5376,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "nyora"
@@ -5314,6 +5389,7 @@
       "baseUrl": "https://siyahmelek.live",
       "engine": "initmanga",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.siyahmelek",
@@ -5331,7 +5407,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5344,6 +5420,7 @@
       "baseUrl": "https://siyahmelek.org",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -5362,8 +5439,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "alternative": {
         "domain": "siyahmelek.fun",
         "how": "same_key",
@@ -5380,6 +5457,7 @@
       "baseUrl": "https://sleptmanga.com.tr",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.sleptmanga",
@@ -5397,7 +5475,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5410,6 +5488,7 @@
       "baseUrl": "https://snscoeurturkey.blogspot.com",
       "engine": "zeistmanga",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -5446,6 +5525,7 @@
       "baseUrl": "https://strayfansub.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -5465,15 +5545,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='ww38.strayfansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='ww38.strayfansub.com', port=443) at 0x7f071b2e6ff0>, ",
+      "status": "failing",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='ww38.strayfansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='ww38.strayfansub.com', port=443) at 0x7f35477e4920>, ",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5486,6 +5566,7 @@
       "baseUrl": "https://summertoon.co",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -5506,14 +5587,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5526,6 +5608,7 @@
       "baseUrl": "https://summertoons.net",
       "engine": "mangathemesia",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.summertoon",
@@ -5543,7 +5626,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5556,6 +5639,7 @@
       "baseUrl": "https://sunsetmanga.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.sunsetmanga",
@@ -5573,7 +5657,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5586,6 +5670,7 @@
       "baseUrl": "https://www.tarotscans.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.tarotscans",
@@ -5616,7 +5701,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5631,6 +5716,7 @@
       "baseUrl": "https://tempestfansub.net",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -5657,8 +5743,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5671,6 +5757,7 @@
       "baseUrl": "https://tempestscans.net",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -5697,8 +5784,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5711,6 +5798,7 @@
       "baseUrl": "https://tenshimanga.com",
       "engine": "custom",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.tenshimanga",
@@ -5733,7 +5821,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5747,6 +5835,7 @@
       "baseUrl": "https://www.tilkiscans.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangatilkisi",
@@ -5777,7 +5866,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5792,6 +5881,7 @@
       "baseUrl": "https://timenaight.org",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -5811,15 +5901,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='timenaight.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unab",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5832,6 +5922,7 @@
       "baseUrl": "https://titanmanga.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -5858,7 +5949,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -5872,6 +5963,7 @@
       "baseUrl": "https://tonizu.top",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.tonizutoon",
@@ -5902,7 +5994,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5917,6 +6009,7 @@
       "baseUrl": "https://toontaku.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.toontaku",
@@ -5934,7 +6027,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5947,6 +6040,7 @@
       "baseUrl": "https://tortugaceviri.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.tortugaceviri",
@@ -5977,7 +6071,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5992,6 +6086,7 @@
       "baseUrl": "https://trmanga.com",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.trmanga",
@@ -6009,7 +6104,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6022,6 +6117,7 @@
       "baseUrl": "https://trmangaoku.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.turkcemangaoku",
@@ -6052,7 +6148,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6067,6 +6163,7 @@
       "baseUrl": "https://trwebtoon.com",
       "engine": "custom",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -6085,7 +6182,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -6098,6 +6195,7 @@
       "baseUrl": "https://tuhafscans.com",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.lunascans",
@@ -6128,7 +6226,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6143,6 +6241,7 @@
       "baseUrl": "https://universe.leagueoflegends.com/tr_tr/comic/",
       "engine": null,
       "nsfw": false,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.leagueoflegends",
@@ -6153,14 +6252,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6173,6 +6266,7 @@
       "baseUrl": "https://uzaymanga.com",
       "engine": "custom",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.uzaymanga",
@@ -6195,7 +6289,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6209,6 +6303,7 @@
       "baseUrl": "https://viyafansub.com",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -6235,8 +6330,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6249,6 +6344,7 @@
       "baseUrl": "https://webtoonhatti.club",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.webtoonhatti",
@@ -6279,7 +6375,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6294,6 +6390,7 @@
       "baseUrl": "https://webtoonhatti.me",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -6314,14 +6411,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6334,6 +6432,7 @@
       "baseUrl": "https://webtoonoku.org",
       "engine": null,
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.webtoonoku",
@@ -6351,7 +6450,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6364,6 +6463,7 @@
       "baseUrl": "https://webtoontr.net",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -6390,7 +6490,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -6404,6 +6504,7 @@
       "baseUrl": "https://xcomic.me",
       "engine": null,
       "nsfw": false,
+      "scope": "multilang",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.all.xcomic",
@@ -6414,14 +6515,8 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "status": "excluded_multilang",
+      "reason": "çok dilli paket (tr dışı diller); yayınlanmaz",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6434,6 +6529,7 @@
       "baseUrl": "https://yaoibar.gay",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -6452,8 +6548,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu"
       ]
@@ -6465,6 +6561,7 @@
       "baseUrl": "https://yaoibar.lol",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": null,
@@ -6479,15 +6576,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
+      "status": "failing",
       "reason": "http 523",
       "probe": {
         "status": "dead",
         "http": 523,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "nyora"
       ]
@@ -6499,6 +6596,7 @@
       "baseUrl": "https://yaoiflix.fit",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.yaoiflix",
@@ -6516,7 +6614,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6529,6 +6627,7 @@
       "baseUrl": "https://yaoiflix.me",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -6549,14 +6648,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "http 200",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
         "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6569,6 +6669,7 @@
       "baseUrl": "https://yaoimangaoku.net",
       "engine": "madara",
       "nsfw": true,
+      "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.yaoimangaoku",
@@ -6599,7 +6700,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6614,6 +6715,7 @@
       "baseUrl": "https://yaoitr.fun",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -6632,8 +6734,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu"
       ]
@@ -6645,6 +6747,7 @@
       "baseUrl": "https://yaoitr.org",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": null,
@@ -6666,8 +6769,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "nyora"
       ]
@@ -6679,6 +6782,7 @@
       "baseUrl": "https://yetiskinruyamanga.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -6705,8 +6809,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6719,6 +6823,7 @@
       "baseUrl": "https://zamanmanga.com",
       "engine": "madara",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -6738,15 +6843,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='ww38.zamanmanga.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='ww38.zamanmanga.com', port=443) at 0x7f0718153d70>, 'C",
+      "status": "failing",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='zamanmanga.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='zamanmanga.com', port=443) at 0x7f354462c290>, 'Connection ",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6759,6 +6864,7 @@
       "baseUrl": "https://zenithscans.com",
       "engine": "mangareader",
       "nsfw": false,
+      "scope": "tr_native",
       "formats": {
         "mihon": null,
         "jar": {
@@ -6785,7 +6891,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:21:52+00:00",
+      "lastChecked": "2026-10-12T09:34:03+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
