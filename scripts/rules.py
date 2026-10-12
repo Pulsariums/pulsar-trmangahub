@@ -94,6 +94,9 @@ UNVERIFIED_ADMITTED = ("published", "cf_protected_published", "failing", "unveri
 # "doğrulanmamış" sayıyorduk.
 ADMIT_CF = os.environ.get("PULSAR_ADMIT_CF") == "1"
 
+# PULSAR_ADMIT_ALL=1: canlı test için aday modu; karantinadakiler dahil her statüdeki kaynak seçilir.
+ADMIT_ALL = os.environ.get("PULSAR_ADMIT_ALL") == "1"
+
 
 def is_publishable(entry, include_unverified=False, allow_multilang=False):
     """Publication gate for the JAR, the Mihon mirror and their index 'sources' lists.
@@ -104,6 +107,9 @@ def is_publishable(entry, include_unverified=False, allow_multilang=False):
     Turkish bucket and the Mihon mirror keep the default. excluded entries never qualify."""
     if is_multilang(entry) and not allow_multilang:
         return False
+    if ADMIT_ALL and entry.get("status") in ("published", "cf_protected_published", "failing", "unverified",
+                                              "quarantined"):
+        return True
     if is_ok(entry):
         return True
     if ADMIT_CF and entry.get("status") == "cf_protected_published" and not entry.get("failing"):

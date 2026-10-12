@@ -1,0 +1,150 @@
+name: 'Canlı test: kaynakları gerçek parser ile dene'
+
+on:
+  schedule:
+    - cron: '17 */8 * * *'
+  workflow_dispatch:
+    inputs:
+      bolum:
+        description: 'Test edilecek paket'
+        type: choice
+        options: [hepsi, tr, tr_nsfw]
+        default: hepsi
+      only:
+        description: 'Yalnız bu kaynak adları (virgülle, örn MANGA_DENIZI,LUNASCANS; boş = hepsi)'
+        type: string
+        default: ''
+      parallel:
+        description: 'Eşzamanlı kaynak sayısı'
+        type: string
+        default: '4'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-check
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      buckets: ${{ steps.p.outputs.buckets }}
+    steps:
+      - id: p
+        env:
+          BOLUM: ${{ inputs.bolum || 'hepsi' }}
+        run: |
+          case "$BOLUM" in
+            hepsi) echo 'buckets=["tr","tr_nsfw"]' >> "$GITHUB_OUTPUT" ;;
+            tr|tr_nsfw) echo "buckets=[\"$BOLUM\"]" >> "$GITHUB_OUTPUT" ;;
+            *) echo "::error::Bilinmeyen paket: $BOLUM"; exit 1 ;;
+          esac
+
+  live:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        bucket: ${{ fromJSON(needs.plan.outputs.buckets) }}
+    env:
+      BUCKET: ${{ matrix.bucket }}
+      PULSAR_ADMIT_ALL: '1'
+      LIVE_ONLY: ${{ inputs.only || '' }}
+      LIVE_PARALLEL: ${{ inputs.parallel || '4' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - uses: actions/checkout@v4
+        with:
+          repository: Kotatsu-Redo/kotatsu-parsers-redo
+          path: upstream
+
+      - name: 'Aday kaynakları hazırla (karantina ve bozuk işaretliler dahil)'
+        run: |
+          case "$BUCKET" in
+            tr)      nsfw=none ;;
+            tr_nsfw) nsfw=only ;;
+          esac
+          EXTRA=""
+          if [ -d generated ]; then EXTRA="--extra-parsers generated"; fi
+          python scripts/jar_prepare.py \
+            --upstream upstream \
+            --sources sources/tr/sources.json \
+            --mode alive \
+            --include-broken 1 \
+            --apply-alternatives high \
+            --include-unverified 1 \
+            --allow-multilang 0 \
+            --nsfw "$nsfw" \
+            $EXTRA \
+            --report data/jar_prepare.json
+          python3 -c 'import json; p=json.load(open("data/jar_prepare.json", encoding="utf-8")); print("aday sayısı:", len(p["kept_ids"]))'
+
+      - name: Test altyapısını hazırla
+        run: |
+          T=upstream/src/test/kotlin/org/koitharu/kotatsu/parsers
+          rm -rf "$T/site"
+          cp tests/LiveCheck.kt "$T/LiveCheck.kt"
+
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: 'Canlı test (her kaynak: liste, detay, bölüm, sayfa, görsel)'
+        env:
+          LIVE_OUT: ${{ github.workspace }}/live-results.json
+        run: |
+          cd upstream && chmod +x gradlew
+          ./gradlew test --tests '*LiveCheck*' --no-daemon -i 2>&1 | tail -n 60
+          test -s "$LIVE_OUT"
+
+      - name: Sonucu işle
+        run: |
+          scripts/live_merge.sh "$BUCKET" live-results.json
+          {
+            echo "## Canlı test: $BUCKET"
+            jq -r '"Toplam \(length), başarılı \(map(select(.ok)) | length)"' live-results.json
+            echo
+            echo "| Kaynak | Alan adı | Sonuç | Aşama | Hata sınıfı | Not |"
+            echo "|---|---|---|---|---|---|"
+            jq -r 'sort_by(.ok | not) | .[] | "| \(.id) | \(.domain // "-") | \(if .ok then "OK" else "HATA" end) | \(.stage) | \(.error_class // "-") | \((.error // "") | gsub("\\|";"/") | .[0:90]) |"' live-results.json
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Sonuçları depoya gönder
+        run: |
+          git config user.name "pulsarium"
+          git config user.email "pulsariums@gmail.com"
+          SAVE="$(mktemp -d)"
+          cp data/live/history.json data/live/${BUCKET}.json "$SAVE/"
+          for i in 1 2 3 4 5 6; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git reset --hard "origin/${GITHUB_REF_NAME}"
+            mkdir -p data/live
+            # history başka paketin sonucunu içerebilir: uzaktaki ile birleştir
+            if [ -f data/live/history.json ]; then
+              jq -s '.[0] * .[1]' data/live/history.json "$SAVE/history.json" > "$SAVE/h.merged"
+              cp "$SAVE/h.merged" data/live/history.json
+            else
+              cp "$SAVE/history.json" data/live/history.json
+            fi
+            cp "$SAVE/${BUCKET}.json" data/live/
+            git add data/live
+            if git diff --cached --quiet; then echo "Değişiklik yok."; exit 0; fi
+            git commit -m "chore(live): ${BUCKET} canlı test sonucu"
+            git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((i*4))
+          done
+          echo "Push başarısız" >&2; exit 1
