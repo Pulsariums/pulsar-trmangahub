@@ -55,7 +55,7 @@ PATCHES = [
 ALT_STATUSES = ("quarantined", "failing")
 RANK = {"high": 3, "medium": 2, "low": 1}
 
-ANN_RE = re.compile(r'@MangaSourceParser\(\s*"([^"]+)"\s*,\s*"([^"]*)"\s*,\s*"([A-Za-z_-]+)"')
+ANN_RE = re.compile(r'@MangaSourceParser\(\s*"([^"]+)"\s*,\s*"([^"]*)"(?:\s*,\s*"([A-Za-z_-]*)")?')
 BROKEN_RE = re.compile(r"@Broken\b")
 CLASS_DEF_RE = re.compile(r"\b(?:class|object|interface)\s+([A-Z]\w*)")
 IDENT_RE = re.compile(r"\b[A-Z]\w*\b")
@@ -103,7 +103,7 @@ def scan_annotated(upstream):
             prev_end = 0
             for match in ANN_RE.finditer(text):
                 segment = text[prev_end:match.start()]
-                anns.append({"id": match.group(1), "lang": match.group(3),
+                anns.append({"id": match.group(1), "lang": match.group(3) or "",
                              "broken_src": bool(BROKEN_RE.search(segment))})
                 prev_end = match.end()
             if anns:
@@ -238,7 +238,7 @@ def scan_extras(extra_dir, entries, include_unverified):
             for match in ANN_RE.finditer(text):
                 end = text.find(")", match.start())
                 found.append({"id": match.group(1), "name": match.group(2) or match.group(1),
-                              "lang": match.group(3), "domain": domain, "path": path,
+                              "lang": match.group(3) or "", "domain": domain, "path": path,
                               "rel": f"{domain}/jar/{name}",
                               "nsfw": "HENTAI" in text[match.start():end if end > 0 else None]})
     return found
