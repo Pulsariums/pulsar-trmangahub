@@ -56,6 +56,9 @@ def evaluate(probe_row, prev=None):
     if probe_row is None:
         return None
     status = probe_row.get("status")
+    # 429: istekçi (CI IP'si) hız sınırına takıldı; kaynak hakkında bilgi vermez, durumu değiştirme.
+    if probe_row.get("http") == 429:
+        return None
     if status == "ok" and probe_row.get("functional") is not False:
         return _verdict("published", probe_row.get("reason"), 0)
     if status == "cf_protected":

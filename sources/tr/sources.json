@@ -3612,15 +3612,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "quarantined",
-      "reason": "redirect_unrelated: google.com",
+      "status": "cf_protected_published",
+      "reason": "ci_blocked_by_google_429 (cihazda doğrulandı: Kullanılabilir)",
       "probe": {
         "status": "parked",
         "http": 429,
         "functional": null
       },
       "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 1,
+      "consecutiveFailures": 0,
       "alternative": {
         "domain": "google.com",
         "how": "moved_to",
@@ -3630,7 +3630,8 @@
         "mihon",
         "kotatsu",
         "nyora"
-      ]
+      ],
+      "failing": false
     },
     {
       "id": "milascans.tr",

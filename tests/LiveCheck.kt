@@ -104,7 +104,9 @@ internal class LiveCheck {
 	}
 
 	private fun classify(e: Throwable): String {
-		if (Regex("""\b429\b""").containsMatchIn(e.message.orEmpty())) return "rate_limit"
+		val message = e.message.orEmpty()
+		// Google/Blogger CI IP'sini engelleyince istekler google.com'a yönlenir; bu kaynağın ölü olduğunu göstermez.
+		if (Regex("""\b429\b""").containsMatchIn(message) || message.contains("google.com/")) return "rate_limit"
 		var cause: Throwable? = e
 		while (cause != null) {
 			val name = cause.javaClass.simpleName
