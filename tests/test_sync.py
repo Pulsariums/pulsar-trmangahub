@@ -57,5 +57,52 @@ class MergeScopeTests(unittest.TestCase):
         self.assertEqual([r["scope"] for r in nyora], ["tr_native"])
 
 
+class CustomRegistryTests(unittest.TestCase):
+    def setUp(self):
+        import tempfile
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.path = os.path.join(self.tmp.name, "sources.json")
+
+    def write_custom(self, payload):
+        import json
+        with open(self.path, "w", encoding="utf-8") as fh:
+            json.dump(payload, fh)
+
+    def test_missing_file_gives_no_records(self):
+        self.assertEqual(sync.parse_custom(self.path), [])
+
+    def test_custom_entries_have_no_mihon_or_jar_format(self):
+        self.write_custom([{"id": "zz.com", "name": "Zz", "domain": "zz.com",
+                            "baseUrl": "https://zz.com", "engine": "madara", "scope": "tr_native"}])
+        records = sync.parse_custom(self.path)
+        self.assertEqual([r["upstream"] for r in records], ["custom"])
+        self.assertEqual(records[0]["formats"], {"mihon": None, "jar": None, "catalog": None})
+        self.assertEqual(records[0]["engine"], "madara")
+        self.assertEqual(records[0]["scope"], "tr_native")
+
+    def test_custom_record_merges_with_upstream_by_domain(self):
+        self.write_custom([{"id": "dd.com", "name": "Dd", "domain": "dd.com", "engine": "madara"}])
+        mihon = sync.make_record("mihon", "Dd", "dd.com", "https://dd.com", None, False,
+                                 {"mihon": {"pkg": "eu.kanade.tachiyomi.extension.tr.dd"}})
+        targets, _ = sync.merge_records([mihon] + sync.parse_custom(self.path))
+        final = sync.finalize(targets)
+        self.assertEqual(len(final), 1)
+        self.assertEqual(sorted(final[0]["upstreams"]), ["custom", "mihon"])
+        self.assertEqual(final[0]["formats"]["mihon"]["pkg"], "eu.kanade.tachiyomi.extension.tr.dd")
+
+    def test_custom_only_source_is_probed_but_not_published_as_extension(self):
+        import build
+        self.write_custom([{"id": "cc.com", "name": "Cc", "domain": "cc.com", "engine": "madara"}])
+        targets, _ = sync.merge_records(sync.parse_custom(self.path))
+        src = sync.finalize(targets)[0]
+        entry = build.build_entry(src, {"status": "ok", "reason": "http 200", "functional": True,
+                                        "http": 200}, None, {}, "t")
+        self.assertEqual(entry["status"], "published")
+        payload = build.published_payload([entry], "t")
+        self.assertEqual(payload["mihon"], [])
+        self.assertEqual(payload["jar"], [])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

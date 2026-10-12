@@ -1,9 +1,36 @@
-name: sync-tr-sources
+name: 'Senkron: TR kaynaklarını güncelle'
 
 on:
   schedule:
     - cron: '17 */6 * * *'
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Commit atma, sadece raporla'
+        type: boolean
+        default: false
+      include_multilang:
+        description: 'Çok dilli (tr dışı) kaynakları da yayınla'
+        type: boolean
+        default: false
+      fail_threshold:
+        description: 'Karantina için ardışık hata eşiği'
+        type: choice
+        options: ['1', '2', '3', '5']
+        default: '3'
+      safety_ratio:
+        description: 'Güvenlik şalteri oranı (yüzde) veya off'
+        type: choice
+        options: ['40', '60', '80', 'off']
+        default: '40'
+      run_alternatives:
+        description: 'Ölü domainler için alternatif ara'
+        type: boolean
+        default: true
+      refresh_kotatsu:
+        description: 'Kotatsu klonunu sil ve yeniden klonla'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -17,6 +44,13 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    env:
+      DRY_RUN: ${{ inputs.dry_run || false }}
+      INCLUDE_MULTILANG: ${{ inputs.include_multilang && '1' || '0' }}
+      FAIL_THRESHOLD: ${{ inputs.fail_threshold || '3' }}
+      SAFETY_RATIO: ${{ inputs.safety_ratio || '40' }}
+      RUN_ALTERNATIVES: ${{ github.event_name == 'schedule' || inputs.run_alternatives }}
+      REFRESH_KOTATSU: ${{ inputs.refresh_kotatsu || false }}
     steps:
       - uses: actions/checkout@v4
 
@@ -28,12 +62,18 @@ jobs:
         run: pip install requests
 
       - name: Collect upstream sources
-        run: python scripts/sync.py
+        run: |
+          if [ "$REFRESH_KOTATSU" = "true" ]; then
+            python scripts/sync.py --refresh-kotatsu
+          else
+            python scripts/sync.py
+          fi
 
       - name: Probe domains
         run: python scripts/probe.py
 
       - name: Find alternatives for broken domains
+        if: env.RUN_ALTERNATIVES == 'true'
         run: python scripts/alternatives.py
 
       - name: Build published lists (safety switch)
@@ -51,8 +91,14 @@ jobs:
           fi
           echo "cancelled=false" >> "$GITHUB_OUTPUT"
 
+      - name: Run report
+        if: always()
+        env:
+          CANCELLED: ${{ steps.build.outputs.cancelled }}
+        run: python scripts/report.py sync
+
       - name: Commit changes to the current branch
-        if: steps.build.outputs.cancelled == 'false'
+        if: steps.build.outputs.cancelled == 'false' && env.DRY_RUN != 'true'
         env:
           BRANCH: ${{ github.ref_name }}
         run: |
@@ -85,3 +131,14 @@ jobs:
             exit 0
           fi
           gh issue create --title "$title" --body "Güvenlik şalteri devreye girdi: TR kaynak yayını bu run'da iptal edildi ve hiçbir dosya değiştirilmedi. Nedeni için bu workflow run'ının build adımındaki IPTAL satırına bakın. Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+
+      - name: Upload sync data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sync-data
+          path: |
+            data/probe_results.json
+            data/upstream_tr.json
+          retention-days: 7
+          if-no-files-found: ignore

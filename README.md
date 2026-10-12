@@ -49,11 +49,54 @@ python scripts/sync.py
 python scripts/probe.py
 python scripts/alternatives.py
 python scripts/build.py
+python scripts/analyze_site.py --url https://ornek.com
 python3 -m unittest discover -s tests
 ```
 
 Testler ağa çıkmaz; HTTP ve probe sahte (mock) verilerle çalışır. `tests/fake_probe.py`
 deterministik sahte probe verisi üretir; bu veri canlı sonuç değildir.
+
+## Action'lar ve seçenekleri
+
+| Workflow | Tetikleyici | Seçenekler | Çıktı |
+|---|---|---|---|
+| `sync.yml` (Senkron: TR kaynaklarını güncelle) | 6 saatte bir, elle | `dry_run` (commit atma), `include_multilang` (tr dışı kaynakları yayınla), `fail_threshold` (1/2/3/5, varsayılan 3), `safety_ratio` (40/60/80/off, varsayılan 40), `run_alternatives` (varsayılan açık), `refresh_kotatsu` (Kotatsu klonunu yenile) | Run özeti (`report.py sync`), `sync-data` artifact'ı (7 gün) |
+| `health-check.yml` (Sağlık kontrolü) | 12 saatte bir, elle | `engine_filter` (all/madara/mangathemesia/initmanga/unknown), `status_filter` (all/published/cf_protected_published/failing/quarantined), `domains` (virgülle; boşsa filtrelere göre) | Run özeti (`report.py health`), `health-data` artifact'ı (7 gün); commit yok |
+| `add-source.yml` (Kaynak ekle: site linkinden üret) | elle | `url` (zorunlu), `name` (boşsa domainden), `format` (both/jar/mihon), `engine` (auto/madara/mangathemesia/initmanga/custom), `register` (kaydet ve commit at) | Run özeti (`report.py add`), `generated` artifact'ı (7 gün); `register` açıksa `sources/custom/` ve `generated/` commit'lenir |
+
+Elle çalıştırmada seçilmeyen girdiler varsayılanla çalışır. Zamanlanmış çalıştırmalarda
+girdi yoktur; `sync.yml` tüm varsayılanları kullanır. `FAIL_THRESHOLD`, `SAFETY_RATIO` ve
+`INCLUDE_MULTILANG` ortam değişkenleri scripts tarafından okunur.
+
+## Kaynak ekle
+
+Elle çalıştırılan `add-source.yml` (Kaynak ekle: site linkinden üret) bir manga sitesinin
+adresinden kaynak iskeleti üretir. `scripts/analyze_site.py` adresi normalize eder, `probe.py`
+ile durumu ve motoru (madara, mangathemesia, initmanga) tespit eder, ana sayfadan dil ve
+başlığı okur, `data/upstream_tr.json` içinde aynı domainin olup olmadığına bakar.
+
+Üretir:
+
+- Motor tanınırsa `generated/<domain>/` altında şablondan Mihon kaynağı (`mihon/build.gradle.kts`
+  ve Kotlin kaynağı) ve motor için jar parser (`jar/<Sınıf>.kt`, initmanga için yok).
+- `data/analyze_result.json`: karar (`verdict`), tespit edilen motor, işlevsel kontrol, dil,
+  upstream eşleşmesi ve sıradaki adımlar.
+- `register` açıksa `sources/custom/sources.json` kaydı. Bu kayıtlar probe ve sağlık takibine
+  girer ama Mihon ya da jar yayın listesine girmez.
+
+Üretmez:
+
+- APK, jar veya herhangi bir derleme yoktur. Üretilen dosyalar kaynak iskeletidir; derleme
+  sonraki aşamadır.
+- İkonlar (`res/`) yoktur; Mihon derlemesi için eklenmeleri gerekir.
+- Site özel seçicileri (tarih, yazar, bölüm listesi) yoktur. Şablonlar varsayılan motor
+  davranışını kullanır; gerekirse elle düzeltilir.
+- `unsupported_engine` kararında kod üretilmez; motor tanınmayan siteler için özel Kotlin
+  kodu yazılması gerekir.
+- Şablonların gerçek siteye karşı derlenip çalıştığı doğrulanmamıştır. Actions'ta canlı
+  sitelerle denemek gerekir.
+
+Şablonların kaynağı ve sapmaları `scripts/templates/README.md` içindedir.
 
 ## Kural tablosu
 

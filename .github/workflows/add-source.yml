@@ -1,0 +1,103 @@
+name: 'Kaynak ekle: site linkinden üret'
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Manga sitesinin adresi'
+        type: string
+        required: true
+      name:
+        description: 'Kaynak adı (boş bırakılırsa domainden üretilir)'
+        type: string
+        required: false
+        default: ''
+      format:
+        description: 'Üretilecek çıktı'
+        type: choice
+        options: ['both', 'jar', 'mihon']
+        default: 'both'
+      engine:
+        description: 'Motor (auto: sitenin HTML parmak izinden tespit edilir)'
+        type: choice
+        options: ['auto', 'madara', 'mangathemesia', 'initmanga', 'custom']
+        default: 'auto'
+      register:
+        description: 'Depoya kaydet ve commit at'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-tr-sources
+  cancel-in-progress: false
+
+jobs:
+  add-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SITE_URL: ${{ inputs.url }}
+      SITE_NAME: ${{ inputs.name }}
+      SITE_FORMAT: ${{ inputs.format }}
+      SITE_ENGINE: ${{ inputs.engine }}
+      SITE_REGISTER: ${{ inputs.register }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Collect upstream sources
+        run: python scripts/sync.py
+
+      - name: Analyze site and scaffold source
+        id: analyze
+        run: |
+          args=(--url "$SITE_URL" --format "$SITE_FORMAT" --engine "$SITE_ENGINE")
+          if [ -n "$SITE_NAME" ]; then args+=(--name "$SITE_NAME"); fi
+          if [ "$SITE_REGISTER" = "true" ]; then args+=(--register 1); else args+=(--register 0); fi
+          python scripts/analyze_site.py "${args[@]}"
+
+      - name: Run report
+        if: always()
+        run: python scripts/report.py add
+
+      - name: Upload generated sources
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated
+          path: |
+            generated/
+            data/analyze_result.json
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - name: Commit new source to the current branch
+        if: inputs.register && steps.analyze.outcome == 'success'
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          domain=$(python -c 'import json; print(json.load(open("data/analyze_result.json", encoding="utf-8"))["domain"])')
+          git config user.name "pulsar-trmangahub-bot"
+          git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
+          if [ -d sources/custom ]; then git add sources/custom; fi
+          if [ -d generated ]; then git add generated; fi
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(add-source): ${domain} eklendi"
+          for i in 1 2 3; do
+            git pull --rebase origin "${BRANCH}" && git push origin "HEAD:${BRANCH}" && exit 0
+            sleep $((i*5))
+          done
+          echo "Push başarısız oldu" >&2
+          exit 1

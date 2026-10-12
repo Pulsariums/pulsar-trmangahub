@@ -1,0 +1,78 @@
+name: 'Sağlık kontrolü: kaynakları test et'
+
+on:
+  schedule:
+    - cron: '37 */12 * * *'
+  workflow_dispatch:
+    inputs:
+      engine_filter:
+        description: 'Motor filtresi'
+        type: choice
+        options: [all, madara, mangathemesia, initmanga, unknown]
+        default: all
+      status_filter:
+        description: 'Yayın durumu filtresi'
+        type: choice
+        options: [all, published, cf_protected_published, failing, quarantined]
+        default: all
+      domains:
+        description: 'Sadece bu domainler (virgülle ayrılmış, boş = filtrelere göre hepsi)'
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      ENGINE_FILTER: ${{ inputs.engine_filter || 'all' }}
+      STATUS_FILTER: ${{ inputs.status_filter || 'all' }}
+      DOMAINS: ${{ inputs.domains || '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Collect upstream sources
+        run: python scripts/sync.py
+
+      - name: Select domains
+        id: select
+        run: |
+          domains=$(python scripts/select_domains.py --engine "$ENGINE_FILTER" \
+            --status "$STATUS_FILTER" --domains "$DOMAINS")
+          echo "domains=$domains" >> "$GITHUB_OUTPUT"
+
+      - name: Probe selected domains
+        env:
+          SELECTED: ${{ steps.select.outputs.domains }}
+        run: |
+          if [ -z "$SELECTED" ] && { [ "$ENGINE_FILTER" != "all" ] || [ "$STATUS_FILTER" != "all" ] || [ -n "$DOMAINS" ]; }; then
+            echo "## Sağlık kontrolü" >> "$GITHUB_STEP_SUMMARY"
+            echo "Seçilen filtrelerle eşleşen kaynak yok, probe atlandı (motor: $ENGINE_FILTER, durum: $STATUS_FILTER, domainler: ${DOMAINS:-hepsi})." >> "$GITHUB_STEP_SUMMARY"
+          elif [ -z "$SELECTED" ]; then
+            python scripts/probe.py
+          else
+            python scripts/probe.py --only $SELECTED
+          fi
+
+      - name: Health report
+        if: always() && hashFiles('data/probe_results.json') != ''
+        run: python scripts/report.py health
+
+      - name: Upload health data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: health-data
+          path: data/probe_results.json
+          retention-days: 7
+          if-no-files-found: ignore

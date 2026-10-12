@@ -23,6 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 CACHE_DIR = os.path.join(DATA_DIR, "cache")
 OUT_PATH = os.path.join(DATA_DIR, "upstream_tr.json")
+CUSTOM_PATH = os.path.join(BASE_DIR, "sources", "custom", "sources.json")
 
 MIHON_INDEX_URL = "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json"
 NYORA_CATALOG_URL = "https://raw.githubusercontent.com/Nyora-Manga/nyora-data-driven/main/catalogue.json"
@@ -237,6 +238,28 @@ def parse_nyora(catalog, liveness):
     return records
 
 
+# ---------------------------------------------------------------- custom
+
+def parse_custom(path):
+    """Records from sources/custom/sources.json (written by analyze_site.py). They carry no
+    Mihon or jar format, so build.py never publishes them as extensions; probe and health still see them."""
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as fh:
+        data = json.load(fh)
+    entries = data if isinstance(data, list) else (data.get("sources") or [])
+    records = []
+    for entry in entries:
+        domain = normalize_domain(entry.get("domain") or entry.get("id"))
+        if not domain:
+            continue
+        records.append(make_record("custom", entry.get("name"), domain, entry.get("baseUrl"),
+                                   entry.get("engine"), False,
+                                   {"mihon": None, "jar": None, "catalog": None},
+                                   scope=entry.get("scope") or "tr_native"))
+    return records
+
+
 # ---------------------------------------------------------------- merge
 
 def merge_records(records):
@@ -367,6 +390,11 @@ def main(argv=None):
         upstreams["nyora"] = {"status": "ok", "tr_records": len(nyora_recs),
                               "liveness": "ok" if liveness is not None else "unavailable"}
         all_records.extend(nyora_recs)
+
+    custom_recs = parse_custom(CUSTOM_PATH)
+    upstreams["custom"] = {"status": "ok" if os.path.exists(CUSTOM_PATH) else "absent",
+                           "tr_records": len(custom_recs)}
+    all_records.extend(custom_recs)
 
     targets, collisions = merge_records(all_records)
     final = finalize(targets)

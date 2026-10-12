@@ -11,8 +11,9 @@ or missing results keep the previous status with unverified=true (no previous st
 status "unverified"). scope "multilang" sources get status excluded_multilang and are
 never probed into publication, searched for alternatives or counted by the safety switch.
 
-Safety switch: if more than 40% of probed domains are dead, or more than 40% are
-blocked, nothing is written and the script exits with code 2 (EXIT_CANCEL).
+Safety switch: if more than SAFETY_RATIO percent (default 40, "off" disables) of probed
+domains are dead, or the same share are blocked, nothing is written and the script exits
+with code 2 (EXIT_CANCEL). INCLUDE_MULTILANG=1 publishes multilang sources too.
 """
 
 import argparse
@@ -34,6 +35,22 @@ VOLATILE_KEYS = ("generatedAt", "lastChecked")
 
 def now_iso():
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def safety_limit():
+    """Share limit from SAFETY_RATIO (percent). None when the switch is off."""
+    raw = (os.environ.get("SAFETY_RATIO") or "").strip().lower()
+    if raw == "off":
+        return None
+    try:
+        pct = float(raw) if raw else MAX_SHARE * 100
+    except ValueError:
+        pct = MAX_SHARE * 100
+    return pct / 100
+
+
+def include_multilang():
+    return os.environ.get("INCLUDE_MULTILANG") == "1"
 
 
 def load_json(path, default=None):
@@ -75,12 +92,15 @@ def safety_check(probe_rows, excluded=frozenset()):
     total = len(domains)
     if total == 0:
         return False, "probe sonucu yok (0 domain)"
+    limit = safety_limit()
+    if limit is None:
+        return True, "şalter kapalı (SAFETY_RATIO=off)"
     dead = sum(1 for r in domains.values() if r.get("status") == "dead")
     blocked = sum(1 for r in domains.values() if r.get("status") == "blocked")
-    if blocked / total > MAX_SHARE:
-        return False, f"{blocked}/{total} domain proxy politikası tarafından engellendi (%{MAX_SHARE*100:.0f} eşiği aşıldı)"
-    if dead / total > MAX_SHARE:
-        return False, f"{dead}/{total} domain 'dead' (%{MAX_SHARE*100:.0f} eşiği aşıldı; ağ sorunu olabilir)"
+    if blocked / total > limit:
+        return False, f"{blocked}/{total} domain proxy politikası tarafından engellendi (%{limit*100:.0f} eşiği aşıldı)"
+    if dead / total > limit:
+        return False, f"{dead}/{total} domain 'dead' (%{limit*100:.0f} eşiği aşıldı; ağ sorunu olabilir)"
     return True, f"dead {dead}/{total}, blocked {blocked}/{total}"
 
 
@@ -103,7 +123,7 @@ def build_entry(src, probe_row, prev, alt_map, now):
         "firstSeen": (prev or {}).get("firstSeen") or now,
     }
 
-    if scope == "multilang":
+    if scope == "multilang" and not include_multilang():
         entry["status"] = EXCLUDED_STATUS
         entry["reason"] = "çok dilli paket (tr dışı diller); yayınlanmaz"
         entry["consecutiveFailures"] = 0
@@ -281,8 +301,8 @@ def main(argv=None):
     prev_doc = load_json(os.path.join(out_dir, "sources.json"), default={}) or {}
 
     probe_rows = probes.get("results", [])
-    excluded = {s["domain"] for s in upstream.get("sources", [])
-                if s.get("domain") and rules.is_multilang(s)}
+    excluded = set() if include_multilang() else {
+        s["domain"] for s in upstream.get("sources", []) if s.get("domain") and rules.is_multilang(s)}
     ok, reason = safety_check(probe_rows, excluded)
     if not ok:
         print(f"IPTAL: yayınlama durduruldu - {reason}", file=sys.stderr)

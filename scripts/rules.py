@@ -15,7 +15,20 @@ Rules (prev is the entry from the previous sources.json, or None):
 "Other failure" means dead (ssl/connect/timeout/5xx/523/525) or ok with functional false.
 """
 
-FAIL_THRESHOLD = 3
+import os
+
+DEFAULT_FAIL_THRESHOLD = 3
+
+
+def _fail_threshold():
+    try:
+        value = int(os.environ.get("FAIL_THRESHOLD", "") or DEFAULT_FAIL_THRESHOLD)
+    except ValueError:
+        value = DEFAULT_FAIL_THRESHOLD
+    return max(1, value)
+
+
+FAIL_THRESHOLD = _fail_threshold()
 IMMEDIATE_HTTP = (404, 410)
 PUBLISHED_STATUSES = ("published", "cf_protected_published")
 MULTILANG_SCOPE = "multilang"
