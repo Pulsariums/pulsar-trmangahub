@@ -105,6 +105,12 @@ LIVE_HISTORY = os.environ.get("PULSAR_LIVE_HISTORY") or os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "live", "history.json")
 _live_cache = None
 
+# Kesin sonuç sayılmayan hatalar: CI koşucusu Cloudflare'i geçemez, sahte bağlam webp çözemez, hotlink/hız
+# sınırı CI'a özgü olabilir. Bu sınıflarda kaynağın kayıtlı durumu korunur.
+INCONCLUSIVE_CLASSES = ("cloudflare", "decode", "http_blocked", "rate_limit")
+# Tek testte bile kaynağı yayından çıkaran hatalar; diğerleri (timeout, connect, 5xx) üst üste 2 başarısızlık ister.
+DETERMINISTIC_CLASSES = ("http_gone", "dns", "empty", "parse", "ssl")
+
 
 def _live():
     global _live_cache
@@ -126,9 +132,12 @@ def live_verdict(entry):
         return None
     if rec.get("ok_streak", 0) >= 1:
         return True
-    if rec.get("error_class") == "cloudflare":
+    cls = rec.get("error_class")
+    if cls in INCONCLUSIVE_CLASSES:
         return None
-    return False
+    if cls in DETERMINISTIC_CLASSES or rec.get("fail_streak", 0) >= 2:
+        return False
+    return None
 
 
 def is_publishable(entry, include_unverified=False, allow_multilang=False):

@@ -119,6 +119,8 @@ internal class LiveCheck {
 		}
 		val msg = e.message.orEmpty()
 		return when {
+			msg.contains("Cannot decode image") -> "decode" // CI sahte bağlamı webp vb. çözemez; cihazda sorun değil
+			Regex("""\b429\b""").containsMatchIn(msg) -> "rate_limit"
 			Regex("""\b(403|429|503)\b""").containsMatchIn(msg) -> "http_blocked"
 			Regex("""\b(404|410)\b""").containsMatchIn(msg) -> "http_gone"
 			Regex("""\b5\d\d\b""").containsMatchIn(msg) -> "http_5xx"
