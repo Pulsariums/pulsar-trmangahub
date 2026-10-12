@@ -75,6 +75,7 @@ jobs:
     env:
       BUCKET: ${{ matrix.bucket }}
       PULSAR_ADMIT_CF: ${{ (matrix.bucket == 'tr' || matrix.bucket == 'tr_nsfw') && '1' || '0' }}
+      PULSAR_LIVE_GATE: ${{ (matrix.bucket == 'tr' || matrix.bucket == 'tr_nsfw') && '1' || '0' }}
       MODE: ${{ inputs.mode || 'alive' }}
       INCLUDE_BROKEN: ${{ inputs.include_broken && '1' || '0' }}
       APPLY_ALTERNATIVES: ${{ inputs.apply_alternatives || 'high' }}
