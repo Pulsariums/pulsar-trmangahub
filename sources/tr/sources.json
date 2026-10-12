@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T09:34:03+00:00",
+  "generatedAt": "2026-10-12T10:00:53+00:00",
   "count": 186,
   "sources": [
     {
@@ -54,16 +54,20 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: koplo77-irama.com",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": false
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
-      "failing": true,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
+      "alternative": {
+        "domain": "koplo77-irama.com",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -107,7 +111,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -167,15 +171,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='alliedfansub.net', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: un",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -212,15 +216,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "http 525",
       "probe": {
         "status": "dead",
         "http": 525,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -252,7 +256,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -296,7 +300,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -338,8 +342,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -379,7 +383,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -424,7 +428,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -459,15 +463,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
-      "reason": "timeout: ReadTimeout: HTTPSConnectionPool(host='www.autismsupportnetwork.com', port=443): Read timed out. (read timeout=15)",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: www.autismsupportnetwork.com",
       "probe": {
-        "status": "dead",
+        "status": "parked",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -500,15 +504,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: situsbet200resmi.org",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": true
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 1,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -552,8 +556,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -588,14 +592,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
+      "reason": "connect: ConnectionError: HTTPSConnectionPool(host='athenamanga.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='athenamanga.com', port=443): Failed to establish a new conn",
       "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": false
+        "status": "dead",
+        "http": null,
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "failing": true,
       "upstreams": [
         "kotatsu",
@@ -629,15 +633,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='ayatoon.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)'))",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -668,7 +672,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -708,8 +712,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -753,7 +757,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -779,15 +783,15 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='dom4lfansub.online', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='dom4lfansub.online', port=443) at 0x7f35477c7110>, 'Con",
+      "status": "quarantined",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='dom4lfansub.online', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='dom4lfansub.online', port=443) at 0x7f5e14523d40>, 'Con",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "mihon"
       ]
@@ -819,16 +823,20 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "functional_false: madara listing marker not found on /manga/, /",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: qemow.com",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": false
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
-      "failing": true,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
+      "alternative": {
+        "domain": "qemow.com",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -889,7 +897,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -915,15 +923,20 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: nabicix.com",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": true
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 1,
+      "alternative": {
+        "domain": "nabicix.com",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "kotatsu"
       ]
@@ -962,8 +975,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -994,7 +1007,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1027,16 +1040,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "functional_false: madara listing marker not found on /manga/, /",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: live.sportsvot.com",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": false
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
-      "failing": true,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1076,8 +1088,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1121,7 +1133,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1167,7 +1179,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1213,7 +1225,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1255,8 +1267,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1287,7 +1299,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1356,8 +1368,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "failing": true,
       "upstreams": [
         "mihon",
@@ -1392,15 +1404,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='guildknives.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1433,16 +1445,20 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "functional_false: madara listing marker not found on /manga/, /",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: afreebitco.in",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": false
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
-      "failing": true,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
+      "alternative": {
+        "domain": "afreebitco.in",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1473,7 +1489,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1504,7 +1520,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1544,8 +1560,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1576,7 +1592,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1634,15 +1650,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='hoifansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='hoifansub.com', port=443) at 0x7f354781a1b0>, 'Connection to",
+      "status": "quarantined",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='hoifansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='hoifansub.com', port=443) at 0x7f5e15736d50>, 'Connection to",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1673,7 +1689,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1713,8 +1729,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1754,8 +1770,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1795,8 +1811,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1827,7 +1843,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1860,15 +1876,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "timeout: ReadTimeout: HTTPSConnectionPool(host='kabusmanga.com', port=443): Read timed out. (read timeout=15)",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1908,8 +1924,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1940,7 +1956,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1965,15 +1981,20 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
-      "reason": "connect: SSLError: HTTPSConnectionPool(host='koreliscans.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: una",
+      "status": "quarantined",
+      "reason": "timeout: ReadTimeout: HTTPSConnectionPool(host='koreliscans.com', port=443): Read timed out. (read timeout=15)",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
+      "alternative": {
+        "domain": "nabicix.com",
+        "how": "same_key",
+        "confidence": "medium"
+      },
       "upstreams": [
         "kotatsu"
       ]
@@ -2012,7 +2033,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -2044,7 +2065,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2083,7 +2104,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -2109,15 +2130,20 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='laviniafansub.site', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: ",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
+      "alternative": {
+        "domain": "laviniafansub.shop",
+        "how": "same_key",
+        "confidence": "medium"
+      },
       "upstreams": [
         "kotatsu"
       ]
@@ -2148,8 +2174,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu"
       ]
@@ -2176,15 +2202,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='lilyumfansub.pro', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')))",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "nyora"
       ]
@@ -2214,7 +2240,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2264,15 +2290,15 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='manga-ay.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)')",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu"
       ]
@@ -2311,8 +2337,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2349,15 +2375,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
-      "reason": "http 523",
+      "status": "quarantined",
+      "reason": "timeout: ReadTimeout: HTTPSConnectionPool(host='manga-sehri.net', port=443): Read timed out. (read timeout=15)",
       "probe": {
         "status": "dead",
-        "http": 523,
+        "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -2425,7 +2451,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -2457,7 +2483,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2488,7 +2514,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2499,7 +2525,7 @@
       "name": "Manga Ball",
       "domain": "mangaball.com",
       "baseUrl": "https://mangaball.com",
-      "engine": "mangathemesia",
+      "engine": null,
       "nsfw": false,
       "scope": "multilang",
       "formats": {
@@ -2553,8 +2579,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "alternative": {
         "domain": "mangacix.net",
         "how": "similar_key",
@@ -2591,8 +2617,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "alternative": {
         "domain": "mangacix.net",
         "how": "same_key",
@@ -2631,8 +2657,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "failing": true,
       "upstreams": [
         "nyora"
@@ -2676,7 +2702,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -2734,7 +2760,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2790,7 +2816,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2830,8 +2856,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2859,15 +2885,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 403; cloudflare challenge page",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: webtoonhatti.club",
       "probe": {
-        "status": "cf_protected",
+        "status": "parked",
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 1,
       "upstreams": [
         "nyora"
       ]
@@ -2899,15 +2925,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='ww38.mangagezgini.site', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='ww38.mangagezgini.site', port=443) at 0x7f35446647d",
+      "status": "quarantined",
+      "reason": "redirect_parking_subdomain: ww38.mangagezgini.site",
       "probe": {
-        "status": "dead",
+        "status": "parked",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2939,8 +2965,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu"
       ]
@@ -2972,15 +2998,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='mangakazani.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: una",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3020,8 +3046,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3054,15 +3080,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='mangakoleji.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: una",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3093,7 +3119,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3153,8 +3179,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "failing": true,
       "upstreams": [
         "nyora"
@@ -3188,14 +3214,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "parking/sale markers",
+      "reason": "redirect_parking_subdomain: ww16.mangaoku.info",
       "probe": {
         "status": "parked",
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3227,8 +3253,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "failing": true,
       "upstreams": [
         "kotatsu"
@@ -3261,15 +3287,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='mangaokusana.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: un",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3301,8 +3327,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu"
       ]
@@ -3336,8 +3362,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "nyora"
       ]
@@ -3367,7 +3393,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3407,7 +3433,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -3441,16 +3467,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: live.sportsvot.com",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": false
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
-      "failing": true,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3482,8 +3507,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "alternative": {
         "domain": "tilkiscans.com",
         "how": "same_key",
@@ -3520,15 +3545,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='mangatr.app', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable ",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3572,7 +3597,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3618,7 +3643,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3644,15 +3669,15 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
-      "reason": "http 523",
+      "status": "quarantined",
+      "reason": "timeout: ReadTimeout: HTTPSConnectionPool(host='mangazure.net', port=443): Read timed out. (read timeout=15)",
       "probe": {
         "status": "dead",
-        "http": 523,
+        "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "mihon"
       ]
@@ -3682,7 +3707,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3751,7 +3776,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -3782,7 +3807,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3819,15 +3844,20 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: google.com",
       "probe": {
-        "status": "ok",
-        "http": 200,
+        "status": "parked",
+        "http": 429,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 1,
+      "alternative": {
+        "domain": "google.com",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -3861,15 +3891,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='milascans.tr', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3900,7 +3930,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3939,7 +3969,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3965,15 +3995,15 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: ConnectionError: HTTPSConnectionPool(host='mindafansub.online', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='mindafansub.online', port=443): Failed to establish a ne",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu"
       ]
@@ -4003,7 +4033,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4028,15 +4058,20 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 200; cloudflare challenge page",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: expireddomains.com",
       "probe": {
-        "status": "cf_protected",
+        "status": "parked",
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 1,
+      "alternative": {
+        "domain": "expireddomains.com",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "kotatsu"
       ]
@@ -4074,7 +4109,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4115,8 +4150,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "failing": true,
       "upstreams": [
         "kotatsu",
@@ -4181,7 +4216,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4222,8 +4257,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4279,7 +4314,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4348,7 +4383,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4389,7 +4424,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4422,7 +4457,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -4455,15 +4490,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='noxscans.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')))",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4488,16 +4523,20 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: live.sportsvot.com",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": false
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
-      "failing": true,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
+      "alternative": {
+        "domain": "nyxscans.com",
+        "how": "same_key",
+        "confidence": "medium"
+      },
       "upstreams": [
         "kotatsu"
       ]
@@ -4531,8 +4570,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "failing": true,
       "upstreams": [
         "nyora"
@@ -4563,7 +4602,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4603,8 +4642,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "alternative": {
         "domain": "opiatoon.shop",
         "how": "same_key",
@@ -4640,7 +4679,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4671,7 +4710,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4727,7 +4766,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4771,7 +4810,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4806,16 +4845,20 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "functional_false: madara listing marker not found on /manga/, /",
+      "status": "quarantined",
+      "reason": "redirect_parking_subdomain: ww17.piedpiperfansub.me",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": false
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
-      "failing": true,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
+      "alternative": {
+        "domain": "ww17.piedpiperfansub.me",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4848,15 +4891,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='piedpiperfansubyy.me', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='piedpiperfansubyy.me', port=443) at 0x7f35477e45f0>, ",
+      "status": "quarantined",
+      "reason": "redirect_parking_subdomain: ww38.piedpiperfansubyy.me",
       "probe": {
-        "status": "dead",
+        "status": "parked",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4896,8 +4939,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4937,7 +4980,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -4969,7 +5012,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5013,8 +5056,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "failing": true,
       "upstreams": [
         "mihon",
@@ -5048,7 +5091,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -5087,7 +5130,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5120,7 +5163,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -5154,14 +5197,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "published",
-      "reason": "functional_false: madara listing marker not found on /manga/, /",
+      "reason": "connect: ConnectionError: HTTPSConnectionPool(host='sarcasmscans.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='sarcasmscans.com', port=443): Failed to establish a new co",
       "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": false
+        "status": "dead",
+        "http": null,
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "failing": true,
       "upstreams": [
         "kotatsu",
@@ -5195,15 +5238,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 200; cloudflare challenge page",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: live.sportsvot.com",
       "probe": {
-        "status": "cf_protected",
+        "status": "parked",
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 1,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5247,7 +5290,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5286,15 +5329,20 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
-      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: google.com",
       "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": false
+        "status": "parked",
+        "http": 429,
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
+      "alternative": {
+        "domain": "google.com",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -5332,15 +5380,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
         "status": "ok",
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -5376,7 +5424,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "nyora"
@@ -5407,7 +5455,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5439,8 +5487,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "alternative": {
         "domain": "siyahmelek.fun",
         "how": "same_key",
@@ -5475,7 +5523,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5508,11 +5556,20 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "unverified",
-      "unverified": true,
-      "reason": "http 429",
-      "lastChecked": null,
-      "consecutiveFailures": 0,
+      "status": "quarantined",
+      "reason": "redirect_unrelated: google.com",
+      "probe": {
+        "status": "parked",
+        "http": 429,
+        "functional": null
+      },
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 1,
+      "alternative": {
+        "domain": "google.com",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5545,15 +5602,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='ww38.strayfansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='ww38.strayfansub.com', port=443) at 0x7f35477e4920>, ",
+      "status": "quarantined",
+      "reason": "redirect_parking_subdomain: ww38.strayfansub.com",
       "probe": {
-        "status": "dead",
+        "status": "parked",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5593,8 +5650,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
       "failing": true,
       "upstreams": [
         "kotatsu",
@@ -5626,7 +5683,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5657,7 +5714,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5701,7 +5758,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5743,8 +5800,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5784,8 +5841,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5821,7 +5878,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5866,7 +5923,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5901,15 +5958,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "connect: SSLError: HTTPSConnectionPool(host='timenaight.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unab",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5942,15 +5999,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 200; cloudflare challenge page",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: hugedomains.com",
       "probe": {
-        "status": "cf_protected",
+        "status": "parked",
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 1,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5994,7 +6051,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6027,7 +6084,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6071,7 +6128,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6104,7 +6161,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6148,7 +6205,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6175,15 +6232,20 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "http 200",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: trmanga.com",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 1,
+      "alternative": {
+        "domain": "trmanga.com",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "kotatsu"
       ]
@@ -6226,7 +6288,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6289,7 +6351,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6330,8 +6392,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6375,7 +6437,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6410,16 +6472,20 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "functional_false: madara listing marker not found on /manga/, /",
+      "status": "quarantined",
+      "reason": "redirect_parking_subdomain: ww17.webtoonhatti.me",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": false
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
-      "failing": true,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
+      "alternative": {
+        "domain": "ww17.webtoonhatti.me",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6450,7 +6516,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6490,7 +6556,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -6548,8 +6614,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu"
       ]
@@ -6576,15 +6642,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
+      "status": "quarantined",
       "reason": "http 523",
       "probe": {
         "status": "dead",
         "http": 523,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "nyora"
       ]
@@ -6614,7 +6680,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6647,16 +6713,20 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "published",
-      "reason": "functional_false: madara listing marker not found on /manga/, /",
+      "status": "quarantined",
+      "reason": "redirect_unrelated: qemow.com",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": false
+        "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 1,
-      "failing": true,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 2,
+      "alternative": {
+        "domain": "qemow.com",
+        "how": "moved_to",
+        "confidence": "high"
+      },
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6700,7 +6770,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6734,8 +6804,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu"
       ]
@@ -6769,8 +6839,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "nyora"
       ]
@@ -6809,8 +6879,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6843,15 +6913,15 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "failing",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='zamanmanga.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='zamanmanga.com', port=443) at 0x7f354462c290>, 'Connection ",
+      "status": "quarantined",
+      "reason": "redirect_parking_subdomain: ww38.zamanmanga.com",
       "probe": {
-        "status": "dead",
+        "status": "parked",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
-      "consecutiveFailures": 2,
+      "lastChecked": "2026-10-12T10:00:53+00:00",
+      "consecutiveFailures": 3,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6891,7 +6961,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T09:34:03+00:00",
+      "lastChecked": "2026-10-12T10:00:53+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T09:34:03+00:00",
+  "generatedAt": "2026-10-12T10:00:53+00:00",
   "mihon": [
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.afroditscans",
@@ -198,12 +198,6 @@
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/4c8cda7/tachiyomi-tr.merlinscans-v1.6.3.apk",
       "version": "1.6.3",
       "domain": "merlintoon.com"
-    },
-    {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.mikrokosmosfansub",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/4217666-2/tachiyomi-tr.mikrokosmosfansub-v1.6.16.apk",
-      "version": "1.6.16",
-      "domain": "mikrokosmosfb.blogspot.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.milasub",
@@ -418,11 +412,6 @@
   ],
   "jar": [
     {
-      "parser": "TEMPESTSCANS",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/TempestScans.kt",
-      "domain": "adumanga.com"
-    },
-    {
       "parser": "AFRODITSCANS",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/AfroditScans.kt",
       "domain": "afroditscans.com"
@@ -443,11 +432,6 @@
       "domain": "arcurafansub.com"
     },
     {
-      "parser": "ASEMIFANSUB",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/AsemiFansub.kt",
-      "domain": "asemifansub.com"
-    },
-    {
       "parser": "ATHENAMANGA",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/AthenaManga.kt",
       "domain": "athenamanga.com"
@@ -458,24 +442,9 @@
       "domain": "diamondfansub.com"
     },
     {
-      "parser": "DOMALFANSB",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/DomalFansb.kt",
-      "domain": "domalfansb.com.tr"
-    },
-    {
       "parser": "ELDERMANGA",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/ElderManga.kt",
       "domain": "eldermanga.com"
-    },
-    {
-      "parser": "ELECEEDTURKIYE",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/EleceedTurkiye.kt",
-      "domain": "eleceedturkiye.com"
-    },
-    {
-      "parser": "ESOMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/EsoManga.kt",
-      "domain": "esomanga.com"
     },
     {
       "parser": "GAFELAND",
@@ -496,11 +465,6 @@
       "parser": "GOLGEBAHCESI",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/Golgebahcesi.kt",
       "domain": "golgebahcesi.com"
-    },
-    {
-      "parser": "GUNCEL_MANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/GuncelManga.kt",
-      "domain": "guncelmanga.net"
     },
     {
       "parser": "KUROIMANGA",
@@ -528,11 +492,6 @@
       "domain": "mangaruhu.com"
     },
     {
-      "parser": "MANGASIGINAGI",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MangaSiginagi.kt",
-      "domain": "mangasiginagi.com"
-    },
-    {
       "parser": "MANGAWOW",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MangaWow.kt",
       "domain": "mangawow.org"
@@ -546,16 +505,6 @@
       "parser": "MERLINSCANS",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MerlinScans.kt",
       "domain": "merlinscans.com"
-    },
-    {
-      "parser": "MIKROKOSMOSFB",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/zeistmanga/tr/Mikrokosmosfb.kt",
-      "domain": "mikrokosmosfb.blogspot.com"
-    },
-    {
-      "parser": "MOONDAISY_SCANS",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MoonDaisyScans.kt",
-      "domain": "moondaisyscans.biz"
     },
     {
       "parser": "MUGIMANGA",
@@ -573,19 +522,9 @@
       "domain": "niverafansub.org"
     },
     {
-      "parser": "NYXMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/NyxManga.kt",
-      "domain": "nyxmanga.com"
-    },
-    {
       "parser": "PATIMANGA",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/PatiManga.kt",
       "domain": "patimanga.com"
-    },
-    {
-      "parser": "PIEDPIPERFANSUB",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/PiedpiperFansub.kt",
-      "domain": "piedpiperfansub.me"
     },
     {
       "parser": "RAGNARSCANS",
@@ -613,11 +552,6 @@
       "domain": "sarcasmscans.com"
     },
     {
-      "parser": "HYPERIONSCANS",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/HyperionScans.kt",
-      "domain": "seraphmanga.com"
-    },
-    {
       "parser": "SEREINSCAN",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/SereinScan.kt",
       "domain": "sereinscan.com"
@@ -643,11 +577,6 @@
       "domain": "tilkiscans.com"
     },
     {
-      "parser": "TITANMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/TitanManga.kt",
-      "domain": "titanmanga.com"
-    },
-    {
       "parser": "TONIZUTOON",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Tonizutoon.kt",
       "domain": "tonizu.top"
@@ -661,11 +590,6 @@
       "parser": "TRMANGAOKU",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/TrMangaOku.kt",
       "domain": "trmangaoku.com"
-    },
-    {
-      "parser": "TRWEBTOON",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/TrWebtoon.kt",
-      "domain": "trwebtoon.com"
     },
     {
       "parser": "LUNASCANS",
@@ -683,19 +607,9 @@
       "domain": "webtoonhatti.club"
     },
     {
-      "parser": "CLOVERMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/CloverManga.kt",
-      "domain": "webtoonhatti.me"
-    },
-    {
       "parser": "WEBTOONTR",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Webtoontr.kt",
       "domain": "webtoontr.net"
-    },
-    {
-      "parser": "YAOIFLIX",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/YaoiFlix.kt",
-      "domain": "yaoiflix.me"
     },
     {
       "parser": "YAOIMANGAOKU",
@@ -709,6 +623,48 @@
     }
   ],
   "via_alternative": [
+    {
+      "id": "adumanga.com",
+      "domain": "koplo77-irama.com",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "domalfansb.com.tr",
+      "domain": "qemow.com",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "eleceedturkiye.com",
+      "domain": "nabicix.com",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "guncelmanga.net",
+      "domain": "afreebitco.in",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "koreliscans.com",
+      "domain": "nabicix.com",
+      "how": "same_key",
+      "confidence": "medium",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "laviniafansub.site",
+      "domain": "laviniafansub.shop",
+      "how": "same_key",
+      "confidence": "medium",
+      "label": "published_via_alternative"
+    },
     {
       "id": "mangacim.com.tr",
       "domain": "mangacix.net",
@@ -731,6 +687,27 @@
       "label": "published_via_alternative"
     },
     {
+      "id": "mikrokosmosfb.blogspot.com",
+      "domain": "google.com",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "moondaisyscans.biz",
+      "domain": "expireddomains.com",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "nyxmanga.com",
+      "domain": "nyxscans.com",
+      "how": "same_key",
+      "confidence": "medium",
+      "label": "published_via_alternative"
+    },
+    {
       "id": "opiatoon.art",
       "domain": "opiatoon.shop",
       "how": "same_key",
@@ -738,10 +715,52 @@
       "label": "published_via_alternative"
     },
     {
+      "id": "piedpiperfansub.me",
+      "domain": "ww17.piedpiperfansub.me",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "shadowceviri.blogspot.com",
+      "domain": "google.com",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
       "id": "siyahmelek.org",
       "domain": "siyahmelek.fun",
       "how": "same_key",
       "confidence": "medium",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "snscoeurturkey.blogspot.com",
+      "domain": "google.com",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "trwebtoon.com",
+      "domain": "trmanga.com",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "webtoonhatti.me",
+      "domain": "ww17.webtoonhatti.me",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "yaoiflix.me",
+      "domain": "qemow.com",
+      "how": "moved_to",
+      "confidence": "high",
       "label": "published_via_alternative"
     }
   ]
