@@ -123,7 +123,14 @@ class PublishableTests(unittest.TestCase):
         self.assertFalse(rules.is_publishable(self.entry("quarantined"), True))
         self.assertFalse(rules.is_publishable(self.entry("excluded_multilang"), True))
 
-    def test_multilang_scope_is_never_publishable(self):
+    def test_multilang_scope_is_never_publishable_by_default(self):
         self.assertFalse(rules.is_publishable({"status": "published", "scope": "multilang"}, True))
+        self.assertFalse(rules.is_publishable({"status": "published", "scope": "multilang"}))
+
+    def test_multilang_admitted_only_with_allow_multilang(self):
+        ml = {"status": "published", "scope": "multilang"}
+        self.assertTrue(rules.is_publishable(ml, False, allow_multilang=True))
+        self.assertFalse(rules.is_publishable({"status": "quarantined", "scope": "multilang"}, True, True))
+        self.assertFalse(rules.is_publishable({"status": "excluded_multilang", "scope": "multilang"}, True, True))
 
 

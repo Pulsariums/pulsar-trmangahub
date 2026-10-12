@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
-"""Collect Turkish manga sources from Mihon (keiyoushi), Kotatsu (kotatsu-parsers-redo) and
+"""Collect manga sources from Mihon (keiyoushi), Kotatsu (kotatsu-parsers-redo) and
 Nyora (nyora-data-driven) and merge them into data/upstream_tr.json.
+
+Kotatsu contributes every language: lang "tr" parsers are scope tr_native, the rest are
+scope multilang (global bucket only). Nyora and Turkish Mihon packages stay tr_native.
 
 An upstream that cannot be reached is reported in meta.errors and skipped; the
 other upstreams are still merged.
@@ -30,6 +33,7 @@ NYORA_CATALOG_URL = "https://raw.githubusercontent.com/Nyora-Manga/nyora-data-dr
 NYORA_LIVENESS_URL = "https://raw.githubusercontent.com/Nyora-Manga/nyora-data-driven/main/liveness.json"
 KOTATSU_REPO_URL = "https://github.com/Kotatsu-Redo/kotatsu-parsers-redo.git"
 MIHON_TR_PREFIX = "eu.kanade.tachiyomi.extension.tr."
+MULTILANG_SCOPE = "multilang"
 
 HTTP_TIMEOUT = 60
 HTTP_ATTEMPTS = 2
@@ -124,7 +128,7 @@ def parse_mihon(index):
         resources = ext.get("resources") or {}
         mihon = {"pkg": pkg, "version": ext.get("versionName"), "apkUrl": resources.get("apkUrl")}
         nsfw = "NSFW" in (ext.get("contentWarning") or "").upper()
-        scope = "tr_native" if pkg.startswith(MIHON_TR_PREFIX) else "multilang"
+        scope = "tr_native" if pkg.startswith(MIHON_TR_PREFIX) else MULTILANG_SCOPE
         candidates = tr_sources or sources[:1]
         if not candidates:
             records.append(make_record("mihon", ext.get("name"), None, None, None, nsfw,
@@ -163,7 +167,8 @@ def git_head(repo):
 
 
 def parse_kotatsu(repo):
-    """Return (records, files_scanned) for every @MangaSourceParser with lang "tr"."""
+    """Return (records, files_scanned) for every @MangaSourceParser. lang "tr" parsers are
+    tr_native; every other language is multilang (global bucket only)."""
     records = []
     scanned = 0
     for dirpath, _, filenames in os.walk(os.path.join(repo, "src")):
@@ -187,8 +192,6 @@ def parse_kotatsu(repo):
                         engine = "custom"
             for match in ANN_RE.finditer(text):
                 parser_id, title, lang, rest = match.group(1), match.group(2), match.group(3), match.group(4)
-                if lang != "tr":
-                    continue
                 prev_ann = text.rfind("@MangaSourceParser", 0, match.start())
                 between = text[max(prev_ann, 0):match.start()]
                 broken = bool(BROKEN_RE.search(between))
@@ -204,8 +207,9 @@ def parse_kotatsu(repo):
                         domain = normalize_domain(lit.group(1))
                 record = make_record("kotatsu", title, domain, None, engine, "HENTAI" in rest,
                                      {"jar": {"parser": parser_id, "file": rel, "broken": broken,
-                                              "brokenReason": reason_m.group(1) if reason_m else None}},
-                                     scope="tr_native")
+                                              "brokenReason": reason_m.group(1) if reason_m else None,
+                                              "lang": lang}},
+                                     scope="tr_native" if lang == "tr" else MULTILANG_SCOPE)
                 records.append(record)
     return records, scanned
 
@@ -283,7 +287,7 @@ def merge_records(records):
         if target is None:
             target = {"key": key, "name": rec["name"], "domain": None, "baseUrl": None,
                       "engine": None, "formats": {"mihon": None, "jar": None, "catalog": None},
-                      "nsfw": False, "scope": "multilang", "upstreams": [], "_alt": []}
+                      "nsfw": False, "scope": MULTILANG_SCOPE, "upstreams": [], "_alt": []}
             targets.append(target)
 
         if rec["domain"]:
@@ -350,7 +354,7 @@ def write_json(path, payload):
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="Sync Turkish manga sources from upstream repos.")
+    parser = argparse.ArgumentParser(description="Sync manga sources from upstream repos.")
     parser.add_argument("--out", default=OUT_PATH)
     parser.add_argument("--refresh-kotatsu", action="store_true",
                         help="delete the cached kotatsu-parsers-redo clone and clone again")

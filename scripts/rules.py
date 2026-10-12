@@ -90,13 +90,14 @@ def is_ok(entry):
 UNVERIFIED_ADMITTED = ("published", "cf_protected_published", "failing", "unverified")
 
 
-def is_publishable(entry, include_unverified=False):
+def is_publishable(entry, include_unverified=False, allow_multilang=False):
     """Publication gate for the JAR, the Mihon mirror and their index 'sources' lists.
 
     Default: only is_ok() entries. include_unverified=True also admits cf_protected_published,
-    failing and unverified entries. quarantined, multilang (scope) and excluded_multilang
-    entries are never admitted."""
-    if is_multilang(entry):
+    failing and unverified entries. quarantined entries are never admitted. multilang (scope)
+    entries are admitted only with allow_multilang=True, which the global bucket uses; the
+    Turkish bucket and the Mihon mirror keep the default. excluded entries never qualify."""
+    if is_multilang(entry) and not allow_multilang:
         return False
     if is_ok(entry):
         return True

@@ -6,6 +6,7 @@ import sys
 import tempfile
 import time
 import unittest
+from unittest import mock
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
@@ -52,8 +53,8 @@ def make_root(tmp, sources, rows, alts=None, prev=None):
     return tmp
 
 
-def read_out(tmp, name):
-    with open(os.path.join(tmp, "sources", "tr", name), encoding="utf-8") as fh:
+def read_out(tmp, name, bucket="tr"):
+    with open(os.path.join(tmp, "sources", bucket, name), encoding="utf-8") as fh:
         return json.load(fh)
 
 
@@ -331,40 +332,73 @@ class FailureToleranceTests(unittest.TestCase):
 
 
 class MultilangScopeTests(unittest.TestCase):
-    def _multilang(self, domain):
-        s = src(domain)
+    def _multilang(self, domain, jar_lang="en"):
+        s = src(domain, jar=True)
         s["scope"] = "multilang"
+        s["formats"]["jar"]["lang"] = jar_lang
         return s
 
-    def test_multilang_is_excluded_and_not_counted_by_safety_switch(self):
-        ml = [f"ml{i}.tr" for i in range(5)]
+    def test_multilang_lives_only_in_global_bucket(self):
+        ml = [f"ml{i}.com" for i in range(3)]
         sources = [self._multilang(d) for d in ml]
-        rows = [prow(d, "dead", reason=DNS_REASON) for d in ml]
-        by, pub, report = run_build(rows, sources=sources)
-        self.assertEqual(by["ml0.tr"]["status"], "excluded_multilang")
-        self.assertEqual(by["ml0.tr"]["scope"], "multilang")
-        self.assertNotIn("ml0.tr", [m["domain"] for m in pub["mihon"]])
-        self.assertIn("- excluded_multilang: 5", report)
-
-    def test_multilang_dead_rows_do_not_trigger_cancel(self):
-        ml = [f"mc{i}.tr" for i in range(6)]
-        sources = [self._multilang(d) for d in ml] + [src(f"keep{i}.tr") for i in range(4)]
-        rows = [prow(d, "dead") for d in ml] + ok_rows([f"keep{i}.tr" for i in range(4)])
-        with tempfile.TemporaryDirectory() as tmp:
-            make_root(tmp, sources, rows)
-            self.assertEqual(build.main(["--root", tmp]), 0)
-
-    def test_multilang_gets_no_alternative(self):
-        sources = [self._multilang("ml.tr")]
-        alts = {"ml.tr": {"candidate": "x.tr", "how": "moved_to", "confidence": "high"}}
+        rows = [prow(d, "ok", functional=True) for d in ml]
         with tempfile.TemporaryDirectory() as tmp:
             make_root(tmp, sources + [src(f"f{i}.tr") for i in range(9)],
-                      [prow("ml.tr", "dead", reason=DNS_REASON)] + ok_rows([f"f{i}.tr" for i in range(9)]),
-                      alts=alts)
+                      rows + ok_rows([f"f{i}.tr" for i in range(9)]))
+            self.assertEqual(build.main(["--root", tmp]), 0)
+            tr = {e["id"]: e for e in read_out(tmp, "sources.json")["sources"]}
+            glob = {e["id"]: e for e in read_out(tmp, "sources.json", "global")["sources"]}
+            global_pub = read_out(tmp, "published.json", "global")
+            tr_pub = read_out(tmp, "published.json")
+        self.assertNotIn("ml0.com", tr)
+        self.assertEqual(glob["ml0.com"]["status"], "published")
+        self.assertEqual(glob["ml0.com"]["scope"], "multilang")
+        self.assertEqual(glob["f0.tr"]["scope"], "tr_native")
+        self.assertEqual({j["domain"] for j in global_pub["jar"]}, set(ml))
+        self.assertEqual([j["lang"] for j in global_pub["jar"] if j["domain"] == "ml1.com"], ["en"])
+        self.assertNotIn("ml0.com", [j["domain"] for j in tr_pub["jar"]])
+
+    def test_tr_bucket_safety_trips_alone_and_cancels_whole_run(self):
+        ml = [f"ok{i}.com" for i in range(10)]
+        sources = [self._multilang(d) for d in ml] + [src(f"t{i}.tr") for i in range(5)]
+        rows = [prow(d, "ok", functional=True) for d in ml] + \
+            [prow("t0.tr", "dead", reason=DNS_REASON), prow("t1.tr", "dead", reason=DNS_REASON),
+             prow("t2.tr", "dead", reason=DNS_REASON), prow("t3.tr", "ok", functional=True),
+             prow("t4.tr", "ok", functional=True)]
+        with tempfile.TemporaryDirectory() as tmp:
+            make_root(tmp, sources, rows)
+            self.assertEqual(build.main(["--root", tmp]), build.EXIT_CANCEL)
+            self.assertFalse(os.path.exists(os.path.join(tmp, "sources", "tr", "sources.json")))
+            self.assertFalse(os.path.exists(os.path.join(tmp, "sources", "global", "sources.json")))
+
+    def test_global_bucket_safety_trips_on_multilang_dead_share(self):
+        ml = [f"dd{i}.com" for i in range(10)]
+        sources = [self._multilang(d) for d in ml] + [src(f"k{i}.tr") for i in range(4)]
+        rows = [prow(d, "dead") for d in ml] + ok_rows([f"k{i}.tr" for i in range(4)])
+        with tempfile.TemporaryDirectory() as tmp:
+            make_root(tmp, sources, rows)
+            self.assertEqual(build.main(["--root", tmp]), build.EXIT_CANCEL)
+
+    def test_safety_off_lets_every_bucket_through(self):
+        ml = [f"dd{i}.com" for i in range(10)]
+        sources = [self._multilang(d) for d in ml] + [src(f"k{i}.tr") for i in range(4)]
+        rows = [prow(d, "dead") for d in ml] + ok_rows([f"k{i}.tr" for i in range(4)])
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.dict(os.environ, {"SAFETY_RATIO": "off"}):
+            make_root(tmp, sources, rows)
+            self.assertEqual(build.main(["--root", tmp]), 0)
+            self.assertTrue(os.path.isfile(os.path.join(tmp, "sources", "global", "published.json")))
+
+    def test_multilang_gets_no_tr_report_line(self):
+        sources = [self._multilang("ml.com")]
+        with tempfile.TemporaryDirectory() as tmp:
+            make_root(tmp, sources + [src(f"f{i}.tr") for i in range(9)],
+                      [prow("ml.com", "ok", functional=True)] + ok_rows([f"f{i}.tr" for i in range(9)]))
             build.main(["--root", tmp])
-            by = {e["id"]: e for e in read_out(tmp, "sources.json")["sources"]}
-        self.assertNotIn("alternative", by["ml.tr"])
-        self.assertEqual(by["ml.tr"]["status"], "excluded_multilang")
+            tr_report = _read_text(os.path.join(tmp, "sources", "tr", "REPORT.md"))
+            glob_report = _read_text(os.path.join(tmp, "sources", "global", "REPORT.md"))
+        self.assertIn("Domain'li toplam kaynak: 9;", tr_report)
+        self.assertIn("Domain'li toplam kaynak: 10;", glob_report)
+        self.assertNotIn("excluded_multilang", tr_report + glob_report)
 
 
 class OutputTests(unittest.TestCase):
@@ -380,7 +414,7 @@ class OutputTests(unittest.TestCase):
         self.assertEqual([m["domain"] for m in pub["mihon"]], ["m.tr"])
         self.assertEqual([j["domain"] for j in pub["jar"]], ["ok.tr"])
         self.assertEqual(set(pub["mihon"][0]), {"pkg", "apkUrl", "version", "domain"})
-        self.assertEqual(set(pub["jar"][0]), {"parser", "file", "domain"})
+        self.assertEqual(set(pub["jar"][0]), {"parser", "file", "domain", "lang"})
 
     def test_report_has_summary_and_change_section(self):
         domains = [f"r{i}.tr" for i in range(10)]

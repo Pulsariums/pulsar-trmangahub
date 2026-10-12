@@ -52,10 +52,16 @@ class SectionTests(unittest.TestCase):
             "REPORT_PATH": os.path.join(self.dir, "REPORT.md"),
             "ANALYZE_PATH": os.path.join(self.dir, "analyze.json"),
             "JAR_PREPARE_PATH": os.path.join(self.dir, "jar_prepare.json"),
-            "JAR_INFO_PATH": os.path.join(self.dir, "build_info.json"),
         }
         for name, path in self.paths.items():
             patcher = mock.patch.object(report, name, path)
+            patcher.start()
+            self.addCleanup(patcher.stop)
+        # Jar section reads <BASE_DIR>/<bucket dir>/build_info.json; point both into the temp dir.
+        for name, value in (("BASE_DIR", self.dir),
+                            ("JAR_BUCKET_PATHS", {b: ("", "sources.json")
+                                                  for b in ("turkce", "global", "ozel")})):
+            patcher = mock.patch.object(report, name, value)
             patcher.start()
             self.addCleanup(patcher.stop)
         self.addCleanup(self.tmp.cleanup)
@@ -95,7 +101,7 @@ class SectionTests(unittest.TestCase):
         self.assertIn("## Senkron raporu", out)
         self.assertIn("⛔ **Şalter devreye girdi**", out)
         self.assertIn("| SAFETY_RATIO | 40 |", out)
-        self.assertIn("| INCLUDE_MULTILANG | (ayarlı değil) |", out)
+        self.assertNotIn("INCLUDE_MULTILANG", out)
         self.assertIn("| unverified | 1 |", out)
         self.assertIn("| dns | 1 |", out)
         self.assertIn("| http 404 | 1 |", out)
@@ -188,7 +194,7 @@ class SectionTests(unittest.TestCase):
             "patched_domains": [{"id": "BTWO", "old": "old.b", "new": "new.b", "confidence": "high"}],
             "counts": {"kept": 2, "removed_ids": 3, "deleted_files": 4, "rescued_files": 1,
                        "patched_domains": 1, "patch_failed": 0}})
-        write(self.paths["JAR_INFO_PATH"], {"jarBytes": 1234, "jarSha256": "ff00",
+        write(os.path.join(self.dir, "build_info.json"), {"jarBytes": 1234, "jarSha256": "ff00",
                                                 "builtAt": "2026-10-12T00:00:00Z", "runNumber": 7})
         env = {"JAR_BUILD": "true", "JAR_REASON": "parmak izi değişti", "JAR_BUILD_OUTCOME": "success",
                "JAR_FALLBACK": "1", "JAR_MODE": "alive", "GITHUB_REPOSITORY": "o/r"}
@@ -202,13 +208,13 @@ class SectionTests(unittest.TestCase):
         self.assertIn("| old.b | new.b | high |", out)
         self.assertIn("| sha256 | ff00 |", out)
         self.assertIn("| BTWO | B | new.b | quarantined |", out)
-        self.assertIn("https://raw.githubusercontent.com/o/r/main/repo", out)
+        self.assertIn("https://raw.githubusercontent.com/o/r/main/<bölüm>/jar", out)
 
     def test_jar_section_missing_files_does_not_crash(self):
         out = self.run_main(["jar"], {"JAR_BUILD": "false", "JAR_REASON": "parmak izi aynı, atlandı"})
         self.assertIn("⏭️ Atlandı (parmak izi aynı, atlandı)", out)
         self.assertIn("data/jar_prepare.json yok.", out)
-        self.assertIn("repo/build_info.json yok.", out)
+        self.assertIn("build_info.json yok", out)
         self.assertIn("sources.json okunamadı.", out)
         self.assertNotIn("Yedek yol", out)
 

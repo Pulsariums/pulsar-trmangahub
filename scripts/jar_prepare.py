@@ -11,13 +11,21 @@ Steps, in order:
      top-level class names are referenced (transitively) by kept files
   d) domain repair: quarantined/failing sources with a qualifying alternative keep their
      file and get the old domain literal replaced by the new one
-  e) report: JSON written to --report
+  e) extras (--extra-parsers DIR): generated/<domain>/jar/*.kt files of custom (ozel) sites
+     whose domain has a publishable entry are copied into the upstream tree, after deletion,
+     and each copied file is re-read to confirm its @MangaSourceParser registration. Their ids
+     must not collide with any upstream id.
+  f) report: JSON written to --report
+
+--mode none selects no upstream parser (used by the ozel bucket: only extras are built).
+--allow-multilang 1 admits non-tr scope sources (global bucket).
 """
 
 import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 
@@ -101,12 +109,16 @@ def scan_annotated(upstream):
     return files
 
 
-def load_sources(path):
+def load_entries(path):
     if not os.path.isfile(path):
         fail(f"sources.json yok: {path}")
     with open(path, encoding="utf-8") as fh:
         data = json.load(fh)
-    entries = data.get("sources", []) if isinstance(data, dict) else data
+    return data.get("sources", []) if isinstance(data, dict) else data
+
+
+def load_sources(path):
+    entries = load_entries(path)
     by_parser = {}
     for entry in entries:
         parser = ((entry.get("formats") or {}).get("jar") or {}).get("parser")
@@ -139,7 +151,8 @@ def patch_domain(file_info, old, new):
     return count
 
 
-def select_and_repair(files, by_parser, mode, include_broken, policy, include_unverified=False):
+def select_and_repair(files, by_parser, mode, include_broken, policy, include_unverified=False,
+                      allow_multilang=False):
     file_of = {}
     lang_of = {}
     broken_of = {}
@@ -153,9 +166,11 @@ def select_and_repair(files, by_parser, mode, include_broken, policy, include_un
     kept = set()
     patched = []
     patch_failed = []
+    if mode == "none":
+        return file_of, kept, patched, patch_failed, lang_of
     for pid in sorted(file_of):
         entries = by_parser.get(pid, [])
-        if not any(rules.is_publishable(e, include_unverified) for e in entries):
+        if not any(rules.is_publishable(e, include_unverified, allow_multilang) for e in entries):
             continue
         if mode == "all_tr" and lang_of[pid] != "tr":
             continue
@@ -178,6 +193,61 @@ def select_and_repair(files, by_parser, mode, include_broken, policy, include_un
             patch_failed.append(record)
             kept.discard(pid)
     return file_of, kept, patched, patch_failed, lang_of
+
+
+def scan_extras(extra_dir, entries, include_unverified):
+    """Return [{id, name, lang, nsfw, domain, path, rel}] for generated/<domain>/jar/*.kt files.
+    A domain contributes only when one of its entries is publishable."""
+    by_domain = {}
+    for entry in entries:
+        if entry.get("domain"):
+            by_domain.setdefault(entry["domain"].lower(), []).append(entry)
+    found = []
+    if not os.path.isdir(extra_dir):
+        return found
+    for domain in sorted(os.listdir(extra_dir)):
+        jar_dir = os.path.join(extra_dir, domain, "jar")
+        if not os.path.isdir(jar_dir):
+            continue
+        group = by_domain.get(domain.lower(), [])
+        if not any(rules.is_publishable(e, include_unverified) for e in group):
+            continue
+        for name in sorted(os.listdir(jar_dir)):
+            if not name.endswith(".kt"):
+                continue
+            path = os.path.join(jar_dir, name)
+            text = read_text(path)
+            for match in ANN_RE.finditer(text):
+                end = text.find(")", match.start())
+                found.append({"id": match.group(1), "name": match.group(2) or match.group(1),
+                              "lang": match.group(3), "domain": domain, "path": path,
+                              "rel": f"{domain}/jar/{name}",
+                              "nsfw": "HENTAI" in text[match.start():end if end > 0 else None]})
+    return found
+
+
+def copy_extras(upstream, extras, taken_ids):
+    """Copy extra parser files into the upstream tree and confirm each registration."""
+    seen = {}
+    for item in extras:
+        if item["id"] in taken_ids or item["id"] in seen:
+            fail(f"ozel parser id çakışıyor: {item['id']} ({item['rel']})")
+        seen[item["id"]] = item["rel"]
+    dest_root = os.path.join(upstream, PARSERS_DIR, "site", "ozel")
+    copied = []
+    for item in extras:
+        sub = re.sub(r"[^A-Za-z0-9_]", "_", item["domain"])
+        dest_dir = os.path.join(dest_root, sub)
+        os.makedirs(dest_dir, exist_ok=True)
+        dest = os.path.join(dest_dir, os.path.basename(item["path"]))
+        shutil.copyfile(item["path"], dest)
+        registered = {m.group(1) for m in ANN_RE.finditer(read_text(dest))}
+        if item["id"] not in registered:
+            fail(f"ozel parser kayıtlı değil: {item['id']} ({item['rel']})")
+        copied.append({"id": item["id"], "name": item["name"], "lang": item["lang"],
+                       "nsfw": item["nsfw"], "domain": item["domain"],
+                       "file": os.path.relpath(dest, upstream).replace(os.sep, "/")})
+    return copied
 
 
 def normalize_host(value):
@@ -240,11 +310,15 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description="Prepare Kotatsu-Redo upstream for the JAR build.")
     parser.add_argument("--upstream", required=True)
     parser.add_argument("--sources", default=os.path.join(BASE_DIR, "sources", "tr", "sources.json"))
-    parser.add_argument("--mode", choices=["alive", "all_tr"], default="alive")
+    parser.add_argument("--mode", choices=["alive", "all_tr", "none"], default="alive")
     parser.add_argument("--include-broken", type=int, choices=[0, 1], default=0)
     parser.add_argument("--apply-alternatives", choices=["off", "high", "high_medium"], default="high")
     parser.add_argument("--include-unverified", type=int, choices=[0, 1], default=0,
                         help="cf_protected, failing ve unverified kaynakları da dahil et (varsayılan 0)")
+    parser.add_argument("--allow-multilang", type=int, choices=[0, 1], default=0,
+                        help="non-tr scope kaynakları da dahil et (global bucket, varsayılan 0)")
+    parser.add_argument("--extra-parsers", default="",
+                        help="generated/ kökü: ozel <domain>/jar/*.kt parser dosyalarını ekle")
     parser.add_argument("--report", default=os.path.join(BASE_DIR, "data", "jar_prepare.json"))
     parser.add_argument("--patch-only", action="store_true",
                         help="yalnızca yamaları uygula; seçim, silme ve domain onarımı yapma")
@@ -256,20 +330,40 @@ def main(argv=None):
 
     apply_patches(upstream)
     if args.patch_only:
+        # Fallback build: no selection or deletion, but ozel extras are still copied in.
+        if args.extra_parsers:
+            taken = {ann["id"] for info in scan_annotated(upstream) for ann in info["anns"]}
+            copy_extras(upstream, scan_extras(os.path.abspath(args.extra_parsers),
+                                              load_entries(args.sources), bool(args.include_unverified)),
+                        taken)
         return 0
     files = scan_annotated(upstream)
+    entries = load_entries(args.sources)
     by_parser = load_sources(args.sources)
     include_unverified = bool(args.include_unverified)
-    file_of, kept, patched, patch_failed, _ = select_and_repair(
-        files, by_parser, args.mode, args.include_broken, args.apply_alternatives, include_unverified)
+    allow_multilang = bool(args.allow_multilang)
+    file_of, kept, patched, patch_failed, lang_of = select_and_repair(
+        files, by_parser, args.mode, args.include_broken, args.apply_alternatives, include_unverified,
+        allow_multilang)
     all_ids = set(file_of)
     deleted, rescued = delete_and_rescue(files, kept)
+
+    extras = []
+    if args.extra_parsers:
+        found = scan_extras(os.path.abspath(args.extra_parsers), entries, include_unverified)
+        extras = copy_extras(upstream, found, all_ids)
+        kept |= {x["id"] for x in extras}
+        for x in extras:
+            lang_of[x["id"]] = x["lang"]
 
     report = {
         "upstream_commit": upstream_commit(upstream),
         "mode": args.mode,
         "include_unverified": include_unverified,
+        "allow_multilang": allow_multilang,
         "kept_ids": sorted(kept),
+        "langs": {pid: lang_of.get(pid, "tr") for pid in sorted(kept)},
+        "extra_sources": extras,
         "removed_ids": sorted(all_ids - kept),
         "rescued_files": rescued,
         "patched_domains": patched,
@@ -284,6 +378,7 @@ def main(argv=None):
             "rescued_files": len(rescued),
             "patched_domains": len(patched),
             "patch_failed": len(patch_failed),
+            "extra_parsers": len(extras),
         },
     }
     os.makedirs(os.path.dirname(os.path.abspath(args.report)), exist_ok=True)

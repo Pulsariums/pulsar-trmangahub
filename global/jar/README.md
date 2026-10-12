@@ -1,14 +1,14 @@
-# Pulsar TR Manga Hub: Kototoro eklentisi
+# Pulsar TR Manga Hub: Global Kototoro eklentisi
 
-Bu klasör, Türkçe kaynakları içeren Kototoro JAR eklentisini ve eklenti dizinini içerir.
-`.github/workflows/build-jar.yml` iş akışı kaynakları derler ve bu klasörü günceller.
+Kotatsu-Redo parser'larının tüm dillerini içeren Kototoro JAR eklentisi. Yalnızca probe'dan geçen (ok) kaynaklar yayınlanır.
+`.github/workflows/build-jar.yml` iş akışı bu klasörü günceller.
 
 ## Kototoro'ya ekleme
 
 1. Kototoro'yu açın ve **Ayarlar → İçerik Kaynakları → Eklentiler → JAR Depoları → Depo ekle** yolunu izleyin.
 2. Adres olarak şunu girin:
 
-   `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/repo`
+   `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/global/jar`
 
 3. Depo eklendikten sonra kaynaklar Kototoro içinde görünür.
 
@@ -26,5 +26,5 @@ Resmi Kotatsu uygulaması harici jar desteklemez. Bu eklentiyi kullanmak için K
 ## Dosyalar
 
 - `index.min.json`: eklenti dizini
-- `apk/plugin.jar`: derlenmiş eklenti
+- `apk/plugin.jar`: derlenmiş eklenti (dizin boşsa yok)
 - `build_info.json`: derleme bilgileri (parmak izi, upstream commit, sha256)

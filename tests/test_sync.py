@@ -104,5 +104,29 @@ class CustomRegistryTests(unittest.TestCase):
         self.assertEqual(payload["jar"], [])
 
 
+class KotatsuLanguageTests(unittest.TestCase):
+    """parse_kotatsu collects every language: tr is tr_native, the rest are multilang."""
+
+    def test_non_tr_parsers_are_multilang_and_carry_their_lang(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as repo:
+            d = os.path.join(repo, "src", "main", "kotlin", "site", "madara")
+            os.makedirs(d)
+            files = {
+                "TrOne.kt": '@MangaSourceParser("TRONE", "TrOne", "tr")\nclass TrOne : MadaraParser("trone.com")\n',
+                "EnOne.kt": '@MangaSourceParser("ENONE", "EnOne", "en")\nclass EnOne : MadaraParser("enone.com")\n',
+            }
+            for name, text in files.items():
+                with open(os.path.join(d, name), "w", encoding="utf-8") as fh:
+                    fh.write(text)
+            records, scanned = sync.parse_kotatsu(repo)
+        by_parser = {r["formats"]["jar"]["parser"]: r for r in records}
+        self.assertEqual(scanned, 2)
+        self.assertEqual(by_parser["TRONE"]["scope"], "tr_native")
+        self.assertEqual(by_parser["TRONE"]["formats"]["jar"]["lang"], "tr")
+        self.assertEqual(by_parser["ENONE"]["scope"], "multilang")
+        self.assertEqual(by_parser["ENONE"]["formats"]["jar"]["lang"], "en")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -65,8 +65,9 @@ class JarPublishTests(unittest.TestCase):
                 "--info", self.info, "--force", force]
         return self.run_main(argv, env)
 
-    def index(self, run=12, fallback="0"):
-        return self.run_main(["index", "--prepare", self.prepare, "--jar", self.jar, "--out", self.repo,
+    def index(self, run=12, fallback="0", bucket="turkce", prepare=None):
+        return self.run_main(["index", "--bucket", bucket, "--prepare", prepare or self.prepare,
+                              "--jar", self.jar, "--out", self.repo,
                               "--run-number", str(run), "--fallback", fallback,
                               "--sources", self.sources], {"GITHUB_REPOSITORY": "owner/name"})
 
@@ -124,6 +125,7 @@ class JarPublishTests(unittest.TestCase):
         self.assertEqual(entry["lang"], "tr")
         self.assertEqual(entry["nsfw"], 0)
         self.assertEqual(entry["sources"], [{"name": "One", "id": "TRONE", "lang": "tr"}])
+        self.assertEqual(entry["pkg"], "org.pulsarium.trmangahub")
 
     def test_index_lists_failing_source_only_with_include_unverified(self):
         write_json(self.sources, {"sources": [
@@ -167,10 +169,82 @@ class JarPublishTests(unittest.TestCase):
         self.index()
         with open(os.path.join(self.repo, "README.md"), encoding="utf-8") as fh:
             text = fh.read()
-        self.assertIn("https://raw.githubusercontent.com/owner/name/main/repo", text)
+        self.assertIn("https://raw.githubusercontent.com/owner/name/main/turkce/jar", text)
         self.assertIn("JAR Depoları", text)
         self.assertIn("GPL-3.0", text)
         self.assertIn("Resmi Kotatsu uygulaması harici jar desteklemez", text)
+        self.assertIn("Türkçe", text)
+
+    def test_global_index_uses_all_and_per_source_lang(self):
+        write_json(self.sources, {"sources": [
+            {"id": "one.tr", "name": "One", "domain": "one.tr", "nsfw": False, "status": "published",
+             "scope": "tr_native", "formats": {"jar": {"parser": "TRONE", "lang": "tr"}}},
+            {"id": "en.com", "name": "English", "domain": "en.com", "nsfw": False, "status": "published",
+             "scope": "multilang", "formats": {"jar": {"parser": "ENONE", "lang": "en"}}},
+            {"id": "multi.com", "name": "Multi", "domain": "multi.com", "nsfw": False,
+             "status": "cf_protected_published", "scope": "multilang",
+             "formats": {"jar": {"parser": "MULTI", "lang": "ru"}}},
+        ]})
+        self.set_prepare(commit="c1", kept=["ENONE", "TRONE"], patched=[])
+        write_json(self.prepare, {"upstream_commit": "c1", "kept_ids": ["ENONE", "TRONE"],
+                                  "patched_domains": [], "include_unverified": False,
+                                  "langs": {"ENONE": "en", "TRONE": "tr"}, "counts": {}})
+        self.index(bucket="global")
+        with open(os.path.join(self.repo, "index.min.json"), encoding="utf-8") as fh:
+            entry = json.load(fh)[0]
+        self.assertEqual(entry["lang"], "all")
+        self.assertEqual(entry["pkg"], "org.pulsarium.trmangahub.global")
+        self.assertEqual(entry["name"], "Pulsar Global Manga Hub")
+        self.assertEqual(entry["sources"], [{"name": "English", "id": "ENONE", "lang": "en"},
+                                            {"name": "One", "id": "TRONE", "lang": "tr"}])
+        with open(os.path.join(self.repo, "README.md"), encoding="utf-8") as fh:
+            self.assertIn("main/global/jar", fh.read())
+
+    def test_global_index_drops_unverified_multilang_by_default(self):
+        write_json(self.sources, {"sources": [
+            {"id": "en.com", "name": "English", "domain": "en.com", "nsfw": False, "status": "failing",
+             "failing": True, "scope": "multilang", "formats": {"jar": {"parser": "ENONE", "lang": "en"}}},
+        ]})
+        write_json(self.prepare, {"upstream_commit": "c1", "kept_ids": ["ENONE"], "patched_domains": [],
+                                  "include_unverified": False, "langs": {"ENONE": "en"}, "counts": {}})
+        self.index(bucket="global")
+        with open(os.path.join(self.repo, "index.min.json"), encoding="utf-8") as fh:
+            self.assertEqual(json.load(fh), [])
+
+    def test_empty_bucket_writes_empty_index_without_jar(self):
+        write_json(self.prepare, {"upstream_commit": "c1", "kept_ids": [], "patched_domains": [],
+                                  "include_unverified": False, "langs": {}, "extra_sources": [],
+                                  "counts": {}})
+        missing_jar = os.path.join(self.dir, "missing.jar")
+        self.run_main(["index", "--bucket", "ozel", "--prepare", self.prepare, "--jar", missing_jar,
+                       "--out", self.repo, "--run-number", "3", "--fallback", "0",
+                       "--sources", self.sources], {"GITHUB_REPOSITORY": "owner/name"})
+        with open(os.path.join(self.repo, "index.min.json"), encoding="utf-8") as fh:
+            self.assertEqual(fh.read().strip(), "[]")
+        self.assertFalse(os.path.exists(os.path.join(self.repo, "apk", "plugin.jar")))
+
+    def test_ozel_index_uses_extra_sources(self):
+        write_json(self.prepare, {"upstream_commit": "c1", "kept_ids": ["CUSTOMONE"], "patched_domains": [],
+                                  "include_unverified": False, "langs": {"CUSTOMONE": "tr"},
+                                  "extra_sources": [{"id": "CUSTOMONE", "name": "Ozel Site", "lang": "tr",
+                                                     "nsfw": False, "domain": "ozel.tr",
+                                                     "file": "src/x/CustomOne.kt"}],
+                                  "counts": {}})
+        self.index(bucket="ozel")
+        with open(os.path.join(self.repo, "index.min.json"), encoding="utf-8") as fh:
+            entry = json.load(fh)[0]
+        self.assertEqual(entry["pkg"], "org.pulsarium.trmangahub.ozel")
+        self.assertEqual(entry["sources"], [{"name": "Ozel Site", "id": "CUSTOMONE", "lang": "tr"}])
+        self.assertTrue(os.path.isfile(os.path.join(self.repo, "apk", "plugin.jar")))
+
+    def test_readme_command_writes_bucket_url_only(self):
+        out_dir = os.path.join(self.dir, "ozel-jar")
+        with mock.patch.dict(os.environ, {"GITHUB_REPOSITORY": "owner/name"}, clear=False):
+            self.run_main(["readme", "--bucket", "ozel", "--out", out_dir])
+        with open(os.path.join(out_dir, "README.md"), encoding="utf-8") as fh:
+            text = fh.read()
+        self.assertIn("https://raw.githubusercontent.com/owner/name/main/ozel/jar", text)
+        self.assertFalse(os.path.exists(os.path.join(out_dir, "index.min.json")))
 
     def test_fingerprint_is_order_independent(self):
         a = jar_publish.fingerprint("c", ["B", "A"], [{"old": "x", "new": "y"}, {"old": "a", "new": "b"}])

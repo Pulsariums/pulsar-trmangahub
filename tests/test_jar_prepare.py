@@ -285,5 +285,67 @@ class JarPrepareTests(unittest.TestCase):
         self.assertTrue(report["include_unverified"])
 
 
+    # Global (allow-multilang), ozel (mode none + extra parsers) and fallback extras.
+    def make_extra(self, domain="ozel.tr", parser="OZELONE", body=None):
+        gen = os.path.join(self.root, "generated")
+        path = os.path.join(gen, domain, "jar", "OzelOne.kt")
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        text = body if body is not None else (
+            f'@MangaSourceParser("{parser}", "Ozel One", "tr")\n'
+            f'class OzelOne : MadaraParser("{domain}")\n')
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write(text)
+        return gen
+
+    def test_mode_none_selects_nothing(self):
+        report = self.run_prepare("--mode", "none")
+        self.assertEqual(report["kept_ids"], [])
+        self.assertFalse(self.exists(os.path.join(SITE, "madara", "tr", "TrOne.kt")))
+
+    def test_allow_multilang_keeps_non_tr_parser_with_its_language(self):
+        report = self.run_prepare("--allow-multilang", "1")
+        self.assertIn("ENONE", report["kept_ids"])
+        self.assertEqual(report["langs"]["ENONE"], "en")
+        self.assertEqual(report["langs"]["TRONE"], "tr")
+        self.assertTrue(report["allow_multilang"])
+
+    def test_multilang_is_dropped_by_default(self):
+        report = self.run_prepare()
+        self.assertNotIn("ENONE", report["kept_ids"])
+
+    def test_extra_parser_is_copied_and_registered(self):
+        self.write_sources(SOURCES + [source("ozel", "OZELONE", "published", domain="ozel.tr")])
+        gen = self.make_extra()
+        report = self.run_prepare("--mode", "none", "--extra-parsers", gen)
+        self.assertEqual(report["kept_ids"], ["OZELONE"])
+        self.assertEqual(report["extra_sources"][0]["id"], "OZELONE")
+        self.assertEqual(report["extra_sources"][0]["name"], "Ozel One")
+        self.assertEqual(report["counts"]["extra_parsers"], 1)
+        self.assertTrue(self.exists(report["extra_sources"][0]["file"]))
+        self.assertIn('@MangaSourceParser("OZELONE"', self.read(report["extra_sources"][0]["file"]))
+
+    def test_extra_parser_from_unpublishable_domain_is_skipped(self):
+        self.write_sources(SOURCES + [source("ozel", "OZELONE", "quarantined", domain="ozel.tr")])
+        report = self.run_prepare("--mode", "none", "--extra-parsers", self.make_extra())
+        self.assertEqual(report["extra_sources"], [])
+        self.assertEqual(report["kept_ids"], [])
+
+    def test_extra_parser_id_collision_is_refused(self):
+        self.write_sources(SOURCES + [source("ozel", "TRONE", "published", domain="ozel.tr")])
+        gen = self.make_extra(parser="TRONE")
+        with self.assertRaises(SystemExit):
+            self.run_prepare("--mode", "none", "--extra-parsers", gen)
+
+    def test_patch_only_fallback_still_copies_extras(self):
+        self.write_sources(SOURCES + [source("ozel", "OZELONE", "published", domain="ozel.tr")])
+        gen = self.make_extra()
+        args = ["--upstream", self.upstream, "--sources", self.sources, "--patch-only",
+                "--extra-parsers", gen]
+        self.assertEqual(jar_prepare.main(args), 0)
+        copied = [os.path.join(dp, f) for dp, _, fs in os.walk(self.upstream) for f in fs
+                  if f == "OzelOne.kt"]
+        self.assertEqual(len(copied), 1)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

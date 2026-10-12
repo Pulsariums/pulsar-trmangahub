@@ -1,4 +1,4 @@
-name: 'Senkron: TR kaynaklarını güncelle'
+name: 'Senkron: kaynakları güncelle (turkce ve global)'
 
 on:
   schedule:
@@ -7,10 +7,6 @@ on:
     inputs:
       dry_run:
         description: 'Commit atma, sadece raporla'
-        type: boolean
-        default: false
-      include_multilang:
-        description: 'Çok dilli (tr dışı) kaynakları da yayınla'
         type: boolean
         default: false
       fail_threshold:
@@ -46,7 +42,6 @@ jobs:
     timeout-minutes: 60
     env:
       DRY_RUN: ${{ inputs.dry_run || false }}
-      INCLUDE_MULTILANG: ${{ inputs.include_multilang && '1' || '0' }}
       FAIL_THRESHOLD: ${{ inputs.fail_threshold || '3' }}
       SAFETY_RATIO: ${{ inputs.safety_ratio || '40' }}
       RUN_ALTERNATIVES: ${{ github.event_name == 'schedule' || inputs.run_alternatives }}
@@ -76,7 +71,7 @@ jobs:
         if: env.RUN_ALTERNATIVES == 'true'
         run: python scripts/alternatives.py
 
-      - name: Build published lists (safety switch)
+      - name: Build published lists (safety switch, per bucket)
         id: build
         run: |
           set +e
@@ -104,7 +99,7 @@ jobs:
         run: |
           git config user.name "pulsar-trmangahub-bot"
           git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
-          git add sources/tr
+          git add sources/tr sources/global
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
@@ -130,7 +125,7 @@ jobs:
             echo "Open issue #${existing} already exists; not creating another."
             exit 0
           fi
-          gh issue create --title "$title" --body "Güvenlik şalteri devreye girdi: TR kaynak yayını bu run'da iptal edildi ve hiçbir dosya değiştirilmedi. Nedeni için bu workflow run'ının build adımındaki IPTAL satırına bakın. Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          gh issue create --title "$title" --body "Güvenlik şalteri devreye girdi: bölüm yayını (turkce veya global) bu run'da iptal edildi ve hiçbir dosya değiştirilmedi. Nedeni için bu workflow run'ının build adımındaki IPTAL satırına bakın. Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
 
       - name: Upload sync data
         if: always()

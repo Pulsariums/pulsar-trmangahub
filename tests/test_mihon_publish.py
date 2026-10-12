@@ -249,7 +249,7 @@ class MainTests(unittest.TestCase):
             mihon_publish.INDEX_URL: json.dumps(doc).encode("utf-8"),
             f"{GH}/a.apk": ZIP_BYTES,
         })
-        out_dir = os.path.join(self.root, "repo-mihon")
+        out_dir = os.path.join(self.root, "turkce", "mihon")
         os.makedirs(os.path.join(out_dir, "apk"))
         with open(os.path.join(out_dir, "apk", "stale.apk"), "wb") as fh:
             fh.write(ZIP_BYTES)
@@ -269,7 +269,7 @@ class MainTests(unittest.TestCase):
         fetcher = FakeFetcher({mihon_publish.INDEX_URL: OSError("down")})
         code, _ = self.run_main(fetcher)
         self.assertEqual(code, 1)
-        self.assertFalse(os.path.exists(os.path.join(self.root, "repo-mihon")))
+        self.assertFalse(os.path.exists(os.path.join(self.root, "turkce", "mihon")))
 
     def test_step_summary_appended(self):
         doc = index_doc([ext("p.a", "a.apk")])

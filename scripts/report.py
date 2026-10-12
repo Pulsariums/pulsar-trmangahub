@@ -18,11 +18,10 @@ SOURCES_PATH = os.path.join(BASE_DIR, "sources", "tr", "sources.json")
 REPORT_PATH = os.path.join(BASE_DIR, "sources", "tr", "REPORT.md")
 ANALYZE_PATH = os.path.join(BASE_DIR, "data", "analyze_result.json")
 
-SETTINGS = ("DRY_RUN", "INCLUDE_MULTILANG", "FAIL_THRESHOLD", "RUN_ALTERNATIVES",
+SETTINGS = ("DRY_RUN", "FAIL_THRESHOLD", "RUN_ALTERNATIVES",
             "REFRESH_KOTATSU", "SAFETY_RATIO")
 PUBLISHED_STATUSES = ("published", "cf_protected_published")
-SOURCE_STATUSES = ("published", "cf_protected_published", "failing", "quarantined",
-                   "excluded_multilang")
+SOURCE_STATUSES = ("published", "cf_protected_published", "failing", "quarantined")
 PROBE_STATUSES = ("ok", "cf_protected", "dead", "parked", "other", "blocked")
 OK_PROBE_STATUSES = ("ok", "cf_protected")
 TOP_REASONS = 10
@@ -254,9 +253,11 @@ def add_section(_args=None):
 
 
 JAR_PREPARE_PATH = os.path.join(BASE_DIR, "data", "jar_prepare.json")
-JAR_INFO_PATH = os.path.join(BASE_DIR, "repo", "build_info.json")
+JAR_BUCKET_PATHS = {"turkce": ("turkce/jar", os.path.join("sources", "tr", "sources.json")),
+                    "global": ("global/jar", os.path.join("sources", "global", "sources.json")),
+                    "ozel": ("ozel/jar", os.path.join("sources", "tr", "sources.json"))}
 JAR_ROWS = 150
-JAR_ENV_SETTINGS = (("JAR_MODE", "Mod"), ("JAR_INCLUDE_BROKEN", "Bozuk kaynaklar dahil"),
+JAR_ENV_SETTINGS = (("JAR_BUCKET", "Bölüm"), ("JAR_MODE", "Mod"), ("JAR_INCLUDE_BROKEN", "Bozuk kaynaklar dahil"),
                     ("JAR_APPLY_ALTERNATIVES", "Alternatif domain politikası"),
                     ("JAR_FORCE", "Zorunlu derleme"), ("JAR_PUBLISH", "Yayınla"))
 
@@ -279,9 +280,11 @@ def jar_decision_text():
 
 
 def jar_section(_args=None):
+    bucket = env_text("JAR_BUCKET") or "turkce"
+    out_rel, sources_rel = JAR_BUCKET_PATHS.get(bucket, JAR_BUCKET_PATHS["turkce"])
     prep = load_json(JAR_PREPARE_PATH)
-    info = load_json(JAR_INFO_PATH)
-    sources = load_json(SOURCES_PATH)
+    info = load_json(os.path.join(BASE_DIR, out_rel, "build_info.json"))
+    sources = load_json(os.path.join(BASE_DIR, sources_rel))
     entries = (sources or {}).get("sources") or []
     lines = ["## Jar derleme raporu", "", "### Karar", "", jar_decision_text(), ""]
 
@@ -319,7 +322,7 @@ def jar_section(_args=None):
 
     lines += ["### Jar", ""]
     if info is None:
-        lines += ["repo/build_info.json yok.", ""]
+        lines += [f"{out_rel}/build_info.json yok (derleme atlandı ya da henüz yok).", ""]
     else:
         lines += table(["Alan", "Değer"], [
             ("Boyut (bayt)", info.get("jarBytes")), ("sha256", info.get("jarSha256")),
@@ -347,9 +350,11 @@ def jar_section(_args=None):
             lines += ["", f"Toplam {len(kept)} kaynaktan ilk {JAR_ROWS} tanesi gösteriliyor."]
         lines.append("")
 
+    slug = env_text("GITHUB_REPOSITORY") or "<GITHUB_REPOSITORY>"
     lines += ["### Kototoro'ya ekleme", "",
               "1. Ayarlar → İçerik Kaynakları → Eklentiler → JAR Depoları → Depo ekle yolunu izleyin.",
-              f"2. Adres: `https://raw.githubusercontent.com/{env_text('GITHUB_REPOSITORY') or '<GITHUB_REPOSITORY>'}/main/repo`",
+              f"2. Bölüm adresi: `https://raw.githubusercontent.com/{slug}/main/<bölüm>/jar` "
+              "(bölüm: turkce, global veya ozel).",
               "3. Depo özel iken adres çalışmaz; depo herkese açık olduğunda çalışır.", ""]
     return lines
 

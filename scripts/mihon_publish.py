@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Yayınlanan Mihon (keiyoushi) TR eklentilerini repo-mihon/ altına aynalar.
+"""Yayınlanan Mihon (keiyoushi) TR eklentilerini turkce/mihon/ altına aynalar.
 
 Akış:
   1. sources/tr/sources.json okunur; formats.mihon.pkg değeri olan ve rules.is_publishable()
@@ -12,9 +12,9 @@ Akış:
   3. Her paket için index.json'daki kaynaklardan yalnızca 'hosts' içindekiler (homeUrl domaini
      eşleşenler) index'e yazılır. Eşleşen kaynağı olmayan paket dışarıda kalır.
   4. Her yayınlanan pkg için APK indirilir. Önce index.json içindeki resources.apkUrl denenir,
-     olmazsa sources.json içindeki apkUrl. Dosya repo-mihon/apk/<url'nin dosya adı> olarak yazılır.
+     olmazsa sources.json içindeki apkUrl. Dosya turkce/mihon/apk/<url'nin dosya adı> olarak yazılır.
      Aynı sürüm ve dosya zaten varsa indirilmez.
-  5. repo-mihon/index.min.json bu eklentilerden yazılır; repo-mihon/README.md güncellenir.
+  5. turkce/mihon/index.min.json bu eklentilerden yazılır; turkce/mihon/README.md güncellenir.
      Artık listede olmayan APK'lar silinir.
 
 Yalnızca standart kütüphane kullanılır. İndirilemeyen, index.json'da bulunmayan veya
@@ -43,7 +43,7 @@ APK_NAME_RE = re.compile(r"^[A-Za-z0-9._-]+\.apk$")
 LANG = "tr"
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT_DIR_NAME = "repo-mihon"
+OUT_DIR_NAME = os.path.join("turkce", "mihon")
 REPO_SLUG_FALLBACK = "<GITHUB_REPOSITORY>"
 
 
@@ -245,7 +245,7 @@ deposu kullanılır; yalnızca bu deponun yayınlanan Türkçe kaynakları alın
 1. Mihon'u açın ve **Ayarlar → Eklentiler → Depolar → Depo ekle** yolunu izleyin.
 2. Adres olarak şunu girin:
 
-   `https://raw.githubusercontent.com/{slug}/main/repo-mihon/`
+   `https://raw.githubusercontent.com/{slug}/main/turkce/mihon`
 
 ## Dosyalar
 

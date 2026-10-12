@@ -9,7 +9,7 @@ deposu kullanılır; yalnızca bu deponun yayınlanan Türkçe kaynakları alın
 1. Mihon'u açın ve **Ayarlar → Eklentiler → Depolar → Depo ekle** yolunu izleyin.
 2. Adres olarak şunu girin:
 
-   `https://raw.githubusercontent.com/<GITHUB_REPOSITORY>/main/repo-mihon/`
+   `https://raw.githubusercontent.com/<GITHUB_REPOSITORY>/main/turkce/mihon`
 
 ## Dosyalar
 
