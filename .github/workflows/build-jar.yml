@@ -219,15 +219,29 @@ jobs:
         run: |
           git config user.name "pulsar-trmangahub-bot"
           git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
-          git add jar
-          if git diff --cached --quiet; then
-            echo "Değişiklik yok, commit atılmadı."
-            exit 0
-          fi
-          git commit -m "chore(jar): ${BUCKET} paketi güncellendi"
-          for i in 1 2 3; do
-            git pull --rebase origin "${BRANCH}" && git push origin "HEAD:${BRANCH}" && exit 0
-            sleep $((i*5))
+          # Paralel paket işleri aynı index.min.json dosyasını değiştirir; çakışmayı
+          # rebase ile çözmek yerine kendi dosyalarımızı yedekleyip güncel dalın
+          # üstüne yeniden uygular, indeksi state/*.entry.json'dan baştan üretiriz.
+          SAVE="$(mktemp -d)"
+          mkdir -p "$SAVE/state" "$SAVE/apk"
+          cp jar/state/${BUCKET}.* "$SAVE/state/"
+          cp -r jar/apk/. "$SAVE/apk/"
+          for i in 1 2 3 4 5 6; do
+            git fetch origin "${BRANCH}"
+            git reset --hard "origin/${BRANCH}"
+            mkdir -p jar/state jar/apk
+            cp "$SAVE"/state/* jar/state/
+            cp -r "$SAVE"/apk/. jar/apk/
+            python scripts/jar_publish.py merge-index --out jar
+            python scripts/jar_publish.py readme --out jar
+            git add jar
+            if git diff --cached --quiet; then
+              echo "Değişiklik yok, commit atılmadı."
+              exit 0
+            fi
+            git commit -m "chore(jar): ${BUCKET} paketi güncellendi"
+            git push origin "HEAD:${BRANCH}" && exit 0
+            sleep $((i*4))
           done
           echo "Push başarısız oldu" >&2
           exit 1
