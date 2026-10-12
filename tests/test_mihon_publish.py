@@ -15,6 +15,7 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import mihon_publish  # noqa: E402
 
 ZIP_BYTES = b"PK\x03\x04fake-apk"
+GH = "https://github.com/keiyoushi/extensions/releases/download/abc"
 
 
 def write_json(path, payload):
@@ -23,9 +24,22 @@ def write_json(path, payload):
         json.dump(payload, fh, ensure_ascii=False)
 
 
-def tr_entry(pkg, apk, version="1.0.0", lang="tr"):
-    return {"name": pkg, "pkg": pkg, "apk": apk, "lang": lang, "code": 1,
-            "version": version, "nsfw": 0, "sources": [{"name": pkg, "lang": lang, "id": "1"}]}
+def ext(pkg, apk, code="106037", version="1.6.37", warning="CONTENT_WARNING_SAFE", sources=None):
+    return {
+        "name": pkg.rsplit(".", 1)[-1],
+        "packageName": pkg,
+        "resources": {"apkUrl": f"{GH}/{apk}"},
+        "extensionLib": "1.6",
+        "versionCode": code,
+        "versionName": version,
+        "contentWarning": warning,
+        "sources": sources if sources is not None else [
+            {"id": "123", "name": "Site", "language": "tr", "homeUrl": "https://site.tr"}],
+    }
+
+
+def index_doc(exts):
+    return {"name": "x", "extensionList": {"extensions": exts}}
 
 
 class FakeFetcher:
@@ -43,37 +57,35 @@ class FakeFetcher:
         return value
 
 
-class SelectTests(unittest.TestCase):
-    def test_published_pkgs_filter_and_lang(self):
-        index = [tr_entry("p.a", "a.apk"), tr_entry("p.b", "b.apk"),
-                 tr_entry("p.a", "a2.apk"), tr_entry("p.c", "c.apk", lang="en")]
-        kept = mihon_publish.select_entries(index, {"p.a", "p.c"}, set())
-        self.assertEqual([e["apk"] for e in kept], ["a.apk"])
+class HelperTests(unittest.TestCase):
+    def test_published_items_dedup_and_skip_invalid(self):
+        pub = {"mihon": [{"pkg": "p.a"}, {"pkg": "p.a"}, "junk", {"nopkg": 1}, {"pkg": "p.b"}]}
+        self.assertEqual([i["pkg"] for i in mihon_publish.published_items(pub)], ["p.a", "p.b"])
+        self.assertEqual(mihon_publish.published_items({}), [])
 
-    def test_fallback_skips_fully_quarantined_pkgs(self):
-        index = [tr_entry("p.a", "a.apk"), tr_entry("p.b", "b.apk")]
-        kept = mihon_publish.select_entries(index, None, {"p.b"})
-        self.assertEqual([e["pkg"] for e in kept], ["p.a"])
+    def test_upstream_map(self):
+        m = mihon_publish.upstream_map(index_doc([ext("p.a", "a.apk"), {"name": "no pkg"}]))
+        self.assertEqual(list(m), ["p.a"])
 
-    def test_bad_apk_names_are_rejected(self):
-        index = [tr_entry("p.a", "../evil.apk"), tr_entry("p.b", "x/y.apk"), tr_entry("p.c", "ok.apk")]
-        kept = mihon_publish.select_entries(index, None, set())
-        self.assertEqual([e["apk"] for e in kept], ["ok.apk"])
+    def test_apk_name_from_url(self):
+        self.assertEqual(mihon_publish.apk_name_from_url(f"{GH}/tachiyomi-tr.a-v1.apk"),
+                         "tachiyomi-tr.a-v1.apk")
+        self.assertIsNone(mihon_publish.apk_name_from_url("https://x.tr/"))
+        self.assertIsNone(mihon_publish.apk_name_from_url("https://x.tr/a%2F..%2Fb.jar"))
 
-    def test_fully_quarantined_pkgs(self):
-        doc = {"sources": [
-            {"status": "quarantined", "formats": {"mihon": {"pkg": "p.dead"}}},
-            {"status": "quarantined", "formats": {"mihon": {"pkg": "p.dead"}}},
-            {"status": "published", "formats": {"mihon": {"pkg": "p.mixed"}}},
-            {"status": "quarantined", "formats": {"mihon": {"pkg": "p.mixed"}}},
-            {"status": "quarantined", "formats": {"mihon": None}},
-        ]}
-        self.assertEqual(mihon_publish.fully_quarantined_pkgs(doc), {"p.dead"})
-
-    def test_published_mihon_pkgs_none_when_missing(self):
-        self.assertIsNone(mihon_publish.published_mihon_pkgs({"mihon": []}))
-        self.assertIsNone(mihon_publish.published_mihon_pkgs({}))
-        self.assertEqual(mihon_publish.published_mihon_pkgs({"mihon": [{"pkg": "p.a"}]}), {"p.a"})
+    def test_build_entry_format(self):
+        e = mihon_publish.build_entry(ext("p.a", "a.apk", warning="CONTENT_WARNING_NSFW"),
+                                      "p.a", "a.apk", 106037, "1.6.37")
+        self.assertEqual(e["code"], 106037)
+        self.assertIsInstance(e["code"], int)
+        self.assertEqual(e["nsfw"], 1)
+        self.assertEqual(e["lang"], "tr")
+        self.assertEqual(e["version"], "1.6.37")
+        self.assertEqual(e["sources"], [{"name": "Site", "lang": "tr", "id": "123",
+                                         "baseUrl": "https://site.tr"}])
+        safe = mihon_publish.build_entry(ext("p.a", "a.apk", warning="CONTENT_WARNING_MIXED"),
+                                         "p.a", "a.apk", 1, "1")
+        self.assertEqual(safe["nsfw"], 0)
 
 
 class SyncTests(unittest.TestCase):
@@ -82,65 +94,90 @@ class SyncTests(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.apk_dir = os.path.join(self.tmp.name, "apk")
 
-    def url(self, apk):
-        return mihon_publish.APK_BASE_URL + apk
-
-    def test_downloads_new_and_skips_unchanged(self):
-        apk_dir = self.apk_dir
-        os.makedirs(apk_dir)
-        with open(os.path.join(apk_dir, "a.apk"), "wb") as fh:
-            fh.write(ZIP_BYTES)
-        prev = {"p.a": tr_entry("p.a", "a.apk", "1.0.0")}
-        fetcher = FakeFetcher({self.url("b.apk"): ZIP_BYTES})
-        entries = [tr_entry("p.a", "a.apk", "1.0.0"), tr_entry("p.b", "b.apk", "2.0.0")]
-        result, stats, failures = mihon_publish.sync_apks(entries, prev, apk_dir, fetcher=fetcher)
-        self.assertEqual(fetcher.calls, [self.url("b.apk")])
-        self.assertEqual(len(result), 2)
+    def test_downloads_fresh_apk_and_builds_entry(self):
+        upstream = {"p.a": ext("p.a", "a.apk")}
+        fetcher = FakeFetcher({f"{GH}/a.apk": ZIP_BYTES})
+        result, stats, skipped = mihon_publish.sync([{"pkg": "p.a"}], upstream, {}, self.apk_dir,
+                                                    fetcher=fetcher)
+        self.assertEqual(fetcher.calls, [f"{GH}/a.apk"])
+        self.assertEqual(result[0]["apk"], "a.apk")
         self.assertEqual(stats["indirildi"], 1)
-        self.assertEqual(stats["yeniden_kullanildi"], 1)
-        self.assertEqual(failures, [])
-        with open(os.path.join(apk_dir, "b.apk"), "rb") as fh:
+        self.assertEqual(skipped, [])
+        with open(os.path.join(self.apk_dir, "a.apk"), "rb") as fh:
             self.assertEqual(fh.read(), ZIP_BYTES)
 
-    def test_version_change_triggers_download(self):
+    def test_skip_download_when_same_version_present(self):
         os.makedirs(self.apk_dir)
         with open(os.path.join(self.apk_dir, "a.apk"), "wb") as fh:
             fh.write(ZIP_BYTES)
-        prev = {"p.a": tr_entry("p.a", "a.apk", "1.0.0")}
-        fetcher = FakeFetcher({self.url("a.apk"): ZIP_BYTES})
-        result, stats, _ = mihon_publish.sync_apks([tr_entry("p.a", "a.apk", "1.0.1")], prev,
-                                                   self.apk_dir, fetcher=fetcher)
-        self.assertEqual(stats["indirildi"], 1)
-        self.assertEqual(result[0]["version"], "1.0.1")
-
-    def test_non_zip_download_is_failure_and_dropped(self):
-        fetcher = FakeFetcher({self.url("bad.apk"): b"<html>not an apk</html>"})
-        result, stats, failures = mihon_publish.sync_apks([tr_entry("p.bad", "bad.apk")], {},
-                                                          self.apk_dir, fetcher=fetcher)
-        self.assertEqual(result, [])
-        self.assertEqual(stats["dusurildu"], 1)
-        self.assertEqual(len(failures), 1)
-        self.assertFalse(os.path.exists(os.path.join(self.apk_dir, "bad.apk")))
-
-    def test_failure_keeps_previous_entry_when_file_exists(self):
-        os.makedirs(self.apk_dir)
-        with open(os.path.join(self.apk_dir, "old.apk"), "wb") as fh:
-            fh.write(ZIP_BYTES)
-        prev = {"p.a": tr_entry("p.a", "old.apk", "1.0.0")}
+        upstream = {"p.a": ext("p.a", "a.apk")}
+        prev = {"p.a": {"pkg": "p.a", "apk": "a.apk", "code": 106037, "version": "1.6.37"}}
         fetcher = FakeFetcher({})
-        result, stats, failures = mihon_publish.sync_apks([tr_entry("p.a", "new.apk", "1.0.1")],
-                                                          prev, self.apk_dir, fetcher=fetcher)
-        self.assertEqual([e["apk"] for e in result], ["old.apk"])
-        self.assertEqual(stats["eski_korundu"], 1)
-        self.assertEqual(len(failures), 1)
+        result, stats, _ = mihon_publish.sync([{"pkg": "p.a"}], upstream, prev, self.apk_dir,
+                                              fetcher=fetcher)
+        self.assertEqual(fetcher.calls, [])
+        self.assertEqual(stats["yeniden_kullanildi"], 1)
+        self.assertEqual(len(result), 1)
+
+    def test_version_change_redownloads(self):
+        os.makedirs(self.apk_dir)
+        with open(os.path.join(self.apk_dir, "a.apk"), "wb") as fh:
+            fh.write(ZIP_BYTES)
+        upstream = {"p.a": ext("p.a", "a.apk", code="106038", version="1.6.38")}
+        prev = {"p.a": {"pkg": "p.a", "apk": "a.apk", "code": 106037, "version": "1.6.37"}}
+        fetcher = FakeFetcher({f"{GH}/a.apk": ZIP_BYTES})
+        result, stats, _ = mihon_publish.sync([{"pkg": "p.a"}], upstream, prev, self.apk_dir,
+                                              fetcher=fetcher)
+        self.assertEqual(stats["indirildi"], 1)
+        self.assertEqual(result[0]["code"], 106038)
+
+    def test_falls_back_to_published_url(self):
+        upstream = {"p.a": {**ext("p.a", "new.apk"), "resources": {"apkUrl": f"{GH}/new.apk"}}}
+        fetcher = FakeFetcher({f"{GH}/old.apk": ZIP_BYTES})
+        result, _, skipped = mihon_publish.sync(
+            [{"pkg": "p.a", "apkUrl": f"{GH}/old.apk"}], upstream, {}, self.apk_dir, fetcher=fetcher)
+        self.assertEqual(set(fetcher.calls), {f"{GH}/new.apk", f"{GH}/old.apk"})
+        self.assertEqual(fetcher.calls[-1], f"{GH}/old.apk")
+        self.assertEqual(result[0]["apk"], "old.apk")
+        self.assertEqual(skipped, [])
+
+    def test_failed_download_is_skipped_and_logged(self):
+        upstream = {"p.a": ext("p.a", "a.apk")}
+        fetcher = FakeFetcher({f"{GH}/a.apk": OSError("boom")})
+        result, stats, skipped = mihon_publish.sync([{"pkg": "p.a"}], upstream, {}, self.apk_dir,
+                                                    fetcher=fetcher)
+        self.assertEqual(result, [])
+        self.assertEqual(stats["atlandi"], 1)
+        self.assertEqual([p for p, _ in skipped], ["p.a"])
+
+    def test_non_zip_payload_is_rejected(self):
+        upstream = {"p.a": ext("p.a", "a.apk")}
+        fetcher = FakeFetcher({f"{GH}/a.apk": b"<html>nope</html>"})
+        result, _, skipped = mihon_publish.sync([{"pkg": "p.a"}], upstream, {}, self.apk_dir,
+                                                fetcher=fetcher)
+        self.assertEqual(result, [])
+        self.assertEqual(len(skipped), 1)
+        self.assertFalse(os.path.exists(os.path.join(self.apk_dir, "a.apk")))
+
+    def test_missing_from_index_is_skipped(self):
+        result, stats, skipped = mihon_publish.sync([{"pkg": "p.gone"}], {}, {}, self.apk_dir,
+                                                    fetcher=FakeFetcher({}))
+        self.assertEqual(result, [])
+        self.assertEqual(skipped, [("p.gone", "index.json içinde yok")])
+
+    def test_bad_version_code_is_skipped(self):
+        upstream = {"p.a": ext("p.a", "a.apk", code="abc")}
+        result, _, skipped = mihon_publish.sync([{"pkg": "p.a"}], upstream, {}, self.apk_dir,
+                                                fetcher=FakeFetcher({}))
+        self.assertEqual(result, [])
+        self.assertEqual(len(skipped), 1)
 
     def test_remove_stale(self):
         os.makedirs(self.apk_dir)
         for name in ("keep.apk", "gone.apk"):
             with open(os.path.join(self.apk_dir, name), "wb") as fh:
                 fh.write(ZIP_BYTES)
-        removed = mihon_publish.remove_stale(self.apk_dir, {"keep.apk"})
-        self.assertEqual(removed, ["gone.apk"])
+        self.assertEqual(mihon_publish.remove_stale(self.apk_dir, {"keep.apk"}), ["gone.apk"])
         self.assertEqual(os.listdir(self.apk_dir), ["keep.apk"])
 
 
@@ -149,53 +186,56 @@ class MainTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.root = self.tmp.name
-        write_json(os.path.join(self.root, "sources", "tr", "published.json"),
-                   {"mihon": [{"pkg": "p.a", "version": "1.0.0", "domain": "a.tr"}]})
-        write_json(os.path.join(self.root, "sources", "tr", "sources.json"), {"sources": []})
+        write_json(os.path.join(self.root, "sources", "tr", "published.json"), {"mihon": [
+            {"pkg": "p.a", "apkUrl": f"{GH}/a.apk", "version": "1.6.37", "domain": "a.tr"},
+            {"pkg": "p.broken", "apkUrl": f"{GH}/broken.apk", "version": "1.0.0", "domain": "b.tr"},
+        ]})
 
-    def run_main(self, fetcher):
+    def run_main(self, fetcher, extra_env=None):
         buf = io.StringIO()
         env = {k: v for k, v in os.environ.items() if k not in ("GITHUB_STEP_SUMMARY", "GITHUB_REPOSITORY")}
+        env.update(extra_env or {})
         with mock.patch.dict(os.environ, env, clear=True), contextlib.redirect_stdout(buf):
             code = mihon_publish.main(["--root", self.root], fetcher=fetcher)
         return code, buf.getvalue()
 
-    def test_end_to_end_writes_index_readme_and_summary(self):
-        index = [tr_entry("p.a", "a.apk", "1.0.0"), tr_entry("p.x", "x.apk", "1.0.0")]
+    def test_end_to_end(self):
+        doc = index_doc([ext("p.a", "a.apk"), ext("p.broken", "broken.apk"), ext("p.other", "o.apk")])
         fetcher = FakeFetcher({
-            mihon_publish.INDEX_URL: json.dumps(index).encode("utf-8"),
-            mihon_publish.APK_BASE_URL + "a.apk": ZIP_BYTES,
+            mihon_publish.INDEX_URL: json.dumps(doc).encode("utf-8"),
+            f"{GH}/a.apk": ZIP_BYTES,
         })
+        out_dir = os.path.join(self.root, "repo-mihon")
+        os.makedirs(os.path.join(out_dir, "apk"))
+        with open(os.path.join(out_dir, "apk", "stale.apk"), "wb") as fh:
+            fh.write(ZIP_BYTES)
         code, out = self.run_main(fetcher)
         self.assertEqual(code, 0)
-        out_dir = os.path.join(self.root, "repo-mihon")
         with open(os.path.join(out_dir, "index.min.json"), encoding="utf-8") as fh:
             written = json.load(fh)
         self.assertEqual([e["pkg"] for e in written], ["p.a"])
-        self.assertEqual(written[0], index[0])
+        self.assertEqual(written[0]["code"], 106037)
         self.assertTrue(os.path.isfile(os.path.join(out_dir, "apk", "a.apk")))
+        self.assertFalse(os.path.exists(os.path.join(out_dir, "apk", "stale.apk")))
         self.assertTrue(os.path.isfile(os.path.join(out_dir, "README.md")))
-        self.assertIn("Türkçe", out)
+        self.assertIn("p.broken", out)
         self.assertIn("İndirilen APK: 1", out)
 
-    def test_upstream_failure_touches_nothing(self):
+    def test_index_failure_touches_nothing(self):
         fetcher = FakeFetcher({mihon_publish.INDEX_URL: OSError("down")})
         code, _ = self.run_main(fetcher)
         self.assertEqual(code, 1)
         self.assertFalse(os.path.exists(os.path.join(self.root, "repo-mihon")))
 
-    def test_step_summary_is_appended(self):
-        index = [tr_entry("p.a", "a.apk", "1.0.0")]
+    def test_step_summary_appended(self):
+        doc = index_doc([ext("p.a", "a.apk")])
         fetcher = FakeFetcher({
-            mihon_publish.INDEX_URL: json.dumps(index).encode("utf-8"),
-            mihon_publish.APK_BASE_URL + "a.apk": ZIP_BYTES,
+            mihon_publish.INDEX_URL: json.dumps(doc).encode("utf-8"),
+            f"{GH}/a.apk": ZIP_BYTES,
         })
         summary_path = os.path.join(self.root, "summary.md")
-        buf = io.StringIO()
-        env = {k: v for k, v in os.environ.items() if k != "GITHUB_STEP_SUMMARY"}
-        env["GITHUB_STEP_SUMMARY"] = summary_path
-        with mock.patch.dict(os.environ, env, clear=True), contextlib.redirect_stdout(buf):
-            self.assertEqual(mihon_publish.main(["--root", self.root], fetcher=fetcher), 0)
+        code, _ = self.run_main(fetcher, {"GITHUB_STEP_SUMMARY": summary_path})
+        self.assertEqual(code, 0)
         with open(summary_path, encoding="utf-8") as fh:
             self.assertIn("Mihon deposu", fh.read())
 

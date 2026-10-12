@@ -1,7 +1,8 @@
 # Pulsar TR Manga Hub: Mihon deposu (Türkçe APK aynası)
 
-Bu klasör, keiyoushi/extensions deposundaki Türkçe (`lang: tr`) Mihon eklentilerinin
-birebir APK aynasıdır. `.github/workflows/build-mihon.yml` iş akışı günceller.
+Bu klasör, Türkçe Mihon eklentilerinin APK aynasıdır. Kaynak olarak keiyoushi/extensions
+deposu kullanılır; yalnızca bu deponun yayınlanan Türkçe kaynakları alınır.
+`.github/workflows/build-mihon.yml` iş akışı günceller.
 
 ## Mihon'a ekleme
 
@@ -10,9 +11,7 @@ birebir APK aynasıdır. `.github/workflows/build-mihon.yml` iş akışı günce
 
    `https://raw.githubusercontent.com/<GITHUB_REPOSITORY>/main/repo-mihon/`
 
-   Not: Adresin sonundaki `index.min.json` dosyası Mihon tarafından otomatik bulunur.
-
 ## Dosyalar
 
-- `index.min.json`: eklenti dizini (upstream biçiminde, yalnızca Türkçe girdiler)
+- `index.min.json`: eklenti dizini (Türkçe girdiler)
 - `apk/`: eklenti APK dosyaları
