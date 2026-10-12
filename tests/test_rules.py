@@ -41,6 +41,10 @@ class EvaluateTests(unittest.TestCase):
     def test_parked_is_immediate(self):
         self.assertEqual(rules.evaluate(row("parked"), None)["status"], "quarantined")
 
+    def test_redirect_is_immediate(self):
+        v = rules.evaluate(row("parked", reason="redirect_unrelated: x.com"), prev("published", 0))
+        self.assertEqual((v["status"], v["consecutiveFailures"]), ("quarantined", 1))
+
     def test_http_404_and_410_are_immediate(self):
         self.assertEqual(rules.evaluate(row("dead", reason="http 404", http=404), None)["status"], "quarantined")
         self.assertEqual(rules.evaluate(row("dead", reason="http 410", http=410), None)["status"], "quarantined")

@@ -43,7 +43,7 @@ def failure_count(prev):
 
 def is_immediate(probe_row):
     reason = str(probe_row.get("reason") or "")
-    return (reason.startswith("dns:") or probe_row.get("status") == "parked"
+    return (reason.startswith("dns:") or reason.startswith("redirect_") or probe_row.get("status") == "parked"
             or probe_row.get("http") in IMMEDIATE_HTTP)
 
 

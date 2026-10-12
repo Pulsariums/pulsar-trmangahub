@@ -12,7 +12,7 @@ import probe  # noqa: E402
 
 
 class FakeResponse:
-    def __init__(self, status=200, body=b"<html><body>ok</body></html>", headers=None, url="https://x.test/"):
+    def __init__(self, status=200, body=b"<html><body>ok</body></html>", headers=None, url=None):
         self.status_code = status
         self._body = body
         self.headers = {"Content-Type": "text/html; charset=utf-8"}
@@ -118,11 +118,11 @@ class ProbeDomainTests(unittest.TestCase):
         self.assertIn("Chrome", kwargs["headers"]["User-Agent"])
 
     def test_redirect_sets_moved_to(self):
-        session = FakeSession(FakeResponse(200, b"<html>x</html>", url="https://www.newhost.tr/tr/"))
-        res = probe.probe_domain(session, "oldhost.tr")
+        session = FakeSession(FakeResponse(200, b"<html>x</html>", url="https://www.oldbrand.com/tr/"))
+        res = probe.probe_domain(session, "oldbrand.tr")
         self.assertEqual(res["status"], "ok")
-        self.assertEqual(res["moved_to"], "newhost.tr")
-        self.assertEqual(res["finalUrl"], "https://www.newhost.tr/tr/")
+        self.assertEqual(res["moved_to"], "oldbrand.com")
+        self.assertEqual(res["finalUrl"], "https://www.oldbrand.com/tr/")
 
     def test_same_host_after_www_redirect_is_not_moved(self):
         session = FakeSession(FakeResponse(200, b"<html>x</html>", url="https://www.same.tr/"))
@@ -345,6 +345,45 @@ def _run_main_with(source_rows, fake_probe_one):
         assert code == 0
         with open(outp, encoding="utf-8") as fh:
             return json.load(fh)["results"]
+
+
+class RedirectTests(unittest.TestCase):
+    def test_ww_parking_subdomain_in_error_is_parked_without_retry(self):
+        exc = requests.exceptions.ConnectionError(
+            "HTTPSConnectionPool(host='ww38.mangaevi.com', port=443): Max retries exceeded")
+        session = FakeSession(exc)
+        res = probe.probe_domain(session, "mangaevi.com")
+        self.assertEqual(res["status"], "parked")
+        self.assertEqual(res["reason"], "redirect_parking_subdomain: ww38.mangaevi.com")
+        self.assertEqual(res["moved_to"], "ww38.mangaevi.com")
+        self.assertEqual(res["attempts"], 1)
+
+    def test_unrelated_redirect_is_parked(self):
+        session = FakeSession(FakeResponse(200, b"<html>x</html>", url="https://www.autismsupportnetwork.com/"))
+        res = probe.probe_domain(session, "armoniscans.net")
+        self.assertEqual(res["status"], "parked")
+        self.assertEqual(res["reason"], "redirect_unrelated: autismsupportnetwork.com")
+        self.assertEqual(res["moved_to"], "autismsupportnetwork.com")
+
+    def test_same_brand_tld_change_is_not_parked(self):
+        session = FakeSession(FakeResponse(200, b"<html>x</html>", url="https://laviniafansub.shop/"))
+        res = probe.probe_domain(session, "laviniafansub.site")
+        self.assertEqual(res["status"], "ok")
+        self.assertEqual(res["moved_to"], "laviniafansub.shop")
+
+    def test_similar_body_in_error_host_is_not_parked(self):
+        exc = requests.exceptions.ConnectionError(
+            "HTTPSConnectionPool(host='hayalistic.com', port=443): Max retries exceeded")
+        session = FakeSession(exc, exc)
+        res = probe.probe_domain(session, "hayalistic.com.tr")
+        self.assertNotEqual(res["status"], "parked")
+        self.assertEqual(res["moved_to"], "hayalistic.com")
+
+    def test_strip_host_and_error_host_helpers(self):
+        self.assertEqual(probe.strip_host("WWW.Example.com"), "example.com")
+        self.assertEqual(probe.strip_host("ww12.example.com"), "example.com")
+        self.assertIsNone(probe.host_from_error("Max retries exceeded"))
+        self.assertEqual(probe.host_from_error("host='a.tr', port=443"), "a.tr")
 
 
 class FunctionalTests(unittest.TestCase):

@@ -14,6 +14,7 @@ Each domain gets up to ATTEMPTS tries, retried only for transient failures.
 import argparse
 import collections
 import concurrent.futures
+import difflib
 import json
 import os
 import re
@@ -70,6 +71,38 @@ DNS_ERROR_MARKERS = ("name or service not known", "nodename nor servname", "name
 def host_of(url):
     host = (urlparse(url).hostname or "").lower()
     return host[4:] if host.startswith("www.") else host
+
+
+PARKING_SUBDOMAIN_RE = re.compile(r"^ww\d+\.")
+HOST_IN_ERROR_RE = re.compile(r"host='([^']+)'")
+REDIRECT_SIMILARITY = 0.6
+
+
+def strip_host(host):
+    host = (host or "").strip().lower()
+    host = re.sub(r"^www\.", "", host)
+    return PARKING_SUBDOMAIN_RE.sub("", host)
+
+
+def host_from_error(msg):
+    match = HOST_IN_ERROR_RE.search(str(msg or ""))
+    return match.group(1).lower() if match else None
+
+
+def redirect_kind(domain, final_host):
+    if not final_host:
+        return None
+    final_host = final_host.lower()
+    if PARKING_SUBDOMAIN_RE.match(final_host):
+        return "parking_subdomain"
+    final, origin = strip_host(final_host), strip_host(domain)
+    if final == origin:
+        return None
+    body_final = final.split(".")[0]
+    body_origin = origin.split(".")[0]
+    if difflib.SequenceMatcher(None, body_final, body_origin).ratio() < REDIRECT_SIMILARITY:
+        return "unrelated"
+    return None
 
 
 def detect_engine(text):
@@ -212,16 +245,23 @@ def probe_domain(session, domain, attempts=ATTEMPTS, engine_hint=None):
             status = "blocked" if raw["error_kind"] == "proxy_policy" else "dead"
             reason = f"{raw['error_kind']}: {raw['error']}"
             retry = raw["error_kind"] != "proxy_policy"
+            err_host = host_from_error(raw["error"])
+            moved_to = err_host if err_host not in (None, domain, f"www.{domain}") else None
             record = {"status": status, "reason": reason, "http": None, "finalUrl": None,
-                      "moved_to": None, "engine_detected": "unknown", "ms": raw["ms"]}
+                      "moved_to": moved_to, "engine_detected": "unknown", "ms": raw["ms"]}
         else:
             status, reason = classify_response(raw["status"], raw["headers"], raw["text"], raw["is_html"])
             retry = status == "dead" or raw["status"] == 429
             final_host = host_of(raw["final_url"]) if raw["final_url"] else None
+            moved_to = final_host if final_host and final_host != domain else None
             record = {"status": status, "reason": reason, "http": raw["status"],
-                      "finalUrl": raw["final_url"],
-                      "moved_to": final_host if final_host and final_host != domain else None,
+                      "finalUrl": raw["final_url"], "moved_to": moved_to,
                       "engine_detected": detect_engine(raw["text"]), "ms": raw["ms"]}
+        kind = redirect_kind(domain, moved_to)
+        if kind:
+            record["status"] = "parked"
+            record["reason"] = f"redirect_{kind}: {moved_to}"
+            retry = False
         record["attempts"] = attempt
         final = record
         if not retry:
