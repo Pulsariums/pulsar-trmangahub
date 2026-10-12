@@ -104,6 +104,7 @@ internal class LiveCheck {
 	}
 
 	private fun classify(e: Throwable): String {
+		if (Regex("""\b429\b""").containsMatchIn(e.message.orEmpty())) return "rate_limit"
 		var cause: Throwable? = e
 		while (cause != null) {
 			val name = cause.javaClass.simpleName
