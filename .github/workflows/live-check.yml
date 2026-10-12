@@ -137,7 +137,9 @@ jobs:
             mkdir -p data/live
             # history başka paketin sonucunu içerebilir: uzaktaki ile birleştir
             if [ -f data/live/history.json ]; then
-              jq -s '.[0] * .[1]' data/live/history.json "$SAVE/history.json" > "$SAVE/h.merged"
+              jq -s --slurpfile ids <(jq '[.results[].id]' "$SAVE/${BUCKET}.json") \
+                '.[0] * (.[1] | with_entries(select(.key as $k | $ids[0] | index($k))))' \
+                data/live/history.json "$SAVE/history.json" > "$SAVE/h.merged"
               cp "$SAVE/h.merged" data/live/history.json
             else
               cp "$SAVE/history.json" data/live/history.json
