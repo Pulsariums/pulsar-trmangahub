@@ -95,7 +95,9 @@ jobs:
       - name: Test altyapısını hazırla
         run: |
           T=upstream/src/test/kotlin/org/koitharu/kotatsu/parsers
-          rm -rf "$T/site"
+          # Yalnız sahte bağlam altyapısı kalır; silinen kaynaklara bağlı upstream testleri derlemeyi kırar.
+          rm -rf "$T/site" "$T/model" "$T/util"
+          rm -f "$T/ChapterAlignmentHarvest.kt" "$T/MangaParserTest.kt" "$T/MangaSources.kt" "$T/AuthCheckExtension.kt"
           cp tests/LiveCheck.kt "$T/LiveCheck.kt"
 
       - uses: actions/setup-java@v4
