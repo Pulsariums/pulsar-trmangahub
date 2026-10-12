@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T15:36:46+00:00",
+  "generatedAt": "2026-10-12T21:26:22+00:00",
   "mihon": [
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.amangaplanet",
@@ -80,12 +80,6 @@
       "domain": "mangtto.com"
     },
     {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.mikrokosmosfansub",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/4217666-2/tachiyomi-tr.mikrokosmosfansub-v1.6.16.apk",
-      "version": "1.6.16",
-      "domain": "mikrokosmosfb.blogspot.com"
-    },
-    {
       "pkg": "eu.kanade.tachiyomi.extension.tr.moondaisyscans",
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d0c0864/tachiyomi-tr.moondaisyscans-v1.6.6.apk",
       "version": "1.6.6",
@@ -96,6 +90,12 @@
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d0c0864/tachiyomi-tr.koreliscans-v1.6.19.apk",
       "version": "1.6.19",
       "domain": "nabicix.com"
+    },
+    {
+      "pkg": "eu.kanade.tachiyomi.extension.tr.nemesisscans",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d0c0864/tachiyomi-tr.nemesisscans-v1.6.0.apk",
+      "version": "1.6.0",
+      "domain": "nemesisscans.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.nirvanamanga",
@@ -250,12 +250,6 @@
       "lang": "tr"
     },
     {
-      "parser": "MIKROKOSMOSFB",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/zeistmanga/tr/Mikrokosmosfb.kt",
-      "domain": "mikrokosmosfb.blogspot.com",
-      "lang": "tr"
-    },
-    {
       "parser": "NIRVANAMANGA",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/NirvanaManga.kt",
       "domain": "nirvanamanga.com",
@@ -395,6 +389,13 @@
       "label": "published_via_alternative"
     },
     {
+      "id": "mikrokosmosfb.blogspot.com",
+      "domain": "google.com",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
       "id": "moondaisyscans.biz",
       "domain": "moondaisyscans.pro",
       "how": "same_key",
@@ -416,10 +417,24 @@
       "label": "published_via_alternative"
     },
     {
+      "id": "shadowceviri.blogspot.com",
+      "domain": "google.com",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
       "id": "siyahmelek.org",
       "domain": "siyahmelek.fun",
       "how": "same_key",
       "confidence": "medium",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "snscoeurturkey.blogspot.com",
+      "domain": "google.com",
+      "how": "moved_to",
+      "confidence": "high",
       "label": "published_via_alternative"
     },
     {
