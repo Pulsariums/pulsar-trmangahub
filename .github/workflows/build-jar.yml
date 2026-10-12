@@ -1,0 +1,179 @@
+name: 'Jar derle: Türkçe Kototoro eklentisi'
+
+on:
+  schedule:
+    - cron: '47 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Seçim modu: alive (yayındaki/çalışan) veya all_tr (tüm TR kaynaklar)'
+        type: choice
+        options: ['alive', 'all_tr']
+        default: 'alive'
+      include_broken:
+        description: 'Bozuk (broken) kaynakları da dahil et'
+        type: boolean
+        default: false
+      apply_alternatives:
+        description: 'Alternatif domain yaması güven seviyesi'
+        type: choice
+        options: ['off', 'high', 'high_medium']
+        default: 'high'
+      force:
+        description: 'Parmak izi aynı olsa da derle'
+        type: boolean
+        default: false
+      publish:
+        description: 'Derlemeyi repo dalına commit edip gönder'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-tr-sources
+  cancel-in-progress: false
+
+jobs:
+  jar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      MODE: ${{ inputs.mode || 'alive' }}
+      INCLUDE_BROKEN: ${{ inputs.include_broken && '1' || '0' }}
+      APPLY_ALTERNATIVES: ${{ inputs.apply_alternatives || 'high' }}
+      FORCE: ${{ inputs.force && '1' || '0' }}
+      PUBLISH: ${{ inputs.publish || github.event_name == 'schedule' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - uses: actions/checkout@v4
+        with:
+          repository: Kotatsu-Redo/kotatsu-parsers-redo
+          path: upstream
+
+      - name: 'Hazırla: yama, seçim ve domain onarımı'
+        run: |
+          python scripts/jar_prepare.py \
+            --upstream upstream \
+            --sources sources/tr/sources.json \
+            --mode "$MODE" \
+            --include-broken "$INCLUDE_BROKEN" \
+            --apply-alternatives "$APPLY_ALTERNATIVES" \
+            --report data/jar_prepare.json
+
+      - name: 'Karar ver: derleme gerekiyor mu'
+        id: decide
+        run: |
+          python scripts/jar_publish.py decide \
+            --upstream upstream \
+            --prepare data/jar_prepare.json \
+            --info repo/build_info.json \
+            --force "$FORCE"
+
+      - name: JDK 17
+        if: steps.decide.outputs.build == 'true'
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Derle (yedek yol dahil)
+        id: build
+        if: steps.decide.outputs.build == 'true'
+        run: |
+          if (cd upstream && chmod +x gradlew && ./gradlew jar --no-daemon); then
+            echo "Derleme başarılı."
+            echo "fallback=0" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::Derleme başarısız; yalnızca yamalarla yedek yol deneniyor."
+            rm -rf upstream
+            git clone --depth 1 https://github.com/Kotatsu-Redo/kotatsu-parsers-redo.git upstream
+            python scripts/jar_prepare.py --upstream upstream --patch-only
+            (cd upstream && chmod +x gradlew && ./gradlew jar --no-daemon)
+            echo "fallback=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: D8 ile dex üret ve plugin.jar paketle
+        if: steps.decide.outputs.build == 'true'
+        run: |
+          if [ -z "${ANDROID_HOME:-}" ]; then
+            echo "::error::ANDROID_HOME tanımlı değil"
+            exit 1
+          fi
+          BUILD_TOOLS_DIR=$(ls -d "$ANDROID_HOME"/build-tools/* | tail -1)
+          D8_PATH="$BUILD_TOOLS_DIR/d8"
+          ANDROID_JAR="$ANDROID_HOME/platforms/android-34/android.jar"
+          if [ ! -f "$ANDROID_JAR" ]; then
+            echo "::error::android.jar bulunamadı: $ANDROID_JAR"
+            exit 1
+          fi
+          mkdir -p dex
+          "$D8_PATH" --release --lib "$ANDROID_JAR" --output dex upstream/build/libs/*.jar
+          (cd dex && jar cvf ../plugin.jar classes.dex)
+
+      - name: Dizini ve repo klasörünü yaz
+        if: steps.decide.outputs.build == 'true'
+        env:
+          FALLBACK: ${{ steps.build.outputs.fallback || '0' }}
+        run: |
+          python scripts/jar_publish.py index \
+            --prepare data/jar_prepare.json \
+            --jar plugin.jar \
+            --out repo \
+            --run-number "${{ github.run_number }}" \
+            --fallback "$FALLBACK" \
+            --sources sources/tr/sources.json
+
+      - name: Repo klasörünü dala gönder
+        if: steps.decide.outputs.build == 'true' && env.PUBLISH == 'true'
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "pulsar-trmangahub-bot"
+          git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
+          git add repo
+          if git diff --cached --quiet; then
+            echo "Değişiklik yok, commit atılmadı."
+            exit 0
+          fi
+          git commit -m "chore(jar): Türkçe eklenti güncellendi"
+          for i in 1 2 3; do
+            git pull --rebase origin "${BRANCH}" && git push origin "HEAD:${BRANCH}" && exit 0
+            sleep $((i*5))
+          done
+          echo "Push başarısız oldu" >&2
+          exit 1
+
+      - name: Jar raporu
+        if: always()
+        env:
+          JAR_BUILD: ${{ steps.decide.outputs.build }}
+          JAR_REASON: ${{ steps.decide.outputs.reason }}
+          JAR_BUILD_OUTCOME: ${{ steps.build.outcome }}
+          JAR_FALLBACK: ${{ steps.build.outputs.fallback }}
+          JAR_MODE: ${{ env.MODE }}
+          JAR_INCLUDE_BROKEN: ${{ env.INCLUDE_BROKEN }}
+          JAR_APPLY_ALTERNATIVES: ${{ env.APPLY_ALTERNATIVES }}
+          JAR_FORCE: ${{ env.FORCE }}
+          JAR_PUBLISH: ${{ env.PUBLISH }}
+        run: python scripts/report.py jar
+
+      - name: Artefaktları yükle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jar-build
+          path: |
+            plugin.jar
+            data/jar_prepare.json
+          retention-days: 7
+          if-no-files-found: ignore

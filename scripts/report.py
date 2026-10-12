@@ -253,7 +253,108 @@ def add_section(_args=None):
     return lines + table(["Alan", "Değer"], rows) + [""]
 
 
-SECTIONS = {"sync": sync_section, "health": health_section, "add": add_section}
+JAR_PREPARE_PATH = os.path.join(BASE_DIR, "data", "jar_prepare.json")
+JAR_INFO_PATH = os.path.join(BASE_DIR, "repo", "build_info.json")
+JAR_ROWS = 150
+JAR_ENV_SETTINGS = (("JAR_MODE", "Mod"), ("JAR_INCLUDE_BROKEN", "Bozuk kaynaklar dahil"),
+                    ("JAR_APPLY_ALTERNATIVES", "Alternatif domain politikası"),
+                    ("JAR_FORCE", "Zorunlu derleme"), ("JAR_PUBLISH", "Yayınla"))
+
+
+def env_text(name):
+    return os.environ.get(name, "").strip()
+
+
+def jar_decision_text():
+    build = env_text("JAR_BUILD")
+    reason = env_text("JAR_REASON") or "neden yok"
+    outcome = env_text("JAR_BUILD_OUTCOME")
+    if outcome == "failure":
+        return "⛔ Derleme başarısız"
+    if build == "true":
+        return f"✅ Derlendi ({reason})"
+    if build == "false":
+        return f"⏭️ Atlandı ({reason})"
+    return "⛔ Karar verilemedi (hazırlık adımı çalışmadı)"
+
+
+def jar_section(_args=None):
+    prep = load_json(JAR_PREPARE_PATH)
+    info = load_json(JAR_INFO_PATH)
+    sources = load_json(SOURCES_PATH)
+    entries = (sources or {}).get("sources") or []
+    lines = ["## Jar derleme raporu", "", "### Karar", "", jar_decision_text(), ""]
+
+    if env_text("JAR_FALLBACK") == "1":
+        lines += ["> ⚠️ **Yedek yol kullanıldı**: upstream derlemesi başarısız oldu; eklenti "
+                  "yalnızca yamalarla, seçim ve silme uygulanmadan derlendi.", ""]
+
+    lines += ["### Ayarlar", ""]
+    lines += table(["Ayar", "Değer"], [(label, env_text(name) or "(ayarlı değil)")
+                                      for name, label in JAR_ENV_SETTINGS])
+    lines.append("")
+
+    lines += ["### Upstream", ""]
+    lines += table(["Alan", "Değer"], [("Commit", (prep or {}).get("upstream_commit") or "(bilinmiyor)")])
+    lines.append("")
+
+    lines += ["### Sayılar", ""]
+    if prep is None:
+        lines += ["data/jar_prepare.json yok.", ""]
+    else:
+        counts = prep.get("counts") or {}
+        rows = [("Tutulan kimlik", counts.get("kept", 0)),
+                ("Silinen kimlik", counts.get("removed_ids", 0)),
+                ("Silinen dosya", counts.get("deleted_files", 0)),
+                ("Kurtarılan dosya", counts.get("rescued_files", 0)),
+                ("Domain yaması", counts.get("patched_domains", 0)),
+                ("Domain yaması başarısız", counts.get("patch_failed", 0))]
+        lines += table(["Ölçüt", "Adet"], rows) + [""]
+
+        lines += ["### Domain yamaları", ""]
+        lines += table_or(["Kimlik", "Eski domain", "Yeni domain", "Güven"],
+                          [(p.get("id"), p.get("old"), p.get("new"), p.get("confidence"))
+                           for p in prep.get("patched_domains") or []], "Domain yaması yok.")
+        lines.append("")
+
+    lines += ["### Jar", ""]
+    if info is None:
+        lines += ["repo/build_info.json yok.", ""]
+    else:
+        lines += table(["Alan", "Değer"], [
+            ("Boyut (bayt)", info.get("jarBytes")), ("sha256", info.get("jarSha256")),
+            ("Derleme zamanı (UTC)", info.get("builtAt")), ("Çalıştırma no", info.get("runNumber")),
+        ]) + [""]
+
+    lines += ["### Tutulan kaynaklar", ""]
+    if sources is None:
+        lines += ["sources.json okunamadı.", ""]
+    else:
+        patched_new = {p.get("id"): p.get("new") for p in (prep or {}).get("patched_domains") or []}
+        by_parser = {}
+        for entry in entries:
+            parser = ((entry.get("formats") or {}).get("jar") or {}).get("parser")
+            if parser:
+                by_parser.setdefault(parser, entry)
+        kept = sorted((prep or {}).get("kept_ids") or [])
+        rows = []
+        for pid in kept[:JAR_ROWS]:
+            entry = by_parser.get(pid, {})
+            domain = patched_new.get(pid) or entry.get("domain")
+            rows.append((pid, entry.get("name"), domain, entry.get("status")))
+        lines += table_or(["Kimlik", "Ad", "Domain", "Durum"], rows, "Tutulan kaynak yok.")
+        if len(kept) > JAR_ROWS:
+            lines += ["", f"Toplam {len(kept)} kaynaktan ilk {JAR_ROWS} tanesi gösteriliyor."]
+        lines.append("")
+
+    lines += ["### Kototoro'ya ekleme", "",
+              "1. Ayarlar → İçerik Kaynakları → Eklentiler → JAR Depoları → Depo ekle yolunu izleyin.",
+              f"2. Adres: `https://raw.githubusercontent.com/{env_text('GITHUB_REPOSITORY') or '<GITHUB_REPOSITORY>'}/main/repo`",
+              "3. Depo özel iken adres çalışmaz; depo herkese açık olduğunda çalışır.", ""]
+    return lines
+
+
+SECTIONS = {"sync": sync_section, "health": health_section, "add": add_section, "jar": jar_section}
 
 
 def main(argv=None):

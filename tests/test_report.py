@@ -51,6 +51,8 @@ class SectionTests(unittest.TestCase):
             "SOURCES_PATH": os.path.join(self.dir, "sources.json"),
             "REPORT_PATH": os.path.join(self.dir, "REPORT.md"),
             "ANALYZE_PATH": os.path.join(self.dir, "analyze.json"),
+            "JAR_PREPARE_PATH": os.path.join(self.dir, "jar_prepare.json"),
+            "JAR_INFO_PATH": os.path.join(self.dir, "build_info.json"),
         }
         for name, path in self.paths.items():
             patcher = mock.patch.object(report, name, path)
@@ -173,6 +175,48 @@ class SectionTests(unittest.TestCase):
         self.assertNotIn("Upstream'de zaten var", out)
         self.assertIn("Dosya üretilmedi.", out)
         self.assertIn("Adım yok.", out)
+
+    def test_jar_section_with_build_and_fallback(self):
+        write(self.paths["SOURCES_PATH"], {"sources": [
+            {"id": "a.com", "name": "A", "domain": "a.com", "status": "published",
+             "formats": {"jar": {"parser": "AONE"}}},
+            {"id": "b.com", "name": "B", "domain": "old.b", "status": "quarantined",
+             "formats": {"jar": {"parser": "BTWO"}}},
+        ]})
+        write(self.paths["JAR_PREPARE_PATH"], {
+            "upstream_commit": "abc123", "kept_ids": ["AONE", "BTWO"],
+            "patched_domains": [{"id": "BTWO", "old": "old.b", "new": "new.b", "confidence": "high"}],
+            "counts": {"kept": 2, "removed_ids": 3, "deleted_files": 4, "rescued_files": 1,
+                       "patched_domains": 1, "patch_failed": 0}})
+        write(self.paths["JAR_INFO_PATH"], {"jarBytes": 1234, "jarSha256": "ff00",
+                                                "builtAt": "2026-10-12T00:00:00Z", "runNumber": 7})
+        env = {"JAR_BUILD": "true", "JAR_REASON": "parmak izi değişti", "JAR_BUILD_OUTCOME": "success",
+               "JAR_FALLBACK": "1", "JAR_MODE": "alive", "GITHUB_REPOSITORY": "o/r"}
+        out = self.run_main(["jar"], env)
+        self.assertIn("## Jar derleme raporu", out)
+        self.assertIn("✅ Derlendi (parmak izi değişti)", out)
+        self.assertIn("> ⚠️ **Yedek yol kullanıldı**", out)
+        self.assertIn("| Mod | alive |", out)
+        self.assertIn("| Commit | abc123 |", out)
+        self.assertIn("| Domain yaması | 1 |", out)
+        self.assertIn("| old.b | new.b | high |", out)
+        self.assertIn("| sha256 | ff00 |", out)
+        self.assertIn("| BTWO | B | new.b | quarantined |", out)
+        self.assertIn("https://raw.githubusercontent.com/o/r/main/repo", out)
+
+    def test_jar_section_missing_files_does_not_crash(self):
+        out = self.run_main(["jar"], {"JAR_BUILD": "false", "JAR_REASON": "parmak izi aynı, atlandı"})
+        self.assertIn("⏭️ Atlandı (parmak izi aynı, atlandı)", out)
+        self.assertIn("data/jar_prepare.json yok.", out)
+        self.assertIn("repo/build_info.json yok.", out)
+        self.assertIn("sources.json okunamadı.", out)
+        self.assertNotIn("Yedek yol", out)
+
+    def test_jar_section_build_failure_and_missing_decision(self):
+        out = self.run_main(["jar"], {"JAR_BUILD_OUTCOME": "failure", "JAR_BUILD": "true"})
+        self.assertIn("⛔ Derleme başarısız", out)
+        out = self.run_main(["jar"], {})
+        self.assertIn("⛔ Karar verilemedi", out)
 
 
 if __name__ == "__main__":

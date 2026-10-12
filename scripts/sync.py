@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Collect Turkish manga sources from Mihon (keiyoushi), Kotatsu (kotatsu-parsers) and
+"""Collect Turkish manga sources from Mihon (keiyoushi), Kotatsu (kotatsu-parsers-redo) and
 Nyora (nyora-data-driven) and merge them into data/upstream_tr.json.
 
 An upstream that cannot be reached is reported in meta.errors and skipped; the
@@ -28,7 +28,7 @@ CUSTOM_PATH = os.path.join(BASE_DIR, "sources", "custom", "sources.json")
 MIHON_INDEX_URL = "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json"
 NYORA_CATALOG_URL = "https://raw.githubusercontent.com/Nyora-Manga/nyora-data-driven/main/catalogue.json"
 NYORA_LIVENESS_URL = "https://raw.githubusercontent.com/Nyora-Manga/nyora-data-driven/main/liveness.json"
-KOTATSU_REPO_URL = "https://github.com/KotatsuApp/kotatsu-parsers.git"
+KOTATSU_REPO_URL = "https://github.com/Kotatsu-Redo/kotatsu-parsers-redo.git"
 MIHON_TR_PREFIX = "eu.kanade.tachiyomi.extension.tr."
 
 HTTP_TIMEOUT = 60
@@ -141,7 +141,7 @@ def parse_mihon(index):
 # ---------------------------------------------------------------- Kotatsu
 
 def ensure_kotatsu_repo(refresh):
-    path = os.path.join(CACHE_DIR, "kotatsu-parsers")
+    path = os.path.join(CACHE_DIR, "kotatsu-parsers-redo")
     if refresh and os.path.isdir(path):
         shutil.rmtree(path)
     if not os.path.isdir(os.path.join(path, ".git")):
@@ -353,7 +353,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description="Sync Turkish manga sources from upstream repos.")
     parser.add_argument("--out", default=OUT_PATH)
     parser.add_argument("--refresh-kotatsu", action="store_true",
-                        help="delete the cached kotatsu-parsers clone and clone again")
+                        help="delete the cached kotatsu-parsers-redo clone and clone again")
     args = parser.parse_args(argv)
 
     errors = []
