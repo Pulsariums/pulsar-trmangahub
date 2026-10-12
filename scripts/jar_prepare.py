@@ -89,6 +89,28 @@ def apply_patches(upstream):
         write_text(path, text.replace(old, new))
 
 
+OVERRIDES_DIR = os.path.join(BASE_DIR, "overrides")
+
+
+def apply_overrides(upstream):
+    """overrides/<upstream içi yol> altındaki dosyalar upstream'deki aynı yolun yerine geçer (onarılmış parserlar)."""
+    applied = []
+    if not os.path.isdir(OVERRIDES_DIR):
+        return applied
+    for root, _dirs, names in os.walk(OVERRIDES_DIR):
+        for name in sorted(names):
+            if not name.endswith(".kt"):
+                continue
+            src = os.path.join(root, name)
+            rel = os.path.relpath(src, OVERRIDES_DIR)
+            dest = os.path.join(upstream, rel)
+            if not os.path.isfile(dest):
+                fail(f"override hedefi upstream'de yok (dosya taşınmış/silinmiş): {rel}")
+            write_text(dest, read_text(src))
+            applied.append(rel.replace(os.sep, "/"))
+    return applied
+
+
 def scan_annotated(upstream):
     """Return [{rel, path, text, anns: [{id, lang, broken_src}]}] for files with @MangaSourceParser."""
     files = []
@@ -372,6 +394,7 @@ def main(argv=None):
         fail(f"upstream klasörü yok: {upstream}")
 
     apply_patches(upstream)
+    overrides = apply_overrides(upstream)
     exclude = parse_list(args.exclude_lang)
     if args.patch_only:
         # Fallback build: no selection or deletion, but ozel extras are still copied in.
@@ -416,6 +439,7 @@ def main(argv=None):
         "removed_ids": sorted(all_ids - kept),
         "rescued_files": rescued,
         "pruned_refs": pruned_refs,
+        "overrides": overrides,
         "patched_domains": patched,
         "patch_failed": patch_failed,
         "counts": {
