@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T10:00:53+00:00",
+  "generatedAt": "2026-10-12T10:35:14+00:00",
   "mihon": [
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.afroditscans",
@@ -74,12 +74,6 @@
       "domain": "ghostoon.com"
     },
     {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.golgebahcesi",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b5d2cd5/tachiyomi-tr.golgebahcesi-v1.6.0.apk",
-      "version": "1.6.0",
-      "domain": "golgebahcesi.com"
-    },
-    {
       "pkg": "eu.kanade.tachiyomi.extension.tr.hattorimanga",
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/8ef06cd-2/tachiyomi-tr.hattorimanga-v1.4.44.apk",
       "version": "1.4.44",
@@ -132,6 +126,12 @@
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/06f6d69/tachiyomi-tr.limonmanga-v1.6.6.apk",
       "version": "1.6.6",
       "domain": "limonmanga.com"
+    },
+    {
+      "pkg": "eu.kanade.tachiyomi.extension.tr.mangatr",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/4217666-2/tachiyomi-tr.mangatr-v1.6.24.apk",
+      "version": "1.6.24",
+      "domain": "manga-tr.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.araznovel",
@@ -284,12 +284,6 @@
       "domain": "ragnarscans.net"
     },
     {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.raindropfansub",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d0c0864/tachiyomi-tr.raindropfansub-v1.6.0.apk",
-      "version": "1.6.0",
-      "domain": "raindropteamfan.com"
-    },
-    {
       "pkg": "eu.kanade.tachiyomi.extension.tr.ruyamanga",
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.ruyamanga-v1.6.60.apk",
       "version": "1.6.60",
@@ -432,11 +426,6 @@
       "domain": "arcurafansub.com"
     },
     {
-      "parser": "ATHENAMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/AthenaManga.kt",
-      "domain": "athenamanga.com"
-    },
-    {
       "parser": "DIAMONDFANSUB",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/DiamondFansub.kt",
       "domain": "diamondfansub.com"
@@ -462,11 +451,6 @@
       "domain": "garciamanga.com"
     },
     {
-      "parser": "GOLGEBAHCESI",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/Golgebahcesi.kt",
-      "domain": "golgebahcesi.com"
-    },
-    {
       "parser": "KUROIMANGA",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/KuroiManga.kt",
       "domain": "kuroimanga.com"
@@ -480,11 +464,6 @@
       "parser": "MANGA_DENIZI",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mmrcms/tr/MangaDenizi.kt",
       "domain": "mangadenizi.net"
-    },
-    {
-      "parser": "ATIKROST",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Atikrost.kt",
-      "domain": "mangaoku.org"
     },
     {
       "parser": "MANGARUHU",
@@ -504,12 +483,7 @@
     {
       "parser": "MERLINSCANS",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MerlinScans.kt",
-      "domain": "merlinscans.com"
-    },
-    {
-      "parser": "MUGIMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/MugiManga.kt",
-      "domain": "mugimanga.com"
+      "domain": "merlintoon.com"
     },
     {
       "parser": "NIRVANAMANGA",
@@ -532,11 +506,6 @@
       "domain": "ragnarscans.com"
     },
     {
-      "parser": "RAINDROPTEAMFAN",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/Raindropteamfan.kt",
-      "domain": "raindropteamfan.com"
-    },
-    {
       "parser": "RUYAMANGA",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/RuyaManga.kt",
       "domain": "ruyamanga.net"
@@ -547,19 +516,9 @@
       "domain": "sadscans.com"
     },
     {
-      "parser": "SARCASMSCANS",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/SarcasmScans.kt",
-      "domain": "sarcasmscans.com"
-    },
-    {
       "parser": "SEREINSCAN",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/SereinScan.kt",
       "domain": "sereinscan.com"
-    },
-    {
-      "parser": "SUMMERTOON",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/SummerToon.kt",
-      "domain": "summertoon.co"
     },
     {
       "parser": "TAROTSCANS",
@@ -680,8 +639,29 @@
       "label": "published_via_alternative"
     },
     {
+      "id": "mangaoku.com.tr",
+      "domain": "mangaoku.org",
+      "how": "same_key",
+      "confidence": "medium",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "mangaoku.org",
+      "domain": "mangaoku.com.tr",
+      "how": "moved_to",
+      "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
       "id": "mangatilkisi.net",
       "domain": "tilkiscans.com",
+      "how": "same_key",
+      "confidence": "medium",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "mangatr.app",
+      "domain": "manga-tr.com",
       "how": "same_key",
       "confidence": "medium",
       "label": "published_via_alternative"
@@ -708,17 +688,17 @@
       "label": "published_via_alternative"
     },
     {
-      "id": "opiatoon.art",
-      "domain": "opiatoon.shop",
+      "id": "nyxscans.com",
+      "domain": "nyxmanga.com",
       "how": "same_key",
       "confidence": "medium",
       "label": "published_via_alternative"
     },
     {
-      "id": "piedpiperfansub.me",
-      "domain": "ww17.piedpiperfansub.me",
-      "how": "moved_to",
-      "confidence": "high",
+      "id": "opiatoon.art",
+      "domain": "opiatoon.shop",
+      "how": "same_key",
+      "confidence": "medium",
       "label": "published_via_alternative"
     },
     {
@@ -740,6 +720,13 @@
       "domain": "google.com",
       "how": "moved_to",
       "confidence": "high",
+      "label": "published_via_alternative"
+    },
+    {
+      "id": "summertoon.co",
+      "domain": "summertoons.net",
+      "how": "same_key",
+      "confidence": "medium",
       "label": "published_via_alternative"
     },
     {
