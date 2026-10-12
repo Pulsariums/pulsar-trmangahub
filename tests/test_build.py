@@ -95,7 +95,7 @@ class StatusRuleTests(unittest.TestCase):
         self.assertTrue(by["blk.tr"]["unverified"])
         self.assertEqual(by["oth.tr"]["status"], "unverified")
 
-    def test_blocked_keeps_previous_published_status(self):
+    def test_blocked_keeps_previous_status_but_is_not_listed(self):
         domains = ["a.tr", "b.tr", "c.tr", "d.tr", "e.tr", "f.tr", "g.tr", "h.tr", "i.tr", "j.tr"]
         sources = [src(d) for d in domains]
         rows = ok_rows(domains[:9]) + [prow("j.tr", "blocked")]
@@ -108,7 +108,7 @@ class StatusRuleTests(unittest.TestCase):
             pub = read_out(tmp, "published.json")
         self.assertEqual(by["j.tr"]["status"], "published")
         self.assertTrue(by["j.tr"]["unverified"])
-        self.assertIn("j.tr", [m["domain"] for m in pub["mihon"]])
+        self.assertNotIn("j.tr", [m["domain"] for m in pub["mihon"]])
 
     def test_domainless_sources_are_not_published_and_are_counted(self):
         sources = [src("a.tr"), {"key": "nodom", "name": "NoDom", "domain": None, "baseUrl": None,
@@ -272,13 +272,13 @@ class FailureToleranceTests(unittest.TestCase):
         self.assertNotIn("failing", by["t.tr"])
         self.assertNotIn("t.tr", [m["domain"] for m in pub["mihon"]])
 
-    def test_published_source_stays_published_while_failing(self):
+    def test_published_source_stays_published_but_not_listed_while_failing(self):
         by, pub, _ = run_build([prow("t.tr", "dead", reason="connect: ConnectionError")],
                                prev_entries=[prev_entry("t.tr", "published", 1)])
         self.assertEqual(by["t.tr"]["status"], "published")
         self.assertTrue(by["t.tr"]["failing"])
         self.assertEqual(by["t.tr"]["consecutiveFailures"], 2)
-        self.assertIn("t.tr", [m["domain"] for m in pub["mihon"]])
+        self.assertNotIn("t.tr", [m["domain"] for m in pub["mihon"]])
 
     def test_cf_protected_published_stays_while_failing(self):
         by, pub, _ = run_build([prow("t.tr", "dead", reason="http 500")],
@@ -368,20 +368,17 @@ class MultilangScopeTests(unittest.TestCase):
 
 
 class OutputTests(unittest.TestCase):
-    def test_mihon_and_jar_sections_list_published_only(self):
+    def test_mihon_and_jar_sections_list_ok_only(self):
         sources = [src("m.tr", mihon=True, jar=False), src("j.tr", mihon=False, jar=True),
-                   src("q.tr", mihon=True, jar=True)]
-        domains = [s["domain"] for s in sources] + [f"z{i}.tr" for i in range(7)]
-        all_sources = sources + [src(d) for d in domains[3:]]
-        rows = [prow("m.tr", "ok", functional=True), prow("j.tr", "dead"), prow("q.tr", "cf_protected")] + \
-               ok_rows(domains[3:])
+                   src("q.tr", mihon=True, jar=True), src("ok.tr", mihon=False, jar=True)]
+        rows = [prow("m.tr", "ok", functional=True), prow("j.tr", "dead"), prow("q.tr", "cf_protected"),
+                prow("ok.tr", "ok", functional=True)]
         with tempfile.TemporaryDirectory() as tmp:
-            make_root(tmp, all_sources, rows)
+            make_root(tmp, sources, rows)
             build.main(["--root", tmp])
             pub = read_out(tmp, "published.json")
-        self.assertEqual(sorted(m["domain"] for m in pub["mihon"] if m["domain"] in ("m.tr", "j.tr", "q.tr")),
-                         ["m.tr", "q.tr"])
-        self.assertEqual([j["domain"] for j in pub["jar"] if j["domain"] in ("m.tr", "j.tr", "q.tr")], ["q.tr"])
+        self.assertEqual([m["domain"] for m in pub["mihon"]], ["m.tr"])
+        self.assertEqual([j["domain"] for j in pub["jar"]], ["ok.tr"])
         self.assertEqual(set(pub["mihon"][0]), {"pkg", "apkUrl", "version", "domain"})
         self.assertEqual(set(pub["jar"][0]), {"parser", "file", "domain"})
 

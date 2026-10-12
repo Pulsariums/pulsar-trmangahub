@@ -47,9 +47,9 @@ class JarPublishTests(unittest.TestCase):
              "formats": {"jar": {"parser": "TRTWO"}}},
         ]})
 
-    def set_prepare(self, commit, kept, patched):
+    def set_prepare(self, commit, kept, patched, include_unverified=False):
         write_json(self.prepare, {"upstream_commit": commit, "kept_ids": kept, "patched_domains": patched,
-                                  "counts": {"kept": len(kept)}})
+                                  "include_unverified": include_unverified, "counts": {"kept": len(kept)}})
 
     def run_main(self, argv, env=None):
         buf = io.StringIO()
@@ -122,11 +122,22 @@ class JarPublishTests(unittest.TestCase):
         self.assertEqual(entry["code"], 12)
         self.assertEqual(entry["apk"], "plugin.jar")
         self.assertEqual(entry["lang"], "tr")
+        self.assertEqual(entry["nsfw"], 0)
+        self.assertEqual(entry["sources"], [{"name": "One", "id": "TRONE", "lang": "tr"}])
+
+    def test_index_lists_failing_source_only_with_include_unverified(self):
+        write_json(self.sources, {"sources": [
+            {"id": "one.tr", "name": "One", "domain": "one.tr", "nsfw": False, "status": "published",
+             "formats": {"jar": {"parser": "TRONE"}}},
+            {"id": "two.tr", "name": "Two", "domain": "two.tr", "nsfw": True, "status": "failing",
+             "failing": True, "formats": {"jar": {"parser": "TRTWO"}}},
+        ]})
+        self.set_prepare(commit="c1", kept=["TRTWO", "TRONE"], patched=[], include_unverified=True)
+        self.index()
+        with open(os.path.join(self.repo, "index.min.json"), encoding="utf-8") as fh:
+            entry = json.load(fh)[0]
         self.assertEqual(entry["nsfw"], 1)
-        self.assertEqual(entry["sources"], [
-            {"name": "One", "id": "TRONE", "lang": "tr"},
-            {"name": "Two", "id": "TRTWO", "lang": "tr"},
-        ])
+        self.assertEqual([s["id"] for s in entry["sources"]], ["TRONE", "TRTWO"])
 
     def test_index_nsfw_zero_without_nsfw_sources(self):
         self.set_prepare(commit="c1", kept=["TRONE"], patched=[])

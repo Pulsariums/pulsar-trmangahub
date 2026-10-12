@@ -16,6 +16,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import jar_prepare  # noqa: E402
+import rules  # noqa: E402
 
 PKG = "org.pulsarium.trmangahub"
 NAME = "Pulsar TR Manga Hub"
@@ -137,10 +138,13 @@ def cmd_index(args):
     shutil.copyfile(args.jar, dest)
 
     by_parser = jar_prepare.load_sources(args.sources)
+    include_unverified = bool(prep.get("include_unverified"))
     sources = []
     nsfw = 0
     for pid in kept:
-        entries = by_parser.get(pid, [])
+        entries = [e for e in by_parser.get(pid, []) if rules.is_publishable(e, include_unverified)]
+        if not entries:
+            continue
         if any(e.get("nsfw") for e in entries):
             nsfw = 1
         name = entries[0].get("name") if entries and entries[0].get("name") else pid

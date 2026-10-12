@@ -73,11 +73,11 @@ def source(sid, parser, status, scope="tr_native", broken=False, failing=None, a
 SOURCES = [
     source("trone", "TRONE", "published"),
     source("trtwo", "TRTWO", "quarantined"),
-    source("trthree", "TRTHREE", "quarantined", domain="oldthree.tr",
+    source("trthree", "TRTHREE", "failing", domain="oldthree.tr", failing=True,
            alt={"domain": "newthree.tr", "how": "same_key", "confidence": "high"}),
     source("trlow", "TRLOW", "quarantined", domain="lowold.tr",
            alt={"domain": "lownew.tr", "how": "similar_key", "confidence": "low"}),
-    source("trnolit", "TRNOLIT", "quarantined", domain="nolit.tr",
+    source("trnolit", "TRNOLIT", "failing", failing=True, domain="nolit.tr",
            alt={"domain": "nolitnew.tr", "how": "same_key", "confidence": "high"}),
     source("mangaball", "MANGABALL", "published"),
     source("trannbroken", "TRANNBROKEN", "published"),
@@ -158,11 +158,13 @@ class JarPrepareTests(unittest.TestCase):
         self.assertTrue(self.exists(os.path.join(SITE, "madara", "tr", "TrOne.kt")))
         self.assertFalse(self.exists(os.path.join(SITE, "en", "EnOne.kt")))
 
-    def test_alive_keeps_failing_flagged_source(self):
-        self.write_upstream({**FILES, os.path.join(SITE, "madara", "tr", "TrFailing.kt"):
-                             '@MangaSourceParser("TRFAILING", "TrFailing", "tr")\nclass TrFailing\n'})
-        report = self.run_prepare()
-        self.assertIn("TRFAILING", report["kept_ids"])
+    def test_failing_source_needs_include_unverified(self):
+        extra = {os.path.join(SITE, "madara", "tr", "TrFailing.kt"):
+                 '@MangaSourceParser("TRFAILING", "TrFailing", "tr")\nclass TrFailing\n'}
+        self.write_upstream({**FILES, **extra})
+        self.assertNotIn("TRFAILING", self.run_prepare()["kept_ids"])
+        self.write_upstream({**FILES, **extra})
+        self.assertIn("TRFAILING", self.run_prepare("--include-unverified", "1")["kept_ids"])
 
     def test_dependency_closure_rescues_base_class(self):
         report = self.run_prepare()
@@ -187,8 +189,14 @@ class JarPrepareTests(unittest.TestCase):
         self.assertIn("MANGABALL", report["kept_ids"])
         self.assertIn("MANGABALLEN", report["removed_ids"])
 
-    def test_domain_patch_high_is_applied(self):
+    def test_default_gate_skips_failing_alternative(self):
         report = self.run_prepare()
+        self.assertNotIn("TRTHREE", report["kept_ids"])
+        self.assertEqual(report["patched_domains"], [])
+        self.assertFalse(self.exists(os.path.join(SITE, "madara", "tr", "TrThree.kt")))
+
+    def test_domain_patch_high_is_applied(self):
+        report = self.run_prepare("--include-unverified", "1")
         text = self.read(os.path.join(SITE, "madara", "tr", "TrThree.kt"))
         self.assertIn('"newthree.tr"', text)
         self.assertNotIn("oldthree.tr", text)
@@ -204,30 +212,27 @@ class JarPrepareTests(unittest.TestCase):
         self.assertNotIn("TRLOW", [p["id"] for p in report["patch_failed"]])
 
     def test_domain_patch_medium_needs_high_medium(self):
-        self.write_sources([s if s["formats"]["jar"]["parser"] != "TRTHREE" else
-                            source("trthree", "TRTHREE", "quarantined", domain="oldthree.tr",
-                                   alt={"domain": "newthree.tr", "how": "same_key",
-                                        "confidence": "medium"})
-                            for s in SOURCES])
-        report = self.run_prepare("--apply-alternatives", "high")
-        self.assertNotIn("TRTHREE", report["kept_ids"])
-        self.write_upstream(FILES)
-        self.write_sources([s if s["formats"]["jar"]["parser"] != "TRTHREE" else
-                            source("trthree", "TRTHREE", "quarantined", domain="oldthree.tr",
-                                   alt={"domain": "newthree.tr", "how": "same_key",
-                                        "confidence": "medium"})
-                            for s in SOURCES])
-        report = self.run_prepare("--apply-alternatives", "high_medium")
+        medium = [s if s["formats"]["jar"]["parser"] != "TRTHREE" else
+                  source("trthree", "TRTHREE", "failing", domain="oldthree.tr", failing=True,
+                         alt={"domain": "newthree.tr", "how": "same_key", "confidence": "medium"})
+                  for s in SOURCES]
+        self.write_sources(medium)
+        report = self.run_prepare("--include-unverified", "1", "--apply-alternatives", "high")
         self.assertIn("TRTHREE", report["kept_ids"])
+        self.assertEqual(report["patched_domains"], [])
+        self.assertIn("oldthree.tr", self.read(os.path.join(SITE, "madara", "tr", "TrThree.kt")))
+        self.write_upstream(FILES)
+        self.write_sources(medium)
+        report = self.run_prepare("--include-unverified", "1", "--apply-alternatives", "high_medium")
+        self.assertEqual([p["id"] for p in report["patched_domains"]], ["TRTHREE"])
 
     def test_alternatives_off_disables_patching(self):
-        report = self.run_prepare("--apply-alternatives", "off")
+        report = self.run_prepare("--include-unverified", "1", "--apply-alternatives", "off")
         self.assertEqual(report["patched_domains"], [])
-        self.assertNotIn("TRTHREE", report["kept_ids"])
-        self.assertFalse(self.exists(os.path.join(SITE, "madara", "tr", "TrThree.kt")))
+        self.assertIn("oldthree.tr", self.read(os.path.join(SITE, "madara", "tr", "TrThree.kt")))
 
     def test_missing_literal_is_patch_failed(self):
-        report = self.run_prepare()
+        report = self.run_prepare("--include-unverified", "1")
         self.assertEqual([p["id"] for p in report["patch_failed"]], ["TRNOLIT"])
         self.assertNotIn("TRNOLIT", report["kept_ids"])
         self.assertFalse(self.exists(os.path.join(SITE, "madara", "tr", "TrNoLit.kt")))
@@ -241,13 +246,15 @@ class JarPrepareTests(unittest.TestCase):
         self.assertIn("TRSRCBROKEN", report["kept_ids"])
         self.assertIn("TRANNBROKEN", report["kept_ids"])
 
-    def test_all_tr_keeps_every_tr_locale_parser(self):
-        report = self.run_prepare("--mode", "all_tr")
-        self.assertIn("TRTWO", report["kept_ids"])
-        self.assertIn("TRLOW", report["kept_ids"])
+    def test_all_tr_limits_to_tr_locale_and_gate(self):
+        self.write_upstream({**FILES, os.path.join(SITE, "madara", "tr", "TrFailing.kt"):
+                             '@MangaSourceParser("TRFAILING", "TrFailing", "tr")\nclass TrFailing\n'})
+        report = self.run_prepare("--mode", "all_tr", "--include-unverified", "1")
+        self.assertIn("TRFAILING", report["kept_ids"])
+        self.assertIn("TRONE", report["kept_ids"])
+        self.assertNotIn("TRTWO", report["kept_ids"])
         self.assertNotIn("ENONE", report["kept_ids"])
-        self.assertNotIn("ENBASE", report["kept_ids"])
-        self.assertTrue(self.exists(os.path.join(SITE, "madara", "tr", "TrTwo.kt")))
+        self.assertTrue(self.exists(os.path.join(SITE, "madara", "tr", "TrFailing.kt")))
 
     def test_patch_only_applies_patches_and_nothing_else(self):
         self.assertEqual(jar_prepare.main(["--upstream", self.upstream, "--patch-only"]), 0)
@@ -266,7 +273,7 @@ class JarPrepareTests(unittest.TestCase):
         self.assertEqual(cm.exception.code, 2)
 
     def test_report_counts(self):
-        report = self.run_prepare()
+        report = self.run_prepare("--include-unverified", "1")
         counts = report["counts"]
         self.assertEqual(counts["patches"], 5)
         self.assertEqual(counts["patched_domains"], 1)
@@ -275,6 +282,7 @@ class JarPrepareTests(unittest.TestCase):
         self.assertEqual(counts["rescued_files"], 1)
         self.assertIn("upstream_commit", report)
         self.assertEqual(report["mode"], "alive")
+        self.assertTrue(report["include_unverified"])
 
 
 if __name__ == "__main__":

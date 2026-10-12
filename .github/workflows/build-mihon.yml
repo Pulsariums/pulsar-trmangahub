@@ -9,6 +9,10 @@ on:
         description: 'Aynayı repo-mihon klasörüne commit edip gönder'
         type: boolean
         default: true
+      include_unverified:
+        description: 'cf_protected, failing ve doğrulanamamış kaynakları da dahil et (varsayılan: yalnızca çalışanlar)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -23,6 +27,7 @@ jobs:
     timeout-minutes: 30
     env:
       PUBLISH: ${{ inputs.publish || github.event_name == 'schedule' }}
+      INCLUDE_UNVERIFIED: ${{ inputs.include_unverified && '1' || '0' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -31,7 +36,10 @@ jobs:
           python-version: '3.12'
 
       - name: 'Türkçe Mihon APK''lerini aynala'
-        run: python3 -I scripts/mihon_publish.py
+        run: |
+          ARGS=""
+          if [ "$INCLUDE_UNVERIFIED" = "1" ]; then ARGS="--include-unverified"; fi
+          python3 -I scripts/mihon_publish.py $ARGS
 
       - name: Mihon klasörünü dala gönder
         if: env.PUBLISH == 'true'

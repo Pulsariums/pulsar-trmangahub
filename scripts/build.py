@@ -177,9 +177,11 @@ def via_alternative(entries):
 
 
 def published_payload(entries, now):
+    """Default publication list: only rules.is_ok() entries (cf_protected, failing, unverified
+    are left out; the workflows can opt in with include_unverified)."""
     mihon, jar = [], []
     for entry in entries:
-        if entry["status"] not in PUBLISHED_STATUSES:
+        if not rules.is_ok(entry):
             continue
         fm = entry["formats"] or {}
         if fm.get("mihon"):

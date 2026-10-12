@@ -38,7 +38,7 @@ listesini periyodik olarak yenilemek. Ölü veya bozuk kaynaklar yayın listesin
 | `data/alternatives.json` | Kırık domain -> alternatif (veya denenen adaylar) |
 | `data/cache/` | Kotatsu klonu; git'e girmez (.gitignore) |
 | `sources/tr/sources.json` | Tüm kaynaklar, `id` = domain |
-| `sources/tr/published.json` | Yalnızca yayınlananlar: `mihon[]`, `jar[]`, `via_alternative[]` |
+| `sources/tr/published.json` | Yalnızca çalışanlar (status `published`, bayraksız): `mihon[]`, `jar[]`. `via_alternative[]` yalnızca bilgi amaçlıdır, yayına girmez |
 | `sources/tr/REPORT.md` | Özet tablo, alternatifler, bu run'da değişenler |
 
 ## Nasıl çalıştırılır
@@ -62,6 +62,8 @@ deterministik sahte probe verisi üretir; bu veri canlı sonuç değildir.
 |---|---|---|---|
 | `sync.yml` (Senkron: TR kaynaklarını güncelle) | 6 saatte bir, elle | `dry_run` (commit atma), `include_multilang` (tr dışı kaynakları yayınla), `fail_threshold` (1/2/3/5, varsayılan 3), `safety_ratio` (40/60/80/off, varsayılan 40), `run_alternatives` (varsayılan açık), `refresh_kotatsu` (Kotatsu klonunu yenile) | Run özeti (`report.py sync`), `sync-data` artifact'ı (7 gün) |
 | `health-check.yml` (Sağlık kontrolü) | 12 saatte bir, elle | `engine_filter` (all/madara/mangathemesia/initmanga/unknown), `status_filter` (all/published/cf_protected_published/failing/quarantined), `domains` (virgülle; boşsa filtrelere göre) | Run özeti (`report.py health`), `health-data` artifact'ı (7 gün); commit yok |
+| `build-jar.yml` (Jar derle: Türkçe Kototoro eklentisi) | 6 saatte bir, elle | `mode` (alive/all_tr), `include_broken`, `apply_alternatives`, `include_unverified` (varsayılan kapalı: cf_protected, failing ve doğrulanamayanlar da eklenir), `force`, `publish` | `repo/` klasörü (plugin.jar, index.min.json); commit yalnızca derleme yapıldıysa |
+| `build-mihon.yml` (Mihon deposu: Türkçe APK aynası) | 6 saatte bir, elle | `include_unverified` (varsayılan kapalı), `publish` | `repo-mihon/` klasörü (index.min.json, apk/) |
 | `add-source.yml` (Kaynak ekle: site linkinden üret) | elle | `url` (zorunlu), `name` (boşsa domainden), `format` (both/jar/mihon), `engine` (auto/madara/mangathemesia/initmanga/custom), `register` (kaydet ve commit at) | Run özeti (`report.py add`), `generated` artifact'ı (7 gün); `register` açıksa `sources/custom/` ve `generated/` commit'lenir |
 
 Elle çalıştırmada seçilmeyen girdiler varsayılanla çalışır. Zamanlanmış çalıştırmalarda
@@ -100,13 +102,27 @@ başlığı okur, `data/upstream_tr.json` içinde aynı domainin olup olmadığ�
 
 ## Kural tablosu
 
-| Probe durumu | Yayın durumu | Not |
+| Probe durumu | Yayın durumu | Jar ve Mihon'a girer mi |
 |---|---|---|
-| ok, functional != false | `published` | Mihon ve jar listelerine girer |
-| ok, functional == false | `quarantined` | Sayfa açılıyor ama liste bulunamadı |
-| cf_protected | `cf_protected_published` | Erişilebilir, bot korumalı; listelere girer |
-| dead / parked | `quarantined` | Alternatif varsa `alternative` alanı; alternatif `published_via_alternative` olarak `published.json` içinde |
-| blocked / other | önceki durum korunur, `unverified: true` | Bu run'da doğrulanamadı; önceki durum yoksa `unverified` |
+| ok, functional != false | `published` | Evet (yalnızca bu run'da doğrulanmış, bayraksız olanlar) |
+| ok, functional == false | `quarantined` | Hayır |
+| cf_protected | `cf_protected_published` | Hayır (`include_unverified` ile girer) |
+| dead / parked | `quarantined` | Hayır; alternatif varsa `alternative` alanı yalnızca bilgi amaçlıdır |
+| dead, eşik altı (ilk hatalar) | `failing` | Hayır (`include_unverified` ile girer) |
+| blocked / other | önceki durum korunur, `unverified: true` | Hayır (`include_unverified` ile girer) |
+
+Yayın kuralı `scripts/rules.py` içindeki `is_ok()` ve `is_publishable()` ile tanımlıdır ve
+jar (`jar_prepare.py`, `jar_publish.py`) ile Mihon aynası (`mihon_publish.py`) tarafından ortak
+kullanılır. Varsayılanda yalnızca çalışanlar yayınlanır; çok dilli (`scope: multilang`) kaynaklar
+hiçbir zaman yayınlanmaz.
+
+- **Jar**: yalnızca yayınlanabilir kaynakların parser'ları derlenir ve `index.min.json` içindeki
+  `sources` listesine yazılır. Kaynağı kalmayan parser listeye girmez.
+- **Mihon**: bir paketin en az bir kaynağı yayınlanabilirse paket aynalanır. `sources` listesine
+  yalnızca yayınlanabilir kaynaklar (index.json'daki homeUrl domaini eşleşenler) yazılır. Hiçbir
+  kaynağı eşleşmeyen paket dışarıda kalır ve paketin eski APK'sı silinir.
+- `include_unverified` açıldığında cf_protected, failing ve doğrulanamayan kaynaklar da girer.
+  Karantinadaki kaynaklar hiçbir durumda girmez.
 
 Alternatif güven düzeyi: `moved_to` ve `altDomains` = high; aynı key = medium; aynı ad = medium;
 key benzerliği (>= 0.85) = low. Mihon ve jar paketleri eski domaine bağlı kalır; alternatif
@@ -136,4 +152,5 @@ Kototoro ve Mihon'a eklemek için iki adres:
 - Mihon (APK): `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/repo-mihon`
 
 Mihon deposu, `.github/workflows/build-mihon.yml` ile 6 saatte bir keiyoushi/extensions
-deposundaki Türkçe eklentilerden üretilir (`scripts/mihon_publish.py`).
+deposundaki Türkçe eklentilerden üretilir (`scripts/mihon_publish.py`). Yalnızca çalışan
+kaynaklar yayınlanır; ayrıntı için "Kural tablosu" bölümüne bakın.

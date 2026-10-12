@@ -19,6 +19,10 @@ on:
         type: choice
         options: ['off', 'high', 'high_medium']
         default: 'high'
+      include_unverified:
+        description: 'cf_protected, failing ve doğrulanamamış kaynakları da dahil et (varsayılan: yalnızca çalışanlar)'
+        type: boolean
+        default: false
       force:
         description: 'Parmak izi aynı olsa da derle'
         type: boolean
@@ -43,6 +47,7 @@ jobs:
       MODE: ${{ inputs.mode || 'alive' }}
       INCLUDE_BROKEN: ${{ inputs.include_broken && '1' || '0' }}
       APPLY_ALTERNATIVES: ${{ inputs.apply_alternatives || 'high' }}
+      INCLUDE_UNVERIFIED: ${{ inputs.include_unverified && '1' || '0' }}
       FORCE: ${{ inputs.force && '1' || '0' }}
       PUBLISH: ${{ inputs.publish || github.event_name == 'schedule' }}
     steps:
@@ -68,6 +73,7 @@ jobs:
             --mode "$MODE" \
             --include-broken "$INCLUDE_BROKEN" \
             --apply-alternatives "$APPLY_ALTERNATIVES" \
+            --include-unverified "$INCLUDE_UNVERIFIED" \
             --report data/jar_prepare.json
 
       - name: 'Karar ver: derleme gerekiyor mu'
@@ -163,6 +169,7 @@ jobs:
           JAR_MODE: ${{ env.MODE }}
           JAR_INCLUDE_BROKEN: ${{ env.INCLUDE_BROKEN }}
           JAR_APPLY_ALTERNATIVES: ${{ env.APPLY_ALTERNATIVES }}
+          JAR_INCLUDE_UNVERIFIED: ${{ env.INCLUDE_UNVERIFIED }}
           JAR_FORCE: ${{ env.FORCE }}
           JAR_PUBLISH: ${{ env.PUBLISH }}
         run: python scripts/report.py jar

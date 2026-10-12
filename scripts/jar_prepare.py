@@ -3,7 +3,10 @@
 
 Steps, in order:
   a) patches: the sed replacements of .github/workflows/release.yml, each required exactly once
-  b) selection: @MangaSourceParser IDs kept by mode (alive / all_tr) and the broken rule
+  b) selection: @MangaSourceParser IDs kept by rules.is_publishable() (default: only status
+     'published' = probe ok + functional check passed; --include-unverified also admits
+     cf_protected/failing/unverified), mode all_tr additionally limits to tr-locale parsers,
+     and the broken rule
   c) deletion: files whose parsers are all dropped are removed, except files whose
      top-level class names are referenced (transitively) by kept files
   d) domain repair: quarantined/failing sources with a qualifying alternative keep their
@@ -17,6 +20,9 @@ import os
 import re
 import subprocess
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import rules  # noqa: E402
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KT_ROOT = os.path.join("src", "main", "kotlin")
@@ -35,7 +41,6 @@ PATCHES = [
      "internal annotation class MangaSourceParser", "public annotation class MangaSourceParser"),
 ]
 
-PUBLISHED = ("published", "cf_protected_published")
 ALT_STATUSES = ("quarantined", "failing")
 RANK = {"high": 3, "medium": 2, "low": 1}
 
@@ -114,15 +119,6 @@ def jar_broken(entries):
     return any(bool(((e.get("formats") or {}).get("jar") or {}).get("broken")) for e in entries)
 
 
-def alive_ok(entry):
-    if entry.get("scope") != "tr_native":
-        return False
-    status = entry.get("status")
-    if status in PUBLISHED:
-        return True
-    return status == "failing" and entry.get("failing") is True
-
-
 def alt_ok(entry, policy):
     if policy == "off" or entry.get("status") not in ALT_STATUSES:
         return False
@@ -143,7 +139,7 @@ def patch_domain(file_info, old, new):
     return count
 
 
-def select_and_repair(files, by_parser, mode, include_broken, policy):
+def select_and_repair(files, by_parser, mode, include_broken, policy, include_unverified=False):
     file_of = {}
     lang_of = {}
     broken_of = {}
@@ -159,10 +155,9 @@ def select_and_repair(files, by_parser, mode, include_broken, policy):
     patch_failed = []
     for pid in sorted(file_of):
         entries = by_parser.get(pid, [])
-        if mode == "alive":
-            if not any(alive_ok(e) or alt_ok(e, policy) for e in entries):
-                continue
-        elif lang_of[pid] != "tr":
+        if not any(rules.is_publishable(e, include_unverified) for e in entries):
+            continue
+        if mode == "all_tr" and lang_of[pid] != "tr":
             continue
         if (broken_of[pid] or jar_broken(entries)) and not include_broken:
             continue
@@ -248,6 +243,8 @@ def main(argv=None):
     parser.add_argument("--mode", choices=["alive", "all_tr"], default="alive")
     parser.add_argument("--include-broken", type=int, choices=[0, 1], default=0)
     parser.add_argument("--apply-alternatives", choices=["off", "high", "high_medium"], default="high")
+    parser.add_argument("--include-unverified", type=int, choices=[0, 1], default=0,
+                        help="cf_protected, failing ve unverified kaynakları da dahil et (varsayılan 0)")
     parser.add_argument("--report", default=os.path.join(BASE_DIR, "data", "jar_prepare.json"))
     parser.add_argument("--patch-only", action="store_true",
                         help="yalnızca yamaları uygula; seçim, silme ve domain onarımı yapma")
@@ -262,14 +259,16 @@ def main(argv=None):
         return 0
     files = scan_annotated(upstream)
     by_parser = load_sources(args.sources)
+    include_unverified = bool(args.include_unverified)
     file_of, kept, patched, patch_failed, _ = select_and_repair(
-        files, by_parser, args.mode, args.include_broken, args.apply_alternatives)
+        files, by_parser, args.mode, args.include_broken, args.apply_alternatives, include_unverified)
     all_ids = set(file_of)
     deleted, rescued = delete_and_rescue(files, kept)
 
     report = {
         "upstream_commit": upstream_commit(upstream),
         "mode": args.mode,
+        "include_unverified": include_unverified,
         "kept_ids": sorted(kept),
         "removed_ids": sorted(all_ids - kept),
         "rescued_files": rescued,

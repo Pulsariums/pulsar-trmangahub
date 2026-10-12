@@ -98,3 +98,32 @@ class EvaluateTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
+class PublishableTests(unittest.TestCase):
+    def entry(self, status, **extra):
+        return {"status": status, "scope": "tr_native", **extra}
+
+    def test_only_published_without_flags_is_ok(self):
+        self.assertTrue(rules.is_ok(self.entry("published")))
+        self.assertFalse(rules.is_ok(self.entry("published", failing=True)))
+        self.assertFalse(rules.is_ok(self.entry("published", unverified=True)))
+        for status in ("cf_protected_published", "failing", "unverified", "quarantined", "excluded_multilang"):
+            self.assertFalse(rules.is_ok(self.entry(status)), status)
+
+    def test_default_gate_is_ok_only(self):
+        self.assertTrue(rules.is_publishable(self.entry("published")))
+        for status in ("cf_protected_published", "failing", "unverified", "quarantined"):
+            self.assertFalse(rules.is_publishable(self.entry(status)), status)
+
+    def test_include_unverified_admits_cf_failing_unverified_but_not_quarantined(self):
+        for status in ("cf_protected_published", "failing", "unverified"):
+            self.assertTrue(rules.is_publishable(self.entry(status), True), status)
+        self.assertTrue(rules.is_publishable(self.entry("published", failing=True), True))
+        self.assertFalse(rules.is_publishable(self.entry("quarantined"), True))
+        self.assertFalse(rules.is_publishable(self.entry("excluded_multilang"), True))
+
+    def test_multilang_scope_is_never_publishable(self):
+        self.assertFalse(rules.is_publishable({"status": "published", "scope": "multilang"}, True))
+
+

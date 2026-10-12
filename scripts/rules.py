@@ -78,3 +78,26 @@ def evaluate(probe_row, prev=None):
 
 def is_multilang(src):
     return (src.get("scope") or "tr_native") == MULTILANG_SCOPE
+
+
+def is_ok(entry):
+    """Verified working in this run: probe ok + functional check passed (status 'published').
+    failing (still counted as failing) and unverified (not probed this run) do not qualify."""
+    return (entry.get("status") == "published" and not entry.get("failing")
+            and not entry.get("unverified"))
+
+
+UNVERIFIED_ADMITTED = ("published", "cf_protected_published", "failing", "unverified")
+
+
+def is_publishable(entry, include_unverified=False):
+    """Publication gate for the JAR, the Mihon mirror and their index 'sources' lists.
+
+    Default: only is_ok() entries. include_unverified=True also admits cf_protected_published,
+    failing and unverified entries. quarantined, multilang (scope) and excluded_multilang
+    entries are never admitted."""
+    if is_multilang(entry):
+        return False
+    if is_ok(entry):
+        return True
+    return bool(include_unverified) and entry.get("status") in UNVERIFIED_ADMITTED

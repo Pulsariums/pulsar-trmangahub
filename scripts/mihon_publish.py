@@ -2,13 +2,19 @@
 """Yayınlanan Mihon (keiyoushi) TR eklentilerini repo-mihon/ altına aynalar.
 
 Akış:
-  1. sources/tr/published.json içindeki 'mihon' listesi okunur (pkg, apkUrl, version, domain).
+  1. sources/tr/sources.json okunur; formats.mihon.pkg değeri olan ve rules.is_publishable()
+     geçen (varsayılan: yalnızca status 'published') kaynaklar pakete göre gruplanır. Bir paketin
+     en az bir kaynağı dahil edilebilirse paket alınır; yalnızca dahil edilebilir kaynakların
+     domainleri 'hosts' olarak taşınır. --include-unverified cf_protected/failing/unverified
+     kaynakları da ekler.
   2. keiyoushi/extensions 'repo' dalındaki index.json alınır; packageName -> eklenti haritası kurulur.
      (Eski index.min.json kullanılmaz.)
-  3. Her yayınlanan pkg için APK indirilir. Önce index.json içindeki resources.apkUrl denenir,
-     olmazsa published.json içindeki apkUrl. Dosya repo-mihon/apk/<url'nin dosya adı> olarak yazılır.
+  3. Her paket için index.json'daki kaynaklardan yalnızca 'hosts' içindekiler (homeUrl domaini
+     eşleşenler) index'e yazılır. Eşleşen kaynağı olmayan paket dışarıda kalır.
+  4. Her yayınlanan pkg için APK indirilir. Önce index.json içindeki resources.apkUrl denenir,
+     olmazsa sources.json içindeki apkUrl. Dosya repo-mihon/apk/<url'nin dosya adı> olarak yazılır.
      Aynı sürüm ve dosya zaten varsa indirilmez.
-  4. repo-mihon/index.min.json, bu eklentilerden liste olarak yazılır; repo-mihon/README.md güncellenir.
+  5. repo-mihon/index.min.json bu eklentilerden yazılır; repo-mihon/README.md güncellenir.
      Artık listede olmayan APK'lar silinir.
 
 Yalnızca standart kütüphane kullanılır. İndirilemeyen, index.json'da bulunmayan veya
@@ -23,6 +29,9 @@ import re
 import sys
 import urllib.parse
 import urllib.request
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import rules  # noqa: E402
 
 UPSTREAM_BASE = "https://raw.githubusercontent.com/keiyoushi/extensions/repo"
 INDEX_URL = f"{UPSTREAM_BASE}/index.json"
@@ -75,18 +84,36 @@ def write_atomic(path, data):
     os.replace(tmp, path)
 
 
-def published_items(published):
-    """published.json 'mihon' listesi; pkg başına tek kayıt."""
-    out, seen = [], set()
-    for item in (published or {}).get("mihon") or []:
-        if not isinstance(item, dict):
+def host_of(value):
+    """Domain veya URL'den küçük harfli host (www. olmadan). Geçersizse None."""
+    if not value or not isinstance(value, str):
+        return None
+    raw = value.strip().lower()
+    if "://" not in raw:
+        raw = "https://" + raw
+    host = urllib.parse.urlsplit(raw).hostname or ""
+    if host.startswith("www."):
+        host = host[4:]
+    return host or None
+
+
+def mihon_packages(sources_doc, include_unverified=False):
+    """Dahil edilebilir Mihon paketleri, pkg başına tek kayıt:
+    {pkg, apkUrl, version, hosts}. hosts yalnızca dahil edilebilir kaynakların domainleridir."""
+    packages = {}
+    for entry in (sources_doc or {}).get("sources") or []:
+        if not isinstance(entry, dict):
             continue
-        pkg = item.get("pkg")
-        if not pkg or pkg in seen:
+        mihon = (entry.get("formats") or {}).get("mihon") or {}
+        pkg = mihon.get("pkg")
+        if not pkg or not rules.is_publishable(entry, include_unverified):
             continue
-        seen.add(pkg)
-        out.append(item)
-    return out
+        item = packages.setdefault(pkg, {"pkg": pkg, "apkUrl": mihon.get("apkUrl"),
+                                         "version": mihon.get("version"), "hosts": set()})
+        host = host_of(entry.get("domain"))
+        if host:
+            item["hosts"].add(host)
+    return [packages[pkg] for pkg in sorted(packages)]
 
 
 def upstream_map(index_doc):
@@ -100,18 +127,25 @@ def apk_name_from_url(url):
     return name if APK_NAME_RE.match(name) else None
 
 
-def build_entry(ext, pkg, apk, code, version):
-    warning = str(ext.get("contentWarning") or "")
-    sources = []
+def listed_sources(ext, hosts):
+    """index.json eklentisinin yalnızca hosts içindeki (doğrulanmış) kaynakları."""
+    out = []
     for src in ext.get("sources") or []:
         if not isinstance(src, dict):
             continue
-        sources.append({
+        if host_of(src.get("homeUrl")) not in hosts:
+            continue
+        out.append({
             "name": src.get("name") or "",
             "lang": LANG,
             "id": str(src.get("id") or ""),
             "baseUrl": src.get("homeUrl") or "",
         })
+    return out
+
+
+def build_entry(ext, pkg, apk, code, version, sources):
+    warning = str(ext.get("contentWarning") or "")
     return {
         "name": ext.get("name") or pkg,
         "pkg": pkg,
@@ -125,7 +159,7 @@ def build_entry(ext, pkg, apk, code, version):
 
 
 def sync(items, upstream, prev_by_pkg, apk_dir, fetcher=None):
-    """Yayınlanan her pkg için girdi üretir. Döner: (girdiler, istatistik, atlananlar)."""
+    """Her paket için girdi üretir. Döner: (girdiler, istatistik, atlananlar)."""
     os.makedirs(apk_dir, exist_ok=True)
     result, skipped = [], []
     stats = {"indirildi": 0, "yeniden_kullanildi": 0, "atlandi": 0}
@@ -134,6 +168,11 @@ def sync(items, upstream, prev_by_pkg, apk_dir, fetcher=None):
         ext = upstream.get(pkg)
         if ext is None:
             skipped.append((pkg, "index.json içinde yok"))
+            stats["atlandi"] += 1
+            continue
+        sources = listed_sources(ext, item.get("hosts") or set())
+        if not sources:
+            skipped.append((pkg, "doğrulanmış kaynakla eşleşen kaynak yok"))
             stats["atlandi"] += 1
             continue
         try:
@@ -174,7 +213,7 @@ def sync(items, upstream, prev_by_pkg, apk_dir, fetcher=None):
             skipped.append((pkg, "; ".join(errors) or "APK adresi yok"))
             stats["atlandi"] += 1
             continue
-        result.append(build_entry(ext, pkg, apk, code, version))
+        result.append(build_entry(ext, pkg, apk, code, version, sources))
     return result, stats, skipped
 
 
@@ -219,7 +258,7 @@ def summary_text(stats, skipped, removed, published_count, kept_count):
     lines = [
         "## Mihon deposu: Türkçe APK aynası",
         "",
-        f"- Yayınlanan Mihon paketi (published.json): {published_count}",
+        f"- Dahil edilebilir Mihon paketi (sources.json): {published_count}",
         f"- Dizinde kalan eklenti: {kept_count}",
         f"- İndirilen APK: {stats['indirildi']}",
         f"- Yeniden kullanılan APK: {stats['yeniden_kullanildi']}",
@@ -241,12 +280,14 @@ def repo_slug():
 def main(argv=None, fetcher=None):
     parser = argparse.ArgumentParser(description="Mihon Türkçe APK aynası.")
     parser.add_argument("--root", default=BASE_DIR, help="depo kökü (varsayılan: bu depo)")
+    parser.add_argument("--include-unverified", action="store_true",
+                        help="cf_protected, failing ve unverified kaynakları da dahil et")
     args = parser.parse_args(argv)
 
     root = args.root
     out_dir = os.path.join(root, OUT_DIR_NAME)
     apk_dir = os.path.join(out_dir, "apk")
-    published_path = os.path.join(root, "sources", "tr", "published.json")
+    sources_path = os.path.join(root, "sources", "tr", "sources.json")
 
     try:
         index_doc = json.loads(fetch_with_retry(INDEX_URL, fetcher=fetcher).decode("utf-8"))
@@ -257,7 +298,7 @@ def main(argv=None, fetcher=None):
         print("mihon_publish: upstream index.json beklenen biçimde değil", file=sys.stderr)
         return 1
 
-    items = published_items(load_json(published_path, {}))
+    items = mihon_packages(load_json(sources_path, {}), args.include_unverified)
     prev_index = load_json(os.path.join(out_dir, "index.min.json"), []) or []
     prev_by_pkg = {e.get("pkg"): e for e in prev_index if isinstance(e, dict) and e.get("pkg")}
 
