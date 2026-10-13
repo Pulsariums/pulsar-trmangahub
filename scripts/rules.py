@@ -127,10 +127,36 @@ def _live():
     return _live_cache
 
 
+_device_cache = None
+
+
+def _device():
+    """Uygulamadaki 'Tümünü test et' sonucu (data/live/device.json): cihazda doğrulanmış, CI'dan üstündür."""
+    global _device_cache
+    if _device_cache is None:
+        import json
+        path = os.path.join(os.path.dirname(LIVE_HISTORY), "device.json")
+        try:
+            with open(path, encoding="utf-8") as fh:
+                raw = json.load(fh)
+            _device_cache = {"at": raw.get("generated") or "",
+                             "by": {s["name"]: s.get("status") for s in raw.get("sources", []) if s.get("name")}}
+        except (OSError, ValueError, KeyError):
+            _device_cache = {"at": "", "by": {}}
+    return _device_cache
+
+
 def live_verdict(entry):
     """True: canlı test geçti, False: canlı test kaldı, None: sonuç yok veya kesin değil."""
     parser = (((entry.get("formats") or {}).get("jar")) or {}).get("parser")
     rec = _live().get(parser) if parser else None
+    dev = _device()
+    dstat = dev["by"].get(parser) if parser else None
+    if dstat in ("pass", "fail"):
+        # CI daha yeni ve geçtiyse (düzeltme sonrası) CI kazanır; aksi halde cihaz sonucu kesindir.
+        newer_ci_ok = bool(rec) and rec.get("ok_streak", 0) >= 1 and (rec.get("checked") or "") > dev["at"]
+        if not newer_ci_ok:
+            return dstat == "pass"
     if not rec:
         return None
     if rec.get("ok_streak", 0) >= 1:
