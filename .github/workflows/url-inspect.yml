@@ -1,0 +1,48 @@
+name: URL Inspect
+
+on:
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: 'Boşlukla ayrılmış liste sayfası URLleri (ilk manga linki seçilip incelenir)'
+        type: string
+        required: true
+      link_pattern:
+        description: 'Manga linkini seçen grep deseni'
+        type: string
+        default: '/manga/[^/"]+/"'
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect
+        env:
+          PAGES: ${{ inputs.pages }}
+          PAT: ${{ inputs.link_pattern }}
+        run: |
+          set +e
+          UA='Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
+          for p in $PAGES; do
+            echo "##### $p"
+            curl -sS -L -m 25 -A "$UA" -o /tmp/l.html -w 'list: %{http_code} %{url_effective}\n' "$p"
+            host=$(echo "$p" | sed -E 's|(https?://[^/]+).*|\1|')
+            link=$(grep -oE "https?://[^\"' ]+" /tmp/l.html | grep -E "$PAT" | head -1)
+            [ -z "$link" ] && link=$(grep -oE 'href="[^"]+"' /tmp/l.html | sed 's/href="//;s/"$//' | grep -E "$PAT" | head -1)
+            echo "manga link: $link"
+            [ -z "$link" ] && continue
+            echo "-- redirect zinciri:"
+            curl -sSIL -m 25 -A "$UA" --max-redirs 8 "$link" 2>&1 | grep -iE '^(HTTP|location|set-cookie)' | cut -c1-160
+            curl -sS -L -m 25 -A "$UA" -o /tmp/m.html -w 'detail: %{http_code} %{url_effective}\n' "$link"
+            echo "wp-manga-chapter: $(grep -c 'wp-manga-chapter' /tmp/m.html)"
+            echo "chapters-holder: $(grep -o 'manga-chapters-holder[^>]*' /tmp/m.html | head -1)"
+            echo "listing-chapters_wrap: $(grep -c 'listing-chapters_wrap' /tmp/m.html)"
+            echo "ajax/chapters: $(grep -c 'ajax/chapters' /tmp/m.html)"
+            echo "og:url: $(grep -oE 'property=.og:url. content=.[^"]+' /tmp/m.html | head -1)"
+            echo "-- chapters POST:"
+            curl -sS -L -m 25 -A "$UA" -X POST -o /tmp/c.html -w 'ajax/chapters POST: %{http_code} %{url_effective}\n' "${link%/}/ajax/chapters/"
+            echo "chapters in POST: $(grep -c 'wp-manga-chapter' /tmp/c.html)"
+            id=$(grep -oE 'data-id="[0-9]+"' /tmp/m.html | head -1 | grep -oE '[0-9]+')
+            curl -sS -L -m 25 -A "$UA" -X POST -d "action=manga_get_chapters&manga=$id" -o /tmp/a.html -w "admin-ajax POST id=$id: %{http_code}\n" "$host/wp-admin/admin-ajax.php"
+            echo "chapters in admin-ajax: $(grep -c 'wp-manga-chapter' /tmp/a.html)"
+          done
