@@ -51,7 +51,8 @@ async function visit(page, url, log, tag) {
 }
 
 const browser = await chromium.launch({ args: ['--no-sandbox'] });
-for (const site of sites) {
+for (const raw of sites) {
+  const site = /^https?:\/\//.test(raw) ? raw : "https://" + raw;
   const origin = new URL(site).origin;
   const log = { site, calls: [], errors: [], frameworks: [], links: {} };
   const ctx = await browser.newContext({ userAgent: UA, viewport: { width: 412, height: 915 } });
