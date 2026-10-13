@@ -9,9 +9,14 @@ const sites = process.argv.slice(2);
 fs.mkdirSync('recon-out', { recursive: true });
 
 function pickLinks(links, origin) {
-  const same = links.filter((h) => h.startsWith(origin));
-  const series = same.find((h) => /\/(manga|series|seri|webtoon|manhwa|comic|title)\/[^/?#]+\/?$/i.test(h));
-  return { series };
+  const same = [...new Set(links.filter((h) => h.startsWith(origin)).map((h) => h.split('#')[0].split('?')[0]))];
+  const groups = {};
+  for (const h of same) {
+    const segs = new URL(h).pathname.split('/').filter(Boolean);
+    if (segs.length >= 2) (groups[segs[0]] ||= []).push(h);
+  }
+  const best = Object.entries(groups).sort((a, b) => b[1].length - a[1].length)[0];
+  return { series: best ? best[1][0] : undefined, prefix: best ? best[0] : null };
 }
 
 async function visit(page, url, log, tag) {
@@ -39,6 +44,7 @@ async function visit(page, url, log, tag) {
     log.errors.push(`${tag}: ${String(e).slice(0, 120)}`);
   }
   await page.waitForTimeout(1500);
+  try { fs.writeFileSync('recon-out/' + new URL(url).host + '.' + tag + '.html', (await page.content()).slice(0, 200000)); } catch {}
   page.off('response', onResp);
   log.calls.push(...calls);
   return status;
@@ -58,13 +64,18 @@ for (const site of sites) {
     next: /__NEXT_DATA__|_next\/static/, nuxt: /__NUXT__|_nuxt\//, wordpress: /wp-content|wp-json/,
     madara: /wp-manga|madara/, vue: /data-v-[0-9a-f]{6}/, react: /data-reactroot|id="root"/, cloudflare: /just a moment|challenge-platform/i,
   })) if (re.test(html)) log.frameworks.push(k);
-  const links = await page.$$eval('a[href]', (as) => as.map((a) => a.href)).catch(() => []);
+  for (const p of ['series', 'manga', 'webtoon', 'webtoons', 'browse', 'search?q=a', 'api/series', 'api/manga']) {
+    await visit(page, origin + '/' + p, log, 'list:' + p.replace(/[^a-z]/g, ''));
+  }
+  await page.goto(site, { waitUntil: 'domcontentloaded', timeout: 30000 }).catch(() => {});
+  const links = await page.$eval('a[href]', (as) => as.map((a) => a.href)).catch(() => []);
   const { series } = pickLinks(links, origin);
   log.links.series = series || null;
   if (series) {
     await visit(page, series, log, 'detail');
     const links2 = await page.$$eval('a[href]', (as) => as.map((a) => a.href)).catch(() => []);
-    const chap = links2.filter((h) => h.startsWith(origin)).find((h) => /(bolum|chapter|episode|ch-|\/\d+\/?$)/i.test(h) && h !== series);
+    const sp = new URL(series).pathname.replace(/\/$/, '');
+    const chap = links2.map((h) => h.split('#')[0]).filter((h) => h.startsWith(origin)).find((h) => new URL(h).pathname.startsWith(sp + '/') || /(bolum|chapter|episode)/i.test(h));
     log.links.chapter = chap || null;
     if (chap) await visit(page, chap, log, 'reader');
   }
