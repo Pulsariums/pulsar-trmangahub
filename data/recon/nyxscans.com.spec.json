@@ -1,0 +1,66 @@
+{
+ "domain": "nyxscans.com",
+ "title": "Nyx Scans - Immerse Yourself in Comics, Manga, Manhua, and Manhwa — Nyx: Where Stories Come to Life.",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "page",
+  "item": "div.h-full",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 27
+ },
+ "detail": {
+  "title": "h1.break-words.text-2xl.font-bold",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "meta[name=\"description\"]@content",
+  "genres": "",
+  "status": "",
+  "chapterItem": "div.w-full.h-full.flex",
+  "chapterLink": "a@href",
+  "chapterTitle": "a"
+ },
+ "reader": {
+  "images": "div.comic-images-wrapper.reader-mode-strip img",
+  "attr": "src",
+  "count": 32
+ },
+ "api": [
+  {
+   "url": "https://nyxscans.com/cdn-cgi/speculation",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://nyxscans.com/api/series",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://nyxscans.com/api/manga",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://api.nyxscans.com/api/me",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.nyxscans.com/api/analytics/updateViews",
+   "method": "POST",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.75,
+  "reader": 1
+ },
+ "notes": [
+  "list: 27 items at /",
+  "list link prefix: series",
+  "pagination: ?page=N"
+ ]
+}

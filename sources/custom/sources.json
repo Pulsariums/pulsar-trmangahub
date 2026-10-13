@@ -26,6 +26,19 @@
     "addedAt": "2026-10-13T11:59:25+00:00"
   },
   {
+    "id": "nyxscans.com",
+    "name": "Nyx Scans - Immerse Yourself in Comics, Manga, Manhua, and Manhwa — Nyx: Where Stories Come to Life.",
+    "domain": "nyxscans.com",
+    "baseUrl": "https://nyxscans.com",
+    "engine": "custom",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/nyxscans.com/jar/Nyxscans.kt"
+    ],
+    "addedAt": "2026-10-13T12:31:09+00:00"
+  },
+  {
     "id": "ravenscans.org",
     "name": "Raven Scans",
     "domain": "ravenscans.org",
@@ -50,18 +63,5 @@
       "generated/toonhane.com/jar/Toonhane.kt"
     ],
     "addedAt": "2026-10-13T10:54:49+00:00"
-  },
-  {
-    "id": "nyxscans.com",
-    "name": "Nyx Scans",
-    "domain": "nyxscans.com",
-    "baseUrl": "https://nyxscans.com",
-    "engine": "custom",
-    "scope": "tr_native",
-    "verdict": "scaffolded",
-    "scaffold": [
-      "generated/nyxscans.com/jar/Nyxscans.kt"
-    ],
-    "addedAt": "2026-10-13T12:13:35+00:00"
   }
 ]

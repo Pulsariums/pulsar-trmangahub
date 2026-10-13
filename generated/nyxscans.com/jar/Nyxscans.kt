@@ -1,5 +1,6 @@
 package org.koitharu.kotatsu.parsers.site.nyxscans.tr
 
+import org.jsoup.nodes.Element
 import org.koitharu.kotatsu.parsers.MangaLoaderContext
 import org.koitharu.kotatsu.parsers.MangaSourceParser
 import org.koitharu.kotatsu.parsers.config.ConfigKey
@@ -7,9 +8,10 @@ import org.koitharu.kotatsu.parsers.core.PagedMangaParser
 import org.koitharu.kotatsu.parsers.exception.ParseException
 import org.koitharu.kotatsu.parsers.model.*
 import org.koitharu.kotatsu.parsers.util.*
+import java.net.URLEncoder
 import java.util.EnumSet
 
-@MangaSourceParser("NYXSCANS_TR", "Nyx Scans", "tr")
+@MangaSourceParser("NYXSCANS_TR", "Nyx Scans - Immerse Yourself in Comics, Manga, Manhua, and Manhwa — Nyx: Where Stories Come to Life.", "tr")
 internal class Nyxscans(context: MangaLoaderContext) :
 	PagedMangaParser(context, MangaParserSource.NYXSCANS_TR, pageSize = 24) {
 
@@ -17,11 +19,9 @@ internal class Nyxscans(context: MangaLoaderContext) :
 
 	override val availableSortOrders: Set<SortOrder> = EnumSet.of(SortOrder.UPDATED)
 
-	// TODO(recon): arama URL'si ve parametresi recon'da yok; isSearchSupported yalnızca istek gereği.
 	override val filterCapabilities: MangaListFilterCapabilities =
-		MangaListFilterCapabilities(isSearchSupported = true)
+		MangaListFilterCapabilities(isSearchSupported = false)
 
-	// TODO(recon): tür/durum filtre listesi recon'da yok; boş bırakıldı.
 	override suspend fun getFilterOptions() = MangaListFilterOptions(
 		availableTags = emptySet(),
 		availableStates = emptySet(),
@@ -30,28 +30,39 @@ internal class Nyxscans(context: MangaLoaderContext) :
 	// ============================== List ==============================
 
 	override suspend fun getListPage(page: Int, order: SortOrder, filter: MangaListFilter): List<Manga> {
-		// TODO(recon): sayfalama parametresi recon'da yok; yalnızca ilk sayfa (/series) parse ediliyor.
-		if (page > 1 || !filter.query.isNullOrEmpty()) return emptyList()
-		val doc = webClient.httpGet("https://$domain/series").parseHtml()
-		return doc.select("div[class*='grid-cols-'] > div").mapNotNull { card ->
-			val link = card.selectFirst("a[href^='/series/']") ?: return@mapNotNull null
-			val url = link.attrAsRelativeUrl("href")
-			val img = card.selectFirst("img")
-			val title = img?.attr("alt")?.takeIf { it.isNotBlank() } ?: link.attr("title")
-			if (title.isBlank()) return@mapNotNull null
+		val query = filter.query?.takeIf { it.isNotBlank() }
+		if (query != null && !SEARCH_SUPPORTED) return emptyList()
+		if (page > 1 && PAGE_PARAM == null) return emptyList()
+		val params = buildList {
+			if (page > 1 && PAGE_PARAM != null) add("$PAGE_PARAM=$page")
+			if (query != null) add("search=" + URLEncoder.encode(query, "UTF-8"))
+		}
+		val separator = if (LIST_PATH.contains('?')) "&" else "?"
+		val url = buildString {
+			append("https://").append(domain).append(LIST_PATH)
+			if (params.isNotEmpty()) append(separator).append(params.joinToString("&"))
+		}
+		val doc = webClient.httpGet(url).parseHtml()
+		val items = doc.select(LIST_ITEM)
+		if (items.isEmpty() && query == null && page == 1) {
+			throw ParseException("List selector matched no items: check list.item", url)
+		}
+		return items.mapNotNull { item ->
+			val link = item.value(SEL_LIST_LINK)?.toRelativeUrl(domain) ?: return@mapNotNull null
+			val title = item.value(SEL_LIST_TITLE) ?: return@mapNotNull null
 			Manga(
-				id = generateUid(url),
-				url = url,
-				publicUrl = url.toAbsoluteUrl(domain),
+				id = generateUid(link),
+				url = link,
+				publicUrl = link.toAbsoluteUrl(domain),
 				title = title,
 				altTitles = emptySet(),
-				coverUrl = img?.attr("src")?.takeIf { it.isNotBlank() }?.toAbsoluteUrl(domain),
+				coverUrl = item.value(SEL_LIST_COVER)?.toAbsoluteUrl(domain),
 				largeCoverUrl = null,
 				authors = emptySet(),
 				description = null,
 				tags = emptySet(),
 				state = null,
-				rating = card.selectFirst(".numscore")?.text()?.toFloatOrNull()?.div(10f) ?: RATING_UNKNOWN,
+				rating = RATING_UNKNOWN,
 				contentRating = null,
 				source = source,
 			)
@@ -62,45 +73,40 @@ internal class Nyxscans(context: MangaLoaderContext) :
 
 	override suspend fun getDetails(manga: Manga): Manga {
 		val doc = webClient.httpGet(manga.url.toAbsoluteUrl(domain)).parseHtml()
-		val root = doc.selectFirst(".series-hero-content") ?: doc
-		val title = root.selectFirst("h1")?.text()?.takeIf { it.isNotBlank() } ?: manga.title
-		val kicker = root.selectFirst(".series-kicker")?.text().orEmpty()
-		val cover = root.selectFirst("img.series-cover")?.attr("src")?.takeIf { it.isNotBlank() }
-			?.toAbsoluteUrl(domain)
-		val banner = doc.selectFirst("img.series-banner")?.attr("src")?.takeIf { it.isNotBlank() }
-			?.toAbsoluteUrl(domain)
-		val tags = root.select(".series-genres > *").mapNotNullTo(LinkedHashSet()) { el ->
-			val name = el.text().trim()
-			if (name.isEmpty()) null else MangaTag(key = name.lowercase(), title = name, source = source)
+		val title = doc.value(SEL_DETAIL_TITLE) ?: manga.title
+		val cover = doc.value(SEL_DETAIL_COVER)?.toAbsoluteUrl(domain)
+		val tags = doc.values(SEL_DETAIL_GENRES).mapNotNullTo(LinkedHashSet()) { name ->
+			MangaTag(key = name.lowercase(), title = name, source = source)
 		}
-		val chapters = doc.select("a.chapter-card").toList().mapChapters(reversed = true) { i, el ->
-			val href = el.attrAsRelativeUrl("href")
-			val text = el.text()
-			val number = NUMBER_REGEX.find(text)?.value?.toFloatOrNull() ?: (i + 1).toFloat()
-			MangaChapter(
-				id = generateUid(href),
-				title = text.takeIf { it.isNotBlank() } ?: "Bölüm $number",
-				number = number,
-				volume = 0,
-				url = href,
-				scanlator = null,
-				// TODO(recon): bölüm yayın tarihi selektörü yok.
-				uploadDate = 0L,
-				branch = null,
-				source = source,
-			)
-		}
+		val chapters = doc.select(CHAPTER_ITEM)
+			.mapNotNull { el ->
+				val href = el.value(SEL_CHAPTER_LINK)?.toRelativeUrl(domain) ?: return@mapNotNull null
+				el to href
+			}
+			.mapChapters(reversed = true) { i, (el, href) ->
+				val text = el.value(SEL_CHAPTER_TITLE) ?: el.text().trim()
+				val number = NUMBER_REGEX.find(text)?.value?.toFloatOrNull() ?: (i + 1).toFloat()
+				MangaChapter(
+					id = generateUid(href),
+					title = text.takeIf { it.isNotBlank() } ?: "Bölüm $number",
+					number = number,
+					volume = 0,
+					url = href,
+					scanlator = null,
+					uploadDate = 0L,
+					branch = null,
+					source = source,
+				)
+			}
 		return manga.copy(
 			title = title,
-			altTitles = root.selectFirst(".series-alt")?.text()
-				?.takeIf { it.isNotBlank() }?.let { setOf(it) } ?: manga.altTitles,
+			altTitles = manga.altTitles,
 			coverUrl = cover ?: manga.coverUrl,
-			largeCoverUrl = banner ?: cover,
-			// TODO(recon): yazar/çizer alanı etiket eşlemesi recon'da yok.
+			largeCoverUrl = cover ?: manga.largeCoverUrl,
 			authors = emptySet(),
-			description = root.selectFirst(".series-description")?.text()?.takeIf { it.isNotBlank() },
+			description = doc.value(SEL_DETAIL_DESCRIPTION),
 			tags = tags,
-			state = parseState(kicker.substringBefore('·').trim()),
+			state = parseState(doc.value(SEL_DETAIL_STATUS).orEmpty()),
 			chapters = chapters,
 		)
 	}
@@ -108,22 +114,74 @@ internal class Nyxscans(context: MangaLoaderContext) :
 	// ============================== Pages ==============================
 
 	override suspend fun getPages(chapter: MangaChapter): List<MangaPage> {
-		// TODO(recon): okuyucu sayfası HTML'i ve resim seçicisi recon'da yok.
-		throw ParseException("Reader selectors not verified (TODO(recon))", chapter.url)
+		val url = chapter.url.toAbsoluteUrl(domain)
+		val doc = webClient.httpGet(url).parseHtml()
+		val images = doc.select(READER_IMAGES).mapNotNull { img ->
+			READER_ATTRS.firstNotNullOfOrNull { attr -> img.value(Sel(null, attr)) }
+		}.map { it.toAbsoluteUrl(domain) }.distinct()
+		if (images.isEmpty()) {
+			throw ParseException("No reader images matched: check reader.images", url)
+		}
+		return images.map { imageUrl ->
+			MangaPage(id = generateUid(imageUrl), url = imageUrl, preview = null, source = source)
+		}
 	}
 
 	// ============================= Helpers =============================
 
-	// TODO(recon): durum metinleri recon'da görülmedi; İngilizce karşılıklar varsayıldı.
-	private fun parseState(value: String): MangaState? = when (value.lowercase()) {
-		"ongoing" -> MangaState.ONGOING
-		"completed", "finished" -> MangaState.FINISHED
-		"hiatus", "paused" -> MangaState.PAUSED
-		"dropped", "cancelled" -> MangaState.ABANDONED
-		else -> null
+	private fun parseState(value: String): MangaState? {
+		val v = value.lowercase()
+		return when {
+			v.contains("ongoing") || v.contains("devam") || v.contains("yayın") -> MangaState.ONGOING
+			v.contains("completed") || v.contains("finished") || v.contains("tamamlan") || v.contains("bitti") ->
+				MangaState.FINISHED
+			v.contains("hiatus") || v.contains("paused") || v.contains("askı") -> MangaState.PAUSED
+			v.contains("dropped") || v.contains("cancelled") || v.contains("bırakıl") -> MangaState.ABANDONED
+			else -> null
+		}
 	}
 
+	private fun Element.value(sel: Sel?): String? {
+		if (sel == null) return null
+		val el: Element = when {
+			sel.css == null -> this
+			this.`is`(sel.css) -> this
+			else -> selectFirst(sel.css) ?: return null
+		}
+		val v = if (sel.attr == null) el.text() else el.attr(sel.attr)
+		return v.trim().takeIf { it.isNotEmpty() }
+	}
+
+	private fun Element.values(sel: Sel?): List<String> {
+		if (sel == null) return emptyList()
+		val els = if (sel.css == null) listOf(this) else select(sel.css)
+		return els.mapNotNull { it.value(Sel(null, sel.attr)) }
+	}
+
+	private fun String.toRelativeUrl(domain: String): String = toAbsoluteUrl(domain).substringAfter("://$domain")
+
+	private class Sel(val css: String?, val attr: String?)
+
 	private companion object {
+		const val LIST_PATH = "/"
+		val PAGE_PARAM: String? = "page"
+		val SEARCH_SUPPORTED: Boolean = false
+		const val LIST_ITEM = "div.h-full"
+		const val CHAPTER_ITEM = "div.w-full.h-full.flex"
+		const val READER_IMAGES = "div.comic-images-wrapper.reader-mode-strip img"
+		val READER_ATTRS = listOf("src", "data-src")
+
+		val SEL_LIST_LINK: Sel? = Sel("a", null)
+		val SEL_LIST_TITLE: Sel? = Sel("img|attr:alt", null)
+		val SEL_LIST_COVER: Sel? = Sel("img", "src")
+		val SEL_DETAIL_TITLE: Sel? = Sel("h1.break-words.text-2xl.font-bold", null)
+		val SEL_DETAIL_COVER: Sel? = Sel("meta[property=\"og:image\"]", "content")
+		val SEL_DETAIL_DESCRIPTION: Sel? = Sel("meta[name=\"description\"]", "content")
+		val SEL_DETAIL_GENRES: Sel? = null
+		val SEL_DETAIL_STATUS: Sel? = null
+		val SEL_CHAPTER_LINK: Sel? = Sel("a", "href")
+		val SEL_CHAPTER_TITLE: Sel? = Sel("a", null)
+
 		val NUMBER_REGEX = Regex("""\d+(?:\.\d+)?""")
 	}
 }
