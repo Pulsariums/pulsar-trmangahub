@@ -1,0 +1,376 @@
+{
+ "site": "https://nyxscans.com",
+ "calls": [
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://nyxscans.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "home",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/9b92293f-a7f8-4c35-94cd-3c321a6c1463.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://media.nyxscans.com/upload/2026/01/15/34d1f34f-929f-43c9-8069-4e2eb4832d73.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://media.nyxscans.com/upload/2026/03/24/15bba1e2-5d9a-4d60-a9d7-d1708b698de2.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://media.nyxscans.com/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/c4ba7873-71c6-4b2c-9c28-dd375e3c995f.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cm5s17yg80002hv2aobjbqlse/4bc07b0b-6822-47ef-9ad6-296b79c5540d.png"
+  },
+  {
+   "tag": "home",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cm5rclv5t0000hv2awz8fnzy3/676fbc46-ff2d-4a9a-8b00-87800486c540.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://media.nyxscans.com/upload/series/featured/cm5s17yg80002hv2aobjbqlse/18857ec8-5339-4ffd-adea-da82dd004f13.png"
+  },
+  {
+   "tag": "home",
+   "image": "https://media.nyxscans.com/upload/2026/01/17/95a149f9-36d7-4b27-b149-e1ee52274b83.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cm5s17yg80002hv2aobjbqlse/49f66054-f4cf-40d5-8852-fbfe23aaec8f.png"
+  },
+  {
+   "tag": "home",
+   "image": "https://media.nyxscans.com/upload/2025/01/12/b5196bdc-ede4-43c7-87cc-073710686042.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cm5s17yg80002hv2aobjbqlse/ce68b6b0-c233-41b1-b35e-11f64fd9f108.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://i0.wp.com/media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp?w=112&quality=75&strip=all&ssl=1"
+  },
+  {
+   "tag": "home",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/3ca5bfe6-8e5b-4977-bc58-f46cc1b4cdaf.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://media.nyxscans.com/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/c46fb161-f39c-4b5e-93ad-0e6df924c496.jpg"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://api.nyxscans.com/api/me",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"session\":null,\"user\":null,\"memberships\":[],\"teamMemberships\":[],\"canPublishContent\":false,\"highestTeamRole\":null,\"hasSessionCookie\":false}"
+  },
+  {
+   "tag": "home",
+   "method": "POST",
+   "url": "https://api.nyxscans.com/api/analytics/updateViews",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"url\":\"/home\"}",
+   "body": "{\"success\":true,\"message\":\"Views updated successfully\"}"
+  },
+  {
+   "tag": "home",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/708aaf0a-cab6-4201-9764-b919458527f7.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://nyxscans.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://media.nyxscans.com/upload/2026/03/24/15bba1e2-5d9a-4d60-a9d7-d1708b698de2.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cm5rclv5t0000hv2awz8fnzy3/676fbc46-ff2d-4a9a-8b00-87800486c540.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://i0.wp.com/media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp?w=112&quality=75&strip=all&ssl=1"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/d0a02d60-722b-4b66-b96e-1744e54cedf9.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/560551fd-15d7-45dd-a0c2-80dc78df2967.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cm83hfh030029p601pryli9ph/4321ecd9-af34-402c-83c6-c5e5da05615c.png"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cm5s17yg80002hv2aobjbqlse/dcd88cec-f669-4ed9-8007-7e8623831a36.png"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cm5s17yg80002hv2aobjbqlse/24d543c4-e2a9-41aa-ac5a-301a4684c512.png"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://media.nyxscans.com/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/32a9c401-b32f-4d6f-b9b4-c2a53371f770.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://media.nyxscans.com/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/21f34d61-fb5f-49b3-b671-451fc4010159.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/d72516a8-ddd3-40aa-8df8-ecd8a4c37d87.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/5524ee0f-a0a9-40bb-a996-a747fd0187dc.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/5fd6f8d5-709c-4d1f-9ec0-ae08197e2dbd.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/25985afd-bd20-4d5c-b6ec-1ab7181661af.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/19c468a1-3c92-4490-bc48-4ac07a28b4fc.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cm5sta1zw0000mpegwauojjut/fd8d53b8-9f36-46b6-8c81-13220bfa4055.png"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/b338ee56-c0f6-4563-a78f-042d514ce52d.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cmjwxv33e000jnr1t5o8rlvxt/872ba267-6f33-42f2-977b-c5f2e3a0193a.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://storage.nyxscans.com/public/upload/series/featured/cm9yfqne4000do901q66k1txk/c24a7436-50d8-4a12-8232-adf9e4f56b51.png"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://api.nyxscans.com/api/me",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"session\":null,\"user\":null,\"memberships\":[],\"teamMemberships\":[],\"canPublishContent\":false,\"highestTeamRole\":null,\"hasSessionCookie\":false}"
+  },
+  {
+   "tag": "list:series",
+   "method": "POST",
+   "url": "https://api.nyxscans.com/api/analytics/updateViews",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"url\":\"/series\"}",
+   "body": "{\"success\":true,\"message\":\"Views updated successfully\"}"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://i0.wp.com/media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp?w=112&quality=75&strip=all&ssl=1"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://nyxscans.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:manga",
+   "method": "POST",
+   "url": "https://api.nyxscans.com/api/analytics/updateViews",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"url\":\"/manga\"}",
+   "body": "{\"success\":true,\"message\":\"Views updated successfully\"}"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://i0.wp.com/media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp?w=112&quality=75&strip=all&ssl=1"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://nyxscans.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "POST",
+   "url": "https://api.nyxscans.com/api/analytics/updateViews",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"url\":\"/webtoon\"}",
+   "body": "{\"success\":true,\"message\":\"Views updated successfully\"}"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://i0.wp.com/media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp?w=112&quality=75&strip=all&ssl=1"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://nyxscans.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "POST",
+   "url": "https://api.nyxscans.com/api/analytics/updateViews",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"url\":\"/webtoons\"}",
+   "body": "{\"success\":true,\"message\":\"Views updated successfully\"}"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://nyxscans.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://i0.wp.com/media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp?w=112&quality=75&strip=all&ssl=1"
+  },
+  {
+   "tag": "list:browse",
+   "method": "POST",
+   "url": "https://api.nyxscans.com/api/analytics/updateViews",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"url\":\"/browse\"}",
+   "body": "{\"success\":true,\"message\":\"Views updated successfully\"}"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://i0.wp.com/media.nyxscans.com/upload/2025/01/10/image_copyCUnetnoiseLevel3tta-b1838bbfc79d023a.webp?w=112&quality=75&strip=all&ssl=1"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://nyxscans.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "POST",
+   "url": "https://api.nyxscans.com/api/analytics/updateViews",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"url\":\"/search\"}",
+   "body": "{\"success\":true,\"message\":\"Views updated successfully\"}"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://nyxscans.com/api/series",
+   "status": 404,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"error\":\"Not Found\",\"message\":\"The requested resource was not found\"}"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://nyxscans.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "GET",
+   "url": "https://nyxscans.com/api/manga",
+   "status": 404,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"error\":\"Not Found\",\"message\":\"The requested resource was not found\"}"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "GET",
+   "url": "https://nyxscans.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  }
+ ],
+ "errors": [],
+ "frameworks": [],
+ "links": {
+  "series": null
+ },
+ "homeStatus": 200,
+ "title": "Nyx Scans - Immerse Yourself in Comics, Manga, Manhua, and Manhwa — Nyx: Where Stories Come to Life."
+}

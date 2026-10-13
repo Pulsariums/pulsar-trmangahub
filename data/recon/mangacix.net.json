@@ -1,0 +1,508 @@
+{
+ "site": "https://mangacix.net",
+ "calls": [
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/bootstrap-data?original_url=https%3A%2F%2Fmangacix.net%2F",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"data\":\"JTdCJTIyc2V0dGluZ3MlMjIlM0ElN0IlMjJkYXRlcy5mb3JtYXQlMjIlM0ElMjJkJTJGTSUyRnklMjIlMkMlMjJkYXRlcy5sb2NhbGUlMjIlM0ElMjJlbl9VUyUyMiUyQyUyMnNvY2lhbC5nb29nbGUuZW5hYmxlJTIyJTNBMSUyQyUyMnNvY2lhbC50d2l0dGVyLmVuYWJsZSUyMiUzQTAlMkMlMjJzb2NpYWwuZmFjZWJvb2suZW5hYmxlJTIyJTNBMCUyQyUyMnJlYWx0aW1lLmVuYWJsZSUyMiUzQTAlMkMlMjJyZWdpc3RyYXRpb24uZGlzYWJsZSUyMiUzQTAlMkMlMjJjYWNoZS5yZXBvcnRfbWludXRlcyUyMiUzQTYwJTJDJTIyYnJhbmRpbmcuZmF2aWNvbiUyMiUzQSUyMmNsaWVudCUyRmZhdmljb24lMkZpY29uLTE0NHgxNDQucG5nJTIyJTJDJTIyYnJhbmRpbmcubG9nb19kYXJrJTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5nX21lZGlhJTJGTkZ2QzlRTXJxWWZERjhBZmNBeWpGSnJQcXFVNXRNYzF0Wm5BTGp5Ri5wbmclMjIlMkMlMjJicmFuZGluZy5sb2dvX2xpZ2h0JTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/homepage/lists-guests",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"lists\":[{\"mal_status\":\"none\",\"mal_last_sync\":null,\"_id\":\"64d8a19960c80f2b9dd73273\",\"id\":288580,\"name\":\"Manga Ana Sayfa\",\"description\":null,\"user_id\":1,\"system\":false,\"public\":true,\"style\":\"\",\"image\":\"https://webtoon-tr.com/wp-content/uploads/2021/04/te-beginggin.jpg\",\"auto_update\":\"null\",\"created_at\":\"2022-06-19T21:05:12.000Z\",\"updated_at\":\"2022-06-20T00:06:03.000Z\",\"likeCount\":42,\"items\":[{\"_id\":\"6a3ae9587c4b18b15db3b6b0\",\"id\":401,\"title\":\"The One Piece Anime’sinin İlk Bölüm Görseli Yayınlandı! \",\"body\":\"The One Piece için Netflix, Eiichiro Oda’nın efsanevi manga serisinden uyarlanan yapım hakkında yeni detayları kademeli olarak paylaşmaya devam ediyor; bugün yayınlanan ilk bölüm görseli "
+  },
+  {
+   "tag": "home",
+   "image": "https://mangacix.net/storage/branding_media/xfXEloAXCE2dCk9XFwsiqe0pDulpNPmHOg385pXO.png"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/last-episodes?page=1",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"current_page\":1,\"data\":[{\"_id\":\"6acb9e7521989f9740bc3aad\",\"release_date\":\"2026-10-11T14:34:29.657Z\",\"title_id\":12074,\"episode_number\":152,\"created_at\":\"2026-10-11T14:34:29.658Z\",\"title_name\":\"Kaoru Hana wa Rin to Saku\",\"title_poster\":\"https://cdn.mangacix.net/file/mangacix/1754448611091.webp\",\"title_type\":\"manga\",\"model_type\":\"episode\"},{\"_id\":\"6ac8252abc8bc2ef150b4b47\",\"release_date\":\"2026-10-08T23:20:10.373Z\",\"title_id\":13469,\"episode_number\":13,\"created_at\":\"2026-10-08T23:20:10.373Z\",\"title_name\":\"Shadow Slave\",\"title_poster\":\"https://cdn.mangacix.net/file/mangacix/1784170657065-d96c471f-4573-4716-9612-9d0f1e8bd9a8.png\",\"title_type\":\"manhwa\",\"model_type\":\"episode\"},{\"_id\":\"6ac64f1b0fcf3"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1782244261517.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1782242623895.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754448611091.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754949769298.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1791381811563-a49b6510-014b-4859-bec2-14480381f590.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1784170657065-d96c471f-4573-4716-9612-9d0f1e8bd9a8.png"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754448631580.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1782244831916.png"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1782245716397.png"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1788186777618-1a7906e2-e8e4-40d8-954d-6a2833008e80.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1788187222755-19c49562-cd52-4972-8979-64488f102abc.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1769869168776.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1771062560387.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1774977289257.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754932328523.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1782241966076.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754689179006.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754682459268.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.mangacix.net/file/mangacix/1704919396918.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangacix.net/storage/branding_media/xfXEloAXCE2dCk9XFwsiqe0pDulpNPmHOg385pXO.png"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/bootstrap-data?original_url=https%3A%2F%2Fmangacix.net%2Fseries",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"data\":\"JTdCJTIyc2V0dGluZ3MlMjIlM0ElN0IlMjJkYXRlcy5mb3JtYXQlMjIlM0ElMjJkJTJGTSUyRnklMjIlMkMlMjJkYXRlcy5sb2NhbGUlMjIlM0ElMjJlbl9VUyUyMiUyQyUyMnNvY2lhbC5nb29nbGUuZW5hYmxlJTIyJTNBMSUyQyUyMnNvY2lhbC50d2l0dGVyLmVuYWJsZSUyMiUzQTAlMkMlMjJzb2NpYWwuZmFjZWJvb2suZW5hYmxlJTIyJTNBMCUyQyUyMnJlYWx0aW1lLmVuYWJsZSUyMiUzQTAlMkMlMjJyZWdpc3RyYXRpb24uZGlzYWJsZSUyMiUzQTAlMkMlMjJjYWNoZS5yZXBvcnRfbWludXRlcyUyMiUzQTYwJTJDJTIyYnJhbmRpbmcuZmF2aWNvbiUyMiUzQSUyMmNsaWVudCUyRmZhdmljb24lMkZpY29uLTE0NHgxNDQucG5nJTIyJTJDJTIyYnJhbmRpbmcubG9nb19kYXJrJTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5nX21lZGlhJTJGTkZ2QzlRTXJxWWZERjhBZmNBeWpGSnJQcXFVNXRNYzF0Wm5BTGp5Ri5wbmclMjIlMkMlMjJicmFuZGluZy5sb2dvX2xpZ2h0JTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/value-lists/tmdb-countries,tmdb-languages",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"tmdb-countries\":[{\"name\":\"Andorra\",\"code\":\"AD\"},{\"name\":\"United Arab Emirates\",\"code\":\"AE\"},{\"name\":\"Afghanistan\",\"code\":\"AF\"},{\"name\":\"Antigua and Barbuda\",\"code\":\"AG\"},{\"name\":\"Anguilla\",\"code\":\"AI\"},{\"name\":\"Albania\",\"code\":\"AL\"},{\"name\":\"Armenia\",\"code\":\"AM\"},{\"name\":\"Netherlands Antilles\",\"code\":\"AN\"},{\"name\":\"Angola\",\"code\":\"AO\"},{\"name\":\"Antarctica\",\"code\":\"AQ\"},{\"name\":\"Argentina\",\"code\":\"AR\"},{\"name\":\"American Samoa\",\"code\":\"AS\"},{\"name\":\"Austria\",\"code\":\"AT\"},{\"name\":\"Australia\",\"code\":\"AU\"},{\"name\":\"Aruba\",\"code\":\"AW\"},{\"name\":\"Azerbaijan\",\"code\":\"AZ\"},{\"name\":\"Bosnia and Herzegovina\",\"code\":\"BA\"},{\"name\":\"Barbados\",\"code\":\"BB\"},{\"name\":\"Bangladesh\",\"code\":\"BD\"},{\"name\":\"Belgium"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754448631580.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754448611091.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1771062560387.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1784170657065-d96c471f-4573-4716-9612-9d0f1e8bd9a8.png"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1769869168776.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1788186777618-1a7906e2-e8e4-40d8-954d-6a2833008e80.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1774977289257.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1791381811563-a49b6510-014b-4859-bec2-14480381f590.webp"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/titles?onlyStreamable=true&page=1&perPage=16",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"pagination\":{\"current_page\":1,\"last_page\":52,\"per_page\":16,\"data\":[{\"_id\":\"6a86d6813eb7136a3f1db094\",\"adult\":false,\"allow_update\":true,\"backdrop\":\"https://cdn.mangacix.net/file/mangacix/1787221440626-4cac5389-bfdf-42f6-8d25-e91e0a2fb31b.jpg\",\"budget\":0,\"certification\":\"pg\",\"country\":\"\",\"description\":\"Yakın zamana kadar sadece çocukluk arkadaşı olmaları gerekiyordu… ama birbirlerini tanımaya başlayınca artık geri dönüş yok.\",\"episode_count\":0,\"home_video\":\"\",\"id\":13519,\"is_ready\":true,\"is_series\":true,\"language\":\"ja\",\"mal_id\":191645,\"mal_update\":true,\"name\":\"Osananajimi wo Mirume ga Kawatte Shimatta\",\"titles\":[],\"name_english\":\"The Way I Look at My Childhood Friend Has Changed\",\"original_ti"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1755184360788.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1787221440626-4cac5389-bfdf-42f6-8d25-e91e0a2fb31b.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1739369133720.jpeg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1755104713956.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1755459940606.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1748172706893.png"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1777651049943.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.mangacix.net/file/mangacix/1771946214411.webp"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/bootstrap-data?original_url=https%3A%2F%2Fmangacix.net%2Fmanga",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"data\":\"JTdCJTIyc2V0dGluZ3MlMjIlM0ElN0IlMjJkYXRlcy5mb3JtYXQlMjIlM0ElMjJkJTJGTSUyRnklMjIlMkMlMjJkYXRlcy5sb2NhbGUlMjIlM0ElMjJlbl9VUyUyMiUyQyUyMnNvY2lhbC5nb29nbGUuZW5hYmxlJTIyJTNBMSUyQyUyMnNvY2lhbC50d2l0dGVyLmVuYWJsZSUyMiUzQTAlMkMlMjJzb2NpYWwuZmFjZWJvb2suZW5hYmxlJTIyJTNBMCUyQyUyMnJlYWx0aW1lLmVuYWJsZSUyMiUzQTAlMkMlMjJyZWdpc3RyYXRpb24uZGlzYWJsZSUyMiUzQTAlMkMlMjJjYWNoZS5yZXBvcnRfbWludXRlcyUyMiUzQTYwJTJDJTIyYnJhbmRpbmcuZmF2aWNvbiUyMiUzQSUyMmNsaWVudCUyRmZhdmljb24lMkZpY29uLTE0NHgxNDQucG5nJTIyJTJDJTIyYnJhbmRpbmcubG9nb19kYXJrJTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5nX21lZGlhJTJGTkZ2QzlRTXJxWWZERjhBZmNBeWpGSnJQcXFVNXRNYzF0Wm5BTGp5Ri5wbmclMjIlMkMlMjJicmFuZGluZy5sb2dvX2xpZ2h0JTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://mangacix.net/client/assets/images/404.png"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://mangacix.net/client/assets/images/404.png"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/bootstrap-data?original_url=https%3A%2F%2Fmangacix.net%2Fwebtoon",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"data\":\"JTdCJTIyc2V0dGluZ3MlMjIlM0ElN0IlMjJkYXRlcy5mb3JtYXQlMjIlM0ElMjJkJTJGTSUyRnklMjIlMkMlMjJkYXRlcy5sb2NhbGUlMjIlM0ElMjJlbl9VUyUyMiUyQyUyMnNvY2lhbC5nb29nbGUuZW5hYmxlJTIyJTNBMSUyQyUyMnNvY2lhbC50d2l0dGVyLmVuYWJsZSUyMiUzQTAlMkMlMjJzb2NpYWwuZmFjZWJvb2suZW5hYmxlJTIyJTNBMCUyQyUyMnJlYWx0aW1lLmVuYWJsZSUyMiUzQTAlMkMlMjJyZWdpc3RyYXRpb24uZGlzYWJsZSUyMiUzQTAlMkMlMjJjYWNoZS5yZXBvcnRfbWludXRlcyUyMiUzQTYwJTJDJTIyYnJhbmRpbmcuZmF2aWNvbiUyMiUzQSUyMmNsaWVudCUyRmZhdmljb24lMkZpY29uLTE0NHgxNDQucG5nJTIyJTJDJTIyYnJhbmRpbmcubG9nb19kYXJrJTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5nX21lZGlhJTJGTkZ2QzlRTXJxWWZERjhBZmNBeWpGSnJQcXFVNXRNYzF0Wm5BTGp5Ri5wbmclMjIlMkMlMjJicmFuZGluZy5sb2dvX2xpZ2h0JTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://mangacix.net/client/assets/images/404.png"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/bootstrap-data?original_url=https%3A%2F%2Fmangacix.net%2Fwebtoons",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"data\":\"JTdCJTIyc2V0dGluZ3MlMjIlM0ElN0IlMjJkYXRlcy5mb3JtYXQlMjIlM0ElMjJkJTJGTSUyRnklMjIlMkMlMjJkYXRlcy5sb2NhbGUlMjIlM0ElMjJlbl9VUyUyMiUyQyUyMnNvY2lhbC5nb29nbGUuZW5hYmxlJTIyJTNBMSUyQyUyMnNvY2lhbC50d2l0dGVyLmVuYWJsZSUyMiUzQTAlMkMlMjJzb2NpYWwuZmFjZWJvb2suZW5hYmxlJTIyJTNBMCUyQyUyMnJlYWx0aW1lLmVuYWJsZSUyMiUzQTAlMkMlMjJyZWdpc3RyYXRpb24uZGlzYWJsZSUyMiUzQTAlMkMlMjJjYWNoZS5yZXBvcnRfbWludXRlcyUyMiUzQTYwJTJDJTIyYnJhbmRpbmcuZmF2aWNvbiUyMiUzQSUyMmNsaWVudCUyRmZhdmljb24lMkZpY29uLTE0NHgxNDQucG5nJTIyJTJDJTIyYnJhbmRpbmcubG9nb19kYXJrJTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5nX21lZGlhJTJGTkZ2QzlRTXJxWWZERjhBZmNBeWpGSnJQcXFVNXRNYzF0Wm5BTGp5Ri5wbmclMjIlMkMlMjJicmFuZGluZy5sb2dvX2xpZ2h0JTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://mangacix.net/storage/branding_media/xfXEloAXCE2dCk9XFwsiqe0pDulpNPmHOg385pXO.png"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/bootstrap-data?original_url=https%3A%2F%2Fmangacix.net%2Fbrowse",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"data\":\"JTdCJTIyc2V0dGluZ3MlMjIlM0ElN0IlMjJkYXRlcy5mb3JtYXQlMjIlM0ElMjJkJTJGTSUyRnklMjIlMkMlMjJkYXRlcy5sb2NhbGUlMjIlM0ElMjJlbl9VUyUyMiUyQyUyMnNvY2lhbC5nb29nbGUuZW5hYmxlJTIyJTNBMSUyQyUyMnNvY2lhbC50d2l0dGVyLmVuYWJsZSUyMiUzQTAlMkMlMjJzb2NpYWwuZmFjZWJvb2suZW5hYmxlJTIyJTNBMCUyQyUyMnJlYWx0aW1lLmVuYWJsZSUyMiUzQTAlMkMlMjJyZWdpc3RyYXRpb24uZGlzYWJsZSUyMiUzQTAlMkMlMjJjYWNoZS5yZXBvcnRfbWludXRlcyUyMiUzQTYwJTJDJTIyYnJhbmRpbmcuZmF2aWNvbiUyMiUzQSUyMmNsaWVudCUyRmZhdmljb24lMkZpY29uLTE0NHgxNDQucG5nJTIyJTJDJTIyYnJhbmRpbmcubG9nb19kYXJrJTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5nX21lZGlhJTJGTkZ2QzlRTXJxWWZERjhBZmNBeWpGSnJQcXFVNXRNYzF0Wm5BTGp5Ri5wbmclMjIlMkMlMjJicmFuZGluZy5sb2dvX2xpZ2h0JTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/value-lists/tmdb-countries,tmdb-languages",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"tmdb-countries\":[{\"name\":\"Andorra\",\"code\":\"AD\"},{\"name\":\"United Arab Emirates\",\"code\":\"AE\"},{\"name\":\"Afghanistan\",\"code\":\"AF\"},{\"name\":\"Antigua and Barbuda\",\"code\":\"AG\"},{\"name\":\"Anguilla\",\"code\":\"AI\"},{\"name\":\"Albania\",\"code\":\"AL\"},{\"name\":\"Armenia\",\"code\":\"AM\"},{\"name\":\"Netherlands Antilles\",\"code\":\"AN\"},{\"name\":\"Angola\",\"code\":\"AO\"},{\"name\":\"Antarctica\",\"code\":\"AQ\"},{\"name\":\"Argentina\",\"code\":\"AR\"},{\"name\":\"American Samoa\",\"code\":\"AS\"},{\"name\":\"Austria\",\"code\":\"AT\"},{\"name\":\"Australia\",\"code\":\"AU\"},{\"name\":\"Aruba\",\"code\":\"AW\"},{\"name\":\"Azerbaijan\",\"code\":\"AZ\"},{\"name\":\"Bosnia and Herzegovina\",\"code\":\"BA\"},{\"name\":\"Barbados\",\"code\":\"BB\"},{\"name\":\"Bangladesh\",\"code\":\"BD\"},{\"name\":\"Belgium"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/value-lists/tmdb-countries,tmdb-languages",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"tmdb-countries\":[{\"name\":\"Andorra\",\"code\":\"AD\"},{\"name\":\"United Arab Emirates\",\"code\":\"AE\"},{\"name\":\"Afghanistan\",\"code\":\"AF\"},{\"name\":\"Antigua and Barbuda\",\"code\":\"AG\"},{\"name\":\"Anguilla\",\"code\":\"AI\"},{\"name\":\"Albania\",\"code\":\"AL\"},{\"name\":\"Armenia\",\"code\":\"AM\"},{\"name\":\"Netherlands Antilles\",\"code\":\"AN\"},{\"name\":\"Angola\",\"code\":\"AO\"},{\"name\":\"Antarctica\",\"code\":\"AQ\"},{\"name\":\"Argentina\",\"code\":\"AR\"},{\"name\":\"American Samoa\",\"code\":\"AS\"},{\"name\":\"Austria\",\"code\":\"AT\"},{\"name\":\"Australia\",\"code\":\"AU\"},{\"name\":\"Aruba\",\"code\":\"AW\"},{\"name\":\"Azerbaijan\",\"code\":\"AZ\"},{\"name\":\"Bosnia and Herzegovina\",\"code\":\"BA\"},{\"name\":\"Barbados\",\"code\":\"BB\"},{\"name\":\"Bangladesh\",\"code\":\"BD\"},{\"name\":\"Belgium"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1787221440626-4cac5389-bfdf-42f6-8d25-e91e0a2fb31b.jpg"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1755184360788.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754448631580.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754448611091.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1771062560387.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1784170657065-d96c471f-4573-4716-9612-9d0f1e8bd9a8.png"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1739369133720.jpeg"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1755459940606.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1748172706893.png"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1755104713956.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1771946214411.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1769869168776.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1788186777618-1a7906e2-e8e4-40d8-954d-6a2833008e80.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1774977289257.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1791381811563-a49b6510-014b-4859-bec2-14480381f590.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.mangacix.net/file/mangacix/1777651049943.webp"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/titles?onlyStreamable=true&page=1&perPage=16",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"pagination\":{\"current_page\":1,\"last_page\":52,\"per_page\":16,\"data\":[{\"_id\":\"6a86d6813eb7136a3f1db094\",\"adult\":false,\"allow_update\":true,\"backdrop\":\"https://cdn.mangacix.net/file/mangacix/1787221440626-4cac5389-bfdf-42f6-8d25-e91e0a2fb31b.jpg\",\"budget\":0,\"certification\":\"pg\",\"country\":\"\",\"description\":\"Yakın zamana kadar sadece çocukluk arkadaşı olmaları gerekiyordu… ama birbirlerini tanımaya başlayınca artık geri dönüş yok.\",\"episode_count\":0,\"home_video\":\"\",\"id\":13519,\"is_ready\":true,\"is_series\":true,\"language\":\"ja\",\"mal_id\":191645,\"mal_update\":true,\"name\":\"Osananajimi wo Mirume ga Kawatte Shimatta\",\"titles\":[],\"name_english\":\"The Way I Look at My Childhood Friend Has Changed\",\"original_ti"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://mangacix.net/storage/branding_media/xfXEloAXCE2dCk9XFwsiqe0pDulpNPmHOg385pXO.png"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/bootstrap-data?original_url=https%3A%2F%2Fmangacix.net%2Fsearch%3Fq%3Da",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"data\":\"JTdCJTIyc2V0dGluZ3MlMjIlM0ElN0IlMjJkYXRlcy5mb3JtYXQlMjIlM0ElMjJkJTJGTSUyRnklMjIlMkMlMjJkYXRlcy5sb2NhbGUlMjIlM0ElMjJlbl9VUyUyMiUyQyUyMnNvY2lhbC5nb29nbGUuZW5hYmxlJTIyJTNBMSUyQyUyMnNvY2lhbC50d2l0dGVyLmVuYWJsZSUyMiUzQTAlMkMlMjJzb2NpYWwuZmFjZWJvb2suZW5hYmxlJTIyJTNBMCUyQyUyMnJlYWx0aW1lLmVuYWJsZSUyMiUzQTAlMkMlMjJyZWdpc3RyYXRpb24uZGlzYWJsZSUyMiUzQTAlMkMlMjJjYWNoZS5yZXBvcnRfbWludXRlcyUyMiUzQTYwJTJDJTIyYnJhbmRpbmcuZmF2aWNvbiUyMiUzQSUyMmNsaWVudCUyRmZhdmljb24lMkZpY29uLTE0NHgxNDQucG5nJTIyJTJDJTIyYnJhbmRpbmcubG9nb19kYXJrJTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5nX21lZGlhJTJGTkZ2QzlRTXJxWWZERjhBZmNBeWpGSnJQcXFVNXRNYzF0Wm5BTGp5Ri5wbmclMjIlMkMlMjJicmFuZGluZy5sb2dvX2xpZ2h0JTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1782241966076.jpg"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1782242623895.jpg"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1782245716397.png"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1782244831916.png"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1782244261517.jpg"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754689179006.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754682459268.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754932328523.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1704919396918.jpg"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/homepage/lists-guests",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"lists\":[{\"mal_status\":\"none\",\"mal_last_sync\":null,\"_id\":\"64d8a19960c80f2b9dd73273\",\"id\":288580,\"name\":\"Manga Ana Sayfa\",\"description\":null,\"user_id\":1,\"system\":false,\"public\":true,\"style\":\"\",\"image\":\"https://webtoon-tr.com/wp-content/uploads/2021/04/te-beginggin.jpg\",\"auto_update\":\"null\",\"created_at\":\"2022-06-19T21:05:12.000Z\",\"updated_at\":\"2022-06-20T00:06:03.000Z\",\"likeCount\":42,\"items\":[{\"_id\":\"6a3ae9587c4b18b15db3b6b0\",\"id\":401,\"title\":\"The One Piece Anime’sinin İlk Bölüm Görseli Yayınlandı! \",\"body\":\"The One Piece için Netflix, Eiichiro Oda’nın efsanevi manga serisinden uyarlanan yapım hakkında yeni detayları kademeli olarak paylaşmaya devam ediyor; bugün yayınlanan ilk bölüm görseli "
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754448611091.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1784170657065-d96c471f-4573-4716-9612-9d0f1e8bd9a8.png"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1791381811563-a49b6510-014b-4859-bec2-14480381f590.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1788186777618-1a7906e2-e8e4-40d8-954d-6a2833008e80.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1788187222755-19c49562-cd52-4972-8979-64488f102abc.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1769869168776.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754949769298.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1754448631580.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1774977289257.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.mangacix.net/file/mangacix/1771062560387.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/last-episodes?page=1",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"current_page\":1,\"data\":[{\"_id\":\"6acb9e7521989f9740bc3aad\",\"release_date\":\"2026-10-11T14:34:29.657Z\",\"title_id\":12074,\"episode_number\":152,\"created_at\":\"2026-10-11T14:34:29.658Z\",\"title_name\":\"Kaoru Hana wa Rin to Saku\",\"title_poster\":\"https://cdn.mangacix.net/file/mangacix/1754448611091.webp\",\"title_type\":\"manga\",\"model_type\":\"episode\"},{\"_id\":\"6ac8252abc8bc2ef150b4b47\",\"release_date\":\"2026-10-08T23:20:10.373Z\",\"title_id\":13469,\"episode_number\":13,\"created_at\":\"2026-10-08T23:20:10.373Z\",\"title_name\":\"Shadow Slave\",\"title_poster\":\"https://cdn.mangacix.net/file/mangacix/1784170657065-d96c471f-4573-4716-9612-9d0f1e8bd9a8.png\",\"title_type\":\"manhwa\",\"model_type\":\"episode\"},{\"_id\":\"6ac64f1b0fcf3"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/homepage/lists-guests",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"lists\":[{\"mal_status\":\"none\",\"mal_last_sync\":null,\"_id\":\"64d8a19960c80f2b9dd73273\",\"id\":288580,\"name\":\"Manga Ana Sayfa\",\"description\":null,\"user_id\":1,\"system\":false,\"public\":true,\"style\":\"\",\"image\":\"https://webtoon-tr.com/wp-content/uploads/2021/04/te-beginggin.jpg\",\"auto_update\":\"null\",\"created_at\":\"2022-06-19T21:05:12.000Z\",\"updated_at\":\"2022-06-20T00:06:03.000Z\",\"likeCount\":42,\"items\":[{\"_id\":\"6a3ae9587c4b18b15db3b6b0\",\"id\":401,\"title\":\"The One Piece Anime’sinin İlk Bölüm Görseli Yayınlandı! \",\"body\":\"The One Piece için Netflix, Eiichiro Oda’nın efsanevi manga serisinden uyarlanan yapım hakkında yeni detayları kademeli olarak paylaşmaya devam ediyor; bugün yayınlanan ilk bölüm görseli "
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/last-episodes?page=1",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"current_page\":1,\"data\":[{\"_id\":\"6acb9e7521989f9740bc3aad\",\"release_date\":\"2026-10-11T14:34:29.657Z\",\"title_id\":12074,\"episode_number\":152,\"created_at\":\"2026-10-11T14:34:29.658Z\",\"title_name\":\"Kaoru Hana wa Rin to Saku\",\"title_poster\":\"https://cdn.mangacix.net/file/mangacix/1754448611091.webp\",\"title_type\":\"manga\",\"model_type\":\"episode\"},{\"_id\":\"6ac8252abc8bc2ef150b4b47\",\"release_date\":\"2026-10-08T23:20:10.373Z\",\"title_id\":13469,\"episode_number\":13,\"created_at\":\"2026-10-08T23:20:10.373Z\",\"title_name\":\"Shadow Slave\",\"title_poster\":\"https://cdn.mangacix.net/file/mangacix/1784170657065-d96c471f-4573-4716-9612-9d0f1e8bd9a8.png\",\"title_type\":\"manhwa\",\"model_type\":\"episode\"},{\"_id\":\"6ac64f1b0fcf3"
+  },
+  {
+   "tag": "list:apiseries",
+   "image": "https://mangacix.net/client/assets/images/404.png"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/bootstrap-data?original_url=https%3A%2F%2Fmangacix.net%2Fapi%2Fseries",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"data\":\"JTdCJTIyc2V0dGluZ3MlMjIlM0ElN0IlMjJkYXRlcy5mb3JtYXQlMjIlM0ElMjJkJTJGTSUyRnklMjIlMkMlMjJkYXRlcy5sb2NhbGUlMjIlM0ElMjJlbl9VUyUyMiUyQyUyMnNvY2lhbC5nb29nbGUuZW5hYmxlJTIyJTNBMSUyQyUyMnNvY2lhbC50d2l0dGVyLmVuYWJsZSUyMiUzQTAlMkMlMjJzb2NpYWwuZmFjZWJvb2suZW5hYmxlJTIyJTNBMCUyQyUyMnJlYWx0aW1lLmVuYWJsZSUyMiUzQTAlMkMlMjJyZWdpc3RyYXRpb24uZGlzYWJsZSUyMiUzQTAlMkMlMjJjYWNoZS5yZXBvcnRfbWludXRlcyUyMiUzQTYwJTJDJTIyYnJhbmRpbmcuZmF2aWNvbiUyMiUzQSUyMmNsaWVudCUyRmZhdmljb24lMkZpY29uLTE0NHgxNDQucG5nJTIyJTJDJTIyYnJhbmRpbmcubG9nb19kYXJrJTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5nX21lZGlhJTJGTkZ2QzlRTXJxWWZERjhBZmNBeWpGSnJQcXFVNXRNYzF0Wm5BTGp5Ri5wbmclMjIlMkMlMjJicmFuZGluZy5sb2dvX2xpZ2h0JTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://mangacix.net/client/assets/images/404.png"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "GET",
+   "url": "https://mangacix.net/secure/bootstrap-data?original_url=https%3A%2F%2Fmangacix.net%2Fapi%2Fmanga",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"data\":\"JTdCJTIyc2V0dGluZ3MlMjIlM0ElN0IlMjJkYXRlcy5mb3JtYXQlMjIlM0ElMjJkJTJGTSUyRnklMjIlMkMlMjJkYXRlcy5sb2NhbGUlMjIlM0ElMjJlbl9VUyUyMiUyQyUyMnNvY2lhbC5nb29nbGUuZW5hYmxlJTIyJTNBMSUyQyUyMnNvY2lhbC50d2l0dGVyLmVuYWJsZSUyMiUzQTAlMkMlMjJzb2NpYWwuZmFjZWJvb2suZW5hYmxlJTIyJTNBMCUyQyUyMnJlYWx0aW1lLmVuYWJsZSUyMiUzQTAlMkMlMjJyZWdpc3RyYXRpb24uZGlzYWJsZSUyMiUzQTAlMkMlMjJjYWNoZS5yZXBvcnRfbWludXRlcyUyMiUzQTYwJTJDJTIyYnJhbmRpbmcuZmF2aWNvbiUyMiUzQSUyMmNsaWVudCUyRmZhdmljb24lMkZpY29uLTE0NHgxNDQucG5nJTIyJTJDJTIyYnJhbmRpbmcubG9nb19kYXJrJTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5nX21lZGlhJTJGTkZ2QzlRTXJxWWZERjhBZmNBeWpGSnJQcXFVNXRNYzF0Wm5BTGp5Ri5wbmclMjIlMkMlMjJicmFuZGluZy5sb2dvX2xpZ2h0JTIyJTNBJTIyc3RvcmFnZSUyRmJyYW5kaW5"
+  }
+ ],
+ "errors": [],
+ "frameworks": [],
+ "links": {
+  "series": null
+ },
+ "homeStatus": 200,
+ "title": "MangaciX - Türkçe manga, novel, manhua, manhwa oku"
+}
