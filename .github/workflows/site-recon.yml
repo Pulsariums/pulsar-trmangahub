@@ -8,6 +8,9 @@ on:
         type: string
         required: true
 
+permissions:
+  contents: write
+
 jobs:
   recon:
     runs-on: ubuntu-latest
@@ -31,3 +34,16 @@ jobs:
         with:
           name: recon-out
           path: recon-out
+      - name: Kesif kayitlarini depoya isle
+        if: always()
+        run: |
+          mkdir -p data/recon
+          rm -rf data/recon/*
+          for f in recon-out/*; do
+            case "$f" in *.html) head -c 90000 "$f" > "data/recon/$(basename "$f")";; *) cp "$f" data/recon/;; esac
+          done
+          git config user.name pulsarium
+          git config user.email pulsariums@gmail.com
+          git add data/recon
+          git diff --cached --quiet || git commit -qm "chore(recon): site kesif kayitlari"
+          git pull -q --rebase origin main && git push -q origin main
