@@ -82,6 +82,9 @@ jobs:
             tn=$(echo "$title" | tr 'A-Z' 'a-z' | tr -cd 'a-z0-9')
             echo "$tn" | grep -q "$stem" || continue
             grep -qiE 'manga|webtoon|manhwa|bölüm|bolum|chapter|çizgi roman' b.html || continue
+            # Türkçe site olmalı: html lang=tr veya Türkçe harf/kelime yoğunluğu
+            grep -qiE '<html[^>]*lang="?tr|türkçe|bölüm|okumaya|seriler|güncel' b.html || continue
+            [ "$(grep -oE '[ığşçöüİĞŞÇÖÜ]' b.html | wc -l)" -ge 30 ] || continue
             cf=$(grep -ci 'just a moment\|cf-mitigated\|challenge-platform' b.html)
             echo "$d" >> accepted.txt
             echo "KABUL $d | $title | cf=$cf"
@@ -91,18 +94,41 @@ jobs:
       - name: Kabul edilenleri kayda al ve parser üret
         run: |
           set +e
-          python scripts/sync.py
-          while read d; do
-            echo "== $d"
-            python scripts/analyze_site.py --url "https://$d" --format jar --engine auto --register 1 || echo "analiz başarısız: $d"
-          done < accepted.txt
+          if [ ! -s accepted.txt ]; then echo "kabul edilen yok"; exit 0; fi
           git config user.name "pulsar-trmangahub-bot"
           git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
-          [ -d sources/custom ] && git add sources/custom
-          [ -d generated ] && git add generated
-          if git diff --cached --quiet; then echo "yeni kayıt yok"; exit 0; fi
-          git commit -m "chore(bakim): keşfedilen yeni alan adları eklendi"
-          for i in 1 2 3; do git pull -q --rebase origin "${{ github.ref_name }}" && git push -q origin "HEAD:${{ github.ref_name }}" && exit 0; sleep $((i*5)); done
+          npm init -y >/dev/null; npm i playwright@1.49.1 >/dev/null 2>&1
+          npx playwright install --with-deps chromium >/dev/null 2>&1
+          register_all() {
+            python scripts/sync.py >/dev/null
+            while read d; do
+              echo "== $d"
+              python scripts/analyze_site.py --url "https://$d" --format jar --engine auto --register 1 || { echo "analiz başarısız: $d"; continue; }
+              verdict=$(jq -r '.verdict // ""' data/analyze_result.json)
+              if [ "$verdict" = "unsupported_engine" ]; then
+                echo "bilinen motor yok: derin analiz"
+                rm -rf recon-out; node scripts/recon.mjs "https://$d" >/dev/null 2>&1
+                if [ -f "recon-out/$d.spec.json" ]; then
+                  node scripts/genparser.mjs "recon-out/$d.spec.json" && echo "parser üretildi: $d"
+                  mkdir -p data/recon
+                  for f in recon-out/*; do case "$f" in *.html) head -c 300000 "$f" > "data/recon/$(basename "$f")";; *) cp "$f" data/recon/;; esac; done
+                else
+                  echo "spec üretilemedi: $d"
+                fi
+              fi
+            done < accepted.txt
+          }
+          for i in 1 2 3; do
+            git fetch -q origin "${{ github.ref_name }}" && git reset -q --hard "origin/${{ github.ref_name }}"
+            register_all
+            [ -d sources/custom ] && git add sources/custom
+            [ -d generated ] && git add generated
+            [ -d data/recon ] && git add -f data/recon
+            if git diff --cached --quiet; then echo "yeni kayıt yok"; exit 0; fi
+            git commit -qm "chore(bakim): keşfedilen yeni alan adları eklendi"
+            git push -q origin "HEAD:${{ github.ref_name }}" && { echo "kayıtlar gönderildi"; exit 0; }
+            echo "push çakıştı, yeniden deneniyor ($i)"; sleep $((i*5))
+          done
           exit 1
 
       - name: Alt iş akışlarını sırayla çalıştır
