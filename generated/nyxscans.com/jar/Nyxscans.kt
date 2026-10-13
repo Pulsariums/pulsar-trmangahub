@@ -9,9 +9,9 @@ import org.koitharu.kotatsu.parsers.model.*
 import org.koitharu.kotatsu.parsers.util.*
 import java.util.EnumSet
 
-@MangaSourceParser("NYXSCANS", "Nyx Scans", "tr")
+@MangaSourceParser("NYXSCANS_TR", "Nyx Scans", "tr")
 internal class Nyxscans(context: MangaLoaderContext) :
-	PagedMangaParser(context, MangaParserSource.NYXSCANS, pageSize = 24) {
+	PagedMangaParser(context, MangaParserSource.NYXSCANS_TR, pageSize = 24) {
 
 	override val configKeyDomain = ConfigKey.Domain("nyxscans.com")
 

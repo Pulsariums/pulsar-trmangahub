@@ -269,10 +269,15 @@ def scan_extras(extra_dir, entries, include_unverified):
 def copy_extras(upstream, extras, taken_ids):
     """Copy extra parser files into the upstream tree and confirm each registration."""
     seen = {}
+    kept = []
     for item in extras:
         if item["id"] in taken_ids or item["id"] in seen:
-            fail(f"ozel parser id çakışıyor: {item['id']} ({item['rel']})")
+            # Bir ozel parser'in cakismasi tum paketi dusurmesin: atla ve uyar.
+            print(f"UYARI: ozel parser id cakisiyor, atlandi: {item['id']} ({item['rel']})", file=sys.stderr)
+            continue
         seen[item["id"]] = item["rel"]
+        kept.append(item)
+    extras = kept
     dest_root = os.path.join(upstream, PARSERS_DIR, "site", "ozel")
     copied = []
     for item in extras:
