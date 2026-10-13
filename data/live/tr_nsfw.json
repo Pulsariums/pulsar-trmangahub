@@ -1,16 +1,186 @@
 {
-  "checked_at": "2026-10-13T05:48:50Z",
+  "checked_at": "2026-10-13T06:06:30Z",
   "results": [
+    {
+      "error_class": "empty",
+      "stage": "list",
+      "ms": 654,
+      "domain": "alliedfansub.net",
+      "name": "AlliedFansub",
+      "id": "ALLIED_FANSUB",
+      "list": 0,
+      "ok": false,
+      "error": "Liste boş döndü"
+    },
     {
       "error_class": "rate_limit",
       "stage": "details",
-      "ms": 5055,
+      "ms": 4863,
       "domain": "tuhafscans.com",
       "name": "LunaScans",
       "id": "LUNASCANS",
       "list": 12,
       "ok": false,
       "error": ". Status=429, URL=[https://tuhafscans.com/manga/light/]"
+    },
+    {
+      "error_class": "http_gone",
+      "stage": "list",
+      "ms": 733,
+      "domain": "fuchscans.com",
+      "name": "DeccalScans",
+      "id": "DECCALSCANS",
+      "ok": false,
+      "error": ". Status=404, URL=[https://fuchscans.com/wp-admin/admin-ajax.php]"
+    },
+    {
+      "error_class": "empty",
+      "stage": "list",
+      "ms": 652,
+      "domain": "laviniafansub.site",
+      "name": "LaviniaFansub",
+      "id": "LAVINIAFANSUB",
+      "list": 0,
+      "ok": false,
+      "error": "Liste boş döndü"
+    },
+    {
+      "error_class": "connect",
+      "stage": "list",
+      "ms": 243,
+      "domain": "mindafansub.online",
+      "name": "MindaFansub",
+      "id": "MINDAFANSUB",
+      "ok": false,
+      "error": "Failed to connect to mindafansub.online/127.0.0.1:443"
+    },
+    {
+      "error_class": "timeout",
+      "stage": "list",
+      "ms": 21148,
+      "domain": "piedpiperfansubyy.me",
+      "name": "PiedPiperFansubyy",
+      "id": "PIEDPIPERFANSUBYY",
+      "ok": false,
+      "error": "Connect timed out"
+    },
+    {
+      "error_class": "cloudflare",
+      "stage": "list",
+      "ms": 109,
+      "domain": "yaoimangaoku.net",
+      "name": "YaoiMangaOku",
+      "id": "YAOIMANGAOKU",
+      "ok": false,
+      "error": "Protected by CloudFlare: https://yaoimangaoku.net/wp-admin/admin-ajax.php"
+    },
+    {
+      "error_class": "http_gone",
+      "stage": "list",
+      "ms": 316,
+      "domain": "qemow.com",
+      "name": "YaoiFlix",
+      "id": "YAOIFLIX",
+      "ok": false,
+      "error": ". Status=404, URL=[https://qemow.com/wp-admin/admin-ajax.php]"
+    },
+    {
+      "error_class": "parse",
+      "stage": "pages",
+      "chapters": 6,
+      "ms": 3124,
+      "domain": "www.kuroimanga.com",
+      "name": "KuroiManga",
+      "id": "KUROIMANGA",
+      "list": 12,
+      "ok": false,
+      "error": "Authorization required"
+    },
+    {
+      "error_class": "dns",
+      "stage": "list",
+      "ms": 41,
+      "domain": "viyafansub.com",
+      "name": "ViyaFansub",
+      "id": "VIYAFANSUB",
+      "ok": false,
+      "error": "viyafansub.com: Name or service not known"
+    },
+    {
+      "error_class": "parse",
+      "stage": "pages",
+      "chapters": 40,
+      "ms": 2116,
+      "domain": "tonizu.top",
+      "name": "ToniZu.com",
+      "id": "TONIZUTOON",
+      "list": 11,
+      "ok": false,
+      "error": "Authorization required"
+    },
+    {
+      "error_class": "dns",
+      "stage": "list",
+      "ms": 41,
+      "domain": "jiangzaitoon.top",
+      "name": "JiangzaiToon",
+      "id": "JIANGZAITOON",
+      "ok": false,
+      "error": "jiangzaitoon.top: Name or service not known"
+    },
+    {
+      "error_class": "empty",
+      "stage": "list",
+      "ms": 830,
+      "domain": "sarcasmscans.com",
+      "name": "SarcasmScans",
+      "id": "SARCASMSCANS",
+      "list": 0,
+      "ok": false,
+      "error": "Liste boş döndü"
+    },
+    {
+      "error_class": "rate_limit",
+      "stage": "details",
+      "ms": 543,
+      "domain": "mikrokosmosfb.blogspot.com",
+      "name": "Mikrokosmosfb",
+      "id": "MIKROKOSMOSFB",
+      "list": 21,
+      "ok": false,
+      "error": ". Status=429, URL=[https://www.google.com/sorry/index?continue=https://mikrokosmosfb.blogspot.com/2021/07/abyss.html&q=EgQoTL-nGNKUt9YGIi32UJhBeaRgdu2d_yNqPZkB8AZYRq5B0KJBQ-keoryrl9yAWwj49XvwFEsSTqIyAnJSWgFD]"
+    },
+    {
+      "error_class": "rate_limit",
+      "stage": "list",
+      "ms": 127,
+      "domain": "google.com",
+      "name": "SnscoeurTurkey",
+      "id": "SNSCOEURTURKEY",
+      "ok": false,
+      "error": ". Status=404, URL=[https://google.com/feeds/posts/default/-/Seriler?alt=json&orderby=published&max-results=21&start-index=1]"
+    },
+    {
+      "pages": 1,
+      "stage": "image",
+      "chapters": 54,
+      "ms": 3231,
+      "domain": "arcurafansub.com",
+      "name": "ArcuraFansub",
+      "id": "ARCURAFANSUB",
+      "list": 20,
+      "ok": true
+    },
+    {
+      "error_class": "empty",
+      "stage": "list",
+      "ms": 722,
+      "domain": "moondaisyscans.biz",
+      "name": "MoonDaisyScans",
+      "id": "MOONDAISY_SCANS",
+      "list": 0,
+      "ok": false,
+      "error": "Liste boş döndü"
     }
   ]
 }
