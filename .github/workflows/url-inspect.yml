@@ -10,7 +10,7 @@ on:
       link_pattern:
         description: 'Manga linkini seçen grep deseni'
         type: string
-        default: '/manga/[^/"]+/"'
+        default: '/(manga|seri|series|webtoon|manhwa)/[^/]+/$'
 
 jobs:
   inspect:
@@ -26,6 +26,7 @@ jobs:
           for p in $PAGES; do
             echo "##### $p"
             curl -sS -L -m 25 -A "$UA" -o /tmp/l.html -w 'list: %{http_code} %{url_effective}\n' "$p"
+            echo "-- ilk linkler:"; grep -oE "href=\"https?://[^\"]+\"" /tmp/l.html | sed "s/href=\"//;s/\"$//" | sort -u | head -25
             host=$(echo "$p" | sed -E 's|(https?://[^/]+).*|\1|')
             link=$(grep -oE "https?://[^\"' ]+" /tmp/l.html | grep -E "$PAT" | head -1)
             [ -z "$link" ] && link=$(grep -oE 'href="[^"]+"' /tmp/l.html | sed 's/href="//;s/"$//' | grep -E "$PAT" | head -1)
