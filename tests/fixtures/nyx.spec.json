@@ -1,0 +1,36 @@
+{
+  "domain": "nyxscans.com",
+  "title": "Nyx Scans",
+  "mode": "html",
+  "list": {
+    "path": "/series",
+    "pageParam": "",
+    "search": false,
+    "item": "div[class*='grid-cols-'] > div",
+    "link": "a[href^='/series/']@href",
+    "title": "img@alt",
+    "cover": "img@src",
+    "itemCount": null
+  },
+  "detail": {
+    "title": "h1",
+    "cover": "img.series-cover@src",
+    "description": ".series-description",
+    "genres": ".series-genres > *",
+    "status": ".series-kicker",
+    "chapterItem": "a.chapter-card",
+    "chapterLink": "a.chapter-card@href",
+    "chapterTitle": "a.chapter-card"
+  },
+  "reader": {
+    "images": "img[data-reader-page-image='true']@src",
+    "attr": "src",
+    "count": null
+  },
+  "api": [],
+  "confidence": {
+    "list": "low",
+    "detail": "medium",
+    "reader": "medium"
+  }
+}
