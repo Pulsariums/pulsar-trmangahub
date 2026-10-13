@@ -1,26 +1,15 @@
 {
-  "checked_at": "2026-10-13T09:24:27Z",
+  "checked_at": "2026-10-13T10:21:02Z",
   "results": [
     {
-      "error_class": "cloudflare",
+      "error_class": "http",
       "stage": "list",
-      "ms": 665,
-      "domain": "mangawt.com",
-      "name": "MangaWt.com",
-      "id": "MANGAWT",
+      "ms": 13686,
+      "domain": "siyahmelek.my",
+      "name": "Grimelek",
+      "id": "GRIMELEK",
       "ok": false,
-      "error": "Protected by CloudFlare: https://mangawt.com/?s=&post_type=wp-manga&m_orderby=latest"
-    },
-    {
-      "pages": 13,
-      "stage": "image",
-      "chapters": 141,
-      "ms": 8810,
-      "domain": "ragnarscans.net",
-      "name": "Ragnarscans",
-      "id": "RAGNARSCANS",
-      "list": 24,
-      "ok": true
+      "error": ". Status=400, URL=[https://siyahmelek.my/wp-admin/admin-ajax.php]"
     }
   ]
 }

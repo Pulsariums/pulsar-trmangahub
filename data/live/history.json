@@ -519,13 +519,13 @@
   "GRIMELEK": {
     "first_seen": "2026-10-12T21:06:46Z",
     "ok_streak": 0,
-    "fail_streak": 4,
+    "fail_streak": 5,
     "name": "Grimelek",
-    "domain": "siyahmelek.org",
-    "checked": "2026-10-13T06:03:56Z",
-    "last_fail": "2026-10-13T06:03:56Z",
-    "error_class": "dns",
-    "last_error": "siyahmelek.org: Name or service not known",
+    "domain": "siyahmelek.my",
+    "checked": "2026-10-13T10:21:02Z",
+    "last_fail": "2026-10-13T10:21:02Z",
+    "error_class": "http",
+    "last_error": ". Status=400, URL=[https://siyahmelek.my/wp-admin/admin-ajax.php]",
     "stage": "list"
   },
   "KEDI": {
