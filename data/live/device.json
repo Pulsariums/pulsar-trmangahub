@@ -1,8 +1,12 @@
 {
-  "generated": "2026-10-13T06:30:16.514Z",
+  "generated": "2026-10-13T09:20:10.261Z",
   "sources": [
     {
-      "name": "GAFELAND",
+      "name": "RAVENSCANS_TR",
+      "status": "pass"
+    },
+    {
+      "name": "RAGNARSCANS",
       "status": "fail",
       "steps": {
         "LIST": "pass",
@@ -14,16 +18,112 @@
       }
     },
     {
-      "name": "ARCURAFANSUB",
-      "status": "pass"
-    },
-    {
       "name": "ADONISFANSUB",
       "status": "pass"
     },
     {
       "name": "GAIATOON",
       "status": "pass"
+    },
+    {
+      "name": "MANGA_DENIZI",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAWT",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "MANGAWOW",
+      "status": "pass"
+    },
+    {
+      "name": "ARCURAFANSUB",
+      "status": "pass"
+    },
+    {
+      "name": "NIRVANAMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "MIKROKOSMOSFB",
+      "status": "pass"
+    },
+    {
+      "name": "NYXSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "MOONDAISY_SCANS",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "TILKISCANS",
+      "status": "pass"
+    },
+    {
+      "name": "PATIMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "MERLINSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "SEREINSCAN",
+      "status": "pass"
+    },
+    {
+      "name": "TORTUGACEVIRI",
+      "status": "pass"
+    },
+    {
+      "name": "ROMANTIKMANGA",
+      "status": "cloudflare"
+    },
+    {
+      "name": "SHIJIESCANS",
+      "status": "pass"
+    },
+    {
+      "name": "RUYAMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "TRMANGAOKU",
+      "status": "pass"
+    },
+    {
+      "name": "ZENITHSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "YAOIMANGAOKU",
+      "status": "cloudflare"
+    },
+    {
+      "name": "GAFELAND",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "SEARCH": "pass"
+      }
     },
     {
       "name": "LUNASCANS",
@@ -38,51 +138,11 @@
       }
     },
     {
-      "name": "MANGA_DENIZI",
-      "status": "pass"
-    },
-    {
-      "name": "MANGAWOW",
-      "status": "pass"
-    },
-    {
-      "name": "MIKROKOSMOSFB",
-      "status": "pass"
-    },
-    {
-      "name": "MERLINSCANS",
-      "status": "pass"
-    },
-    {
-      "name": "NIRVANAMANGA",
-      "status": "pass"
-    },
-    {
-      "name": "NYXSCANS",
-      "status": "pass"
-    },
-    {
-      "name": "PATIMANGA",
-      "status": "pass"
-    },
-    {
       "name": "SADSCANS",
       "status": "fail",
       "steps": {
         "LIST": "fail",
         "SEARCH": "fail"
-      }
-    },
-    {
-      "name": "RUYAMANGA",
-      "status": "pass"
-    },
-    {
-      "name": "ROMANTIKMANGA",
-      "status": "cloudflare",
-      "steps": {
-        "LIST": "cloudflare",
-        "SEARCH": "cloudflare"
       }
     },
     {
@@ -94,22 +154,6 @@
       }
     },
     {
-      "name": "SEREINSCAN",
-      "status": "pass"
-    },
-    {
-      "name": "TILKISCANS",
-      "status": "pass"
-    },
-    {
-      "name": "TORTUGACEVIRI",
-      "status": "pass"
-    },
-    {
-      "name": "TRMANGAOKU",
-      "status": "pass"
-    },
-    {
       "name": "WEBTOONTR",
       "status": "fail",
       "steps": {
@@ -119,22 +163,6 @@
         "CHAPTERS": "pass",
         "PAGES": "fail",
         "SEARCH": "pass"
-      }
-    },
-    {
-      "name": "ZENITHSCANS",
-      "status": "pass"
-    },
-    {
-      "name": "SHIJIESCANS",
-      "status": "pass"
-    },
-    {
-      "name": "YAOIMANGAOKU",
-      "status": "cloudflare",
-      "steps": {
-        "LIST": "cloudflare",
-        "SEARCH": "cloudflare"
       }
     }
   ]
