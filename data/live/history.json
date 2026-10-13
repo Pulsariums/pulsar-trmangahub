@@ -1396,14 +1396,15 @@
   },
   "MOONDAISY_SCANS": {
     "first_seen": "2026-10-12T21:08:43Z",
-    "ok_streak": 0,
-    "fail_streak": 4,
+    "ok_streak": 1,
+    "fail_streak": 0,
     "name": "MoonDaisyScans",
-    "domain": "moondaisyscans.biz",
-    "checked": "2026-10-13T06:06:30Z",
+    "domain": "moondaisyscans.pro",
+    "checked": "2026-10-13T06:37:44Z",
     "last_fail": "2026-10-13T06:06:30Z",
-    "error_class": "empty",
-    "last_error": "Liste boş döndü",
-    "stage": "list"
+    "error_class": null,
+    "last_error": null,
+    "stage": "image",
+    "last_ok": "2026-10-13T06:37:44Z"
   }
 }
