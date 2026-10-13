@@ -735,13 +735,13 @@
   "RAGNARSCANS": {
     "first_seen": "2026-10-12T21:06:46Z",
     "ok_streak": 0,
-    "fail_streak": 2,
+    "fail_streak": 3,
     "name": "Ragnarscans",
     "domain": "ragnarscans.net",
-    "checked": "2026-10-13T06:40:05Z",
-    "last_fail": "2026-10-13T06:40:05Z",
-    "error_class": "http",
-    "last_error": ". Status=400, URL=[https://ragnarscans.net/wp-admin/admin-ajax.php]",
+    "checked": "2026-10-13T06:45:53Z",
+    "last_fail": "2026-10-13T06:45:53Z",
+    "error_class": "empty",
+    "last_error": "Liste boş döndü",
     "stage": "list",
     "last_ok": "2026-10-12T21:42:32Z"
   },

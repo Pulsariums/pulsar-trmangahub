@@ -1,15 +1,16 @@
 {
-  "checked_at": "2026-10-13T06:40:05Z",
+  "checked_at": "2026-10-13T06:45:53Z",
   "results": [
     {
-      "error_class": "http",
+      "error_class": "empty",
       "stage": "list",
-      "ms": 787,
+      "ms": 1431,
       "domain": "ragnarscans.net",
       "name": "Ragnarscans",
       "id": "RAGNARSCANS",
+      "list": 0,
       "ok": false,
-      "error": ". Status=400, URL=[https://ragnarscans.net/wp-admin/admin-ajax.php]"
+      "error": "Liste boş döndü"
     }
   ]
 }
