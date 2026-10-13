@@ -1205,13 +1205,13 @@
   "LUNASCANS": {
     "first_seen": "2026-10-12T21:08:43Z",
     "ok_streak": 0,
-    "fail_streak": 4,
+    "fail_streak": 5,
     "name": "LunaScans",
     "domain": "tuhafscans.com",
-    "checked": "2026-10-13T05:14:53Z",
-    "last_fail": "2026-10-13T05:14:53Z",
-    "error_class": "empty",
-    "last_error": "İlk 3 mangada bölüm yok",
+    "checked": "2026-10-13T05:39:46Z",
+    "last_fail": "2026-10-13T05:39:46Z",
+    "error_class": "rate_limit",
+    "last_error": ". Status=429, URL=[https://tuhafscans.com/manga/light/]",
     "stage": "details"
   },
   "DECCALSCANS": {

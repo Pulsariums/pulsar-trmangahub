@@ -1,28 +1,16 @@
 {
-  "checked_at": "2026-10-13T05:14:53Z",
+  "checked_at": "2026-10-13T05:39:46Z",
   "results": [
     {
-      "error_class": "empty",
+      "error_class": "rate_limit",
       "stage": "details",
-      "chapters": 0,
-      "ms": 5852,
+      "ms": 5365,
       "domain": "tuhafscans.com",
       "name": "LunaScans",
       "id": "LUNASCANS",
       "list": 12,
       "ok": false,
-      "error": "İlk 3 mangada bölüm yok"
-    },
-    {
-      "error_class": "parse",
-      "stage": "details",
-      "ms": 3455,
-      "domain": "niverafansub.org",
-      "name": "NiveraFansub",
-      "id": "NIVERAFANSUB",
-      "list": 16,
-      "ok": false,
-      "error": "Too many follow-up requests: 21"
+      "error": ". Status=429, URL=[https://tuhafscans.com/manga/light/]"
     }
   ]
 }
