@@ -6,9 +6,9 @@ import org.koitharu.kotatsu.parsers.model.MangaListFilterCapabilities
 import org.koitharu.kotatsu.parsers.model.MangaParserSource
 import org.koitharu.kotatsu.parsers.site.mangareader.MangaReaderParser
 
-@MangaSourceParser("RAVENSCANS", "Raven Scans", "tr")
+@MangaSourceParser("RAVENSCANS_TR", "Raven Scans", "tr")
 internal class RavenScans(context: MangaLoaderContext) :
-	MangaReaderParser(context, MangaParserSource.RAVENSCANS, "ravenscans.org", pageSize = 20, searchPageSize = 10) {
+	MangaReaderParser(context, MangaParserSource.RAVENSCANS_TR, "ravenscans.org", pageSize = 20, searchPageSize = 10) {
 	override val filterCapabilities: MangaListFilterCapabilities
 		get() = super.filterCapabilities.copy(
 			isTagsExclusionSupported = true,
