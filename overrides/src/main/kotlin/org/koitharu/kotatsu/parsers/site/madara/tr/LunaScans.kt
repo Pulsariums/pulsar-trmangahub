@@ -9,7 +9,6 @@ import org.koitharu.kotatsu.parsers.site.madara.MadaraParser
 @MangaSourceParser("LUNASCANS", "LunaScans", "tr", ContentType.HENTAI)
 internal class LunaScans(context: MangaLoaderContext) :
 	MadaraParser(context, MangaParserSource.LUNASCANS, "tuhafscans.com") {
-	override val postReq = true
 	override val withoutAjax = true
 	override val datePattern = "dd MMMM yyyy"
 }

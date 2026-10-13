@@ -60,6 +60,7 @@ jobs:
           for u in $DUMP; do
             echo "##### DUMP $u"
             curl -sS -L -m 25 -A "$UA" -o /tmp/d.html -w 'status: %{http_code} %{url_effective}\n' "$u"
+            echo "-- ilk 1200 bayt:"; head -c 1200 /tmp/d.html; echo
             echo "generator: $(grep -oiE 'name=.generator. content=.[^"]+' /tmp/d.html | head -2 | tr '\n' ' ')"
             echo "theme: $(grep -oE 'wp-content/themes/[^/]+' /tmp/d.html | sort | uniq -c | sort -rn | head -3 | tr '\n' ' ')"
             echo "-- chapter/episode class tokens:"
