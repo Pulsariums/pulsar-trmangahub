@@ -7,4 +7,7 @@ import org.koitharu.kotatsu.parsers.site.madara.MadaraParser
 
 @MangaSourceParser("GRIMELEK", "Grimelek", "tr")
 internal class Grimelek(context: MangaLoaderContext) :
-	MadaraParser(context, MangaParserSource.GRIMELEK, "siyahmelek.my")
+	MadaraParser(context, MangaParserSource.GRIMELEK, "siyahmelek.my") {
+
+	override val withoutAjax = true
+}
