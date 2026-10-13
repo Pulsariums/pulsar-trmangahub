@@ -24,5 +24,18 @@
       "generated/ravenscans.org/jar/RavenScans.kt"
     ],
     "addedAt": "2026-10-13T06:16:29+00:00"
+  },
+  {
+    "id": "toonhane.com",
+    "name": "toonhane",
+    "domain": "toonhane.com",
+    "baseUrl": "https://toonhane.com",
+    "engine": "madara",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/toonhane.com/jar/Toonhane.kt"
+    ],
+    "addedAt": "2026-10-13T10:54:49+00:00"
   }
 ]
