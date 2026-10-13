@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T21:26:22+00:00",
+  "generatedAt": "2026-10-13T19:29:19+00:00",
   "mihon": [
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.amangaplanet",
@@ -9,31 +9,43 @@
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.anikiga",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.anikiga-v1.6.55.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.anikiga-v1.6.55.apk",
       "version": "1.6.55",
       "domain": "anikiga.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.caprazmanga",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.caprazmanga-v1.6.55.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.caprazmanga-v1.6.55.apk",
       "version": "1.6.55",
       "domain": "caprazmanga.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.diamondfansub",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.diamondfansub-v1.6.57.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.diamondfansub-v1.6.57.apk",
       "version": "1.6.57",
       "domain": "diamondfansub.com"
     },
     {
+      "pkg": "eu.kanade.tachiyomi.extension.tr.eldermanga",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/06f6d69/tachiyomi-tr.eldermanga-v1.6.9.apk",
+      "version": "1.6.9",
+      "domain": "eldermanga.com"
+    },
+    {
+      "pkg": "eu.kanade.tachiyomi.extension.tr.eskimangalar",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/06f6d69/tachiyomi-tr.eskimangalar-v1.6.6.apk",
+      "version": "1.6.6",
+      "domain": "eskimangalar.com"
+    },
+    {
       "pkg": "eu.kanade.tachiyomi.extension.tr.garciamanga",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.garciamanga-v1.6.55.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.garciamanga-v1.6.55.apk",
       "version": "1.6.55",
       "domain": "garciamanga.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.ghosthentai",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.ghosthentai-v1.6.56.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.ghosthentai-v1.6.56.apk",
       "version": "1.6.56",
       "domain": "ghostoon.com"
     },
@@ -45,9 +57,15 @@
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.laviniafansub",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.laviniafansub-v1.6.61.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.laviniafansub-v1.6.61.apk",
       "version": "1.6.61",
       "domain": "laviniafansub.shop"
+    },
+    {
+      "pkg": "eu.kanade.tachiyomi.extension.tr.limonmanga",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/06f6d69/tachiyomi-tr.limonmanga-v1.6.6.apk",
+      "version": "1.6.6",
+      "domain": "limonmanga.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.mangadenizi",
@@ -63,13 +81,13 @@
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.mangadusleri",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/8ef06cd-2/tachiyomi-tr.mangadusleri-v1.4.33.apk",
-      "version": "1.4.33",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.mangadusleri-v1.6.0.apk",
+      "version": "1.6.0",
       "domain": "mangadusleri.mom"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.mangawow",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.mangawow-v1.6.55.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.mangawow-v1.6.55.apk",
       "version": "1.6.55",
       "domain": "mangawow.org"
     },
@@ -78,6 +96,12 @@
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/4217666-2/tachiyomi-tr.mangitto-v1.6.1.apk",
       "version": "1.6.1",
       "domain": "mangtto.com"
+    },
+    {
+      "pkg": "eu.kanade.tachiyomi.extension.tr.mikrokosmosfansub",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/4217666-2/tachiyomi-tr.mikrokosmosfansub-v1.6.16.apk",
+      "version": "1.6.16",
+      "domain": "mikrokosmosfb.blogspot.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.moondaisyscans",
@@ -111,7 +135,7 @@
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.opiatoon",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.opiatoon-v1.6.60.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.opiatoon-v1.6.60.apk",
       "version": "1.6.60",
       "domain": "opiatoon.shop"
     },
@@ -135,7 +159,7 @@
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.ruyamanga",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.ruyamanga-v1.6.60.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.ruyamanga-v1.6.60.apk",
       "version": "1.6.60",
       "domain": "ruyamanga2.com"
     },
@@ -147,25 +171,31 @@
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.summertoon",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.summertoon-v1.6.57.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.summertoon-v1.6.57.apk",
       "version": "1.6.57",
       "domain": "summertoons.net"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.sunsetmanga",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.sunsetmanga-v1.6.55.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.sunsetmanga-v1.6.55.apk",
       "version": "1.6.55",
       "domain": "sunsetmanga.com"
     },
     {
+      "pkg": "eu.kanade.tachiyomi.extension.tr.tenshimanga",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/06f6d69/tachiyomi-tr.tenshimanga-v1.6.8.apk",
+      "version": "1.6.8",
+      "domain": "tenshimanga.com"
+    },
+    {
       "pkg": "eu.kanade.tachiyomi.extension.tr.mangatilkisi",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.mangatilkisi-v1.6.57.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.mangatilkisi-v1.6.57.apk",
       "version": "1.6.57",
       "domain": "tilkiscans.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.tonizutoon",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.tonizutoon-v1.6.58.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.tonizutoon-v1.6.58.apk",
       "version": "1.6.58",
       "domain": "tonizu.top"
     },
@@ -177,7 +207,7 @@
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.tortugaceviri",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.tortugaceviri-v1.6.57.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.tortugaceviri-v1.6.57.apk",
       "version": "1.6.57",
       "domain": "tortugaceviri.com"
     },
@@ -189,15 +219,21 @@
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.turkcemangaoku",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.turkcemangaoku-v1.6.56.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.turkcemangaoku-v1.6.56.apk",
       "version": "1.6.56",
       "domain": "trmangaoku.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.lunascans",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.lunascans-v1.6.58.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.lunascans-v1.6.58.apk",
       "version": "1.6.58",
       "domain": "tuhafscans.com"
+    },
+    {
+      "pkg": "eu.kanade.tachiyomi.extension.tr.uzaymanga",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/06f6d69/tachiyomi-tr.uzaymanga-v1.6.48.apk",
+      "version": "1.6.48",
+      "domain": "uzaymanga.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.webtoonoku",
@@ -207,7 +243,7 @@
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.yaoiflix",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.yaoiflix-v1.6.61.apk",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.yaoiflix-v1.6.61.apk",
       "version": "1.6.61",
       "domain": "yaoiflix.fit"
     }
@@ -223,6 +259,12 @@
       "parser": "DIAMONDFANSUB",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/DiamondFansub.kt",
       "domain": "diamondfansub.com",
+      "lang": "tr"
+    },
+    {
+      "parser": "ELDERMANGA",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/ElderManga.kt",
+      "domain": "eldermanga.com",
       "lang": "tr"
     },
     {
@@ -250,6 +292,12 @@
       "lang": "tr"
     },
     {
+      "parser": "MIKROKOSMOSFB",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/zeistmanga/tr/Mikrokosmosfb.kt",
+      "domain": "mikrokosmosfb.blogspot.com",
+      "lang": "tr"
+    },
+    {
       "parser": "NIRVANAMANGA",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/NirvanaManga.kt",
       "domain": "nirvanamanga.com",
@@ -265,6 +313,18 @@
       "parser": "RAGNARSCANS",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Ragnarscans.kt",
       "domain": "ragnarscans.com",
+      "lang": "tr"
+    },
+    {
+      "parser": "RAVENSCANS",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/en/RavenScans.kt",
+      "domain": "ravenscans.org",
+      "lang": "en"
+    },
+    {
+      "parser": "TENSHIMANGA",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/TenshiManga.kt",
+      "domain": "tenshimanga.com",
       "lang": "tr"
     },
     {
@@ -298,6 +358,12 @@
       "lang": "tr"
     },
     {
+      "parser": "UZAYMANGA",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/UzayManga.kt",
+      "domain": "uzaymanga.com",
+      "lang": "tr"
+    },
+    {
       "parser": "WEBTOONTR",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Webtoontr.kt",
       "domain": "webtoontr.net",
@@ -319,13 +385,6 @@
       "label": "published_via_alternative"
     },
     {
-      "id": "domalfansb.com.tr",
-      "domain": "qemow.com",
-      "how": "moved_to",
-      "confidence": "high",
-      "label": "published_via_alternative"
-    },
-    {
       "id": "eleceedturkiye.com",
       "domain": "nabicix.com",
       "how": "moved_to",
@@ -333,10 +392,10 @@
       "label": "published_via_alternative"
     },
     {
-      "id": "guncelmanga.net",
-      "domain": "afreebitco.in",
-      "how": "moved_to",
-      "confidence": "high",
+      "id": "jiangzaitoon.top",
+      "domain": "jiangzaitoon.icu",
+      "how": "same_key",
+      "confidence": "medium",
       "label": "published_via_alternative"
     },
     {
@@ -389,13 +448,6 @@
       "label": "published_via_alternative"
     },
     {
-      "id": "mikrokosmosfb.blogspot.com",
-      "domain": "google.com",
-      "how": "moved_to",
-      "confidence": "high",
-      "label": "published_via_alternative"
-    },
-    {
       "id": "moondaisyscans.biz",
       "domain": "moondaisyscans.pro",
       "how": "same_key",
@@ -417,24 +469,10 @@
       "label": "published_via_alternative"
     },
     {
-      "id": "shadowceviri.blogspot.com",
-      "domain": "google.com",
-      "how": "moved_to",
-      "confidence": "high",
-      "label": "published_via_alternative"
-    },
-    {
       "id": "siyahmelek.org",
       "domain": "siyahmelek.fun",
       "how": "same_key",
       "confidence": "medium",
-      "label": "published_via_alternative"
-    },
-    {
-      "id": "snscoeurturkey.blogspot.com",
-      "domain": "google.com",
-      "how": "moved_to",
-      "confidence": "high",
       "label": "published_via_alternative"
     },
     {
@@ -453,9 +491,9 @@
     },
     {
       "id": "yaoiflix.me",
-      "domain": "qemow.com",
-      "how": "moved_to",
-      "confidence": "high",
+      "domain": "yaoiflix.fit",
+      "how": "same_key",
+      "confidence": "medium",
       "label": "published_via_alternative"
     }
   ]

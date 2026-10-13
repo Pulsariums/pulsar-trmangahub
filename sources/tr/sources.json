@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-12T21:26:22+00:00",
-  "count": 169,
+  "generatedAt": "2026-10-13T19:29:19+00:00",
+  "count": 171,
   "sources": [
     {
       "id": "adumanga.com",
@@ -37,8 +37,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "alternative": {
         "domain": "koplo77-irama.com",
         "how": "moved_to",
@@ -82,14 +82,15 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "cf_protected_published",
-      "reason": "http 403; cloudflare challenge page",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
-        "status": "cf_protected",
-        "http": 403,
-        "functional": null
+        "status": "ok",
+        "http": 200,
+        "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 0,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 1,
+      "failing": true,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -131,8 +132,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -177,8 +178,8 @@
         "http": 525,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -210,7 +211,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -228,7 +229,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.anikiga",
           "version": "1.6.55",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.anikiga-v1.6.55.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.anikiga-v1.6.55.apk"
         },
         "jar": {
           "parser": "ANIKIGA",
@@ -255,7 +256,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -298,8 +299,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -340,7 +341,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -386,7 +387,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -429,8 +430,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -471,8 +472,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -490,7 +491,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.asurascanstr",
           "version": "1.6.55",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.asurascanstr-v1.6.55.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.asurascanstr-v1.6.55.apk"
         },
         "jar": {
           "parser": "ASURASCANSTR",
@@ -517,8 +518,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -554,14 +555,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_unrelated: live.sportsvot.com",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
-        "status": "parked",
+        "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -602,8 +603,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -621,7 +622,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.caprazmanga",
           "version": "1.6.55",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.caprazmanga-v1.6.55.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.caprazmanga-v1.6.55.apk"
         },
         "jar": null,
         "catalog": null
@@ -634,7 +635,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -675,8 +676,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -694,7 +695,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.diamondfansub",
           "version": "1.6.57",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.diamondfansub-v1.6.57.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.diamondfansub-v1.6.57.apk"
         },
         "jar": {
           "parser": "DIAMONDFANSUB",
@@ -721,7 +722,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -741,21 +742,21 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.domalfansub",
           "version": "1.6.59",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.domalfansub-v1.6.59.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.domalfansub-v1.6.59.apk"
         },
         "jar": null,
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='dom4lfansub.online', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='dom4lfansub.online', port=443) at 0x7fcc4c2f61e0>, 'Con",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='dom4lfansub.online', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='dom4lfansub.online', port=443) at 0x7f37a33f6fc0>, 'Con",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "mihon"
       ]
@@ -795,13 +796,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
-      "alternative": {
-        "domain": "qemow.com",
-        "how": "moved_to",
-        "confidence": "high"
-      },
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -831,14 +827,14 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 403; cloudflare challenge page",
+      "status": "published",
+      "reason": "http 200",
       "probe": {
-        "status": "cf_protected",
-        "http": 403,
+        "status": "ok",
+        "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -872,8 +868,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 5,
       "alternative": {
         "domain": "nabicix.com",
         "how": "moved_to",
@@ -918,8 +914,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -943,14 +939,14 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 403; cloudflare challenge page",
+      "status": "published",
+      "reason": "http 200",
       "probe": {
-        "status": "cf_protected",
-        "http": 403,
+        "status": "ok",
+        "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -985,14 +981,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "functional_false: madara listing marker not found on /manga/, /",
+      "reason": "redirect_parking_subdomain: ww547.esomanga.com",
       "probe": {
-        "status": "ok",
+        "status": "parked",
         "http": 200,
-        "functional": false
+        "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1033,8 +1029,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1079,7 +1075,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1126,7 +1122,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1146,7 +1142,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.garciamanga",
           "version": "1.6.55",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.garciamanga-v1.6.55.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.garciamanga-v1.6.55.apk"
         },
         "jar": {
           "parser": "GARCIAMANGA",
@@ -1166,14 +1162,14 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded",
-      "reason": "site olu; kalici disarida",
+      "status": "published",
+      "reason": "http 200",
       "probe": {
         "status": "ok",
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -1216,8 +1212,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1235,7 +1231,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.ghosthentai",
           "version": "1.6.56",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.ghosthentai-v1.6.56.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.ghosthentai-v1.6.56.apk"
         },
         "jar": null,
         "catalog": null
@@ -1248,7 +1244,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1293,8 +1289,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -1336,8 +1332,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1372,19 +1368,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_unrelated: afreebitco.in",
+      "reason": "redirect_unrelated: 789betwin.cc",
       "probe": {
         "status": "parked",
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
-      "alternative": {
-        "domain": "afreebitco.in",
-        "how": "moved_to",
-        "confidence": "high"
-      },
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1395,14 +1386,14 @@
       "name": "Hattori Manga",
       "domain": "hattorimanga.net",
       "baseUrl": "https://hattorimanga.net",
-      "engine": "mangathemesia",
+      "engine": null,
       "nsfw": true,
       "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.hattorimanga",
-          "version": "1.4.44",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/8ef06cd-2/tachiyomi-tr.hattorimanga-v1.4.44.apk"
+          "version": "1.6.0",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.hattorimanga-v1.6.0.apk"
         },
         "jar": null,
         "catalog": null
@@ -1415,7 +1406,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1446,7 +1437,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1487,8 +1478,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1499,14 +1490,14 @@
       "name": "Hayalistic",
       "domain": "hayalistic.online",
       "baseUrl": "https://hayalistic.online",
-      "engine": null,
+      "engine": "mangathemesia",
       "nsfw": false,
       "scope": "tr_native",
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.hayalistic",
           "version": "1.6.61",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.hayalistic-v1.6.61.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.hayalistic-v1.6.61.apk"
         },
         "jar": null,
         "catalog": null
@@ -1519,7 +1510,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1554,14 +1545,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='hoifansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='hoifansub.com', port=443) at 0x7fcc4c2f7950>, 'Connection to",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='hoifansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='hoifansub.com', port=443) at 0x7f37a0148a70>, 'Connection to",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1592,7 +1583,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1633,8 +1624,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1675,11 +1666,38 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
+      ]
+    },
+    {
+      "id": "jiangzaitoon.icu",
+      "name": "jiangzaitoon",
+      "domain": "jiangzaitoon.icu",
+      "baseUrl": "https://jiangzaitoon.icu",
+      "engine": "madara",
+      "nsfw": false,
+      "scope": "tr_native",
+      "formats": {
+        "mihon": null,
+        "jar": null,
+        "catalog": null
+      },
+      "firstSeen": "2026-10-13T19:29:19+00:00",
+      "status": "published",
+      "reason": "http 200",
+      "probe": {
+        "status": "ok",
+        "http": 200,
+        "functional": true
+      },
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 0,
+      "upstreams": [
+        "custom"
       ]
     },
     {
@@ -1717,8 +1735,13 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
+      "alternative": {
+        "domain": "jiangzaitoon.icu",
+        "how": "same_key",
+        "confidence": "medium"
+      },
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1749,7 +1772,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1790,8 +1813,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1832,8 +1855,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -1864,7 +1887,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1897,8 +1920,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "alternative": {
         "domain": "nabicix.com",
         "how": "same_key",
@@ -1943,7 +1966,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -1962,7 +1985,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.kuroimanga",
           "version": "1.6.61",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.kuroimanga-v1.6.61.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.kuroimanga-v1.6.61.apk"
         },
         "jar": null,
         "catalog": null
@@ -1975,7 +1998,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -1993,7 +2016,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.laviniafansub",
           "version": "1.6.61",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.laviniafansub-v1.6.61.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.laviniafansub-v1.6.61.apk"
         },
         "jar": null,
         "catalog": {
@@ -2014,7 +2037,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -2048,8 +2071,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "alternative": {
         "domain": "laviniafansub.shop",
         "how": "same_key",
@@ -2086,8 +2109,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu"
       ]
@@ -2121,8 +2144,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "nyora"
       ]
@@ -2145,14 +2168,14 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 403; cloudflare challenge page",
+      "status": "published",
+      "reason": "http 200",
       "probe": {
-        "status": "cf_protected",
-        "http": 403,
+        "status": "ok",
+        "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2185,8 +2208,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu"
       ]
@@ -2226,8 +2249,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2245,7 +2268,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangasehrinet",
           "version": "1.6.57",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.mangasehrinet-v1.6.57.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.mangasehrinet-v1.6.57.apk"
         },
         "jar": {
           "parser": "MANGASEHRINET",
@@ -2272,8 +2295,8 @@
         "http": 523,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -2342,7 +2365,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -2374,7 +2397,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2405,7 +2428,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2446,8 +2469,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "alternative": {
         "domain": "mangacix.net",
         "how": "similar_key",
@@ -2485,8 +2508,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "alternative": {
         "domain": "mangacix.net",
         "how": "same_key",
@@ -2525,8 +2548,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "nyora"
       ]
@@ -2570,7 +2593,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -2603,7 +2626,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2620,8 +2643,8 @@
       "formats": {
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangadusleri",
-          "version": "1.4.33",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/8ef06cd-2/tachiyomi-tr.mangadusleri-v1.4.33.apk"
+          "version": "1.6.0",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.mangadusleri-v1.6.0.apk"
         },
         "jar": null,
         "catalog": null
@@ -2634,7 +2657,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2675,8 +2698,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2711,8 +2734,8 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "nyora"
       ]
@@ -2746,14 +2769,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='mangagezgini.site', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mangagezgini.site', port=443) at 0x7fcc4c4f51c0>, 'Conne",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='mangagezgini.site', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mangagezgini.site', port=443) at 0x7f37a34c50d0>, 'Conne",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2786,8 +2809,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu"
       ]
@@ -2827,8 +2850,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2869,8 +2892,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2911,8 +2934,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -2943,7 +2966,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -2978,8 +3001,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "alternative": {
         "domain": "mangaoku.org",
         "how": "same_key",
@@ -3018,14 +3041,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='mangaoku.info', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mangaoku.info', port=443) at 0x7fcc4c35ff50>, 'Connection to",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='mangaoku.info', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mangaoku.info', port=443) at 0x7f37a4615a60>, 'Connection to",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3058,8 +3081,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "alternative": {
         "domain": "mangaoku.com.tr",
         "how": "moved_to",
@@ -3104,8 +3127,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3146,8 +3169,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3178,7 +3201,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3219,7 +3242,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -3255,14 +3278,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='mangasiginagi.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mangasiginagi.com', port=443) at 0x7fcc4c4da570>, 'Conne",
+      "reason": "functional_false: mangathemesia listing marker not found on /manga/?page=1",
       "probe": {
-        "status": "dead",
-        "http": null,
-        "functional": null
+        "status": "ok",
+        "http": 200,
+        "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3295,8 +3318,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "alternative": {
         "domain": "tilkiscans.com",
         "how": "same_key",
@@ -3341,8 +3364,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3360,7 +3383,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangawow",
           "version": "1.6.55",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.mangawow-v1.6.55.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.mangawow-v1.6.55.apk"
         },
         "jar": {
           "parser": "MANGAWOW",
@@ -3387,7 +3410,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3434,7 +3457,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3454,7 +3477,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangazure",
           "version": "1.6.55",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.mangazure-v1.6.55.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.mangazure-v1.6.55.apk"
         },
         "jar": null,
         "catalog": null
@@ -3467,8 +3490,8 @@
         "http": 523,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "mihon"
       ]
@@ -3498,7 +3521,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3567,13 +3590,13 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "cf_protected_published",
-      "reason": "http 403; cloudflare challenge page",
+      "reason": "http 200; cloudflare challenge page",
       "probe": {
         "status": "cf_protected",
-        "http": 403,
+        "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3612,26 +3635,20 @@
         }
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "ci_blocked_by_google_429 (cihazda doğrulandı: Kullanılabilir)",
+      "status": "published",
+      "reason": "http 200",
       "probe": {
-        "status": "parked",
-        "http": 429,
+        "status": "ok",
+        "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
-      "alternative": {
-        "domain": "google.com",
-        "how": "moved_to",
-        "confidence": "high"
-      },
       "upstreams": [
         "mihon",
         "kotatsu",
         "nyora"
-      ],
-      "failing": false
+      ]
     },
     {
       "id": "milascans.tr",
@@ -3668,8 +3685,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3687,7 +3704,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.milasub",
           "version": "1.6.58",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.milasub-v1.6.58.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.milasub-v1.6.58.apk"
         },
         "jar": null,
         "catalog": null
@@ -3700,7 +3717,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3718,7 +3735,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mindafansub",
           "version": "1.6.55",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d0c0864/tachiyomi-tr.mindafansub-v1.6.55.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.mindafansub-v1.6.55.apk"
         },
         "jar": null,
         "catalog": {
@@ -3739,7 +3756,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3773,8 +3790,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu"
       ]
@@ -3804,7 +3821,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3831,14 +3848,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='moondaisyscans.biz', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='moondaisyscans.biz', port=443) at 0x7fcc4c53fc50>, 'Con",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='moondaisyscans.biz', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='moondaisyscans.biz', port=443) at 0x7f37a3479820>, 'Con",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 5,
       "alternative": {
         "domain": "moondaisyscans.pro",
         "how": "same_key",
@@ -3881,7 +3898,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -3923,8 +3940,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -3963,11 +3980,12 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
-        "nyora"
+        "nyora",
+        "custom"
       ]
     },
     {
@@ -4005,8 +4023,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4037,7 +4055,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4082,7 +4100,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4102,7 +4120,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.niverafansub",
           "version": "1.6.59",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.niverafansub-v1.6.59.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.niverafansub-v1.6.59.apk"
         },
         "jar": null,
         "catalog": {
@@ -4123,7 +4141,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4150,14 +4168,14 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "excluded",
-      "reason": "site olu; kalici disarida",
+      "status": "published",
+      "reason": "http 200",
       "probe": {
         "status": "ok",
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -4192,14 +4210,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "connect: SSLError: HTTPSConnectionPool(host='noxscans.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)')))",
+      "reason": "connect: SSLError: HTTPSConnectionPool(host='noxscans.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "alternative": {
         "domain": "nyxscans.com",
         "how": "similar_key",
@@ -4237,8 +4255,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "kotatsu"
       ]
@@ -4278,11 +4296,12 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "kotatsu",
-        "nyora"
+        "nyora",
+        "custom"
       ]
     },
     {
@@ -4310,7 +4329,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4351,8 +4370,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "alternative": {
         "domain": "opiatoon.shop",
         "how": "same_key",
@@ -4375,7 +4394,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.opiatoon",
           "version": "1.6.60",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.opiatoon-v1.6.60.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.opiatoon-v1.6.60.apk"
         },
         "jar": null,
         "catalog": null
@@ -4388,7 +4407,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4419,7 +4438,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4450,7 +4469,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4495,7 +4514,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4532,14 +4551,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='piedpiperfansub.me', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='piedpiperfansub.me', port=443) at 0x7fcc4c8c1af0>, 'Con",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='piedpiperfansub.me', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='piedpiperfansub.me', port=443) at 0x7f37a32df860>, 'Con",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4580,8 +4599,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4622,8 +4641,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4664,7 +4683,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -4696,7 +4715,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -4741,12 +4760,46 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "mihon",
         "kotatsu",
         "nyora"
+      ]
+    },
+    {
+      "id": "ravenscans.org",
+      "name": "RavenScans",
+      "domain": "ravenscans.org",
+      "baseUrl": "https://ravenscans.org",
+      "engine": "mangareader",
+      "nsfw": false,
+      "scope": "tr_native",
+      "formats": {
+        "mihon": null,
+        "jar": {
+          "parser": "RAVENSCANS",
+          "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/en/RavenScans.kt",
+          "broken": false,
+          "brokenReason": null,
+          "lang": "en"
+        },
+        "catalog": null
+      },
+      "firstSeen": "2026-10-13T06:16:29+00:00",
+      "status": "published",
+      "reason": "http 200",
+      "probe": {
+        "status": "ok",
+        "http": 200,
+        "functional": true
+      },
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 0,
+      "upstreams": [
+        "kotatsu",
+        "custom"
       ]
     },
     {
@@ -4776,7 +4829,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -4794,7 +4847,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.ruyamanga",
           "version": "1.6.60",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.ruyamanga-v1.6.60.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.ruyamanga-v1.6.60.apk"
         },
         "jar": null,
         "catalog": {
@@ -4815,7 +4868,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -4849,7 +4902,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu"
@@ -4884,14 +4937,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "redirect_unrelated: live.sportsvot.com",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
       "probe": {
-        "status": "parked",
+        "status": "ok",
         "http": 200,
-        "functional": null
+        "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4932,8 +4985,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -4978,7 +5031,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5019,19 +5072,10 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
+      "unverified": true,
       "reason": "redirect_unrelated: google.com",
-      "probe": {
-        "status": "parked",
-        "http": 429,
-        "functional": null
-      },
       "lastChecked": "2026-10-12T21:26:22+00:00",
       "consecutiveFailures": 5,
-      "alternative": {
-        "domain": "google.com",
-        "how": "moved_to",
-        "confidence": "high"
-      },
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -5077,8 +5121,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "mihon",
         "kotatsu",
@@ -5114,7 +5158,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "nyora"
@@ -5145,17 +5189,17 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
       ]
     },
     {
-      "id": "siyahmelek.my",
+      "id": "siyahmelek.org",
       "name": "Grimelek",
-      "domain": "siyahmelek.my",
-      "baseUrl": "https://siyahmelek.my",
+      "domain": "siyahmelek.org",
+      "baseUrl": "https://siyahmelek.org",
       "engine": "madara",
       "nsfw": false,
       "scope": "tr_native",
@@ -5164,13 +5208,13 @@
         "jar": {
           "parser": "GRIMELEK",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Grimelek.kt",
-          "broken": false,
+          "broken": true,
           "brokenReason": null,
           "lang": "tr"
         },
         "catalog": null
       },
-      "firstSeen": "2026-10-12T09:21:52+00:00",
+      "firstSeen": "2026-10-13T19:29:19+00:00",
       "status": "quarantined",
       "reason": "dns: ConnectionError: HTTPSConnectionPool(host='siyahmelek.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='siyahmelek.org', port=443): Failed to resolve 'siyahmelek.o",
       "probe": {
@@ -5178,8 +5222,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 1,
       "alternative": {
         "domain": "siyahmelek.fun",
         "how": "same_key",
@@ -5214,7 +5258,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5249,19 +5293,10 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
+      "unverified": true,
       "reason": "redirect_unrelated: google.com",
-      "probe": {
-        "status": "parked",
-        "http": 429,
-        "functional": null
-      },
       "lastChecked": "2026-10-12T21:26:22+00:00",
       "consecutiveFailures": 4,
-      "alternative": {
-        "domain": "google.com",
-        "how": "moved_to",
-        "confidence": "high"
-      },
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5296,14 +5331,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='strayfansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='strayfansub.com', port=443) at 0x7fcc4c584170>, 'Connectio",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='strayfansub.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='strayfansub.com', port=443) at 0x7f37a347acf0>, 'Connectio",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5344,8 +5379,8 @@
         "http": 200,
         "functional": false
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "alternative": {
         "domain": "summertoons.net",
         "how": "same_key",
@@ -5368,7 +5403,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.summertoon",
           "version": "1.6.57",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.summertoon-v1.6.57.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.summertoon-v1.6.57.apk"
         },
         "jar": null,
         "catalog": null
@@ -5381,7 +5416,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5399,7 +5434,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.sunsetmanga",
           "version": "1.6.55",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.sunsetmanga-v1.6.55.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.sunsetmanga-v1.6.55.apk"
         },
         "jar": null,
         "catalog": null
@@ -5412,7 +5447,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5457,7 +5492,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5500,8 +5535,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5542,8 +5577,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5573,14 +5608,14 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 403; cloudflare challenge page",
+      "status": "published",
+      "reason": "http 200",
       "probe": {
-        "status": "cf_protected",
-        "http": 403,
+        "status": "ok",
+        "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5599,7 +5634,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.mangatilkisi",
           "version": "1.6.57",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.mangatilkisi-v1.6.57.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.mangatilkisi-v1.6.57.apk"
         },
         "jar": {
           "parser": "TILKISCANS",
@@ -5626,7 +5661,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5669,8 +5704,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5711,8 +5746,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 5,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -5730,7 +5765,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.tonizutoon",
           "version": "1.6.58",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.tonizutoon-v1.6.58.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.tonizutoon-v1.6.58.apk"
         },
         "jar": {
           "parser": "TONIZUTOON",
@@ -5757,12 +5792,39 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
         "kotatsu",
         "nyora"
+      ]
+    },
+    {
+      "id": "toonhane.com",
+      "name": "toonhane",
+      "domain": "toonhane.com",
+      "baseUrl": "https://toonhane.com",
+      "engine": "madara",
+      "nsfw": false,
+      "scope": "tr_native",
+      "formats": {
+        "mihon": null,
+        "jar": null,
+        "catalog": null
+      },
+      "firstSeen": "2026-10-13T19:29:19+00:00",
+      "status": "failing",
+      "reason": "functional_false: madara listing marker not found on /manga/, /",
+      "probe": {
+        "status": "ok",
+        "http": 200,
+        "functional": false
+      },
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 1,
+      "upstreams": [
+        "custom"
       ]
     },
     {
@@ -5790,7 +5852,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5808,7 +5870,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.tortugaceviri",
           "version": "1.6.57",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.tortugaceviri-v1.6.57.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.tortugaceviri-v1.6.57.apk"
         },
         "jar": {
           "parser": "TORTUGACEVIRI",
@@ -5835,7 +5897,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5868,7 +5930,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -5886,7 +5948,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.turkcemangaoku",
           "version": "1.6.56",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.turkcemangaoku-v1.6.56.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.turkcemangaoku-v1.6.56.apk"
         },
         "jar": {
           "parser": "TRMANGAOKU",
@@ -5913,7 +5975,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -5948,8 +6010,8 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 4,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 5,
       "alternative": {
         "domain": "trmanga.com",
         "how": "moved_to",
@@ -5971,7 +6033,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.lunascans",
           "version": "1.6.58",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.lunascans-v1.6.58.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.lunascans-v1.6.58.apk"
         },
         "jar": {
           "parser": "LUNASCANS",
@@ -5998,7 +6060,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6030,14 +6092,14 @@
         "catalog": null
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
-      "status": "cf_protected_published",
-      "reason": "http 403; cloudflare challenge page",
+      "status": "published",
+      "reason": "http 200",
       "probe": {
-        "status": "cf_protected",
-        "http": 403,
+        "status": "ok",
+        "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6079,8 +6141,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6098,7 +6160,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.webtoonhatti",
           "version": "1.6.62",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.webtoonhatti-v1.6.62.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.webtoonhatti-v1.6.62.apk"
         },
         "jar": {
           "parser": "ROMANTIKMANGA",
@@ -6125,7 +6187,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6162,14 +6224,14 @@
       },
       "firstSeen": "2026-10-12T09:21:52+00:00",
       "status": "quarantined",
-      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='webtoonhatti.me', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='webtoonhatti.me', port=443) at 0x7fcc4c56be60>, 'Connectio",
+      "reason": "timeout: ConnectTimeout: HTTPSConnectionPool(host='webtoonhatti.me', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='webtoonhatti.me', port=443) at 0x7f37a3262b40>, 'Connectio",
       "probe": {
         "status": "dead",
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6200,7 +6262,7 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6241,7 +6303,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
@@ -6275,8 +6337,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu"
       ]
@@ -6310,8 +6372,8 @@
         "http": 523,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "nyora"
       ]
@@ -6328,7 +6390,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.yaoiflix",
           "version": "1.6.61",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.yaoiflix-v1.6.61.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.yaoiflix-v1.6.61.apk"
         },
         "jar": null,
         "catalog": null
@@ -6341,7 +6403,7 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -6382,12 +6444,12 @@
         "http": 200,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 5,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 6,
       "alternative": {
-        "domain": "qemow.com",
-        "how": "moved_to",
-        "confidence": "high"
+        "domain": "yaoiflix.fit",
+        "how": "same_key",
+        "confidence": "medium"
       },
       "upstreams": [
         "kotatsu",
@@ -6406,7 +6468,7 @@
         "mihon": {
           "pkg": "eu.kanade.tachiyomi.extension.tr.yaoimangaoku",
           "version": "1.6.56",
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/aa14252/tachiyomi-tr.yaoimangaoku-v1.6.56.apk"
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.yaoimangaoku-v1.6.56.apk"
         },
         "jar": {
           "parser": "YAOIMANGAOKU",
@@ -6433,7 +6495,7 @@
         "http": 403,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon",
@@ -6468,8 +6530,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu"
       ]
@@ -6503,8 +6565,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "nyora"
       ]
@@ -6544,8 +6606,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6586,8 +6648,8 @@
         "http": null,
         "functional": null
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
-      "consecutiveFailures": 6,
+      "lastChecked": "2026-10-13T19:29:19+00:00",
+      "consecutiveFailures": 7,
       "upstreams": [
         "kotatsu",
         "nyora"
@@ -6628,44 +6690,11 @@
         "http": 200,
         "functional": true
       },
-      "lastChecked": "2026-10-12T21:26:22+00:00",
+      "lastChecked": "2026-10-13T19:29:19+00:00",
       "consecutiveFailures": 0,
       "upstreams": [
         "kotatsu",
         "nyora"
-      ]
-    },
-    {
-      "id": "ravenscans.org",
-      "name": "Raven Scans",
-      "domain": "ravenscans.org",
-      "baseUrl": "https://ravenscans.org",
-      "engine": "mangathemesia",
-      "nsfw": false,
-      "scope": "tr_native",
-      "formats": {
-        "mihon": null,
-        "jar": {
-          "parser": "RAVENSCANS_TR",
-          "file": "generated/ravenscans.org/jar/RavenScans.kt",
-          "broken": false,
-          "brokenReason": null,
-          "lang": "tr"
-        },
-        "catalog": null
-      },
-      "firstSeen": "2026-10-13T06:16:29+00:00",
-      "status": "unverified",
-      "reason": "add-source ile üretildi, canlı test bekliyor",
-      "probe": {
-        "status": "ok",
-        "http": 200,
-        "functional": null
-      },
-      "lastChecked": "2026-10-13T06:16:29+00:00",
-      "consecutiveFailures": 0,
-      "upstreams": [
-        "custom"
       ]
     }
   ]

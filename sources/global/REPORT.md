@@ -4,46 +4,49 @@
 
 | Durum | Adet |
 |---|---|
-| published (ok) | 252 |
-| cf_protected_published (bot korumalı, erişilebilir) | 280 |
-| quarantined (karantina) | 349 |
-| unverified (bu run doğrulanamadı) | 14 |
+| published (ok) | 265 |
+| cf_protected_published (bot korumalı, erişilebilir) | 273 |
+| quarantined (karantina) | 699 |
+| unverified (bu run doğrulanamadı) | 12 |
 
-- Domain'li toplam kaynak: 1252; domain'siz (yayınlanmadı): 100
-- Karantinadaki kaynaklardan alternatif bulunan: 14; bulunamayan: 335
-- Alternatif yayın listesinde (published_via_alternative): 14
+- Domain'li toplam kaynak: 1254; domain'siz (yayınlanmadı): 100
+- Karantinadaki kaynaklardan alternatif bulunan: 17; bulunamayan: 682
+- Alternatif yayın listesinde (published_via_alternative): 17
 
 ## Probe özeti
 
 | ok | cf_protected | dead | parked | other | blocked |
 |---|---|---|---|---|---|
-| 365 | 279 | 458 | 136 | 14 | 0 |
+| 389 | 269 | 450 | 133 | 13 | 0 |
 
 ## Alternatifler
 
 | Kaynak | Alternatif | Yöntem | Güven |
 |---|---|---|---|
 | TempestScans (adumanga.com) | koplo77-irama.com | moved_to | high |
-| DomalFansub (domalfansb.com.tr) | qemow.com | moved_to | high |
 | Eleceed Türkiye (eleceedturkiye.com) | nabicix.com | moved_to | high |
-| GuncelManga (guncelmanga.net) | afreebitco.in | moved_to | high |
+| JiangzaiToon (jiangzaitoon.top) | jiangzaitoon.icu | same_key | medium |
+| KoreliScans (koreliscans.com) | nabicix.com | same_key | medium |
+| LaviniaFansub (laviniafansub.site) | laviniafansub.shop | same_key | medium |
 | Mangacim (mangacim.com.tr) | mangacix.net | similar_key | low |
 | Mangacix (mangacix.com) | mangacix.net | same_key | medium |
+| Atikrost (mangaoku.com.tr) | mangaoku.org | same_key | medium |
+| Atikrost (mangaoku.org) | mangaoku.com.tr | moved_to | high |
 | MangaTilkisi (mangatilkisi.net) | tilkiscans.com | same_key | medium |
-| Mikrokosmos Fansub (mikrokosmosfb.blogspot.com) | google.com | moved_to | high |
+| MoonDaisyScans (moondaisyscans.biz) | moondaisyscans.pro | same_key | medium |
+| NoxScans (noxscans.com) | nyxscans.com | similar_key | low |
 | OpiaToon (opiatoon.art) | opiatoon.shop | same_key | medium |
-| Shadow Çeviri (shadowceviri.blogspot.com) | google.com | moved_to | high |
 | Grimelek (siyahmelek.org) | siyahmelek.fun | same_key | medium |
-| SnscoeurTurkey (snscoeurturkey.blogspot.com) | google.com | moved_to | high |
+| SummerToon (summertoon.co) | summertoons.net | same_key | medium |
 | TrWebtoon (trwebtoon.com) | trmanga.com | moved_to | high |
-| YaoiFlix (yaoiflix.me) | qemow.com | moved_to | high |
+| YaoiFlix (yaoiflix.me) | yaoiflix.fit | same_key | medium |
 
 ## Bu run'da değişenler
 
-- Yeni eklenen: 0
-- Ölen (yayından çıkan): 6 (galaxscanlator.blogspot.com, heckscans.blogspot.com, manga-ai-land.blogspot.com, mikrokosmosfb.blogspot.com, tooncubus.top, yugenmangasbr.voblog.xyz)
-- Geri dirilen: 1 (goctruyentranhvui17.com)
+- Yeni eklenen: 2 (jiangzaitoon.icu, toonhane.com)
+- Ölen (yayından çıkan): 3 (bestmanhua.com, enryumanga.net, reader.powermanga.org)
+- Geri dirilen: 4 (hangtruyen.org, manga-ai-land.blogspot.com, mikrokosmosfb.blogspot.com, yugenmangasbr.voblog.xyz)
 - Upstream'den kaldırılan: 0
 
-Not: 14 kaynak bu run'da doğrulanamadı (blocked/other); önceki durumu korundu.
+Not: 12 kaynak bu run'da doğrulanamadı (blocked/other); önceki durumu korundu.
 
