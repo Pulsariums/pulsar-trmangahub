@@ -1,0 +1,144 @@
+name: 'Tam otomatik bakım (tek tuş)'
+
+# Elle başlatılır; gerisini kendi yapar:
+# 1) karantinadaki kaynakların adından yeni alan adı arar (DNS DoH taraması),
+# 2) gerçek manga sitesi çıkanları kayda alır ve parser üretir (silme yok),
+# 3) JAR derler, canlı test eder, Mihon aynasını yeniler,
+# 4) özeti çalışma sayfasına yazar.
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_stems:
+        description: 'Taranacak en fazla kaynak adı kökü'
+        type: string
+        default: '80'
+      only_discovery:
+        description: 'Yalnızca keşif yap, derleme ve testleri çalıştırma'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: bakim
+  cancel-in-progress: false
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  UA: 'Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
+
+jobs:
+  bakim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Bağımlılıklar
+        run: pip install requests
+
+      - name: Aday adları çıkar (karantina + ölü kayıtlar)
+        run: |
+          jq -r '(if type=="array" then . else .sources end)
+                 | map(select(.status=="quarantined" or .status=="unverified"))
+                 | .[] | [(.domain|split(".")[0]), (.name // "")] | @tsv' sources/tr/sources.json \
+            | awk -F'\t' '{print tolower($1); n=tolower($2); gsub(/[^a-z0-9]/,"",n); if (n!="") print n}' \
+            | awk 'length($0)>=4' | sort -u | head -n "${{ inputs.max_stems }}" > stems.txt
+          echo "kök sayısı: $(wc -l < stems.txt)"
+
+      - name: Alan adı keşfi (DoH + canlı doğrulama)
+        run: |
+          set +e
+          TLDS="com net org com.tr net.tr org.tr info biz xyz club live fun pro app cc io ink art cyou icu vip one lol my tv wtf space store tech website click link today cloud life world shop ws site online co top me us in tr ru de cx pw mobi page dev blog win wiki rest sbs cfd bond buzz monster quest uno ltd"
+          for s in $(cat stems.txt); do for t in $TLDS; do echo "$s.$t"; done; done > cand.txt
+          echo "aday: $(wc -l < cand.txt)"
+          resolve() { d=$1; r=$(curl -s -m 8 "https://dns.google/resolve?name=$d&type=A" | jq -r '[.Answer[]?|select(.type==1)|.data]|first // empty'); [ -n "$r" ] && echo "$d"; }
+          export -f resolve
+          xargs -a cand.txt -P 24 -I{} bash -c 'resolve {}' > resolved.txt
+          echo "çözülen: $(wc -l < resolved.txt)"
+          # Zaten kayıtlı alan adlarını ele
+          jq -r '(if type=="array" then . else .sources end)|.[].domain' sources/tr/sources.json | sort -u > known.txt
+          jq -r '.[].domain' sources/custom/sources.json 2>/dev/null >> known.txt
+          sort -u known.txt -o known.txt
+          BAD='bahis|casino|slot|judi|kumar|porn|for sale|parked|domain.*sat|satılık|satilik|betting|poker'
+          : > accepted.txt
+          while read d; do
+            grep -qx "$d" known.txt && continue
+            out=$(curl -sS -L -m 15 -A "$UA" -o b.html -w '%{http_code} %{url_effective}' "https://$d/" 2>/dev/null | tr '\n' ' ')
+            code=${out%% *}; [ "$code" = "200" ] || continue
+            final=$(echo "$out" | awk '{print $2}' | sed -E 's#https?://([^/]+).*#\1#; s#^www\.##')
+            [ "$final" = "${d#www.}" ] || continue
+            title=$(grep -oi '<title>[^<]*' b.html | head -1 | cut -c8-120)
+            [ -n "$title" ] || continue
+            echo "$title $final" | grep -qiE "$BAD" && continue
+            stem=${d%%.*}
+            tn=$(echo "$title" | tr 'A-Z' 'a-z' | tr -cd 'a-z0-9')
+            echo "$tn" | grep -q "$stem" || continue
+            grep -qiE 'manga|webtoon|manhwa|bölüm|bolum|chapter|çizgi roman' b.html || continue
+            cf=$(grep -ci 'just a moment\|cf-mitigated\|challenge-platform' b.html)
+            echo "$d" >> accepted.txt
+            echo "KABUL $d | $title | cf=$cf"
+          done < resolved.txt
+          echo "kabul edilen: $(wc -l < accepted.txt)"
+
+      - name: Kabul edilenleri kayda al ve parser üret
+        run: |
+          set +e
+          python scripts/sync.py
+          while read d; do
+            echo "== $d"
+            python scripts/analyze_site.py --url "https://$d" --format jar --engine auto --register 1 || echo "analiz başarısız: $d"
+          done < accepted.txt
+          git config user.name "pulsar-trmangahub-bot"
+          git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
+          [ -d sources/custom ] && git add sources/custom
+          [ -d generated ] && git add generated
+          if git diff --cached --quiet; then echo "yeni kayıt yok"; exit 0; fi
+          git commit -m "chore(bakim): keşfedilen yeni alan adları eklendi"
+          for i in 1 2 3; do git pull -q --rebase origin "${{ github.ref_name }}" && git push -q origin "HEAD:${{ github.ref_name }}" && exit 0; sleep $((i*5)); done
+          exit 1
+
+      - name: Alt iş akışlarını sırayla çalıştır
+        if: ${{ !inputs.only_discovery }}
+        run: |
+          set +e
+          run_and_wait() {
+            wf=$1; shift
+            before=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+            gh workflow run "$wf" --ref "${{ github.ref_name }}" "$@" || { echo "$wf başlatılamadı"; return 1; }
+            id=""
+            for i in $(seq 1 30); do
+              sleep 10
+              id=$(gh run list --workflow "$wf" --limit 5 --json databaseId,createdAt,event \
+                   -q "[.[]|select(.event==\"workflow_dispatch\" and .createdAt>=\"$before\")]|last|.databaseId // empty")
+              [ -n "$id" ] && break
+            done
+            [ -n "$id" ] || { echo "$wf çalışması bulunamadı"; return 1; }
+            gh run watch "$id" --interval 30 --exit-status >/dev/null 2>&1
+            concl=$(gh run view "$id" --json conclusion -q .conclusion)
+            echo "$wf -> $concl (run $id)"
+            echo "- $wf: **$concl** (run $id)" >> "$GITHUB_STEP_SUMMARY"
+          }
+          git pull -q --rebase origin "${{ github.ref_name }}"
+          run_and_wait build-jar.yml
+          run_and_wait live-check.yml -f bolum=tr
+          run_and_wait build-mihon.yml
+          run_and_wait health-check.yml
+
+      - name: Özet
+        if: always()
+        run: |
+          {
+            echo "## Bakım özeti"
+            echo "- taranan kök: $(wc -l < stems.txt 2>/dev/null)"
+            echo "- çözülen alan adı: $(wc -l < resolved.txt 2>/dev/null)"
+            echo "- yeni kabul edilen: $(wc -l < accepted.txt 2>/dev/null)"
+            sed 's/^/  - /' accepted.txt 2>/dev/null
+          } >> "$GITHUB_STEP_SUMMARY"
