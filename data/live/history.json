@@ -1419,5 +1419,17 @@
     "error_class": null,
     "last_error": null,
     "stage": "image"
+  },
+  "NYXSCANS_TR": {
+    "first_seen": "2026-10-13T12:53:58Z",
+    "ok_streak": 0,
+    "fail_streak": 1,
+    "name": "Nyx Scans - Immerse Yourself in Comics, Manga, Manhua, and Manhwa — Nyx: Where Stories Come to Life.",
+    "domain": "nyxscans.com",
+    "checked": "2026-10-13T12:53:58Z",
+    "last_fail": "2026-10-13T12:53:58Z",
+    "error_class": "parse",
+    "last_error": "Could not parse query 'img|attr:alt': unexpected token at ''",
+    "stage": "list"
   }
 }

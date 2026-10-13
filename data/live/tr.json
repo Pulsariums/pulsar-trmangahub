@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-10-13T10:21:02Z",
+  "checked_at": "2026-10-13T12:53:58Z",
   "results": [
     {
-      "error_class": "http",
+      "error_class": "parse",
       "stage": "list",
-      "ms": 13686,
-      "domain": "siyahmelek.my",
-      "name": "Grimelek",
-      "id": "GRIMELEK",
+      "ms": 704,
+      "domain": "nyxscans.com",
+      "name": "Nyx Scans - Immerse Yourself in Comics, Manga, Manhua, and Manhwa — Nyx: Where Stories Come to Life.",
+      "id": "NYXSCANS_TR",
       "ok": false,
-      "error": ". Status=400, URL=[https://siyahmelek.my/wp-admin/admin-ajax.php]"
+      "error": "Could not parse query 'img|attr:alt': unexpected token at ''"
     }
   ]
 }
