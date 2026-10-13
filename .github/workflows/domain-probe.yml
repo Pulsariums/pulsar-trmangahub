@@ -1,0 +1,26 @@
+name: Domain Probe
+
+on:
+  workflow_dispatch:
+    inputs:
+      domains:
+        description: 'Boşlukla ayrılmış alan adları'
+        type: string
+        required: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe
+        env:
+          DOMAINS: ${{ inputs.domains }}
+        run: |
+          UA='Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
+          for d in $DOMAINS; do
+            out=$(curl -sS -L -m 25 -A "$UA" -o /tmp/b.html -w '%{http_code} %{url_effective}' "https://$d/" 2>&1 | tr '\n' ' ')
+            title=$(grep -oi '<title>[^<]*' /tmp/b.html 2>/dev/null | head -1 | cut -c8-80)
+            madara=$(grep -ci 'wp-content/themes\|madara\|wp-manga' /tmp/b.html 2>/dev/null)
+            cf=$(grep -ci 'just a moment\|cf-mitigated\|challenge-platform' /tmp/b.html 2>/dev/null)
+            echo "$d => $out | title=[$title] wp=$madara cf=$cf"
+          done
