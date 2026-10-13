@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-13T16:11:39Z",
+  "checked_at": "2026-10-13T21:26:21Z",
   "results": [
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 765,
+      "ms": 724,
       "domain": "alliedfansub.net",
       "name": "AlliedFansub",
       "id": "ALLIED_FANSUB",
@@ -15,18 +15,18 @@
     {
       "error_class": "rate_limit",
       "stage": "details",
-      "ms": 8826,
+      "ms": 5719,
       "domain": "tuhafscans.com",
       "name": "LunaScans",
       "id": "LUNASCANS",
       "list": 12,
       "ok": false,
-      "error": ". Status=429, URL=[https://tuhafscans.com/manga/yankee/]"
+      "error": ". Status=429, URL=[https://tuhafscans.com/manga/yankee/ajax/chapters/]"
     },
     {
       "error_class": "http_gone",
       "stage": "list",
-      "ms": 590,
+      "ms": 633,
       "domain": "fuchscans.com",
       "name": "DeccalScans",
       "id": "DECCALSCANS",
@@ -37,7 +37,7 @@
       "error_class": "parse",
       "stage": "pages",
       "chapters": 8,
-      "ms": 4580,
+      "ms": 2737,
       "domain": "laviniafansub.shop",
       "name": "LaviniaFansub",
       "id": "LAVINIAFANSUB",
@@ -48,7 +48,7 @@
     {
       "error_class": "connect",
       "stage": "list",
-      "ms": 715,
+      "ms": 681,
       "domain": "mindafansub.online",
       "name": "MindaFansub",
       "id": "MINDAFANSUB",
@@ -58,7 +58,7 @@
     {
       "error_class": "timeout",
       "stage": "list",
-      "ms": 20257,
+      "ms": 20536,
       "domain": "piedpiperfansubyy.me",
       "name": "PiedPiperFansubyy",
       "id": "PIEDPIPERFANSUBYY",
@@ -66,9 +66,19 @@
       "error": "Connect timed out"
     },
     {
+      "error_class": "parse",
+      "stage": "list",
+      "ms": 2697,
+      "domain": "niverafansub.org",
+      "name": "NiveraFansub",
+      "id": "NIVERAFANSUB",
+      "ok": false,
+      "error": "Too many follow-up requests: 21"
+    },
+    {
       "error_class": "cloudflare",
       "stage": "list",
-      "ms": 154,
+      "ms": 168,
       "domain": "yaoimangaoku.net",
       "name": "YaoiMangaOku",
       "id": "YAOIMANGAOKU",
@@ -76,20 +86,21 @@
       "error": "Protected by CloudFlare: https://yaoimangaoku.net/wp-admin/admin-ajax.php"
     },
     {
-      "error_class": "http",
-      "stage": "list",
-      "ms": 271,
-      "domain": "qemow.com",
+      "pages": 47,
+      "stage": "image",
+      "chapters": 52,
+      "ms": 3283,
+      "domain": "yaoiflix.fit",
       "name": "YaoiFlix",
       "id": "YAOIFLIX",
-      "ok": false,
-      "error": ". Status=502, URL=[https://qemow.com/wp-admin/admin-ajax.php]"
+      "list": 16,
+      "ok": true
     },
     {
       "error_class": "parse",
       "stage": "pages",
       "chapters": 6,
-      "ms": 6363,
+      "ms": 3663,
       "domain": "www.kuroimanga.com",
       "name": "KuroiManga",
       "id": "KUROIMANGA",
@@ -100,7 +111,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 80,
+      "ms": 53,
       "domain": "viyafansub.com",
       "name": "ViyaFansub",
       "id": "VIYAFANSUB",
@@ -111,7 +122,7 @@
       "error_class": "parse",
       "stage": "pages",
       "chapters": 40,
-      "ms": 1943,
+      "ms": 2012,
       "domain": "tonizu.top",
       "name": "ToniZu.com",
       "id": "TONIZUTOON",
@@ -120,19 +131,20 @@
       "error": "Authorization required"
     },
     {
-      "error_class": "dns",
-      "stage": "list",
-      "ms": 120,
-      "domain": "jiangzaitoon.top",
+      "pages": 47,
+      "stage": "image",
+      "chapters": 51,
+      "ms": 3431,
+      "domain": "jiangzaitoon.icu",
       "name": "JiangzaiToon",
       "id": "JIANGZAITOON",
-      "ok": false,
-      "error": "jiangzaitoon.top: Name or service not known"
+      "list": 16,
+      "ok": true
     },
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 558,
+      "ms": 1246,
       "domain": "sarcasmscans.com",
       "name": "SarcasmScans",
       "id": "SARCASMSCANS",
@@ -143,29 +155,30 @@
     {
       "error_class": "rate_limit",
       "stage": "details",
-      "ms": 551,
+      "ms": 736,
       "domain": "mikrokosmosfb.blogspot.com",
       "name": "Mikrokosmosfb",
       "id": "MIKROKOSMOSFB",
       "list": 21,
       "ok": false,
-      "error": ". Status=429, URL=[https://www.google.com/sorry/index?continue=https://mikrokosmosfb.blogspot.com/2021/07/abyss.html&q=EgQ06ijGGKywudYGIi0yIHMFfDEQekrG5woVRVYkiMWzqDdHs17uFVzhE_C9u9cUeF0BiMpsBCkX3NgyAnJSWgFD]"
+      "error": ". Status=429, URL=[https://www.google.com/sorry/index?continue=https://mikrokosmosfb.blogspot.com/2021/07/abyss.html&q=EgQE9j-dGO7DutYGIi2bff9towJt_l6yta9VS4eZGQaDTrjNe5z6-nmsQpSH35O5IiyxOs8ENpm6snAyAnJSWgFD]"
     },
     {
       "error_class": "rate_limit",
-      "stage": "list",
-      "ms": 151,
-      "domain": "google.com",
+      "stage": "details",
+      "ms": 451,
+      "domain": "snscoeurturkey.blogspot.com",
       "name": "SnscoeurTurkey",
       "id": "SNSCOEURTURKEY",
+      "list": 21,
       "ok": false,
-      "error": ". Status=404, URL=[https://google.com/feeds/posts/default/-/Seriler?alt=json&orderby=published&max-results=21&start-index=1]"
+      "error": ". Status=429, URL=[https://www.google.com/sorry/index?continue=https://snscoeurturkey.blogspot.com/2021/11/thundercloud-rainstorm.html&q=EgQE9j-dGO_DutYGIi2GZ7dxMuY8zXj09n9YC_Gbjv40kshvsoaYo7uCL5VSG4g3Hh1ncWA1sPHyCWMyAnJSWgFD]"
     },
     {
-      "pages": 1,
+      "pages": 9,
       "stage": "image",
-      "chapters": 54,
-      "ms": 3937,
+      "chapters": 28,
+      "ms": 6982,
       "domain": "arcurafansub.com",
       "name": "ArcuraFansub",
       "id": "ARCURAFANSUB",
