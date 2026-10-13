@@ -436,6 +436,17 @@ def main(argv=None):
     if args.extra_parsers:
         found = scan_extras(os.path.abspath(args.extra_parsers), entries, include_unverified)
         found = [x for x in found if keep_candidate(x["nsfw"], x["lang"], args.nsfw, exclude)]
+        if rules.LIVE_GATE and not rules.ADMIT_ALL:
+            # Ozel/uretilmis parser canli testi gecmeden kullaniciya gitmez.
+            live = rules._live()
+            passed = []
+            for x in found:
+                rec = live.get(x["id"]) or {}
+                if rec.get("ok_streak", 0) >= 1:
+                    passed.append(x)
+                else:
+                    print(f"UYARI: canli testi gecmeyen ozel parser yayina alinmadi: {x['id']}", file=sys.stderr)
+            found = passed
         extras = copy_extras(upstream, found, all_ids)
         kept |= {x["id"] for x in extras}
         for x in extras:
