@@ -9,5 +9,6 @@ import org.koitharu.kotatsu.parsers.site.madara.MadaraParser
 internal class RuyaManga(context: MangaLoaderContext) :
 	MadaraParser(context, MangaParserSource.RUYAMANGA, "ruyamanga2.com", 18) {
 	override val tagPrefix = "manga-kategori/"
+	override val withoutAjax = true
 	override val datePattern = "dd/MM/yyyy"
 }

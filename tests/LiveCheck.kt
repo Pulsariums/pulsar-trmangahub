@@ -105,6 +105,8 @@ internal class LiveCheck {
 
 	private fun classify(e: Throwable): String {
 		val message = e.message.orEmpty()
+		// Görsel sunucusu HTML dönüyorsa (hotlink/anti-bot sayfası) CI Referer/çerez olmadan karar veremez.
+		if (message.startsWith("Görsel değil (text/html")) return "http_blocked"
 		// Google/Blogger CI IP'sini engelleyince istekler google.com'a yönlenir; bu kaynağın ölü olduğunu göstermez.
 		if (Regex("""\b429\b""").containsMatchIn(message) || message.contains("google.com/")) return "rate_limit"
 		var cause: Throwable? = e
