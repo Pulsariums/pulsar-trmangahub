@@ -16,6 +16,7 @@ jobs:
         env:
           DOMAINS: ${{ inputs.domains }}
         run: |
+          set +e
           UA='Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
           for d in $DOMAINS; do
             out=$(curl -sS -L -m 25 -A "$UA" -o /tmp/b.html -w '%{http_code} %{url_effective}' "https://$d/" 2>&1 | tr '\n' ' ')
