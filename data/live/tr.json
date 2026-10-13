@@ -1,4 +1,15 @@
 {
-  "checked_at": "2026-10-13T06:31:21Z",
-  "results": []
+  "checked_at": "2026-10-13T06:40:05Z",
+  "results": [
+    {
+      "error_class": "http",
+      "stage": "list",
+      "ms": 787,
+      "domain": "ragnarscans.net",
+      "name": "Ragnarscans",
+      "id": "RAGNARSCANS",
+      "ok": false,
+      "error": ". Status=400, URL=[https://ragnarscans.net/wp-admin/admin-ajax.php]"
+    }
+  ]
 }
