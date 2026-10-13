@@ -43,6 +43,10 @@ def prober_from(table, calls=None):
                                   "moved_to": None, "engine_detected": "unknown", "functional": None})
         out = dict(base)
         out.setdefault("finalUrl", None)
+        if out.get("status") == "ok":
+            # Default page: body has a keyword, so the content rule accepts it.
+            out.setdefault("page", {"http": 200, "finalUrl": f"https://{domain}/",
+                                    "title": domain, "body": "manga"})
         return out
     return _probe
 
@@ -106,6 +110,21 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(result["old.tr"]["how"], "moved_to")
         self.assertEqual(result["old.tr"]["confidence"], "high")
         self.assertEqual(result["old.tr"]["probe"]["status"], "ok")
+
+    def test_page_rule_rejects_blacklisted_or_unrelated_pages(self):
+        rows = [row("old.tr", "dead", reason=DNS)]
+        sources = [src("old", "Old", "old.tr", alt=["bahis.tr", "plain.tr"])]
+        table = {"bahis.tr": {"status": "ok", "functional": True, "http": 200,
+                              "page": {"http": 200, "finalUrl": "https://bahis.tr/", "title": "canli bahis",
+                                       "body": "manga"}},
+                 "plain.tr": {"status": "ok", "functional": True, "http": 200,
+                              "page": {"http": 200, "finalUrl": "https://plain.tr/", "title": "welcome",
+                                       "body": "nothing"}},
+                 }
+        result, _ = alternatives.run(sources, rows, prober_from(table))
+        self.assertIsNone(result["old.tr"]["candidate"])
+        self.assertEqual([t["domain"] for t in result["old.tr"]["tried"]], ["bahis.tr", "plain.tr"])
+        self.assertEqual([t["page_ok"] for t in result["old.tr"]["tried"]], [False, False])
 
     def test_alt_domains_from_nyora_are_high(self):
         rows = [row("old.tr", "parked")]
@@ -200,7 +219,9 @@ class MainTests(unittest.TestCase):
             with open(os.path.join(tmp, "probe_results.json"), "w", encoding="utf-8") as fh:
                 json.dump(probes, fh)
             fake = {"status": "ok", "functional": True, "http": 200, "finalUrl": "https://new.tr/"}
-            with mock.patch.object(probe, "probe_one", return_value=fake) as p:
+            page = {"text": "<title>new.tr</title> manga", "status": 200, "final_url": "https://new.tr/"}
+            with mock.patch.object(probe, "probe_one", return_value=fake) as p, \
+                    mock.patch.object(probe, "fetch_once", return_value=page):
                 code = alternatives.main(["--data-dir", tmp, "--prev", os.path.join(tmp, "none.json")])
             self.assertEqual(code, 0)
             p.assert_called_once_with("new.tr")
@@ -222,7 +243,9 @@ class MainTests(unittest.TestCase):
             with open(os.path.join(tmp, "prev.json"), "w", encoding="utf-8") as fh:
                 json.dump({"sources": [{"id": "old.tr", "status": "published", "consecutiveFailures": 2}]}, fh)
             fake = {"status": "ok", "functional": True, "http": 200, "finalUrl": "https://new.tr/"}
-            with mock.patch.object(probe, "probe_one", return_value=fake):
+            page = {"text": "<title>new.tr</title> manga", "status": 200, "final_url": "https://new.tr/"}
+            with mock.patch.object(probe, "probe_one", return_value=fake), \
+                    mock.patch.object(probe, "fetch_once", return_value=page):
                 alternatives.main(["--data-dir", tmp, "--prev", os.path.join(tmp, "prev.json")])
             with open(os.path.join(tmp, "alternatives.json"), encoding="utf-8") as fh:
                 out = json.load(fh)

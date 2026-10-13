@@ -16,15 +16,20 @@ and never offered as candidates. Candidates are tried in this order:
   5. other source with the same name         (how=same_name,  confidence=medium)
 Within a group, sources that share the same engine are tried first. Each
 candidate is checked with probe.probe_one (the same code path as probe.py); the
-first candidate with status ok and functional != false wins. Results are cached
+first candidate with status ok, functional != false and an accepted page (HTTP 200, a title
+token from the source name or a manga/webtoon/bölüm/chapter keyword, no blacklisted word) wins. Results are cached
 for the run, so one domain is never probed twice.
 """
 
 import argparse
 import difflib
+import html
 import json
 import os
+import re
 import sys
+
+import requests
 
 import probe
 import rules
@@ -34,6 +39,14 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 PREV_SOURCES_PATH = os.path.join(BASE_DIR, "sources", "tr", "sources.json")
 
 SIMILAR_MIN = 0.85
+
+# Page acceptance for a candidate: HTTP 200, a title token from the source name (or a content keyword),
+# and no blacklisted word in the title or URL.
+PAGE_KEYWORDS = ("manga", "webtoon", "bölüm", "chapter")
+SCALE_WORDS = {"manga", "manhwa", "manhua", "webtoon", "webtoons", "comic", "comics", "novel", "scan",
+               "scans", "tr", "türkçe", "çeviri", "ceviri", "oku", "online"}
+BLACKLIST = ("bahis", "casino", "slot", "judi", "kumar", "porn", "for sale", "parked",
+             "domain satılık", "satılık", "satilik")
 
 
 def norm_name(name):
@@ -109,11 +122,52 @@ class ProbeCache:
         return result
 
 
+def name_tokens(name):
+    """Lowercase words of a source name, with spaces/dashes split and scale words dropped."""
+    parts = re.split(r"[\s\-_]+", (name or "").lower())
+    return [p for p in parts if len(p) >= 3 and p not in SCALE_WORDS]
+
+
+def page_accepted(result, name):
+    """True when the probed candidate page passes the title/keyword/blacklist rule."""
+    page = result.get("page") or {}
+    if page.get("http") != 200:
+        return False
+    title = page.get("title") or ""
+    url_text = f"{result.get('domain') or ''} {page.get('finalUrl') or ''}".lower()
+    if any(word in title or word in url_text for word in BLACKLIST):
+        return False
+    if any(token in title for token in name_tokens(name)):
+        return True
+    body = page.get("body") or ""
+    return any(keyword in body for keyword in PAGE_KEYWORDS)
+
+
+def probe_with_page(domain):
+    """probe.probe_one plus one GET of the page for title/body; the page is read only when status is ok."""
+    row = probe.probe_one(domain)
+    if row.get("status") != "ok":
+        return row
+    with requests.Session() as session:
+        session.headers.update(probe.HEADERS)
+        raw = probe.fetch_once(session, row.get("finalUrl") or f"https://{domain}/")
+    if "error_kind" in raw:
+        row["page"] = {"http": None, "error": raw["error_kind"]}
+        return row
+    match = re.search(r"<title[^>]*>(.*?)</title>", raw["text"], re.IGNORECASE | re.DOTALL)
+    title = html.unescape(match.group(1)) if match else ""
+    row["page"] = {"http": raw["status"], "finalUrl": raw["final_url"],
+                   "title": " ".join(title.split()).lower(), "body": raw["text"].lower()}
+    return row
+
+
 def find_alternative(domain, src_records, sources, probe_row, cache):
     tried = []
+    name = src_records[0].get("name")
     for cand in build_candidates(domain, src_records, sources, probe_row):
         result = cache.get(cand["domain"])
-        ok = result.get("status") == "ok" and result.get("functional") is not False
+        page_ok = page_accepted(result, name)
+        ok = result.get("status") == "ok" and result.get("functional") is not False and page_ok
         if ok:
             return {
                 "candidate": cand["domain"],
@@ -123,7 +177,8 @@ def find_alternative(domain, src_records, sources, probe_row, cache):
                           "http": result.get("http"), "finalUrl": result.get("finalUrl")},
             }
         tried.append({"domain": cand["domain"], "how": cand["how"], "confidence": cand["confidence"],
-                      "status": result.get("status"), "functional": result.get("functional")})
+                      "status": result.get("status"), "functional": result.get("functional"),
+                      "page_ok": page_ok})
     return {"candidate": None, "tried": tried}
 
 
@@ -195,7 +250,7 @@ def main(argv=None):
         print(f"ERROR cannot read inputs: {exc}", file=sys.stderr)
         return 1
 
-    result, cache = run(sources, probe_rows, probe.probe_one, prev_by_id)
+    result, cache = run(sources, probe_rows, probe_with_page, prev_by_id)
     write_json(out_path, result)
 
     found = sum(1 for v in result.values() if v.get("candidate"))
