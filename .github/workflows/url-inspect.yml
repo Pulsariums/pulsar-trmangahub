@@ -3,6 +3,10 @@ name: URL Inspect
 on:
   workflow_dispatch:
     inputs:
+      dump_urls:
+        description: 'Boşlukla ayrılmış URLler: yapı dökümü'
+        type: string
+        default: ''
       pages:
         description: 'Boşlukla ayrılmış liste sayfası URLleri (ilk manga linki seçilip incelenir)'
         type: string
@@ -28,8 +32,8 @@ jobs:
             curl -sS -L -m 25 -A "$UA" -o /tmp/l.html -w 'list: %{http_code} %{url_effective}\n' "$p"
             echo "-- ilk linkler:"; grep -oE "href=\"https?://[^\"]+\"" /tmp/l.html | sed "s/href=\"//;s/\"$//" | sort -u | head -25
             host=$(echo "$p" | sed -E 's|(https?://[^/]+).*|\1|')
-            link=$(grep -oE "https?://[^\"' ]+" /tmp/l.html | grep -E "$PAT" | head -1)
-            [ -z "$link" ] && link=$(grep -oE 'href="[^"]+"' /tmp/l.html | sed 's/href="//;s/"$//' | grep -E "$PAT" | head -1)
+            link=$(grep -oE "https?://[^\"' ]+" /tmp/l.html | grep -E "$PAT" | grep -vE 'feed|genre' | head -1)
+            [ -z "$link" ] && link=$(grep -oE 'href="[^"]+"' /tmp/l.html | sed 's/href="//;s/"$//' | grep -E "$PAT" | grep -vE 'feed|genre' | head -1)
             echo "manga link: $link"
             [ -z "$link" ] && continue
             echo "-- redirect zinciri:"
@@ -46,4 +50,23 @@ jobs:
             id=$(grep -oE 'data-id="[0-9]+"' /tmp/m.html | head -1 | grep -oE '[0-9]+')
             curl -sS -L -m 25 -A "$UA" -X POST -d "action=manga_get_chapters&manga=$id" -o /tmp/a.html -w "admin-ajax POST id=$id: %{http_code}\n" "$host/wp-admin/admin-ajax.php"
             echo "chapters in admin-ajax: $(grep -c 'wp-manga-chapter' /tmp/a.html)"
+          done
+      - name: Dump
+        env:
+          DUMP: ${{ inputs.dump_urls }}
+        run: |
+          set +e
+          UA='Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
+          for u in $DUMP; do
+            echo "##### DUMP $u"
+            curl -sS -L -m 25 -A "$UA" -o /tmp/d.html -w 'status: %{http_code} %{url_effective}\n' "$u"
+            echo "generator: $(grep -oiE 'name=.generator. content=.[^"]+' /tmp/d.html | head -2 | tr '\n' ' ')"
+            echo "theme: $(grep -oE 'wp-content/themes/[^/]+' /tmp/d.html | sort | uniq -c | sort -rn | head -3 | tr '\n' ' ')"
+            echo "-- chapter/episode class tokens:"
+            grep -oE 'class="[^"]*(chap|episode|eplister|bolum)[^"]*"' /tmp/d.html | sort | uniq -c | sort -rn | head -12
+            echo "-- chapter anchors:"
+            grep -oE '<a [^>]*href="[^"]*(bolum|chapter|episode)[^"]*"[^>]*>' /tmp/d.html | head -6 | cut -c1-200
+            echo "-- data-id / ajax:"
+            grep -oE '(data-id|data-post|post_id|manga_id)[=:"'"'"' ]+[0-9]+' /tmp/d.html | head -3
+            grep -oE 'ajaxurl[^;]{0,80}' /tmp/d.html | head -2
           done
