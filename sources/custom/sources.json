@@ -1,5 +1,18 @@
 [
   {
+    "id": "jiangzaitoon.icu",
+    "name": "jiangzaitoon",
+    "domain": "jiangzaitoon.icu",
+    "baseUrl": "https://jiangzaitoon.icu",
+    "engine": "madara",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/jiangzaitoon.icu/jar/Jiangzaitoon.kt"
+    ],
+    "addedAt": "2026-10-13T10:50:38+00:00"
+  },
+  {
     "id": "ravenscans.org",
     "name": "Raven Scans",
     "domain": "ravenscans.org",
