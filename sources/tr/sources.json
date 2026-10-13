@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-10-12T21:26:22+00:00",
-  "count": 168,
+  "count": 169,
   "sources": [
     {
       "id": "adumanga.com",
@@ -6633,6 +6633,39 @@
       "upstreams": [
         "kotatsu",
         "nyora"
+      ]
+    },
+    {
+      "id": "ravenscans.org",
+      "name": "Raven Scans",
+      "domain": "ravenscans.org",
+      "baseUrl": "https://ravenscans.org",
+      "engine": "mangathemesia",
+      "nsfw": false,
+      "scope": "tr_native",
+      "formats": {
+        "mihon": null,
+        "jar": {
+          "parser": "RAVENSCANS",
+          "file": "generated/ravenscans.org/jar/RavenScans.kt",
+          "broken": false,
+          "brokenReason": null,
+          "lang": "tr"
+        },
+        "catalog": null
+      },
+      "firstSeen": "2026-10-13T06:16:29+00:00",
+      "status": "unverified",
+      "reason": "add-source ile üretildi, canlı test bekliyor",
+      "probe": {
+        "status": "ok",
+        "http": 200,
+        "functional": null
+      },
+      "lastChecked": "2026-10-13T06:16:29+00:00",
+      "consecutiveFailures": 0,
+      "upstreams": [
+        "custom"
       ]
     }
   ]
