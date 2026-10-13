@@ -7,4 +7,6 @@ import org.koitharu.kotatsu.parsers.site.madara.MadaraParser
 
 @MangaSourceParser("RAGNARSCANS", "Ragnarscans", "tr")
 internal class Ragnarscans(context: MangaLoaderContext) :
-	MadaraParser(context, MangaParserSource.RAGNARSCANS, "ragnarscans.net", 18)
+	MadaraParser(context, MangaParserSource.RAGNARSCANS, "ragnarscans.net", 18) {
+	override val withoutAjax = true
+}

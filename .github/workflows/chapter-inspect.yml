@@ -32,7 +32,7 @@ jobs:
             case "$serie" in /*) serie="$host$serie";; esac
             echo "seri: $serie"; [ -z "$serie" ] && continue
             curl -sS -L -m 25 -A "$UA" -o /tmp/s.html -w 'seri sayfa: %{http_code}\n' "$serie"
-            bolum=$(grep -oE 'href="[^"]+"' /tmp/s.html | sed 's/href="//;s/"$//' | grep -E '(bolum|chapter|chap|episode)' | grep -v '#' | head -1)
+            bolum=$(grep -oE 'href="[^"]+"' /tmp/s.html | sed 's/href="//;s/"$//' | grep -E '(bolum|chapter|chap|episode)' | grep -v '#' | sed -n 3p)
             case "$bolum" in /*) bolum="$host$bolum";; esac
             echo "bölüm: $bolum"
             if [ -z "$bolum" ]; then
