@@ -136,8 +136,7 @@ def build_entry(src, probe_row, prev, alt_map, now):
         entry["reason"] = (probe_row or {}).get("reason") or "probe sonucu yok"
         entry["lastChecked"] = (prev or {}).get("lastChecked")
         entry["consecutiveFailures"] = (prev or {}).get("consecutiveFailures", 0)
-        if (prev or {}).get("alternative"):
-            entry["alternative"] = prev["alternative"]
+        # Eski alternatif tasinmaz: yalnizca bu kosuda dogrulananlar yayinlanir.
         alt = alt_map.get(domain) or {}
         if alt.get("candidate"):
             entry["alternative"] = {"domain": alt["candidate"], "how": alt["how"],
