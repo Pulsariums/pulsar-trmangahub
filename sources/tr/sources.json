@@ -5152,10 +5152,10 @@
       ]
     },
     {
-      "id": "siyahmelek.org",
+      "id": "siyahmelek.my",
       "name": "Grimelek",
-      "domain": "siyahmelek.org",
-      "baseUrl": "https://siyahmelek.org",
+      "domain": "siyahmelek.my",
+      "baseUrl": "https://siyahmelek.my",
       "engine": "madara",
       "nsfw": false,
       "scope": "tr_native",
@@ -5164,7 +5164,7 @@
         "jar": {
           "parser": "GRIMELEK",
           "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/tr/Grimelek.kt",
-          "broken": true,
+          "broken": false,
           "brokenReason": null,
           "lang": "tr"
         },
