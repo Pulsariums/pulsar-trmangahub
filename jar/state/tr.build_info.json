@@ -1,12 +1,19 @@
 {
   "bucket": "tr",
-  "fingerprint": "9aeca9238c20227dee4ab5296d992c916af77972e4a839fe07770336e7062ba6",
+  "fingerprint": "eb19b15da0709c19018ff9edfdc2ffb2e27035537b44490ecd0395f6084eab09",
   "upstream_commit": "b3c000024563920d3eecde5816f2e9d3734fa467",
-  "builtAt": "2026-10-13T12:35:46Z",
-  "jarSha256": "a4bce4a9d138897a78853533085c83d6965a9fb0cf9af302de11b74ed0a078ef",
-  "jarBytes": 410245,
-  "keptCount": 20,
-  "patchedDomains": [],
+  "builtAt": "2026-10-13T19:36:02Z",
+  "jarSha256": "ca9d8105c7a397bfcccdb43280ca1b2dd6382a7f110afab13922d655f8c20b8b",
+  "jarBytes": 404703,
+  "keptCount": 21,
+  "patchedDomains": [
+    {
+      "id": "MANGATILKISI",
+      "old": "mangatilkisi.net",
+      "new": "tilkiscans.com",
+      "confidence": "medium"
+    }
+  ],
   "fallback": 0,
-  "runNumber": 24
+  "runNumber": 26
 }
