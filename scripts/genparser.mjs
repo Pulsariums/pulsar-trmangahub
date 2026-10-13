@@ -47,6 +47,8 @@ function parseSel(raw, label) {
 	const s = raw.trim();
 	let m = /^attr:([\w:-]+)$/.exec(s);
 	if (m) return { css: null, attr: m[1] };
+	m = /^(.+?)\s*\|\s*attr:([\w:-]+)$/.exec(s);
+	if (m) return { css: m[1].trim(), attr: m[2] };
 	m = /^(.+)@([\w:-]+)$/.exec(s);
 	if (m) return { css: m[1].trim(), attr: m[2] };
 	return { css: s, attr: null };
@@ -112,7 +114,12 @@ function main() {
 		className = ident[0].toUpperCase() + ident.slice(1);
 	}
 
-	const title = (spec.title ?? '').trim() || className;
+	// Uzun site basliklarindan kisa gorunen ad cikar: "Ad - slogan" / "Ad | slogan" -> "Ad"
+	const shortTitle = (t) => {
+		const first = String(t ?? '').split(/\s+[-|–—:]\s+/)[0].trim();
+		return first.length > 32 ? first.slice(0, 32).trim() : first;
+	};
+	const title = (opts.name ? String(opts.name) : shortTitle(spec.title)) || className;
 
 	let parserId = ident.toUpperCase();
 	if (clashes(parserId)) parserId += '_TR';
