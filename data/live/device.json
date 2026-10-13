@@ -1,1 +1,153 @@
-{"generated":"2026-10-13T06:30:16.514Z","sources":[{"name":"GAFELAND","status":"fail","steps":{"LIST":"pass","COVERS":"pass","DETAILS":"pass","CHAPTERS":"pass","PAGES":"fail","SEARCH":"pass"}},{"name":"ARCURAFANSUB","status":"pass"},{"name":"ADONISFANSUB","status":"pass"},{"name":"GAIATOON","status":"pass"},{"name":"LUNASCANS","status":"fail","steps":{"LIST":"pass","COVERS":"pass","DETAILS":"pass","CHAPTERS":"fail","PAGES":"skip","SEARCH":"pass"}},{"name":"MANGAWT","status":"fail","steps":{"LIST":"fail","SEARCH":"fail"}},{"name":"MANGA_DENIZI","status":"pass"},{"name":"MANGAWOW","status":"pass"},{"name":"MIKROKOSMOSFB","status":"pass"},{"name":"MERLINSCANS","status":"pass"},{"name":"NIRVANAMANGA","status":"pass"},{"name":"NYXSCANS","status":"pass"},{"name":"RAGNARSCANS","status":"fail","steps":{"LIST":"pass","COVERS":"fail","DETAILS":"pass","CHAPTERS":"pass","PAGES":"fail","SEARCH":"pass"}},{"name":"PATIMANGA","status":"pass"},{"name":"SADSCANS","status":"fail","steps":{"LIST":"fail","SEARCH":"fail"}},{"name":"RUYAMANGA","status":"pass"},{"name":"ROMANTIKMANGA","status":"cloudflare","steps":{"LIST":"cloudflare","SEARCH":"cloudflare"}},{"name":"TENSHIMANGA","status":"fail","steps":{"LIST":"fail","SEARCH":"fail"}},{"name":"SEREINSCAN","status":"pass"},{"name":"TILKISCANS","status":"pass"},{"name":"TORTUGACEVIRI","status":"pass"},{"name":"TRMANGAOKU","status":"pass"},{"name":"WEBTOONTR","status":"fail","steps":{"LIST":"pass","COVERS":"pass","DETAILS":"pass","CHAPTERS":"pass","PAGES":"fail","SEARCH":"pass"}},{"name":"ZENITHSCANS","status":"pass"},{"name":"SHIJIESCANS","status":"pass"},{"name":"YAOIMANGAOKU","status":"cloudflare","steps":{"LIST":"cloudflare","SEARCH":"cloudflare"}}]}
+{
+  "generated": "2026-10-13T06:30:16.514Z",
+  "sources": [
+    {
+      "name": "GAFELAND",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "ARCURAFANSUB",
+      "status": "pass"
+    },
+    {
+      "name": "ADONISFANSUB",
+      "status": "pass"
+    },
+    {
+      "name": "GAIATOON",
+      "status": "pass"
+    },
+    {
+      "name": "LUNASCANS",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "fail",
+        "PAGES": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "MANGA_DENIZI",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAWOW",
+      "status": "pass"
+    },
+    {
+      "name": "MIKROKOSMOSFB",
+      "status": "pass"
+    },
+    {
+      "name": "MERLINSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "NIRVANAMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "NYXSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "RAGNARSCANS",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "fail",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "PATIMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "SADSCANS",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "RUYAMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "ROMANTIKMANGA",
+      "status": "cloudflare",
+      "steps": {
+        "LIST": "cloudflare",
+        "SEARCH": "cloudflare"
+      }
+    },
+    {
+      "name": "TENSHIMANGA",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "SEREINSCAN",
+      "status": "pass"
+    },
+    {
+      "name": "TILKISCANS",
+      "status": "pass"
+    },
+    {
+      "name": "TORTUGACEVIRI",
+      "status": "pass"
+    },
+    {
+      "name": "TRMANGAOKU",
+      "status": "pass"
+    },
+    {
+      "name": "WEBTOONTR",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "ZENITHSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "SHIJIESCANS",
+      "status": "pass"
+    },
+    {
+      "name": "YAOIMANGAOKU",
+      "status": "cloudflare",
+      "steps": {
+        "LIST": "cloudflare",
+        "SEARCH": "cloudflare"
+      }
+    }
+  ]
+}
