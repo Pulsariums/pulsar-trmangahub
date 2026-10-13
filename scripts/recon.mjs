@@ -69,7 +69,7 @@ for (const raw of sites) {
     await visit(page, origin + '/' + p, log, 'list:' + p.replace(/[^a-z]/g, ''));
   }
   await page.goto(site, { waitUntil: 'domcontentloaded', timeout: 30000 }).catch(() => {});
-  const links = await page.$eval('a[href]', (as) => as.map((a) => a.href)).catch(() => []);
+  const links = await page.$$eval('a[href]', (as) => as.map((a) => a.href)).catch(() => []);
   const { series } = pickLinks(links, origin);
   log.links.series = series || null;
   if (series) {
