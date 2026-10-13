@@ -53,6 +53,7 @@ PATCHES = [
 ]
 
 ALT_STATUSES = ("quarantined", "failing")
+TRUSTED_STATUSES = ("published", "cf_protected_published")
 RANK = {"high": 3, "medium": 2, "low": 1}
 
 ANN_RE = re.compile(r'@MangaSourceParser\(\s*"([^"]+)"\s*,\s*"([^"]*)"(?:\s*,\s*"([A-Za-z_-]*)")?')
@@ -156,14 +157,23 @@ def jar_broken(entries):
     return any(bool(((e.get("formats") or {}).get("jar") or {}).get("broken")) for e in entries)
 
 
-def alt_ok(entry, policy):
+def trusted_domains(entries):
+    """Hosts of entries verified live ('published' / 'cf_protected_published')."""
+    return {normalize_host(e.get("domain")) for e in entries
+            if e.get("status") in TRUSTED_STATUSES and normalize_host(e.get("domain"))}
+
+
+def alt_ok(entry, policy, trusted=frozenset()):
     if policy == "off" or entry.get("status") not in ALT_STATUSES:
         return False
     alt = entry.get("alternative") or {}
     if not alt.get("domain"):
         return False
+    confidence = alt.get("confidence")
+    if normalize_host(alt.get("domain")) in trusted:
+        confidence = "high"
     threshold = RANK["high"] if policy == "high" else RANK["medium"]
-    return RANK.get(alt.get("confidence"), 0) >= threshold
+    return RANK.get(confidence, 0) >= threshold
 
 
 def patch_domain(file_info, old, new):
@@ -189,7 +199,7 @@ def keep_candidate(nsfw, lang, nsfw_mode, exclude_lang):
 
 
 def select_and_repair(files, by_parser, mode, include_broken, policy, include_unverified=False,
-                      allow_multilang=False, nsfw_mode="any", exclude_lang=()):
+                      allow_multilang=False, nsfw_mode="any", exclude_lang=(), trusted=frozenset()):
     file_of = {}
     lang_of = {}
     broken_of = {}
@@ -219,7 +229,7 @@ def select_and_repair(files, by_parser, mode, include_broken, policy, include_un
         kept.add(pid)
 
     for pid in sorted(kept):
-        entry = next((e for e in by_parser.get(pid, []) if alt_ok(e, policy)), None)
+        entry = next((e for e in by_parser.get(pid, []) if alt_ok(e, policy, trusted)), None)
         if entry is None:
             continue
         old = normalize_host(entry.get("domain"))
@@ -417,7 +427,7 @@ def main(argv=None):
     allow_multilang = bool(args.allow_multilang)
     file_of, kept, patched, patch_failed, lang_of = select_and_repair(
         files, by_parser, args.mode, args.include_broken, args.apply_alternatives, include_unverified,
-        allow_multilang, args.nsfw, exclude)
+        allow_multilang, args.nsfw, exclude, trusted_domains(entries))
     all_ids = set(file_of)
     deleted, rescued = delete_and_rescue(files, kept)
     pruned_refs = prune_dangling_refs(upstream, all_ids - kept)
