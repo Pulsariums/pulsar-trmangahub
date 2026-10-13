@@ -1,11 +1,21 @@
 {
-  "checked_at": "2026-10-13T07:27:12Z",
+  "checked_at": "2026-10-13T09:24:27Z",
   "results": [
+    {
+      "error_class": "cloudflare",
+      "stage": "list",
+      "ms": 665,
+      "domain": "mangawt.com",
+      "name": "MangaWt.com",
+      "id": "MANGAWT",
+      "ok": false,
+      "error": "Protected by CloudFlare: https://mangawt.com/?s=&post_type=wp-manga&m_orderby=latest"
+    },
     {
       "pages": 13,
       "stage": "image",
       "chapters": 141,
-      "ms": 5441,
+      "ms": 8810,
       "domain": "ragnarscans.net",
       "name": "Ragnarscans",
       "id": "RAGNARSCANS",

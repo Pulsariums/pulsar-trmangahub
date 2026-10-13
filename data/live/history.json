@@ -290,13 +290,13 @@
   "MANGAWT": {
     "first_seen": "2026-10-12T21:06:46Z",
     "ok_streak": 0,
-    "fail_streak": 4,
+    "fail_streak": 5,
     "name": "MangaWt.com",
     "domain": "mangawt.com",
-    "checked": "2026-10-13T06:03:56Z",
-    "last_fail": "2026-10-13T06:03:56Z",
+    "checked": "2026-10-13T09:24:27Z",
+    "last_fail": "2026-10-13T09:24:27Z",
     "error_class": "cloudflare",
-    "last_error": "Protected by CloudFlare: https://mangawt.com/wp-admin/admin-ajax.php",
+    "last_error": "Protected by CloudFlare: https://mangawt.com/?s=&post_type=wp-manga&m_orderby=latest",
     "stage": "list"
   },
   "DIAMONDFANSUB": {
@@ -734,16 +734,16 @@
   },
   "RAGNARSCANS": {
     "first_seen": "2026-10-12T21:06:46Z",
-    "ok_streak": 1,
+    "ok_streak": 2,
     "fail_streak": 0,
     "name": "Ragnarscans",
     "domain": "ragnarscans.net",
-    "checked": "2026-10-13T07:27:12Z",
+    "checked": "2026-10-13T09:24:27Z",
     "last_fail": "2026-10-13T06:45:53Z",
     "error_class": null,
     "last_error": null,
     "stage": "image",
-    "last_ok": "2026-10-13T07:27:12Z"
+    "last_ok": "2026-10-13T09:24:27Z"
   },
   "EPIKMAN": {
     "first_seen": "2026-10-12T21:06:46Z",
