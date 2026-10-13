@@ -1,0 +1,42 @@
+name: CT Discover
+
+on:
+  workflow_dispatch:
+    inputs:
+      stems:
+        description: 'Boşlukla ayrılmış site adı kökleri (ör. siyahmelek ragnarscans)'
+        type: string
+        required: true
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sertifika kayitlarindan alan adi bul ve yokla
+        env:
+          STEMS: ${{ inputs.stems }}
+        run: |
+          set +e
+          UA='Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
+          for s in $STEMS; do
+            names=""
+            for try in 1 2 3; do
+              j=$(curl -sS -m 60 "https://crt.sh/?q=%25${s}%25&output=json" 2>/dev/null)
+              if echo "$j" | jq -e . >/dev/null 2>&1; then
+                names=$(echo "$j" | jq -r '.[].name_value' | tr 'A-Z' 'a-z' | sed 's/^\*\.//' | grep -F "$s" | sort -u)
+                break
+              fi
+              sleep 5
+            done
+            echo "## $s: $(echo "$names" | grep -c .) kayit"
+            for d in $names; do
+              case "$d" in *\**|*" "*) continue;; esac
+              out=$(curl -sS -L -m 15 -A "$UA" -o /tmp/b.html -w '%{http_code} %{url_effective}' "https://$d/" 2>/dev/null | tr '\n' ' ')
+              code=${out%% *}
+              [ "$code" = "200" ] || continue
+              title=$(grep -oi '<title>[^<]*' /tmp/b.html | head -1 | cut -c8-80)
+              wp=$(grep -ci 'wp-content/themes\|madara\|wp-manga' /tmp/b.html)
+              cf=$(grep -ci 'just a moment\|cf-mitigated\|challenge-platform' /tmp/b.html)
+              echo "LIVE $d => $out | title=[$title] wp=$wp cf=$cf"
+            done
+          done
