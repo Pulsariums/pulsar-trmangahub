@@ -11,7 +11,7 @@ import org.koitharu.kotatsu.parsers.util.*
 import java.net.URLEncoder
 import java.util.EnumSet
 
-@MangaSourceParser("NYXSCANS_TR", "Nyx Scans - Immerse Yourself in Comics, Manga, Manhua, and Manhwa — Nyx: Where Stories Come to Life.", "tr")
+@MangaSourceParser("NYXSCANS_TR", "Nyxscans", "tr")
 internal class Nyxscans(context: MangaLoaderContext) :
 	PagedMangaParser(context, MangaParserSource.NYXSCANS_TR, pageSize = 24) {
 
@@ -164,7 +164,7 @@ internal class Nyxscans(context: MangaLoaderContext) :
 
 	private companion object {
 		const val LIST_PATH = "/"
-		val PAGE_PARAM: String? = "page"
+		val PAGE_PARAM: String? = null
 		val SEARCH_SUPPORTED: Boolean = false
 		const val LIST_ITEM = "div.h-full"
 		const val CHAPTER_ITEM = "div.w-full.h-full.flex"
@@ -172,7 +172,7 @@ internal class Nyxscans(context: MangaLoaderContext) :
 		val READER_ATTRS = listOf("src", "data-src")
 
 		val SEL_LIST_LINK: Sel? = Sel("a", null)
-		val SEL_LIST_TITLE: Sel? = Sel("img|attr:alt", null)
+		val SEL_LIST_TITLE: Sel? = Sel("img", "alt")
 		val SEL_LIST_COVER: Sel? = Sel("img", "src")
 		val SEL_DETAIL_TITLE: Sel? = Sel("h1.break-words.text-2xl.font-bold", null)
 		val SEL_DETAIL_COVER: Sel? = Sel("meta[property=\"og:image\"]", "content")
