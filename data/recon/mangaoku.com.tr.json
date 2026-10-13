@@ -8,7 +8,7 @@
    "status": 200,
    "ct": "application/json; charset=utf-8",
    "post": "{\"type\":\"track\",\"payload\":{\"name\":\"screen_view\",\"properties\":{\"__referrer\":\"\",\"__path\":\"https://mangaoku.com.tr/\",\"__title\":\"Manga Oku - Türkçe Manga, Webtoon ve Manhwa | MangaOku\"}}}",
-   "body": "{\"deviceId\":\"bc7ad6dab8be6194f84fbc0715367e53\",\"sessionId\":\"pJL2sV8YLs3b_S20Lcb5gg\"}"
+   "body": "{\"deviceId\":\"3e295ae469f861ca4404af3834da2320\",\"sessionId\":\"ZsPxMK-3y5URy-ixGhhpvw\"}"
   },
   {
    "tag": "list:manga",
@@ -17,16 +17,7 @@
    "status": 200,
    "ct": "application/json; charset=utf-8",
    "post": "{\"type\":\"track\",\"payload\":{\"name\":\"screen_view\",\"properties\":{\"__referrer\":\"\",\"__path\":\"https://mangaoku.com.tr/manga\",\"__title\":\"Manga Oku - Tüm Manga, Webtoon ve Novel Listesi\"}}}",
-   "body": "{\"deviceId\":\"bc7ad6dab8be6194f84fbc0715367e53\",\"sessionId\":\"pJL2sV8YLs3b_S20Lcb5gg\"}"
-  },
-  {
-   "tag": "list:webtoon",
-   "method": "POST",
-   "url": "https://mangaoku.com.tr/api/client/state",
-   "status": 200,
-   "ct": "application/json; charset=utf-8",
-   "post": "{\"type\":\"track\",\"payload\":{\"name\":\"screen_view\",\"properties\":{\"__referrer\":\"\",\"__path\":\"https://mangaoku.com.tr/webtoon\",\"__title\":\"MangaOku\"}}}",
-   "body": "{\"deviceId\":\"bc7ad6dab8be6194f84fbc0715367e53\",\"sessionId\":\"pJL2sV8YLs3b_S20Lcb5gg\"}"
+   "body": "{\"deviceId\":\"3e295ae469f861ca4404af3834da2320\",\"sessionId\":\"ZsPxMK-3y5URy-ixGhhpvw\"}"
   },
   {
    "tag": "list:webtoons",
@@ -35,7 +26,16 @@
    "status": 200,
    "ct": "application/json; charset=utf-8",
    "post": "{\"type\":\"track\",\"payload\":{\"name\":\"screen_view\",\"properties\":{\"__referrer\":\"\",\"__path\":\"https://mangaoku.com.tr/webtoons\",\"__title\":\"MangaOku\"}}}",
-   "body": "{\"deviceId\":\"bc7ad6dab8be6194f84fbc0715367e53\",\"sessionId\":\"pJL2sV8YLs3b_S20Lcb5gg\"}"
+   "body": "{\"deviceId\":\"3e295ae469f861ca4404af3834da2320\",\"sessionId\":\"ZsPxMK-3y5URy-ixGhhpvw\"}"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "POST",
+   "url": "https://mangaoku.com.tr/api/client/state",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "{\"type\":\"track\",\"payload\":{\"name\":\"screen_view\",\"properties\":{\"__referrer\":\"\",\"__path\":\"https://mangaoku.com.tr/browse\",\"__title\":\"MangaOku\"}}}",
+   "body": ""
   },
   {
    "tag": "list:searchqa",
@@ -44,7 +44,25 @@
    "status": 200,
    "ct": "application/json; charset=utf-8",
    "post": "{\"type\":\"track\",\"payload\":{\"name\":\"screen_view\",\"properties\":{\"__referrer\":\"\",\"__path\":\"https://mangaoku.com.tr/search?q=a\",\"__title\":\"Arama | MangaOku\"}}}",
-   "body": "{\"deviceId\":\"bc7ad6dab8be6194f84fbc0715367e53\",\"sessionId\":\"pJL2sV8YLs3b_S20Lcb5gg\"}"
+   "body": "{\"deviceId\":\"3e295ae469f861ca4404af3834da2320\",\"sessionId\":\"ZsPxMK-3y5URy-ixGhhpvw\"}"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "POST",
+   "url": "https://mangaoku.com.tr/api/client/state",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "{\"type\":\"track\",\"payload\":{\"name\":\"screen_view\",\"properties\":{\"__referrer\":\"\",\"__path\":\"https://mangaoku.com.tr/api/series\",\"__title\":\"MangaOku\"}}}",
+   "body": ""
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "POST",
+   "url": "https://mangaoku.com.tr/api/client/state",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "{\"type\":\"track\",\"payload\":{\"name\":\"screen_view\",\"properties\":{\"__referrer\":\"\",\"__path\":\"https://mangaoku.com.tr/api/manga\",\"__title\":\"MangaOku\"}}}",
+   "body": "{\"deviceId\":\"3e295ae469f861ca4404af3834da2320\",\"sessionId\":\"ZsPxMK-3y5URy-ixGhhpvw\"}"
   }
  ],
  "errors": [],

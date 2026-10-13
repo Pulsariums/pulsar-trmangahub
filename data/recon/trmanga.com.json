@@ -7,15 +7,15 @@
   },
   {
    "tag": "home",
+   "image": "https://cdn.trmanga.com/webtoon/cover/63/630c84f32d7b3_3398_t.jpg"
+  },
+  {
+   "tag": "home",
    "image": "https://cdn.trmanga.com/webtoon/cover/60/60c3724511c08_9990_t.jpg"
   },
   {
    "tag": "home",
    "image": "https://cdn.trmanga.com/webtoon/cover/6a/6a55531146c49_593546_t.jpg"
-  },
-  {
-   "tag": "home",
-   "image": "https://cdn.trmanga.com/webtoon/cover/63/630c84f32d7b3_3398_t.jpg"
   },
   {
    "tag": "home",
@@ -31,11 +31,20 @@
   },
   {
    "tag": "home",
+   "image": "https://cdn.trmanga.com/webtoon/cover/62/62483ac4942e5_652_t.jpg"
+  },
+  {
+   "tag": "home",
    "image": "https://cdn.trmanga.com/webtoon/cover/63/63dc3e3201e2d_7145_t.jpg"
   },
   {
    "tag": "home",
-   "image": "https://cdn.trmanga.com/webtoon/cover/62/62483ac4942e5_652_t.jpg"
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261012&st=env&sjk=6434355426967735",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"1SDOauCcIs2E-_sPlLKC0Ao\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"R8zqS6i00iKPIRofuIQn495YRRGGC3TtFdkJF43XqXg\",\"bg_binary\":\"HofNEplrw30AF+eHMgzJCk8cUvuPiGYZgQkBqL7EINMofK4LlJp+weJT/JS7Y72ol/0pRhlmW7ZrZvtyXixo1ExraI01qtNdyWwH2RnPjHiWJH1J99WOAF0Ohwx/OgMLV5a+kpgviyFPRQXl9aWbkAAfIMCEFopZLAme7KYK1jr5pTiM8ddNmJ2xhwyw/RGK31plZhrjAsfbDClB55clR8qMf6UiTHWGZqdnZ+2eY9ACrUihL7mwfW0rOmgHXSpljQP059mkfmc27aVXtTDyBPA3KReNcmXnu46vooquF5cSyqMn1AVZKF3opIsc7MKxskjAlBf00Xq9PC9oqCiHDZASlJ9nwOp3a9y8wl8O0b9EvOzhApcoiNBbWmcDDVRcy6+YmIJDLH3MF4yhEvMavOMGiAEEZaI+Z0+/1F2/ECCpgFclesfPQ25Z7m4hA9U9wbqUtoQmaZW4pWan8RdZcIDp9s53sgCwfAHjjLFwJW4+xP+b0Jnj9XeBMEj9oyS4GiV28WUJ2yocAgJM9dS11i4b4LGUikTVHt+OW"
   },
   {
    "tag": "home",
@@ -47,16 +56,7 @@
   },
   {
    "tag": "home",
-   "method": "GET",
-   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261012&st=env&sjk=7626489882231784",
-   "status": 200,
-   "ct": "application/json; charset=utf-8",
-   "post": "",
-   "body": "{\"sodar_query_id\":\"jx7OasmRHuzAodAP2JyLyAY\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"bicbSm1QHv6PCE7k41PwdE0n8BoGbNC7zjsNTNo3qrw\",\"bg_binary\":\"Xoflj6LutAXw5Wt0z+1DoAy2LTr0VCyeER68U4CRtJun258iYSEFf+uyiuWzYitGET53isFlcpTERjXgQAD9wHotnZnWppZt3hgH7YzyREyfd5dKHJ2Q4zdtgecUwcmeUwuPHXAAAkg/HQ6QbiHPJWxs87mGoRxc2bzgyEWv0VFVeT6UnHnoT2Psmha45S8L7CVyslycKCYKLMtaOIruHO3Dm6BkKaE8POImms/GRAdIUDkVvlDDtp1FJ1EeblChch6m7onZc6tf+QefXjKKUZ4+oh2PK6pcwli7ZD2iVgWU2tGmIgSBq0kHc0J2+3AuYOGxv+4G0u2tQorm2K9rIn1Dzqw7fJXgtAM+Cshj8BIBvnd1XMSDXIxMho4QHr6sa+qr3HAnY8r2f/gejDkqgKZuYwfAgHvsjnnUzirc4uiUCfL9ctZtECMjzzzdM853ACGd4cqzfAxORb7yCjMiI8gE6CIDJZifUctajlGJjWWnqrIVUvEmXSw38iGn/zYqdG7EuTUmyfBq+w9l+Afg86VAX5BMTU83qfUC2"
-  },
-  {
-   "tag": "home",
-   "image": "https://cdn.trmanga.com/webtoon/cover/60/60c38b8395f1b_8526_t.jpg"
+   "image": "https://cdn.trmanga.com/webtoon/cover/69/695d622837982_9373_t.jpg"
   },
   {
    "tag": "list:series",
@@ -89,12 +89,209 @@
   {
    "tag": "list:apimanga",
    "image": "https://trmanga.com/login.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://trmanga.com/webtoon-oku-comeback.webp"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261012&st=env&sjk=137968942934227",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/webtoon/cover/69/6930645a88eda_6059.jpeg"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261012&st=env&sjk=6126228144099364",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"6yDOas2XH7m8uNwPyP_ZwAE\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"PN6gmAk53dbbStEAPGzbIaRXqkaiQTUgfwgBzZdzZyI\",\"bg_binary\":\"yoD+TJpyHITrWZE+c5PC8KzC+6LfrXZSRI8mSRHxLpu+9Ygiw8/D4ziGPKzLdkrz40sQpITFaiR954dulR3WRSmm9jK/i/oAmPOZxTugG7m7VlCcRb9QfKrVXxrUFAEuvteKMN2wNnL0HmjMKFLN+4DKh9egX00y9w47hVUEa7BwK8Jh77UlL4tuzcT2jcJRvqmp5YLRgq6cF7V/BEPFlRXsQbwwT9BJtsmJvUaw58DhTuG2gqnEY/tQ4XArAQnvPZK5hAfR5pcgA1Ty2h7VAi7o9o0pLnU5vFflww9dI3hL/paPYzjesaK1KHga1gnVmZydmz0tgSfJk1/I7nM5yLXV7hBXrWN66FvFznhYG272GHG0FOrRSbMxI8XED7J++jWQWbntWa1flbDDzVMi/rCBQAPBN5INHPKwQKXinIzwUeS+l3RWdkHdk4xJWTS/bl1xliUMpn2dfDZtfwWAhlRw0KpohRCfo9kNptgpf82kpT2PyO0Rdsq1hpTCYlZA7lNZ+af5iGzu6HrK4ouSOiUzkvsY78mOoX2O3"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://trmanga.com/api/comments.php?action=list&target_type=webtoon&target_id=2989&page=1&per_page=20&order=newest",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"success\":true,\"data\":{\"comments\":[{\"id\":290621,\"content\":\"Bu serii çok güzel yawww komikte çeviri için teşekkür ederim 🥰🥰\",\"created_at\":\"2026-09-22 00:37:03\",\"user_id\":425498,\"is_spoiler\":0,\"status\":\"approved\",\"like_count\":0,\"pinned\":0,\"username\":\"zeexwq\",\"user_name\":\"Zehra Tunç \",\"avatar\":\"haha.png\",\"role\":1,\"comment_count\":8,\"exp_level\":1,\"content_formatted\":\"Bu serii çok güzel yawww komikte çeviri için teşekkür ederim 🥰🥰\",\"time_ago\":\"3 hafta önce\",\"avatar_url\":\"https:\\/\\/cdn.trmanga.com\\/avatar\\/ha\\/haha.png\",\"role_name\":\"Üye\",\"is_pending\":false,\"is_own_comment\":false,\"replies\":[],\"reply_count\":0,\"user_liked\":false},{\"id\":259593,\"content\":\"oha siteye girmeyeli 3 yıl olmuş hadi bismi"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/6a/6ac2774d2c7b7_439247.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a930deb46b22_3233.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/ha/haha.png"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a846f7f35195_192763.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/69/69efdb5e6145d_957530.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/69/69f7d4870ae57_758307.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a8f1018b2d66_668283.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a90424d4225b_385918.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/67/6783e2c79eb30_824454.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a5e97e2e21a1_459966.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a0c8c418c26e_777591.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/69/69b9b90c4ebb2_278202.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/6a/6acca75fc8e03_56893.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a94476c51c75_878175.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://trmanga.com/webtoon-oku-comeback.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/webtoon/cover/69/6930645a88eda_6059.jpeg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/images/ask-hayatimdaki-isguzar/1/693453c37f477_939180.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/images/ask-hayatimdaki-isguzar/1/693453c8a2dd9_832056.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/69/693860f0911bb_537797.png"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/ha/haha.png"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://trmanga.com/api/comments.php?action=list&target_type=chapter&target_id=33763&page=1&per_page=20&order=newest",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"success\":true,\"data\":{\"comments\":[{\"id\":323671,\"content\":\"maydonoz cok iyi olmuss\",\"created_at\":\"2026-10-10 10:25:58\",\"user_id\":424326,\"is_spoiler\":0,\"status\":\"approved\",\"like_count\":1,\"pinned\":0,\"username\":\"babydontceymia\",\"user_name\":\"muki mia\",\"avatar\":\"haha.png\",\"role\":1,\"comment_count\":39,\"exp_level\":1,\"content_formatted\":\"maydonoz cok iyi olmuss\",\"time_ago\":\"3 gün önce\",\"avatar_url\":\"https:\\/\\/cdn.trmanga.com\\/avatar\\/ha\\/haha.png\",\"role_name\":\"Üye\",\"is_pending\":false,\"is_own_comment\":false,\"replies\":[],\"reply_count\":0,\"user_liked\":false},{\"id\":316917,\"content\":\"Bu uygulamayı sarışın çocuk yaptı bence hatta yapay zeka yerine kendisi yazıyor olabilir mi? Tabi playstore da çok bilinen "
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6aba5c1646ca7_384922.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a54b9d2c254e_174890.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6ac7d76925e01_949336.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a782de9a01bf_890765.png"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/69/69c0572bdbabe_240007.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a9a6f23a2e74_828331.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6aa97629d3ce0_700209.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a9727490c11d_509571.jpeg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a5a34c4a65bf_100045.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a513824146b9_996459.jpeg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a8dd5f16ad4a_114124.jpeg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a9299dfc2f6d_976722.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6ac597b557655_254498.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6aa301ce4580d_830480.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/67/673b47ba748ea_215428.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6a1b21d120470_434869.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6ac67ea6069e8_210128.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.trmanga.com/avatar/6a/6acb41c263dba_302221.jpg"
   }
  ],
  "errors": [],
  "frameworks": [],
  "links": {
-  "series": null
+  "series": "https://trmanga.com/webtoon/ask-hayatimdaki-isguzar",
+  "chapter": "https://trmanga.com/webtoon/ask-hayatimdaki-isguzar/1"
  },
  "homeStatus": 200,
  "title": "Webtoon Oku - Türkçe Manga ve Manhwa Oku | TRManga"
