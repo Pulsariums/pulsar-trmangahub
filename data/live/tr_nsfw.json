@@ -1,17 +1,28 @@
 {
-  "checked_at": "2026-10-12T21:56:47Z",
+  "checked_at": "2026-10-13T05:14:53Z",
   "results": [
     {
-      "error_class": "rate_limit",
-      "stage": "pages",
-      "chapters": 10,
-      "ms": 2377,
-      "domain": "mikrokosmosfb.blogspot.com",
-      "name": "Mikrokosmosfb",
-      "id": "MIKROKOSMOSFB",
-      "list": 21,
+      "error_class": "empty",
+      "stage": "details",
+      "chapters": 0,
+      "ms": 5852,
+      "domain": "tuhafscans.com",
+      "name": "LunaScans",
+      "id": "LUNASCANS",
+      "list": 12,
       "ok": false,
-      "error": ". Status=429, URL=[https://www.google.com/sorry/index?continue=https://mikrokosmosfb.blogspot.com/2023/08/cizer-notu.html&q=EgQEm91yGJ6vtdYGIi1FZ0quekZ8oT7lLy9l4JxEJNKGQrjglylk_GjzkFGxuTPBC2Bzw6IvLKc4o-syAnJSWgFD]"
+      "error": "İlk 3 mangada bölüm yok"
+    },
+    {
+      "error_class": "parse",
+      "stage": "details",
+      "ms": 3455,
+      "domain": "niverafansub.org",
+      "name": "NiveraFansub",
+      "id": "NIVERAFANSUB",
+      "list": 16,
+      "ok": false,
+      "error": "Too many follow-up requests: 21"
     }
   ]
 }

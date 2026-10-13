@@ -1205,14 +1205,14 @@
   "LUNASCANS": {
     "first_seen": "2026-10-12T21:08:43Z",
     "ok_streak": 0,
-    "fail_streak": 3,
+    "fail_streak": 4,
     "name": "LunaScans",
     "domain": "tuhafscans.com",
-    "checked": "2026-10-12T21:45:01Z",
-    "last_fail": "2026-10-12T21:45:01Z",
+    "checked": "2026-10-13T05:14:53Z",
+    "last_fail": "2026-10-13T05:14:53Z",
     "error_class": "empty",
-    "last_error": "Liste boş döndü",
-    "stage": "list"
+    "last_error": "İlk 3 mangada bölüm yok",
+    "stage": "details"
   },
   "DECCALSCANS": {
     "first_seen": "2026-10-12T21:08:43Z",
@@ -1265,14 +1265,14 @@
   "NIVERAFANSUB": {
     "first_seen": "2026-10-12T21:08:43Z",
     "ok_streak": 0,
-    "fail_streak": 3,
+    "fail_streak": 4,
     "name": "NiveraFansub",
     "domain": "niverafansub.org",
-    "checked": "2026-10-12T21:45:01Z",
-    "last_fail": "2026-10-12T21:45:01Z",
+    "checked": "2026-10-13T05:14:53Z",
+    "last_fail": "2026-10-13T05:14:53Z",
     "error_class": "parse",
     "last_error": "Too many follow-up requests: 21",
-    "stage": "list"
+    "stage": "details"
   },
   "YAOIMANGAOKU": {
     "first_seen": "2026-10-12T21:08:43Z",
