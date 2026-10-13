@@ -278,12 +278,12 @@
   "WEBTOONTR": {
     "first_seen": "2026-10-12T21:06:46Z",
     "ok_streak": 0,
-    "fail_streak": 4,
+    "fail_streak": 5,
     "name": "WebtoonTr",
     "domain": "webtoontr.net",
-    "checked": "2026-10-13T04:57:53Z",
-    "last_fail": "2026-10-13T04:57:53Z",
-    "error_class": "parse",
+    "checked": "2026-10-13T05:12:31Z",
+    "last_fail": "2026-10-13T05:12:31Z",
+    "error_class": "http_blocked",
     "last_error": "Görsel değil (text/html): https://ccdn.wdepo.top/manga_64130b1febdae/bolum-81/002.jpg",
     "stage": "image"
   },
@@ -469,15 +469,16 @@
   },
   "RUYAMANGA": {
     "first_seen": "2026-10-12T21:06:46Z",
-    "ok_streak": 0,
-    "fail_streak": 4,
+    "ok_streak": 1,
+    "fail_streak": 0,
     "name": "RuyaManga",
     "domain": "ruyamanga2.com",
-    "checked": "2026-10-13T04:57:53Z",
+    "checked": "2026-10-13T05:12:31Z",
     "last_fail": "2026-10-13T04:57:53Z",
-    "error_class": "http",
-    "last_error": ". Status=400, URL=[https://www.ruyamanga2.com/wp-admin/admin-ajax.php]",
-    "stage": "list"
+    "error_class": null,
+    "last_error": null,
+    "stage": "image",
+    "last_ok": "2026-10-13T05:12:31Z"
   },
   "KABUSMANGA": {
     "first_seen": "2026-10-12T21:06:46Z",

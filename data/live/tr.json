@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-13T04:57:53Z",
+  "checked_at": "2026-10-13T05:12:31Z",
   "results": [
     {
-      "error_class": "parse",
+      "error_class": "http_blocked",
       "pages": 11,
       "stage": "image",
       "chapters": 81,
-      "ms": 3684,
+      "ms": 3825,
       "domain": "webtoontr.net",
       "name": "WebtoonTr",
       "id": "WEBTOONTR",
@@ -15,14 +15,15 @@
       "error": "Görsel değil (text/html): https://ccdn.wdepo.top/manga_64130b1febdae/bolum-81/002.jpg"
     },
     {
-      "error_class": "http",
-      "stage": "list",
-      "ms": 3082,
+      "pages": 9,
+      "stage": "image",
+      "chapters": 3,
+      "ms": 4824,
       "domain": "ruyamanga2.com",
       "name": "RuyaManga",
       "id": "RUYAMANGA",
-      "ok": false,
-      "error": ". Status=400, URL=[https://www.ruyamanga2.com/wp-admin/admin-ajax.php]"
+      "list": 10,
+      "ok": true
     }
   ]
 }
