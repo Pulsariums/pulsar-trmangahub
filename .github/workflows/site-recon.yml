@@ -1,0 +1,33 @@
+name: Site Recon
+
+on:
+  workflow_dispatch:
+    inputs:
+      sites:
+        description: 'Boşlukla ayrılmış site adresleri (https://...)'
+        type: string
+        required: true
+
+jobs:
+  recon:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Playwright kur
+        run: |
+          npm init -y >/dev/null
+          npm i playwright@1.49.1 >/dev/null 2>&1
+          npx playwright install --with-deps chromium >/dev/null 2>&1
+      - name: Kesif
+        env:
+          SITES: ${{ inputs.sites }}
+        run: node scripts/recon.mjs $SITES
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recon-out
+          path: recon-out
