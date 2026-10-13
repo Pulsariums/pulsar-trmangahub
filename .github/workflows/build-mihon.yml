@@ -28,6 +28,7 @@ jobs:
     env:
       PUBLISH: ${{ inputs.publish || github.event_name == 'schedule' }}
       INCLUDE_UNVERIFIED: ${{ inputs.include_unverified && '1' || '0' }}
+      PULSAR_LIVE_GATE: '1'
     steps:
       - uses: actions/checkout@v4
 
