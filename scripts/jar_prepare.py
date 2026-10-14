@@ -199,7 +199,7 @@ def keep_candidate(nsfw, lang, nsfw_mode, exclude_lang):
 
 
 def select_and_repair(files, by_parser, mode, include_broken, policy, include_unverified=False,
-                      allow_multilang=False, nsfw_mode="any", exclude_lang=(), trusted=frozenset()):
+                      allow_multilang=False, nsfw_mode="any", exclude_lang=(), trusted=frozenset(), pinned_rels=frozenset()):
     file_of = {}
     lang_of = {}
     broken_of = {}
@@ -229,6 +229,8 @@ def select_and_repair(files, by_parser, mode, include_broken, policy, include_un
         kept.add(pid)
 
     for pid in sorted(kept):
+        if file_of[pid].get("rel") in pinned_rels:
+            continue  # elle onarılmış (overrides/) parser: domain otomatik alternatifle ezilmez
         entry = next((e for e in by_parser.get(pid, []) if alt_ok(e, policy, trusted)), None)
         if entry is None:
             continue
@@ -427,7 +429,7 @@ def main(argv=None):
     allow_multilang = bool(args.allow_multilang)
     file_of, kept, patched, patch_failed, lang_of = select_and_repair(
         files, by_parser, args.mode, args.include_broken, args.apply_alternatives, include_unverified,
-        allow_multilang, args.nsfw, exclude, trusted_domains(entries))
+        allow_multilang, args.nsfw, exclude, trusted_domains(entries), frozenset(overrides))
     all_ids = set(file_of)
     deleted, rescued = delete_and_rescue(files, kept)
     pruned_refs = prune_dangling_refs(upstream, all_ids - kept)
