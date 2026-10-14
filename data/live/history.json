@@ -1501,15 +1501,16 @@
   },
   "SUMMERTOONS": {
     "first_seen": "2026-10-14T10:16:46Z",
-    "ok_streak": 0,
-    "fail_streak": 1,
-    "name": "summertoons",
+    "ok_streak": 1,
+    "fail_streak": 0,
+    "name": "Webtoon Oku, Manhwa Oku, Manga O",
     "domain": "summertoons.net",
-    "checked": "2026-10-14T10:16:46Z",
+    "checked": "2026-10-14T10:29:56Z",
     "last_fail": "2026-10-14T10:16:46Z",
-    "error_class": "parse",
-    "last_error": "A JSONObject text must begin with '{' at 1 [character 2 line 1]",
-    "stage": "pages"
+    "error_class": null,
+    "last_error": null,
+    "stage": "image",
+    "last_ok": "2026-10-14T10:29:56Z"
   },
   "NEMESISSCANS": {
     "first_seen": "2026-10-14T10:16:46Z",

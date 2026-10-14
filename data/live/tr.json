@@ -1,145 +1,16 @@
 {
-  "checked_at": "2026-10-14T10:16:46Z",
+  "checked_at": "2026-10-14T10:29:56Z",
   "results": [
     {
-      "error_class": "http_blocked",
-      "pages": 11,
+      "pages": 1,
       "stage": "image",
-      "chapters": 26,
-      "ms": 14898,
-      "domain": "amangaplanet.com.tr",
-      "name": "amangaplanet",
-      "id": "AMANGAPLANET",
-      "list": 18,
-      "ok": false,
-      "error": "HTTP 403 görsel: https://www.amangaplanet.com.tr/amip-proxy/?f=ESK1c2TAbcEYoSeftYKgCsWr56bfVEr8eNqZ61ahHFCYsIixMvkOt0RUf-yknjnfHXZhrH_87aM4G8rgaC5FoXl2lsJPTfrutXSSI8t6TxAQMqiHIBXHJ7WWwIEcnRyOe_Pp_dTXuM-pb-XzkofZkbQNgOUvtLPK_-b_YEFJWlX5KhKQiFLJA0Idpoh-dK6KkRf0LKfvBG65zSSUrXY0bg"
-    },
-    {
-      "pages": 2,
-      "stage": "image",
-      "chapters": 6,
-      "ms": 1919,
-      "domain": "holyscans.com.tr",
-      "name": "HolyScans",
-      "id": "HOLYSCANS",
-      "list": 20,
-      "ok": true
-    },
-    {
-      "error_class": "parse",
-      "stage": "pages",
-      "chapters": 39,
-      "ms": 2141,
+      "chapters": 60,
+      "ms": 1913,
       "domain": "summertoons.net",
-      "name": "summertoons",
+      "name": "Webtoon Oku, Manhwa Oku, Manga O",
       "id": "SUMMERTOONS",
       "list": 30,
-      "ok": false,
-      "error": "A JSONObject text must begin with '{' at 1 [character 2 line 1]"
-    },
-    {
-      "pages": 29,
-      "stage": "image",
-      "chapters": 235,
-      "ms": 22038,
-      "domain": "nemesisscans.com",
-      "name": "Manga Oku, Webtoon Oku, Manhwa &",
-      "id": "NEMESISSCANS",
-      "list": 21,
       "ok": true
-    },
-    {
-      "error_class": "http",
-      "stage": "list",
-      "ms": 2372,
-      "domain": "ruyamanga2.com",
-      "name": "ruyamanga2",
-      "id": "RUYAMANGA2",
-      "ok": false,
-      "error": ". Status=400, URL=[https://www.ruyamanga2.com/wp-admin/admin-ajax.php]"
-    },
-    {
-      "error_class": "empty",
-      "pages": 0,
-      "stage": "pages",
-      "chapters": 15,
-      "ms": 6757,
-      "domain": "moondaisyscans.pro",
-      "name": "moondaisyscans",
-      "id": "MOONDAISYSCANS",
-      "list": 20,
-      "ok": false,
-      "error": "Bölümde sayfa yok"
-    },
-    {
-      "pages": 7,
-      "stage": "image",
-      "chapters": 33,
-      "ms": 3873,
-      "domain": "ghostoon.com",
-      "name": "ghostoon",
-      "id": "GHOSTOON",
-      "list": 20,
-      "ok": true
-    },
-    {
-      "error_class": "empty",
-      "stage": "details",
-      "chapters": 0,
-      "ms": 1436,
-      "domain": "ragnarscans.net",
-      "name": "RagnarScans",
-      "id": "RAGNARSCANS_TR",
-      "list": 488,
-      "ok": false,
-      "error": "İlk 3 mangada bölüm yok"
-    },
-    {
-      "error_class": "parse",
-      "stage": "pages",
-      "chapters": 88,
-      "ms": 2704,
-      "domain": "millascan.com",
-      "name": "millascan",
-      "id": "MILLASCAN",
-      "list": 20,
-      "ok": false,
-      "error": "No image found, try to log in at https://millascan.com/manga/xc2kjv8p/88-bolum/?style=list"
-    },
-    {
-      "error_class": "parse",
-      "stage": "pages",
-      "chapters": 50,
-      "ms": 1273,
-      "domain": "webtoonoku.org",
-      "name": "Türkçe Manga ve Webtoon Oku",
-      "id": "WEBTOONOKU",
-      "list": 18,
-      "ok": false,
-      "error": "No reader images matched: check reader.images at https://webtoonoku.org/hapci-prens-chapter-50/"
-    },
-    {
-      "error_class": "parse",
-      "stage": "pages",
-      "chapters": 67,
-      "ms": 1580,
-      "domain": "trmanga.com",
-      "name": "Webtoon Oku",
-      "id": "TRMANGA",
-      "list": 78,
-      "ok": false,
-      "error": "No reader images matched: check reader.images at https://trmanga.com/"
-    },
-    {
-      "error_class": "http_gone",
-      "stage": "details",
-      "ms": 2211,
-      "domain": "opiatoon.shop",
-      "name": "OpiaToon",
-      "id": "OPIATOON",
-      "list": 20,
-      "ok": false,
-      "error": ". Status=404, URL=[https://opiatoon.shop/giris-yapmalisiniz/ajax/chapters/]"
     }
   ]
 }
