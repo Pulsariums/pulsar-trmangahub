@@ -48,9 +48,7 @@ main{padding:8px 16px 80px}
 </style></head><body>
 <header><h1>Türkçe kaynak testi (<span id="cnt"></span>)</h1>
 <div class="bar"><input id="q" placeholder="Ara: ad veya alan adı">
-<select id="f"><option value="">Hepsi</option><option value="todo">Test etmediklerim</option><option value="up">Bizde çalışan</option><option value="down">Çalışmayan</option><option value="jar">JAR var</option><option value="mihon">Mihon var</option></select></div>
-<div class="bar" style="margin-top:6px"><button id="auto" style="flex:1;font-weight:700">▶ Oto test (JAR'lar)</button><button id="tok">Anahtar</button></div>
-<div id="st" class="meta" style="margin:6px 0 0"></div></header>
+<select id="f"><option value="">Hepsi</option><option value="todo">Test etmediklerim</option><option value="up">Bizde çalışan</option><option value="down">Çalışmayan</option><option value="jar">JAR var</option><option value="mihon">Mihon var</option></select></div></header>
 <main id="list"></main>
 <div id="out"><span id="sum" style="flex:1"></span><button id="copy">Listeyi kopyala</button></div>
 <script>
@@ -71,7 +69,7 @@ function render(){
   document.getElementById('list').innerHTML=list.map(r=>\`<div class="row">
   <div class="top"><span class="name">\${r.name}</span><span>\${r.nsfw?'<span class="tag">+18</span>':''}<span class="tag">\${r.status}</span></span></div>
   <div class="meta">\${r.domain} · CI: <b class="\${cls(r.ci)}">\${r.ci}</b> · cihaz: <b class="\${cls(r.device)}">\${r.device}</b>\${r.jar?' · JAR':''}\${r.mihon?' · Mihon':''}</div>
-  <div class="act">\${r.parser?'<button data-t="'+r.parser+'">▶ JAR testi</button>':'<span class="meta">JAR yok</span>'}
+  <div class="act"><a href="\${r.url}" target="_blank" rel="noopener">Siteyi aç</a>
   <button data-id="\${r.id}" data-v="ok" class="ok \${saved[r.id]==='ok'?'sel':''}">✔ Çalışıyor</button>
   <button data-id="\${r.id}" data-v="bad" class="bad \${saved[r.id]==='bad'?'sel':''}">✖ Çalışmıyor</button></div></div>\`).join('');
   const n=Object.values(saved);document.getElementById('sum').textContent='Çalışıyor '+n.filter(x=>x==='ok').length+' · Çalışmıyor '+n.filter(x=>x==='bad').length;
@@ -82,28 +80,7 @@ document.getElementById('q').oninput=render;document.getElementById('f').onchang
 document.getElementById('copy').onclick=async()=>{
   const out=ROWS.filter(r=>saved[r.id]).map(r=>({id:r.id,name:r.name,domain:r.domain,parser:r.parser,sonuc:saved[r.id]==='ok'?'calisiyor':'calismiyor'}));
   const t=JSON.stringify(out,null,1);try{await navigator.clipboard.writeText(t);alert(out.length+' kayıt kopyalandı')}catch{prompt('Kopyala:',t)}};
-const REPO='Pulsariums/pulsar-trmangahub',API='https://api.github.com/repos/'+REPO;
-const st=(t)=>document.getElementById('st').textContent=t;
-const tk=()=>{try{return localStorage.getItem('gh-tok')||''}catch{return ''}};
-document.getElementById('tok').onclick=()=>{const v=prompt('GitHub anahtarı (fine-grained, bu repo, Actions: Read and write). Bir kez girilir, telefonda saklanır:',tk());if(v!==null){try{localStorage.setItem('gh-tok',v.trim())}catch{}st(v.trim()?'Anahtar kaydedildi':'Anahtar silindi')}};
-const gh=(p,o={})=>fetch(API+p,{...o,headers:{Authorization:'Bearer '+tk(),Accept:'application/vnd.github+json','Content-Type':'application/json'}});
-async function refresh(){try{const r=await fetch('https://raw.githubusercontent.com/'+REPO+'/main/data/live/history.json?'+Date.now());const h=await r.json();
-  ROWS.forEach(x=>{const e=x.parser&&h[x.parser];if(e)x.ci=e.ok_streak>0?'ok':(e.error_class||'fail')});render()}catch(e){st('Sonuç okunamadı: '+e)}}
-async function run(inputs,label){
-  if(!tk()){st('Önce "Anahtar" ile GitHub anahtarını gir');return}
-  const t0=new Date(Date.now()-5000).toISOString();
-  const r=await gh('/actions/workflows/live-check.yml/dispatches',{method:'POST',body:JSON.stringify({ref:'main',inputs})});
-  if(r.status!==204){st('Başlatılamadı ('+r.status+'): anahtarı/izni kontrol et');return}
-  st(label+' başlatıldı, sonuç bekleniyor…');let id=null;
-  for(let i=0;i<120;i++){await new Promise(z=>setTimeout(z,10000));
-    const l=await(await gh('/actions/workflows/live-check.yml/runs?event=workflow_dispatch&per_page=5')).json();
-    const w=(l.workflow_runs||[]).find(x=>x.created_at>=t0);if(!w)continue;id=w.id;
-    st(label+': '+w.status+' ('+(i*10)+' sn)');
-    if(w.status==='completed'){await refresh();const ok=ROWS.filter(x=>x.ci==='ok').length;st(label+' bitti ('+w.conclusion+'). JAR testinden geçen: '+ok+'/'+ROWS.filter(x=>x.jar).length);return}}
-  st('Zaman aşımı; Actions sayfasından bak')}
-document.getElementById('auto').onclick=()=>run({bolum:'tr'},'Oto test (tr)');
-document.getElementById('list').addEventListener('click',e=>{const b=e.target.closest('button[data-t]');if(b)run({bolum:'tr',only:b.dataset.t},b.dataset.t)});
-render();refresh();
+render();
 </script></body></html>`;
 fs.mkdirSync('site', { recursive: true });
 fs.writeFileSync('site/index.html', html);
