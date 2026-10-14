@@ -1,0 +1,50 @@
+{
+ "domain": "mangtto.com",
+ "title": "Webtoon Oku — Türkçe Manga, Manhwa ve Webtoon | Mangitto",
+ "mode": "html",
+ "list": {
+  "path": "",
+  "pageParam": "",
+  "item": "",
+  "link": "",
+  "title": "",
+  "cover": "",
+  "itemCount": 0
+ },
+ "detail": {
+  "title": "",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "meta[name=\"description\"]@content",
+  "genres": "",
+  "status": "",
+  "chapterItem": "a.relative.h-14.flex",
+  "chapterLink": "@href",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "body > div:nth-of-type(1) > main > main > div > div img",
+  "attr": "src",
+  "count": 30
+ },
+ "api": [
+  {
+   "url": "https://mangtto.com/_nuxt/builds/meta/82ef5b8a-22c1-4c14-8f88-5cf14caf7802.json",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://mpc2-prod-29-is5qnl632q-uc.a.run.app/events?cee=no",
+   "method": "POST",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 0,
+  "detail": 0.5,
+  "reader": 1
+ },
+ "notes": [
+  "list: no repeated card group (>=6) found",
+  "chapterLink \"@href\": item is the link itself"
+ ]
+}

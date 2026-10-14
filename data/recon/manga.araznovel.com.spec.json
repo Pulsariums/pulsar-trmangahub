@@ -1,0 +1,42 @@
+{
+ "domain": "manga.araznovel.com",
+ "title": "Just a moment...",
+ "mode": "html",
+ "list": {
+  "path": "/series/",
+  "pageParam": "",
+  "item": "div.ao-manga-card",
+  "link": "a",
+  "title": "h3",
+  "cover": "img@src",
+  "itemCount": 18
+ },
+ "detail": {
+  "title": "",
+  "cover": "",
+  "description": "",
+  "genres": "",
+  "status": "",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [],
+ "confidence": {
+  "list": 1,
+  "detail": 0,
+  "reader": 0
+ },
+ "notes": [
+  "list: 18 items at /series/",
+  "list link prefix: series",
+  "pagination: not detected",
+  "detail: series page not found",
+  "reader: no chapter image >=300px found"
+ ]
+}

@@ -1,0 +1,809 @@
+{
+ "site": "https://webtoonoku.org",
+ "calls": [
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960-300x400.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak-300x400.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/zyro-image-kopyamx-kopya-193x278-1.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/a98a1a7b-9459-4057-8931-30083605c2a8-300x400.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/337d6e89-465f-4bc4-b6fd-2effdef83678-300x400.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/1f139562-1ad2-4004-8637-e52064f6204f-300x400.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/b41b462df7092a19e460cb668d09c61f.jpg?ver=1791129845"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/flavor-avatars/1/avatar-1782645249.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/d2eca40ce952b2b2be7b923e36cbcc6e.jpg?ver=1791204408"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/75ca09f53a1b10cbfbc81eef93d8fd5d.jpg?ver=1790960946"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/c9c52bf81367e9dc0b085a98b36222f9.jpg?ver=1790986702"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/59ad8542f80edfde7a43cb870c374190.jpg?ver=1791236421"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/4782498282f6bd3bb9c4a546067c3a4a.jpg?ver=1791063633"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/flavor-avatars/111/avatar-1787341606.jpg"
+  },
+  {
+   "tag": "home",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "action=flavor_get_top_readers_widget&limit=10&nonce=f471f52d28",
+   "body": "{\"success\":true,\"data\":{\"html\":\"<div class=\\\"top-reader-item top-rank-1\\\">\\n                <span class=\\\"top-reader-rank rank-gold\\\">\\n                    #1                <\\/span>\\n                <div class=\\\"top-reader-avatar ff-avatar-frame-emerald\\\">\\n                    <img src=\\\"https:\\/\\/webtoonoku.org\\/wp-content\\/uploads\\/flavor-avatars\\/111\\/avatar-1787341606.jpg\\\" alt=\\\"HEKT13R\\\">\\n                <\\/div>\\n                <div class=\\\"top-reader-info\\\">\\n                    <h4 class=\\\"top-reader-name ff-name-glow-emerald\\\">\\n                        HEKT13R                    <\\/h4>\\n                    <span class=\\\"top-reader-meta\\\">Lv 41 \\u00b7 2352 b\\u00f6l\\u00fcm<\\/span>\\"
+  },
+  {
+   "tag": "home",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "after_id=0&action=flavor_live_chat_fetch&nonce=9b707fd4a0",
+   "body": "{\"success\":true,\"data\":{\"messages\":[{\"id\":73,\"html\":\"    <div class=\\\"chat-message chat-level-tier-rookie\\\" data-message-id=\\\"73\\\">\\n        <div class=\\\"chat-avatar ff-avatar-frame-default\\\">\\n            <img src=\\\"https:\\/\\/secure.gravatar.com\\/avatar\\/339a661a8a026f45eecd39351c4c132b8e99d21b09c082b6b2d359457a50952d?s=96&#038;d=retro&#038;r=g\\\" alt=\\\"vado\\\">\\n        <\\/div>\\n        <div class=\\\"chat-bubble\\\">\\n            <div class=\\\"chat-message-head\\\">\\n                <span class=\\\"chat-name ff-name-glow-none\\\">vado<\\/span>\\n                <span class=\\\"chat-level\\\">Lv. 1<\\/span>\\n                                <span class=\\\"chat-time\\\">13.06.2026 06:14<\\/span>\\n            <\\/div"
+  },
+  {
+   "tag": "home",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundaryajKDHqAjk6mDzpPd\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundaryajKDHqAjk6mDzpPd--\r\n",
+   "body": "{\"success\":true,\"data\":{\"logged_in\":\"0\",\"name\":\"\",\"avatar\":\"\",\"nonce\":\"d9d7e05751\",\"issued_at\":1791972796}}"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960-300x400.webp"
+  },
+  {
+   "tag": "home",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "after_id=92&action=flavor_live_chat_fetch&nonce=9b707fd4a0",
+   "body": "{\"success\":true,\"data\":{\"messages\":[]}}"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=4002769422379914",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"vVXPaoKpEdXV_9EPo5nWgAY\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"cFw71dxkUomkQXM7t6QoYNjBlWI8nymNIgO1CZOepbY\",\"bg_binary\":\"Qoc5hzRAtlB+hoyoZ7gdBEA3MzLsimao8TWyFsyJ8zoG9A6cGZ/P5nCT6vDsycfW3pqy8DhD5tzJ61nOg/gCCoPSe8NY6w8ddBJYfhYLFQo3LOnz1UAOiNslEnFSjNq9tUgBevxlnH+Lwv3H53ie7CVBIWcqyJ0v4hzz3UggBzhXudIcnnlanmgL07F14CCzJ1JuI2wpv3yF0OdARtrocgJ0idABvFWKr+J8+3CGd58ZW7Pg/Dp9PD7utUoU9FNajyiEMOWD+cwrrAWLUnume4fM/cjm5IUfGA71vY1JgkT+ENa1GQVbOo4emVueaplnGTEaw+yqnUNGgqCqYBo6vZ1G7SSHhVD0KXsiAkuYiWZNTTFoEoQVMx1dKBfnP+DIaKLkxSVkujAAN0Xo3+G+3OoYFvSCLUMT0422d3buURCt6udQg4HSp/nh+irUXAAP5SiFIqEwRReHN3Y4OfCVG2NdJQ1wNdX1aSKk0FO2qqdH74vPYQnQCEMhkztt6A6JlSSCr4opSbaFIEm3xJ5F8W2K6cX/jyMFGfShz"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/zyro-image-kopyamx-kopya-193x278-1.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/337d6e89-465f-4bc4-b6fd-2effdef83678-300x400.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/5d180d6c2bff4698b0ff8da98f0cca14-300x400.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/112b1634-884d-4c34-af67-63dd8380d562-300x400.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak-300x400.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/a98a1a7b-9459-4057-8931-30083605c2a8-300x400.jpg"
+  },
+  {
+   "tag": "home",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/1f139562-1ad2-4004-8637-e52064f6204f-300x400.jpg"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113/1?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2F&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A1%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A451522439%3Az%3A0%3Ai%3A20261014101316%3Aet%3A1791972797%3Ac%3A1%3Arn%3A213166967%3Arqn%3A1%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Afp%3A380%3Ads%3A0%2C0%2C171%2C4%2C1%2C0%2C%2C271%2C14%2C%2C%2C%2C567%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972795593%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972797%3At%3AT%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku%20-%20G%C3%BCncel%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20oku&t=clt%28802%29clc%280-0-0%29rqnt%281%29rfs%281%29ufs%281%29aw%281%29rcm%281%29cdl%28na%29eco%28827976%29ti%281%29&redirnss=1",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"settings\":{\"auto_goals\":1,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"sbp\": {\"a\":\"1ThU9yGl5uXNQXPWK8JaQXrPC5Z7IaDhCx2U+HGo/WyQKaNWfokhOIwnvDgFG0hc\", \"b\":\"f4rzX9FJh13qqWOYFe0WpR85KwFLcgkAqrTG9AB+PhkbHAKmHNUtplr4I1ZXo+Ns\"},\"eu\":2,\"region\":\"US\",\"nss\":1,\"hittoken\":\"1791972797_8b10bd51f38affb740b9cbcaf8c4fb66fa936530386f1f5fd464d08dd8a9eaad\",\"cf\":1,\"mcf\":1,\"aytm\": true,\"wstoken\":\"11180.qTomijagCxv5LVlmJcgMuzfP06z4YxCunKgkkq94LBdoZulGeyKtmkxQgWu7JaD2rTPWtHgBnrsaoZfw42rLE3UXlhfeFqGkZ6p5JEqOYjg,.uhBOHykkxlfzVTYbcyiJZNJEGww,\",\"hidv2\":\"6056993742466318433\",\"ymclid\":\"6056993742466318433\"},\"userData\":{}}"
+  },
+  {
+   "tag": "home",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "after_id=92&action=flavor_live_chat_fetch&nonce=9b707fd4a0",
+   "body": "{\"success\":true,\"data\":{\"messages\":[]}}"
+  },
+  {
+   "tag": "home",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "after_id=92&action=flavor_live_chat_fetch&nonce=9b707fd4a0",
+   "body": "{\"success\":true,\"data\":{\"messages\":[]}}"
+  },
+  {
+   "tag": "home",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "after_id=92&action=flavor_live_chat_fetch&nonce=9b707fd4a0",
+   "body": "{\"success\":true,\"data\":{\"messages\":[]}}"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960-300x400.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/112b1634-884d-4c34-af67-63dd8380d562-300x400.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak-300x400.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/337d6e89-465f-4bc4-b6fd-2effdef83678-300x400.jpg"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2Fseries&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A654821941%3Az%3A0%3Ai%3A20261014101320%3Aet%3A1791972800%3Ac%3A1%3Arn%3A267239270%3Arqn%3A2%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Ads%3A0%2C0%2C249%2C1%2C0%2C0%2C%2C%2C%2C%2C%2C%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972800176%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972800%3At%3ASayfa%20Bulunamad%C4%B1%20-%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku&t=clt(14)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"settings\":{\"auto_goals\":1,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"sbp\": {\"a\":\"u6dRQE6Z3LOvhl2dKetXhHOGunyA91dbKQ18LWgdA7QlbFTy3kS7reTimR7CHZHq\", \"b\":\"dFjKuKL0AthbwGB/CeMQGOqrXZjD3Sw6kDF1RFtdoA136T7FducWoKdxe7orp1Y0\"},\"eu\":2,\"region\":\"US\",\"hittoken\":\"1791972800_1eeb132dbeb89ae39862cfdbb46ca1b940ed92789a6aa6ec6247bef09d0eef95\",\"cf\":1,\"mcf\":1,\"aytm\": true,\"wstoken\":\"11180.vWn2y1Ghb1fgOxSU-NABh_ST834YgRP0sD-gm8f9IDaMQVm4l5FgiBRl2mnAZm9JSrVwe7hgtUpqTmz1hx14K5-obAZe--zfXV5e41eqLOA,.qmyTqMBfPUQ1xvvNM5XLxsZOSTw,\",\"hidv2\":\"6056994549743222881\",\"ymclid\":\"6056994549743222881\"},\"userData\":{}}"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/zyro-image-kopyamx-kopya-193x278-1.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/1f139562-1ad2-4004-8637-e52064f6204f-300x400.jpg"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=2900332486284635",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"wFXPapeGMdiA_9EP4P-1uAM\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"cFw71dxkUomkQXM7t6QoYNjBlWI8nymNIgO1CZOepbY\",\"bg_binary\":\"QockrpNbHneuujHB574ccA/3FVRWuvJrAzmZ3iQ6eDAkuhDHrnBS/BBWfXMYKuvZNnZZbmcs+SfScV2Db8qX6o3dQgLPJncNkHRZTuVgwV42kC9gPYV7YOY1y2eqzZCQDYQEW5g48T7nqI7K1OcwpO76EeCYlHuQHvyN3ZOhJRjAkZ8hJqI6lodHt41crel3RQ6+464Jpr6vbb6PZufyg+IOh4C4jEQIZg6bsO/M4CiLcQPR1/DUIAM6e0hIWwSAQOcP/TTimrmx9W17VliH64GCEOTuls2MMHrKPqgyLpvRYsngY9BBM7+v02nr5VUqoBv/ZAUPsZvkuN/9LxJPIypCEnctVFcXDSRyAoEuBGt9lwjHawADH/jSrcuwr9znaLJ9kGLSL4pY0HpFJJ9uKoS6LvAobT+wfKZ62/yR9gnWJyJ7vsh0LHa39X7fZYoWispwqx4uH59TUg66n9rBeDmEN8A+36nxQZLDGG+7cWlUDazxyNTx8xHSgz7zMPmZBV+EMfbo79C8ug+VGXl4Jq4UY2Fbx8u9+2lae"
+  },
+  {
+   "tag": "list:series",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundaryOfUGyxWKjBrdhlNj\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundaryOfUGyxWKjBrdhlNj--\r\n",
+   "body": "{\"success\":true,\"data\":{\"logged_in\":\"0\",\"name\":\"\",\"avatar\":\"\",\"nonce\":\"d9d7e05751\",\"issued_at\":1791972800}}"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960-300x400.webp"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak-300x400.jpg"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/337d6e89-465f-4bc4-b6fd-2effdef83678-300x400.jpg"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/112b1634-884d-4c34-af67-63dd8380d562-300x400.jpg"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/zyro-image-kopyamx-kopya-193x278-1.jpg"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/1f139562-1ad2-4004-8637-e52064f6204f-300x400.jpg"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2Fmanga&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A107193661%3Az%3A0%3Ai%3A20261014101323%3Aet%3A1791972804%3Ac%3A1%3Arn%3A960383886%3Arqn%3A3%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Ads%3A0%2C0%2C288%2C2%2C%2C0%2C%2C%2C%2C%2C%2C%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972803472%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972804%3At%3ASayfa%20Bulunamad%C4%B1%20-%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku&t=clt(15)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"settings\":{\"auto_goals\":1,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"sbp\": {\"a\":\"19KjnoRrvq2YmDUsWxZRFa3MRUcJcY5Zw4SpwJ6fZ4j8AAvMUo4LZ8Yw7hg69T4B\", \"b\":\"Emv91MWqBy7AqJp/2hlgjt13AfAXQdhgJWarGsgSbVKAureviP2wYp1p4Fmp1SqF\"},\"eu\":2,\"region\":\"US\",\"hittoken\":\"1791972803_5b3c0dcd27992390ef83491dd52be0b5ce94f47b32b126090e6fc9ea872f3575\",\"cf\":1,\"mcf\":1,\"aytm\": true,\"wstoken\":\"11180.2G8U1l47dTJIXPVGP4BsN3lz8GT6IMnePkyhx3nE1ZygK-1IeJM8Sp-INWKFz6dLejzbml7mzc-8Gsv7TOjfzPR2sxqzuOTwrl9K3Sbf2X4,.xT77NZYQ9OgiC1vRpafSbY8INoQ,\",\"hidv2\":\"6056995425509703777\",\"ymclid\":\"6056995425509703777\"},\"userData\":{}}"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=1527622315158784",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"w1XPaqaWOcaE_9EP9NeSEA\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"cFw71dxkUomkQXM7t6QoYNjBlWI8nymNIgO1CZOepbY\",\"bg_binary\":\"Qoc9BKQOTCKqrwqrZ0uSnKXP+dF1lgJ687kubg2XjrsRhXWDTmWsjVlQm3PLIFe65DwJItA6Eax4ZbIPmpS5g/GBJZoWvRgHGZblYvdjgHRCRgiZjyg6Pyynuw9BtchAPOopiaR48+IOamZbaEOjHh1MdLGJ4EORKUhOfeC9ce5cnQPBDVw8MYj9fqkfMPOkTsvmTq4XLMisr1ylujvylnvj9Sac1GTnGup7nqXJS74fM5vi/WF2nZ3aqOZgF1l6dyr+OJ1O+6VPgZNIWODKo8ogDVPAULXw7Jw39SdnVUzhORGAHPM+XQx660BOaHhKdHBbHuiBx6J6+5dzXKZzrYq8067h2Wz8ceLfVxTiTF2RTaYWUmWlKHxA9S7xB/Erm4S9XMcFWV8SfBlDuH/0Hlyg3Bsx7MtPO4sF6aXRu2Y2w5fFk5bTDLAnzPUU1w7pDiW/+9JssJ8HoiETNVES6auozQKQcjq7fPYvR2P1F94EG0OFoMJE9Pni5T7naL1ePxY7OvYeB6E4VZnxSUm+iA5KVyNVMrKGWoEP8j"
+  },
+  {
+   "tag": "list:manga",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundary9zXvzkU0OvlA4jbn\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundary9zXvzkU0OvlA4jbn--\r\n",
+   "body": "{\"success\":true,\"data\":{\"logged_in\":\"0\",\"name\":\"\",\"avatar\":\"\",\"nonce\":\"d9d7e05751\",\"issued_at\":1791972804}}"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960-300x400.webp"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak-300x400.jpg"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/112b1634-884d-4c34-af67-63dd8380d562-300x400.jpg"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/337d6e89-465f-4bc4-b6fd-2effdef83678-300x400.jpg"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/1f139562-1ad2-4004-8637-e52064f6204f-300x400.jpg"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/zyro-image-kopyamx-kopya-193x278-1.jpg"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2Fwebtoon&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A592542063%3Az%3A0%3Ai%3A20261014101326%3Aet%3A1791972807%3Ac%3A1%3Arn%3A836119754%3Arqn%3A4%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Ads%3A0%2C0%2C290%2C2%2C0%2C0%2C%2C%2C%2C%2C%2C%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972806596%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972807%3At%3ASayfa%20Bulunamad%C4%B1%20-%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku&t=clt(20)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"settings\":{\"auto_goals\":1,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"sbp\": {\"a\":\"ALmMcnNAT5Xn+orerq494fUPosoM+SBU8Lp80MeMVCY9WAuq6dCQW/RtGMOaD548\", \"b\":\"GvAkL9JjvQqjI6aHY6HkmuBwitlDIS5E0NjYIlXz379zOJJtl1MqffWXO+1qVMpI\"},\"eu\":2,\"region\":\"US\",\"hittoken\":\"1791972807_f0a7ceeddf7be74df6c1d5a34477aa87dacb63cdc60b2077322bdb4527b7fe91\",\"cf\":1,\"mcf\":1,\"aytm\": true,\"wstoken\":\"11180.Sdz4ZkKOYQcBxEes8oC04XX3UFZNPeXj1QH27LDbZPhwASVrLx-vxaSHa8xNZGXeK0ckmy4925qxM9ccZRfEnaBDTDSq1AOsaZr1GAikK10,.3IlwfnzMnovfATX6gJWOkpqprvA,\",\"hidv2\":\"6056996245963276385\",\"ymclid\":\"6056996245963276385\"},\"userData\":{}}"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=5568383252286731",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"x1XPaqiqBLGG_9EPoeb0yAg\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"cFw71dxkUomkQXM7t6QoYNjBlWI8nymNIgO1CZOepbY\",\"bg_binary\":\"Qocn/fJRma+WmrBwjbEKO4EupSZALNLoabuQUeKh8Dx0Cc4YXgbbr384IvqgVc7byHEtLsQKUg3qlsmO1T4UTwLKVBWsZoRJsyR9Yj7yN9FuNWFabDQDMGTmQX1DUDex9cGyxGuFPNHrlBorEg0dm7d3oo9gw25ZYfW6PY6LULsbXk8KB0kF7MYg5V6SIaAvQX/6kEiCqUzPMCvEtV3HrUln4ZW2gb/WclpvqEHYeyk0JAtpTBC7ye4dJ0kQygqGkHLTTu1jlnCmlnYvcCw277wEPeqXEw5Ud7WccjqgrIlDW0VPC5pFx1UaHMpo9skWYQy+XR98V19X+FPbezGfUGDi5jppXE9RqlxOsJgo36usD95vUDf46IhZLMdwyZCTDQrv2ItNCg4ilna0dmOB1nLlQgVzvuIHbq01hZHZ/BbWkbv8pkALOVhmua7znvjgZKSdlaW3k/Sm66+Yut5JijB1LtwFHzV+McSZTMO4pbSVqeq96IHfvgyXH3ZRjSH6vGy06st6ZoQxiTZtJdXM9zUYIvG01Zjx/1mc0"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundaryQ5SwJ6IN8qiGWa4G\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundaryQ5SwJ6IN8qiGWa4G--\r\n",
+   "body": "{\"success\":true,\"data\":{\"logged_in\":\"0\",\"name\":\"\",\"avatar\":\"\",\"nonce\":\"d9d7e05751\",\"issued_at\":1791972807}}"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960-300x400.webp"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/337d6e89-465f-4bc4-b6fd-2effdef83678-300x400.jpg"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/zyro-image-kopyamx-kopya-193x278-1.jpg"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak-300x400.jpg"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/112b1634-884d-4c34-af67-63dd8380d562-300x400.jpg"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/1f139562-1ad2-4004-8637-e52064f6204f-300x400.jpg"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2Fwebtoons&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A760906506%3Az%3A0%3Ai%3A20261014101329%3Aet%3A1791972810%3Ac%3A1%3Arn%3A74378705%3Arqn%3A5%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Ads%3A0%2C0%2C292%2C1%2C%2C0%2C%2C%2C%2C%2C%2C%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972809210%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972810%3At%3ASayfa%20Bulunamad%C4%B1%20-%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku&t=clt(13)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"settings\":{\"auto_goals\":1,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"sbp\": {\"a\":\"T1fNpJJcSGkWrvUPjOuUcaI2HsoVUxxv59YRSkdjO3yYwHd9887WxGqvuDiZdZ+/\", \"b\":\"ICE7PnlqRBxxVNzVy8QbeYxGAdgk/vF2lZtzP9HNNqWJ/SrxGkpiLycgSyzoIOCT\"},\"eu\":2,\"region\":\"US\",\"hittoken\":\"1791972809_8ac11d35b2d3d6fd6f9a03445fa8b58a4b387dfbb59b7524ba8c42cffbd47b2d\",\"cf\":1,\"mcf\":1,\"aytm\": true,\"wstoken\":\"11180.x6zFO6_KZUz7M2HGwkknFmp0XigvC8-zO8Swb7wMu1nPB8lu-lJMyJMfKSVU56ZSAdQEu-cAVRoF-LbG_ZtNeVOcQVUywt0KaIzAeOzbjHk,.SKsNn759k-VsbeHRX3oJd2GWBLA,\",\"hidv2\":\"6056996930620489825\",\"ymclid\":\"6056996930620489825\"},\"userData\":{}}"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=5140700937214506",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"yVXParehKYqA_9EPmvqd0QM\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"cFw71dxkUomkQXM7t6QoYNjBlWI8nymNIgO1CZOepbY\",\"bg_binary\":\"QocZtg49s5iZB8MPFgAy8NzGBjkOIeOQK+aSPCvaam8PF46ByQg1v9OP1NxNsvPoiMMCV8ID48ts/Ek5dfH9mI/ECzt2E9ajFdx3HAyBJaVMmlW6HtvfK/hnSZg4TFG1WmjObpSAGydgvOOToOIoR4ein2usQzu8ndjO+qeawou/204b7L9SHRpn9LxB8Wy4VNZ/SFHZBQ8KOEr/VWF0lHalIGWG7Sy7HH9OVM8dGgzCEXhrt6s1t2rrJZXUwzqwK+Xfz2EMU1w3u5gPbXUQl4TEpKjicHOUOwziad7jxJSIV1rOX8TUM8xMhY/25MJsJp/v45z9YdCCfROxhJrpoEp5znfqr9MzE9r6wjxRad50h/8LBjoShtrIjWCjw2NAF/8SuiFvCJrs2BexejOrkQkD3d0T0Hh4g+2ibTKf/mszXEIiIH1HxbrQvMjEic2BBeItjhVNnBT2LgtU3rgu29akY7cBOCmH/SZW9XxCw9XQRe8iBJu2JeqF8qAw6I7XT4vcZiBtxebo2xsKT5OlIOu0FTfYdXYAl9mgc"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundaryJ69AFBZRFIJHHRjR\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundaryJ69AFBZRFIJHHRjR--\r\n",
+   "body": "{\"success\":true,\"data\":{\"logged_in\":\"0\",\"name\":\"\",\"avatar\":\"\",\"nonce\":\"d9d7e05751\",\"issued_at\":1791972809}}"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960-300x400.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/337d6e89-465f-4bc4-b6fd-2effdef83678-300x400.jpg"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak-300x400.jpg"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/zyro-image-kopyamx-kopya-193x278-1.jpg"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/112b1634-884d-4c34-af67-63dd8380d562-300x400.jpg"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/1f139562-1ad2-4004-8637-e52064f6204f-300x400.jpg"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2Fbrowse&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A343323638%3Az%3A0%3Ai%3A20261014101332%3Aet%3A1791972812%3Ac%3A1%3Arn%3A718251328%3Arqn%3A6%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Ads%3A0%2C0%2C275%2C1%2C0%2C0%2C%2C%2C%2C%2C%2C%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972811803%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972812%3At%3ASayfa%20Bulunamad%C4%B1%20-%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku&t=clt(14)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"settings\":{\"auto_goals\":1,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"sbp\": {\"a\":\"ypnKBZvURRWFn1Oy+ZjK2Bj88PG+vPZ2EMI5Md0nhKeOyC8MtParF116cP5kDbaV\", \"b\":\"vLzmNeL05lSqDTUadzK7m0h9cClM8ig7xwDQJMwZ7ehbRSorn0twjfcB38Q7OJSZ\"},\"eu\":2,\"region\":\"US\",\"hittoken\":\"1791972812_449456708b2f137b5605cd71f653bb51ae8c2326b13fa9ad4696ee2319f9f8a3\",\"cf\":1,\"mcf\":1,\"aytm\": true,\"wstoken\":\"11180.sGD0IDi3AEKU0Z1_LaUB9R52--iJDJnda_7Ch826Khvvw7VlBtUTj5SMzc3cdMfwjyzHWGh0OonpwR4l_ZUMb5RxTBCqzBRf8Q2ZYCmH11s,.3QmiH3P0s7haLU9ACi9puJktqus,\",\"hidv2\":\"6056997605497634913\",\"ymclid\":\"6056997605497634913\"},\"userData\":{}}"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=8530596070922520",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"zFXPas6uD_qS_9EP65ODqQE\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"cFw71dxkUomkQXM7t6QoYNjBlWI8nymNIgO1CZOepbY\",\"bg_binary\":\"QoclEaC5E1csGEzkTmcisFk9bsXQyPVXR+KbYkwY0emW3vy1tr9vwzNh5uc+tLACwwEN2ScPqrczuG6jbl3P6dIA/J6n9VQne418IZMc9S9ANQjnl02KfOfwktJi/EMXeUiCAb77pttIy7ynqKk7vvjxArrKvFlGJmR+9zQdQttjs5/SCaSe/jgHsGuuqxu1Z5xQRWJFxnxHkGqSxZIHBbbd3MMejLTUHvctuvYFojWP0Aw+eRdB77iWXI+jUQy5kv3R4anRXlTKYwpzlEK1+KdbMAmfwORiZ0E5psBm1CbQqjaFqO6w+S7YWavzYhnHEOV8lHhwtcxS5f3/qxwFas6xmn3IqXSb9NxT6+qruLAXmDcVeDv+86fmaQ0GGMbN3iviuic4JHbJXyvmEg1Nho+cc7C2CJcEEWfYc6Y7KgHSruvOzfkyWCTq/czSj80lSR4QbFdeGRhEQDOAgcT8GpNb6Baxaew6hroUOWeB/YWbW3LIyIlerKfEfDbHW9TgR6svmcJXSrXF8TvfoMALcLskas5iu2W0SnsYQ"
+  },
+  {
+   "tag": "list:browse",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundary0afFzEHMhRQooDdF\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundary0afFzEHMhRQooDdF--\r\n",
+   "body": "{\"success\":true,\"data\":{\"logged_in\":\"0\",\"name\":\"\",\"avatar\":\"\",\"nonce\":\"d9d7e05751\",\"issued_at\":1791972812}}"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960-300x400.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak-300x400.jpg"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/112b1634-884d-4c34-af67-63dd8380d562-300x400.jpg"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/337d6e89-465f-4bc4-b6fd-2effdef83678-300x400.jpg"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/zyro-image-kopyamx-kopya-193x278-1.jpg"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/1f139562-1ad2-4004-8637-e52064f6204f-300x400.jpg"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2Fsearch%3Fq%3Da&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A875261430%3Az%3A0%3Ai%3A20261014101335%3Aet%3A1791972815%3Ac%3A1%3Arn%3A1003349912%3Arqn%3A7%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Ads%3A0%2C0%2C270%2C1%2C%2C0%2C%2C%2C%2C%2C%2C%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972814906%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972815%3At%3ASayfa%20Bulunamad%C4%B1%20-%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku&t=clt(18)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"settings\":{\"auto_goals\":1,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"sbp\": {\"a\":\"dYokPQpMCkYjYVQ7DLcJ1PYPuA6wd1Jn27IO6HJ1S6N0Yga/xOFe0ZKH7ZR5lOuu\", \"b\":\"D+uflbOiqdo+AkTyuTRgj9iYY4S7NBN+rGQw9QCPwrLz4A5Ll13E7cSqOUnLFEiO\"},\"eu\":2,\"region\":\"US\",\"hittoken\":\"1791972815_7a09837b3d5f3a7b55df41c4e031671746e9dfb1e4ac5aaafafe4b39752db9f5\",\"cf\":1,\"mcf\":1,\"aytm\": true,\"wstoken\":\"11180.03fnInIBD4jj43tDpw-mEUc-6k7AmBGIK3hhzIXBS0zuM5KN5c92107RuKtaE7Szo_CObNdjYoUN-OFOia2U1jVLOhD6n9iXmoK6oSDoMKE,.OSidONTOjlmsw5jyyZ7zm7YSzg4,\",\"hidv2\":\"6056998417950572641\",\"ymclid\":\"6056998417950572641\"},\"userData\":{}}"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=1064130414119410",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"z1XPasG_FYjO_9EP46jBiQQ\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"cFw71dxkUomkQXM7t6QoYNjBlWI8nymNIgO1CZOepbY\",\"bg_binary\":\"QocfDO5EuPTTp9IfMks2DQ9dM4DIHasDRteBZLPzkMSVhYy98BWykIOpuLCya0umDqm0FkngUoSrSS9BzX1m49yRpn+WCGE69dYR1IGtr4iPhCq0w/upzXTSH02N4Lg37sgl+BcerUUPXBPw43lyyxLZXjw1WrQrHJCsspMGaT2IFz3bATSPP42pqIimYPt6Vw7tax6h8e7asLZR7SK0ParD1J/YazE5YMgwSRqe9iDbxYBs3K0JOJK+pSjL03Ig2kZf0C2ePVXIplEWEchQiZSs2KgI9W2yCYwsVn2H5FLWTKUZ3ekUDmS/8X8W+MItSiLbxbKRoG1E8CBCezqeqY9TsqzeCu+nm2fwpZf71WMrIhaKJ/7yMECnXmrBvDBIurMjNzT8ZxCR49+AR76MJ5smxsi9IwLuTtyLXE9hg/YxBYK1tN5NhZapulGLlt4MXOVtShca412F8Mmc4lPwdIFL9447S3oZ3Mi5/hRYMy2loyEC8NCp0h/boZU0kSJtIRKLUFUVMBpH4EfAdanLz52I37Y12F5vKvA8K"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundarytCycu1XJCvMiHAvg\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundarytCycu1XJCvMiHAvg--\r\n",
+   "body": "{\"success\":true,\"data\":{\"logged_in\":\"0\",\"name\":\"\",\"avatar\":\"\",\"nonce\":\"d9d7e05751\",\"issued_at\":1791972815}}"
+  },
+  {
+   "tag": "list:apiseries",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960-300x400.webp"
+  },
+  {
+   "tag": "list:apiseries",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/112b1634-884d-4c34-af67-63dd8380d562-300x400.jpg"
+  },
+  {
+   "tag": "list:apiseries",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/zyro-image-kopyamx-kopya-193x278-1.jpg"
+  },
+  {
+   "tag": "list:apiseries",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak-300x400.jpg"
+  },
+  {
+   "tag": "list:apiseries",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/337d6e89-465f-4bc4-b6fd-2effdef83678-300x400.jpg"
+  },
+  {
+   "tag": "list:apiseries",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/1f139562-1ad2-4004-8637-e52064f6204f-300x400.jpg"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2Fapi%2Fseries&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A178306390%3Az%3A0%3Ai%3A20261014101337%3Aet%3A1791972818%3Ac%3A1%3Arn%3A1068436772%3Arqn%3A8%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Ads%3A0%2C0%2C275%2C2%2C0%2C0%2C%2C%2C%2C%2C%2C%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972817486%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972818%3At%3ASayfa%20Bulunamad%C4%B1%20-%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku&t=clt(14)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"settings\":{\"auto_goals\":1,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"sbp\": {\"a\":\"jgmNZ+sExK8iFKNwq8rY10m+KmTtBmNilFMT9F+Q5sMTBY5CWhHjLd4ywlY6X4Wz\", \"b\":\"KmfsxhzpIdq1p5Vqk4R+3Fxu6x+8aa65/ep7DUbHzBr2EWF/3Z02krUPt15WoJw7\"},\"eu\":2,\"region\":\"US\",\"hittoken\":\"1791972817_4f19f33d4d5ec5efef09524f887a3625d99e04be313ab071e56c1e459608f025\",\"cf\":1,\"mcf\":1,\"aytm\": true,\"wstoken\":\"11180.Ku2pfHjNRk2k0oHlgT0c5I03Y5nQWDefC-6fPVzYEEklpDuH9BmytikTn_mtONwfjIQluCofEoFF-tZYzp01J1i40bUrQprF7qK9ZQKb5yA,.UiNQDDQyGz3DX0RTRkaDP45MKf4,\",\"hidv2\":\"6056999096200724577\",\"ymclid\":\"6056999096200724577\"},\"userData\":{}}"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=8214038507742216",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"0VXPaqqOObe5_9EP9KWB6QY\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"cFw71dxkUomkQXM7t6QoYNjBlWI8nymNIgO1CZOepbY\",\"bg_binary\":\"QocjEci08hQ0s3/qXwyIebZlacJIExZ0u9EKBmBAXSEZeiEwFQNecqDbfMuq0kKyApfbdf/KqoC+vQ73sUYCK+74tmU91y4KmxgQ/gpeONXYMk3WTVsXzNDSsxf0DPY7+ZohEqpc4RkdzrHwfVk9tewoJMyT/0XeUYtakCkwQpixOIlvmx3DnB5NkgwaGv+RwZoiZAX9iQ7BCUH/L4/e49IonU10d5gxI41WY23OdjN4l07V4k8AFpZXuOSNe6mYHaPSkUWB7si3xr5+kWMQknpP9/27wkXugRTz0Ngr9qRx9YToFQid+1JbJlPi0alwHsCdVxAE6fOQ3lb0L0SmnkV69VUTIpK14UO2FiBbs5eXzO+Pqec9KtXhU1aeF8vfYRxE3NjQVCa9mWgb/FPAOPbvUpTKqlz7SDBRYsSrL+sO3eXIXsGw0dtO2Z20XnRy9AmzynjOeEhOJWRtkYFMAt35VOFZorJNrrzoxtdM2w+L5j/gQ9sOEJ7eF8znWvFdoa3z4tDZznw50Hxlpd0h9VI0buTyWmKJAcH0l"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundaryFo0EZwamlOOu0Bty\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundaryFo0EZwamlOOu0Bty--\r\n",
+   "body": "{\"success\":true,\"data\":{\"logged_in\":\"0\",\"name\":\"\",\"avatar\":\"\",\"nonce\":\"d9d7e05751\",\"issued_at\":1791972817}}"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960-300x400.webp"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/337d6e89-465f-4bc4-b6fd-2effdef83678-300x400.jpg"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/zyro-image-kopyamx-kopya-193x278-1.jpg"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak-300x400.jpg"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/112b1634-884d-4c34-af67-63dd8380d562-300x400.jpg"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/1f139562-1ad2-4004-8637-e52064f6204f-300x400.jpg"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2Fapi%2Fmanga&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A562617220%3Az%3A0%3Ai%3A20261014101340%3Aet%3A1791972820%3Ac%3A1%3Arn%3A509576295%3Arqn%3A9%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Ads%3A0%2C0%2C291%2C2%2C%2C0%2C%2C%2C%2C%2C%2C%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972820055%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972820%3At%3ASayfa%20Bulunamad%C4%B1%20-%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku&t=clt(11)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"settings\":{\"auto_goals\":1,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"sbp\": {\"a\":\"Ogs24lWKcdGj9Z644EbO33Sx0hJ9PQApHEsfPKBcW9UmJc4fYMn9/hDc55ped1B5\", \"b\":\"RQLPp4UGB1HKm/+G2X+ArRB/acSd8QuUzkuNlAW3xq24RqYgQ2H3PrjRwqKIZWNi\"},\"eu\":2,\"region\":\"US\",\"hittoken\":\"1791972820_66af42571848c51ba2b561e834210999bba6ab8b96ad838813164fdd6044caa7\",\"cf\":1,\"mcf\":1,\"aytm\": true,\"wstoken\":\"11180.9cWsT3XD9Aa8KGkvu3ASFA-or0xcEteWUSEIQxILCEWwlbX4xABHHB5-VlAxPhCXg0aksZ3Q5jU9CrkXwr-uV6NQFY9uh3Bh10qxObSdiWI,.9BMxqQGsZVflDJ9QqcrjNW9Bur0,\",\"hidv2\":\"6056999772308373601\",\"ymclid\":\"6056999772308373601\"},\"userData\":{}}"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=5077795009590129",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"1FXPasuBIN3W_9EPyeeusQM\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"cFw71dxkUomkQXM7t6QoYNjBlWI8nymNIgO1CZOepbY\",\"bg_binary\":\"QocsVKn7KFPq3+tTeZC7xBdy4kI5FN4PFZ3c6B0wz1vrY2xVUc/d9hwQ/TaTmRm7XTP0hxiCz0U5DM1sZH1WTrquQw5tQ4eGhphSC7AFh83ygGFbHlyuXANtUlPFAWWZVFF+X/3fWyj4PhudBrGryPHcVY8Q+yg4aVMjgaVmypXs/g52454Ff3mYFspowe0IihJBDaez7iOzXgqAwwx5WWOEF3abHpStNeemUFsMMNJKxj5c3JB28qw4ZzMMypdJAKUK1IW/aTKnCJHJpMigxEHDr7YwELTcCtLxC5ZCTLV51RogDua6CRnh+tH3SRqctqe4eIZn+wejJ9nnz7k/iRPYC0cE6rswdlbtWT8nD2bw8EqmPZ4uMr3M4eaej49QlwhXu39lGg3QVBSu03CPNNY4i38gZNsABqOVSapUTKwHJgJQd2v8HEsnQj066NVRgl0YoFQcxDajIA3QXaPoT+38xDLRYNbgDLPUlaihXFhKDwkRzknrT/Zjxk7WtT2a5UurY3U8x5+ixO129GmRjfXlst47guFwjdOeC"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundarybmbZ0V7DHg1PyGKV\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundarybmbZ0V7DHg1PyGKV--\r\n",
+   "body": "{\"success\":true,\"data\":{\"logged_in\":\"0\",\"name\":\"\",\"avatar\":\"\",\"nonce\":\"d9d7e05751\",\"issued_at\":1791972820}}"
+  },
+  {
+   "tag": "detail",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/75ca09f53a1b10cbfbc81eef93d8fd5d.jpg?ver=1790960946"
+  },
+  {
+   "tag": "detail",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/d2eca40ce952b2b2be7b923e36cbcc6e.jpg?ver=1791204408"
+  },
+  {
+   "tag": "detail",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/4782498282f6bd3bb9c4a546067c3a4a.jpg?ver=1791063633"
+  },
+  {
+   "tag": "detail",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/c9c52bf81367e9dc0b085a98b36222f9.jpg?ver=1790986702"
+  },
+  {
+   "tag": "detail",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/59ad8542f80edfde7a43cb870c374190.jpg?ver=1791236421"
+  },
+  {
+   "tag": "detail",
+   "image": "https://webtoonoku.org/wp-content/litespeed/avatar/b41b462df7092a19e460cb668d09c61f.jpg?ver=1791129845"
+  },
+  {
+   "tag": "detail",
+   "image": "https://webtoonoku.org/wp-content/uploads/flavor-avatars/111/avatar-1787341606.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cover_1783038107_d0f5c960-300x400.webp"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2F&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A337318420%3Az%3A0%3Ai%3A20261014101342%3Aet%3A1791972823%3Ac%3A1%3Arn%3A833318320%3Arqn%3A10%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Ads%3A0%2C0%2C129%2C2%2C0%2C0%2C%2C76%2C11%2C%2C%2C%2C229%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972822651%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972823%3At%3AT%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku%20-%20G%C3%BCncel%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20oku&t=clt(68)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundaryDS09xb3079i3LJ9b\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundaryDS09xb3079i3LJ9b--\r\n",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "action=flavor_get_top_readers_widget&limit=10&nonce=f471f52d28",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "after_id=0&action=flavor_live_chat_fetch&nonce=9b707fd4a0",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak.jpg"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2Fmanhwa%2Fmartial-peak%2F&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A353382534%3Az%3A0%3Ai%3A20261014101343%3Aet%3A1791972824%3Ac%3A1%3Arn%3A66601664%3Arqn%3A11%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Afp%3A258%3Ads%3A0%2C0%2C156%2C16%2C%2C0%2C%2C651%2C%2C%2C%2C%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972822962%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972824%3At%3AMartial%20Peak%20Manhwa%20-%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku&t=clt(34)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"settings\":{\"auto_goals\":1,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"sbp\": {\"a\":\"/SmsEVCRlc0awgUqE1IjaABToqbAOFIdmmaEWlUqlKLefeDpydwPnIxOQ6OvbLuS\", \"b\":\"k8xFC5V2Q2teFnTVi9xx+kPmYZ6pvGz085KVX+OWAB1t3G1ymaS6/7F5YjGIS4mq\"},\"eu\":2,\"region\":\"US\",\"hittoken\":\"1791972823_45c6ad7150b9fb00affcf18ea21b9e9a63d0e2cd6c21c66e1d5f2fc428600958\",\"cf\":1,\"mcf\":1,\"aytm\": true,\"wstoken\":\"11180.RTVcy9Xp-gCLbELX6dpN87O7sjsJ0w1GXmQQ4fwwpIAFTCcldmUeeCrbU5VHFOYLvkD1yZQ83RR4c0yjlqcfKWd7S4YygFEBqGNp-Gu-Ri0,.GxlqZm0lqltDglEEQsD8Qh35PUQ,\",\"hidv2\":\"6057000672977748065\",\"ymclid\":\"6057000672977748065\"},\"userData\":{}}"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=6385576037734141",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"2FXPatPcGJezpeEPk7by2Ao\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"cFw71dxkUomkQXM7t6QoYNjBlWI8nymNIgO1CZOepbY\",\"bg_binary\":\"QocBOmmOxb06vvRF5hwcw1vNoldZ4naB/uewfOnLjjdRzNkvWuumcBh/77nrgv35PDc/EmNRtOniheTNtPiXFvdrEiQvx/o0K3JrutMGvq6QkqnS2XHoMSPu598ugIki+4JRNQiIO3q8eg2YGT2oWvMsZtaMqZ9f9XFhcm1TNfHyrHulGA4sPxx75E1XIVHTtOKVoExwbii58Oq1N2Dp9Q1IH1HG1lTRPRJmJX7OAMUEWeMJCcb8Eav90g4Lx+kj9MjZCxCkzh6y67Bj21yhO5ySfE+0Mv/QlZW4BNfrpynVap8ZCxs2aEttoy6WXsoHIS1fnrP4aQj/CAEPwdv5avIn9od4K10FrySJkDoCCIUuze1sR7+d9g2zfPA6QAxliIGC/pd4zbWNhYYFK+belml75ZeRRKugghJ94sbuFw4hqCfLNPHHnv/Lc2V1MgJjneGFRISAq2MBZCIDyitX/84s+l0+rYwJ8b+h0axaFkNOvywKF8vQ1diKy3iXqFkqJR3WF1dondHOsQPfhhlKaNyhVvhi1ur33fKNv"
+  },
+  {
+   "tag": "detail",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundaryRK5Z35LdAXdm0t5Q\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundaryRK5Z35LdAXdm0t5Q--\r\n",
+   "body": "{\"success\":true,\"data\":{\"logged_in\":\"0\",\"name\":\"\",\"avatar\":\"\",\"nonce\":\"d9d7e05751\",\"issued_at\":1791972824}}"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/07/hapci-450x600-1-300x400.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/themes/flavor-flavor/assets/images/manhwa.png"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/07/1-384.jpg-300x400.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/07/dusman-ulke-450x600-1-300x400.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/07/69f366dbcb517_609893-2-300x400.png"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/xxlarge-175x238-2.jpg"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/cbd10831f3615d0e1449d56a9642f1e7-193x278-1.jpg"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://mc.yandex.com/watch/108721113?wmode=7&page-url=https%3A%2F%2Fwebtoonoku.org%2Fmartial-peak-chapter-1%2F&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1263043711891%3Ahid%3A1048764964%3Az%3A0%3Ai%3A20261014101347%3Aet%3A1791972828%3Ac%3A1%3Arn%3A878937025%3Arqn%3A12%3Au%3A1791972797343455679%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Ads%3A0%2C0%2C741%2C4%2C%2C0%2C%2C%2C%2C%2C%2C%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972826844%3Agi%3AR0ExLjEuMTk1MzEwODkwMC4xNzkxOTcyNzk2%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972828%3At%3AMartial%20Peak%20%C4%B0LK%20B%C3%96L%C3%9CM%C3%9C%20OKUMAYA%20G%C4%B0T%20-%20T%C3%BCrk%C3%A7e%20Manga%20ve%20Webtoon%20Oku&t=clt(16)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"settings\":{\"auto_goals\":1,\"button_goals\":0,\"c_recp\":\"1.00000\",\"form_goals\":1,\"pcs\":\"1\",\"sbp\": {\"a\":\"UuwRZAMC51tI3JvEVfKYjh7mejPiK3UQkpbqzW0Wk94NAY/LClSOGyZ7DANbu+/Z\", \"b\":\"XtszaX1qskqUo9B2ByIcnQ0ro3g5uDp/Xz9V5+ZPw9r/OXurGm7FKa2p+9l8mqLE\"},\"eu\":2,\"region\":\"US\",\"hittoken\":\"1791972827_c505195aa0d4c63e82b573f16bae89ae803fd1aaf2a8ffc0d72a2ec0609ed733\",\"cf\":1,\"mcf\":1,\"aytm\": true,\"wstoken\":\"11180.T2b-QX0aIQctIClW_saHKVhophCrIhsX7NvdtV-loP6YcL-5y__AMOc25PEXsZKDYtbxzxdRF-JiDeN6oLk_V4P0wwPTqNpdhqa3bTlw8EQ,.Ip1LFUxhVeOB2fXxVZoKZx0knSg,\",\"hidv2\":\"6057001675717083233\",\"ymclid\":\"6057001675717083233\"},\"userData\":{}}"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/uploads/2026/04/Martial-Peak.jpg"
+  },
+  {
+   "tag": "reader",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundary5qGnuJYBCBIPjM5l\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_auth_session\r\n------WebKitFormBoundary5qGnuJYBCBIPjM5l--\r\n",
+   "body": "{\"success\":true,\"data\":{\"logged_in\":\"0\",\"name\":\"\",\"avatar\":\"\",\"nonce\":\"d9d7e05751\",\"issued_at\":1791972827}}"
+  },
+  {
+   "tag": "reader",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundaryyvsrdhbjhSdgma1p\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_reaction_load\r\n------WebKitFormBoundaryyvsrdhbjhSdgma1p\r\nContent-Disposition: form-data; name=\"nonce\"\r",
+   "body": "{\"success\":true,\"data\":{\"counts\":{\"like\":0,\"funny\":0,\"nice\":0,\"sad\":0,\"angry\":0},\"user_reaction\":\"\",\"total\":0}}"
+  },
+  {
+   "tag": "reader",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundarycIPV2MGcBtq9cnis\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_comment_load\r\n------WebKitFormBoundarycIPV2MGcBtq9cnis\r\nContent-Disposition: form-data; name=\"nonce\"\r\n",
+   "body": "{\"success\":true,\"data\":{\"comments\":[],\"total\":0}}"
+  },
+  {
+   "tag": "reader",
+   "method": "POST",
+   "url": "https://webtoonoku.org/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundaryJirxASZo6XnSnDYd\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nflavor_rating_bulk_load\r\n------WebKitFormBoundaryJirxASZo6XnSnDYd\r\nContent-Disposition: form-data; name=\"nonc",
+   "body": "{\"success\":true,\"data\":{\"items\":{\"2357\":{\"avg_10\":9.6,\"count\":0},\"2186\":{\"avg_10\":0,\"count\":0},\"2184\":{\"avg_10\":0,\"count\":0},\"2171\":{\"avg_10\":0,\"count\":0},\"1888\":{\"avg_10\":0,\"count\":0},\"1886\":{\"avg_10\":0,\"count\":0}}}}"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=1463154719153761",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"sodar_query_id\":\"3FXPatmAB8CtpeEPlfDTuQ8\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"cFw71dxkUomkQXM7t6QoYNjBlWI8nymNIgO1CZOepbY\",\"bg_binary\":\"QocpCblGWqGt1RN5sYvFApVqiDKA3NCbyImkofFfdXkc1hvO9Z1iXQICy19Lfrtlyjo1gwSX4OQdTEeDGqEqv9Pn34bc29il6NQdhtpHi4O9l+B51KWPwflKFPBJbZ9Ua9ULm33aoaBkztg1OP/p7IkGbP0fUD/eEnEC6GLWvvPvV4aoQMow1Qf2LXSrq0f5a0lJGkiZrNx6LNGVG2Z7fkT4XakwvN+xnARp7FR9Ewlmrld4aP5yqo7cHwco3RyfkDE/Bv7KoQGv+dGEz/F73I4x1uNzzPpEkoWkOYgtOWSISdAoVuKv887XK4FLFFKDKIJORTUlUx+pnDWDspplKngNx9XgDh3ucxhrIvp0GvGXNNNy5Otm1qRruaXdzwfauRDvYFKXMdlJk9P8HLE/E2NlqMWl+Dl51dAUGv29IbgzQdAzgV6Hc2zaDbD+6UV/WP1y4+iyx3lh0RAVLX6iBcJ7B/Su0y17bAb0Pd65hJC70/hJA/sSbIgr6rst96S9f9vMLTc1le+edjtckwSiwgT9XDueFugw8Ogh3"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/themes/flavor-flavor/assets/images/reaction_sad_1770879575425.png"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/themes/flavor-flavor/assets/images/reaction_like_1770879514704.png"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/themes/flavor-flavor/assets/images/reaction_angry_1770879591391.png"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/themes/flavor-flavor/assets/images/reaction_nice_1770879556947.png"
+  },
+  {
+   "tag": "reader",
+   "image": "https://webtoonoku.org/wp-content/themes/flavor-flavor/assets/images/reaction_funny_1770879534614.png"
+  }
+ ],
+ "errors": [],
+ "frameworks": [
+  "wordpress"
+ ],
+ "links": {
+  "series": "https://webtoonoku.org/manhwa/martial-peak/",
+  "chapter": "https://webtoonoku.org/martial-peak-chapter-1/"
+ },
+ "homeStatus": 200,
+ "title": "Türkçe Manga ve Webtoon Oku - Güncel Türkçe Manga ve Webtoon oku"
+}

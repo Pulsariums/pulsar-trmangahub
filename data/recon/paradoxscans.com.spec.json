@@ -1,0 +1,56 @@
+{
+ "domain": "paradoxscans.com",
+ "title": "",
+ "mode": "html",
+ "list": {
+  "path": "",
+  "pageParam": "",
+  "item": "",
+  "link": "",
+  "title": "",
+  "cover": "",
+  "itemCount": 0
+ },
+ "detail": {
+  "title": "h1",
+  "cover": "",
+  "description": "",
+  "genres": "",
+  "status": "",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://paradoxscans.com/cdn-cgi/speculation",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://paradoxscans.com/wp-json/initrsys/v1/reactions/summary?post_id=143225",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=7332829367701640",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 0,
+  "detail": 0.13,
+  "reader": 0
+ },
+ "notes": [
+  "list: no repeated card group (>=6) found",
+  "detail: no chapter group (>=3) found",
+  "reader: no chapter image >=300px found"
+ ]
+}

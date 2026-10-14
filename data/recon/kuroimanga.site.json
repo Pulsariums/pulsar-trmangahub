@@ -1,0 +1,95 @@
+{
+ "site": "https://kuroimanga.site",
+ "calls": [
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://kuroimanga.site/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://kuroimanga.site/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://kuroimanga.site/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://kuroimanga.site/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://kuroimanga.site/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://kuroimanga.site/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://kuroimanga.site/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://kuroimanga.site/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "GET",
+   "url": "https://kuroimanga.site/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  }
+ ],
+ "errors": [],
+ "frameworks": [
+  "cloudflare"
+ ],
+ "links": {
+  "series": null
+ },
+ "homeStatus": 403,
+ "title": "Just a moment..."
+}

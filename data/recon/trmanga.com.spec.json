@@ -1,0 +1,51 @@
+{
+ "domain": "trmanga.com",
+ "title": "Webtoon Oku - Türkçe Manga ve Manhwa Oku | TRManga",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.swiper-slide",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 76
+ },
+ "detail": {
+  "title": "h1.movie__title.h2",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "div.wti-desc.is-clamped",
+  "genres": "body > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(8) > div:nth-of-type(2) > a:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+  "status": "",
+  "chapterItem": "div",
+  "chapterLink": "a@href",
+  "chapterTitle": "a"
+ },
+ "reader": {
+  "images": "main.rd-wrap img",
+  "attr": "data-src",
+  "count": 74
+ },
+ "api": [
+  {
+   "url": "https://trmanga.com/api/comments.php?action=list&target_type=webtoon&target_id=3295&page=1&per_page=20&order=newest",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=1643726541034739",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.88,
+  "reader": 1
+ },
+ "notes": [
+  "list: 76 items at /",
+  "list link prefix: webtoon",
+  "pagination: not detected"
+ ]
+}

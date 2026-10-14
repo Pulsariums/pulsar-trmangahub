@@ -1,0 +1,228 @@
+{
+ "site": "https://holyscans.com.tr",
+ "calls": [
+  {
+   "tag": "home",
+   "image": "https://holyscans.com.tr/wp-content/themes/HolyTemaV12/assets/locked-cover.png"
+  },
+  {
+   "tag": "home",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png"
+  },
+  {
+   "tag": "home",
+   "method": "POST",
+   "url": "https://holyscans.com.tr/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "action=get_holy_chat&last_event=0&last_id=0&last_mutation=&last_react=-1",
+   "body": "{\"success\":true,\"data\":{\"status\":\"full\",\"html\":\"\\r\\n        <div class='chat-msg-row ' id='chat-msg-23376'>\\r\\n            <div class='chat-avatar-wrapper' style='position: relative; flex-shrink: 0; cursor: pointer;' onclick='holyOpenProfileCard(25493)' onkeydown='if(event.key===\\\"Enter\\\"||event.key===\\\" \\\"){event.preventDefault();holyOpenProfileCard(25493);}' role='button' tabindex='0' aria-label='Profili g\\u00f6r: Sert(vesemsert)s2ci' title='Profili g\\u00f6r'>\\r\\n                <div class='chat-avatar lvl-10' ><img src='https:\\/\\/secure.gravatar.com\\/avatar\\/0aead60affae6f4404eaec28d5cf84f02ce90c6e2e93e08c4a2cb9bb3c96740b?s=96&#038;d=mm&#038;r=g'><\\/div>\\r\\n            <\\/div>\\r\\n        "
+  },
+  {
+   "tag": "home",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/05/avatar_2271_1778450502.png"
+  },
+  {
+   "tag": "home",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/05/avatar_375_1778336049.png"
+  },
+  {
+   "tag": "home",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/04/avatar_1230_1776546619.png"
+  },
+  {
+   "tag": "home",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/10/avatar_10128_1790935860.png"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://holyscans.com.tr/wp-content/themes/HolyTemaV12/assets/locked-cover.png"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png"
+  },
+  {
+   "tag": "list:apiseries",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/themes/HolyTemaV12/assets/locked-cover.png"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-29975.webp?v=1789777822512"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-29116.webp?v=1786305115230"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-29286.webp?v=1787026748248"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-30016.webp?v=1790010671750"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-28678.webp?v=1784555905755"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-30299.webp?v=1790620798691"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-29444.webp?v=1787773725876"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-29694.webp?v=1788809067999"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-emojis/emoji_1781767566_Vrn7fi.png"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-30664.webp?v=1791503639283"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-28574.webp?v=1783877224878"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-28429.webp?v=1782738095316"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-28487.webp?v=1782950254171"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-28511.webp?v=1783327436538"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-30718.webp?v=1791942810420"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-28764.webp?v=1785089893289"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-29590.webp?v=1788208298740"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-28499.webp?v=1783099839418"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-28955.webp?v=1785715954647"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-28502.webp?v=1783125970464"
+  },
+  {
+   "tag": "detail",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-ch-thumbs/ch-28472.webp?v=1782862942480"
+  },
+  {
+   "tag": "detail",
+   "method": "POST",
+   "url": "https://holyscans.com.tr/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "action=holy_get_comments&post_id=28426",
+   "body": "{\"success\":true,\"data\":{\"html\":\"<p style=\\\"color: #666; text-align: center; padding: 20px; font-style: italic;\\\">Sessizli\\u011fi bozan ilk ki\\u015fi sen ol!<\\/p>\",\"count\":0}}"
+  },
+  {
+   "tag": "reader",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png"
+  },
+  {
+   "tag": "reader",
+   "image": "https://holyscans.com.tr/wp-content/themes/HolyTemaV12/assets/img/holy-chapter-cover.webp?v=1782754956"
+  },
+  {
+   "tag": "reader",
+   "image": "https://holyscans.com.tr/wp-content/themes/HolyTemaV12/assets/locked-cover.png"
+  },
+  {
+   "tag": "reader",
+   "image": "https://holyscans.com.tr/wp-content/themes/HolyTemaV12/assets/img/holy-chapter-outro.png?v=1790852153"
+  },
+  {
+   "tag": "reader",
+   "image": "https://holyscans.com.tr/wp-content/uploads/holy-emojis/emoji_1781767566_Vrn7fi.png"
+  },
+  {
+   "tag": "reader",
+   "method": "POST",
+   "url": "https://holyscans.com.tr/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "------WebKitFormBoundarycGMZtVmGBuHBDDpk\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nholy_get_chapter_images\r\n------WebKitFormBoundarycGMZtVmGBuHBDDpk\r\nContent-Disposition: form-data; name=\"nonc",
+   "body": "{\"success\":true,\"data\":{\"urls\":[\"https:\\/\\/holyscans.com.tr\\/wp-content\\/themes\\/HolyTemaV12\\/holy-img-serve.php?p=bWFuZ2EtZGF0YS9zZXhwZWRpYWRhLXNldml5ZS1rYXNpeW9ydW0vc2V4cGVkaWFkYS1zZXZpeWUta2FzaXlvcnVtLWJvbHVtLTEvMDEud2VicA&t=1791971574&s=4b1073bb245a09b3abac53f1d21b3a42b0c35c07bb543f6fd52967027c93b019\",\"https:\\/\\/holyscans.com.tr\\/wp-content\\/themes\\/HolyTemaV12\\/holy-img-serve.php?p=bWFuZ2EtZGF0YS9zZXhwZWRpYWRhLXNldml5ZS1rYXNpeW9ydW0vc2V4cGVkaWFkYS1zZXZpeWUta2FzaXlvcnVtLWJvbHVtLTEvMDIud2VicA&t=1791971574&s=cb41d71fa729a2834146944717cf7cd1edf440da2aa60902f2bd2446d721e535\",\"https:\\/\\/holyscans.com.tr\\/wp-content\\/themes\\/HolyTemaV12\\/holy-img-serve.php?p=bWFuZ2EtZGF0YS9zZXhwZWRpYWRhLXNldml"
+  },
+  {
+   "tag": "reader",
+   "method": "POST",
+   "url": "https://holyscans.com.tr/wp-admin/admin-ajax.php",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "action=holy_get_comments&post_id=28429",
+   "body": "{\"success\":true,\"data\":{\"html\":\"\\r\\n        <div class=\\\"holy-comment-item  \\\" id=\\\"holy-comment-16762\\\">\\r\\n            <div class=\\\"holy-c-content-box\\\">\\r\\n                \\r\\n                <div class=\\\"holy-c-header\\\">\\r\\n                    <div class=\\\"holy-c-avatar-box\\\"><div class=\\\"chat-avatar holy-pc-open lvl-1\\\"  onclick=\\\"holyOpenProfileCard(26196)\\\" title=\\\"Profili g\\u00f6r\\\"><img src=\\\"https:\\/\\/secure.gravatar.com\\/avatar\\/e673b598af16759b4aa260622bfdb774603d78bcd45e8258296dbfb21d1a9a6f?s=96&#038;d=mm&#038;r=g\\\"><\\/div><\\/div>\\r\\n                    <span class=\\\"holy-c-author holy-pc-open \\\"  onclick=\\\"holyOpenProfileCard(26196)\\\" title=\\\"Profili g\\u00f6r\\\">Omer<\\/span>\\r\\n"
+  },
+  {
+   "tag": "reader",
+   "image": "https://holyscans.com.tr/wp-content/uploads/2026/06/avatar_3044_1781634291.png"
+  }
+ ],
+ "errors": [],
+ "frameworks": [
+  "wordpress",
+  "cloudflare"
+ ],
+ "links": {
+  "series": "https://holyscans.com.tr/manga/sexpediada-seviye-kasiyorum/",
+  "chapter": "https://holyscans.com.tr/manga/sexpediada-seviye-kasiyorum/bolum-1/"
+ },
+ "homeStatus": 200,
+ "title": "HolyScans - En Güncel Manga ve Webtoonlar"
+}

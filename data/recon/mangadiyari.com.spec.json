@@ -1,0 +1,113 @@
+{
+ "domain": "mangadiyari.com",
+ "title": "Manga Diyarı | Online Türkçe Manga/Manhua/Manhwa Okuma Platformu",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.jsx-4ffdc5e2f5b4b36c.chat-msg-item",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 6
+ },
+ "detail": {
+  "title": "h1",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "meta[name=\"description\"]@content",
+  "genres": "",
+  "status": "",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://mangadiyari.com/cdn-cgi/speculation",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://mangadiyari.com/api/chat",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://mangadiyari.com/api/settings",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://mangadiyari.com/api/maintenance-status",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://mangadiyari.com/api/admin/traffic",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://mangadiyari.com/api/auth/me",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://mangadiyari.com/api/admin/genres",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://mangadiyari.com/api/series?sort=latest&limit=24&page=1",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://mangadiyari.com/api/stats",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://mangadiyari.com/api/series/latest-updates?limit=16&page=1",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://mangadiyari.com/api/series/editor-pick",
+   "method": "GET",
+   "kind": "detail"
+  },
+  {
+   "url": "https://mangadiyari.com/api/series/top?period=daily",
+   "method": "GET",
+   "kind": "detail"
+  },
+  {
+   "url": "https://mangadiyari.com/api/series/trending",
+   "method": "GET",
+   "kind": "detail"
+  },
+  {
+   "url": "https://mangadiyari.com/api/pages/gizlilik-politikasi",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.38,
+  "reader": 0
+ },
+ "notes": [
+  "list: 6 items at /",
+  "list link prefix: profile",
+  "pagination: not detected",
+  "detail: no chapter group (>=3) found",
+  "reader: no chapter image >=300px found"
+ ]
+}

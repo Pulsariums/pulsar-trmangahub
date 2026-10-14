@@ -1,0 +1,98 @@
+{
+ "domain": "toontaku.com",
+ "title": "Toontaku - Türkçe Manga Oku, Manhwa Oku ve Webtoon Oku",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "article.group.flex-shrink-0.snap-start",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 12
+ },
+ "detail": {
+  "title": "h1.sr-only",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "meta[name=\"description\"]@content",
+  "genres": "",
+  "status": "",
+  "chapterItem": "a",
+  "chapterLink": "@href",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://toontaku.com/api/auth/session",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://toontaku.com/api/premium/weekly-free/summary?excludeAdult=true",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://toontaku.com/build-meta.json?_=1791972711478",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://toontaku.com/api/announcements?limit=5",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://toontaku.com/api/series/popular?limit=6&excludeAdult=true",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://toontaku.com/api/series",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://toontaku.com/api/manga",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://toontaku.com/api/comments/reward-status?seriesId=cmld6lec6001p8vv4f4xkdui7&chapterId=cmld6o1vj03rx8vixwntu1yir&context=free",
+   "method": "GET",
+   "kind": "reader"
+  },
+  {
+   "url": "https://toontaku.com/api/chapters/cmld6o1vj03rx8vixwntu1yir/chapter-update-report-capability?brand=toontaku&surface=web",
+   "method": "GET",
+   "kind": "reader"
+  },
+  {
+   "url": "https://toontaku.com/api/series/cmld6lec6001p8vv4f4xkdui7/chapter-update-reports/public?brand=toontaku&surface=web&chapterId=cmld6o1vj03rx8vixwntu1yir&chapterNumber=1",
+   "method": "GET",
+   "kind": "reader"
+  },
+  {
+   "url": "https://toontaku.com/api/viewer/popular-chapters/overall?window=monthly&limit=20&excludeAdult=true",
+   "method": "GET",
+   "kind": "reader"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.63,
+  "reader": 0
+ },
+ "notes": [
+  "list: 12 items at /",
+  "list link prefix: seri",
+  "pagination: not detected",
+  "chapterLink \"@href\": item is the link itself",
+  "reader: no chapter image >=300px found"
+ ]
+}

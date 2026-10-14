@@ -1,0 +1,46 @@
+{
+ "domain": "holyscans.com.tr",
+ "title": "HolyScans - En Güncel Manga ve Webtoonlar",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.manga-card-v2.holy-private-card",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 20
+ },
+ "detail": {
+  "title": "h1.hs-title",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "#pane-summary",
+  "genres": "div.hs-genres",
+  "status": "",
+  "chapterItem": "div.mc-chapters",
+  "chapterLink": "a@href",
+  "chapterTitle": "a"
+ },
+ "reader": {
+  "images": "div.chapter-content-area.holy-fit img",
+  "attr": "src",
+  "count": 2
+ },
+ "api": [
+  {
+   "url": "https://holyscans.com.tr/wp-admin/admin-ajax.php",
+   "method": "POST",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.88,
+  "reader": 1
+ },
+ "notes": [
+  "list: 20 items at /",
+  "list link prefix: manga",
+  "pagination: /page/N (pageParam empty)"
+ ]
+}

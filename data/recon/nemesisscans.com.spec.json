@@ -1,0 +1,41 @@
+{
+ "domain": "nemesisscans.com",
+ "title": "Manga Oku, Webtoon Oku, Manhwa & Manhua Türkçe Oku | Nemesis Scans",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.episode-card",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 21
+ },
+ "detail": {
+  "title": "h1.series-title",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "div.series-description",
+  "genres": "div.series-genres",
+  "status": "span.meta-item.status-badge",
+  "chapterItem": "a.chapter-item",
+  "chapterLink": "@href",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "div.pages-container img",
+  "attr": "src",
+  "count": 29
+ },
+ "api": [],
+ "confidence": {
+  "list": 1,
+  "detail": 0.88,
+  "reader": 1
+ },
+ "notes": [
+  "list: 21 items at /",
+  "list link prefix: series",
+  "pagination: not detected",
+  "chapterLink \"@href\": item is the link itself"
+ ]
+}

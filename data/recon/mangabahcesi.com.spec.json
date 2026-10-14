@@ -1,0 +1,68 @@
+{
+ "domain": "mangabahcesi.com",
+ "title": "Türkçe Manga, Manhua, Webtoon ve Anime Platformu",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.owl-item",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 11
+ },
+ "detail": {
+  "title": "",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "#devtool-status > div:nth-of-type(2) > div > div > main > div:nth-of-type(1) > div > div:nth-of-type(1) > article > a > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(3)",
+  "genres": "",
+  "status": "",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://mangabahcesi.com/PartialView/HomeFavoriteMangaListJson",
+   "method": "POST",
+   "kind": "list"
+  },
+  {
+   "url": "https://mangabahcesi.com/PartialView/HomeRecentMangaCardsJson",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://mangabahcesi.com/api/series",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://mangabahcesi.com/api/manga",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://mangabahcesi.com/PartialView/SifreCoz",
+   "method": "POST",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.25,
+  "reader": 0
+ },
+ "notes": [
+  "list: 11 items at /",
+  "list link prefix: Tr",
+  "pagination: not detected",
+  "detail: no chapter group (>=3) found",
+  "reader: no chapter image >=300px found"
+ ]
+}

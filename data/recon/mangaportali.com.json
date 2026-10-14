@@ -1,0 +1,23 @@
+{
+ "site": "https://mangaportali.com",
+ "calls": [
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://my.rtmark.net/gid.js",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"gid\":\"0803cfdd9e424f6aec82cc6c5b32a3b9\",\"skipSubscribe\":false}\n"
+  }
+ ],
+ "errors": [],
+ "frameworks": [
+  "cloudflare"
+ ],
+ "links": {
+  "series": null
+ },
+ "homeStatus": 403,
+ "title": "Just a moment..."
+}

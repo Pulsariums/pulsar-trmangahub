@@ -1,0 +1,55 @@
+{
+ "domain": "ragnarscans.net",
+ "title": "RagnarScans - Manga, Manhwa ve Webtoon Okuma Platformu | TR",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 18
+ },
+ "detail": {
+  "title": "h1.uk-margin-remove-bottom.uk-h3.uk-text-bold",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "div.max-3-line.uk-position-relative.uk-text-justify",
+  "genres": "",
+  "status": "#view-comic > div:nth-of-type(3) > div:nth-of-type(1)",
+  "chapterItem": "div.chapter-item.uk-grid-margin.uk-first-column",
+  "chapterLink": "a@href",
+  "chapterTitle": "a"
+ },
+ "reader": {
+  "images": "ul.uk-comment-list img",
+  "attr": "src",
+  "count": 2
+ },
+ "api": [
+  {
+   "url": "https://ragnarscans.net/wp-json/wp-statistics/v2/hit",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://ragnarscans.net/wp-json/initrsys/v1/reactions/summary?post_id=167106",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=2842776045165504",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.88,
+  "reader": 1
+ },
+ "notes": [
+  "list: 18 items at /",
+  "pagination: /page/N (pageParam empty)"
+ ]
+}

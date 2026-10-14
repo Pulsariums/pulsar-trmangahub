@@ -1,5 +1,99 @@
 [
   {
+    "id": "amangaplanet.com.tr",
+    "name": "amangaplanet",
+    "domain": "amangaplanet.com.tr",
+    "baseUrl": "https://amangaplanet.com.tr",
+    "engine": "mangathemesia",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/amangaplanet.com.tr/jar/Amangaplanet.kt"
+    ],
+    "addedAt": "2026-10-14T09:47:26+00:00"
+  },
+  {
+    "id": "caprazmanga.com",
+    "name": "caprazmanga",
+    "domain": "caprazmanga.com",
+    "baseUrl": "https://caprazmanga.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:47:31+00:00"
+  },
+  {
+    "id": "eskimangalar.com",
+    "name": "eskimangalar",
+    "domain": "eskimangalar.com",
+    "baseUrl": "https://eskimangalar.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:48:51+00:00"
+  },
+  {
+    "id": "ghostoon.com",
+    "name": "ghostoon",
+    "domain": "ghostoon.com",
+    "baseUrl": "https://ghostoon.com",
+    "engine": "madara",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/ghostoon.com/jar/Ghostoon.kt"
+    ],
+    "addedAt": "2026-10-14T09:50:11+00:00"
+  },
+  {
+    "id": "hattorimanga.net",
+    "name": "hattorimanga",
+    "domain": "hattorimanga.net",
+    "baseUrl": "https://hattorimanga.net",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:50:14+00:00"
+  },
+  {
+    "id": "hattoriscans.com",
+    "name": "hattoriscans",
+    "domain": "hattoriscans.com",
+    "baseUrl": "https://hattoriscans.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:50:53+00:00"
+  },
+  {
+    "id": "hayalistic.online",
+    "name": "hayalistic",
+    "domain": "hayalistic.online",
+    "baseUrl": "https://hayalistic.online",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:51:46+00:00"
+  },
+  {
+    "id": "holyscans.com.tr",
+    "name": "HolyScans",
+    "domain": "holyscans.com.tr",
+    "baseUrl": "https://holyscans.com.tr",
+    "engine": "custom",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/holyscans.com.tr/jar/Holyscans.kt"
+    ],
+    "addedAt": "2026-10-14T09:53:09+00:00"
+  },
+  {
     "id": "jiangzaitoon.icu",
     "name": "jiangzaitoon",
     "domain": "jiangzaitoon.icu",
@@ -11,6 +105,190 @@
       "generated/jiangzaitoon.icu/jar/Jiangzaitoon.kt"
     ],
     "addedAt": "2026-10-13T10:50:38+00:00"
+  },
+  {
+    "id": "juratempe.st",
+    "name": "juratempe",
+    "domain": "juratempe.st",
+    "baseUrl": "https://juratempe.st",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:53:12+00:00"
+  },
+  {
+    "id": "korelimanga.com",
+    "name": "korelimanga",
+    "domain": "korelimanga.com",
+    "baseUrl": "https://korelimanga.com",
+    "engine": "initmanga",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:54:15+00:00"
+  },
+  {
+    "id": "kuroimanga.site",
+    "name": "kuroimanga",
+    "domain": "kuroimanga.site",
+    "baseUrl": "https://kuroimanga.site",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:54:17+00:00"
+  },
+  {
+    "id": "laviniafansub.shop",
+    "name": "laviniafansub",
+    "domain": "laviniafansub.shop",
+    "baseUrl": "https://laviniafansub.shop",
+    "engine": "madara",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/laviniafansub.shop/jar/Laviniafansub.kt"
+    ],
+    "addedAt": "2026-10-14T09:55:04+00:00"
+  },
+  {
+    "id": "limonmanga.com",
+    "name": "limonmanga",
+    "domain": "limonmanga.com",
+    "baseUrl": "https://limonmanga.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:55:07+00:00"
+  },
+  {
+    "id": "manga.araznovel.com",
+    "name": "manga",
+    "domain": "manga.araznovel.com",
+    "baseUrl": "https://manga.araznovel.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:55:35+00:00"
+  },
+  {
+    "id": "mangabahcesi.com",
+    "name": "mangabahcesi",
+    "domain": "mangabahcesi.com",
+    "baseUrl": "https://mangabahcesi.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:57:03+00:00"
+  },
+  {
+    "id": "mangadiyari.com",
+    "name": "mangadiyari",
+    "domain": "mangadiyari.com",
+    "baseUrl": "https://mangadiyari.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:57:46+00:00"
+  },
+  {
+    "id": "mangadusleri.mom",
+    "name": "mangadusleri",
+    "domain": "mangadusleri.mom",
+    "baseUrl": "https://mangadusleri.mom",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T09:59:20+00:00"
+  },
+  {
+    "id": "mangakusu.com",
+    "name": "mangakusu",
+    "domain": "mangakusu.com",
+    "baseUrl": "https://mangakusu.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:00:47+00:00"
+  },
+  {
+    "id": "mangaportali.com",
+    "name": "mangaportali",
+    "domain": "mangaportali.com",
+    "baseUrl": "https://mangaportali.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:02:17+00:00"
+  },
+  {
+    "id": "mangtto.com",
+    "name": "mangtto",
+    "domain": "mangtto.com",
+    "baseUrl": "https://mangtto.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:03:05+00:00"
+  },
+  {
+    "id": "millascan.com",
+    "name": "millascan",
+    "domain": "millascan.com",
+    "baseUrl": "https://millascan.com",
+    "engine": "madara",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/millascan.com/jar/Millascan.kt"
+    ],
+    "addedAt": "2026-10-14T10:03:43+00:00"
+  },
+  {
+    "id": "mindafansub.dev",
+    "name": "mindafansub",
+    "domain": "mindafansub.dev",
+    "baseUrl": "https://mindafansub.dev",
+    "engine": "madara",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/mindafansub.dev/jar/Mindafansub.kt"
+    ],
+    "addedAt": "2026-10-14T10:03:46+00:00"
+  },
+  {
+    "id": "monomanga.com.tr",
+    "name": "monomanga",
+    "domain": "monomanga.com.tr",
+    "baseUrl": "https://monomanga.com.tr",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:03:48+00:00"
+  },
+  {
+    "id": "moondaisyscans.pro",
+    "name": "moondaisyscans",
+    "domain": "moondaisyscans.pro",
+    "baseUrl": "https://moondaisyscans.pro",
+    "engine": "mangathemesia",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/moondaisyscans.pro/jar/Moondaisyscans.kt"
+    ],
+    "addedAt": "2026-10-14T10:04:47+00:00"
   },
   {
     "id": "nabicix.com",
@@ -26,6 +304,30 @@
     "addedAt": "2026-10-13T11:59:25+00:00"
   },
   {
+    "id": "nemesisscans.com",
+    "name": "Manga Oku, Webtoon Oku, Manhwa &",
+    "domain": "nemesisscans.com",
+    "baseUrl": "https://nemesisscans.com",
+    "engine": "custom",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/nemesisscans.com/jar/Nemesisscans.kt"
+    ],
+    "addedAt": "2026-10-14T10:05:51+00:00"
+  },
+  {
+    "id": "niverafansub.one",
+    "name": "niverafansub",
+    "domain": "niverafansub.one",
+    "baseUrl": "https://niverafansub.one",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:05:51+00:00"
+  },
+  {
     "id": "nyxscans.com",
     "name": "Nyx Scans",
     "domain": "nyxscans.com",
@@ -37,6 +339,65 @@
       "generated/nyxscans.com/jar/Nyxscans.kt"
     ],
     "addedAt": "2026-10-14T08:17:24+00:00"
+  },
+  {
+    "id": "okutoon.com",
+    "name": "okutoon",
+    "domain": "okutoon.com",
+    "baseUrl": "https://okutoon.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:06:27+00:00"
+  },
+  {
+    "id": "opiatoon.shop",
+    "name": "opiatoon",
+    "domain": "opiatoon.shop",
+    "baseUrl": "https://opiatoon.shop",
+    "engine": "madara",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/opiatoon.shop/jar/Opiatoon.kt"
+    ],
+    "addedAt": "2026-10-14T10:07:06+00:00"
+  },
+  {
+    "id": "orimanga.net",
+    "name": "orimanga",
+    "domain": "orimanga.net",
+    "baseUrl": "https://orimanga.net",
+    "engine": "initmanga",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:07:08+00:00"
+  },
+  {
+    "id": "paradoxscans.com",
+    "name": "paradoxscans",
+    "domain": "paradoxscans.com",
+    "baseUrl": "https://paradoxscans.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:07:10+00:00"
+  },
+  {
+    "id": "ragnarscans.net",
+    "name": "RagnarScans",
+    "domain": "ragnarscans.net",
+    "baseUrl": "https://ragnarscans.net",
+    "engine": "custom",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/ragnarscans.net/jar/Ragnarscans.kt"
+    ],
+    "addedAt": "2026-10-14T10:08:47+00:00"
   },
   {
     "id": "ravenscans.org",
@@ -52,6 +413,76 @@
     "addedAt": "2026-10-13T06:16:29+00:00"
   },
   {
+    "id": "ruyamanga2.com",
+    "name": "ruyamanga2",
+    "domain": "ruyamanga2.com",
+    "baseUrl": "https://ruyamanga2.com",
+    "engine": "madara",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/ruyamanga2.com/jar/Ruyamanga2.kt"
+    ],
+    "addedAt": "2026-10-14T10:08:47+00:00"
+  },
+  {
+    "id": "siyahmelek.fun",
+    "name": "siyahmelek",
+    "domain": "siyahmelek.fun",
+    "baseUrl": "https://siyahmelek.fun",
+    "engine": "initmanga",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:08:50+00:00"
+  },
+  {
+    "id": "siyahmelek.my",
+    "name": "siyahmelek",
+    "domain": "siyahmelek.my",
+    "baseUrl": "https://siyahmelek.my",
+    "engine": "initmanga",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:08:59+00:00"
+  },
+  {
+    "id": "sleptmanga.com.tr",
+    "name": "sleptmanga",
+    "domain": "sleptmanga.com.tr",
+    "baseUrl": "https://sleptmanga.com.tr",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:09:01+00:00"
+  },
+  {
+    "id": "summertoons.net",
+    "name": "summertoons",
+    "domain": "summertoons.net",
+    "baseUrl": "https://summertoons.net",
+    "engine": "mangathemesia",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/summertoons.net/jar/Summertoons.kt"
+    ],
+    "addedAt": "2026-10-14T10:09:42+00:00"
+  },
+  {
+    "id": "sunsetmanga.com",
+    "name": "sunsetmanga",
+    "domain": "sunsetmanga.com",
+    "baseUrl": "https://sunsetmanga.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:09:43+00:00"
+  },
+  {
     "id": "toonhane.com",
     "name": "ToonHane",
     "domain": "toonhane.com",
@@ -62,6 +493,56 @@
     "scaffold": [
       "generated/toonhane.com/jar/Toonhane.kt"
     ],
-    "addedAt": "2026-10-14T09:02:05+00:00"
+    "addedAt": "2026-10-14T10:11:47+00:00"
+  },
+  {
+    "id": "toontaku.com",
+    "name": "toontaku",
+    "domain": "toontaku.com",
+    "baseUrl": "https://toontaku.com",
+    "engine": "unknown",
+    "scope": "tr_native",
+    "verdict": "unsupported_engine",
+    "scaffold": [],
+    "addedAt": "2026-10-14T10:11:47+00:00"
+  },
+  {
+    "id": "trmanga.com",
+    "name": "Webtoon Oku",
+    "domain": "trmanga.com",
+    "baseUrl": "https://trmanga.com",
+    "engine": "custom",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/trmanga.com/jar/Trmanga.kt"
+    ],
+    "addedAt": "2026-10-14T10:13:14+00:00"
+  },
+  {
+    "id": "webtoonoku.org",
+    "name": "Türkçe Manga ve Webtoon Oku",
+    "domain": "webtoonoku.org",
+    "baseUrl": "https://webtoonoku.org",
+    "engine": "custom",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/webtoonoku.org/jar/Webtoonoku.kt"
+    ],
+    "addedAt": "2026-10-14T10:14:02+00:00"
+  },
+  {
+    "id": "yaoiflix.fit",
+    "name": "yaoiflix",
+    "domain": "yaoiflix.fit",
+    "baseUrl": "https://yaoiflix.fit",
+    "engine": "madara",
+    "scope": "tr_native",
+    "verdict": "scaffolded",
+    "scaffold": [
+      "generated/yaoiflix.fit/jar/Yaoiflix.kt"
+    ],
+    "addedAt": "2026-10-14T10:14:02+00:00"
   }
 ]

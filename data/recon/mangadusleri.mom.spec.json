@@ -1,0 +1,42 @@
+{
+ "domain": "mangadusleri.mom",
+ "title": "MangaDüşleri - Türkçe Yaoi Oku, BL, Manga Oku, Webtoon ve Manhwa - MangaDüşleri",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "page",
+  "item": "div.recent-card",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 12
+ },
+ "detail": {
+  "title": "h1.manga-title-big",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "div.manga-summary-box",
+  "genres": "",
+  "status": "span.status-badge.status-completed",
+  "chapterItem": "a.chapter-grid-item-new",
+  "chapterLink": "@href",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [],
+ "confidence": {
+  "list": 1,
+  "detail": 0.75,
+  "reader": 0
+ },
+ "notes": [
+  "list: 12 items at /",
+  "list link prefix: manga",
+  "pagination: ?page=N",
+  "chapterLink \"@href\": item is the link itself",
+  "reader: no chapter image >=300px found"
+ ]
+}

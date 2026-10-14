@@ -1,0 +1,52 @@
+{
+ "domain": "okutoon.com",
+ "title": "Webtoon Oku — Türkçe Manga, Manhwa ve Webtoon — OkuToon",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.swiper-slide",
+  "link": "a",
+  "title": "h3",
+  "cover": "img@src",
+  "itemCount": 18
+ },
+ "detail": {
+  "title": "h1.section-title.section-title--lg.browse-content-title",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "meta[name=\"description\"]@content",
+  "genres": "",
+  "status": "#browseForm > div:nth-of-type(2) > div:nth-of-type(1)",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://mc.yandex.com/watch/110130175/1?wmode=7&page-url=https%3A%2F%2Fokutoon.com%2F&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1152400553336%3Ahid%3A74340354%3Az%3A0%3Ai%3A20261014100630%3Aet%3A1791972390%3Ac%3A1%3Arn%3A355405553%3Arqn%3A1%3Au%3A1791972390465842070%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Afp%3A476%3Ads%3A1%2C19%2C228%2C2%2C%2C0%2C%2C230%2C83%2C%2C%2C%2C501%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972388894%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972391%3At%3AWebtoon%20Oku%20%E2%80%94%20T%C3%BCrk%C3%A7e%20Manga%2C%20Manhwa%20ve%20Webtoon%20%E2%80%94%20OkuToon&t=clt%28908%29clc%280-0-0%29rqnt%281%29rfs%281%29ufs%281%29aw%281%29rcm%281%29cdl%28na%29eco%28827976%29ti%281%29&redirnss=1",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://mc.yandex.com/watch/110130175?wmode=7&page-url=https%3A%2F%2Fokutoon.com%2Fseries&charset=utf-8&uah=chu%0A%22HeadlessChrome%22%3Bv%3D%22131%22%2C%22Chromium%22%3Bv%3D%22131%22%2C%22Not_A%20Brand%22%3Bv%3D%2224%22%0Acha%0Aarm%0Achb%0A64%0Achf%0A131.0.6778.33%0Achl%0A%22HeadlessChrome%22%3Bv%3D%22131.0.6778.33%22%2C%22Chromium%22%3Bv%3D%22131.0.6778.33%22%2C%22Not_A%20Brand%22%3Bv%3D%2224.0.0.0%22%0Achm%0A%3F0%0Achp%0AAndroid%0Achv%0A14&browser-info=pv%3A1%3Avf%3A1hhj384xu7ued1sn83rw44lrmf97ftn%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%40posix%3Av%3A2661%3Acn%3A1%3Adp%3A0%3Als%3A1152400553336%3Ahid%3A1001628463%3Az%3A0%3Ai%3A20261014100634%3Aet%3A1791972394%3Ac%3A1%3Arn%3A569629383%3Arqn%3A2%3Au%3A1791972390465842070%3Aw%3A412x915%3As%3A412x915x24%3Ask%3A1%3Ads%3A0%2C0%2C347%2C1%2C0%2C0%2C%2C%2C%2C%2C%2C%2C%3Aco%3A0%3Ahdl%3A1%3Antf%3A1%3Ans%3A1791972393659%3Aadb%3A2%3Arqnl%3A1%3Ast%3A1791972394%3At%3ASayfa%20Bulunamad%C4%B1%20%E2%80%94%20OkuToon&t=clt(29)clc(0-0-0)rqnt(1)rfs(1)ufs(1)aw(1)rcm(0)cdl(na)eco(827976)ti(1)",
+   "method": "GET",
+   "kind": "list"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.5,
+  "reader": 0
+ },
+ "notes": [
+  "list: 18 items at /",
+  "pagination: not detected",
+  "detail: no chapter group (>=3) found",
+  "reader: no chapter image >=300px found"
+ ]
+}

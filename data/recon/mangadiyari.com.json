@@ -1,0 +1,902 @@
+{
+ "site": "https://mangadiyari.com",
+ "calls": [
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=mv7xqcd8"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971869473"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971870228"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "image": "https://mangadiyari.com/default-avatar.png"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"settings\":{\"accent_color\":\"#6366f1\",\"ad_between_chapters_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281074183564098\\\"\\n     crossorigin=\\\"anonymous\\\"></script>\\n<!-- Diyar -->\\n<ins class=\\\"adsbygoogle\\\"\\n     style=\\\"display:block\\\"\\n     data-ad-client=\\\"ca-pub-1281074183564098\\\"\\n     data-ad-slot=\\\"2693972285\\\"\\n     data-ad-format=\\\"auto\\\"\\n     data-full-width-responsive=\\\"true\\\"></ins>\\n<script>\\n     (adsbygoogle = window.adsbygoogle || []).push({});\\n</script>\",\"ad_between_chapters_enabled\":\"1\",\"ad_footer_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-p"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"messages\":[{\"id\":1,\"user_id\":1,\"message\":\"Selamlar\",\"created_at\":\"2026-08-20T10:29:40.000Z\",\"username\":\"admin\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"admin\",\"yomi_points\":152},{\"id\":2,\"user_id\":63,\"message\":\"As\",\"created_at\":\"2026-08-20T13:06:46.000Z\",\"username\":\"V4nitas\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style\":null,\"role\":\"user\",\"yomi_points\":0},{\"id\":3,\"user_id\":69,\"message\":\"Giriş yapılınca bölümlerin açıldığını bu siteyi öğrendikten iki ay sonra öğrendim ?\",\"created_at\":\"2026-08-29T14:27:53.000Z\",\"username\":\"Yagyag\",\"avatar_url\":\"/default-avatar.png\",\"active_frame\":null,\"active_name_style"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/chat",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://mangadiyari.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=mv7xsa5g"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971915855"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/maintenance-status",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"maintenance\":false}"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"settings\":{\"accent_color\":\"#6366f1\",\"ad_between_chapters_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281074183564098\\\"\\n     crossorigin=\\\"anonymous\\\"></script>\\n<!-- Diyar -->\\n<ins class=\\\"adsbygoogle\\\"\\n     style=\\\"display:block\\\"\\n     data-ad-client=\\\"ca-pub-1281074183564098\\\"\\n     data-ad-slot=\\\"2693972285\\\"\\n     data-ad-format=\\\"auto\\\"\\n     data-full-width-responsive=\\\"true\\\"></ins>\\n<script>\\n     (adsbygoogle = window.adsbygoogle || []).push({});\\n</script>\",\"ad_between_chapters_enabled\":\"1\",\"ad_footer_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-p"
+  },
+  {
+   "tag": "list:series",
+   "method": "POST",
+   "url": "https://mangadiyari.com/api/admin/traffic",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"path\":\"/seri\",\"referrer\":\"\"}",
+   "body": "{\"success\":true}"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/auth/me",
+   "status": 401,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"error\":\"Not authenticated\"}"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/admin/genres",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"genres\":[{\"id\":\"default_Action\",\"name\":\"Action\",\"name_tr\":\"Aksiyon\",\"slug\":\"action\",\"isDefault\":true,\"usageCount\":3},{\"id\":\"default_Adventure\",\"name\":\"Adventure\",\"name_tr\":\"Macera\",\"slug\":\"adventure\",\"isDefault\":true,\"usageCount\":2},{\"id\":\"default_Comedy\",\"name\":\"Comedy\",\"name_tr\":\"Komedi\",\"slug\":\"comedy\",\"isDefault\":true,\"usageCount\":1},{\"id\":\"default_Drama\",\"name\":\"Drama\",\"name_tr\":\"Drama\",\"slug\":\"drama\",\"isDefault\":true,\"usageCount\":2},{\"id\":\"default_Fantasy\",\"name\":\"Fantasy\",\"name_tr\":\"Fantastik\",\"slug\":\"fantasy\",\"isDefault\":true,\"usageCount\":5},{\"id\":\"default_Historical\",\"name\":\"Historical\",\"name_tr\":\"Tarihi\",\"slug\":\"historical\",\"isDefault\":true,\"usageCount\":3},{\"id\":\"d"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/series?sort=latest&limit=24&page=1",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"series\":[{\"id\":44,\"title\":\"Dövüş Sanatlarının Zirvesi\",\"slug\":\"dovus-sanatlarinin-zirvesi\",\"description\":\"üce Cennet Mezhebinde bir öğrenci olan Yang Kai uzun süredir vasat olarak bilinmektedir. İnandığı yol için asla pes etmeyen karakterimiz ormanda bir kitap keşfeder. Bakalım bu yeni kitap kendisine doğaüstü dövüş sanatlarında uzun süredir aşmaya çalıştığı engelde yardımcı olacak mı?\",\"cover_url\":\"https://cdn.saridiyar.monster/uploads/covers/cover_53a6b6ee-2d80-4538-b653-6a3c3ca7c874.webp\",\"author\":\"Momo (莫默), Pikapi (噼咔噼)\",\"artist\":\"Momo (莫默), Pikapi (噼咔噼)\",\"status\":\"ongoing\",\"genres\":[\"Action\",\"Adventure\",\"Martial Arts\",\"Fantasy\",\"Harem\",\"Manhua\",\"Shounen\",\"Webtoon\"],\"rating\":0,\"views\""
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/demonic-beast-hunter-survival-guide.c2b1e8-400.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/nano-machine.e31bdb-400.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/cover_250x350-193x278-1.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/i500604-193x278-1.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971916764"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_345ec6b5-ff46-4c97-a1cf-356ce852b8ea.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_c818ea40-23bb-4350-afab-6435b994fc36.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_72d1e6b7-511d-4cd5-9478-fc22db08b654.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_53a6b6ee-2d80-4538-b653-6a3c3ca7c874.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_0f55beca-61bb-4ac2-97b7-ac3632f6e47a.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_ac524645-1fcb-473d-ad60-2fdabd1e59cc.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_56c52622-6197-409a-a643-d3bce8b8feb4.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_1cd5c895-a5a2-4f5b-ae1c-f8bcd26e838b.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/Her-seyi-Hatirlayan-Dovus-Sanatlari-Dahisi.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/Asil-Kadinin-Degisim-Kilavuzu.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/i393572.png"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/Rise-of-the-Demon-King-manga-oku-atikrost-193x278-1.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/aa5f0035646c847a38569837f0510024-193x278-1.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/Kahramanlarin-Bastigi-Iblis-Kral-193x278-1.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/5hf98pd44rw81-193x278-1.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/My-Girlfriend-is-a-Zombie-manga-oku-atikrost-193x278-1.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/i384604.jpg"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://mangadiyari.com/uploads/covers/i499164-193x278-1.jpg"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=mv7xsa5g"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://mangadiyari.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/maintenance-status",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"maintenance\":false}"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/auth/me",
+   "status": 401,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"error\":\"Not authenticated\"}"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971919922"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"settings\":{\"accent_color\":\"#6366f1\",\"ad_between_chapters_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281074183564098\\\"\\n     crossorigin=\\\"anonymous\\\"></script>\\n<!-- Diyar -->\\n<ins class=\\\"adsbygoogle\\\"\\n     style=\\\"display:block\\\"\\n     data-ad-client=\\\"ca-pub-1281074183564098\\\"\\n     data-ad-slot=\\\"2693972285\\\"\\n     data-ad-format=\\\"auto\\\"\\n     data-full-width-responsive=\\\"true\\\"></ins>\\n<script>\\n     (adsbygoogle = window.adsbygoogle || []).push({});\\n</script>\",\"ad_between_chapters_enabled\":\"1\",\"ad_footer_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-p"
+  },
+  {
+   "tag": "list:manga",
+   "method": "POST",
+   "url": "https://mangadiyari.com/api/admin/traffic",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"path\":\"/manga\",\"referrer\":\"\"}",
+   "body": "{\"success\":true}"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971920380"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=mv7xsa5g"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://mangadiyari.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/maintenance-status",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"maintenance\":false}"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"settings\":{\"accent_color\":\"#6366f1\",\"ad_between_chapters_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281074183564098\\\"\\n     crossorigin=\\\"anonymous\\\"></script>\\n<!-- Diyar -->\\n<ins class=\\\"adsbygoogle\\\"\\n     style=\\\"display:block\\\"\\n     data-ad-client=\\\"ca-pub-1281074183564098\\\"\\n     data-ad-slot=\\\"2693972285\\\"\\n     data-ad-format=\\\"auto\\\"\\n     data-full-width-responsive=\\\"true\\\"></ins>\\n<script>\\n     (adsbygoogle = window.adsbygoogle || []).push({});\\n</script>\",\"ad_between_chapters_enabled\":\"1\",\"ad_footer_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-p"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971923409"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "POST",
+   "url": "https://mangadiyari.com/api/admin/traffic",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"path\":\"/webtoon\",\"referrer\":\"\"}",
+   "body": "{\"success\":true}"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/auth/me",
+   "status": 401,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"error\":\"Not authenticated\"}"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971923871"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=mv7xsa5g"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://mangadiyari.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/maintenance-status",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"maintenance\":false}"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"settings\":{\"accent_color\":\"#6366f1\",\"ad_between_chapters_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281074183564098\\\"\\n     crossorigin=\\\"anonymous\\\"></script>\\n<!-- Diyar -->\\n<ins class=\\\"adsbygoogle\\\"\\n     style=\\\"display:block\\\"\\n     data-ad-client=\\\"ca-pub-1281074183564098\\\"\\n     data-ad-slot=\\\"2693972285\\\"\\n     data-ad-format=\\\"auto\\\"\\n     data-full-width-responsive=\\\"true\\\"></ins>\\n<script>\\n     (adsbygoogle = window.adsbygoogle || []).push({});\\n</script>\",\"ad_between_chapters_enabled\":\"1\",\"ad_footer_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-p"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/auth/me",
+   "status": 401,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"error\":\"Not authenticated\"}"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "POST",
+   "url": "https://mangadiyari.com/api/admin/traffic",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"path\":\"/webtoons\",\"referrer\":\"\"}",
+   "body": "{\"success\":true}"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971926976"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971927302"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=mv7xsa5g"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://mangadiyari.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/maintenance-status",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"maintenance\":false}"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"settings\":{\"accent_color\":\"#6366f1\",\"ad_between_chapters_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281074183564098\\\"\\n     crossorigin=\\\"anonymous\\\"></script>\\n<!-- Diyar -->\\n<ins class=\\\"adsbygoogle\\\"\\n     style=\\\"display:block\\\"\\n     data-ad-client=\\\"ca-pub-1281074183564098\\\"\\n     data-ad-slot=\\\"2693972285\\\"\\n     data-ad-format=\\\"auto\\\"\\n     data-full-width-responsive=\\\"true\\\"></ins>\\n<script>\\n     (adsbygoogle = window.adsbygoogle || []).push({});\\n</script>\",\"ad_between_chapters_enabled\":\"1\",\"ad_footer_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-p"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/auth/me",
+   "status": 401,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"error\":\"Not authenticated\"}"
+  },
+  {
+   "tag": "list:browse",
+   "method": "POST",
+   "url": "https://mangadiyari.com/api/admin/traffic",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"path\":\"/browse\",\"referrer\":\"\"}",
+   "body": "{\"success\":true}"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971931116"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971931562"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=mv7xsa5g"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://mangadiyari.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/maintenance-status",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"maintenance\":false}"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"settings\":{\"accent_color\":\"#6366f1\",\"ad_between_chapters_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281074183564098\\\"\\n     crossorigin=\\\"anonymous\\\"></script>\\n<!-- Diyar -->\\n<ins class=\\\"adsbygoogle\\\"\\n     style=\\\"display:block\\\"\\n     data-ad-client=\\\"ca-pub-1281074183564098\\\"\\n     data-ad-slot=\\\"2693972285\\\"\\n     data-ad-format=\\\"auto\\\"\\n     data-full-width-responsive=\\\"true\\\"></ins>\\n<script>\\n     (adsbygoogle = window.adsbygoogle || []).push({});\\n</script>\",\"ad_between_chapters_enabled\":\"1\",\"ad_footer_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-p"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/auth/me",
+   "status": 401,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"error\":\"Not authenticated\"}"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "POST",
+   "url": "https://mangadiyari.com/api/admin/traffic",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"path\":\"/search\",\"referrer\":\"\"}",
+   "body": "{\"success\":true}"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971935418"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971935848"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/series",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"series\":[{\"id\":44,\"title\":\"Dövüş Sanatlarının Zirvesi\",\"slug\":\"dovus-sanatlarinin-zirvesi\",\"description\":\"üce Cennet Mezhebinde bir öğrenci olan Yang Kai uzun süredir vasat olarak bilinmektedir. İnandığı yol için asla pes etmeyen karakterimiz ormanda bir kitap keşfeder. Bakalım bu yeni kitap kendisine doğaüstü dövüş sanatlarında uzun süredir aşmaya çalıştığı engelde yardımcı olacak mı?\",\"cover_url\":\"https://cdn.saridiyar.monster/uploads/covers/cover_53a6b6ee-2d80-4538-b653-6a3c3ca7c874.webp\",\"author\":\"Momo (莫默), Pikapi (噼咔噼)\",\"artist\":\"Momo (莫默), Pikapi (噼咔噼)\",\"status\":\"ongoing\",\"genres\":[\"Action\",\"Adventure\",\"Martial Arts\",\"Fantasy\",\"Harem\",\"Manhua\",\"Shounen\",\"Webtoon\"],\"rating\":0,\"views\""
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://mangadiyari.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "GET",
+   "url": "https://mangadiyari.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971943485"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/5hf98pd44rw81-193x278-1.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_345ec6b5-ff46-4c97-a1cf-356ce852b8ea.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/cover_250x350-193x278-1.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/aa5f0035646c847a38569837f0510024-193x278-1.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_ac524645-1fcb-473d-ad60-2fdabd1e59cc.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_0f55beca-61bb-4ac2-97b7-ac3632f6e47a.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/i302868-1.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/17ffe757eff527b12a2b7d21afe76f66-193x278-1.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/b7a1f0de-7d64-44cc-894f-143b9831d18b-193x278-1.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/i503796.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_53a6b6ee-2d80-4538-b653-6a3c3ca7c874.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/Asil-Kadinin-Degisim-Kilavuzu.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/Her-seyi-Hatirlayan-Dovus-Sanatlari-Dahisi.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/demonic-beast-hunter-survival-guide.c2b1e8-400.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/nano-machine.e31bdb-400.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.saridiyar.monster/uploads/covers/cover_c818ea40-23bb-4350-afab-6435b994fc36.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://mangadiyari.com/uploads/covers/Initializing-the-Sect-System-193x278-1.jpg"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971944239"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=mv7xsa5g"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/maintenance-status",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/stats",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/series?sort=popular&limit=5",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/series/latest-updates?limit=16&page=1",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/series/editor-pick",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/auth/me",
+   "status": 401,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/series/top?period=daily",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/series/trending",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "POST",
+   "url": "https://mangadiyari.com/api/admin/traffic",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"path\":\"/\",\"referrer\":\"\"}",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971944867"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/maintenance-status",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"maintenance\":false}"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/pages/gizlilik-politikasi",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"page\":{\"id\":1,\"slug\":\"gizlilik-politikasi\",\"title\":\"Gizlilik Politikası\",\"content\":\"<h2>1. Information We Collect</h2><p>When you create an account, we collect your username, email address, and an encrypted version of your password. We do not store passwords in plain text.</p><h2>2. How We Use Your Information</h2><p>We use your information to provide and maintain your account, enable you to save favorites and reading progress, and improve our services.</p><h2>3. Data Storage &amp; Security</h2><p>Your data is stored securely. Passwords are hashed using bcrypt, authentication uses JWT tokens with 7-day expiry, and all connections are encrypted via HTTPS in production.</p><h2"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"settings\":{\"accent_color\":\"#6366f1\",\"ad_between_chapters_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281074183564098\\\"\\n     crossorigin=\\\"anonymous\\\"></script>\\n<!-- Diyar -->\\n<ins class=\\\"adsbygoogle\\\"\\n     style=\\\"display:block\\\"\\n     data-ad-client=\\\"ca-pub-1281074183564098\\\"\\n     data-ad-slot=\\\"2693972285\\\"\\n     data-ad-format=\\\"auto\\\"\\n     data-full-width-responsive=\\\"true\\\"></ins>\\n<script>\\n     (adsbygoogle = window.adsbygoogle || []).push({});\\n</script>\",\"ad_between_chapters_enabled\":\"1\",\"ad_footer_code\":\"<script async src=\\\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-p"
+  },
+  {
+   "tag": "detail",
+   "method": "POST",
+   "url": "https://mangadiyari.com/api/admin/traffic",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"path\":\"/p/gizlilik-politikasi\",\"referrer\":\"\"}",
+   "body": "{\"success\":true}"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://mangadiyari.com/api/auth/me",
+   "status": 401,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"error\":\"Not authenticated\"}"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.saridiyar.monster/uploads/site/logo-f9d65234-73fe-424d-ba86-5e96640ccf57.webp?v=1791971945757"
+  }
+ ],
+ "errors": [
+  "home: TimeoutError: page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://mangadiyari.com/\", waiting until"
+ ],
+ "frameworks": [
+  "next"
+ ],
+ "links": {
+  "series": "https://mangadiyari.com/p/gizlilik-politikasi",
+  "chapter": null
+ },
+ "homeStatus": 0,
+ "title": "Manga Diyarı | Online Türkçe Manga/Manhua/Manhwa Okuma Platformu"
+}

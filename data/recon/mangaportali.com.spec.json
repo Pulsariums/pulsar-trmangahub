@@ -1,0 +1,48 @@
+{
+ "domain": "mangaportali.com",
+ "title": "Just a moment...",
+ "mode": "html",
+ "list": {
+  "path": "/series",
+  "pageParam": "",
+  "item": "div.transition",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 20
+ },
+ "detail": {
+  "title": "",
+  "cover": "",
+  "description": "",
+  "genres": "",
+  "status": "",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://my.rtmark.net/gid.js",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0,
+  "reader": 0
+ },
+ "notes": [
+  "list: 20 items at /series",
+  "list link prefix: series",
+  "pagination: not detected",
+  "detail: series page not found",
+  "reader: no chapter image >=300px found"
+ ]
+}

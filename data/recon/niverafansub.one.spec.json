@@ -1,0 +1,46 @@
+{
+ "domain": "niverafansub.one",
+ "title": "Just a moment...",
+ "mode": "html",
+ "list": {
+  "path": "",
+  "pageParam": "",
+  "item": "",
+  "link": "",
+  "title": "",
+  "cover": "",
+  "itemCount": 0
+ },
+ "detail": {
+  "title": "",
+  "cover": "",
+  "description": "",
+  "genres": "",
+  "status": "",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://niverafansub.one/cdn-cgi/speculation",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 0,
+  "detail": 0,
+  "reader": 0
+ },
+ "notes": [
+  "list: no repeated card group (>=6) found",
+  "detail: series page not found",
+  "reader: no chapter image >=300px found"
+ ]
+}

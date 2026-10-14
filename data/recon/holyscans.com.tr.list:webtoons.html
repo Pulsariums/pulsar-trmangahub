@@ -1,0 +1,522 @@
+<!DOCTYPE html><html lang="tr" prefix="og: https://ogp.me/ns#"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin=""> <script>(function(){
+    // Yetişkin site: "Özel Seriler" modu kaldırıldı. Eski çereze (holy_pm=1) takılı kalan
+    // okuyucular hiç seri göremiyordu → çerezi SİL + .holy-pm-on sınıfını KALDIR (herkes görür).
+    try { document.documentElement.classList.remove('holy-pm-on'); document.cookie='holy_pm=0;path=/;max-age=0;SameSite=Lax'; } catch(e){}
+    function syncBtns(on){
+        document.querySelectorAll('.holy-pm-toggle').forEach(function(b){
+            b.classList.toggle('active', on); b.setAttribute('aria-pressed', on?'true':'false');
+        });
+    }
+    window.holyPMEmptyScan = function(){
+        var on = document.documentElement.classList.contains('holy-pm-on');
+        document.querySelectorAll('.holy-grid-layout').forEach(function(grid){
+            var note = grid.querySelector('.holy-pm-empty');
+            if(!note){ note = document.createElement('div'); note.className='holy-pm-empty'; note.textContent='Şu an gösterilecek özel seri yok.'; grid.appendChild(note); }
+            var cards = grid.querySelectorAll('[data-holy-private]');
+            var anyPriv = false; cards.forEach(function(c){ if(c.getAttribute('data-holy-private')==='1') anyPriv = true; });
+            note.classList.toggle('pm-show', on && !anyPriv && cards.length>0);
+        });
+    };
+    window.holyTogglePM = function(){
+        var on = !document.documentElement.classList.contains('holy-pm-on');
+        document.documentElement.classList.toggle('holy-pm-on', on);
+        try { document.cookie = 'holy_pm=' + (on?'1':'0') + ';path=/;max-age=' + (on?31536000:0) + ';SameSite=Lax'; } catch(e){}
+        // Bir seri/bölüm sayfasındaysak ve yeni mod seriyle uyuşmuyorsa → anasayfaya
+        // (özel seri okurken modu kapatınca okumaya devam edemez; tersi de geçerli)
+        if (typeof window.holySeriesPrivate !== 'undefined' &&
+            ((window.holySeriesPrivate && !on) || (!window.holySeriesPrivate && on))) {
+            window.location.replace('https://holyscans.com.tr/');
+            return;
+        }
+        syncBtns(on);
+        if (window.holyPMEmptyScan) window.holyPMEmptyScan();
+        // Yeni görünür olan haftalık trend slider'ını başlat (gizliyken ölçülemiyordu)
+        if (window.holyInitVisibleSliders) setTimeout(window.holyInitVisibleSliders, 30);
+    };
+    document.addEventListener('DOMContentLoaded', function(){
+        var on = document.documentElement.classList.contains('holy-pm-on');
+        syncBtns(on);
+        if (window.holyPMEmptyScan) window.holyPMEmptyScan();
+    });
+})();</script> <style>/* Header "Özel Seriler" tuşu (logonun sağında, tüm cihazlarda) */
+.holy-pm-toggle{display:inline-flex;align-items:center;gap:7px;background:#1e1e1e;border:1px solid #333;color:#aaa;
+    font-family:inherit;font-weight:700;font-size:13px;padding:8px 14px;border-radius:30px;cursor:pointer;
+    transition:.22s;white-space:nowrap;line-height:1;}
+.holy-pm-toggle i{font-size:13px;color:#888;transition:.22s;}
+.holy-pm-toggle:hover{border-color:#555;color:#fff;}
+.holy-pm-toggle:hover i{color:#bbb;}
+.holy-pm-toggle.active{background:linear-gradient(135deg,#d32f2f,#8e1616);border-color:#d32f2f;color:#fff;
+    box-shadow:0 0 16px -3px #d32f2f;}
+.holy-pm-toggle.active i{color:#fff;}
+@media (max-width:600px){
+    .holy-pm-toggle{padding:7px 11px;gap:6px;font-size:12px;}
+    .holy-pm-toggle-txt{display:inline;}   /* mobilde de "Özel Seriler" yazısı görünsün (PC ile aynı) */
+    .holy-pm-toggle i{font-size:13px;}
+}
+@media (max-width:360px){
+    /* Çok dar ekranda taşmayı önle: yazı kalsın, boşlukları kıs */
+    .holy-pm-toggle{padding:6px 9px;font-size:11px;}
+}
+/* Yetişkin site: özel mod kaldırıldı → NORMAL kartlar (data-holy-private="0") ASLA gizlenmez (bug buydu).
+   Boş kalan özel KALINTI kapsayıcıları (data-holy-private="1") her zaman gizli (slider/sidebar boş hero vb.);
+   "Özel Seriler" tuşu + boş-durum notu da gizli. */
+[data-holy-private="1"]{display:none !important;}
+.holy-pm-toggle{display:none !important;}
+.holy-pm-empty{display:none !important;}</style> <script id="google_gtagjs-js-consent-mode-data-layer">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {"ad_personalization":"denied","ad_storage":"denied","ad_user_data":"denied","analytics_storage":"denied","functionality_storage":"denied","security_storage":"denied","personalization_storage":"denied","region":["AT","BE","BG","CH","CY","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MT","NL","NO","PL","PT","RO","SE","SI","SK"],"wait_for_update":500});
+window._googlesitekitConsentCategoryMap = {"statistics":["analytics_storage"],"marketing":["ad_storage","ad_user_data","ad_personalization"],"functional":["functionality_storage","security_storage"],"preferences":["personalization_storage"]};
+window._googlesitekitConsents = {"ad_personalization":"denied","ad_storage":"denied","ad_user_data":"denied","analytics_storage":"denied","functionality_storage":"denied","security_storage":"denied","personalization_storage":"denied","region":["AT","BE","BG","CH","CY","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MT","NL","NO","PL","PT","RO","SE","SI","SK"],"wait_for_update":500};</script>  <script>window.koko_analytics = {"url":"https:\/\/holyscans.com.tr\/","site_url":"https:\/\/holyscans.com.tr","post_id":0,"path":"\/webtoons","method":"cookie","use_cookie":true};</script> <title>Page Not Found - HolyScans</title><meta name="robots" content="follow, noindex"><meta property="og:locale" content="tr_TR"><meta property="og:type" content="article"><meta property="og:title" content="Page Not Found - HolyScans"><meta property="og:site_name" content="HolyScans"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Page Not Found - HolyScans"> <script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://holyscans.com.tr/#person","name":"HolyScans","image":{"@type":"ImageObject","@id":"https://holyscans.com.tr/#logo","url":"https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-cropped-image.png","contentUrl":"https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-cropped-image.png","caption":"HolyScans","inLanguage":"tr","width":"512","height":"512"}},{"@type":"WebSite","@id":"https://holyscans.com.tr/#website","url":"https://holyscans.com.tr","name":"HolyScans","publisher":{"@id":"https://holyscans.com.tr/#person"},"inLanguage":"tr"},{"@type":"WebPage","@id":"#webpage","url":"","name":"Page Not Found - HolyScans","isPartOf":{"@id":"https://holyscans.com.tr/#website"},"inLanguage":"tr"}]}</script> <link rel="dns-prefetch" href="//www.googletagmanager.com"><link rel="dns-prefetch" href="//cdnjs.cloudflare.com"><style id="wp-img-auto-sizes-contain-inline-css">img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */</style><style id="wp-block-library-inline-css">:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */</style><style id="classic-theme-styles-inline-css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */</style><style id="global-styles-inline-css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */</style><style id="jetpack-stats-inline-css">img#wpstats{display:none}
+/*# sourceURL=jetpack-stats-inline-css */</style><link rel="stylesheet" id="holyscans-style-css" href="https://holyscans.com.tr/wp-content/themes/HolyTemaV12/style.css?ver=12.9.2" media="all"><link rel="stylesheet" id="font-awesome-css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?ver=6.4.0" media="all"> <script id="jquery-core-js" src="https://holyscans.com.tr/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script> <script id="jquery-migrate-js" src="https://holyscans.com.tr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script> 
+ <script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=AW-1477003306" async=""></script> <script id="google_gtagjs-js-after">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "AW-1477003306");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after</script> <link rel="https://api.w.org/" href="https://holyscans.com.tr/wp-json/"><meta name="generator" content="Site Kit by Google 1.188.0"><style id="holy-founder-style">.holy-founder-tag{display:inline-flex;align-items:center;gap:4px;background:rgba(0,0,0,0.30);font-weight:800;font-size:10px;letter-spacing:.5px;padding:2px 8px;border-radius:20px;vertical-align:middle;text-transform:uppercase;line-height:1.4;border:1px solid currentColor;text-shadow:0 0 6px currentColor;}.holy-founder-tag i{font-size:9px;}</style><link rel="icon" href="https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-cropped-image-32x32.png" sizes="32x32"><link rel="icon" href="https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-cropped-image-192x192.png" sizes="192x192"><link rel="apple-touch-icon" href="https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-cropped-image-180x180.png"><meta name="msapplication-TileImage" content="https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-cropped-image-270x270.png"><style>.search-modal { 
+            display: none; position: fixed; z-index: 10001; 
+            left: 0; top: 0; width: 100%; height: 100%; 
+            background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            align-items: center; justify-content: center;
+        }
+        .search-modal-content { background: transparent; width: 90%; max-width: 600px; text-align: center; color: #fff; position: relative; }
+        .modal-search-form input[type="search"] {
+            width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(211, 47, 47, 0.3);
+            font-size: 24px; font-weight: 700; color: #fff; padding: 10px 0; text-align: center; outline: none;
+        }
+        .modal-search-form input[type="search"]:focus { border-bottom-color: #d32f2f; }
+        .close-search { position: absolute; top: -70px; right: 0; color: #fff; font-size: 40px; cursor: pointer; transition: 0.3s; }
+        
+        .holy-search-results {
+            max-height: 45vh; overflow-y: auto; background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px; margin-top: 20px; border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .holy-live-result-item { display: flex; align-items: center; gap: 15px; padding: 10px 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); text-align: left; }
+        .holy-live-result-item img { width: 40px; height: 55px; object-fit: cover; border-radius: 4px; }
+        @keyframes holyPulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(211, 47, 47, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+        }
+
+        @media (min-width: 1201px) {
+            .holy-mobile-nav-box { display: none !important; }
+        }
+
+        @media (max-width: 1200px) {
+            .desktop-only { display: none !important; }
+            .holy-logo .text-logo { font-size: 14px; }
+            
+            .holy-mobile-nav-box {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                align-items: center !important;
+                justify-content: flex-end !important;
+                gap: 15px !important;
+            }
+        }
+
+        /* VIP menü linki — altın vurgulu */
+        .holy-vip-nav-link, .holy-vip-nav-link i { color: #f0c040 !important; font-weight: 700 !important; }
+        .holy-vip-nav-link:hover, .holy-vip-nav-link:hover i { color: #ffd966 !important; }
+
+        /* Coin bakiye rozeti (header) */
+        .holy-coin-balance-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(232,185,58,0.12); border: 1px solid rgba(232,185,58,0.35); color: #f0c040 !important; font-weight: 700; font-size: 13px; padding: 7px 13px; border-radius: 20px; text-decoration: none; white-space: nowrap; transition: .2s; }
+        .holy-coin-balance-badge:hover { background: rgba(232,185,58,0.2); color: #ffd966 !important; }
+        .holy-coin-balance-badge i { font-size: 12px; }
+        .holy-coin-balance-badge-mobile { display: inline-flex; align-items: center; gap: 4px; background: rgba(232,185,58,0.12); border: 1px solid rgba(232,185,58,0.35); color: #f0c040 !important; font-weight: 700; font-size: 12px; padding: 0 11px; height: 38px; border-radius: 19px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }</style><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1477003306/?random=1791971556314&amp;cv=11&amp;fst=1791971556314&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be6ac1z8e_AW-1477003306za208xecxf1&amp;gcd=13l3l3l3l5l1&amp;dma=0&amp;tag_exp=115616985~115938465~115938469~118897920~118897930~120385422~120469145~120469153~121246026~121246034&amp;u_w=412&amp;u_h=915&amp;url=https%3A%2F%2Fholyscans.com.tr%2Fwebtoons&amp;rcb=4&amp;frm=0&amp;tiba=Page%20Not%20Found%20-%20HolyScans&amp;did=dZTNiMT&amp;gdid=dZTNiMT&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1538376038.1791971544&amp;uaa=arm&amp;uab=64&amp;uafvl=HeadlessChrome%3B131.0.6778.33%7CChromium%3B131.0.6778.33%7CNot_A%2520Brand%3B24.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Android&amp;uapv=14&amp;uaw=0&amp;data=event%3Dgtag.config&amp;gap.plf=5&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script></head><body class="error404 wp-custom-logo wp-theme-HolyTemaV12"><header class="holy-header"><div class="holy-container container"><div style="display: flex; align-items: center; gap: 10px;"><div class="holy-logo">
+<a href="https://holyscans.com.tr/" aria-label="Anasayfa">
+</a><a href="https://holyscans.com.tr/" class="custom-logo-link" rel="home"><img width="935" height="953" src="https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png" class="custom-logo" alt="HolyScans" decoding="async" fetchpriority="high" srcset="https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image.png 935w, https://holyscans.com.tr/wp-content/uploads/2026/06/cropped-image-294x300.png 294w" sizes="(max-width: 935px) 100vw, 935px"></a>                </div></div><nav class="holy-nav desktop-only" aria-label="Ana Menü"><ul class="holy-menu"><li class="holy-nav-home"><a href="https://holyscans.com.tr/">Anasayfa</a></li><li class="holy-nav-series"><a href="https://holyscans.com.tr/manga/">Seriler</a></li><li class="holy-nav-collections"><a href="https://holyscans.com.tr/koleksiyonlar/"><i class="fa-solid fa-layer-group"></i> Koleksiyonlar</a></li><li class="holy-nav-community"><a href="https://holyscans.com.tr/topluluk/"><i class="fa-solid fa-users"></i> Topluluk</a></li><li class="holy-nav-vip"><a href="https://holyscans.com.tr/vip/" class="holy-vip-nav-link"><i class="fa-solid fa-crown"></i> VIP</a></li><li class="holy-nav-coin"><a href="https://holyscans.com.tr/coin/"><i class="fa-solid fa-coins"></i> Coin</a></li><li class="holy-nav-social"><a href="https://holyscans.com.tr/sosyal-medya/"><i class="fa-solid fa-share-nodes"></i> Sosyal Medya</a></li></ul></nav><div class="holy-actions desktop-only">
+<button class="search-icon-btn" onclick="openSearch()" aria-label="Ara"><i class="fa-solid fa-magnifying-glass"></i></button>
+<a href="https://holyscans.com.tr/giris/" class="login-text">Giriş Yap</a></div><div class="mobile-toggle holy-mobile-nav-box">
+<button onclick="openSearch()" aria-label="Ara" style="background: #1a1a1a; border: 1px solid #333; color: #fff; font-size: 16px; cursor: pointer; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 0; margin: 0;">
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
+<button class="hamburger-btn" onclick="toggleMobileOverlay()" aria-label="Menüyü aç" style="position: relative; background: transparent; border: none; color: #fff; font-size: 26px; cursor: pointer; padding: 0; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin: 0;">
+<i class="fa-solid fa-bars"></i>
+<span class="mobile-notif-dot" style="display:none; position: absolute; top: -2px; right: -4px; width: 12px; height: 12px; background: #d32f2f; border-radius: 50%; border: 2px solid #1a1a1a; animation: holyPulse 2s infinite;"></span>
+</button></div></div></header><div id="mobileOverlay" class="mobile-overlay">
+<button class="close-overlay" onclick="toggleMobileOverlay()" aria-label="Menüyü kapat"><i class="fa-solid fa-xmark"></i></button><div class="mobile-overlay-content"><nav class="mobile-nav-links">
+<a href="https://holyscans.com.tr/" class="m-link"><i class="fa-solid fa-house"></i> Anasayfa</a>
+<a href="https://holyscans.com.tr/manga/" class="m-link"><i class="fa-solid fa-book-open"></i> Seriler</a>
+<a href="https://holyscans.com.tr/koleksiyonlar/" class="m-link"><i class="fa-solid fa-layer-group"></i> Koleksiyonlar</a>
+<a href="https://holyscans.com.tr/topluluk/" class="m-link"><i class="fa-solid fa-users"></i> Topluluk</a>
+<a href="https://holyscans.com.tr/vip/" class="m-link holy-vip-nav-link"><i class="fa-solid fa-crown"></i> VIP</a>
+<a href="https://holyscans.com.tr/coin/" class="m-link"><i class="fa-solid fa-coins"></i> Coin</a>
+<a href="https://holyscans.com.tr/giris/" class="m-link"><i class="fa-solid fa-right-to-bracket"></i> Giriş Yap</a>
+<a href="https://holyscans.com.tr/sosyal-medya/" class="m-link"><i class="fa-solid fa-share-nodes"></i> Sosyal Medya</a>
+<a href="https://holyscans.com.tr/kurallar/" class="m-link"><i class="fa-solid fa-scroll"></i> Kurallar</a></nav></div></div><div id="searchModal" class="search-modal"><div class="search-modal-content">
+<button type="button" class="close-search" onclick="closeSearch()" aria-label="Aramayı kapat">×</button><form role="search" method="get" action="https://holyscans.com.tr/" class="modal-search-form">
+<input type="hidden" name="post_type" value="manga">
+<input type="search" name="s" class="holy-live-search" id="mainSearchInput" placeholder="Neyi okumak istersin?" autocomplete="off"></form><div class="holy-search-results" style="display:none;"></div></div></div> <script>var holySearchOpener = null;
+    function openSearch() {
+        holySearchOpener = document.activeElement; // F29: kapanınca odağı buraya geri ver
+        document.getElementById('searchModal').style.display = 'flex';
+        setTimeout(() => { document.getElementById('mainSearchInput').focus(); }, 100);
+    }
+    function closeSearch() {
+        document.getElementById('searchModal').style.display = 'none';
+        if (holySearchOpener && typeof holySearchOpener.focus === 'function') holySearchOpener.focus();
+    }
+    window.onclick = function(e) { if (e.target == document.getElementById('searchModal')) closeSearch(); }
+
+    // F29 (2026-09-19): Escape ile arama modalı/dropdown'ları kapat, odağı
+    // tetikleyici düğmeye geri ver (klavye kullanıcıları için önceden hiç yoktu).
+    document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        var modal = document.getElementById('searchModal');
+        if (modal && modal.style.display === 'flex') { closeSearch(); return; }
+        var dropdown = document.getElementById('dropdownList');
+        if (dropdown && dropdown.classList.contains('show-menu')) {
+            dropdown.classList.remove('show-menu');
+            var avatarBtn = document.querySelector('.profile-avatar');
+            if (avatarBtn) avatarBtn.focus();
+            return;
+        }
+        var notifDd = document.getElementById('holyNotifDropdown');
+        if (notifDd && notifDd.classList.contains('show-menu')) {
+            notifDd.classList.remove('show-menu');
+            var bellBtn = document.querySelector('.holy-notif-bell');
+            if (bellBtn) bellBtn.focus();
+        }
+    });
+
+    jQuery(document).ready(function($) {
+        $('.holy-live-search').on('input', function() {
+            var input = $(this), keyword = input.val(), resultsBox = $('.holy-search-results');
+            if(keyword.length >= 2) {
+                resultsBox.html('<div style="padding:15px; color:#aaa; text-align:center;"><i class="fa-solid fa-circle-notch fa-spin"></i> Aranıyor...</div>').show();
+                $.post(holy_ajax_vars.ajax_url, { action: 'holy_live_search', keyword: keyword }, function(res) {
+                    if(res.success) resultsBox.html(res.data).show();
+                    else resultsBox.html('<div style="padding:15px; color:#aaa; text-align:center;">Sonuç bulunamadı.</div>').show();
+                });
+            } else resultsBox.hide().empty();
+        });
+    });
+    function toggleUserMenu() {
+        const dropdown = document.getElementById('dropdownList');
+        if (dropdown) dropdown.classList.toggle('show-menu');
+        const notifDd = document.getElementById('holyNotifDropdown');
+        if (notifDd) notifDd.classList.remove('show-menu');
+    }
+
+    // Bildirim zili önizleme dropdown'ı (Holy V2 header — zil arama ikonunun yanında)
+    function toggleNotifDropdown() {
+        const notifDd = document.getElementById('holyNotifDropdown');
+        if (notifDd) notifDd.classList.toggle('show-menu');
+        const dropdown = document.getElementById('dropdownList');
+        if (dropdown) dropdown.classList.remove('show-menu');
+    }
+    // "Tümünü Okundu Say" (önizleme) — dropdown açık kalır, sadece unread vurguları
+    // + zildeki nokta kalkar. Tam liste (page-profile.php) kendi markAllRead()'ini kullanır.
+    function holyMarkAllNotifsRead(event) {
+        if (event) event.preventDefault();
+        document.querySelectorAll('.holy-notif-prev-item.unread').forEach(el => el.classList.remove('unread'));
+        document.querySelectorAll('.holy-notif-bell-dot').forEach(el => el.style.display = 'none');
+        if (typeof jQuery !== 'undefined' && typeof holy_ajax_vars !== 'undefined') {
+            jQuery.post(holy_ajax_vars.ajax_url, { action: 'mark_notifications_read', nonce: holy_ajax_vars.nonce });
+        }
+    }
+    // Tek bildirimi okundu işaretle + hedefe git — hem tam liste hem header zil önizlemesi.
+    // (page-profile.php de kendi kopyasını tanımlar; o sayfada sonuncu — kendisininki — kazanır.)
+    function readNotifAndRedirect(btn, mangaId, chapterId, redirectUrl, isPrivate) {
+        if (redirectUrl === '#' || !redirectUrl) return;
+        if (isPrivate) {
+            try {
+                document.cookie = 'holy_pm=1;path=/;max-age=31536000;SameSite=Lax';
+                document.documentElement.classList.add('holy-pm-on');
+            } catch (e) {}
+        }
+        if (typeof jQuery !== 'undefined') {
+            jQuery(btn).closest('.notif-item, .holy-notif-prev-item').removeClass('unread');
+        }
+        var ajaxUrl = (typeof holy_ajax_vars !== 'undefined' && holy_ajax_vars.ajax_url) ? holy_ajax_vars.ajax_url : '/wp-admin/admin-ajax.php';
+        if (typeof jQuery !== 'undefined') {
+            jQuery.ajax({
+                url: ajaxUrl, type: 'POST',
+                data: { action: 'holy_mark_single_notif_read', manga_id: mangaId, chapter_id: chapterId },
+                complete: function() { window.location.href = redirectUrl; }
+            });
+        } else {
+            window.location.href = redirectUrl;
+        }
+    }
+
+    function toggleMobileOverlay() {
+        const overlay = document.getElementById('mobileOverlay');
+        if (overlay) {
+            overlay.classList.toggle('active');
+            document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : 'auto';
+            if(overlay.classList.contains('active')){
+                jQuery('.mobile-notif-dot').hide();
+            }
+        }
+    }
+
+    window.addEventListener('click', function(e) {
+        if (!e.target.closest('.user-dropdown')) {
+            const dropdown = document.getElementById('dropdownList');
+            if (dropdown && dropdown.classList.contains('show-menu')) {
+                dropdown.classList.remove('show-menu');
+            }
+        }
+        if (!e.target.closest('.holy-notif-wrap')) {
+            const notifDd = document.getElementById('holyNotifDropdown');
+            if (notifDd && notifDd.classList.contains('show-menu')) {
+                notifDd.classList.remove('show-menu');
+            }
+        }
+    });
+
+    // Mobil alt bar → profil bottom-sheet (Holy V2)
+    function holyOpenProfileSheet() {
+        var sheet = document.getElementById('holyProfileSheet');
+        var backdrop = document.getElementById('holyProfileSheetBackdrop');
+        if (!sheet || !backdrop) return;
+        backdrop.classList.add('open');
+        sheet.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function holyCloseProfileSheet() {
+        var sheet = document.getElementById('holyProfileSheet');
+        var backdrop = document.getElementById('holyProfileSheetBackdrop');
+        if (!sheet || !backdrop) return;
+        backdrop.classList.remove('open');
+        sheet.classList.remove('open');
+        document.body.style.overflow = '';
+    }</script> <div class="main-container container"><div class="holy-404-wrap" style="min-height: 50vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px 20px;"><div style="font-size: 120px; font-weight: 800; line-height: 1; color: #d32f2f; text-shadow: 0 0 30px rgba(211,47,47,0.35);">404</div><h1 style="font-size: 26px; color: #fff; margin: 20px 0 10px;">Aradığın sayfa bulunamadı</h1><p style="color: #999; font-size: 15px; max-width: 480px; margin-bottom: 30px; line-height: 1.6;">
+Bu sayfa kaldırılmış, taşınmış ya da hiç var olmamış olabilir. Aradığın seriye aşağıdaki bağlantılardan ulaşabilirsin.</p><div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+<a href="https://holyscans.com.tr/" style="background: #d32f2f; color: #fff; padding: 12px 26px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
+<i class="fa-solid fa-house"></i> Anasayfa
+</a>
+<a href="https://holyscans.com.tr/manga/" style="background: #1a1a1a; border: 1px solid #333; color: #fff; padding: 12px 26px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
+<i class="fa-solid fa-book-open"></i> Tüm Seriler
+</a></div></div></div><footer id="colophon" class="site-footer" style="background: #0f0f0f; color: #828282; padding: 40px 0; margin-top: 50px; border-top: 1px solid #222; font-size: 14px; font-family: 'Poppins', sans-serif;"><div class="footer-container" style="max-width: 1300px; margin: 0 auto; padding: 0 20px; text-align: center;"><div class="site-info" style="margin-bottom: 15px;">
+© 2026
+<span style="color: #fff; font-weight: bold; font-size: 16px;">HolyScans</span>.
+Tüm hakları saklıdır.</div><div class="footer-links" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+<a href="https://holyscans.com.tr/gizlilik-politikasi/" class="footer-link" style="color: #828282; text-decoration: none; transition: 0.3s; font-weight: 500;">Gizlilik Politikası</a>
+<a href="https://holyscans.com.tr/iletisim/" class="footer-link" style="color: #828282; text-decoration: none; transition: 0.3s; font-weight: 500;">İletişim</a>
+<a href="https://holyscans.com.tr/dmca/" class="footer-link" style="color: #828282; text-decoration: none; transition: 0.3s; font-weight: 500;">DMCA</a></div></div></footer><style>.holy-blur-wrap { position: relative; cursor: pointer; overflow: hidden; }
+.holy-blur-wrap img {
+    filter: blur(10px) brightness(0.6);
+    transform: scale(1.08);
+    transition: filter 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+.holy-blur-wrap.holy-revealed img { filter: none; transform: scale(1); }
+.holy-blur-badge {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 8px; z-index: 2; pointer-events: none; transition: opacity 0.25s ease;
+}
+.holy-blur-wrap.holy-revealed .holy-blur-badge { opacity: 0; }
+.holy-blur-badge-icon {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: #fff; border: 1px solid rgba(255,255,255,0.15);
+}
+.holy-blur-badge-txt {
+    font-size: 10px; color: rgba(255,255,255,0.8);
+    font-weight: 600; letter-spacing: 0.5px; text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+/* ── Holy V2 — anasayfa rayları + profil kapakları ──
+   V2 anasayfası (holy-v2-home.php) astrea'dan port edildiği için .holy-blur-wrap
+   markup'ı yok; kapaklar background-image / <img>. Aynı NSFW korumasını
+   backdrop-filter'lı bir ::after katmanı + "+18" yazısı + tıkla-göster ile
+   ekliyoruz. .holy-cv-revealed ile açılır (ilk tık göster, ikinci tık gider).
+   NOT (düzeltme 1): "Editörün Seçimi" yığınında ::after önceden yalnızca .front
+   kapağına uygulanıyordu — yelpazede kenardan gözüken 2 arka kapak (behind-left/
+   behind-right) hiç bulanıklaştırılmıyordu. .front koşulu kaldırıldı, üç kapak da
+   (aktif + kenardan gözükenler) aynı korumayı alıyor.
+   NOT (düzeltme 2 — yelpaze konumlanma bug'ı): .holy-ep-stack-cover BURADA da
+   "position: relative" alıyordu; holy-v2.css'te aynı seçici zaten
+   "position: absolute" veriyor (yelpaze/fan yerleşimi buna dayanır — top/left:50%
+   + translate(-50%,-50%) merkezleme). İkisi TAM AYNI özgüllükte olduğu için
+   (body.holy-v2 .holy-ep-stack-cover) ve bu <style> sayfanın SONUNDA (footer)
+   yüklendiği için buradaki "relative" kazanıyordu — kapaklar normal akışa göre
+   konumlanıp DOM sırasına göre katlanarak aşağı kayıyordu (3. kapak container'ın
+   2 katından fazla dışına taşıyordu). .holy-ep-stack-cover bu listeden çıkarıldı;
+   diğer sınıflar (holy-v2.css'te position vermeyen, normal akış elemanları)
+   etkilenmedi, onlar için "relative" hâlâ gerekli/doğru. */
+
+/* ── Holy V2 — anasayfa rayları + profil kapakları — BLUR AÇIK/KAPALI'DAN BAĞIMSIZ ──
+   NOT (düzeltme 5 — KRİTİK BUG): bu blok önceden yukarıdaki "else" (blur açık) dalının
+   İÇİNDEYDİ. Kullanıcı Hesabım > Özelleştirme'den "Kapak Bulanıklığını Kaldır"ı
+   seçtiğinde ($blur_off=true) bu blok HİÇ render edilmiyordu — görseli gösteren
+   ::before'un "background-image:var(--cv-bg)" kuralı da onunla birlikte kayboluyordu,
+   yani kapaklar bulanık DEĞİL, tamamen BOŞ/SİYAH görünüyordu (V1'in .holy-blur-wrap
+   img'i gerçek bir <img> olduğu için bu sorunu hiç yaşamıyordu — o her zaman DOM'da,
+   blur_off sadece filter:none yapıyor). Çözüm: görsel gösterme kuralı ("::before" var
+   varlığı + background-image) artık if/else DIŞINDA, HER ZAMAN render ediliyor;
+   yalnızca gerçek bulanıklaştırma (filter) ve "+18" rozeti $blur_off'a göre
+   koşullu. */
+body.holy-v2 .holy-progress-cover,
+body.holy-v2 .rh-cover,
+body.holy-v2 .lib-image-box { position: relative; }
+body.holy-v2 .holy-progress-cover::after,
+body.holy-v2 .rh-cover::after,
+body.holy-v2 .lib-image-box::after {
+    content: "+18";
+    position: absolute; inset: 0; z-index: 6;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 800; letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.82); text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+    backdrop-filter: blur(10px) brightness(0.75);
+    -webkit-backdrop-filter: blur(10px) brightness(0.75);
+    border-radius: inherit;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+body.holy-v2 .holy-cv-revealed::after { opacity: 0; pointer-events: none; }
+
+body.holy-v2 .holy-cover:not(.holy-progress-cover),
+body.holy-v2 .holy-update-cover,
+body.holy-v2 .holy-pop-card-cover { position: relative; }
+body.holy-v2 .holy-cover:not(.holy-progress-cover)::before,
+body.holy-v2 .holy-update-cover::before,
+body.holy-v2 .holy-pop-card-cover::before,
+body.holy-v2 .holy-ep-stack-cover::before {
+    content: '';
+    position: absolute; inset: 0; z-index: 0;
+    background-image: var(--cv-bg);
+    background-size: cover; background-position: center;
+    border-radius: inherit;
+    filter: blur(10px) brightness(0.75);
+    transition: filter 0.3s ease;
+}
+body.holy-v2 .holy-cover:not(.holy-progress-cover)::after,
+body.holy-v2 .holy-update-cover::after,
+body.holy-v2 .holy-pop-card-cover::after,
+body.holy-v2 .holy-ep-stack-cover::after {
+    content: "+18";
+    position: absolute; inset: 0; z-index: 6;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 800; letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.82); text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+    border-radius: inherit;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+body.holy-v2 .holy-cv-revealed::before { filter: none; }
+.manga-card-v2.holy-private-card { cursor: default; }</style> <script>(function () {
+    'use strict';
+    var blurOff = false;
+    function initBlurCards() {
+        document.querySelectorAll('.holy-blur-wrap').forEach(function (box) {
+            if (box.dataset.holyBlurInit) return;
+            box.dataset.holyBlurInit = '1';
+            var card = box.closest('.manga-card-v2');
+            var href = box.dataset.href || '';
+            if (card) { card.removeAttribute('onclick'); card.style.cursor = 'default'; }
+            box.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (blurOff) { if (href) window.location.href = href; return; }
+                // İlk tık: bulanıklığı aç; ikinci tık: seriye git (her modda aynı — eski davranış)
+                if (!box.classList.contains('holy-revealed')) {
+                    box.classList.add('holy-revealed');
+                } else {
+                    if (href) window.location.href = href;
+                }
+            });
+        });
+    }
+    // V2 anasayfa/profil background-image kapakları — tıkla-göster (yakalama fazında,
+    // <a> yönlendirmesinden önce). İlk tık: bulanıklığı kaldır; sonraki tıklar geçer.
+    if (!blurOff) {
+        document.addEventListener('click', function (e) {
+            if (!document.body.classList.contains('holy-v2')) return;
+            var cov = e.target.closest('.holy-cover,.holy-progress-cover,.holy-update-cover,.holy-pop-card-cover,.rh-cover,.lib-image-box,.holy-ep-stack-cover.front');
+            if (!cov || cov.classList.contains('holy-cv-revealed')) return;
+            e.preventDefault();
+            e.stopPropagation();
+            cov.classList.add('holy-cv-revealed');
+        }, true);
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initBlurCards);
+    } else { initBlurCards(); }
+    new MutationObserver(function () { initBlurCards(); }).observe(document.body, { childList: true, subtree: true });
+})();</script> <script type="speculationrules">{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/HolyTemaV12/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}</script> <script>document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('form').forEach(function(form) {
+            // AJAX formları kendi butonlarını yönetir — genel "tıklanamaz yap" mantığından MUAF.
+            // (Aksi halde hatalı giriş/kayıt sonrası buton pointer-events:none ile kilitli kalıyordu → F5 gerekiyordu.)
+            if (['holyChatForm','holy-login-form','holy-register-form'].indexOf(form.id) !== -1) return;
+
+            form.addEventListener('submit', function() {
+                const btn = this.querySelector('button[type="submit"]');
+                if(btn && !btn.hasAttribute('data-clicked')) {
+                    btn.setAttribute('data-clicked', 'true');
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
+                    btn.style.opacity = '0.7';
+                    btn.style.pointerEvents = 'none';
+                }
+            });
+        });
+    });</script>  <script>(()=>{var e=window.koko_analytics,s=["utm_source","utm_medium","utm_campaign"],d=/bot|crawl|spider|seo|lighthouse|facebookexternalhit|preview|prerender|headless|phantom|scrapy|python|curl|wget|go-http|okhttp|node-fetch|axios|java\/|libwww|http[-_]?client|monitor|uptime|pingdom|statuscake|validator|scanner/i;function u(){let t={},n=new URLSearchParams(window.location.search),c=new URLSearchParams(window.location.hash.substring(1));return s.forEach(a=>{let o=n.get(a)||c.get(a);o&&(t[a]=o)}),t}function h(t,n){if(typeof navigator.sendBeacon=="function"){navigator.sendBeacon(t,n);return}fetch(t,{method:"POST",body:n,keepalive:!0,credentials:"same-origin"}).catch(()=>{})}e.trackPageview=function(t,n){if(d.test(navigator.userAgent)||window._phantom||window.__nightmare||window.navigator.webdriver||window.Cypress){console.debug("Koko Analytics: Ignoring call to trackPageview because user agent is a bot or this is a headless browser.");return}h(e.url,new URLSearchParams({action:"koko_analytics_collect",pa:t,po:n,r:document.referrer.indexOf(e.site_url)==0?"":document.referrer,m:e.use_cookie?"c":e.method[0],...u()}))};function r(){e.trackPageview(e.path,e.post_id)}function i(){e.autotracked||(r(),e.autotracked=!0)}document.prerendering?document.addEventListener("prerenderingchange",i,{once:!0}):document.visibilityState==="hidden"||document.visibilityState==="prerender"?document.addEventListener("visibilitychange",()=>{document.visibilityState==="visible"&&i()}):i();window.addEventListener("pageshow",t=>{t.persisted&&r()});})();</script> <script id="holyscans-main-js-js-extra">var holy_ajax_vars = {"ajax_url":"https://holyscans.com.tr/wp-admin/admin-ajax.php","nonce":"edf3ffab32","devtoolsGuard":"0","homeUrl":"https://holyscans.com.tr/","userLoggedIn":"0"};
+//# sourceURL=holyscans-main-js-js-extra</script> <script id="holyscans-main-js-js" src="https://holyscans.com.tr/wp-content/themes/HolyTemaV12/assets/js/main.js?ver=12.9.2"></script> <script id="googlesitekit-consent-mode-js" src="https://holyscans.com.tr/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-consent-mode-755f1678e260138d789e.js"></script> <script id="googlesitekit-events-provider-content-events-js-before">window._googlesitekit = window._googlesitekit || {};
+window._googlesitekit.contentEvents = {"postID":0,"isSinglePost":false,"hasVimeoEmbed":false};
+//# sourceURL=googlesitekit-events-provider-content-events-js-before</script> <script id="googlesitekit-events-provider-content-events-js" src="https://holyscans.com.tr/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-c7172f3fd0e4d5ad62ef.js" defer=""></script> <script id="jetpack-stats-js-before">_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"228348156","post":"0","tz":"3","srv":"holyscans.com.tr","arch_err":"/webtoons","j":"1:16.2"} ]);
+_stq.push([ "clickTrackerInit", "228348156", "0" ]);
+//# sourceURL=jetpack-stats-js-before</script> <script data-wp-strategy="defer" defer="" fetchpriority="low" id="jetpack-stats-js" src="https://stats.wp.com/e-202642.js"></script> <script>// Tüm Sitede Geçerli Tekilleştirilmiş AKILLI Bildirim Kontrolcüsü
+jQuery(document).ready(function($) {
+    if (typeof holy_ajax_vars !== 'undefined' && false) {
+        let notifTimer, notifBusy = false;
+
+        function checkGlobalNotifications() {
+            if (notifBusy) return; // sunucu yavaşken istekler üst üste yığılmasın
+            notifBusy = true;
+            $.post(holy_ajax_vars.ajax_url, { action: 'check_live_notifications' }, function(res) {
+                // DM rozeti de bu yanıtla gelir (holy-dm.js dinler; ayrı istek gitmez).
+                if (res && res.success && res.data && res.data.dm_unread !== null && typeof res.data.dm_unread !== 'undefined') {
+                    $(document).trigger('holy:dm-unread', [res.data.dm_unread]);
+                }
+                if (res.success && res.data.unread > 0) {
+                    let unread = res.data.unread;
+                    // NOT: yalnızca .notif-count-badge hedeflenir — .badge-count sınıfı
+                    // Mesajlar (DM) rozetleriyle de paylaşılıyor; genel bildirim buraya
+                    // yazarsa gerçek özel mesaj gelmiş gibi görünüyordu (bkz. holy-dm.js).
+                    $('.notif-count-badge').text(unread).show();
+                    // İŞTE BURASI MOBİL NOKTAYI TETİKLİYOR!
+                    $('.notif-badge-dot, .mobile-notif-dot').show();
+                } else {
+                    $('.notif-badge-dot, .mobile-notif-dot, .notif-count-badge').hide();
+                }
+            }).always(function () { notifBusy = false; });
+        }
+        
+        // Zamanlayıcıyı Başlatma Fonksiyonu
+        function startNotifTimer() {
+            clearInterval(notifTimer);
+            // 30 sn (2026-10-08: 45 sn'den indi; DM rozeti de bununla geliyor, ayrı 20 sn'lik
+            // DM yoklaması kalktı — toplam istek sekme başına dakikada ~4,3'ten 2'ye düştü)
+            notifTimer = setInterval(checkGlobalNotifications, 30000); 
+        }
+
+        // AKILLI UYKU MODU: Sekme odağına göre sistemi yönet
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) {
+                clearInterval(notifTimer); // Sekme kapalıyken sunucuyu yorma
+            } else {
+                checkGlobalNotifications(); // Sekmeye dönüldüğü an "beklemeden" kontrol et
+                startNotifTimer(); // Periyodik kontrolü tekrar başlat
+            }
+        });
+
+        // İlk açılışta çalıştır
+        checkGlobalNotifications();
+        startNotifTimer();
+    }
+});</script> <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7a0655757b5b49a68f3522d25ba39226&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
+
+
+
+<img src="https://pixel.wp.com/g.gif?v=ext&amp;blog=228348156&amp;post=0&amp;tz=3&amp;srv=holyscans.com.tr&amp;arch_err=%2Fwebtoons&amp;j=1%3A16.2&amp;host=holyscans.com.tr&amp;ref=&amp;fcp=532&amp;rand=0.8563931481692482" alt="" width="6" height="5" id="wpstats"></body></html>

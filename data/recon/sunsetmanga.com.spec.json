@@ -1,0 +1,53 @@
+{
+ "domain": "sunsetmanga.com",
+ "title": "Sunset Scans - En Güncel Türkçe Manga Okuma Platformu",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.group.relative.flex",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 20
+ },
+ "detail": {
+  "title": "",
+  "cover": "",
+  "description": "",
+  "genres": "",
+  "status": "",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://sunsetscans.com.tr/cdn-cgi/speculation",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://sunsetscans.com.tr/wp-admin/admin-ajax.php",
+   "method": "POST",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0,
+  "reader": 0
+ },
+ "notes": [
+  "list: 20 items at /",
+  "list link prefix: manga",
+  "pagination: not detected",
+  "detail: series page not found",
+  "reader: no chapter image >=300px found"
+ ]
+}

@@ -1,0 +1,274 @@
+{
+ "site": "https://toontaku.com",
+ "calls": [
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://toontaku.com/api/auth/session",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{}"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://toontaku.com/api/premium/weekly-free/summary?excludeAdult=true",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"success\":true,\"data\":{\"featureEnabled\":true,\"isPremium\":false,\"isAuthenticated\":false,\"activeSelections\":[{\"seriesId\":\"019cb5d5-6f41-7fb0-a0bc-b84b41f6d507\",\"seriesTitle\":\"Sayu Efsanesi\",\"seriesSlug\":\"legend-of-sayu\",\"coverImage\":\"https://cdn.toontaku.com/series/019cb5d5-6f41-7fb0-a0bc-b84b41f6d507/sayu-efsanesi-cover-aca275db.webp\",\"selectedAt\":\"2026-10-12T00:00:00.000Z\",\"expiresAt\":\"2026-11-10T23:59:59.999Z\",\"daysRemaining\":28,\"genreSlugs\":[\"aksiyon\",\"murim\"],\"restrictedCategorySlugs\":[],\"isRestrictedContent\":false,\"maturityRating\":\"EVERYONE\",\"demographic\":\"Shounen\"},{\"seriesId\":\"cmld6leci001v8vv409ax8xm1\",\"seriesTitle\":\"Canavarların Bir Numaralı Efendisi\",\"seriesSlug\":\"canavarlarin-bir-"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://toontaku.com/build-meta.json?_=1791972711478",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\n  \"buildId\": \"_aNZ_bB2Ppz0c3zufGr-5\",\n  \"timestamp\": 1790324124000,\n  \"gitCommit\": \"a97b11ecc651ec23164bd0388f390b70779bb0a5\",\n  \"expectedOriginMainCommit\": \"a97b11ecc651ec23164bd0388f390b70779bb0a5\",\n  \"builtAtIso\": \"2026-09-25T08:15:24Z\",\n  \"lane\": \"toontaku-prod\",\n  \"siteProfile\": \"toontaku\",\n  \"deployState\": \"live\",\n  \"component\": \"frontend-public\"\n}\n"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://toontaku.com/api/announcements?limit=5",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"success\":true,\"data\":{\"items\":[{\"id\":\"01a0502b-5a6e-73d6-820a-4c9b66660585\",\"title\":\"KAZANILAN COIN, ALINAN COIN\",\"bodySnippet\":\"⚠️ Bu duyurunun sonunda önemli bir detay var.\\n\\n🗺️ Bu duyuruda neler var?\\n1️⃣ 30 Ağustos kutlu olsun — Kısa bir tebrik\\n2️⃣ Ne değişti? — Ücretsiz kazanılan ToonCoin'in harcaması\\n3️…\",\"bodyPlain\":\"⚠️ Bu duyurunun sonunda önemli bir detay var.\\n\\n🗺️ Bu duyuruda neler var?\\n1️⃣ 30 Ağustos kutlu olsun — Kısa bir tebrik\\n2️⃣ Ne değişti? — Ücretsiz kazanılan ToonCoin'in harcaması\\n3️⃣ Sen etkileniyor musun? — Çoğunuz için cevap: hayır\\n4️⃣ Neden böyle bir ayrım? — Elmas ve gümüş meselesi\\n5️⃣ Ücretsiz taraf kapanmıyor — Kod dağıtımı aynen sürüyor\\nMerak ettiğin k"
+  },
+  {
+   "tag": "home",
+   "image": "https://toontaku.com/toontaku-assets/logo-192.webp?v=20260208"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://toontaku.com/api/auth/session",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{}"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://toontaku.com/api/series/popular?limit=6&excludeAdult=true",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"id\":\"cmld6lec6001p8vv4f4xkdui7\",\"title\":\"Öte Âlemin Zindan Hükümdarı\",\"slug\":\"ote-lemin-zindan-hukumdari\",\"description\":\"2035 yılında, uzaylı alemlerine açılan yarıklar dünyanın savunmasını parçaladı. Böcek benzeri yaratıklar ve canavarlar sürüsü toprağı tahrip etti ve insanlık “Evolvers”ın gücüyle hayatta kalmak için mücadele etti. Li Yi, uzaylıların saldırısı sırasında takım arkadaşları tarafından ihanete uğradı ve ölüme terk edildi. Ölümün eşiğindeyken, “Titan Shadow” Sistemini uyandırdı — gölgesi sınırsız bir şekilde evrimleşebiliyordu! Savunmasını güçlendirmek için cevherleri yiyip bitirebilir, düşmanlarını parçalayarak ölümcül bıçaklar oluşturabilir ve hatta b"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://toontaku.com/api/series/popular?limit=6&excludeAdult=true",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"id\":\"cmld6lec6001p8vv4f4xkdui7\",\"title\":\"Öte Âlemin Zindan Hükümdarı\",\"slug\":\"ote-lemin-zindan-hukumdari\",\"description\":\"2035 yılında, uzaylı alemlerine açılan yarıklar dünyanın savunmasını parçaladı. Böcek benzeri yaratıklar ve canavarlar sürüsü toprağı tahrip etti ve insanlık “Evolvers”ın gücüyle hayatta kalmak için mücadele etti. Li Yi, uzaylıların saldırısı sırasında takım arkadaşları tarafından ihanete uğradı ve ölüme terk edildi. Ölümün eşiğindeyken, “Titan Shadow” Sistemini uyandırdı — gölgesi sınırsız bir şekilde evrimleşebiliyordu! Savunmasını güçlendirmek için cevherleri yiyip bitirebilir, düşmanlarını parçalayarak ölümcül bıçaklar oluşturabilir ve hatta b"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://toontaku.com/api/auth/session",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{}"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://toontaku.com/api/series/popular?limit=6&excludeAdult=true",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"id\":\"cmld6lec6001p8vv4f4xkdui7\",\"title\":\"Öte Âlemin Zindan Hükümdarı\",\"slug\":\"ote-lemin-zindan-hukumdari\",\"description\":\"2035 yılında, uzaylı alemlerine açılan yarıklar dünyanın savunmasını parçaladı. Böcek benzeri yaratıklar ve canavarlar sürüsü toprağı tahrip etti ve insanlık “Evolvers”ın gücüyle hayatta kalmak için mücadele etti. Li Yi, uzaylıların saldırısı sırasında takım arkadaşları tarafından ihanete uğradı ve ölüme terk edildi. Ölümün eşiğindeyken, “Titan Shadow” Sistemini uyandırdı — gölgesi sınırsız bir şekilde evrimleşebiliyordu! Savunmasını güçlendirmek için cevherleri yiyip bitirebilir, düşmanlarını parçalayarak ölümcül bıçaklar oluşturabilir ve hatta b"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://toontaku.com/api/auth/session",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{}"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://toontaku.com/api/series/popular?limit=6&excludeAdult=true",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"id\":\"cmld6lec6001p8vv4f4xkdui7\",\"title\":\"Öte Âlemin Zindan Hükümdarı\",\"slug\":\"ote-lemin-zindan-hukumdari\",\"description\":\"2035 yılında, uzaylı alemlerine açılan yarıklar dünyanın savunmasını parçaladı. Böcek benzeri yaratıklar ve canavarlar sürüsü toprağı tahrip etti ve insanlık “Evolvers”ın gücüyle hayatta kalmak için mücadele etti. Li Yi, uzaylıların saldırısı sırasında takım arkadaşları tarafından ihanete uğradı ve ölüme terk edildi. Ölümün eşiğindeyken, “Titan Shadow” Sistemini uyandırdı — gölgesi sınırsız bir şekilde evrimleşebiliyordu! Savunmasını güçlendirmek için cevherleri yiyip bitirebilir, düşmanlarını parçalayarak ölümcül bıçaklar oluşturabilir ve hatta b"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://toontaku.com/api/auth/session",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{}"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://toontaku.com/api/series/popular?limit=6&excludeAdult=true",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"id\":\"cmld6lec6001p8vv4f4xkdui7\",\"title\":\"Öte Âlemin Zindan Hükümdarı\",\"slug\":\"ote-lemin-zindan-hukumdari\",\"description\":\"2035 yılında, uzaylı alemlerine açılan yarıklar dünyanın savunmasını parçaladı. Böcek benzeri yaratıklar ve canavarlar sürüsü toprağı tahrip etti ve insanlık “Evolvers”ın gücüyle hayatta kalmak için mücadele etti. Li Yi, uzaylıların saldırısı sırasında takım arkadaşları tarafından ihanete uğradı ve ölüme terk edildi. Ölümün eşiğindeyken, “Titan Shadow” Sistemini uyandırdı — gölgesi sınırsız bir şekilde evrimleşebiliyordu! Savunmasını güçlendirmek için cevherleri yiyip bitirebilir, düşmanlarını parçalayarak ölümcül bıçaklar oluşturabilir ve hatta b"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://toontaku.com/api/auth/session",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{}"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://toontaku.com/api/series/popular?limit=6&excludeAdult=true",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"id\":\"cmld6lec6001p8vv4f4xkdui7\",\"title\":\"Öte Âlemin Zindan Hükümdarı\",\"slug\":\"ote-lemin-zindan-hukumdari\",\"description\":\"2035 yılında, uzaylı alemlerine açılan yarıklar dünyanın savunmasını parçaladı. Böcek benzeri yaratıklar ve canavarlar sürüsü toprağı tahrip etti ve insanlık “Evolvers”ın gücüyle hayatta kalmak için mücadele etti. Li Yi, uzaylıların saldırısı sırasında takım arkadaşları tarafından ihanete uğradı ve ölüme terk edildi. Ölümün eşiğindeyken, “Titan Shadow” Sistemini uyandırdı — gölgesi sınırsız bir şekilde evrimleşebiliyordu! Savunmasını güçlendirmek için cevherleri yiyip bitirebilir, düşmanlarını parçalayarak ölümcül bıçaklar oluşturabilir ve hatta b"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://toontaku.com/api/auth/session",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{}"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://toontaku.com/api/series",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"success\":true,\"data\":{\"series\":[{\"id\":\"01a136dd-338f-713a-a99c-7869e62611c7\",\"title\":\"Pawprints on Her Heart\",\"slug\":\"pawprints-on-her-heart\",\"description\":\"When Coco dies after five happy years with her owner Chloe, she thinks her tail-wagging days are over. But Coco can't bear to stay in the afterlife as she watches Chloe's world crumble. Taking pity on her, the Puppy God grants Coco's wish to return. Now, she's a human child who gets adopted into Chloe's [&hellip;]\",\"coverImageUrl\":\"https://cdn.toontaku.com/series/01a136dd-338f-713a-a99c-7869e62611c7/pawprints-on-her-heart-cover-aebe088c.webp\",\"type\":\"MANHWA\",\"contentKind\":\"IMAGE_CHAPTER\",\"status\":\"DEVAM_EDIYOR\",\"isPublished\":true,\"keyw"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "GET",
+   "url": "https://toontaku.com/api/manga",
+   "status": 404,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": "{\"error\":\"Not Found\",\"message\":\"Route not found\",\"statusCode\":404}"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://toontaku.com/api/auth/session",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://toontaku.com/api/premium/weekly-free/summary?excludeAdult=true",
+   "status": 200,
+   "ct": "application/json; charset=utf-8",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.toontaku.com/manga/68dec09104adc/chapter/68dec13b10a39/02_final.webp"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://toontaku.com/api/auth/session",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{}"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://toontaku.com/api/comments/reward-status?seriesId=cmld6lec6001p8vv4f4xkdui7&chapterId=cmld6o1vj03rx8vixwntu1yir&context=free",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":{\"state\":\"guest\",\"variant\":\"full\",\"visual\":{\"imageUrl\":\"https://cdn.toontaku.com/reader-boundaries/support_free/1783004579129-ceb6a994da8dff44.webp\",\"title\":null,\"body\":null,\"attachTo\":null},\"checklist\":[{\"key\":\"series_comment\",\"done\":false,\"label\":\"Seri sayfasına yorum yaz (tek seferlik)\",\"deepLink\":\"/series/cmld6lec6001p8vv4f4xkdui7#comments\"},{\"key\":\"chapter_comment\",\"done\":false,\"label\":\"Bu bölüme 8+ karakterli yorum yaz → 🪙 15\",\"deepLink\":\"/chapters/cmld6o1vj03rx8vixwntu1yir#comments\"}],\"reward\":null,\"likeNudge\":{\"text\":\"❤ Güzel yazılmış bir yorum mu gördün? Beğeni bırak. Beğendiğin her yorum, bu topluluğun neye değer verdiğini gösteriyor ve en iyi yorumları vitr"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.toontaku.com/manga/68dec09104adc/chapter/68dec13b10a39/01_final.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.toontaku.com/manga/68dec09104adc/chapter/68dec13b10a39/03_final.webp"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://toontaku.com/api/chapters/cmld6o1vj03rx8vixwntu1yir/chapter-update-report-capability?brand=toontaku&surface=web",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":{\"enabled\":true,\"propertyKey\":\"toontaku-web\",\"canSubmit\":false,\"visible\":true,\"isTrustedReporter\":false,\"canViewSourceUrls\":false,\"hasKnownSource\":true,\"sourceUrl\":null,\"cooldownSeconds\":600,\"chapterReportHero\":{\"enabled\":true},\"sourceCheck\":{\"target\":{\"kind\":\"SEARCH\",\"url\":\"https://www.google.com/search?q=%C3%96te%20%C3%82lemin%20Zindan%20H%C3%BCk%C3%BCmdar%C4%B1%20read\"}}}}"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://toontaku.com/api/series/cmld6lec6001p8vv4f4xkdui7/chapter-update-reports/public?brand=toontaku&surface=web&chapterId=cmld6o1vj03rx8vixwntu1yir&chapterNumber=1",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":{\"enabled\":true,\"visible\":true,\"canSubmit\":false,\"propertyKey\":\"toontaku-web\",\"groups\":[]}}"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://toontaku.com/api/series/cmld6lec6001p8vv4f4xkdui7/chapter-update-reports/public?brand=toontaku&surface=web",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":{\"enabled\":true,\"visible\":true,\"canSubmit\":false,\"propertyKey\":\"toontaku-web\",\"groups\":[]}}"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://toontaku.com/api/auth/session",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{}"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://toontaku.com/api/viewer/popular-chapters/overall?window=monthly&limit=20&excludeAdult=true",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":{\"items\":[{\"id\":\"01a1334e-481a-753a-af4c-5679fe672eb3-monthly\",\"chapterId\":\"01a1334e-481a-753a-af4c-5679fe672eb3\",\"chapterTitle\":\"Implications\",\"chapterNumber\":\"120\",\"seriesId\":\"01a0a271-a4db-7740-8bfe-b9be8dd7422b\",\"seriesTitle\":\"Myst, Might, Mayhem\",\"seriesSlug\":\"myst-might-mayhem\",\"coverUrl\":\"https://cdn.toontaku.com/series/01a0a271-a4db-7740-8bfe-b9be8dd7422b/myst-might-mayhem-cover-079b62df.webp\",\"publishedAt\":\"2026-10-13T03:28:50.713Z\",\"window\":\"monthly\",\"score\":{\"views\":0,\"likes\":0,\"comments\":1,\"recencyScore\":87.98343178979356,\"totalScore\":9.198343178979357},\"rank\":1,\"metadata\":{\"price\":0,\"seriesType\":\"MANHWA\",\"genres\":[\"shounen\"],\"maturityRating\":\"EVERYONE\",\"de"
+  }
+ ],
+ "errors": [],
+ "frameworks": [
+  "next"
+ ],
+ "links": {
+  "series": "https://toontaku.com/seri/ote-lemin-zindan-hukumdari/bolum/1",
+  "chapter": "https://toontaku.com/populer-bolumler"
+ },
+ "homeStatus": 200,
+ "title": "Toontaku - Türkçe Manga Oku, Manhwa Oku ve Webtoon Oku"
+}
