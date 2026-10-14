@@ -1,0 +1,110 @@
+name: 'Otomatik onarım (başarısız JAR)'
+
+# Elle başlat. Canlı testi geçemeyen özel (üretilmiş) parser'lar için:
+# siteyi yeniden analiz eder (recon), parser'ı yeniden üretir, yalnız onları yeniden test eder.
+# Tur sonunda hâlâ kalanlar özete yazılır. Silme yok.
+
+on:
+  workflow_dispatch:
+    inputs:
+      rounds:
+        description: 'En fazla onarım turu'
+        type: string
+        default: '2'
+      only:
+        description: 'Yalnız bu parser adları (virgülle; boş = hata veren tüm özel parser''lar)'
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: bakim
+  cancel-in-progress: false
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  onar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Playwright
+        run: |
+          npm init -y >/dev/null; npm i playwright@1.49.1 >/dev/null 2>&1
+          npx playwright install --with-deps chromium >/dev/null 2>&1
+      - name: Onar
+        run: |
+          set +e
+          git config user.name "pulsar-trmangahub-bot"
+          git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
+          B="${{ github.ref_name }}"
+          run_and_wait() {
+            wf=$1; shift
+            before=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+            gh workflow run "$wf" --ref "$B" "$@" || return 1
+            id=""
+            for i in $(seq 1 30); do sleep 10
+              id=$(gh run list --workflow "$wf" --limit 5 --json databaseId,createdAt,event -q "[.[]|select(.event==\"workflow_dispatch\" and .createdAt>=\"$before\")]|last|.databaseId // empty")
+              [ -n "$id" ] && break
+            done
+            [ -n "$id" ] || return 1
+            gh run watch "$id" --interval 30 >/dev/null 2>&1
+            echo "$wf -> $(gh run view "$id" --json conclusion -q .conclusion) (run $id)" | tee -a "$GITHUB_STEP_SUMMARY"
+          }
+          # parser kimliği -> üretilmiş dizin
+          map_parsers() {
+            for k in generated/*/jar/*.kt; do
+              [ -f "$k" ] || continue
+              id=$(grep -oE '@MangaSourceParser\("[A-Z0-9_]+"' "$k" | head -1 | sed -E 's/.*\("//; s/"//')
+              dom=$(echo "$k" | cut -d/ -f2)
+              [ -n "$id" ] && echo "$id $dom"
+            done
+          }
+          for round in $(seq 1 "${{ inputs.rounds }}"); do
+            echo "## Tur $round" >> "$GITHUB_STEP_SUMMARY"
+            git fetch -q origin "$B" && git reset -q --hard "origin/$B"
+            map_parsers > map.txt
+            if [ -n "${{ inputs.only }}" ]; then
+              echo "${{ inputs.only }}" | tr ',' '\n' | sed 's/ //g' | grep -v '^$' > want.txt
+            else
+              jq -r 'to_entries[]|select((.value.ok_streak//0)==0 and ((.value.error_class//"")|IN("http_gone","parse","empty","http","decode")))|.key' data/live/history.json > want.txt
+            fi
+            : > fix.txt
+            while read p; do
+              d=$(awk -v p="$p" '$1==p{print $2}' map.txt)
+              [ -n "$d" ] && echo "$p $d" >> fix.txt
+            done < want.txt
+            [ -s fix.txt ] || { echo "onarılacak özel parser yok" | tee -a "$GITHUB_STEP_SUMMARY"; break; }
+            while read p d; do
+              echo "== $p ($d)"
+              nsfw=$(jq -r --arg d "$d" '.[]|select(.domain==$d)|if (.nsfw==true) then 1 else 0 end' sources/custom/sources.json | head -1)
+              rm -rf recon-out; node scripts/recon.mjs "https://$d" >/dev/null 2>&1
+              if [ -f "recon-out/$d.spec.json" ]; then
+                node scripts/genparser.mjs "recon-out/$d.spec.json" --nsfw "${nsfw:-0}" && echo "- $p yeniden üretildi" >> "$GITHUB_STEP_SUMMARY"
+                mkdir -p data/recon; cp recon-out/*.spec.json data/recon/ 2>/dev/null
+              else
+                echo "- $p: spec üretilemedi (site erişilemiyor)" >> "$GITHUB_STEP_SUMMARY"
+              fi
+            done < fix.txt
+            git add generated sources/custom; git add -f data/recon 2>/dev/null
+            if ! git diff --cached --quiet; then
+              git commit -qm "fix(onar): başarısız parser'lar yeniden üretildi (tur $round)"
+              for i in 1 2 3; do git push -q origin "HEAD:$B" && break; git pull -q --rebase origin "$B"; done
+            fi
+            only=$(cut -d' ' -f1 fix.txt | paste -sd, -)
+            run_and_wait live-check.yml -f bolum=tr -f only="$only"
+          done
+          git fetch -q origin "$B" && git reset -q --hard "origin/$B"
+          echo "## Hâlâ başarısız (özel parser)" >> "$GITHUB_STEP_SUMMARY"
+          map_parsers > map.txt
+          jq -r 'to_entries[]|select((.value.ok_streak//0)==0)|"\(.key) \(.value.error_class//"?")/\(.value.stage//"?")"' data/live/history.json \
+            | while read p c; do grep -q "^$p " map.txt && echo "- $p: $c"; done >> "$GITHUB_STEP_SUMMARY"
+          exit 0

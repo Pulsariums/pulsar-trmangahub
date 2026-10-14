@@ -1,0 +1,45 @@
+name: 'Cihaz testi sonucunu içeri al'
+
+# Kototoro > Kaynaklar > "Tümünü test et" çıktısını (JSON) yapıştır.
+# Cihazda geçen kaynak, Actions'ta Cloudflare/IP yüzünden "bilinmiyor" çıksa da çalışıyor sayılır.
+
+on:
+  workflow_dispatch:
+    inputs:
+      json:
+        description: 'Test sonucu JSON (yapıştır)'
+        type: string
+        required: true
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: sync-tr-sources
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Birleştir
+        env:
+          DEVICE_JSON: ${{ inputs.json }}
+        run: node scripts/device_import.mjs
+      - name: Gönder
+        run: |
+          git config user.name "pulsar-trmangahub-bot"
+          git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
+          git add data/live/device.json
+          git diff --cached --quiet && { echo "değişiklik yok"; exit 0; }
+          git commit -qm "chore(live): cihaz testi sonucu işlendi"
+          for i in 1 2 3; do
+            git pull -q --rebase origin "${{ github.ref_name }}" && git push -q origin "HEAD:${{ github.ref_name }}" && exit 0
+            sleep $((i*5))
+          done
+          exit 1
