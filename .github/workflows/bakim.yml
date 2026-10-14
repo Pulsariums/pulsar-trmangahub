@@ -11,6 +11,11 @@ on:
         description: 'Taranacak en fazla kaynak adı kökü'
         type: string
         default: '80'
+      kapsam:
+        description: 'Senkron kapsamı: tr = yalnız Türkçe (hızlı), hepsi = global dahil (yavaş)'
+        type: choice
+        options: [tr, hepsi]
+        default: tr
       kesif:
         description: 'Ölü kaynaklar için yeni alan adı ara'
         type: boolean
@@ -34,6 +39,8 @@ env:
 jobs:
   sync:
     uses: ./.github/workflows/_sync.yml
+    with:
+      kapsam: ${{ inputs.kapsam }}
 
   bakim:
     needs: sync

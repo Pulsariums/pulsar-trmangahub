@@ -354,6 +354,7 @@ def write_bucket(out_dir, result, now):
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Build published source lists per bucket.")
     parser.add_argument("--root", default=BASE_DIR, help="repo root containing data/ (default: this repo)")
+    parser.add_argument("--scope", choices=["hepsi", "tr"], default="hepsi", help="tr: yalniz TR kovasi")
     args = parser.parse_args(argv)
     data_dir = os.path.join(args.root, "data")
 
@@ -367,6 +368,8 @@ def main(argv=None):
     now = now_iso()
     results = []
     for bucket in BUCKETS:
+        if args.scope == "tr" and not bucket["tr_only"]:
+            continue
         out_dir = os.path.join(args.root, "sources", bucket["subdir"])
         prev_doc = load_json(os.path.join(out_dir, "sources.json"), default={}) or {}
         results.append((out_dir, compute_bucket(bucket, upstream, probes, prev_doc, alt_doc, now)))

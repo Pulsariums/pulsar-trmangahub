@@ -3,6 +3,9 @@ name: 'iç: senkron'
 on:
   workflow_call:
     inputs:
+      kapsam:
+        type: string
+        default: 'tr'
       dry_run:
         description: 'Commit atma, sadece raporla'
         type: boolean
@@ -60,7 +63,7 @@ jobs:
           fi
 
       - name: Probe domains
-        run: python scripts/probe.py
+        run: python scripts/probe.py --scope "${{ inputs.kapsam || 'hepsi' }}"
 
       - name: Find alternatives for broken domains
         if: env.RUN_ALTERNATIVES == 'true'
@@ -70,7 +73,7 @@ jobs:
         id: build
         run: |
           set +e
-          python scripts/build.py
+          python scripts/build.py --scope "${{ inputs.kapsam || 'hepsi' }}"
           rc=$?
           set -e
           if [ "$rc" -eq 2 ]; then
@@ -94,7 +97,7 @@ jobs:
         run: |
           git config user.name "pulsar-trmangahub-bot"
           git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
-          git add sources/tr sources/global
+          git add sources/tr sources/global 2>/dev/null || git add sources/tr
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0

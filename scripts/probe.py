@@ -25,6 +25,9 @@ from urllib.parse import urlparse
 
 import requests
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import rules  # noqa: E402
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 IN_PATH = os.path.join(DATA_DIR, "upstream_tr.json")
@@ -296,6 +299,7 @@ def main(argv=None):
     parser.add_argument("--limit", type=int, default=0, help="probe only the first N domains")
     parser.add_argument("--only", nargs="*", default=None, help="probe only these domains")
     parser.add_argument("--workers", type=int, default=WORKERS)
+    parser.add_argument("--scope", choices=["hepsi", "tr"], default="hepsi", help="tr: yalniz Turkce kaynaklar")
     args = parser.parse_args(argv)
 
     with open(args.input, encoding="utf-8") as fh:
@@ -303,6 +307,8 @@ def main(argv=None):
     sources = data.get("sources", [])
     no_domain = [s["key"] for s in sources if not s.get("domain")]
     records = [s for s in sources if s.get("domain")]
+    if args.scope == "tr":
+        records = [s for s in records if not rules.is_multilang(s)]
     if args.only:
         wanted = set(args.only)
         records = [s for s in records if s["domain"] in wanted]
