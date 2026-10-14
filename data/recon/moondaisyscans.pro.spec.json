@@ -1,0 +1,122 @@
+{
+ "domain": "moondaisyscans.pro",
+ "title": "Moon Daisy Scans Manga Oku • Webtoon Oku • Manhwa Oku • Türkçe Webtoon Oku • Novel Oku",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.bs.styletere.stylefiv",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 32
+ },
+ "detail": {
+  "title": "h1.entry-title",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "div.info-desc.bixbox",
+  "genres": "",
+  "status": "span.status.Completed",
+  "chapterItem": "div.eph-num",
+  "chapterLink": "a@href",
+  "chapterTitle": "a"
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://moondaisyscans.pro/cdn-cgi/speculation",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://moondaisyscans.pro/wp-content/cache/gov-cache/ajax/399538112d94fbc5ef2e407c49469421.json?time=17919683883",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://moondaisyscans.pro/wp-admin/admin-ajax.php",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://discord.com/api/guilds/1130204963860123759/widget.json",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=139022421161540",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://www.tiktok.com/node/extra/api/seo/ab-version?canonical=https://www.tiktok.com/@moondaisyscans/video/7617864684514839816&crowd_tag=tiktok_embed",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://mon16-normal-useast5.tiktokv.us/monitor_browser/collect/batch/?bid=tiktok_pns_web_runtime",
+   "method": "POST",
+   "kind": "list"
+  },
+  {
+   "url": "https://mcs.tiktokv.us/v1/user/webid",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://mon16-normal-useast5.tiktokv.us/monitor_web/settings/browser-settings?bid=tiktok_web_embed&store=1",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://mcs.tiktokv.us/v1/list",
+   "method": "POST",
+   "kind": "list"
+  },
+  {
+   "url": "https://libraweb.tiktokw.us/service/2/abtest_config/",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://www.tiktok.com/api/v1/web-cookie-privacy/config?locale=en&appId=1988&theme=default&tea=1",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://mssdk.tiktokw.us/web/resource?eq=ygXBl3GFFGbBeO2o-sX-gZb6pd2aMt7rp3TpLLrL/HexYL6Z6TDILD8BoIGzJQgyoq4x9lOn/NaRMac26quktrjE0fNiyh8bJf==",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://graph.instagram.com/logging_client_events",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://www.tiktok.com/api/recommend/embed_videos/?aid=1284&count=24&secUid=MS4wLjABAAAA4u1Ib7E-TZT6UIrGdB0lmcMxtU_2_af_AxcU4FCT7V9Ov0eAAab11qJBgSlHIqxd&lang=en-US@posix&msToken=&X-Bogus=DFSzswSOKqJANjBqC1m3EAep4HGm&_signature=_02B4Z6wo00001Xt2lWAAAIDBsglaaw-kREF7dtHAADQW70",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://adsco.re/t",
+   "method": "POST",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.88,
+  "reader": 0
+ },
+ "notes": [
+  "list: 32 items at /",
+  "list link prefix: manga",
+  "pagination: /page/N (pageParam empty)",
+  "reader: no chapter image >=300px found"
+ ]
+}

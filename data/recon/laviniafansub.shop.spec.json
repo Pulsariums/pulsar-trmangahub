@@ -1,0 +1,52 @@
+{
+ "domain": "laviniafansub.shop",
+ "title": "Lavinia Fansub - Yaoi, Yuri Oku",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.popular-item-wrap",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 17
+ },
+ "detail": {
+  "title": "h1",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "p.lavinia-desc",
+  "genres": "div.post-549.wp-manga.type-wp-manga",
+  "status": "div.post-549.wp-manga.type-wp-manga",
+  "chapterItem": "div.chapter-thumbnail",
+  "chapterLink": "a@href",
+  "chapterTitle": "a"
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://laviniafansub.shop/wp-admin/admin-ajax.php",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://discord.com/api/v6/invite/lavinia?with_counts=true",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 1,
+  "reader": 0
+ },
+ "notes": [
+  "list: 17 items at /",
+  "list link prefix: manga",
+  "pagination: not detected",
+  "reader: no chapter image >=300px found"
+ ]
+}

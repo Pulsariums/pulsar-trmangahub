@@ -1,0 +1,48 @@
+{
+ "domain": "ruyamanga2.com",
+ "title": "Rüya Manga | Türkçe Manga Oku - Webtoon Oku!",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.col-6.col-md-2.bigthumbnail2",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 6
+ },
+ "detail": {
+  "title": "",
+  "cover": "",
+  "description": "",
+  "genres": "",
+  "status": "",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://www.ruyamanga2.com/wp-admin/admin-ajax.php",
+   "method": "POST",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0,
+  "reader": 0
+ },
+ "notes": [
+  "list: 6 items at /",
+  "list link prefix: manga",
+  "pagination: /page/N (pageParam empty)",
+  "detail: series page not found",
+  "reader: no chapter image >=300px found"
+ ]
+}

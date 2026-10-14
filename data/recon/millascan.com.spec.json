@@ -1,0 +1,108 @@
+{
+ "domain": "millascan.com",
+ "title": "Milasub, manhwa oku, yaoi oku, milascans",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.popular-item-wrap",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 12
+ },
+ "detail": {
+  "title": "h1.item-title.h4",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "#loop-content > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2)",
+  "genres": "body.archive.tax-wp-manga-genre.term-sezon-finali",
+  "status": "",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://millascan.com/cdn-cgi/speculation",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://millascan.com/cdn-cgi/challenge-platform/h/g/precursor/4df4a60fa397/0.3539689398316629:1791969329:v49LS8Jbq9UiNFO_0vnyEHeRNUViV-DjZP7PFGwCcok/a4a5e0084f9f52bb",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://millascan.com/cdn-cgi/challenge-platform/h/g/precursor/4df4a60fa397/0.3539689398316629:1791969329:v49LS8Jbq9UiNFO_0vnyEHeRNUViV-DjZP7PFGwCcok/a4a5e029ff8f885c",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://millascan.com/cdn-cgi/challenge-platform/h/g/precursor/4df4a60fa397/0.3539689398316629:1791969329:v49LS8Jbq9UiNFO_0vnyEHeRNUViV-DjZP7PFGwCcok/a4a5e044dd46885c",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://millascan.com/cdn-cgi/challenge-platform/h/g/precursor/4df4a60fa397/0.3539689398316629:1791969329:v49LS8Jbq9UiNFO_0vnyEHeRNUViV-DjZP7PFGwCcok/a4a5e0605aab885c",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://millascan.com/cdn-cgi/challenge-platform/h/g/precursor/4df4a60fa397/0.3539689398316629:1791969329:v49LS8Jbq9UiNFO_0vnyEHeRNUViV-DjZP7PFGwCcok/a4a5e0784f27885c",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://millascan.com/cdn-cgi/challenge-platform/h/g/precursor/4df4a60fa397/0.3539689398316629:1791969329:v49LS8Jbq9UiNFO_0vnyEHeRNUViV-DjZP7PFGwCcok/a4a5e0901b11885c",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://millascan.com/cdn-cgi/challenge-platform/h/g/precursor/4df4a60fa397/0.3539689398316629:1791969329:v49LS8Jbq9UiNFO_0vnyEHeRNUViV-DjZP7PFGwCcok/a4a5e0a98892885c",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://millascan.com/cdn-cgi/challenge-platform/h/g/precursor/4df4a60fa397/0.3539689398316629:1791969329:v49LS8Jbq9UiNFO_0vnyEHeRNUViV-DjZP7PFGwCcok/a4a5e0c16ee8885c",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://millascan.com/cdn-cgi/challenge-platform/h/g/precursor/4df4a60fa397/0.3539689398316629:1791969329:v49LS8Jbq9UiNFO_0vnyEHeRNUViV-DjZP7PFGwCcok/a4a5e0dc0ccb885c",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://millascan.com/cdn-cgi/challenge-platform/h/g/precursor/4df4a60fa397/0.3539689398316629:1791969329:v49LS8Jbq9UiNFO_0vnyEHeRNUViV-DjZP7PFGwCcok/a4a5e1003f14885c",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://millascan.com/cdn-cgi/challenge-platform/h/g/precursor/4df4a60fa397/0.3539689398316629:1791969329:v49LS8Jbq9UiNFO_0vnyEHeRNUViV-DjZP7PFGwCcok/a4a5e11a8da9885c",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=3461130585979021",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.5,
+  "reader": 0
+ },
+ "notes": [
+  "list: 12 items at /",
+  "list link prefix: manga",
+  "pagination: not detected",
+  "detail: no chapter group (>=3) found",
+  "reader: no chapter image >=300px found"
+ ]
+}

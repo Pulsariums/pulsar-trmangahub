@@ -1,0 +1,61 @@
+{
+ "domain": "summertoons.net",
+ "title": "Webtoon Oku, Manhwa Oku, Manga Oku, Novel | Summertoons",
+ "mode": "html",
+ "list": {
+  "path": "/manga/",
+  "pageParam": "page",
+  "item": "div.bs",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 30
+ },
+ "detail": {
+  "title": "h1.entry-title",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "section.mauve-series-panel.mauve-series-synopsis-panel",
+  "genres": "div.wd-full.mauve-series-genres",
+  "status": "div.imptdt.mauve-info-status",
+  "chapterItem": "div.eph-num",
+  "chapterLink": "a@href",
+  "chapterTitle": "a"
+ },
+ "reader": {
+  "images": "article.mauve-chapter-gate__card img",
+  "attr": "src",
+  "count": 1
+ },
+ "api": [
+  {
+   "url": "https://summertoons.net/wp-admin/admin-ajax.php?action=stchat_bootstrap",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://summertoons.net/wp-json/stchat/v1/snapshot",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://summertoons.net/wp-admin/admin-ajax.php",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://summertoons.net/wp-json/stc/v1/comments?post=8276&sort=best&scope=all&limit=35",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 1,
+  "reader": 1
+ },
+ "notes": [
+  "list: 30 items at /manga/",
+  "list link prefix: manga",
+  "pagination: ?page=N"
+ ]
+}

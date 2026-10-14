@@ -1,0 +1,83 @@
+{
+ "domain": "opiatoon.shop",
+ "title": "Opiatoon | Türkçe Yaoi/Yuri Manga Webtoon Okuma Platformu",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.popular-item-wrap",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 10
+ },
+ "detail": {
+  "title": "h1.item-title.h2",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "meta[name=\"description\"]@content",
+  "genres": "",
+  "status": "div.c-blog-post.post-21230.page",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://discord.com/api/v6/invite/dGce4JJYWr?with_counts=true",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://graphcomment.com/api/pub/numberOfComments?website=opiatoon-yaoi&url=https%253A%252F%252Fopiatoon.shop%252Fgiris-yapmalisiniz%252F",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://graphcomment.com/front/lang/en-e1fa0722f83e26d76512018f3d894216c76f990f.json",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://graphcomment.com/api/pub/website/opiatoon-yaoi",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://graphcomment.com/front/lang/tr-e1fa0722f83e26d76512018f3d894216c76f990f.json",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://graphcomment.com/api/users/me?website=opiatoon-yaoi&plateform=front",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://graphcomment.com/api/thread?sort=relevance",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://graphcomment.com/api/pub/page_view/thread/6a40175ccfab45d37cc03322",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.5,
+  "reader": 0
+ },
+ "notes": [
+  "list: 10 items at /",
+  "list link prefix: manga",
+  "pagination: not detected",
+  "detail: no chapter group (>=3) found",
+  "reader: no chapter image >=300px found"
+ ]
+}
