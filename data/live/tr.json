@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-13T21:23:43Z",
+  "checked_at": "2026-10-14T05:04:36Z",
   "results": [
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 1735,
+      "ms": 1045,
       "domain": "toonhane.com",
       "name": "toonhane",
       "id": "TOONHANE",
@@ -14,7 +14,7 @@
     {
       "error_class": "http_gone",
       "stage": "details",
-      "ms": 2550,
+      "ms": 1320,
       "domain": "nyxscans.com",
       "name": "Nyxscans",
       "id": "NYXSCANS_TR",
@@ -26,7 +26,7 @@
       "pages": 10,
       "stage": "image",
       "chapters": 112,
-      "ms": 6373,
+      "ms": 3524,
       "domain": "nabicix.com",
       "name": "nabicix",
       "id": "NABICIX",
@@ -34,10 +34,10 @@
       "ok": true
     },
     {
-      "pages": 15,
+      "pages": 19,
       "stage": "image",
-      "chapters": 145,
-      "ms": 2281,
+      "chapters": 104,
+      "ms": 2348,
       "domain": "ravenscans.org",
       "name": "Raven Scans",
       "id": "RAVENSCANS_TR",
@@ -47,7 +47,7 @@
     {
       "error_class": "cloudflare",
       "stage": "list",
-      "ms": 977,
+      "ms": 734,
       "domain": "eldermanga.com",
       "name": "Elder Manga",
       "id": "ELDERMANGA",
@@ -58,7 +58,7 @@
       "error_class": "empty",
       "stage": "details",
       "chapters": 0,
-      "ms": 2908,
+      "ms": 1224,
       "domain": "nabicix.com",
       "name": "Eleceed Türkiye",
       "id": "ELECEEDTURKIYE",
@@ -69,7 +69,7 @@
     {
       "error_class": "cloudflare",
       "stage": "list",
-      "ms": 760,
+      "ms": 308,
       "domain": "sadscans.com",
       "name": "SadScans",
       "id": "SADSCANS",
@@ -79,7 +79,7 @@
     {
       "error_class": "cloudflare",
       "stage": "list",
-      "ms": 584,
+      "ms": 190,
       "domain": "tenshimanga.com",
       "name": "Tenshi Manga",
       "id": "TENSHIMANGA",
@@ -89,7 +89,7 @@
     {
       "error_class": "ssl",
       "stage": "list",
-      "ms": 386,
+      "ms": 390,
       "domain": "manga-ay.com",
       "name": "MangaAy",
       "id": "MANGAAY",
@@ -99,7 +99,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 1622,
+      "ms": 664,
       "domain": "trmanga.com",
       "name": "TrWebtoon",
       "id": "TRWEBTOON",
@@ -110,7 +110,7 @@
     {
       "error_class": "cloudflare",
       "stage": "list",
-      "ms": 731,
+      "ms": 180,
       "domain": "uzaymanga.com",
       "name": "Uzay Manga",
       "id": "UZAYMANGA",
@@ -121,7 +121,7 @@
       "error_class": "parse",
       "stage": "pages",
       "chapters": 20,
-      "ms": 2727,
+      "ms": 1071,
       "domain": "nyxscans.com",
       "name": "Nyx Scans",
       "id": "NYXSCANS",
@@ -134,7 +134,7 @@
       "pages": 16,
       "stage": "image",
       "chapters": 432,
-      "ms": 2956,
+      "ms": 2509,
       "domain": "mangadenizi.net",
       "name": "MangaDenizi",
       "id": "MANGA_DENIZI",
@@ -145,7 +145,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 21,
+      "ms": 147,
       "domain": "lilyumfansub.com.tr",
       "name": "LilyumFansub",
       "id": "LILYUMFANSUB",
@@ -156,7 +156,7 @@
       "pages": 1,
       "stage": "image",
       "chapters": 75,
-      "ms": 2926,
+      "ms": 2320,
       "domain": "www.tilkiscans.com",
       "name": "TilkiScans",
       "id": "TILKISCANS",
@@ -166,7 +166,7 @@
     {
       "error_class": "timeout",
       "stage": "list",
-      "ms": 20150,
+      "ms": 20062,
       "domain": "hoifansub.com",
       "name": "HoiFansub",
       "id": "HOIFANSUB",
@@ -176,7 +176,7 @@
     {
       "error_class": "timeout",
       "stage": "list",
-      "ms": 20578,
+      "ms": 20517,
       "domain": "zamanmanga.com",
       "name": "ZamanManga",
       "id": "ZAMANMANGA",
@@ -186,7 +186,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 125,
+      "ms": 270,
       "domain": "mangatr.app",
       "name": "MangaTr",
       "id": "MANGATR",
@@ -197,7 +197,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 118,
+      "ms": 35,
       "domain": "www.yetiskinruyamanga.com",
       "name": "Yetişkin Rüya Manga",
       "id": "YETISKINRUYAMANGA",
@@ -207,7 +207,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 2081,
+      "ms": 2742,
       "domain": "piedpiperfansub.me",
       "name": "PiedpiperFansub",
       "id": "PIEDPIPERFANSUB",
@@ -218,7 +218,7 @@
     {
       "error_class": "timeout",
       "stage": "list",
-      "ms": 20674,
+      "ms": 20624,
       "domain": "strayfansub.com",
       "name": "StrayFansub",
       "id": "STRAYFANSUB",
@@ -228,7 +228,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 33,
+      "ms": 23,
       "domain": "ghostfansub.co",
       "name": "GhostFansub",
       "id": "GHOSTFANSUB",
@@ -248,7 +248,7 @@
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 10873,
+      "ms": 5986,
       "domain": "manga-sehri.net",
       "name": "MangaSehri.net",
       "id": "MANGASEHRINET",
@@ -259,7 +259,7 @@
       "pages": 17,
       "stage": "image",
       "chapters": 92,
-      "ms": 1984,
+      "ms": 1863,
       "domain": "trmangaoku.com",
       "name": "TrMangaOku",
       "id": "TRMANGAOKU",
@@ -269,7 +269,7 @@
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 757,
+      "ms": 473,
       "domain": "domalfansb.com.tr",
       "name": "DomalFansub",
       "id": "DOMALFANSB",
@@ -279,7 +279,7 @@
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 21094,
+      "ms": 19948,
       "domain": "armoniscans.net",
       "name": "ArmoniScans",
       "id": "ARMONISCANS",
@@ -291,7 +291,7 @@
       "pages": 11,
       "stage": "image",
       "chapters": 81,
-      "ms": 3156,
+      "ms": 2513,
       "domain": "webtoontr.net",
       "name": "WebtoonTr",
       "id": "WEBTOONTR",
@@ -302,7 +302,7 @@
     {
       "error_class": "cloudflare",
       "stage": "list",
-      "ms": 488,
+      "ms": 172,
       "domain": "mangawt.com",
       "name": "MangaWt.com",
       "id": "MANGAWT",
@@ -313,7 +313,7 @@
       "error_class": "parse",
       "stage": "pages",
       "chapters": 65,
-      "ms": 3088,
+      "ms": 3114,
       "domain": "diamondfansub.com",
       "name": "DiamondFansub",
       "id": "DIAMONDFANSUB",
@@ -324,7 +324,7 @@
     {
       "error_class": "cloudflare",
       "stage": "list",
-      "ms": 487,
+      "ms": 105,
       "domain": "webtoonhatti.club",
       "name": "RomantikManga",
       "id": "ROMANTIKMANGA",
@@ -335,7 +335,7 @@
       "pages": 14,
       "stage": "image",
       "chapters": 460,
-      "ms": 4274,
+      "ms": 3106,
       "domain": "mangawow.org",
       "name": "MangaWow",
       "id": "MANGAWOW",
@@ -345,7 +345,7 @@
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 2141,
+      "ms": 1392,
       "domain": "guncelmanga.net",
       "name": "GuncelManga",
       "id": "GUNCEL_MANGA",
@@ -355,7 +355,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 53,
+      "ms": 32,
       "domain": "mangagezginim.com",
       "name": "MangaGezgini",
       "id": "MANGAGEZGINI",
@@ -365,7 +365,7 @@
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 1293,
+      "ms": 421,
       "domain": "nabicix.com",
       "name": "KoreliScans",
       "id": "KORELISCANS",
@@ -375,7 +375,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 112,
+      "ms": 149,
       "domain": "www.mangaoku.com.tr",
       "name": "Atikrost",
       "id": "ATIKROST",
@@ -385,7 +385,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 118,
+      "ms": 86,
       "domain": "nabiscans.com",
       "name": "NabiScans",
       "id": "NABISCANS",
@@ -395,7 +395,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 288,
+      "ms": 262,
       "domain": "yaoibar.gay",
       "name": "YaoiBar",
       "id": "YAOIBAR",
@@ -405,7 +405,7 @@
     {
       "error_class": "timeout",
       "stage": "list",
-      "ms": 20439,
+      "ms": 20506,
       "domain": "mangagezgini.site",
       "name": "GloryManga",
       "id": "GLORYMANGA",
@@ -415,7 +415,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 273,
+      "ms": 197,
       "domain": "mangaokusana.com",
       "name": "MangaOkusana",
       "id": "MANGAOKUSANA",
@@ -426,7 +426,7 @@
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 519,
+      "ms": 516,
       "domain": "mugimanga.com",
       "name": "MugiManga",
       "id": "MUGIMANGA",
@@ -436,7 +436,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 43,
+      "ms": 13,
       "domain": "www.imparatormanga.com",
       "name": "ImparatorManga",
       "id": "IMPARATORMANGA",
@@ -446,7 +446,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 1296,
+      "ms": 1287,
       "domain": "garciamanga.com",
       "name": "GarciaManga",
       "id": "GARCIAMANGA",
@@ -458,7 +458,7 @@
       "pages": 9,
       "stage": "image",
       "chapters": 3,
-      "ms": 4986,
+      "ms": 4243,
       "domain": "ruyamanga2.com",
       "name": "RuyaManga",
       "id": "RUYAMANGA",
@@ -468,7 +468,7 @@
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 19573,
+      "ms": 19795,
       "domain": "kabusmanga.com",
       "name": "KabusManga",
       "id": "KABUSMANGA",
@@ -478,7 +478,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 128,
+      "ms": 321,
       "domain": "milascans.tr",
       "name": "MilaSub",
       "id": "MILASUB",
@@ -489,7 +489,7 @@
     {
       "error_class": "http",
       "stage": "details",
-      "ms": 3010,
+      "ms": 1036,
       "domain": "anikiga.com",
       "name": "Anikiga",
       "id": "ANIKIGA",
@@ -500,7 +500,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 65,
+      "ms": 33,
       "domain": "kedi.to",
       "name": "Kedi",
       "id": "KEDI",
@@ -511,7 +511,7 @@
       "pages": 14,
       "stage": "image",
       "chapters": 136,
-      "ms": 1746,
+      "ms": 1706,
       "domain": "tortugaceviri.com",
       "name": "TortugaCeviri",
       "id": "TORTUGACEVIRI",
@@ -521,7 +521,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 98,
+      "ms": 100,
       "domain": "manga-sehri.com",
       "name": "MangaSehri.com",
       "id": "MANGASEHRI",
@@ -531,7 +531,7 @@
     {
       "error_class": "http_gone",
       "stage": "list",
-      "ms": 653,
+      "ms": 649,
       "domain": "araznovel.com",
       "name": "ArazNovel",
       "id": "ARAZNOVEL",
@@ -542,7 +542,7 @@
       "pages": 1,
       "stage": "image",
       "chapters": 75,
-      "ms": 2394,
+      "ms": 1557,
       "domain": "www.tilkiscans.com",
       "name": "MangaTilkisi",
       "id": "MANGATILKISI",
@@ -552,7 +552,7 @@
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 257,
+      "ms": 433,
       "domain": "manwe.pro",
       "name": "Manwe",
       "id": "MANWE",
@@ -562,7 +562,7 @@
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 745,
+      "ms": 330,
       "domain": "mangaruhu.com",
       "name": "MangaRuhu",
       "id": "MANGARUHU",
@@ -572,17 +572,17 @@
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 1138,
+      "ms": 987,
       "domain": "mangaoku.info",
       "name": "Mangaoku",
       "id": "MANGAOKU",
       "ok": false,
-      "error": ". Status=440, URL=[https://ww16.mangaoku.info/wp-admin/admin-ajax.php?sub1=20261014-0823-0059-b252-29002787c317]"
+      "error": ". Status=440, URL=[https://ww16.mangaoku.info/wp-admin/admin-ajax.php?sub1=20261014-1604-02fa-9bab-176c97d2b218]"
     },
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 280,
+      "ms": 550,
       "domain": "timenaight.org",
       "name": "TimeNaight",
       "id": "TIMENAIGHT",
@@ -593,7 +593,7 @@
     {
       "error_class": "http_gone",
       "stage": "list",
-      "ms": 189,
+      "ms": 167,
       "domain": "titanmanga.com",
       "name": "TitanManga",
       "id": "TITANMANGA",
@@ -603,7 +603,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 732,
+      "ms": 331,
       "domain": "hayalistic.com.tr",
       "name": "Hayalistic",
       "id": "HAYALISTIC",
@@ -623,7 +623,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 48,
+      "ms": 27,
       "domain": "yaoitr.fun",
       "name": "YaoiTr",
       "id": "YAOITR",
@@ -633,7 +633,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 3072,
+      "ms": 732,
       "domain": "esomanga.com",
       "name": "EsoManga",
       "id": "ESOMANGA",
@@ -644,7 +644,7 @@
     {
       "error_class": "http_gone",
       "stage": "details",
-      "ms": 2017,
+      "ms": 1732,
       "domain": "opiatoon.shop",
       "name": "OpiaToon",
       "id": "OPIATOON",
@@ -655,7 +655,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 7431,
+      "ms": 4968,
       "domain": "webtoonhatti.me",
       "name": "CloverManga",
       "id": "CLOVERMANGA",
@@ -666,7 +666,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 12,
+      "ms": 94,
       "domain": "asurascans.com.tr",
       "name": "AsuraScansTR",
       "id": "ASURASCANSTR",
@@ -677,7 +677,7 @@
       "pages": 13,
       "stage": "image",
       "chapters": 141,
-      "ms": 4053,
+      "ms": 8946,
       "domain": "ragnarscans.net",
       "name": "Ragnarscans",
       "id": "RAGNARSCANS",
@@ -687,7 +687,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 64,
+      "ms": 92,
       "domain": "www.epikman.ga",
       "name": "EpikMan",
       "id": "EPIKMAN",
@@ -697,18 +697,18 @@
     {
       "error_class": "rate_limit",
       "stage": "details",
-      "ms": 679,
+      "ms": 771,
       "domain": "shadowceviri.blogspot.com",
       "name": "ShadowCeviri",
       "id": "SHADOWCEVIRI",
       "list": 11,
       "ok": false,
-      "error": ". Status=429, URL=[https://www.google.com/sorry/index?continue=https://shadowceviri.blogspot.com/2021/05/hajime-no-ippo_1.html&q=EgRA7MkaGLzCutYGIi1OEGbAbh_Ruyqy_JwzYF0zCtOqYICm06ThOa6LNC6KbY4oOidaqN4p74fMVYIyAnJSWgFD]"
+      "error": ". Status=429, URL=[https://www.google.com/sorry/index?continue=https://shadowceviri.blogspot.com/2021/05/hajime-no-ippo_1.html%3Fm%3D1&q=EgSRhGbxGM2avNYGIi2_jAs_441upB4AMAGYe22Ec4BsMJV52n93qZmSNIxGiw7xWGGTO-haVeC70SQyAnJSWgFD]"
     },
     {
       "error_class": "ssl",
       "stage": "list",
-      "ms": 368,
+      "ms": 349,
       "domain": "ayatoon.com",
       "name": "AyaToon",
       "id": "AYATOON",
@@ -719,7 +719,7 @@
       "pages": 19,
       "stage": "image",
       "chapters": 35,
-      "ms": 6830,
+      "ms": 2792,
       "domain": "gaiatoon.com",
       "name": "GaiaToon",
       "id": "GAIATOON",
@@ -729,7 +729,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 10016,
+      "ms": 10015,
       "domain": "tempestfansub.net",
       "name": "tempestmangas.com",
       "id": "TEMPESTFANSUBNET",
@@ -739,7 +739,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 1289,
+      "ms": 2009,
       "domain": "nyxmanga.com",
       "name": "NyxManga",
       "id": "NYXMANGA",
@@ -750,7 +750,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 834,
+      "ms": 328,
       "domain": "mangacix.com",
       "name": "Mangacix",
       "id": "MANGACIX",
@@ -761,7 +761,7 @@
       "pages": 36,
       "stage": "image",
       "chapters": 1,
-      "ms": 5103,
+      "ms": 5550,
       "domain": "manga.adonisfansub.com",
       "name": "AdonisFansub",
       "id": "ADONISFANSUB",
@@ -771,7 +771,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 8,
+      "ms": 145,
       "domain": "mangacim.com.tr",
       "name": "Mangacim",
       "id": "MANGACIM",
@@ -781,7 +781,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 994,
+      "ms": 773,
       "domain": "www.raindropteamfan.com",
       "name": "Raindrop Fansub",
       "id": "RAINDROPTEAMFAN",
@@ -793,7 +793,7 @@
       "error_class": "parse",
       "stage": "pages",
       "chapters": 39,
-      "ms": 4163,
+      "ms": 1098,
       "domain": "summertoons.net",
       "name": "SummerToon",
       "id": "SUMMERTOON",
@@ -804,7 +804,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 2105,
+      "ms": 2681,
       "domain": "www.tarotscans.com",
       "name": "TarotScans",
       "id": "TAROTSCANS",
@@ -815,7 +815,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 176,
+      "ms": 184,
       "domain": "www.noxscans.com",
       "name": "NoxScans",
       "id": "NOXSCANS",
@@ -826,7 +826,7 @@
     {
       "error_class": "ssl",
       "stage": "list",
-      "ms": 495,
+      "ms": 78,
       "domain": "www.guildknives.com",
       "name": "RobinManga",
       "id": "ROBINMANGA",
@@ -836,7 +836,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 844,
+      "ms": 1294,
       "domain": "www.seraphmanga.com",
       "name": "SeraphManga",
       "id": "HYPERIONSCANS",
@@ -847,7 +847,7 @@
     {
       "error_class": "cloudflare",
       "stage": "list",
-      "ms": 168,
+      "ms": 196,
       "domain": "merlintoon.com",
       "name": "MerlinScans",
       "id": "MERLINSCANS",
@@ -857,7 +857,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 984,
+      "ms": 721,
       "domain": "tempestscans.net",
       "name": "TempestFansub.Com",
       "id": "TEMPESTFANSUB",
@@ -868,7 +868,7 @@
       "pages": 12,
       "stage": "image",
       "chapters": 142,
-      "ms": 4017,
+      "ms": 4287,
       "domain": "zenithscans.com",
       "name": "ZenithScans",
       "id": "ZENITHSCANS",
@@ -878,7 +878,7 @@
     {
       "error_class": "http_gone",
       "stage": "list",
-      "ms": 355,
+      "ms": 372,
       "domain": "koplo77-irama.com",
       "name": "TempestScans",
       "id": "TEMPESTSCANS",
@@ -888,7 +888,7 @@
     {
       "error_class": "cloudflare",
       "stage": "list",
-      "ms": 215,
+      "ms": 179,
       "domain": "www.patimanga.com",
       "name": "PatiManga",
       "id": "PATIMANGA",
@@ -899,7 +899,7 @@
       "pages": 9,
       "stage": "image",
       "chapters": 54,
-      "ms": 7478,
+      "ms": 4234,
       "domain": "sereinscan.com",
       "name": "SereinScan",
       "id": "SEREINSCAN",
@@ -909,7 +909,7 @@
     {
       "error_class": "http",
       "stage": "list",
-      "ms": 642,
+      "ms": 504,
       "domain": "alucardscans.com",
       "name": "AlucardScans",
       "id": "ALUCARDSCANS",
@@ -920,7 +920,7 @@
       "pages": 44,
       "stage": "image",
       "chapters": 3,
-      "ms": 2776,
+      "ms": 2392,
       "domain": "shijiescans.com",
       "name": "ShijieScans",
       "id": "SHIJIESCANS",
@@ -930,7 +930,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 1116,
+      "ms": 575,
       "domain": "mangasiginagi.com",
       "name": "MangaSiginagi",
       "id": "MANGASIGINAGI",
@@ -941,7 +941,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 13,
+      "ms": 95,
       "domain": "mangakings.com.tr",
       "name": "MangaKings",
       "id": "MANGAKINGS",
@@ -951,7 +951,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 10012,
+      "ms": 10010,
       "domain": "mangaefendisi.net",
       "name": "MangaEfendisi",
       "id": "MANGAEFENDISI",
@@ -961,7 +961,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 3323,
+      "ms": 3453,
       "domain": "asemifansub.com",
       "name": "AsemiFansub",
       "id": "ASEMIFANSUB",
@@ -972,7 +972,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 1291,
+      "ms": 895,
       "domain": "golgebahcesi.com",
       "name": "GolgeBahcesi",
       "id": "GOLGEBAHCESI",
@@ -983,7 +983,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 50,
+      "ms": 30,
       "domain": "prunusscans.com",
       "name": "PrunusScans",
       "id": "PRUNUSSCANS",
@@ -993,7 +993,7 @@
     {
       "error_class": "cloudflare",
       "stage": "list",
-      "ms": 754,
+      "ms": 187,
       "domain": "www.gafeland.com",
       "name": "Gafeland",
       "id": "GAFELAND",
@@ -1003,7 +1003,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 283,
+      "ms": 183,
       "domain": "mangakoleji.com",
       "name": "MangaKoleji",
       "id": "MANGAKOLEJI",
@@ -1012,20 +1012,19 @@
       "error": "Liste boş döndü"
     },
     {
-      "pages": 24,
-      "stage": "image",
-      "chapters": 110,
-      "ms": 15729,
+      "error_class": "http",
+      "stage": "list",
+      "ms": 2346,
       "domain": "nirvanamanga.com",
       "name": "NirvanaManga",
       "id": "NIRVANAMANGA",
-      "list": 26,
-      "ok": true
+      "ok": false,
+      "error": ". Status=500, URL=[https://nirvanamanga.com/manga/?order=update&page=1]"
     },
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 479,
+      "ms": 1284,
       "domain": "athenamanga.com",
       "name": "AthenaManga",
       "id": "ATHENAMANGA",
@@ -1036,7 +1035,7 @@
     {
       "error_class": "cloudflare",
       "stage": "list",
-      "ms": 572,
+      "ms": 133,
       "domain": "afroditscans.com",
       "name": "AfroditScans",
       "id": "AFRODITSCANS",
@@ -1046,7 +1045,7 @@
     {
       "error_class": "empty",
       "stage": "list",
-      "ms": 191,
+      "ms": 261,
       "domain": "mangakazani.com",
       "name": "MangaKazani",
       "id": "MANGAKAZANI",
@@ -1057,7 +1056,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 119,
+      "ms": 94,
       "domain": "mangaokutr.net",
       "name": "MangaOkuTr",
       "id": "MANGAOKUTR",
@@ -1067,7 +1066,7 @@
     {
       "error_class": "dns",
       "stage": "list",
-      "ms": 15,
+      "ms": 92,
       "domain": "culturesubs.com",
       "name": "CultureSubs",
       "id": "CULTURESUBS",
@@ -1075,10 +1074,10 @@
       "error": "culturesubs.com: Name or service not known"
     },
     {
-      "pages": 15,
+      "pages": 19,
       "stage": "image",
-      "chapters": 145,
-      "ms": 1913,
+      "chapters": 104,
+      "ms": 1387,
       "domain": "ravenscans.org",
       "name": "RavenScans",
       "id": "RAVENSCANS",
