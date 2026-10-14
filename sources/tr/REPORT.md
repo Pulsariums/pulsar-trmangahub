@@ -6,18 +6,18 @@
 |---|---|
 | published (ok) | 46 |
 | cf_protected_published (bot korumalı, erişilebilir) | 36 |
-| quarantined (karantina) | 87 |
+| quarantined (karantina) | 88 |
 | unverified (bu run doğrulanamadı) | 1 |
 
 - Domain'li toplam kaynak: 171; domain'siz (yayınlanmadı): 1
-- Karantinadaki kaynaklardan alternatif bulunan: 17; bulunamayan: 70
+- Karantinadaki kaynaklardan alternatif bulunan: 17; bulunamayan: 71
 - Alternatif yayın listesinde (published_via_alternative): 17
 
 ## Probe özeti
 
 | ok | cf_protected | dead | parked | other | blocked |
 |---|---|---|---|---|---|
-| 369 | 278 | 466 | 129 | 12 | 0 |
+| 54 | 36 | 54 | 25 | 2 | 0 |
 
 ## Alternatifler
 
@@ -43,10 +43,10 @@
 
 ## Bu run'da değişenler
 
-- Yeni eklenen: 0
-- Ölen (yayından çıkan): 0
-- Geri dirilen: 1 (mangasiginagi.com)
-- Upstream'den kaldırılan: 0
+- Yeni eklenen: 1 (siyahmelek.my)
+- Ölen (yayından çıkan): 1 (mangasiginagi.com)
+- Geri dirilen: 0
+- Upstream'den kaldırılan: 1 (siyahmelek.live)
 
 Not: 1 kaynak bu run'da doğrulanamadı (blocked/other); önceki durumu korundu.
 

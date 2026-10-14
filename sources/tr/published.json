@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T05:07:08+00:00",
+  "generatedAt": "2026-10-14T08:37:00+00:00",
   "mihon": [
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.amangaplanet",
@@ -24,12 +24,6 @@
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.diamondfansub-v1.6.57.apk",
       "version": "1.6.57",
       "domain": "diamondfansub.com"
-    },
-    {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.garciamanga",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.garciamanga-v1.6.55.apk",
-      "version": "1.6.55",
-      "domain": "garciamanga.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.ghosthentai",
@@ -135,14 +129,14 @@
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.siyahmelek",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/4c8cda7/tachiyomi-tr.siyahmelek-v1.6.2.apk",
-      "version": "1.6.2",
-      "domain": "siyahmelek.live"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/780153a/tachiyomi-tr.siyahmelek-v1.6.3.apk",
+      "version": "1.6.3",
+      "domain": "siyahmelek.my"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.summertoon",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.summertoon-v1.6.57.apk",
-      "version": "1.6.57",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/780153a/tachiyomi-tr.summertoon-v1.6.58.apk",
+      "version": "1.6.58",
       "domain": "summertoons.net"
     },
     {
@@ -153,8 +147,8 @@
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.mangatilkisi",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.mangatilkisi-v1.6.57.apk",
-      "version": "1.6.57",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/780153a/tachiyomi-tr.mangatilkisi-v1.6.58.apk",
+      "version": "1.6.58",
       "domain": "tilkiscans.com"
     },
     {
@@ -235,12 +229,6 @@
       "parser": "MANGA_DENIZI",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mmrcms/tr/MangaDenizi.kt",
       "domain": "mangadenizi.net",
-      "lang": "tr"
-    },
-    {
-      "parser": "MANGASIGINAGI",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MangaSiginagi.kt",
-      "domain": "mangasiginagi.com",
       "lang": "tr"
     },
     {
