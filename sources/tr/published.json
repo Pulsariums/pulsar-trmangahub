@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T08:37:00+00:00",
+  "generatedAt": "2026-10-14T08:49:30+00:00",
   "mihon": [
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.amangaplanet",
@@ -300,13 +300,6 @@
   ],
   "via_alternative": [
     {
-      "id": "adumanga.com",
-      "domain": "koplo77-irama.com",
-      "how": "moved_to",
-      "confidence": "high",
-      "label": "published_via_alternative"
-    },
-    {
       "id": "eleceedturkiye.com",
       "domain": "nabicix.com",
       "how": "moved_to",
@@ -332,13 +325,6 @@
       "domain": "laviniafansub.shop",
       "how": "same_key",
       "confidence": "medium",
-      "label": "published_via_alternative"
-    },
-    {
-      "id": "mangacim.com.tr",
-      "domain": "mangacix.net",
-      "how": "similar_key",
-      "confidence": "low",
       "label": "published_via_alternative"
     },
     {
@@ -370,17 +356,17 @@
       "label": "published_via_alternative"
     },
     {
-      "id": "moondaisyscans.biz",
-      "domain": "moondaisyscans.pro",
+      "id": "mangatr.app",
+      "domain": "manga-tr.com",
       "how": "same_key",
       "confidence": "medium",
       "label": "published_via_alternative"
     },
     {
-      "id": "noxscans.com",
-      "domain": "nyxscans.com",
-      "how": "similar_key",
-      "confidence": "low",
+      "id": "moondaisyscans.biz",
+      "domain": "moondaisyscans.pro",
+      "how": "same_key",
+      "confidence": "medium",
       "label": "published_via_alternative"
     },
     {
