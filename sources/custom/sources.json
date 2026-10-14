@@ -27,7 +27,7 @@
   },
   {
     "id": "nyxscans.com",
-    "name": "Nyxscans",
+    "name": "Nyx Scans",
     "domain": "nyxscans.com",
     "baseUrl": "https://nyxscans.com",
     "engine": "custom",
@@ -36,7 +36,7 @@
     "scaffold": [
       "generated/nyxscans.com/jar/Nyxscans.kt"
     ],
-    "addedAt": "2026-10-13T14:37:32+00:00"
+    "addedAt": "2026-10-14T08:12:55+00:00"
   },
   {
     "id": "ravenscans.org",
@@ -53,15 +53,15 @@
   },
   {
     "id": "toonhane.com",
-    "name": "toonhane",
+    "name": "ToonHane",
     "domain": "toonhane.com",
     "baseUrl": "https://toonhane.com",
-    "engine": "madara",
+    "engine": "custom",
     "scope": "tr_native",
     "verdict": "scaffolded",
     "scaffold": [
       "generated/toonhane.com/jar/Toonhane.kt"
     ],
-    "addedAt": "2026-10-13T10:54:49+00:00"
+    "addedAt": "2026-10-14T08:13:54+00:00"
   }
 ]

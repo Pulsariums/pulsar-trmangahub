@@ -1,0 +1,47 @@
+{
+ "domain": "toonhane.com",
+ "title": "ToonHane - Türkçe Webtoon Oku, Güncel Manga ve Manhwa",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.swiper-slide",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 14
+ },
+ "detail": {
+  "title": "h1.series-detail-title",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "#reason-spam-desc",
+  "genres": "div.series-detail-genres",
+  "status": "span.series-status.series-status--completed",
+  "chapterItem": "a.chapter-item",
+  "chapterLink": "@href",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "div.series-hero-media.series-hero-media--cover img",
+  "attr": "src",
+  "count": 1
+ },
+ "api": [
+  {
+   "url": "https://toonhane.com/wp-admin/admin-ajax.php",
+   "method": "POST",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.88,
+  "reader": 1
+ },
+ "notes": [
+  "list: 14 items at /",
+  "list link prefix: manga",
+  "pagination: not detected",
+  "chapterLink \"@href\": item is the link itself"
+ ]
+}

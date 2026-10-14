@@ -4,7 +4,7 @@
  "mode": "html",
  "list": {
   "path": "/",
-  "pageParam": "",
+  "pageParam": "page",
   "item": "div.h-full",
   "link": "a",
   "title": "img|attr:alt",
@@ -43,13 +43,13 @@
    "kind": "list"
   },
   {
-   "url": "https://api.nyxscans.com/api/analytics/updateViews",
-   "method": "POST",
+   "url": "https://api.nyxscans.com/api/me",
+   "method": "GET",
    "kind": "other"
   },
   {
-   "url": "https://api.nyxscans.com/api/me",
-   "method": "GET",
+   "url": "https://api.nyxscans.com/api/analytics/updateViews",
+   "method": "POST",
    "kind": "other"
   }
  ],
@@ -61,6 +61,6 @@
  "notes": [
   "list: 27 items at /",
   "list link prefix: series",
-  "pagination: not detected"
+  "pagination: ?page=N"
  ]
 }

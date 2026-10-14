@@ -11,7 +11,7 @@ import org.koitharu.kotatsu.parsers.util.*
 import java.net.URLEncoder
 import java.util.EnumSet
 
-@MangaSourceParser("NYXSCANS_TR", "Nyxscans", "tr")
+@MangaSourceParser("NYXSCANS_TR", "Nyx Scans", "tr")
 internal class Nyxscans(context: MangaLoaderContext) :
 	PagedMangaParser(context, MangaParserSource.NYXSCANS_TR, pageSize = 24) {
 
@@ -164,7 +164,7 @@ internal class Nyxscans(context: MangaLoaderContext) :
 
 	private companion object {
 		const val LIST_PATH = "/"
-		val PAGE_PARAM: String? = null
+		val PAGE_PARAM: String? = "page"
 		val SEARCH_SUPPORTED: Boolean = false
 		const val LIST_ITEM = "div.h-full"
 		const val CHAPTER_ITEM = "div.w-full.h-full.flex"
