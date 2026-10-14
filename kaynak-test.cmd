@@ -43,7 +43,7 @@ if (-not $list.Count) { Write-Host 'Eşleşen kayıt yok.'; return }
 # ---- Her site: liste sayfasını bu bilgisayarın IP'siyle çek, motorun liste işaretini ara ----
 $work = {
     param($e, $UA)
-    $cfMarks = 'just a moment','cf-browser-verification','challenge-platform','__cf_chl','cf-chl-','attention required! | cloudflare'
+    $cfMarks = 'just a moment','cf-browser-verification','__cf_chl_opt','cf-chl-bypass','attention required! | cloudflare','enable javascript and cookies to continue'
     $parkMarks = 'this domain is for sale','domain is for sale','buy this domain','domain parking','sedoparking','hugedomains.com','alan adı satılık','bu alan adı satılık','domain satılık'
     $eng = "$($e.engine)".ToLower()
     switch ($eng) {
@@ -63,8 +63,8 @@ $work = {
             $body = if (Test-Path $tmp) { [IO.File]::ReadAllText($tmp, [Text.Encoding]::UTF8).ToLower() } else { '' }
         } finally { Remove-Item $tmp -ErrorAction SilentlyContinue }
         if ($rc -ne 0) {
-            $kind = switch ($rc) { 6 {'dns'} 7 {'baglanti'} 28 {'zaman_asimi'} 35 {'ssl'} 60 {'ssl'} 51 {'ssl'} default {"curl_$rc"} }
-            $last = @{ sonuc = $kind; ayrinti = "curl hata kodu $rc" }; continue
+            $kind = switch ($rc) { 6 {'dns'} 7 {'baglanti'} 28 {'zaman_asimi'} 35 {'bu_agda_engelli'} 55 {'bu_agda_engelli'} 56 {'bu_agda_engelli'} 60 {'ssl_sertifika'} 51 {'ssl_sertifika'} default {"curl_$rc"} }
+            $last = @{ sonuc = $kind; ayrinti = $(if ($kind -eq 'bu_agda_engelli') { "TLS el sıkışması kesildi (kod $rc): sağlayıcı/BTK engeli olabilir; VPN açıp tekrar dene, CI bu siteye ulaşabiliyorsa site sağlam" } else { "curl hata kodu $rc" }) }; continue
         }
         $code,$final = $meta.Split('|',2)
         $fh = ([uri]$final).Host -replace '^www\.',''
@@ -73,7 +73,13 @@ $work = {
         if ($fh -ne $dh) { $last = @{ sonuc = 'baska_siteye_yonlendi'; ayrinti = $fh }; continue }
         if (@($parkMarks | Where-Object { $body.Contains($_) }).Count -gt 0) { $last = @{ sonuc = 'satilik_park'; ayrinti = 'alan adı satılık/park sayfası' }; continue }
         if ([int]$code -ge 400) { $last = @{ sonuc = 'http_hata'; ayrinti = "HTTP $code" }; continue }
-        if ($marks -eq $null) { $last = @{ sonuc = 'acildi'; ayrinti = "HTTP $code (motor bilinmiyor, liste doğrulanamadı)" }; break }
+        if ($marks -eq $null) {
+            $linkSay = ([regex]::Matches($body, 'href="[^"]*/(manga|seri|series|webtoon|comic|manhwa|read|oku)[/-]')).Count
+            $tr = ([regex]::Matches($body, '[ığşçöü]')).Count
+            if ($linkSay -ge 5 -and $tr -ge 20) { $last = @{ sonuc = 'acildi_icerik_var'; ayrinti = "HTTP $code, $linkSay seri bağlantısı, Türkçe içerik (liste yapısı JAR testiyle doğrulanır)" } }
+            else { $last = @{ sonuc = 'acildi_icerik_yok'; ayrinti = "HTTP $code ama seri bağlantısı/Türkçe içerik görünmüyor ($linkSay bağlantı)" } }
+            break
+        }
         if (@($marks | Where-Object { $body.Contains($_) }).Count -gt 0) { $last = @{ sonuc = 'tamam'; ayrinti = "HTTP $code, $eng liste işareti var ($p)" }; break }
         $last = @{ sonuc = 'yapi_degisti'; ayrinti = "HTTP $code ama $eng liste işareti yok ($p): site açılıyor, parser eski yapıya göre" }
     }
@@ -94,7 +100,7 @@ foreach ($j in $jobs) {
 $pool.Close()
 
 $out | Sort-Object sonuc, ad | Format-Table ad, domain, motor, sonuc, ayrinti -AutoSize -Wrap | Out-String -Width 220 | Write-Host
-Write-Host '--- Özet ---'
+Write-Host '--- Özet (bu test yalnız liste sayfasına bakar; liste→detay→bölüm→görsel zincirini JAR testi yapar) ---'
 $out | Group-Object sonuc | Sort-Object Count -Descending | ForEach-Object { Write-Host ("{0,-24} {1}" -f $_.Name, $_.Count) }
 $dir = Split-Path -Parent $env:KT_SELF
 $file = Join-Path $dir ("kaynak-test-sonuc-{0}.json" -f (Get-Date -Format 'yyyyMMdd-HHmm'))
@@ -103,7 +109,7 @@ Write-Host "Sonuç dosyası: $file"
 
 # ---- Üretim: sitesi bu bilgisayarda açılan ama JAR'ı olmayan/eski yapıda olanlar repoda JAR olarak üretilsin ----
 $ham = $list | Where-Object { -not $_.formats.jar.parser } | ForEach-Object { $_.domain }
-$uret = @($out | Where-Object { $_.sonuc -in 'yapi_degisti','acildi','tamam' -and ($_.sonuc -ne 'tamam' -or $ham -contains $_.domain) } | ForEach-Object { $_.domain } | Sort-Object -Unique)
+$uret = @($out | Where-Object { $_.sonuc -in 'yapi_degisti','acildi_icerik_var','tamam' -and ($_.sonuc -ne 'tamam' -or $ham -contains $_.domain) } | ForEach-Object { $_.domain } | Sort-Object -Unique)
 Write-Host ''
 if (-not $uret.Count) { Write-Host 'Üretilecek site yok.'; return }
 $linkler = $uret -join ' '
