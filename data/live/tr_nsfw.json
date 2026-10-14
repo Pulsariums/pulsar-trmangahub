@@ -1,38 +1,4 @@
 {
-  "checked_at": "2026-10-14T10:19:03Z",
-  "results": [
-    {
-      "error_class": "parse",
-      "stage": "pages",
-      "chapters": 8,
-      "ms": 2583,
-      "domain": "laviniafansub.shop",
-      "name": "LaviniaFansub",
-      "id": "LAVINIAFANSUB",
-      "list": 18,
-      "ok": false,
-      "error": "Authorization required"
-    },
-    {
-      "error_class": "connect",
-      "stage": "list",
-      "ms": 383,
-      "domain": "mindafansub.online",
-      "name": "MindaFansub",
-      "id": "MINDAFANSUB",
-      "ok": false,
-      "error": "Failed to connect to mindafansub.online/127.0.0.1:443"
-    },
-    {
-      "pages": 47,
-      "stage": "image",
-      "chapters": 52,
-      "ms": 2626,
-      "domain": "yaoiflix.fit",
-      "name": "YaoiFlix",
-      "id": "YAOIFLIX",
-      "list": 16,
-      "ok": true
-    }
-  ]
+  "checked_at": "2026-10-14T10:32:16Z",
+  "results": []
 }
