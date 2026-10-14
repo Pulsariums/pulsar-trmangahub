@@ -1,12 +1,25 @@
 {
   "bucket": "tr_nsfw",
-  "fingerprint": "abc18e8a623aac54c2aab769fe3a1c52abbd97a1fd627c79d627084ea1fa1467",
+  "fingerprint": "4f49f8d450308296c7ef9836db78d535f6974ac410c4d46e05abb3af653ad210",
   "upstream_commit": "b3c000024563920d3eecde5816f2e9d3734fa467",
-  "builtAt": "2026-10-13T09:56:40Z",
-  "jarSha256": "01b2eee1abf9b0b80547f1e31665960e350cc7dc45cb0b08442ec11c4fc2b8cc",
-  "jarBytes": 392129,
-  "keptCount": 3,
-  "patchedDomains": [],
+  "builtAt": "2026-10-14T05:28:38Z",
+  "jarSha256": "4afac39de71ecb487331cbe49045d5d0f41f8e13aad23276ad766c15f346ff19",
+  "jarBytes": 392517,
+  "keptCount": 5,
+  "patchedDomains": [
+    {
+      "id": "JIANGZAITOON",
+      "old": "jiangzaitoon.top",
+      "new": "jiangzaitoon.icu",
+      "confidence": "medium"
+    },
+    {
+      "id": "YAOIFLIX",
+      "old": "yaoiflix.me",
+      "new": "yaoiflix.fit",
+      "confidence": "medium"
+    }
+  ],
   "fallback": 0,
-  "runNumber": 21
+  "runNumber": 27
 }
