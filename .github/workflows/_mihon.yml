@@ -1,9 +1,7 @@
-name: 'Mihon deposu: Türkçe APK aynası (turkce/mihon)'
+name: 'iç: Mihon aynası'
 
 on:
-  schedule:
-    - cron: '27 */6 * * *'
-  workflow_dispatch:
+  workflow_call:
     inputs:
       publish:
         description: 'Aynayı turkce/mihon klasörüne commit edip gönder'
@@ -17,20 +15,19 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: sync-tr-sources
-  cancel-in-progress: false
 
 jobs:
   mihon:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      PUBLISH: ${{ inputs.publish || github.event_name == 'schedule' }}
+      PUBLISH: ${{ inputs.publish }}
       INCLUDE_UNVERIFIED: ${{ inputs.include_unverified && '1' || '0' }}
       PULSAR_LIVE_GATE: '1'
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-python@v5
         with:

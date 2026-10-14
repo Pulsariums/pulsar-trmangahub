@@ -1,9 +1,7 @@
-name: 'Senkron: kaynakları güncelle (turkce ve global)'
+name: 'iç: senkron'
 
 on:
-  schedule:
-    - cron: '17 */6 * * *'
-  workflow_dispatch:
+  workflow_call:
     inputs:
       dry_run:
         description: 'Commit atma, sadece raporla'
@@ -11,13 +9,11 @@ on:
         default: false
       fail_threshold:
         description: 'Karantina için ardışık hata eşiği'
-        type: choice
-        options: ['1', '2', '3', '5']
+        type: string
         default: '3'
       safety_ratio:
         description: 'Güvenlik şalteri oranı (yüzde) veya off'
-        type: choice
-        options: ['40', '60', '80', 'off']
+        type: string
         default: '40'
       run_alternatives:
         description: 'Ölü domainler için alternatif ara'
@@ -32,9 +28,6 @@ permissions:
   contents: write
   issues: write
 
-concurrency:
-  group: sync-tr-sources
-  cancel-in-progress: false
 
 jobs:
   sync:
@@ -44,10 +37,12 @@ jobs:
       DRY_RUN: ${{ inputs.dry_run || false }}
       FAIL_THRESHOLD: ${{ inputs.fail_threshold || '3' }}
       SAFETY_RATIO: ${{ inputs.safety_ratio || '40' }}
-      RUN_ALTERNATIVES: ${{ github.event_name == 'schedule' || inputs.run_alternatives }}
+      RUN_ALTERNATIVES: ${{ inputs.run_alternatives }}
       REFRESH_KOTATSU: ${{ inputs.refresh_kotatsu || false }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-python@v5
         with:

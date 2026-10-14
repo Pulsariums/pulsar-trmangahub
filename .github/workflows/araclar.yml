@@ -1,0 +1,208 @@
+name: '4) Araçlar (hata ayıklama)'
+
+# Tek dosyada site inceleme araçları. arac seç, girdiyi yaz.
+# recon: site adresleri (boşlukla) -> Playwright analizi ve spec
+# url: sayfa adresleri -> bağlantı ve HTML dökümü (ek: link deseni, ek2: dökülecek URL'ler)
+# bolum: sayfa adresleri -> bölüm sayfası incelemesi (ek: link deseni)
+# domain: alan adları -> erişim/yönlendirme probu
+# tld: kök adlar -> TLD taraması (ek: TLD listesi)
+
+on:
+  workflow_dispatch:
+    inputs:
+      arac:
+        description: 'Araç'
+        type: choice
+        options: [recon, url, bolum, domain, tld]
+        default: recon
+      girdi:
+        description: 'Ana girdi (adresler / alan adları / kökler, boşlukla)'
+        type: string
+        required: true
+      ek:
+        description: 'Ek girdi (link deseni veya TLD listesi, boş = varsayılan)'
+        type: string
+        default: ''
+      ek2:
+        description: 'url aracı için dökülecek URL listesi'
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+
+  recon:
+    if: inputs.arac == 'recon'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Playwright kur
+        run: |
+          npm init -y >/dev/null
+          npm i playwright@1.49.1 >/dev/null 2>&1
+          npx playwright install --with-deps chromium >/dev/null 2>&1
+      - name: Kesif
+        continue-on-error: true
+        env:
+          SITES: ${{ inputs.girdi }}
+        run: node scripts/recon.mjs ${SITES//,/ }
+      - name: Kesif kayitlarini depoya isle
+        if: always()
+        run: |
+          shopt -s nullglob
+          mkdir -p data/recon
+          rm -rf data/recon/*
+          for f in recon-out/*; do
+            case "$f" in *.html) head -c 300000 "$f" > "data/recon/$(basename "$f")";; *) cp "$f" data/recon/;; esac
+          done
+          git config user.name pulsarium
+          git config user.email pulsariums@gmail.com
+          git add -f data/recon
+          git diff --cached --quiet || git commit -qm "chore(recon): site kesif kayitlari"
+          git pull -q --rebase origin main && git push -q origin main
+
+  url:
+    if: inputs.arac == 'url'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect
+        env:
+          PAGES: ${{ inputs.girdi }}
+          PAT: ${{ (inputs.ek || '/(manga|seri|series|webtoon|manhwa)/[^/]+/$') }}
+        run: |
+          set +e
+          UA='Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
+          for p in $PAGES; do
+            echo "##### $p"
+            curl -sS -L -m 25 -A "$UA" -o /tmp/l.html -w 'list: %{http_code} %{url_effective}\n' "$p"
+            echo "-- ilk linkler:"; grep -oE "href=\"https?://[^\"]+\"" /tmp/l.html | sed "s/href=\"//;s/\"$//" | sort -u | head -25
+            host=$(echo "$p" | sed -E 's|(https?://[^/]+).*|\1|')
+            link=$(grep -oE "https?://[^\"' ]+" /tmp/l.html | grep -E "$PAT" | grep -vE 'feed|genre' | head -1)
+            [ -z "$link" ] && link=$(grep -oE 'href="[^"]+"' /tmp/l.html | sed 's/href="//;s/"$//' | grep -E "$PAT" | grep -vE 'feed|genre' | head -1)
+            echo "manga link: $link"
+            [ -z "$link" ] && continue
+            echo "-- redirect zinciri:"
+            curl -sSIL -m 25 -A "$UA" --max-redirs 8 "$link" 2>&1 | grep -iE '^(HTTP|location|set-cookie)' | cut -c1-160
+            curl -sS -L -m 25 -A "$UA" -o /tmp/m.html -w 'detail: %{http_code} %{url_effective}\n' "$link"
+            echo "wp-manga-chapter: $(grep -c 'wp-manga-chapter' /tmp/m.html)"
+            echo "chapters-holder: $(grep -o 'manga-chapters-holder[^>]*' /tmp/m.html | head -1)"
+            echo "listing-chapters_wrap: $(grep -c 'listing-chapters_wrap' /tmp/m.html)"
+            echo "ajax/chapters: $(grep -c 'ajax/chapters' /tmp/m.html)"
+            echo "og:url: $(grep -oE 'property=.og:url. content=.[^"]+' /tmp/m.html | head -1)"
+            echo "-- chapters POST:"
+            curl -sS -L -m 25 -A "$UA" -X POST -o /tmp/c.html -w 'ajax/chapters POST: %{http_code} %{url_effective}\n' "${link%/}/ajax/chapters/"
+            echo "chapters in POST: $(grep -c 'wp-manga-chapter' /tmp/c.html)"
+            id=$(grep -oE 'data-id="[0-9]+"' /tmp/m.html | head -1 | grep -oE '[0-9]+')
+            curl -sS -L -m 25 -A "$UA" -X POST -d "action=manga_get_chapters&manga=$id" -o /tmp/a.html -w "admin-ajax POST id=$id: %{http_code}\n" "$host/wp-admin/admin-ajax.php"
+            echo "chapters in admin-ajax: $(grep -c 'wp-manga-chapter' /tmp/a.html)"
+          done
+      - name: Dump
+        env:
+          DUMP: ${{ inputs.ek2 }}
+        run: |
+          set +e
+          UA='Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
+          for u in $DUMP; do
+            echo "##### DUMP $u"
+            curl -sS -L -m 25 -A "$UA" -o /tmp/d.html -w 'status: %{http_code} %{url_effective}\n' "$u"
+            echo "-- ilk 1200 bayt:"; head -c 1200 /tmp/d.html; echo
+            echo "generator: $(grep -oiE 'name=.generator. content=.[^"]+' /tmp/d.html | head -2 | tr '\n' ' ')"
+            echo "theme: $(grep -oE 'wp-content/themes/[^/]+' /tmp/d.html | sort | uniq -c | sort -rn | head -3 | tr '\n' ' ')"
+            echo "-- chapter/episode class tokens:"
+            grep -oE 'class="[^"]*(chap|episode|eplister|bolum)[^"]*"' /tmp/d.html | sort | uniq -c | sort -rn | head -12
+            echo "-- chapter anchors:"
+            grep -oE '<a [^>]*href="[^"]*(bolum|chapter|episode)[^"]*"[^>]*>' /tmp/d.html | head -6 | cut -c1-200
+            echo "-- data-id / ajax:"
+            grep -oE '(data-id|data-post|post_id|manga_id)[=:"'"'"' ]+[0-9]+' /tmp/d.html | head -3
+            grep -oE 'ajaxurl[^;]{0,80}' /tmp/d.html | head -2
+          done
+
+  bolum:
+    if: inputs.arac == 'bolum'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Bölüm ve görsel incele
+        env:
+          PAGES: ${{ inputs.girdi }}
+          PAT: ${{ (inputs.ek || '/(manga|seri|series|webtoon|manhwa|comic)/[^/]+/$') }}
+        run: |
+          set +e
+          UA='Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
+          for p in $PAGES; do
+            echo "##### $p"
+            host=$(echo "$p" | sed -E 's|(https?://[^/]+).*|\1|')
+            curl -sS -L -m 25 -A "$UA" -o /tmp/l.html -w 'liste: %{http_code} %{url_effective}\n' "$p"
+            serie=$(grep -oE 'href="[^"]+"' /tmp/l.html | sed 's/href="//;s/"$//' | grep -E "$PAT" | grep -vE 'feed|genre|kategori' | head -1)
+            case "$serie" in /*) serie="$host$serie";; esac
+            echo "seri: $serie"; [ -z "$serie" ] && continue
+            curl -sS -L -m 25 -A "$UA" -o /tmp/s.html -w 'seri sayfa: %{http_code}\n' "$serie"
+            bolum=$(grep -oE 'href="[^"]+"' /tmp/s.html | sed 's/href="//;s/"$//' | grep -E '(bolum|chapter|chap|episode)' | grep -v '#' | sed -n 3p)
+            case "$bolum" in /*) bolum="$host$bolum";; esac
+            echo "bölüm: $bolum"
+            if [ -z "$bolum" ]; then
+              curl -sS -L -m 25 -A "$UA" -X POST -o /tmp/c.html "${serie%/}/ajax/chapters/"
+              bolum=$(grep -oE 'href="[^"]+"' /tmp/c.html | sed 's/href="//;s/"$//' | head -1)
+              echo "bölüm (ajax): $bolum"; [ -z "$bolum" ] && continue
+            fi
+            curl -sS -L -m 25 -A "$UA" -o /tmp/b.html -w 'bölüm sayfa: %{http_code} %{url_effective}\n' "$bolum"
+            echo "-- reading-content img etiketleri:"
+            grep -oE '<img[^>]*>' /tmp/b.html | grep -iE 'wp-manga|chapter|data-src|data-lazy|uploads|cdn' | head -4 | cut -c1-400
+            img=$(grep -oE '<img[^>]*>' /tmp/b.html | grep -oE '(data-src|data-lazy-src|src)="[^"]+\.(jpg|jpeg|png|webp|avif)[^"]*"' | head -1 | sed -E 's/^[a-z-]+="//;s/"$//')
+            echo "ilk görsel: $img"; [ -z "$img" ] && continue
+            echo "-- Referer'siz:"; curl -sSI -m 25 -A "$UA" "$img" | grep -iE '^(HTTP|content-type|location|server|cf-)' | head -6
+            echo "-- Referer ile:"; curl -sSI -m 25 -A "$UA" -e "$bolum" "$img" | grep -iE '^(HTTP|content-type|location|server|cf-)' | head -6
+            echo "-- Referer=ana:"; curl -sSI -m 25 -A "$UA" -e "$host/" "$img" | grep -iE '^(HTTP|content-type)' | head -3
+          done
+
+  domain:
+    if: inputs.arac == 'domain'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe
+        env:
+          DOMAINS: ${{ inputs.girdi }}
+        run: |
+          set +e
+          UA='Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
+          for d in $DOMAINS; do
+            out=$(curl -sS -L -m 25 -A "$UA" -o /tmp/b.html -w '%{http_code} %{url_effective}' "https://$d/" 2>&1 | tr '\n' ' ')
+            title=$(grep -oi '<title>[^<]*' /tmp/b.html 2>/dev/null | head -1 | cut -c8-80)
+            madara=$(grep -ci 'wp-content/themes\|madara\|wp-manga' /tmp/b.html 2>/dev/null)
+            cf=$(grep -ci 'just a moment\|cf-mitigated\|challenge-platform' /tmp/b.html 2>/dev/null)
+            echo "$d => $out | title=[$title] wp=$madara cf=$cf"
+          done
+
+  tld:
+    if: inputs.arac == 'tld'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Tara
+        env:
+          STEMS: ${{ inputs.girdi }}
+          TLDS_IN: ${{ inputs.ek }}
+        run: |
+          set +e
+          DEF="com net org com.tr net.tr org.tr gen.tr info biz xyz club live fun pro app cc io ink art cyou icu vip one lol my tv wtf space store tech website click link today cloud life world shop ws site online co top me us in tr ru de cx pw mobi page dev blog name win wiki tk ml ga cf gq rest sbs cfd bond buzz monster quest uno ltd"
+          TLDS=${TLDS_IN:-$DEF}
+          UA='Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
+          for s in $STEMS; do for t in $TLDS; do echo "$s.$t"; done; done > cand.txt
+          echo "aday: $(wc -l < cand.txt)"
+          resolve() { d=$1; r=$(curl -s -m 8 "https://dns.google/resolve?name=$d&type=A" | jq -r '[.Answer[]?|select(.type==1)|.data]|first // empty'); [ -n "$r" ] && echo "$d"; }
+          export -f resolve
+          xargs -a cand.txt -P 24 -I{} bash -c 'resolve {}' > resolved.txt
+          echo "cozulen: $(wc -l < resolved.txt)"
+          while read d; do
+            out=$(curl -sS -L -m 15 -A "$UA" -o /tmp/b.html -w '%{http_code} %{url_effective}' "https://$d/" 2>/dev/null | tr '\n' ' ')
+            code=${out%% *}; [ "$code" = "200" ] || continue
+            title=$(grep -oi '<title>[^<]*' /tmp/b.html | head -1 | cut -c8-80)
+            cf=$(grep -ci 'just a moment\|cf-mitigated\|challenge-platform' /tmp/b.html)
+            echo "LIVE $d => $out | title=[$title] cf=$cf"
+          done < resolved.txt

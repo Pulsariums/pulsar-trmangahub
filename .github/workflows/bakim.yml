@@ -1,10 +1,8 @@
-name: 'Tam otomatik bakım (tek tuş)'
+name: '2) Tam otomatik bakım (tek tuş)'
 
 # Elle başlatılır; gerisini kendi yapar:
-# 1) karantinadaki kaynakların adından yeni alan adı arar (DNS DoH taraması),
-# 2) gerçek manga sitesi çıkanları kayda alır ve parser üretir (silme yok),
-# 3) JAR derler, canlı test eder, Mihon aynasını yeniler,
-# 4) özeti çalışma sayfasına yazar.
+# senkron -> yeni alan adı keşfi -> tüm JAR'ları canlı test -> kırılanları onar -> yeniden test
+# -> JAR derle/yayınla -> Mihon aynası -> pano (Pages). Silme yok, ölüler karantinaya.
 
 on:
   workflow_dispatch:
@@ -13,17 +11,20 @@ on:
         description: 'Taranacak en fazla kaynak adı kökü'
         type: string
         default: '80'
-      only_discovery:
-        description: 'Yalnızca keşif yap, derleme ve testleri çalıştırma'
+      kesif:
+        description: 'Ölü kaynaklar için yeni alan adı ara'
         type: boolean
-        default: false
+        default: true
 
 permissions:
   contents: write
   actions: write
+  issues: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: bakim
+  group: hub
   cancel-in-progress: false
 
 env:
@@ -31,11 +32,18 @@ env:
   UA: 'Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36'
 
 jobs:
+  sync:
+    uses: ./.github/workflows/_sync.yml
+
   bakim:
+    needs: sync
+    if: ${{ !cancelled() && inputs.kesif }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-python@v5
         with:
@@ -131,33 +139,6 @@ jobs:
           done
           exit 1
 
-      - name: Alt iş akışlarını sırayla çalıştır
-        if: ${{ !inputs.only_discovery }}
-        run: |
-          set +e
-          run_and_wait() {
-            wf=$1; shift
-            before=$(date -u +%Y-%m-%dT%H:%M:%SZ)
-            gh workflow run "$wf" --ref "${{ github.ref_name }}" "$@" || { echo "$wf başlatılamadı"; return 1; }
-            id=""
-            for i in $(seq 1 30); do
-              sleep 10
-              id=$(gh run list --workflow "$wf" --limit 5 --json databaseId,createdAt,event \
-                   -q "[.[]|select(.event==\"workflow_dispatch\" and .createdAt>=\"$before\")]|last|.databaseId // empty")
-              [ -n "$id" ] && break
-            done
-            [ -n "$id" ] || { echo "$wf çalışması bulunamadı"; return 1; }
-            gh run watch "$id" --interval 30 --exit-status >/dev/null 2>&1
-            concl=$(gh run view "$id" --json conclusion -q .conclusion)
-            echo "$wf -> $concl (run $id)"
-            echo "- $wf: **$concl** (run $id)" >> "$GITHUB_STEP_SUMMARY"
-          }
-          git pull -q --rebase origin "${{ github.ref_name }}"
-          run_and_wait build-jar.yml
-          run_and_wait live-check.yml -f bolum=tr
-          run_and_wait build-mihon.yml
-          run_and_wait health-check.yml
-
       - name: Özet
         if: always()
         run: |
@@ -168,3 +149,40 @@ jobs:
             echo "- yeni kabul edilen: $(wc -l < accepted.txt 2>/dev/null)"
             sed 's/^/  - /' accepted.txt 2>/dev/null
           } >> "$GITHUB_STEP_SUMMARY"
+
+  test:
+    needs: [sync, bakim]
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/_test.yml
+    with:
+      bolum: hepsi
+
+  onar:
+    needs: test
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/_onar.yml
+
+  test2:
+    needs: onar
+    if: ${{ !cancelled() && needs.onar.outputs.fixed != '' }}
+    uses: ./.github/workflows/_test.yml
+    with:
+      bolum: hepsi
+      only: ${{ needs.onar.outputs.fixed }}
+
+  jar:
+    needs: [test, test2]
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/_jar.yml
+    with:
+      bolum: hepsi
+
+  mihon:
+    needs: jar
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/_mihon.yml
+
+  pages:
+    needs: mihon
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/_pages.yml

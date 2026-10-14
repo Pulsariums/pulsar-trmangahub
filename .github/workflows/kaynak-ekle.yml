@@ -1,4 +1,4 @@
-name: 'Kaynak ekle: site linkinden üret'
+name: '1) Kaynak ekle (link → JAR → test → onar)'
 
 on:
   workflow_dispatch:
@@ -29,15 +29,19 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: sync-tr-sources
+  group: hub
   cancel-in-progress: false
 
 jobs:
   add-source:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    outputs:
+      parsers: ${{ steps.ids.outputs.parsers }}
     env:
       SITE_URL: ${{ inputs.url }}
       SITE_NAME: ${{ inputs.name }}
@@ -134,3 +138,45 @@ jobs:
           done
           echo "Push başarısız oldu" >&2
           exit 1
+
+      - name: Üretilen parser kimlikleri
+        id: ids
+        if: always()
+        run: |
+          ids=$(git diff --name-only "${{ github.sha }}" HEAD -- generated 2>/dev/null | grep '\.kt$' | while read f; do [ -f "$f" ] && grep -oE '@MangaSourceParser\("[A-Z0-9_]+"' "$f" | head -1 | sed -E 's/.*\("//; s/"//'; done | paste -sd, -)
+          echo "parsers=$ids" >> "$GITHUB_OUTPUT"; echo "parser: $ids"
+
+  test:
+    needs: add-source
+    if: ${{ needs.add-source.outputs.parsers != '' }}
+    uses: ./.github/workflows/_test.yml
+    with:
+      bolum: hepsi
+      only: ${{ needs.add-source.outputs.parsers }}
+
+  onar:
+    needs: [add-source, test]
+    if: ${{ !cancelled() && needs.add-source.outputs.parsers != '' }}
+    uses: ./.github/workflows/_onar.yml
+    with:
+      only: ${{ needs.add-source.outputs.parsers }}
+
+  test2:
+    needs: [add-source, onar]
+    if: ${{ !cancelled() && needs.onar.outputs.fixed != '' }}
+    uses: ./.github/workflows/_test.yml
+    with:
+      bolum: hepsi
+      only: ${{ needs.onar.outputs.fixed }}
+
+  jar:
+    needs: [test, test2]
+    if: ${{ !cancelled() && needs.test.result != 'skipped' }}
+    uses: ./.github/workflows/_jar.yml
+    with:
+      bolum: hepsi
+
+  pages:
+    needs: jar
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/_pages.yml

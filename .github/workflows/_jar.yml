@@ -1,19 +1,15 @@
-name: 'Jar derle: Kototoro JAR deposu (tr, tr-nsfw, global, global-nsfw)'
+name: 'iç: JAR derle'
 
 on:
-  schedule:
-    - cron: '47 */6 * * *'
-  workflow_dispatch:
+  workflow_call:
     inputs:
       bolum:
         description: 'Derlenecek paket: hepsi, tr (Türkçe), tr_nsfw (Türkçe NSFW), global (Türkçe hariç), global_nsfw (Türkçe hariç NSFW)'
-        type: choice
-        options: [hepsi, tr, tr_nsfw, global, global_nsfw]
+        type: string
         default: hepsi
       mode:
         description: 'Seçim modu: alive (yayındaki/çalışan) veya all_tr (tüm TR kaynaklar; yalnız tr ve tr_nsfw için anlamlı, global paketlerde daima alive)'
-        type: choice
-        options: ['alive', 'all_tr']
+        type: string
         default: 'alive'
       include_broken:
         description: 'Bozuk (broken) kaynakları da dahil et'
@@ -21,8 +17,7 @@ on:
         default: false
       apply_alternatives:
         description: 'Alternatif domain yaması güven seviyesi'
-        type: choice
-        options: ['off', 'high', 'high_medium']
+        type: string
         default: 'high'
       include_unverified:
         description: 'cf_protected, failing ve doğrulanamamış kaynakları da dahil et (varsayılan: yalnızca çalışanlar)'
@@ -40,9 +35,6 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: sync-tr-sources
-  cancel-in-progress: false
 
 jobs:
   plan:
@@ -81,9 +73,11 @@ jobs:
       APPLY_ALTERNATIVES: ${{ inputs.apply_alternatives || 'high' }}
       INCLUDE_UNVERIFIED: ${{ inputs.include_unverified && '1' || '0' }}
       FORCE: ${{ inputs.force && '1' || '0' }}
-      PUBLISH: ${{ inputs.publish || github.event_name == 'schedule' }}
+      PUBLISH: ${{ inputs.publish }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - name: Paket ayarlarını çöz
         run: |

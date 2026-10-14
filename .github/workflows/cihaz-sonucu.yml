@@ -1,4 +1,4 @@
-name: 'Cihaz testi sonucunu içeri al'
+name: '3) Cihaz testi sonucunu içeri al'
 
 # Kototoro > Kaynaklar > "Tümünü test et" çıktısını (JSON) yapıştır.
 # Cihazda geçen kaynak, Actions'ta Cloudflare/IP yüzünden "bilinmiyor" çıksa da çalışıyor sayılır.
@@ -14,9 +14,11 @@ on:
 permissions:
   contents: write
   actions: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: sync-tr-sources
+  group: hub
   cancel-in-progress: false
 
 jobs:
@@ -43,3 +45,7 @@ jobs:
             sleep $((i*5))
           done
           exit 1
+
+  pages:
+    needs: import
+    uses: ./.github/workflows/_pages.yml
