@@ -177,7 +177,7 @@ internal class Trmanga(context: MangaLoaderContext) :
 		val SEL_DETAIL_TITLE: Sel? = Sel("h1.movie__title.h2", null)
 		val SEL_DETAIL_COVER: Sel? = Sel("meta[property=\"og:image\"]", "content")
 		val SEL_DETAIL_DESCRIPTION: Sel? = Sel("div.wti-desc.is-clamped", null)
-		val SEL_DETAIL_GENRES: Sel? = Sel("body > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(8) > div:nth-of-type(2) > a:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)", null)
+		val SEL_DETAIL_GENRES: Sel? = Sel("div.px-4.pt-3.pb-1", null)
 		val SEL_DETAIL_STATUS: Sel? = null
 		val SEL_CHAPTER_LINK: Sel? = Sel("a", "href")
 		val SEL_CHAPTER_TITLE: Sel? = Sel("a", null)

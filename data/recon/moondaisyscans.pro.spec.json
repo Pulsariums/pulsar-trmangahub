@@ -48,7 +48,7 @@
    "kind": "other"
   },
   {
-   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=139022421161540",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=1960946335124656",
    "method": "GET",
    "kind": "other"
   },
@@ -88,7 +88,17 @@
    "kind": "other"
   },
   {
-   "url": "https://mssdk.tiktokw.us/web/resource?eq=ygXBl3GFFGbBeO2o-sX-gZb6pd2aMt7rp3TpLLrL/HexYL6Z6TDILD8BoIGzJQgyoq4x9lOn/NaRMac26quktrjE0fNiyh8bJf==",
+   "url": "https://mcs.tiktokw.us/v1/user/webid",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://mcs.tiktokw.us/v1/list",
+   "method": "POST",
+   "kind": "list"
+  },
+  {
+   "url": "https://mssdk-ttp2.tiktokw.us/web/resource?eq=Aw3zjZCxx1gkrtBMhhcPajkxdj6bM2YPb-9/5-wIbADusipHIqlolr4X6aaS2FXqyU1nPH8H3zF4RH0oEwvhdlZrJ9GPM9kSWFL=",
    "method": "GET",
    "kind": "other"
   },
@@ -98,7 +108,7 @@
    "kind": "other"
   },
   {
-   "url": "https://www.tiktok.com/api/recommend/embed_videos/?aid=1284&count=24&secUid=MS4wLjABAAAA4u1Ib7E-TZT6UIrGdB0lmcMxtU_2_af_AxcU4FCT7V9Ov0eAAab11qJBgSlHIqxd&lang=en-US@posix&msToken=&X-Bogus=DFSzswSOKqJANjBqC1m3EAep4HGm&_signature=_02B4Z6wo00001Xt2lWAAAIDBsglaaw-kREF7dtHAADQW70",
+   "url": "https://www.tiktok.com/api/recommend/embed_videos/?aid=1284&count=24&secUid=MS4wLjABAAAA4u1Ib7E-TZT6UIrGdB0lmcMxtU_2_af_AxcU4FCT7V9Ov0eAAab11qJBgSlHIqxd&lang=en-US@posix&msToken=&X-Bogus=DFSzswSOKqJANjBqC1mohCep4Ha0&_signature=_02B4Z6wo000015rOmTQAAIDDU7FWPgb4VJeazt2AAIyF51",
    "method": "GET",
    "kind": "other"
   },
