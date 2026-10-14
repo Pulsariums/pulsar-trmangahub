@@ -96,6 +96,27 @@ jobs:
           rm -f "$T/ChapterAlignmentHarvest.kt" "$T/MangaParserTest.kt" "$T/MangaSources.kt" "$T/AuthCheckExtension.kt"
           cp tests/LiveCheck.kt "$T/LiveCheck.kt"
 
+      - name: 'Cloudflare kapısını geç (gerçek Chromium) ve çerezleri teste ver'
+        run: |
+          set +e
+          UA='Mozilla/5.0 (Android 14; Mobile; LG-M255; rv:123.0) Gecko/123.0 Firefox/123.0'
+          jq -r --slurpfile h data/live/history.json --arg only "$LIVE_ONLY" '
+            (if type=="array" then . else .sources end)[]
+            | select(.formats.jar.parser != null)
+            | . as $e | ($e.formats.jar.parser) as $p
+            | select(($only=="") or (($only|split(",")|index($p)) != null))
+            | select(($e.status|test("^cf_protected")) or (($h[0][$p].error_class // "")=="cloudflare"))
+            | $e.domain, ($e.alternative.domain // empty)' sources/tr/sources.json | sort -u > cf_domains.txt
+          echo "CF alan adı: $(wc -l < cf_domains.txt)"
+          if [ -s cf_domains.txt ]; then
+            npm init -y >/dev/null; npm i playwright@1.49.1 >/dev/null 2>&1
+            npx playwright install --with-deps chromium >/dev/null 2>&1
+            node scripts/cf_clear.mjs cookies.txt "$UA" $(cat cf_domains.txt) | tee cf_report.txt
+            mkdir -p upstream/src/test/resources
+            cp cookies.txt upstream/src/test/resources/cookies.txt
+            { echo "## Cloudflare geçişi"; awk -F'\t' '{c[$1]++} END{for(k in c) print "- "k": "c[k]}' cf_report.txt; } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - uses: actions/setup-java@v4
         with:
           java-version: '17'
