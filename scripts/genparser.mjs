@@ -45,7 +45,7 @@ function parseSel(raw, label) {
 	if (raw === undefined || raw === null || raw === '') return null;
 	if (typeof raw !== 'string') die(`${label}: seçici metin olmalı`);
 	const s = raw.trim();
-	let m = /^attr:([\w:-]+)$/.exec(s);
+	let m = /^(?:attr:|@)([\w:-]+)$/.exec(s);
 	if (m) return { css: null, attr: m[1] };
 	m = /^(.+?)\s*\|\s*attr:([\w:-]+)$/.exec(s);
 	if (m) return { css: m[1].trim(), attr: m[2] };
@@ -129,9 +129,11 @@ function main() {
 	const listItem = cssOnly(parseSel(list.item, 'list.item'), 'list.item');
 	const listLink = parseSel(list.link, 'list.link');
 	if (listLink === null) die('list.link eksik');
+	if (!listLink.attr) listLink.attr = 'href'; // bağlantı metni değil adresi
 	const chapterItem = cssOnly(parseSel(detail.chapterItem, 'detail.chapterItem'), 'detail.chapterItem');
 	const chapterLink = parseSel(detail.chapterLink, 'detail.chapterLink');
 	if (chapterLink === null) die('detail.chapterLink eksik');
+	if (!chapterLink.attr) chapterLink.attr = 'href';
 	const readerImages = parseSel(reader.images, 'reader.images');
 	if (readerImages === null || !readerImages.css) die('reader.images eksik');
 

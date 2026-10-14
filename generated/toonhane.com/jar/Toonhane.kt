@@ -171,7 +171,7 @@ internal class Toonhane(context: MangaLoaderContext) :
 		const val READER_IMAGES = "div.series-hero-media.series-hero-media--cover img"
 		val READER_ATTRS = listOf("src", "data-src")
 
-		val SEL_LIST_LINK: Sel? = Sel("a", null)
+		val SEL_LIST_LINK: Sel? = Sel("a", "href")
 		val SEL_LIST_TITLE: Sel? = Sel("img", "alt")
 		val SEL_LIST_COVER: Sel? = Sel("img", "src")
 		val SEL_DETAIL_TITLE: Sel? = Sel("h1.series-detail-title", null)
@@ -179,7 +179,7 @@ internal class Toonhane(context: MangaLoaderContext) :
 		val SEL_DETAIL_DESCRIPTION: Sel? = Sel("#reason-spam-desc", null)
 		val SEL_DETAIL_GENRES: Sel? = Sel("div.series-detail-genres", null)
 		val SEL_DETAIL_STATUS: Sel? = Sel("span.series-status.series-status--completed", null)
-		val SEL_CHAPTER_LINK: Sel? = Sel("@href", null)
+		val SEL_CHAPTER_LINK: Sel? = Sel(null, "href")
 		val SEL_CHAPTER_TITLE: Sel? = null
 
 		val NUMBER_REGEX = Regex("""\d+(?:\.\d+)?""")

@@ -171,7 +171,7 @@ internal class Nyxscans(context: MangaLoaderContext) :
 		const val READER_IMAGES = "div.comic-images-wrapper.reader-mode-strip img"
 		val READER_ATTRS = listOf("src", "data-src")
 
-		val SEL_LIST_LINK: Sel? = Sel("a", null)
+		val SEL_LIST_LINK: Sel? = Sel("a", "href")
 		val SEL_LIST_TITLE: Sel? = Sel("img", "alt")
 		val SEL_LIST_COVER: Sel? = Sel("img", "src")
 		val SEL_DETAIL_TITLE: Sel? = Sel("h1.break-words.text-2xl.font-bold", null)
