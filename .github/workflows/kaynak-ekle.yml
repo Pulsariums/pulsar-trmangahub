@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       url:
-        description: 'Manga sitesinin adresi'
+        description: 'Manga sitesinin adresi (birden çok adres: boşlukla veya virgülle ayırın)'
         type: string
         required: true
       name:
@@ -65,41 +65,46 @@ jobs:
       - name: Collect upstream sources
         run: python scripts/sync.py
 
-      - name: Analyze site and scaffold source
-        id: analyze
+      - name: Tarayıcı (derin analiz için)
         run: |
-          eng="$SITE_ENGINE"; [ "$eng" = "derin" ] && eng=auto
-          args=(--url "$SITE_URL" --format "$SITE_FORMAT" --engine "$eng")
-          if [ -n "$SITE_NAME" ]; then args+=(--name "$SITE_NAME"); fi
-          if [ "$SITE_REGISTER" = "true" ]; then args+=(--register 1); else args+=(--register 0); fi
-          python scripts/analyze_site.py "${args[@]}"
-
-      - name: Derin analiz (tarayıcı + arşiv) ve siteye özel parser
-        if: always()
-        run: |
-          set +e
-          verdict=$(jq -r '.verdict // .status // ""' data/analyze_result.json 2>/dev/null)
-          if [ "$SITE_ENGINE" != "derin" ] && [ "$verdict" != "unsupported_engine" ]; then
-            echo "bilinen motor ($verdict), derin analiz atlandı"; exit 0
-          fi
-          host=$(echo "$SITE_URL" | sed -E 's#https?://##; s#/.*##; s#^www\.##')
           npm init -y >/dev/null; npm i playwright@1.49.1 >/dev/null 2>&1
           npx playwright install --with-deps chromium >/dev/null 2>&1
-          node scripts/recon.mjs "https://$host" || echo "recon hata verdi"
-          # Arşiv: eski sürümlerdeki yol kalıpları (site yeniden yazılmış olabilir)
-          curl -s -m 60 "https://web.archive.org/cdx/search/cdx?url=$host/*&output=txt&fl=original&filter=statuscode:200&collapse=urlkey&limit=400" \
-            | sed -E 's#https?://[^/]+##; s#\?.*##' | awk -F/ 'NF>2{print "/"$2"/"}' | sort | uniq -c | sort -rn | head -15 > recon-out/$host.wayback.txt
-          cat recon-out/$host.wayback.txt
-          if [ -f "recon-out/$host.spec.json" ]; then
-            nsfw=0; [ "$(jq -r '.nsfw // false' data/analyze_result.json 2>/dev/null)" = "true" ] && nsfw=1
-            args=(recon-out/$host.spec.json --nsfw $nsfw)
-            [ -n "$SITE_NAME" ] && args+=(--name "$SITE_NAME")
-            node scripts/genparser.mjs "${args[@]}" && echo "parser üretildi"
-          else
-            echo "spec üretilemedi: recon çıktısı yok"
-          fi
-          mkdir -p data/recon
-          for f in recon-out/*; do case "$f" in *.html) head -c 300000 "$f" > "data/recon/$(basename "$f")";; *) cp "$f" data/recon/;; esac; done
+
+      - name: Siteleri analiz et ve parser üret (bir veya birden çok adres)
+        id: analyze
+        run: |
+          set +e
+          urls=$(echo "$SITE_URL" | tr ',;' '  ' | tr -s '[:space:]' '\n' | grep -v '^$')
+          n=$(echo "$urls" | wc -l)
+          for u in $urls; do
+            case "$u" in http*) ;; *) u="https://$u";; esac
+            host=$(echo "$u" | sed -E 's#https?://##; s#/.*##; s#^www\.##')
+            echo "== $host"
+            eng="$SITE_ENGINE"; [ "$eng" = "derin" ] && eng=auto
+            args=(--url "$u" --format "$SITE_FORMAT" --engine "$eng")
+            if [ -n "$SITE_NAME" ] && [ "$n" = "1" ]; then args+=(--name "$SITE_NAME"); fi
+            if [ "$SITE_REGISTER" = "true" ]; then args+=(--register 1); else args+=(--register 0); fi
+            python scripts/analyze_site.py "${args[@]}" || echo "analiz başarısız: $host"
+            verdict=$(jq -r '.verdict // .status // ""' data/analyze_result.json 2>/dev/null)
+            if [ "$SITE_ENGINE" = "derin" ] || [ "$verdict" = "unsupported_engine" ]; then
+              rm -rf recon-out; node scripts/recon.mjs "https://$host" >/dev/null 2>&1 || echo "recon hata verdi: $host"
+              curl -s -m 60 "https://web.archive.org/cdx/search/cdx?url=$host/*&output=txt&fl=original&filter=statuscode:200&collapse=urlkey&limit=400" \
+                | sed -E 's#https?://[^/]+##; s#\?.*##' | awk -F/ 'NF>2{print "/"$2"/"}' | sort | uniq -c | sort -rn | head -15 > "recon-out/$host.wayback.txt" 2>/dev/null
+              if [ -f "recon-out/$host.spec.json" ]; then
+                nsfw=0; [ "$(jq -r '.nsfw // false' data/analyze_result.json 2>/dev/null)" = "true" ] && nsfw=1
+                gargs=("recon-out/$host.spec.json" --nsfw $nsfw)
+                [ -n "$SITE_NAME" ] && [ "$n" = "1" ] && gargs+=(--name "$SITE_NAME")
+                node scripts/genparser.mjs "${gargs[@]}" && echo "parser üretildi: $host"
+              else
+                echo "spec üretilemedi: $host"
+              fi
+              mkdir -p data/recon
+              for f in recon-out/*; do case "$f" in *.html) head -c 300000 "$f" > "data/recon/$(basename "$f")";; *) cp "$f" data/recon/;; esac; done
+            else
+              echo "bilinen motor ($verdict), derin analiz atlandı"
+            fi
+          done
+          exit 0
 
       - name: Run report
         if: always()
@@ -121,7 +126,7 @@ jobs:
         env:
           BRANCH: ${{ github.ref_name }}
         run: |
-          domain=$(python -c 'import json; print(json.load(open("data/analyze_result.json", encoding="utf-8"))["domain"])')
+          domain="$(echo "$SITE_URL" | tr ',;' '  ' | awk '{print $1}')"; [ "$(echo "$SITE_URL" | tr ',;' '  ' | wc -w)" -gt 1 ] && domain="$domain ve diğerleri"
           git config user.name "pulsar-trmangahub-bot"
           git config user.email "pulsar-trmangahub-bot@users.noreply.github.com"
           if [ -d sources/custom ]; then git add sources/custom; fi
