@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13T09:20:10.261Z",
+  "generated": "2026-10-14T10:42:48.832Z",
   "sources": [
     {
       "name": "RAVENSCANS_TR",
@@ -14,6 +14,7 @@
         "DETAILS": "pass",
         "CHAPTERS": "pass",
         "PAGES": "fail",
+        "RANDOM": "skip",
         "SEARCH": "pass"
       }
     },
@@ -47,7 +48,16 @@
     },
     {
       "name": "NIRVANAMANGA",
-      "status": "pass"
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
     },
     {
       "name": "MIKROKOSMOSFB",
@@ -75,7 +85,16 @@
     },
     {
       "name": "PATIMANGA",
-      "status": "pass"
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
     },
     {
       "name": "MERLINSCANS",
@@ -91,7 +110,11 @@
     },
     {
       "name": "ROMANTIKMANGA",
-      "status": "cloudflare"
+      "status": "fail",
+      "steps": {
+        "LIST": "cloudflare",
+        "SEARCH": "cloudflare"
+      }
     },
     {
       "name": "SHIJIESCANS",
@@ -162,6 +185,1290 @@
         "DETAILS": "pass",
         "CHAPTERS": "pass",
         "PAGES": "fail",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "ALLPORN_COMIC",
+      "status": "pass"
+    },
+    {
+      "name": "PORNCOMIC18",
+      "status": "pass"
+    },
+    {
+      "name": "ARENASCANS",
+      "status": "pass"
+    },
+    {
+      "name": "APOLL_COMICS",
+      "status": "pass"
+    },
+    {
+      "name": "ATSUMOE",
+      "status": "pass"
+    },
+    {
+      "name": "ASURASCANS",
+      "status": "pass"
+    },
+    {
+      "name": "BEYONDTHEATARAXIA",
+      "status": "pass"
+    },
+    {
+      "name": "ASIALOTUSS",
+      "status": "pass"
+    },
+    {
+      "name": "BYMICHIBY",
+      "status": "pass"
+    },
+    {
+      "name": "CAFECOMYAOI",
+      "status": "pass"
+    },
+    {
+      "name": "DANKE",
+      "status": "pass"
+    },
+    {
+      "name": "DEATHTOLLSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "CAT_300",
+      "status": "pass"
+    },
+    {
+      "name": "CLONEMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "BORUTOEXPLORER",
+      "status": "pass"
+    },
+    {
+      "name": "DYNASTYSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "DECADENCESCANS",
+      "status": "pass"
+    },
+    {
+      "name": "DOJING",
+      "status": "pass"
+    },
+    {
+      "name": "DESUME",
+      "status": "pass"
+    },
+    {
+      "name": "DIVASCANS",
+      "status": "pass"
+    },
+    {
+      "name": "ENTHUNDERSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "EUPHORIASCAN",
+      "status": "pass"
+    },
+    {
+      "name": "FURYOSOCIETY",
+      "status": "pass"
+    },
+    {
+      "name": "FBSQUADS",
+      "status": "pass"
+    },
+    {
+      "name": "GDSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "FMTEAM",
+      "status": "pass"
+    },
+    {
+      "name": "GUYACUBARI",
+      "status": "pass"
+    },
+    {
+      "name": "GTOTHEGREATSITE",
+      "status": "pass"
+    },
+    {
+      "name": "HANMAN18",
+      "status": "pass"
+    },
+    {
+      "name": "HENTAIXDICKGIRL",
+      "status": "pass"
+    },
+    {
+      "name": "HENTAINEXUS",
+      "status": "pass"
+    },
+    {
+      "name": "HACHIRUMI",
+      "status": "pass"
+    },
+    {
+      "name": "HENTAITOKYO",
+      "status": "pass"
+    },
+    {
+      "name": "HENTAIXCOMIC",
+      "status": "pass"
+    },
+    {
+      "name": "SURYASCANS",
+      "status": "pass"
+    },
+    {
+      "name": "HIVECOMIC",
+      "status": "pass"
+    },
+    {
+      "name": "HECKSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "ZENMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "JIANGZAITOON",
+      "status": "pass"
+    },
+    {
+      "name": "KANZENIN",
+      "status": "pass"
+    },
+    {
+      "name": "KOMIKTAP",
+      "status": "pass"
+    },
+    {
+      "name": "KOMBATCH",
+      "status": "pass"
+    },
+    {
+      "name": "KSGROUPSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "IZANAMISCANS",
+      "status": "pass"
+    },
+    {
+      "name": "LIKEMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "LIANSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "LEITORKAMISAMA",
+      "status": "pass"
+    },
+    {
+      "name": "LIKEMANGANET",
+      "status": "pass"
+    },
+    {
+      "name": "MANGASWAT",
+      "status": "pass"
+    },
+    {
+      "name": "MANGA18",
+      "status": "pass"
+    },
+    {
+      "name": "HMANGABAT",
+      "status": "pass"
+    },
+    {
+      "name": "MANGADASS",
+      "status": "pass"
+    },
+    {
+      "name": "MAID_ID",
+      "status": "pass"
+    },
+    {
+      "name": "MANGADNA",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAFORFREE",
+      "status": "pass"
+    },
+    {
+      "name": "MANGA_DISTRICT",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAECLIPSE",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAKIO",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAGG",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAMANIACS",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAREAD",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAGO",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAPILL",
+      "status": "pass"
+    },
+    {
+      "name": "MANGATARO",
+      "status": "pass"
+    },
+    {
+      "name": "MANGATELLERS",
+      "status": "pass"
+    },
+    {
+      "name": "MANGATILKISI",
+      "status": "pass"
+    },
+    {
+      "name": "MANGATOWN",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAWORLDADULT",
+      "status": "pass"
+    },
+    {
+      "name": "MANHWA18",
+      "status": "pass"
+    },
+    {
+      "name": "MANHWA18COM",
+      "status": "pass"
+    },
+    {
+      "name": "MANGAWORLD",
+      "status": "pass"
+    },
+    {
+      "name": "MANHUAGUI",
+      "status": "pass"
+    },
+    {
+      "name": "MANGASUSHI",
+      "status": "pass"
+    },
+    {
+      "name": "MENUDO_FANSUB",
+      "status": "pass"
+    },
+    {
+      "name": "MARMOTA",
+      "status": "pass"
+    },
+    {
+      "name": "MUNDOHENTAIOFICIAL",
+      "status": "pass"
+    },
+    {
+      "name": "MUNDO_MANHWA",
+      "status": "pass"
+    },
+    {
+      "name": "MUITOHENTAI",
+      "status": "pass"
+    },
+    {
+      "name": "NINJASCAN",
+      "status": "pass"
+    },
+    {
+      "name": "NYXSCANS_TR",
+      "status": "pass"
+    },
+    {
+      "name": "NIJITRANSLATIONS",
+      "status": "pass"
+    },
+    {
+      "name": "NABICIX",
+      "status": "pass"
+    },
+    {
+      "name": "PARITEHABER",
+      "status": "pass"
+    },
+    {
+      "name": "PETROTECHSOCIETY",
+      "status": "pass"
+    },
+    {
+      "name": "PHOENIXSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "RAVENSCANS",
+      "status": "pass"
+    },
+    {
+      "name": "NOROMAX",
+      "status": "pass"
+    },
+    {
+      "name": "RACKUSREADS",
+      "status": "pass"
+    },
+    {
+      "name": "READNIFTEAM",
+      "status": "pass"
+    },
+    {
+      "name": "RAW1001",
+      "status": "pass"
+    },
+    {
+      "name": "ROKARICOMICS",
+      "status": "pass"
+    },
+    {
+      "name": "RICHTOSCAN",
+      "status": "pass"
+    },
+    {
+      "name": "PZYKOSIS666HFANSUB",
+      "status": "pass"
+    },
+    {
+      "name": "RINKOCOMICS",
+      "status": "pass"
+    },
+    {
+      "name": "SEKTEDOUJIN",
+      "status": "pass"
+    },
+    {
+      "name": "SENKURO",
+      "status": "pass"
+    },
+    {
+      "name": "SEINAGI",
+      "status": "pass"
+    },
+    {
+      "name": "STONESCAPE",
+      "status": "pass"
+    },
+    {
+      "name": "TANKOUHENTAI",
+      "status": "pass"
+    },
+    {
+      "name": "SCANTRADUNION",
+      "status": "pass"
+    },
+    {
+      "name": "REAPERTRANS",
+      "status": "pass"
+    },
+    {
+      "name": "THRIVE",
+      "status": "pass"
+    },
+    {
+      "name": "TUTTOANIMEMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "TOMILOLIB",
+      "status": "pass"
+    },
+    {
+      "name": "TRITINIA",
+      "status": "pass"
+    },
+    {
+      "name": "TOOMTAMMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "WAMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "TOONHUNTER",
+      "status": "pass"
+    },
+    {
+      "name": "YAOIFLIX",
+      "status": "pass"
+    },
+    {
+      "name": "TSUNDOKU",
+      "status": "pass"
+    },
+    {
+      "name": "ZINMANGA",
+      "status": "pass"
+    },
+    {
+      "name": "UNIVERSOHENTAI",
+      "status": "pass"
+    },
+    {
+      "name": "TOONIZY",
+      "status": "pass"
+    },
+    {
+      "name": "ASQORG",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "ANIMEXNOVEL",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "ARCRELIGHT",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "fail",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "ASSORTEDSCANS",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "fail",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "ALLHENTAI",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "ANZMANGASHD",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "pass",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "AZORAMOON",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "fail",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "BANANASCAN_COM",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "pass",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "CVNSCAN",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "COMICSVALLEY",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "DAMCONUONG",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "ENRYUMANGA",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "EZMANGA",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "pass",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "HANGTRUYEN",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "GOCTRUYENTRANHVUI",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "HNISCANTRAD",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "pass",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "HENTAIXYURI",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "fail",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "DOUJINZA",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "fail",
+        "DETAILS": "fail",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "DOCTRUYEN5S",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "ITHINKILIKEYOU",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "skip"
+      }
+    },
+    {
+      "name": "KALANGO",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "KAKUSEIPROJECT",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "DUALEOTRUYEN",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "KEWNSCANS",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "pass",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "MIAUSCAN",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "LILYMANGA",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "IMPERIODABRITANNIA",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "fail",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "pass",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "LXMANGA",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "LUPITEAM",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "MANGAATREND",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "HENTAIVNPLUS",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "HONEYMANGA",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "pass",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "MANGAGEKO",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "LIMBOSCAN",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "MANGAKATANA",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "pass",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "LAMIMANGA",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "MANGAKOMA01",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "MANGAKAKALOT",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "cloudflare"
+      }
+    },
+    {
+      "name": "MANHUAPLUSORG",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "MEDIOCRETOONS",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "MIHENTAI",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "fail",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "MIKOROKU",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "MANHWATOON",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "fail",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "NOCSUMMER",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "MANGALIB",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "PANTHEONSCAN",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "ORIGAMIORPHEANS",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "PORTALYAOI",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "RAMAREADER",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "NICOVIDEO_SEIGA",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "fail",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "ALLMANGA",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "QISCANS",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "fail",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "SCANVFORG",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "ROLIASCAN",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "YAOILIB",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "TOOMICSSC",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "skip"
+      }
+    },
+    {
+      "name": "SOFTKOMIK",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "fail",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "TOONITUBE",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "SEINAGIADULTO",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "fail",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "pass",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "TRUYENTRANH3Q",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "YUGENMANGAS",
+      "status": "fail",
+      "steps": {
+        "LIST": "fail",
+        "COVERS": "skip",
+        "DETAILS": "skip",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "UMIMANGA",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "pass",
+        "CHAPTERS": "fail",
+        "PAGES": "skip",
+        "RANDOM": "skip",
+        "SEARCH": "fail"
+      }
+    },
+    {
+      "name": "WELOMA",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "fail",
+        "DETAILS": "pass",
+        "CHAPTERS": "pass",
+        "PAGES": "fail",
+        "RANDOM": "skip",
+        "SEARCH": "pass"
+      }
+    },
+    {
+      "name": "YURIBASE",
+      "status": "fail",
+      "steps": {
+        "LIST": "pass",
+        "COVERS": "pass",
+        "DETAILS": "fail",
+        "CHAPTERS": "skip",
+        "PAGES": "skip",
+        "RANDOM": "skip",
         "SEARCH": "pass"
       }
     }
