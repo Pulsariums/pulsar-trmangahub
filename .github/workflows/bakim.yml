@@ -82,7 +82,7 @@ jobs:
           jq -r '(if type=="array" then . else .sources end)|.[].domain' sources/tr/sources.json | sort -u > known.txt
           jq -r '.[].domain' sources/custom/sources.json 2>/dev/null >> known.txt
           sort -u known.txt -o known.txt
-          BAD='bahis|casino|slot|judi|kumar|porn|for sale|parked|domain.*sat|satılık|satilik|betting|poker'
+          BAD='bahis|casino|slot|judi|kumar|porn|for sale|parked|domain.*sat|satılık|satilik|betting|poker|koplo|gacor|togel|maxwin|pragmatic|jackpot'
           : > accepted.txt
           while read d; do
             grep -qx "$d" known.txt && continue

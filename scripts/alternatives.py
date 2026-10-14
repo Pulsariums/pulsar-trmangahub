@@ -46,7 +46,9 @@ PAGE_KEYWORDS = ("manga", "webtoon", "bölüm", "chapter")
 SCALE_WORDS = {"manga", "manhwa", "manhua", "webtoon", "webtoons", "comic", "comics", "novel", "scan",
                "scans", "tr", "türkçe", "çeviri", "ceviri", "oku", "online"}
 BLACKLIST = ("bahis", "casino", "slot", "judi", "kumar", "porn", "for sale", "parked",
-             "domain satılık", "satılık", "satilik")
+             "domain satılık", "satılık", "satilik", "koplo", "gacor", "togel", "maxwin", "pragmatic",
+             "jackpot", "poker", "betting", "sbobet", "gambling")
+TR_MARK = re.compile(r'lang="?tr|[ığşçöüİĞŞÇÖÜ]')
 
 
 def norm_name(name):
@@ -140,7 +142,10 @@ def page_accepted(result, name):
     if any(token in title for token in name_tokens(name)):
         return True
     body = page.get("body") or ""
-    return any(keyword in body for keyword in PAGE_KEYWORDS)
+    if not any(keyword in body for keyword in PAGE_KEYWORDS):
+        return False
+    # İsim eşleşmedi: yalnız Türkçe içerik gösteren sayfa kabul (yabancı/spam yönlendirmeyi ele)
+    return len(TR_MARK.findall(body)) >= 10
 
 
 def probe_with_page(domain):
