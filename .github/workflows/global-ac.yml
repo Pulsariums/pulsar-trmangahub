@@ -1,0 +1,26 @@
+name: '5) Global JAR: tüm diller, hepsi açık (cihazda test için)'
+
+# Global ve global_nsfw paketlerini karantina dahil TÜM kaynaklarla derler.
+# Sonra Kototoro'da depoyu ekle, paketleri kur, "Tümünü test et" yap, sonucu 3) ile içeri al.
+# Not: sonraki normal bakım global paketleri yine yalnız çalışanlarla yeniden derler.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: hub
+  cancel-in-progress: false
+
+jobs:
+  jar:
+    uses: ./.github/workflows/_jar.yml
+    with:
+      bolum: global_ikisi
+      acik: true
+      force: true

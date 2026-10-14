@@ -27,6 +27,10 @@ on:
         description: 'Parmak izi aynı olsa da derle'
         type: boolean
         default: false
+      acik:
+        description: 'Global paketlerde karantina dahil TÜM kaynakları aç (cihazda toplu test için)'
+        type: boolean
+        default: false
       publish:
         description: 'Derlemeyi jar/ klasöründe commit edip gönder'
         type: boolean
@@ -50,6 +54,7 @@ jobs:
         run: |
           case "$BOLUM" in
             hepsi) list='["tr","tr_nsfw","global","global_nsfw"]' ;;
+            global_ikisi) list='["global","global_nsfw"]' ;;
             tr|tr_nsfw|global|global_nsfw) list="[\"$BOLUM\"]" ;;
             *) echo "::error::Bilinmeyen paket: $BOLUM"; exit 1 ;;
           esac
@@ -67,6 +72,7 @@ jobs:
     env:
       BUCKET: ${{ matrix.bucket }}
       PULSAR_ADMIT_CF: ${{ (matrix.bucket == 'tr' || matrix.bucket == 'tr_nsfw') && '1' || '0' }}
+      PULSAR_ADMIT_ALL: ${{ (inputs.acik && (matrix.bucket == 'global' || matrix.bucket == 'global_nsfw')) && '1' || '0' }}
       PULSAR_LIVE_GATE: ${{ (matrix.bucket == 'tr' || matrix.bucket == 'tr_nsfw') && '1' || '0' }}
       MODE: ${{ inputs.mode || 'alive' }}
       INCLUDE_BROKEN: ${{ inputs.include_broken && '1' || '0' }}
