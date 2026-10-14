@@ -89,21 +89,7 @@ def build_candidates(domain, src_records, sources, probe_row):
     for other in same_engine_first([o for o in others if o.get("key") == key]):
         add(other["domain"], "same_key", "medium")
 
-    similar = []
-    for other in others:
-        okey = other.get("key") or ""
-        if not key or okey == key:
-            continue
-        ratio = difflib.SequenceMatcher(None, key, okey).ratio()
-        if ratio >= SIMILAR_MIN:
-            similar.append((ratio, other))
-    similar.sort(key=lambda pair: (-pair[0], not (engine and engine_of(pair[1]) == engine)))
-    for _, other in similar:
-        add(other["domain"], "similar_key", "low")
-
-    for other in same_engine_first([o for o in others if name and norm_name(o.get("name")) == name]):
-        add(other["domain"], "same_name", "medium")
-
+    # similar_key ve same_name kaldirildi: isim benzerligiyle baska site secmek (Mangacim -> Mangacix) yanlis.
     return out
 
 
