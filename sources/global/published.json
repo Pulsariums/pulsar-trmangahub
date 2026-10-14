@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T19:29:19+00:00",
+  "generatedAt": "2026-10-14T05:07:08+00:00",
   "mihon": [
     {
       "pkg": "eu.kanade.tachiyomi.extension.all.hentai3",
@@ -38,18 +38,6 @@
       "domain": "dragonball-multiverse.com"
     },
     {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.eldermanga",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/06f6d69/tachiyomi-tr.eldermanga-v1.6.9.apk",
-      "version": "1.6.9",
-      "domain": "eldermanga.com"
-    },
-    {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.eskimangalar",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/06f6d69/tachiyomi-tr.eskimangalar-v1.6.6.apk",
-      "version": "1.6.6",
-      "domain": "eskimangalar.com"
-    },
-    {
       "pkg": "eu.kanade.tachiyomi.extension.tr.garciamanga",
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.garciamanga-v1.6.55.apk",
       "version": "1.6.55",
@@ -84,12 +72,6 @@
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.laviniafansub-v1.6.61.apk",
       "version": "1.6.61",
       "domain": "laviniafansub.shop"
-    },
-    {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.limonmanga",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/06f6d69/tachiyomi-tr.limonmanga-v1.6.6.apk",
-      "version": "1.6.6",
-      "domain": "limonmanga.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.mangadenizi",
@@ -134,12 +116,6 @@
       "domain": "mangtto.com"
     },
     {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.mikrokosmosfansub",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/4217666-2/tachiyomi-tr.mikrokosmosfansub-v1.6.16.apk",
-      "version": "1.6.16",
-      "domain": "mikrokosmosfb.blogspot.com"
-    },
-    {
       "pkg": "eu.kanade.tachiyomi.extension.tr.moondaisyscans",
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d0c0864/tachiyomi-tr.moondaisyscans-v1.6.6.apk",
       "version": "1.6.6",
@@ -162,12 +138,6 @@
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d0c0864/tachiyomi-tr.nemesisscans-v1.6.0.apk",
       "version": "1.6.0",
       "domain": "nemesisscans.com"
-    },
-    {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.nirvanamanga",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d0c0864/tachiyomi-tr.nirvanamanga-v1.6.0.apk",
-      "version": "1.6.0",
-      "domain": "nirvanamanga.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.okutoon",
@@ -230,12 +200,6 @@
       "domain": "sunsetmanga.com"
     },
     {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.tenshimanga",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/06f6d69/tachiyomi-tr.tenshimanga-v1.6.8.apk",
-      "version": "1.6.8",
-      "domain": "tenshimanga.com"
-    },
-    {
       "pkg": "eu.kanade.tachiyomi.extension.tr.mangatilkisi",
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/e97033f/tachiyomi-tr.mangatilkisi-v1.6.57.apk",
       "version": "1.6.57",
@@ -282,12 +246,6 @@
       "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/24bc6c2/tachiyomi-all.leagueoflegends-v1.6.0.apk",
       "version": "1.6.0",
       "domain": "universe.leagueoflegends.com"
-    },
-    {
-      "pkg": "eu.kanade.tachiyomi.extension.tr.uzaymanga",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/06f6d69/tachiyomi-tr.uzaymanga-v1.6.48.apk",
-      "version": "1.6.48",
-      "domain": "uzaymanga.com"
     },
     {
       "pkg": "eu.kanade.tachiyomi.extension.tr.webtoonoku",
@@ -370,6 +328,12 @@
       "lang": "es"
     },
     {
+      "parser": "ARCRELIGHT",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangadventure/en/ArcRelight.kt",
+      "domain": "arc-relight.com",
+      "lang": "en"
+    },
+    {
       "parser": "ARENASCANS",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/en/ArenaScans.kt",
       "domain": "arenascan.com",
@@ -380,6 +344,12 @@
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/es/AsiaLotuss.kt",
       "domain": "asialotuss.com",
       "lang": "es"
+    },
+    {
+      "parser": "ASSORTEDSCANS",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangadventure/en/AssortedScans.kt",
+      "domain": "assortedscans.com",
+      "lang": "en"
     },
     {
       "parser": "ASURASCANS",
@@ -466,6 +436,12 @@
       "lang": "en"
     },
     {
+      "parser": "DARKNEBULUS",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/es/Darknebulus.kt",
+      "domain": "darknebulus.com",
+      "lang": "es"
+    },
+    {
       "parser": "NINEMANGA_DE",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/all/NineMangaParser.kt",
       "domain": "de.niadd.com",
@@ -514,15 +490,15 @@
       "lang": "en"
     },
     {
-      "parser": "ELDERMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/ElderManga.kt",
-      "domain": "eldermanga.com",
-      "lang": "tr"
-    },
-    {
       "parser": "ENTHUNDERSCANS",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/en/EnThunderScans.kt",
       "domain": "en-thunderscans.com",
+      "lang": "en"
+    },
+    {
+      "parser": "ENRYUMANGA",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/en/EnryuManga.kt",
+      "domain": "enryumanga.net",
       "lang": "en"
     },
     {
@@ -614,6 +590,12 @@
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/manga18/zh/Hanman18.kt",
       "domain": "hanman18.com",
       "lang": "zh"
+    },
+    {
+      "parser": "HECKSCANS",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/zeistmanga/pt/HeckScans.kt",
+      "domain": "heckscans.blogspot.com",
+      "lang": "pt"
     },
     {
       "parser": "HENSEKAI",
@@ -710,6 +692,12 @@
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/id/IzanamiScans.kt",
       "domain": "izanamiscans.my.id",
       "lang": "id"
+    },
+    {
+      "parser": "KAKUSEIPROJECT",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/pt/KakuseiProject.kt",
+      "domain": "kakuseiproject.com",
+      "lang": "pt"
     },
     {
       "parser": "KALANGO",
@@ -820,6 +808,12 @@
       "lang": "pt"
     },
     {
+      "parser": "LUFFYMANGA",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/en/LuffyManga.kt",
+      "domain": "luffymanga.com",
+      "lang": "en"
+    },
+    {
       "parser": "LUPITEAM",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/pizzareader/it/LupiTeam.kt",
       "domain": "lupiteam.net",
@@ -836,12 +830,6 @@
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/zmanga/id/MaidId.kt",
       "domain": "maid.my.id",
       "lang": "id"
-    },
-    {
-      "parser": "MANGAAILAND",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/zeistmanga/ar/MangaAiLand.kt",
-      "domain": "manga-ai-land.blogspot.com",
-      "lang": "ar"
     },
     {
       "parser": "ADONISFANSUB",
@@ -868,15 +856,15 @@
       "lang": "en"
     },
     {
+      "parser": "MANGAATREND",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/ar/MangaAtrend.kt",
+      "domain": "mangaatrend.net",
+      "lang": "ar"
+    },
+    {
       "parser": "HMANGABAT",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangabox/en/Mangabat.kt",
       "domain": "mangabats.com",
-      "lang": "en"
-    },
-    {
-      "parser": "MANGACUTE",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madtheme/en/MangaCute.kt",
-      "domain": "mangacute.com",
       "lang": "en"
     },
     {
@@ -988,6 +976,12 @@
       "lang": "en"
     },
     {
+      "parser": "MANGASIGINAGI",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/MangaSiginagi.kt",
+      "domain": "mangasiginagi.com",
+      "lang": "tr"
+    },
+    {
       "parser": "MANGASUSHI",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/en/MangaSushi.kt",
       "domain": "mangasushi.org",
@@ -1009,6 +1003,12 @@
       "parser": "MANGATOWN",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/en/MangaTownParser.kt",
       "domain": "mangatown.com",
+      "lang": "en"
+    },
+    {
+      "parser": "MANGAUS",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/en/Mangaus.kt",
+      "domain": "mangaus.xyz",
       "lang": "en"
     },
     {
@@ -1114,12 +1114,6 @@
       "lang": "id"
     },
     {
-      "parser": "MIKROKOSMOSFB",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/zeistmanga/tr/Mikrokosmosfb.kt",
-      "domain": "mikrokosmosfb.blogspot.com",
-      "lang": "tr"
-    },
-    {
       "parser": "ALLMANGA",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/en/AllManga.kt",
       "domain": "mkissa.to",
@@ -1141,6 +1135,12 @@
       "parser": "MUNDO_MANHWA",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/es/MundoManhwa.kt",
       "domain": "mundomanhwa.com",
+      "lang": "es"
+    },
+    {
+      "parser": "UKIYOTOON",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/es/UkiyoToon.kt",
+      "domain": "nakamatoon.com",
       "lang": "es"
     },
     {
@@ -1168,16 +1168,16 @@
       "lang": "ja"
     },
     {
+      "parser": "NIJITRANSLATIONS",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/ar/NijiTranslations.kt",
+      "domain": "niji-translations.com",
+      "lang": "ar"
+    },
+    {
       "parser": "NINJASCAN",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/pt/NinjaScan.kt",
       "domain": "ninjacomics.xyz",
       "lang": "pt"
-    },
-    {
-      "parser": "NIRVANAMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/tr/NirvanaManga.kt",
-      "domain": "nirvanamanga.com",
-      "lang": "tr"
     },
     {
       "parser": "NIVERAFANSUB",
@@ -1312,6 +1312,12 @@
       "lang": "en"
     },
     {
+      "parser": "POWERMANGA",
+      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/foolslide/it/PowerManga.kt",
+      "domain": "reader.powermanga.org",
+      "lang": "it"
+    },
+    {
       "parser": "SEINAGI",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/foolslide/en/Seinagi.kt",
       "domain": "reader.seinagi.org.es",
@@ -1334,18 +1340,6 @@
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/th/ReaperTrans.kt",
       "domain": "reapertrans.com",
       "lang": "th"
-    },
-    {
-      "parser": "REMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/ru/RemangaParser.kt",
-      "domain": "remanga.org",
-      "lang": "ru"
-    },
-    {
-      "parser": "RIMUSCANS",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/fr/RimuScans.kt",
-      "domain": "rimuscan.fr",
-      "lang": "fr"
     },
     {
       "parser": "RINKOCOMICS",
@@ -1402,12 +1396,6 @@
       "lang": "ru"
     },
     {
-      "parser": "SHADOWMANGAS",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/es/Shadowmangas.kt",
-      "domain": "shadowmangas.com",
-      "lang": "es"
-    },
-    {
       "parser": "SNOWMTL",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/en/mtl/SnowMTL.kt",
       "domain": "snowmtl.ru",
@@ -1418,12 +1406,6 @@
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/id/SoftKomik.kt",
       "domain": "softkomik.co",
       "lang": "id"
-    },
-    {
-      "parser": "SOLARMTL",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/en/mtl/SolarMTL.kt",
-      "domain": "solarmtl.com",
-      "lang": "en"
     },
     {
       "parser": "STONESCAPE",
@@ -1442,12 +1424,6 @@
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/es/TempleScanEsp.kt",
       "domain": "templescanesp.net",
       "lang": "es"
-    },
-    {
-      "parser": "TENSHIMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/TenshiManga.kt",
-      "domain": "tenshimanga.com",
-      "lang": "tr"
     },
     {
       "parser": "THRIVE",
@@ -1558,12 +1534,6 @@
       "lang": "pt"
     },
     {
-      "parser": "UZAYMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/tr/UzayManga.kt",
-      "domain": "uzaymanga.com",
-      "lang": "tr"
-    },
-    {
       "parser": "YAOILIB",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/ru/rulib/SlashLibParser.kt",
       "domain": "v2.slashlib.me",
@@ -1594,24 +1564,6 @@
       "lang": "ja"
     },
     {
-      "parser": "WELOVEMANGA",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/fmreader/ja/WeLoveManga.kt",
-      "domain": "welovemanga.one",
-      "lang": "ja"
-    },
-    {
-      "parser": "SCANHENTAIMENU",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/madara/fr/ScanHentaiMenu.kt",
-      "domain": "x-manga.org",
-      "lang": "fr"
-    },
-    {
-      "parser": "HENCHAN",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/ru/multichan/HenChanParser.kt",
-      "domain": "x5.h-chan.me",
-      "lang": "ru"
-    },
-    {
       "parser": "YUGENMANGAS",
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/pt/YugenMangas.kt",
       "domain": "yugenmangasbr.voblog.xyz",
@@ -1628,12 +1580,6 @@
       "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/vi/YurinekoParser.kt",
       "domain": "yurineko.site",
       "lang": "vi"
-    },
-    {
-      "parser": "ZAHARD",
-      "file": "src/main/kotlin/org/koitharu/kotatsu/parsers/site/mangareader/en/Zahard.kt",
-      "domain": "zahard.xyz",
-      "lang": "en"
     },
     {
       "parser": "ZENITHSCANS",

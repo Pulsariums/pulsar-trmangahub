@@ -4,20 +4,20 @@
 
 | Durum | Adet |
 |---|---|
-| published (ok) | 265 |
-| cf_protected_published (bot korumalı, erişilebilir) | 273 |
-| quarantined (karantina) | 699 |
-| unverified (bu run doğrulanamadı) | 12 |
+| published (ok) | 269 |
+| cf_protected_published (bot korumalı, erişilebilir) | 280 |
+| quarantined (karantina) | 688 |
+| unverified (bu run doğrulanamadı) | 11 |
 
 - Domain'li toplam kaynak: 1254; domain'siz (yayınlanmadı): 100
-- Karantinadaki kaynaklardan alternatif bulunan: 17; bulunamayan: 682
+- Karantinadaki kaynaklardan alternatif bulunan: 17; bulunamayan: 671
 - Alternatif yayın listesinde (published_via_alternative): 17
 
 ## Probe özeti
 
 | ok | cf_protected | dead | parked | other | blocked |
 |---|---|---|---|---|---|
-| 389 | 269 | 450 | 133 | 13 | 0 |
+| 369 | 278 | 466 | 129 | 12 | 0 |
 
 ## Alternatifler
 
@@ -43,10 +43,10 @@
 
 ## Bu run'da değişenler
 
-- Yeni eklenen: 2 (jiangzaitoon.icu, toonhane.com)
-- Ölen (yayından çıkan): 3 (bestmanhua.com, enryumanga.net, reader.powermanga.org)
-- Geri dirilen: 4 (hangtruyen.org, manga-ai-land.blogspot.com, mikrokosmosfb.blogspot.com, yugenmangasbr.voblog.xyz)
+- Yeni eklenen: 0
+- Ölen (yayından çıkan): 1 (mangacute.com)
+- Geri dirilen: 12 (arc-relight.com, assortedscans.com, darknebulus.com, enryumanga.net, heckscans.blogspot.com, kakuseiproject.com, luffymanga.com, mangaatrend.net, mangasiginagi.com, mangaus.xyz, nakamatoon.com, reader.powermanga.org)
 - Upstream'den kaldırılan: 0
 
-Not: 12 kaynak bu run'da doğrulanamadı (blocked/other); önceki durumu korundu.
+Not: 11 kaynak bu run'da doğrulanamadı (blocked/other); önceki durumu korundu.
 

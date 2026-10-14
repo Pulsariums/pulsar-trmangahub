@@ -4,20 +4,20 @@
 
 | Durum | Adet |
 |---|---|
-| published (ok) | 50 |
-| cf_protected_published (bot korumalı, erişilebilir) | 31 |
-| quarantined (karantina) | 88 |
+| published (ok) | 46 |
+| cf_protected_published (bot korumalı, erişilebilir) | 36 |
+| quarantined (karantina) | 87 |
 | unverified (bu run doğrulanamadı) | 1 |
 
 - Domain'li toplam kaynak: 171; domain'siz (yayınlanmadı): 1
-- Karantinadaki kaynaklardan alternatif bulunan: 17; bulunamayan: 71
+- Karantinadaki kaynaklardan alternatif bulunan: 17; bulunamayan: 70
 - Alternatif yayın listesinde (published_via_alternative): 17
 
 ## Probe özeti
 
 | ok | cf_protected | dead | parked | other | blocked |
 |---|---|---|---|---|---|
-| 389 | 269 | 450 | 133 | 13 | 0 |
+| 369 | 278 | 466 | 129 | 12 | 0 |
 
 ## Alternatifler
 
@@ -43,10 +43,10 @@
 
 ## Bu run'da değişenler
 
-- Yeni eklenen: 3 (jiangzaitoon.icu, siyahmelek.org, toonhane.com)
+- Yeni eklenen: 0
 - Ölen (yayından çıkan): 0
-- Geri dirilen: 0
-- Upstream'den kaldırılan: 1 (siyahmelek.my)
+- Geri dirilen: 1 (mangasiginagi.com)
+- Upstream'den kaldırılan: 0
 
 Not: 1 kaynak bu run'da doğrulanamadı (blocked/other); önceki durumu korundu.
 
