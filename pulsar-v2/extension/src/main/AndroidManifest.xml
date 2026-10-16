@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-feature android:name="tachiyomi.extension" />
+    <!-- Nyora örüntüsü: ExtensionLoader yalnızca bu feature'ı olan paketleri
+         eklenti olarak tanır; yoksa "package not found" verip listelemez. -->
+    <uses-feature
+        android:name="tachiyomi.extension"
+        android:required="false" />
 
     <application
         android:allowBackup="false"
-        android:label="@string/app_name"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:label="${pulsarName}">
 
+        <!-- Data-driven katalog + kotatsu-parsers motorunu birlikte üreten fabrika. -->
         <meta-data
             android:name="tachiyomi.extension.class"
             android:value="eu.kanade.tachiyomi.extension.all.pulsar.PulsarSourceFactory" />
 
         <meta-data
-            android:name="tachiyomi.extension.factory"
-            android:value="true" />
+            android:name="tachiyomix.name"
+            android:value="${pulsarName}" />
 
+        <!-- ZORUNLU: Mihon ExtensionLoader.SUPPORTED_LIB_VERSIONS {1.4, 1.6}.
+             versionName kontratı: "<extensionLib>.<patch>" (bkz. build.gradle.kts). -->
         <meta-data
-            android:name="tachiyomi.extension.nsfw"
-            android:value="${pulsarNsfw}" />
-
+            android:name="tachiyomix.extensionLib"
+            android:value="1.6" />
     </application>
 
 </manifest>

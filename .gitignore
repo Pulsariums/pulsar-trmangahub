@@ -11,3 +11,8 @@ package-lock.json
 recon-out/
 .zcode/
 .zcodeignore
+
+# pulsar-v2 build workspaces
+pulsar-v2/.work/
+pulsar-v2/repo-build/
+pulsar-v2/signing/

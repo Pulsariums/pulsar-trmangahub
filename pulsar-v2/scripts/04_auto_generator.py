@@ -122,6 +122,7 @@ def generate_source_config(src):
         "baseUrl": src.get("baseUrl") or f"https://{domain}",
         "engine": base_defaults["engine"],
         "config": cfg,
+        "altDomains": src.get("altDomains", []),
         "verified_by_user": src.get("verified_by_user", False),
         "origins": src.get("origins", [])
     }

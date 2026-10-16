@@ -1,0 +1,107 @@
+name: 'Derle: Pulsar Mihon Eklentisi (Nyora örüntüsü)'
+
+# Nyora porter/deploy örüntüsünün kendi verimizle uygulaması:
+#   geçici resmi Mihon checkout'unda :pulsar-extension'ı derle, tek CI-anahtarıyla
+#   imzala, parmak izini APK'dan OTOMATİK oku, repo yayınını üret, main'e push et.
+# Uygulamanın kendisi asla derlenmez; imzalanan tek şey eklenti APK'larıdır.
+on:
+  workflow_dispatch:
+    inputs:
+      flavors:
+        description: 'Flavors (virgülle): tr,tr18,global,global18'
+        required: false
+        default: 'tr,tr18,global,global18'
+      parsers_ref:
+        description: 'kotatsu-parsers-redo revresi'
+        required: false
+        default: '59c033ecfd'
+      mihon_ref:
+        description: 'Mihon referans tagi'
+        required: false
+        default: 'v0.20.1'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-extension
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Ensure Android SDK components for mihon v0.20.1 (compile 37 / target 36 / ndk 29)
+        run: |
+          export ANDROID_HOME="/usr/local/lib/android/sdk"
+          [ -d "$ANDROID_HOME" ] || export ANDROID_HOME="$ANDROID_SDK_ROOT"
+          echo "ANDROID_HOME=$ANDROID_HOME" >> $GITHUB_ENV
+          SDKM="$(ls "$ANDROID_HOME"/cmdline-tools/*/bin/sdkmanager | sort -V | tail -1)"
+          yes | "$SDKM" --sdk_root="$ANDROID_HOME" --licenses >/dev/null 2>&1 || true
+          "$SDKM" --sdk_root="$ANDROID_HOME" \
+            "platforms;android-37" "build-tools;37.0.0" "build-tools;34.0.0" "ndk;29.0.14206865"
+          ls "$ANDROID_HOME"/build-tools/*/aapt >/dev/null
+
+      - name: Generate throwaway signing key (fingerprint read from APKs later)
+        run: |
+          mkdir -p pulsar-v2/signing
+          keytool -genkeypair -v \
+            -keystore pulsar-v2/signing/pulsar.keystore \
+            -storetype PKCS12 \
+            -alias androiddebugkey \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass android -keypass android \
+            -dname "CN=Pulsar Manga Hub CI, OU=Pulsar, O=Pulsariums, C=TR"
+
+      - name: Build all flavors (Mihon checkout + our module)
+        working-directory: pulsar-v2
+        env:
+          FLAVORS: ${{ inputs.flavors }}
+          PARSERS_REF: ${{ inputs.parsers_ref }}
+          MIHON_REF: ${{ inputs.mihon_ref }}
+        run: bash scripts/pulsar_build.sh
+
+      - name: Verify every APK signature == repo.json fingerprint (auto-trust guard)
+        working-directory: pulsar-v2
+        run: |
+          set -euo pipefail
+          APKSIGNER="$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -1)"
+          repo_fp="$(python3 -c "import json;print(json.load(open('repo-build/repo.json'))['meta']['signingKeyFingerprint'])")"
+          echo "repo.json fingerprint: $repo_fp"
+          for apk in repo-build/apk/*.apk; do
+            fp="$("$APKSIGNER" verify --print-certs "$apk" | grep -i 'SHA-256' | head -1 | grep -oE '[0-9a-f]{64}')"
+            echo "$apk -> $fp"
+            [ "$fp" = "$repo_fp" ] || { echo "::error::$apk farklı imzalı ($fp) — Mihon/Kototoro auto-trust kırılırdı"; exit 1; }
+          done
+
+      - name: Publish into repo dirs (root + pulsar-v2/repo)
+        run: |
+          rm -rf apk && mkdir -p apk
+          cp pulsar-v2/repo-build/apk/*.apk apk/
+          cp pulsar-v2/repo-build/index.min.json index.min.json
+          cp pulsar-v2/repo-build/repo.json repo.json
+          rm -rf pulsar-v2/repo/apk pulsar-v2/repo/icon
+          mkdir -p pulsar-v2/repo/apk
+          cp pulsar-v2/repo-build/apk/*.apk pulsar-v2/repo/apk/
+          cp pulsar-v2/repo-build/index.min.json pulsar-v2/repo/index.min.json
+          cp pulsar-v2/repo-build/repo.json pulsar-v2/repo/repo.json
+
+      - name: Commit and push artifacts
+        run: |
+          git config user.name "pulsar-build-bot"
+          git config user.email "noreply@pulsariums.dev"
+          git add -A apk index.min.json repo.json pulsar-v2/repo pulsar-v2/extension/src/main/assets
+          git commit -m "build(pulsar): kendi eklenti APK'lari derlendi ve yayinlandi" || echo "degisiklik yok"
+          git push origin HEAD:main
+
+      - name: Verify live index
+        run: |
+          sleep 5
+          curl -s "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/index.min.json" | python3 -m json.tool | head -40
