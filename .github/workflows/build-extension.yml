@@ -38,15 +38,17 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: 'Ensure Android SDK components (stable platform 36 + build-tools)'
+      - name: 'Ensure Android SDK components (API 37 + build-tools)'
         run: |
           export ANDROID_HOME="/usr/local/lib/android/sdk"
           [ -d "$ANDROID_HOME" ] || export ANDROID_HOME="$ANDROID_SDK_ROOT"
           echo "ANDROID_HOME=$ANDROID_HOME" >> $GITHUB_ENV
           SDKM="$(ls "$ANDROID_HOME"/cmdline-tools/*/bin/sdkmanager | sort -V | tail -1)"
           yes | "$SDKM" --sdk_root="$ANDROID_HOME" --licenses >/dev/null 2>&1 || true
+          # API 37 paketleri minor ("android-37.0") olarak listeleniyor; klasör android-37 olur.
           "$SDKM" --sdk_root="$ANDROID_HOME" \
-            "platforms;android-36" "build-tools;36.0.0" "build-tools;34.0.0"
+            "platforms;android-37.0" "build-tools;37.0.0" "build-tools;34.0.0" "platform-tools"
+          ls -d "$ANDROID_HOME"/platforms/android-37 >/dev/null
           ls "$ANDROID_HOME"/build-tools/*/aapt >/dev/null
 
       - name: Generate throwaway signing key (fingerprint read from APKs later)
