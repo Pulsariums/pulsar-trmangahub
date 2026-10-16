@@ -38,7 +38,7 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Ensure Android SDK components for mihon v0.20.1 (compile 37 / target 36 / ndk 29)
+      - name: Ensure Android SDK components (stable: platform 36 + build-tools)
         run: |
           export ANDROID_HOME="/usr/local/lib/android/sdk"
           [ -d "$ANDROID_HOME" ] || export ANDROID_HOME="$ANDROID_SDK_ROOT"
@@ -46,7 +46,7 @@ jobs:
           SDKM="$(ls "$ANDROID_HOME"/cmdline-tools/*/bin/sdkmanager | sort -V | tail -1)"
           yes | "$SDKM" --sdk_root="$ANDROID_HOME" --licenses >/dev/null 2>&1 || true
           "$SDKM" --sdk_root="$ANDROID_HOME" \
-            "platforms;android-37" "build-tools;37.0.0" "build-tools;34.0.0" "ndk;29.0.14206865"
+            "platforms;android-36" "build-tools;36.0.0" "build-tools;34.0.0"
           ls "$ANDROID_HOME"/build-tools/*/aapt >/dev/null
 
       - name: Generate throwaway signing key (fingerprint read from APKs later)

@@ -54,6 +54,19 @@ python3 "$ROOT/scripts/06_prepare_assets.py"
 echo "── fetch upstream Mihon (build-time API only)"
 git clone --quiet --depth 1 --branch "$MIHON_REF" "$MIHON_REPO" "$WORK/mihon"
 
+# android-37 henüz önizleme kanalında ve runner'larda kurulabilir değil;
+# geçici checkout'un KATALOĞUNU kararlı API 36'ya sabitle. NDK yalnız :app'in
+# native build'indedir; eklenti modülü için runner'da kurulu son sürtere çek.
+# Bu yalnız DERLEME konfigürasyonudur — kaynak koduna/AKT (source-api) dokunmaz,
+# eklenti runtime davranışını (tachiyomix.extensionLib) değiştirmez.
+sed -i -E 's/^android-sdk-compile = .*/android-sdk-compile = "36"/; s/^android-sdk-target = .*/android-sdk-target = "36"/' \
+    "$WORK/mihon/gradle/mihon.versions.toml"
+NDK_LATEST="$(ls "$ANDROID_HOME/ndk" 2>/dev/null | sort -V | tail -1 || true)"
+if [ -n "$NDK_LATEST" ]; then
+    sed -i -E "s/^android-ndk = .*/android-ndk = \"$NDK_LATEST\"/" "$WORK/mihon/gradle/mihon.versions.toml"
+fi
+echo "── SDK catalog patched: $(grep -E 'android-(sdk-compile|sdk-target|ndk)' "$WORK/mihon/gradle/mihon.versions.toml" | tr '\n' ' ')"
+
 # 2) Modülümüzü bağla.
 echo "── wire :pulsar-extension into the checkout"
 cp -R "$ROOT/extension" "$WORK/mihon/pulsar-extension"
