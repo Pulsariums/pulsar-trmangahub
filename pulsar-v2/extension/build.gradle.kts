@@ -42,6 +42,11 @@ android {
         manifestPlaceholders["pulsarName"] = pulsarName
     }
 
+    buildFeatures {
+        // Nyora porter: mihonx android-base plugini kapali birakir, modül açar.
+        buildConfig = true
+    }
+
     signingConfigs {
         create("pulsar") {
             // Tek kararlı imza anahtarı: CI'da workflows/derleme adımında her seferinde
