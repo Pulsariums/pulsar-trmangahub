@@ -42,7 +42,7 @@ class PulsarSourceFactory : SourceFactory {
         runCatching { PulsarPatches.load(app) }
 
         // 1) kotatsu-parsers motoru — Nyora'nın kanıtladığı enum yolu
-        val engine = runCatching {
+        val engine: List<Source> = runCatching<List<Source>> {
             MangaParserSource.entries.mapNotNull { entry ->
                 runCatching {
                     val name = entry.name
@@ -57,15 +57,15 @@ class PulsarSourceFactory : SourceFactory {
         }.getOrDefault(emptyList())
 
         // 2) kendi data-driven kataloğumuz — motorun tanımadığı TR/özel siteler
-        val catalogue = runCatching {
+        val catalogue: List<Source> = runCatching<List<Source>> {
             val jsonText = app.assets.open("catalogue.json").use {
                 InputStreamReader(it, Charsets.UTF_8).readText()
             }
             val root = JSONObject(jsonText)
-            val sourcesArray = root.optJSONArray("sources") ?: return@runCatching emptyList()
+            val sourcesArray = root.optJSONArray("sources")
 
             val list = mutableListOf<Source>()
-            for (i in 0 until sourcesArray.length()) {
+            if (sourcesArray != null) for (i in 0 until sourcesArray.length()) {
                 val item = sourcesArray.optJSONObject(i) ?: continue
                 val itemLang = item.optString("lang", "all").lowercase()
                 if (targetLang != "all" && itemLang != targetLang) continue

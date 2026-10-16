@@ -89,7 +89,7 @@ class PulsarSource(
             title = doc.selectFirst("h1, .entry-title")?.text()?.trim() ?: "Manga"
             description = doc.selectFirst("div.description, div.manga-description, div.summary__content, div.entry-content")?.text()?.trim()
             thumbnail_url = doc.selectFirst("div.thumb img, div.manga-poster img, div.summary_image img")?.let { img ->
-                img.attr("data-src").ifBlank { null } ?: img.attr("src").ifBlank { null }
+                img.attr("data-src").ifBlank { null as String? } ?: img.attr("src").ifBlank { null as String? }
             }
             status = SManga.UNKNOWN
         }

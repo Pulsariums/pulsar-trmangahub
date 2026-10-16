@@ -82,6 +82,10 @@ dependencies {
     implementation("com.github.clquwu:kotatsu-parsers-redo:$parsersRef")
     implementation("org.jsoup:jsoup:1.17.2")
     implementation("org.json:json:20240303")
+    // org.json'in return-types'inda @Nullable annotation sınıfıreferans veriyor;
+    // derleme sınıfyolunda jspecify olmadan tip çıkarımı patlıyor. Hostta yok —
+    // compileOnly yeter (APK'ya gimez).
+    compileOnly("org.jspecify:jspecify:1.0.0")
 }
 
 // Mihon host Kotlin stdlib/coroutines/okhttp'i kendisi sağlar; APK'ya ikinci kopyayı
