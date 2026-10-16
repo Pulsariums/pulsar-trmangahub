@@ -166,19 +166,19 @@ internal class Ragnarscans(context: MangaLoaderContext) :
 		const val LIST_PATH = "/"
 		val PAGE_PARAM: String? = null
 		val SEARCH_SUPPORTED: Boolean = false
-		const val LIST_ITEM = "div"
-		const val CHAPTER_ITEM = "div.chapter-item.uk-grid-margin.uk-first-column"
-		const val READER_IMAGES = "ul.uk-comment-list img"
+		const val LIST_ITEM = "div.manga-card"
+		const val CHAPTER_ITEM = "div.chapter-item"
+		const val READER_IMAGES = "#init-manga-single-chapter > div:nth-of-type(3) > div:nth-of-type(3) > div > ul img"
 		val READER_ATTRS = listOf("src", "data-src")
 
 		val SEL_LIST_LINK: Sel? = Sel("a", "href")
 		val SEL_LIST_TITLE: Sel? = Sel("img", "alt")
 		val SEL_LIST_COVER: Sel? = Sel("img", "src")
-		val SEL_DETAIL_TITLE: Sel? = Sel("h1.uk-margin-remove-bottom.uk-h3.uk-text-bold", null)
+		val SEL_DETAIL_TITLE: Sel? = Sel("h1", null)
 		val SEL_DETAIL_COVER: Sel? = Sel("meta[property=\"og:image\"]", "content")
-		val SEL_DETAIL_DESCRIPTION: Sel? = Sel("div.max-3-line.uk-position-relative.uk-text-justify", null)
+		val SEL_DETAIL_DESCRIPTION: Sel? = Sel("#manga-description", null)
 		val SEL_DETAIL_GENRES: Sel? = null
-		val SEL_DETAIL_STATUS: Sel? = Sel("#view-comic > div:nth-of-type(3) > div:nth-of-type(1)", null)
+		val SEL_DETAIL_STATUS: Sel? = Sel("#view-comic > div:nth-of-type(3) > div", null)
 		val SEL_CHAPTER_LINK: Sel? = Sel("a", "href")
 		val SEL_CHAPTER_TITLE: Sel? = Sel("a", null)
 

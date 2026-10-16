@@ -1,0 +1,21 @@
+{
+  "_note": "Kullanicinin Kototoro'dan elle test edip export ettigi, GERCEKTEN CALISAN kaynaklarin grup export dosyasi. packages listesindeki her mihon pkg, kullanici tarafindan tek tek denenip calistigi dogrulanmis bir kaynaktir. Bu dosya otomatik test zincirinin (triage/stage1/stage2/stage3) karsilastirma zeminidir (ground truth) - otomatik testler bu listedekileri 'fail' derse, testin kendisi yanlis-negatif uretiyor demektir, kaynagin kendisi degil.",
+  "source": "Kullanici tarafindan saglanan Kototoro grup export JSON'u (2026-10-16)",
+  "schema": 1,
+  "name": "türkçe birlik",
+  "repos": [
+    {"type": "JAR", "url": "https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/jar", "name": "Pulsariums/pulsar-trmangahub"},
+    {"type": "JAR", "url": "https://raw.githubusercontent.com/skepsun/k-parsers-r/repo", "name": "skepsun/k-parsers-r"},
+    {"type": "JAR", "url": "https://raw.githubusercontent.com/skepsun/kototoro-parsers/repo", "name": "skepsun/kototoro-parsers"},
+    {"type": "MIHON", "url": "https://github.com/keiyoushi/extensions/raw/repo/index.pb", "name": "KEI"},
+    {"type": "MIHON", "url": "https://raw.githubusercontent.com/Nyora-Manga/nyora-mihon/main", "name": "Nyora"}
+  ],
+  "verified_mihon_packages": [
+    "eldermanga", "mindafansub", "diamondfansub", "mangatilkisi", "merlinscans", "sleptmanga",
+    "juratempest", "kuroimanga", "shijiescans", "mikrokosmosfansub", "mangacix", "turkcemangaoku",
+    "toontaku", "anikiga", "gafeland", "tortugaceviri", "koreliscans", "eskimangalar", "yaoiflix",
+    "ruyamanga", "webtoonoku", "korelimanga", "patimanga", "gaiatoon", "uzaymanga", "sereinscan",
+    "afroditscans", "mangitto", "mangawow", "mangadiyari", "lunascans", "golgebahcesi", "orimanga",
+    "webtoonhatti", "mangawt", "limonmanga", "arcurafansub", "tenshimanga", "mangadenizi"
+  ]
+}

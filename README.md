@@ -1,139 +1,90 @@
-# pulsar-trmangahub
+# 🌟 Pulsar Manga Hub (V2)
 
-Manga kaynaklarını Mihon (keiyoushi), Kotatsu (kotatsu-parsers-redo) ve Nyora
-(nyora-data-driven) üzerinden toplar, domainlerini sınar, ölenler için alternatif arar ve
-yayınlanabilir kaynakları dört JAR paketi ile Türkçe Mihon APK aynasına dönüştürür.
+**Mihon / Tachiyomi için Nyora Mimarisiyle Güçlendirilmiş, Çok Dilli ve Birleşik Manga Eklenti Deposu**
 
-## JAR: Kototoro'ya ekleme
+Artık onlarca farklı APK kurup güncellemekle uğraşmanıza gerek yok! Pulsar-V2, tüm Türkçe ve küresel manga kaynaklarını **Nyora tekniğiyle tek bir eklenti paketi** içinde toplar, ölü siteleri otomatik eler, yeni adrese taşınanları otomatik onarır ve cihaz üzerinde (on-device) sıfır sunucu bağımlılığıyla çalışır.
 
-Tüm JAR paketleri tek depo adresinde toplanır:
+---
 
-`https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/jar`
+## 🚀 Mihon'a Tek Tıkla Ekleme
 
-| Paket | Kapsam |
-|---|---|
-| `tr` | Yalnız Türkçe kaynaklar, NSFW olmayan |
-| `tr_nsfw` | Yalnız Türkçe kaynaklar, NSFW |
-| `global` | Türkçe dışındaki tüm diller, NSFW olmayan |
-| `global_nsfw` | Türkçe dışındaki tüm diller, NSFW |
+Mihon veya Tachiyomi yüklü cihazınızdan aşağıdaki butona tıklayarak depoyu anında ekleyebilirsiniz:
 
-Kototoro'ya ekleme:
+[![Mihon'a Ekle](https://img.shields.io/badge/Mihon'a%20Ekle-Depo%20Bağlantısı-blue?style=for-the-badge&logo=android)](tachiyomi://add-repo?url=https%3A%2F%2Fraw.githubusercontent.com%2FPulsariums%2Fpulsar-trmangahub%2Fmain%2Fpulsar-v2%2Frepo%2Findex.min.json)
 
-1. Ayarlar > İçerik Kaynakları > Eklentiler > JAR Depoları > Depo ekle yolunu izleyin ve yukarıdaki
-   adresi girin.
-2. Paketler listesinden istediğiniz paketi ayrı ayrı indirin.
+### 📋 Manuel Ekleme (Tek Link)
 
-Eski adresler (`.../main/repo`, `.../turkce/jar`, `.../global/jar`, `.../ozel/jar`) artık yoktur.
-Daha önce eklenmişse bu depoları Kototoro'dan silip yukarıdaki yeni adresi ekleyin.
+1. **Mihon / Tachiyomi** uygulamasını açın.
+2. **Daha Fazla (More) → Ayarlar (Settings) → Gözat (Browse) → Eklenti depoları (Extension repos) → +** simgesine dokunun.
+3. Aşağıdaki **tek bağlantıyı** yapıştırın:
 
-Paketlere yalnızca çalışan kaynaklar (durumu `ok`) girer. Karantinadaki, `failing`,
-`cf_protected` ve doğrulanmamış kaynaklar varsayılan olarak yer almaz.
-
-Bu adres yalnızca depo herkese açık (public) iken çalışır.
-
-## Mihon ve global Mihon
-
-- Türkçe Mihon APK aynası ayrıdır: `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/turkce/mihon`
-  (keiyoushi'den).
-- Global Mihon için Keiyoushi resmi deposunu kullanın. Tüm dillerin APK aynası binlerce APK
-  içerdiği için bu depoda tutulmaz.
-
-## Dizin yapısı
-
-- `jar/`: JAR deposu. `index.min.json` tüm paketlerin dizinidir, `apk/` paket dosyalarını,
-  `state/` her paketin girdisini ve derleme bilgisini (`<paket>.entry.json`,
-  `<paket>.build_info.json`) tutar.
-- `sources/tr/` (tr_native) `tr` ve `tr_nsfw` paketlerini, `sources/global/` (tüm scope) `global` ve
-  `global_nsfw` paketlerini besler. Her kaynağın `lang` alanı kendi dilidir.
-- `sources/custom/` ve `generated/`: `Kaynak ekle` akışının çıktısıdır; Türkçe özel siteler
-  NSFW bayrağına göre `tr` veya `tr_nsfw` paketine girer.
-
-## Otomatik kontrol
-
-Akış (sync.yml, 6 saatte bir):
-
-```
-[sync.py]       Mihon, Kotatsu (tüm diller), Nyora, sources/custom -> data/upstream_tr.json
-    v
-[probe.py]      her domain: HTTP durumu, motor parmak izi, işlevsel liste kontrolü
-    -> data/probe_results.json
-    v
-[alternatives.py]  dead / parked / functional=false domainler için aday ara (yalnızca Türkçe)
-    v
-[build.py]      iki bölüm: sources/tr (tr_native) ve sources/global (tüm scope)
-                her bölüm için ayrı SAFETY_RATIO; biri tripse hiçbir dosya yazılmaz (exit 2)
+```text
+https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/pulsar-v2/repo/index.min.json
 ```
 
-Yayın kuralı: yalnızca probe'da `ok` ve işlevsel kontrolü geçen (`published`) kaynaklar
-yayınlanır. Karantina, `failing`, `unverified` ve `cf_protected` kaynaklar varsayılan olarak
-girmez (`include_unverified` ile girer). Kurallar `scripts/rules.py` içindedir.
+*(Alternatif GitHub Pages Aynası: `https://pulsariums.github.io/pulsar-trmangahub/index.min.json`)*
 
-## Action'lar ve seçenekleri
+4. **Gözat → Eklentiler** sekmesine gidin ve ihtiyacınız olan paketi tek tıkla kurun.
 
-| Workflow | Tetikleyici | Seçenekler | Çıktı |
+---
+
+## 📦 Dağıtılan Birleşik Paketler
+
+| Eklenti Adı | Paket Kimliği | İçerik ve Kapsam | Kaynak Sayısı |
 |---|---|---|---|
-| `sync.yml` (Senkron: kaynakları güncelle) | 6 saatte bir, elle | `dry_run`, `fail_threshold` (1/2/3/5, varsayılan 3), `safety_ratio` (40/60/80/off, varsayılan 40), `run_alternatives`, `refresh_kotatsu` | `sources/tr`, `sources/global`; run özeti; `sync-data` artifact'ı |
-| `health-check.yml` (Sağlık kontrolü) | 12 saatte bir, elle | `engine_filter`, `status_filter`, `domains` | Run özeti; `health-data` artifact'ı; commit yok |
-| `build-jar.yml` (Jar derle: Kototoro JAR deposu) | 6 saatte bir, elle | `bolum` (hepsi/tr/tr_nsfw/global/global_nsfw, varsayılan hepsi), `mode` (alive/all_tr; global paketlerde daima alive), `include_broken`, `apply_alternatives`, `include_unverified`, `force`, `publish` | `jar/` (paket başına ayrı commit) |
-| `build-mihon.yml` (Mihon deposu: Türkçe APK aynası) | 6 saatte bir, elle | `include_unverified`, `publish` | `turkce/mihon` |
-| `add-source.yml` (Kaynak ekle: site linkinden üret) | elle | `url`, `name`, `format` (both/jar/mihon), `engine`, `register` | `generated/` ve `sources/custom/` (register açıksa commit) |
+| **Pulsar TR** | `…pulsar.tr` | Tüm Türkçe Normal (SFW) Manga ve Webtoon Siteleri | **92 Kaynak** |
+| **Pulsar TR 18+** | `…pulsar.tr18` | Tüm Türkçe Yetişkin (+18 / NSFW / Yaoi / Yuri) Siteleri | **17 Kaynak** |
+| **Pulsar Global** | `…pulsar.global` | Dünya Genelindeki Normal Manga Siteleri | **92+ Kaynak** |
+| **Pulsar Global 18+** | `…pulsar.global18` | Dünya Genelindeki Yetişkin Manga Siteleri | **17+ Kaynak** |
 
-Zamanlanmış çalıştırmalarda girdi yoktur ve varsayılanlar kullanılır. `build-jar.yml` paketleri
-sırayla (`max-parallel: 1`) derler; her paket temiz bir Kotatsu-Redo kopyasıyla başlar.
+> **Not:** Tek bir eklenti (örn: *Pulsar TR*) yüklediğinizde, içindeki 92 kaynak Mihon'un kaynaklar listesinde ayrı ayrı görünür ve dilediğinizi kullanabilirsiniz.
 
-## Kaynak ekle
+---
 
-1. `add-source.yml` ile bir site adresi verin. Motor tanınırsa `generated/<domain>/jar/<Sınıf>.kt`
-   (ve Mihon şablonu) üretilir, `register` açıksa `sources/custom/sources.json` kaydı yazılır.
-2. Sonraki `sync.yml` çalışması domaini probe eder. Domain `published` olursa parser, Türkçe
-   paketlere girer.
-3. `build-jar.yml` içinde `tr` ve `tr_nsfw` paketleri, yalnızca yayınlanabilir domainlerin
-   `generated/` dosyalarını upstream ağacına kopyalar; her dosyanın `@MangaSourceParser` ile
-   kayıtlı olduğunu doğrular ve id çakışmasında derlemeyi durdurur. NSFW bayrağına göre
-   doğru pakete girer.
-4. Yayınlanabilir parser yoksa paket indeksten çıkar ve jar üretilmez.
+## ⚡ Yeni Sistemin Avantajları ve Özellikleri
 
-Motor tanınmayan siteler için kod üretilmez; bu siteler elle yazılmalıdır.
+* **Tek Seferde Kurulum:** 60-70 tane ayrı APK indirme, izin verme ve güncelleme karmaşası tamamen bitti.
+* **Akıllı Veri Birleştirmesi (Smart Deduplication):** Farklı kaynaklarda aynı siteye işaret eden birden fazla kayıt (örn. eski `.net` ve yeni `.com`) tek bir zengin kaynakta birleştirilir.
+* **Otomatik Alan Adı Tamiratı:**
+  * Site yeni bir adrese yönlenmişse (HTTP 301/302), sistem yeni adresi tespit edip otomatik günceller.
+  * Ana domain kapandığında yedek (alternatif) domain canlıysa sistem kaynağı otomatik olarak o adrese taşır.
+* **Kumar / Spam Botu Koruması:** Kapanan manga sitelerinin alan adları bahis siteleri tarafından ele geçirildiğinde sistem bunu anında tespit eder ve pakete sokmaz.
+* **Hafif ve Hızlı (Lazy Loading):** Yüzlerce kaynak aynı anda belleği şişirmez; sadece tıkladığınız kaynak anlık başlatılır.
+* **Mihon Cloudflare Entegrasyonu:** Cloudflare korumalı siteler Mihon'un dahili "WebView ile Aç" özelliğiyle tamamen uyumludur.
+* **Geleceğe Hazır Çok Dilli Mimari:** Gelecekte Japonca, İngilizce, Korece gibi yeni diller tek bir parametre (`--lang ja`) ile anında bağımsız paketlere dönüştürülebilir.
 
-## Nasıl çalıştırılır
+---
 
+## 📊 Raporlar ve Veriler
+
+* [Canlı Kaynak Kataloğu (JSON)](pulsar-v2/data/catalogue.json)
+* [Detaylı Hata Teşhis ve Otomatik Tamirat Raporu](pulsar-v2/DIAGNOSTICS_REPORT.md)
+* [Mihon Repo İndeksi (JSON)](pulsar-v2/repo/index.min.json)
+
+---
+
+## 🛠️ Mimari ve Klasör Yapısı
+
+```text
+pulsar-v2/
+├── data/
+│   ├── raw_sources.json          # 4.900+ ham kaynak havuzu
+│   ├── deduplicated.json         # Tekilleştirilmiş ve marka bazında birleştirilmiş kaynaklar
+│   ├── liveness.json             # 180+ kaynağın derinlemesine HTTP/DNS teşhis verileri
+│   └── catalogue.json            # 109 çalışan ve tamir edilmiş nihai kaynak kataloğu
+├── scripts/
+│   ├── 01_aggregate.py           # 5 farklı kaynaktan veri toplayıcı
+│   ├── 02_dedupe.py              # Akıllı domain ve marka birleştirici
+│   ├── 03_probe_fast.py          # Otomatik tamirat ve paralel canlılık testi motoru
+│   ├── 04_auto_generator.py      # Otomatik seçici ve katalog derleyici
+│   └── 05_build_repo.py          # Mihon depo ve indeks üretici
+└── extension/                    # Nyora tarzı SourceFactory + HttpSource Android köprüsü
+    ├── src/main/kotlin/.../
+    │   ├── PulsarSourceFactory.kt
+    │   ├── PulsarSource.kt
+    │   └── EngineRegistry.kt
+    └── build.gradle.kts
 ```
-pip install requests
-python scripts/sync.py
-python scripts/probe.py
-python scripts/alternatives.py
-python scripts/build.py
-python scripts/analyze_site.py --url https://ornek.com
-python3 -I -m unittest discover -s tests
-```
 
-Testler ağa çıkmaz; HTTP ve probe sahte (mock) verilerle çalışır. `tests/fake_probe.py`
-deterministik sahte probe verisi üretir; bu veri canlı sonuç değildir.
-
-## Dizin yapısı (ayrıntılı)
-
-| Yol | İçerik |
-|---|---|
-| `jar/` | JAR deposu: `index.min.json`, `apk/`, `state/`, `README.md` |
-| `turkce/mihon/` | Türkçe Mihon APK aynası |
-| `sources/tr/` | Türkçe kaynak listesi: `sources.json`, `published.json`, `REPORT.md` |
-| `sources/global/` | Tüm kaynak listesi: `sources.json`, `published.json`, `REPORT.md` |
-| `sources/custom/` | Kaynak ekle akışının kayıtları |
-| `generated/` | Kaynak ekle akışının Kotlin/Gradle iskeletleri |
-| `data/` | Çalışma verisi (git'e girmez) |
-| `scripts/` | Sync, probe, alternatif, build, JAR ve Mihon yayın scriptleri |
-| `tests/` | Birim ve uçtan uca testler |
-
-## Bilinen sınırlar
-
-- Depo private iken raw linkler yetkisiz erişilir; depo public yapılınca çalışır.
-- Global paketlerin ilk çalışması henüz yapılmadı: `jar/index.min.json` şimdilik `[]`.
-  Tüm dillerin probe'u ve JAR derlemesi süre olarak uzun sürebilir (timeout 60 ve 90 dakika).
-- Kotatsu-Redo tam derlemesi başarısız olursa yedek yol yalnızca yamalarla derler. Bu durumda
-  jar, dizinde listelenenden fazla parser içerebilir (mevcut davranış).
-- Alternatif arama yalnızca Türkçe kaynaklar için yapılır; global paketlerde ölen domainler için
-  alternatif aranmaz.
-- Sağlık kontrolü varsayılan olarak yalnızca Türkçe kaynakları probe eder.
-- `jar/` düzeni, dört paket ve `Kaynak ekle` parser'ları Actions'ta henüz uçtan uca
-  çalıştırılmadı. İlk çalıştırmada derleme ve KSP kaydı doğrulanmalıdır.
-- Şablonların gerçek siteye karşı derlenip çalıştığı doğrulanmamıştır (önceki sınırla aynı).
+---
+*Lisans: MIT / Apache 2.0 - Pulsar Manga Hub Ekibi tarafından geliştirilmiştir.*

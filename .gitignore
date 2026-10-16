@@ -5,3 +5,9 @@ __pycache__/
 data/*
 !data/live/
 site/
+node_modules/
+package.json
+package-lock.json
+recon-out/
+.zcode/
+.zcodeignore

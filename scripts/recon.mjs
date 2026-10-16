@@ -21,7 +21,14 @@ function pickLinks(links, origin) {
 
 function browserExtract(req) {
   const ok = (s) => /^[A-Za-z][\w-]*$/.test(s);
-  const sigOf = (el) => el.tagName.toLowerCase() + [...el.classList].filter(ok).slice(0, 3).map((c) => '.' + CSS.escape(c)).join('');
+  // UIkit (uk-*), Bootstrap/Tailwind'in bazi JS-only durum class'lari (is-*, has-*, active, show,
+  // in, fade, collapsing) ve framework'lerin runtime'da ekledigi class'lar: bunlar sayfa YUKLENDIKTEN
+  // SONRA JS ile eklenir, duz HTTP fetch + Jsoup/parser statik HTML'inde HIC gorunmez. Secici imzasina
+  // bu class'lari katmak, recon'un parser'in asla eslemeyecegi bir secici onermesine yol acar (bkz.
+  // ragnarscans.net: "uk-grid-margin uk-first-column" boylece secilmis, statik HTML'de 0 esanisir).
+  const RUNTIME_CLASS_RE = /^(uk-|is-|has-|js-|active$|show$|in$|fade$|collapsing$|open$|visible$|hidden$)/;
+  const stable = (s) => ok(s) && !RUNTIME_CLASS_RE.test(s);
+  const sigOf = (el) => el.tagName.toLowerCase() + [...el.classList].filter(stable).slice(0, 3).map((c) => '.' + CSS.escape(c)).join('');
   const uniqueSel = (el) => {
     const s = sigOf(el);
     if (document.querySelectorAll(s).length === 1) return s;
@@ -311,7 +318,15 @@ for (const raw of sites) {
     const sp = new URL(series).pathname.replace(/\/$/, '');
     detailSpec = await evalDom(page, { op: 'detail', seriesPath: sp });
     const links2 = await page.$$eval('a[href]', (as) => as.map((a) => a.href)).catch(() => []);
-    const chap = links2.map((h) => h.split('#')[0]).filter((h) => h.startsWith(origin)).find((h) => new URL(h).pathname.startsWith(sp + '/') || /(bolum|chapter|episode)/i.test(h));
+    // Not: sp + '/' ile baslayan kontrolu, seri sayfasinin KENDI url'ini de "startsWith" yapar
+    // (bir string kendisiyle baslar) - bu yuzden pathname'in sp'den UZUN olmasini da sartiyoruz,
+    // yoksa "chapter" linki olarak seri sayfasinin kendisi secilip reader hic calismaz.
+    const chap = links2.map((h) => h.split('#')[0]).filter((h) => h.startsWith(origin))
+      .find((h) => {
+        const p = new URL(h).pathname.replace(/\/$/, '');
+        if (p === sp) return false; // seri sayfasinin kendisi: aday degil
+        return p.startsWith(sp + '/') || /(bolum|chapter|episode)/i.test(h);
+      });
     log.links.chapter = chap || null;
     if (chap) {
       await visit(page, chap, log, 'reader');

@@ -5,26 +5,26 @@
  "list": {
   "path": "/",
   "pageParam": "",
-  "item": "div",
+  "item": "div.manga-card",
   "link": "a",
   "title": "img|attr:alt",
   "cover": "img@src",
-  "itemCount": 18
+  "itemCount": 24
  },
  "detail": {
-  "title": "h1.uk-margin-remove-bottom.uk-h3.uk-text-bold",
+  "title": "h1",
   "cover": "meta[property=\"og:image\"]@content",
-  "description": "div.max-3-line.uk-position-relative.uk-text-justify",
+  "description": "#manga-description",
   "genres": "",
-  "status": "#view-comic > div:nth-of-type(3) > div:nth-of-type(1)",
-  "chapterItem": "div.chapter-item.uk-grid-margin.uk-first-column",
+  "status": "#view-comic > div:nth-of-type(3) > div",
+  "chapterItem": "div.chapter-item",
   "chapterLink": "a@href",
   "chapterTitle": "a"
  },
  "reader": {
-  "images": "ul.uk-comment-list img",
+  "images": "#init-manga-single-chapter > div:nth-of-type(3) > div:nth-of-type(3) > div > ul img",
   "attr": "src",
-  "count": 2
+  "count": 23
  },
  "api": [
   {
@@ -38,7 +38,7 @@
    "kind": "other"
   },
   {
-   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261013&st=env&sjk=7096264280378381",
+   "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261015&st=env&sjk=7562430107503086",
    "method": "GET",
    "kind": "other"
   }
@@ -49,7 +49,7 @@
   "reader": 1
  },
  "notes": [
-  "list: 18 items at /",
-  "pagination: /page/N (pageParam empty)"
+  "list: 24 items at /",
+  "pagination: not detected"
  ]
 }
