@@ -42,6 +42,14 @@ flavor_name() {
 
 FLAVORS="${FLAVORS:-tr,tr18,global,global18}"
 
+# Sürüm: versionCode ARTMALI ki bakım tamirleri cihazda "güncelleme" olsun.
+# CI'da GITHUB_RUN_NUMBER (monotonik); yerelde sabit 1. versionName kontratı:
+# major.minor TEMEL'e sabit (extensionLib), patch = run numarası → "1.6.<run>".
+PULSAR_LIB_BASE="${PULSAR_LIB_BASE:-1.6}"
+PULSAR_VERSION_CODE="${PULSAR_VERSION_CODE:-${GITHUB_RUN_NUMBER:-1}}"
+PULSAR_VERSION_NAME="${PULSAR_VERSION_NAME:-${PULSAR_LIB_BASE}.${PULSAR_VERSION_CODE}}"
+echo "▶ sürüm: versionCode=$PULSAR_VERSION_CODE versionName=$PULSAR_VERSION_NAME"
+
 echo "▶ pulsar-v2 build  (mihon@$MIHON_REF, parsers@$PARSERS_REF, flavors: $FLAVORS)"
 rm -rf "$WORK"
 mkdir -p "$WORK" "$ROOT/repo-build/apk" "$ROOT/repo-build/icon"
@@ -85,6 +93,8 @@ for f in "${FLIST[@]}"; do
             -PpulsarName="$name" \
             -PpulsarLang="$lang" \
             -PpulsarNsfw="$nsfw" \
+            -PpulsarVersionCode="$PULSAR_VERSION_CODE" \
+            -PpulsarVersionName="$PULSAR_VERSION_NAME" \
             -PparsersRef="$PARSERS_REF" \
             -PpulsarKeystore="$KEYSTORE"
     )

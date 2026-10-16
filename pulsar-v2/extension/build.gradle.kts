@@ -21,20 +21,25 @@ val pulsarLang = prop("pulsarLang", "all")
 val pulsarNsfw = prop("pulsarNsfw", "0")
 // kotatsu-parsers-redo revresi (JitPack). pulsar_build.sh bunu her derlemede geçebilir.
 val parsersRef = prop("parsersRef", "59c033ecfd")
+// Sürüm artık DERLEME-ZAMANİ girdidir (pulsar_build.sh → GITHUB_RUN_NUMBER):
+// bakım tamirleri yeniden yayınlandığında cihazın güncellemeyi GÖRMESİ için
+// versionCode ARTMALI. Sabit 1 kalırsa index code hep 1 → cihaz asla güncellemez.
+val pulsarVersionCode = prop("pulsarVersionCode", "1")
+val pulsarVersionName = prop("pulsarVersionName", "1.6.1")
 
 android {
     namespace = "eu.kanade.tachiyomi.extension.all.pulsar"
 
     defaultConfig {
         applicationId = "eu.kanade.tachiyomi.extension.all.pulsar$pulsarPkgSuffix"
-        versionCode = 1
+        versionCode = pulsarVersionCode.toInt()
         // KONTRAT (Nyora'dan örnek alınan Mihon davranışı): versionName TAM OLARAK
         // "<tachiyomix.extensionLib>.<patch>" biçiminde olmalı. Mihon repo libVersion'ı
         // versionName.substringBeforeLast('.') olarak türetir; manifest'teki
         // extensionLib'den (1.6) büyük olursa "kalıcı güncelleme rozeti" oluşur.
         // generate_repo.py bunu APK'nın kendi manifestine karşı doğrular ve patlar.
         // minSdk/targetSdk/compileSdk/desugaring: mihonx android-base plugini ayarlar.
-        versionName = "1.6.1"
+        versionName = pulsarVersionName
 
         buildConfigField("String", "PULSAR_LANG", "\"$pulsarLang\"")
         buildConfigField("boolean", "PULSAR_NSFW", (pulsarNsfw != "0").toString())
