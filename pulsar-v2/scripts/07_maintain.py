@@ -36,6 +36,7 @@ import re
 import ssl
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -144,6 +145,15 @@ def fetch(url, timeout=12):
         req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "tr"})
         with urllib.request.urlopen(req, timeout=timeout, context=CTX) as r:
             return r.status, r.geturl(), r.read(200_000).decode("utf-8", "replace")
+    except urllib.error.HTTPError as e:
+        # 4xx/5xx bir SUNUCU YANITIDIR (429 throttling, 403 kapı, 5xx kaynak
+        # sorunu). Exception'a gömülüp URLError gibi "ölü" sayılmaz — athenamanga
+        # 429 faciasının panzehiri: kodu ayrı taşınır, karantina delili değildir.
+        try:
+            body = e.read(200_000).decode("utf-8", "replace")
+        except Exception:  # noqa: BLE001
+            body = ""
+        return e.code, (e.geturl() or url), body
     except Exception as e:  # noqa: BLE001 — sınıf adını sınıflandırmaya kullanıyoruz
         return 0, url, type(e).__name__ + ": " + str(e)[:200]
 
@@ -174,6 +184,11 @@ def validate_candidate(domain, brand=None, depth=0, must=None, lang=None):
         if "SSL" in kind or "Cert" in kind:
             return False, "sertifika-bozuk"
         return False, f"erişilemedi({kind})"
+    if status >= 400:
+        # Sunucu yanıt veriyor ama ana sayfayı vermiyor: 429 hız limiti, 403
+        # bot kapısı, 5xx kaynak arızası. Site ÖLÜ değildir — karantina delili
+        # de değildir. Ölüm ancak hiç yanıt vermeyince (status==0) kanıtlanır.
+        return False, f"yanit-{status}"
     if apex(final_host) != apex(re.sub(r"^www\.", "", domain.lower())):
         # aday cross-apex yönlendiriyor — hedef ayrı bir sitedir; marka eşecek
         if is_spam_text(text[:60_000]) or SPAM_HOST_RE.search(final_host):
@@ -200,8 +215,6 @@ def validate_candidate(domain, brand=None, depth=0, must=None, lang=None):
             ev = _LANG_EV.get(lang)
             if ev and not ev.search(body[:80_000]) and f'lang="{lang}"' not in body[:40_000]:
                 return False, f"dil-uyumsuz({lang})"
-    if status >= 500:
-        return False, f"5xx({status})"
     return True, "ok"
 
 
@@ -247,6 +260,12 @@ ROT_TLDS = ("com", "net", "org", "info", "xyz", "site", "online", "live", "app",
 # KESİN ölüm sebepleri: pin geri-alımı ve karantina YALNIZ bunlarda.
 # ConnectionReset/timeout/5xx geçicidir — sağlam siteyi "ölü" diye yetim bırakmayız.
 HARD_BADS = ("dns-yok", "sertifika-bozuk", "spam-icerik", "spam-yonlendirme", "spam-desi")
+# Karantina YALNIZ bu kesin kanıtlarla: yerel probe hiç yanıt vermedi (dn-yok/
+# sertifika/spam) VEYA site açıldı ama içeriği bu kaynak değil (manga izi yok,
+# başka marka, yanlış dil). "yanit-4xx/5xx" ve erişilemedi(timeout/reset) burada
+# YOK — sunucu yanıtlıyorsa site canlıdır, tek kötü örnek karantina edemez.
+KESIN_OLUM = HARD_BADS + ("manga-izi-yok", "okuma-sitesi-degil", "marka-başlıkta-yok",
+                          "dil-uyumsuz", "yonlendirme-zinciri")
 
 
 def discover_domains(cur, toks, smap, ov):
@@ -449,7 +468,7 @@ def main():
                          "detail": "source_map'te yok — yabancı eklenti/eski kurulum; dokunulmadı"})
             continue
         cur = (e.get("domain") or src.get("domain") or (next(iter(doms)) if doms else "")).lower()
-        tasks.append((sid, src, klass, doms, cur))
+        tasks.append((sid, src, klass, doms, cur, e.get("steps") or {}))
 
     def last_resort_repair(src, cur, toks):
         """KEŞİF: markanın yeni domainini bul (TLD rotasyonu + DDG + Wayback).
@@ -478,8 +497,13 @@ def main():
         return bool(toks & tokens(o["name"])) or any(t in o["domain"] for t in toks)
 
     def work(t):
-        sid, src, klass, doms, cur = t
+        sid, src, klass, doms, cur, steps = t
         name, kind = src["name"], src["kind"]
+        if steps and (steps.get("LIST") == "pass" or steps.get("SEARCH") == "pass"):
+            # CİHAZ-ZAFERİ KURALI: cihaz listenin kendisini getirdi — site ve
+            # parser CANLI. Tek-adım hatası (anikiga DETAILS 400 faciası)
+            # karantina sebebi DEĞİLDİR; yanlış karantinayı self-heal geri alır.
+            return t, "ok", "cihaz LIST/SEARCH adımını geçti — kaynak canlı sayılır"
         if klass == "SWEEP":
             # Proaktif tarama: testte hiç görünmeyen kaynak da sorgulanır.
             # Yalnız KESİN ölümler (DNS/sertifika/spam) karantinaya gider;
@@ -535,6 +559,13 @@ def main():
                 cok, cwhy = validate_candidate(cand, toks)
                 if cok:
                     return t, f"repair->{cand}", f"aday doğrulandı ({cwhy})"
+            # KARANTİNA SAYGILILIĞI: yerel probe ancak KESİN ölüm gösterir-se
+            # karantina; 4xx/5xx cevap ve timeout belirsizdir, izlenir. Cihazın
+            # UnknownHost'u (DNS sınıfı) + yerel erişimsizlik ise çift kanıttır.
+            kesin = (why in KESIN_OLUM or str(why).startswith("marka-farkli")
+                     or (klass == "DNS" and str(why).startswith("erişilemedi")))
+            if not kesin:
+                return t, "watch", f"{cur}: {why} — sunucu cevap veriyor/erişim belirsiz, kesin ölüm değil, izlenir"
             return t, "quarantine", f"{cur} ölü/{why}; {len(cands)} aynı-dil aday doğrulanamadı"
         return t, "watch", klass
 
@@ -543,13 +574,13 @@ def main():
 
         if sweep:
             done = {t[0] for t in tasks}
-            stasks = [(s["id"], s, "SWEEP", {s.get("domain") or ""}, (s.get("domain") or "").lower())
+            stasks = [(s["id"], s, "SWEEP", {s.get("domain") or ""}, (s.get("domain") or "").lower(), {})
                       for s in smap["engine"] + smap["catalogue"]
                       if s["id"] not in done and s.get("domain") and s.get("lang") == "tr"]
             log(f"sweep: {len(stasks)} TR kaynağı proaktif taranıyor...")
             results += list(pool.map(work, stasks))
 
-    for (sid, src, klass, doms, cur), action, detail in results:
+    for (sid, src, klass, doms, cur, _steps), action, detail in results:
         name, kind = src["name"], src["kind"]
         if action == "ok":
             # KENDİNİ İYİLEŞTİRME: domain bugün CANLI doğrulandıysa eski
