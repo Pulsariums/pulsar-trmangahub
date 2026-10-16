@@ -38,7 +38,7 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Ensure Android SDK components (stable: platform 36 + build-tools)
+      - name: 'Ensure Android SDK components (stable platform 36 + build-tools)'
         run: |
           export ANDROID_HOME="/usr/local/lib/android/sdk"
           [ -d "$ANDROID_HOME" ] || export ANDROID_HOME="$ANDROID_SDK_ROOT"
