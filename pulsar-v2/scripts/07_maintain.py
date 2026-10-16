@@ -36,6 +36,7 @@ import re
 import ssl
 import sys
 import time
+import urllib.parse
 import urllib.request
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -53,18 +54,50 @@ CTX = ssl._create_unverified_context()  # probe amaçlı; onaylamayı içerik ya
 SPAM_RE = re.compile(
     r"bahis|slot|casino|poker|kumar|jackpot|rulet|jack pot|para çekme|yatır|"
     r"crash game|aviator|domain (?:for sale|is parked)|sedoparking|under construction|"
-    r"buy this domain|the domain .{0,40} is (?:for sale|parked)", re.I)
+    r"buy this domain|the domain .{0,40} is (?:for sale|parked)|topdomains|domain showcase|"
+    r"afternic|dan\.com/|parkingcrew|voodoo:\s*this domain", re.I)
 # Host bazlı kumar/park desisleri: "situsbet200resmi.org", "814292.toplakehorizon.com"
 SPAM_HOST_RE = re.compile(
     r"bet\d|bet[a-z]*(?:resmi|official)|\d{4,}[a-z]|slot|casino|poker|kumar|rulet|jackpot|"
     r"toplake|horizon\d*\.[a-z]", re.I)
 
 
+# İki seviyeli kamu TLD'leri: "asurascans.com.tr" apexe "com.tr" değil
+# "asurascans.com.tr" olmalı — marka (sld) çıkarımı buna bağlı.
+TWO_LEVEL = {"com.tr", "net.tr", "org.tr", "info.tr", "biz.tr", "gov.tr", "web.tr",
+             "k12.tr", "av.tr", "dr.tr", "com.cn", "com.br", "co.uk", "org.uk",
+             "co.jp", "co.kr", "com.au", "co.za", "com.mx", "com.tw", "com.hk"}
+
+
 def apex(host):
     parts = re.sub(r"^www\.", "", host.lower()).split(".")
+    if len(parts) >= 3 and ".".join(parts[-2:]) in TWO_LEVEL:
+        return ".".join(parts[-3:])
     return ".".join(parts[-2:]) if len(parts) >= 2 else host
 MANGA_RE = re.compile(
     r"manga|manhwa|webtoon|bölüm|chapter|series|roman|çeviri|scans|fansub|okut", re.I)
+# SAF KEŞİF EŞİĞİ: MANGA_RE tek başına zayıftı — "series" kelimesi bir portfolyo
+# sitesini bile geçirdi (zaman.app/nabi.me sahtelikleri). Gerçek okuma sitesinde
+# manga/manhwa/webtoon sözcükleri EN AZ 2 kez geçer VE bölüm/kapak izi vardır.
+_STRONG_M = re.compile(r"manga|manhwa|webtoon", re.I)
+_STRONG_C = re.compile(r"b[öo]l[üu]m|chapter|episode|/manga/|/series/|/detail/|/chapter", re.I)
+TITLE_RE = re.compile(r"<title[^>]*>(.{0,200}?)</title>", re.I | re.S)
+
+
+def looks_like_manga_site(body):
+    t = body[:80_000]
+    return len(_STRONG_M.findall(t)) >= 2 and bool(_STRONG_C.search(t))
+
+
+# Dil kanıtı: keşif adayı, hedef kaynakla AYNI dilin sitesini kanıtlamak zorunda.
+# tr: TEK ÖZEL KARAKTER yetmez (yaoi.me faciası — Japonca romanize etiketlerde
+# "ö" var diye geçti). Türkçe SİTE SÖZCÜKLERİ ya da lang="tr" attribute'ü ister.
+_LANG_EV = {
+    "tr": re.compile(
+        r"b[öo]l[üu]m|t[üu]rk[çc]e|[çc]eviri|kategori|ana\s*sayfa|hepsini\s*g[öo]r|"
+        r"okuma|s[ıi]ra\s*takip|güncel", re.I),
+    "en": re.compile(r"\b(the|and|chapter|read|online)\b", re.I),
+}
 
 DRIFT_RE = re.compile(r"Status=404|NotFoundException|List is empty|No results", re.I)
 DNS_RE = re.compile(r"UnknownHostException|Unable to resolve host", re.I)
@@ -96,12 +129,17 @@ def fetch(url, timeout=12):
         return 0, url, type(e).__name__ + ": " + str(e)[:200]
 
 
-def validate_candidate(domain, brand=None, depth=0):
+def validate_candidate(domain, brand=None, depth=0, must=None, lang=None):
     """Aday domain TAMİR edilebilir mi? -> (kabul, red-sebebi).
 
     brand: kaynak adındaki marka token'ları. Farklı apexe yönlendiren aday
     ancak MARKASINI TAŞIYORSA kabul edilir (asurascans.us -> mangapark.tv
-    tuzağı: yönlendirme hedefi başka marka ise bu onarım DEĞİLDİR)."""
+    tuzağı: yönlendirme hedefi başka marka ise bu onarım DEĞİLDİR).
+    must: KEŞİF adayları için ek şart — sitenin kendi HTML'inde marka izi
+    (sld/token) geçmek zorunda; yoksa bu "aynı sözcük, başka site"dır.
+    lang: KEŞİF adayı kaynakla AYNI dilin sitesi olmalı (yaoi.me faciası:
+    İngilizce yaoi okuma sitesi, TR "YAOITR" fansub'unun marka kelimesini
+    başlıkta taşıyor diye pin'lenmişti — DİL SAFİĞİ bunu da yasaklar)."""
     if not domain or SPAM_RE.search(domain) or SPAM_HOST_RE.search(domain):
         return False, "spam-desi"
     if depth > 2:
@@ -122,11 +160,26 @@ def validate_candidate(domain, brand=None, depth=0):
             return False, "spam-yonlendirme"
         if brand and not any(t in final_host.replace(".", "").replace("-", "") for t in brand):
             return False, f"marka-farkli-yonlendirme({final_host})"
-        return validate_candidate(final_host, brand, depth + 1)
+        return validate_candidate(final_host, brand, depth + 1, must, lang)
     if SPAM_RE.search(body[:60_000]) or SPAM_HOST_RE.search(final_host):
         return False, "spam-icerik"
     if not MANGA_RE.search(body):
         return False, "manga-izi-yok"
+    if must:
+        # KEŞİF adayı ek kontroller: marka <title>/<h1>'de GEÇMELİ (gövdedeki
+        # sıradan kelime yetmez — zaman.app faciası) ve site gerçek bir okuma
+        # sitesi olmalı (manga sözcüğü x2 + bölüm/kapak izi).
+        head = TITLE_RE.search(body)
+        h1 = re.search(r"<h1[^>]*>(.{0,200}?)</h1>", body[:20_000], re.I | re.S)
+        sig = ((h1.group(1) if h1 else "") + " " + (head.group(1) if head else "")).lower()
+        if not any(m in sig for m in must):
+            return False, "marka-başlıkta-yok"
+        if not looks_like_manga_site(body):
+            return False, "okuma-sitesi-degil"
+        if lang and lang != "all":
+            ev = _LANG_EV.get(lang)
+            if ev and not ev.search(body[:80_000]) and f'lang="{lang}"' not in body[:40_000]:
+                return False, f"dil-uyumsuz({lang})"
     if status >= 500:
         return False, f"5xx({status})"
     return True, "ok"
@@ -161,6 +214,98 @@ def classify(messages):
     if "timeout" in txt.lower():
         return "TRANSIENT"
     return "OTHER"
+
+
+# --- KEŞİF: ölü markanın YENİ domainini bul (karantina değil, gerçek tamir) ---
+# TR fansub/scan sitelerinin klasik ölümü = domain taşımak. İz sürülecek yollar:
+#   1) TLD rotasyonu: asurascans.com.tr öldüyse asurascans.{net,xyz,app,...} dene
+#   2) DuckDuckGo html: "marka manga" aramasında çıkan domainler
+#   3) Wayback: eski sitenin SON anlık görüntüsündeki "taşındık" izleri/yönlendirmeler
+# Bulunan aday yine validate_candidate'tan geçmek zorunda (manga izi + marka + spam yok).
+ROT_TLDS = ("com", "net", "org", "info", "xyz", "site", "online", "live", "app", "co",
+            "me", "tv", "io", "gg", "cc", "club", "fun", "run", "to", "day", "world", "space")
+# KESİN ölüm sebepleri: pin geri-alımı ve karantina YALNIZ bunlarda.
+# ConnectionReset/timeout/5xx geçicidir — sağlam siteyi "ölü" diye yetim bırakmayız.
+HARD_BADS = ("dns-yok", "sertifika-bozuk", "spam-icerik", "spam-yonlendirme", "spam-desi")
+
+
+def discover_domains(cur, toks, smap, ov):
+    """Ölü domain/marka için KEŞİF aday listesi (doğrulanmamış)."""
+    known = {re.sub(r"^www\.", "", (r.get("domain") or "").lower())
+             for r in smap["engine"] + smap["catalogue"] if r.get("domain")}
+    dead = {h.lower() for h in ov.get("deadHosts", [])}
+    sld = apex(cur).split(".")[0] if cur else ""
+    slds = {sld.replace("-", "")} | {t.lower() for t in toks}
+    slds = {s for s in slds if len(s) >= 4}
+    out = []
+    for s in sorted(slds)[:3]:
+        for tld in ROT_TLDS:
+            out.append(f"{s}.{tld}")
+        # ayna/versiyon örüntüleri: 1sld, sld1, sld-official...
+        for pat in (f"1{s}", f"{s}1", f"{s}tr", f"tr{s}"):
+            out.append(f"{pat}.com")
+    # wayback: son snapshot'taki yeni domain izleri
+    if cur:
+        try:
+            req = urllib.request.Request(
+                f"https://web.archive.org/cdx/search/cdx?url={cur}&output=text&limit=-25&from=2024&collapse=urlkey",
+                headers={"User-Agent": UA}, )
+            with urllib.request.urlopen(req, timeout=20) as r:
+                for line in r.read().decode("utf-8", "replace").splitlines():
+                    parts = line.split()
+                    if len(parts) > 2:
+                        for m in URL_RE.finditer(" ".join(parts[2:])):
+                            h = re.sub(r"^www\.", "", m.group(1).lower())
+                            if any(t in h.replace(".", "").replace("-", "") for t in {x.lower() for x in toks}):
+                                out.append(h)
+        except Exception:  # noqa: BLE001 — keşif en iyi çabadır
+            pass
+    # Wayback anlık görüntüsü: ölü sitenin son arşiv kopyasında "taşındık"
+    # bağlantıları/JS yönlendirmeleri kalır — markayı taşıyan hostları çıkar.
+    if cur:
+        try:
+            req = urllib.request.Request(f"https://web.archive.org/web/2026id_/https://{cur}/",
+                                         headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=25) as r:
+                snap = r.read(200_000).decode("utf-8", "replace")
+            tl = {t.lower() for t in toks} | {apex(cur).split(".")[0]}
+            for mm in URL_RE.finditer(snap):
+                h = re.sub(r"^www\.", "", mm.group(1).lower())
+                if h == cur or "archive.org" in h:
+                    continue
+                hh = h.replace(".", "").replace("-", "")
+                if any(t and len(t) >= 4 and t in hh for t in tl):
+                    out.insert(0, h)
+        except Exception:  # noqa: BLE001 — keşif en iyi çabadır
+            pass
+    cand = []
+    for d in out:
+        if d != cur and d not in known and d not in dead and d not in cand:
+            cand.append(d)
+    return cand[:40]
+
+
+def ddg_domains(query):
+    """DuckDuckGo html arama — en iyi çaba; CI IP'sinde bloklanabilir, sessiz geç."""
+    urls = []
+    try:
+        req = urllib.request.Request(
+            "https://html.duckduckgo.com/html/?q=" + urllib.parse.quote(query),
+            headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=12) as r:
+            html = r.read().decode("utf-8", "replace")
+        for m in re.finditer(r'href="([^"]+)"', html):
+            href = m.group(1)
+            km = re.search(r"uddg=([^&\"]+)", href)
+            u = urllib.parse.unquote(km.group(1)) if km else href
+            hm = URL_RE.search(u if "://" in u else "http://" + u)
+            if hm:
+                h = re.sub(r"^www\.", "", hm.group(1).lower())
+                if h not in urls and "duckduckgo" not in h:
+                    urls.append(h)
+    except Exception:  # noqa: BLE001
+        pass
+    return urls[:12]
 
 
 def domains_in(messages):
@@ -227,13 +372,18 @@ def main():
     log(f"mevcut {len(all_pins)} pin yeniden doğrulanıyor...")
     with cf.ThreadPoolExecutor(8) as pool:
         for key, target, ok, why in pool.map(revalidate_pin, list(all_pins.items())):
-            if not ok and key not in ov["unpinned"]:
-                ov["unpinned"].append(key)
-                ov["domainOverrides"].pop(key, None)
-                all_pins[key] = None
+            hard = why in HARD_BADS or str(why).startswith("marka-farkli")
+            if not ok and hard:
+                if key not in ov["unpinned"]:
+                    ov["unpinned"].append(key)
+                    ov["domainOverrides"].pop(key, None)
+                    all_pins[key] = None
+                    rows.append({"id": "-", "kind": "pin", "name": f"{key}->{target}",
+                                 "class": "BAYAT_PIN", "action": "pin-geri-alindi", "detail": why})
+            elif not ok:
                 rows.append({"id": "-", "kind": "pin", "name": f"{key}->{target}",
-                             "class": "BAYAT_PIN", "action": "pin-geri-alindi", "detail": why})
-            elif ok:
+                             "class": "PIN", "action": "gecici-erişim-hata", "detail": f"{why} — pin korundu, sonraki bakımda yeniden denenir"})
+            else:
                 rows.append({"id": "-", "kind": "pin", "name": f"{key}->{target}",
                              "class": "PIN", "action": "dogrulandi", "detail": why})
 
@@ -280,7 +430,28 @@ def main():
         cur = (e.get("domain") or src.get("domain") or (next(iter(doms)) if doms else "")).lower()
         tasks.append((sid, src, klass, doms, cur))
 
-    HARD_BADS = ("dns-yok", "sertifika-bozuk", "spam-icerik", "spam-yonlendirme", "spam-desi")
+    def last_resort_repair(src, cur, toks):
+        """KEŞİF: markanın yeni domainini bul (TLD rotasyonu + DDG + Wayback).
+        Başarsa repair, bulamazsa None — karantina ancak ondan sonra gelir.
+        KEŞİF adayları ekstra şartla geçer: HTML'de MARKA İZİ (sld/token)."""
+        name = src["name"]
+        sld = apex(cur).split(".")[0] if cur else ""
+        must = {t.lower() for t in toks} | {sld.replace("-", "")}
+        must = {m for m in must if len(m) >= 4}
+        cands = discover_domains(cur, toks, smap, ov)
+        if toks:
+            q = " ".join(sorted(t.lower() for t in toks)) + " manga oku"
+            brand_l = {t.lower() for t in toks}
+            for d in ddg_domains(q):
+                if any(t in d.replace(".", "").replace("-", "") for t in brand_l):
+                    cands.insert(0, d)
+        for cand in cands[:24]:
+            if cand == cur:
+                continue
+            cok, cwhy = validate_candidate(cand, toks, must=must, lang=src.get("lang"))
+            if cok:
+                return f"repair->{cand}", f"KEŞİF tamiri: yeni domain bulundu ({cwhy})"
+        return None
 
     def other_share(toks, o):
         return bool(toks & tokens(o["name"])) or any(t in o["domain"] for t in toks)
@@ -309,6 +480,9 @@ def main():
                 cok, cwhy = validate_candidate(cand, toks_)
                 if cok:
                     return t, f"repair->{cand}", f"sweep tamiri: aday doğrulandı ({cwhy})"
+            r = last_resort_repair(src, cur, toks_)
+            if r:
+                return t, r[0], "sweep " + r[1]
             return t, "quarantine", f"sweep: {cur} ölü ({why}); {len(cands)} aday doğrulanamadı"
         if klass == "HARNESS":
             return t, "report-only", "muhabber 3 harften kısa sorgu atıyor; kaynak sağlam (LIST/DETAILS/CHAPTERS pass)"

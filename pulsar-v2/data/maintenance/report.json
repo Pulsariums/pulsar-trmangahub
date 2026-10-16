@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-16T14:30:06Z",
+ "generated": "2026-10-16T15:05:54Z",
  "summary": {
   "dogrulandi": 8,
   "BILINMIYOR": 37,
-  "quarantine": 41,
-  "watch": 90,
+  "quarantine": 39,
+  "watch": 64,
   "report-only": 1
  },
  "rows": [
@@ -389,7 +389,7 @@
    "nsfw": 0,
    "class": "CERT",
    "action": "quarantine",
-   "detail": "www.mangaoku.org ölü/spam-yonlendirme; 0 aynı-dil aday doğrulanamadı",
+   "detail": "www.mangaoku.org ölü/erişilemedi(URLError); 0 aynı-dil aday doğrulanamadı",
    "domain": "www.mangaoku.org"
   },
   {
@@ -501,6 +501,18 @@
    "domain": "webtoonhatti.me"
   },
   {
+   "id": 1376568239241029358,
+   "kind": "engine",
+   "name": "ANIKIGA",
+   "title": "Anikiga",
+   "lang": "tr",
+   "nsfw": 0,
+   "class": "SWEEP",
+   "action": "quarantine",
+   "detail": "sweep: anikiga.com ölü (erişilemedi(TimeoutError)); 0 aday doğrulanamadı",
+   "domain": "anikiga.com"
+  },
+  {
    "id": 4645282634064046819,
    "kind": "engine",
    "name": "ANISA_MANGA",
@@ -511,18 +523,6 @@
    "action": "quarantine",
    "detail": "sweep: anisamanga.com ölü (erişilemedi(URLError)); 0 aday doğrulanamadı",
    "domain": "anisamanga.com"
-  },
-  {
-   "id": 3942956575215849264,
-   "kind": "engine",
-   "name": "ARAZNOVEL",
-   "title": "ArazNovel",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "araznovel.com"
   },
   {
    "id": 7894614281626720954,
@@ -569,7 +569,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "quarantine",
-   "detail": "domalfansb.com.tr marka-farkli-yonlendirme(qemow.com)",
+   "detail": "sweep: domalfansb.com.tr ölü (erişilemedi(URLError)); 0 aday doğrulanamadı",
    "domain": "domalfansb.com.tr"
   },
   {
@@ -583,30 +583,6 @@
    "action": "quarantine",
    "detail": "sweep: www.epikman.ga ölü (erişilemedi(URLError)); 0 aday doğrulanamadı",
    "domain": "www.epikman.ga"
-  },
-  {
-   "id": 5784698602441107348,
-   "kind": "engine",
-   "name": "GAFELAND",
-   "title": "Gafeland",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "www.gafeland.com"
-  },
-  {
-   "id": 5784701058565822220,
-   "kind": "engine",
-   "name": "GAIATOON",
-   "title": "GaiaToon",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "gaiatoon.com"
   },
   {
    "id": 8226934736647195750,
@@ -667,18 +643,6 @@
    "action": "watch",
    "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "hayalistic.com.tr"
-  },
-  {
-   "id": 4118551129163381075,
-   "kind": "engine",
-   "name": "HOIFANSUB",
-   "title": "HoiFansub",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
-   "domain": "hoifansub.com"
   },
   {
    "id": 767198593501925111,
@@ -749,7 +713,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: manga-izi-yok (kesin ölüm değil, izlenir)",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "koreliscans.com"
   },
   {
@@ -761,7 +725,7 @@
    "nsfw": 1,
    "class": "SWEEP",
    "action": "quarantine",
-   "detail": "sweep: www.kuroimanga.com ölü (erişilemedi(HTTPError)); 1 aday doğrulanamadı",
+   "detail": "sweep: www.kuroimanga.com ölü (erişilemedi(URLError)); 1 aday doğrulanamadı",
    "domain": "www.kuroimanga.com"
   },
   {
@@ -773,7 +737,7 @@
    "nsfw": 1,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: manga-izi-yok (kesin ölüm değil, izlenir)",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "laviniafansub.site"
   },
   {
@@ -785,7 +749,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "quarantine",
-   "detail": "sweep: www.kuroimanga.com ölü (erişilemedi(HTTPError)); 0 aday doğrulanamadı",
+   "detail": "sweep: www.kuroimanga.com ölü (erişilemedi(URLError)); 0 aday doğrulanamadı",
    "domain": "www.kuroimanga.com"
   },
   {
@@ -905,7 +869,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "quarantine",
-   "detail": "sweep: mangaokusana.com ölü (manga-izi-yok); 0 aday doğrulanamadı",
+   "detail": "sweep: mangaokusana.com ölü (erişilemedi(URLError)); 0 aday doğrulanamadı",
    "domain": "mangaokusana.com"
   },
   {
@@ -919,18 +883,6 @@
    "action": "watch",
    "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "mangaokutr.net"
-  },
-  {
-   "id": 4234251772225348094,
-   "kind": "engine",
-   "name": "MANGARUHU",
-   "title": "MangaRuhu",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "quarantine",
-   "detail": "sweep: mangaruhu.com ölü (erişilemedi(HTTPError)); 0 aday doğrulanamadı",
-   "domain": "mangaruhu.com"
   },
   {
    "id": 2134596436329422687,
@@ -953,7 +905,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
+   "detail": "sweep: erişilemedi(TimeoutError) (kesin ölüm değil, izlenir)",
    "domain": "manga-sehri.net"
   },
   {
@@ -981,30 +933,6 @@
    "domain": "mangatr.app"
   },
   {
-   "id": 1376874560922835665,
-   "kind": "engine",
-   "name": "MANGAWT",
-   "title": "MangaWt.com",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "mangawt.com"
-  },
-  {
-   "id": 1608889112777444179,
-   "kind": "engine",
-   "name": "MANGAWT_NET",
-   "title": "MangaWt.net",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "mangawt.com"
-  },
-  {
    "id": 673270465301806234,
    "kind": "engine",
    "name": "MANWE",
@@ -1025,7 +953,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: manga-izi-yok (kesin ölüm değil, izlenir)",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "milascans.tr"
   },
   {
@@ -1048,21 +976,9 @@
    "lang": "tr",
    "nsfw": 1,
    "class": "SWEEP",
-   "action": "quarantine",
-   "detail": "moondaisyscans.biz marka-farkli-yonlendirme(expireddomains.com)",
-   "domain": "moondaisyscans.biz"
-  },
-  {
-   "id": 4250461281253797656,
-   "kind": "engine",
-   "name": "MUGIMANGA",
-   "title": "MugiManga",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
    "action": "watch",
    "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
-   "domain": "mugimanga.com"
+   "domain": "moondaisyscans.biz"
   },
   {
    "id": 4259345160785297062,
@@ -1089,6 +1005,18 @@
    "domain": "nirvanamanga.com"
   },
   {
+   "id": 3076140639542878834,
+   "kind": "engine",
+   "name": "NIVERAFANSUB",
+   "title": "NiveraFansub",
+   "lang": "tr",
+   "nsfw": 1,
+   "class": "SWEEP",
+   "action": "watch",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
+   "domain": "niverafansub.org"
+  },
+  {
    "id": 5790821884388407577,
    "kind": "engine",
    "name": "NOXSCANS",
@@ -1113,16 +1041,16 @@
    "domain": "opiatoon.art"
   },
   {
-   "id": 4310637861291484852,
+   "id": 3581135968918069737,
    "kind": "engine",
-   "name": "PATIMANGA",
-   "title": "PatiManga",
+   "name": "PIEDPIPERFANSUB",
+   "title": "PiedpiperFansub",
    "lang": "tr",
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "www.patimanga.com"
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
+   "domain": "piedpiperfansub.me"
   },
   {
    "id": 5425569062261084453,
@@ -1157,7 +1085,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "quarantine",
-   "detail": "sweep: www.guildknives.com ölü (erişilemedi(URLError)); 1 aday doğrulanamadı",
+   "detail": "sweep: www.guildknives.com ölü (manga-izi-yok); 1 aday doğrulanamadı",
    "domain": "www.guildknives.com"
   },
   {
@@ -1181,20 +1109,32 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
+   "detail": "sweep: erişilemedi(TimeoutError) (kesin ölüm değil, izlenir)",
    "domain": "ruyamanga.net"
   },
   {
-   "id": 6965439378381526289,
+   "id": 1348804626010052830,
    "kind": "engine",
-   "name": "SEREINSCAN",
-   "title": "SereinScan",
+   "name": "SARCASMSCANS",
+   "title": "SarcasmScans",
    "lang": "tr",
-   "nsfw": 0,
+   "nsfw": 1,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "sereinscan.com"
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
+   "domain": "sarcasmscans.com"
+  },
+  {
+   "id": 1610469579808167756,
+   "kind": "engine",
+   "name": "SNSCOEURTURKEY",
+   "title": "SnscoeurTurkey",
+   "lang": "tr",
+   "nsfw": 1,
+   "class": "SWEEP",
+   "action": "watch",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
+   "domain": "snscoeurturkey.blogspot.com"
   },
   {
    "id": 6379770814877065740,
@@ -1217,20 +1157,8 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: manga-izi-yok (kesin ölüm değil, izlenir)",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "summertoon.co"
-  },
-  {
-   "id": 7651742155925383372,
-   "kind": "engine",
-   "name": "TAROTSCANS",
-   "title": "TarotScans",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "www.tarotscans.com"
   },
   {
    "id": 7366855138145938403,
@@ -1300,21 +1228,9 @@
    "lang": "tr",
    "nsfw": 0,
    "class": "SWEEP",
-   "action": "quarantine",
-   "detail": "titanmanga.com marka-farkli-yonlendirme(hugedomains.com)",
-   "domain": "titanmanga.com"
-  },
-  {
-   "id": 8004028869454761901,
-   "kind": "engine",
-   "name": "TONIZUTOON",
-   "title": "ToniZu.com",
-   "lang": "tr",
-   "nsfw": 1,
-   "class": "SWEEP",
    "action": "watch",
    "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
-   "domain": "tonizu.top"
+   "domain": "titanmanga.com"
   },
   {
    "id": 212318319699807184,
@@ -1360,8 +1276,8 @@
    "lang": "tr",
    "nsfw": 1,
    "class": "SWEEP",
-   "action": "quarantine",
-   "detail": "yaoiflix.me marka-farkli-yonlendirme(qemow.com)",
+   "action": "watch",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "yaoiflix.me"
   },
   {
@@ -1373,7 +1289,7 @@
    "nsfw": 1,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "yaoimangaoku.net"
   },
   {
@@ -1413,18 +1329,6 @@
    "domain": "zamanmanga.com"
   },
   {
-   "id": 386746428516970468,
-   "kind": "catalogue",
-   "name": "Afrodit Scans",
-   "title": "Afrodit Scans",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "afroditscans.com"
-  },
-  {
    "id": 891763215572096733,
    "kind": "catalogue",
    "name": "AlliedFansub",
@@ -1437,16 +1341,16 @@
    "domain": "alliedfansub.net"
   },
   {
-   "id": 6946651026380347829,
+   "id": 5925244894679392886,
    "kind": "catalogue",
-   "name": "ArazNovel",
-   "title": "ArazNovel",
+   "name": "AthenaManga",
+   "title": "AthenaManga",
    "lang": "tr",
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
    "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "araznovel.com"
+   "domain": "athenamanga.com"
   },
   {
    "id": 2503547837178658661,
@@ -1473,54 +1377,6 @@
    "domain": "dragonball-multiverse.com"
   },
   {
-   "id": 1203470067124874019,
-   "kind": "catalogue",
-   "name": "Elder Manga",
-   "title": "Elder Manga",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "eldermanga.com"
-  },
-  {
-   "id": 3105018861730110456,
-   "kind": "catalogue",
-   "name": "Eski Mangalar",
-   "title": "Eski Mangalar",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "eskimangalar.com"
-  },
-  {
-   "id": 5447717829511226753,
-   "kind": "catalogue",
-   "name": "Gaiatoon",
-   "title": "Gaiatoon",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "gaiatoon.com"
-  },
-  {
-   "id": 6877555224237718104,
-   "kind": "catalogue",
-   "name": "HoiFansub",
-   "title": "HoiFansub",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
-   "domain": "hoifansub.com"
-  },
-  {
    "id": 4707537438786051688,
    "kind": "catalogue",
    "name": "JuraTempest",
@@ -1528,8 +1384,8 @@
    "lang": "tr",
    "nsfw": 0,
    "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
+   "action": "quarantine",
+   "detail": "sweep: juratempe.st ölü (spam-icerik); 0 aday doğrulanamadı",
    "domain": "juratempe.st"
   },
   {
@@ -1545,18 +1401,6 @@
    "domain": "kuroimanga.site"
   },
   {
-   "id": 1461972285187368456,
-   "kind": "catalogue",
-   "name": "Limon Manga",
-   "title": "Limon Manga",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "limonmanga.com"
-  },
-  {
    "id": 8167411798342220595,
    "kind": "catalogue",
    "name": "Lunar Manga",
@@ -1567,30 +1411,6 @@
    "action": "watch",
    "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
    "domain": "lunarx.to"
-  },
-  {
-   "id": 6072449811419052852,
-   "kind": "catalogue",
-   "name": "Manga Ball",
-   "title": "Manga Ball",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "mangaball.com"
-  },
-  {
-   "id": 8901726653993792036,
-   "kind": "catalogue",
-   "name": "Manga Portalı",
-   "title": "Manga Portalı",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "mangaportali.com"
   },
   {
    "id": 4062366187196257270,
@@ -1641,18 +1461,6 @@
    "domain": "mangakazani.com"
   },
   {
-   "id": 6086089492503336323,
-   "kind": "catalogue",
-   "name": "MangaRuhu",
-   "title": "MangaRuhu",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "mangaruhu.com"
-  },
-  {
    "id": 681306618208001196,
    "kind": "catalogue",
    "name": "MangaTilkisi",
@@ -1663,18 +1471,6 @@
    "action": "quarantine",
    "detail": "sweep: tilkiscans.com ölü (spam-icerik); 1 aday doğrulanamadı",
    "domain": "tilkiscans.com"
-  },
-  {
-   "id": 8461894771860958934,
-   "kind": "catalogue",
-   "name": "MangaWT",
-   "title": "MangaWT",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "mangawt.com"
   },
   {
    "id": 4021130600798442386,
@@ -1689,18 +1485,6 @@
    "domain": "ww16.mangaoku.info"
   },
   {
-   "id": 8462394428445828805,
-   "kind": "catalogue",
-   "name": "Mangitto",
-   "title": "Mangitto",
-   "lang": "tr",
-   "nsfw": 1,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "mangtto.com"
-  },
-  {
    "id": 661348012149783708,
    "kind": "catalogue",
    "name": "Merlin Scans",
@@ -1711,30 +1495,6 @@
    "action": "watch",
    "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
    "domain": "merlintoon.com"
-  },
-  {
-   "id": 7567809191033269015,
-   "kind": "catalogue",
-   "name": "Minda Fansub",
-   "title": "Minda Fansub",
-   "lang": "tr",
-   "nsfw": 1,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(TimeoutError) (kesin ölüm değil, izlenir)",
-   "domain": "mindafansub.dev"
-  },
-  {
-   "id": 6375261139970147741,
-   "kind": "catalogue",
-   "name": "MugiManga",
-   "title": "MugiManga",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
-   "domain": "mugimanga.com"
   },
   {
    "id": 4231843737385138446,
@@ -1761,16 +1521,16 @@
    "domain": "nyxscans.com"
   },
   {
-   "id": 670740038008065849,
+   "id": 8119700570236890181,
    "kind": "catalogue",
-   "name": "Pati Manga",
-   "title": "Pati Manga",
+   "name": "PiedpiperFansub",
+   "title": "PiedpiperFansub",
    "lang": "tr",
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "patimanga.com"
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
+   "domain": "ww17.piedpiperfansub.me"
   },
   {
    "id": 357698414057326452,
@@ -1793,7 +1553,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
+   "detail": "sweep: manga-izi-yok (kesin ölüm değil, izlenir)",
    "domain": "guildknives.com"
   },
   {
@@ -1809,28 +1569,16 @@
    "domain": "sadscans.com"
   },
   {
-   "id": 7170599070299314950,
+   "id": 7663701235462277388,
    "kind": "catalogue",
-   "name": "Serein Scan",
-   "title": "Serein Scan",
+   "name": "SeraphManga",
+   "title": "SeraphManga",
    "lang": "tr",
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
    "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "sereinscan.com"
-  },
-  {
-   "id": 3239581495078724965,
-   "kind": "catalogue",
-   "name": "Slept Manga",
-   "title": "Slept Manga",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "sleptmanga.com.tr"
+   "domain": "seraphmanga.com"
   },
   {
    "id": 7591424560280249953,
@@ -1845,30 +1593,6 @@
    "domain": "summertoons.net"
   },
   {
-   "id": 1295018527397714241,
-   "kind": "catalogue",
-   "name": "Tarot Scans",
-   "title": "Tarot Scans",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "tarotscans.com"
-  },
-  {
-   "id": 796370516133815754,
-   "kind": "catalogue",
-   "name": "Tenshi Manga",
-   "title": "Tenshi Manga",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "tenshimanga.com"
-  },
-  {
    "id": 5863442274693704416,
    "kind": "catalogue",
    "name": "TimeNaight",
@@ -1881,30 +1605,6 @@
    "domain": "timenaight.org"
   },
   {
-   "id": 1084418383174697768,
-   "kind": "catalogue",
-   "name": "TonizuToon",
-   "title": "TonizuToon",
-   "lang": "tr",
-   "nsfw": 1,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
-   "domain": "tonizu.top"
-  },
-  {
-   "id": 3541806057642489392,
-   "kind": "catalogue",
-   "name": "Uzay Manga",
-   "title": "Uzay Manga",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "uzaymanga.com"
-  },
-  {
    "id": 4061344289012005112,
    "kind": "catalogue",
    "name": "Webtoon Hatti",
@@ -1915,42 +1615,6 @@
    "action": "watch",
    "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
    "domain": "webtoonhatti.club"
-  },
-  {
-   "id": 3741568115798138687,
-   "kind": "catalogue",
-   "name": "WebtoonOku",
-   "title": "WebtoonOku",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
-   "domain": "webtoonoku.org"
-  },
-  {
-   "id": 3179435076707922441,
-   "kind": "catalogue",
-   "name": "gafeland",
-   "title": "gafeland",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "gafeland.com"
-  },
-  {
-   "id": 7470363989556742895,
-   "kind": "catalogue",
-   "name": "manga",
-   "title": "manga",
-   "lang": "tr",
-   "nsfw": 0,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: erişilemedi(HTTPError) (kesin ölüm değil, izlenir)",
-   "domain": "manga.araznovel.com"
   }
  ]
 }
