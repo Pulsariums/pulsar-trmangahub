@@ -64,7 +64,6 @@ jobs:
           SONUC: ${{ inputs.sonuc }}
           SWEEP: ${{ inputs.sweep && '1' || (github.event_name == 'schedule' && '1' || '0') }}
         run: |
-          cd pulsar-v2
           ARGS=()
           IFS=',' read -ra LST <<< "$SONUC"
           for s in "${LST[@]}"; do
@@ -73,12 +72,15 @@ jobs:
           done
           SW=""; [ "$SWEEP" = "1" ] && SW="--sweep"
           set +e
-          python3 scripts/07_maintain.py "${ARGS[@]}" --map repo/source_map.json $SW
+          python3 pulsar-v2/scripts/07_maintain.py "${ARGS[@]}" --map pulsar-v2/repo/source_map.json $SW
           code=$?
           set -e
-          echo "$code"
-          if [ "$code" = "2" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; else echo "changed=false" >> "$GITHUB_OUTPUT"; fi
-          [ "$code" -le 2 ] || { echo "::error::bakım script'i hata verdi ($code)"; exit 1; }
+          echo "cikis kodu: $code (0=degisiklik yok, 2=tamir/karantina uretildi)"
+          case "$code" in
+            0) echo "changed=false" >> "$GITHUB_OUTPUT" ;;
+            2) echo "changed=true"  >> "$GITHUB_OUTPUT" ;;
+            *) echo "::error::bakım script'i çöktü ($code)"; exit 1 ;;
+          esac
 
       - name: Raporu step summary'ye yaz
         run: cat pulsar-v2/data/maintenance/report.md >> "$GITHUB_STEP_SUMMARY"
