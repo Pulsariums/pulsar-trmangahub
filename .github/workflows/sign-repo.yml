@@ -1,0 +1,90 @@
+name: Sign Pulsar APKs & Update Fingerprint
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Generate Unique Pulsar Keystore
+        run: |
+          mkdir -p signing
+          keytool -genkeypair -v \
+            -keystore signing/pulsar.keystore \
+            -alias pulsar \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -storepass "pulsarmangahub" \
+            -keypass "pulsarmangahub" \
+            -dname "CN=Pulsar Manga Hub, OU=Pulsar, O=Pulsariums, C=TR"
+
+      - name: Sign APKs with v1 and v2/v3 signatures
+        run: |
+          APKSIGNER="$(ls "$ANDROID_SDK_ROOT"/build-tools/*/apksigner | sort -V | tail -1)"
+          echo "Using apksigner: $APKSIGNER"
+
+          # Function to sign an APK
+          sign_file() {
+            local apk="$1"
+            if [ -f "$apk" ]; then
+              echo "Signing $apk..."
+              "$APKSIGNER" sign \
+                --ks signing/pulsar.keystore \
+                --ks-key-alias pulsar \
+                --ks-pass pass:pulsarmangahub \
+                --key-pass pass:pulsarmangahub \
+                "$apk"
+              "$APKSIGNER" verify "$apk"
+            fi
+          }
+
+          for apk in apk/*.apk pulsar-v2/repo/apk/*.apk; do
+            sign_file "$apk"
+          done
+
+      - name: Extract Cert SHA-256 Fingerprint and Update repo.json
+        run: |
+          APKSIGNER="$(ls "$ANDROID_SDK_ROOT"/build-tools/*/apksigner | sort -V | tail -1)"
+          FP="$("$APKSIGNER" verify --print-certs apk/eu.kanade.tachiyomi.extension.all.nyoralocal.apk | grep -i 'SHA-256' | head -1 | grep -oE '[0-9a-f]{64}')"
+          echo "Unique Pulsar Fingerprint: $FP"
+
+          python3 -c "
+          import json
+          fp = '$FP'
+          files = ['repo.json', 'pulsar-v2/repo/repo.json', 'site/repo.json']
+          for f in files:
+              try:
+                  with open(f, 'r', encoding='utf-8') as fh:
+                      d = json.load(fh)
+                  d['meta']['signingKeyFingerprint'] = fp
+                  with open(f, 'w', encoding='utf-8') as fh:
+                      json.dump(d, fh, ensure_ascii=False, indent=2)
+                  print(f'Updated {f} with {fp}')
+              except Exception as e:
+                  print(f'Error updating {f}: {e}')
+          "
+
+      - name: Commit and Push Signed APKs and repo.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add apk/*.apk pulsar-v2/repo/apk/*.apk repo.json pulsar-v2/repo/repo.json signing/pulsar.keystore
+          git commit -m "chore(signing): APK'lar benzersiz Pulsar anahtariyla imzalandi ve repo.json guncellendi" || echo "No changes to commit"
+          git push origin main
