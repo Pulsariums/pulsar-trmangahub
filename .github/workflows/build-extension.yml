@@ -61,6 +61,13 @@ jobs:
           ls -d "$ANDROID_HOME"/platforms/android-37 >/dev/null
           ls "$ANDROID_HOME"/build-tools/*/aapt >/dev/null
 
+      - name: Cache Gradle artifacts
+        uses: actions/cache@v4
+        with:
+          path: ~/.gradle/caches
+          key: gradle-${{ inputs.mihon_ref }}-${{ inputs.parsers_ref }}-${{ hashFiles('pulsar-v2/extension/build.gradle.kts') }}
+          restore-keys: gradle-
+
       - name: Generate throwaway signing key (fingerprint read from APKs later)
         run: |
           mkdir -p pulsar-v2/signing

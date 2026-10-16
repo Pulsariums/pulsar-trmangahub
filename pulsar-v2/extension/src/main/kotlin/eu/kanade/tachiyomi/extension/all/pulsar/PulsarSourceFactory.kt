@@ -36,7 +36,7 @@ class PulsarSourceFactory : SourceFactory {
         val targetLang = BuildConfig.PULSAR_LANG
         val wantAdult = BuildConfig.PULSAR_NSFW
 
-        val app: Application = runCatching { Injekt.get() }.getOrNull()
+        val app: Application = runCatching { Injekt.get<Application>() }.getOrNull()
             ?: return emptyList()
 
         runCatching { PulsarPatches.load(app) }

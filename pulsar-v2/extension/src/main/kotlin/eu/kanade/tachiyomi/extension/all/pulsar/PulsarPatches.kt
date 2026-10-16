@@ -29,7 +29,7 @@ object PulsarPatches {
     val DEAD_HOSTS: MutableSet<String> = mutableSetOf()
     val TITLE_OVERRIDES: MutableMap<String, String> = mutableMapOf()
 
-    fun load(app: Application = Injekt.get()) {
+    fun load(app: Application = Injekt.get<Application>()) {
         if (loaded) return
         synchronized(this) {
             if (loaded) return
