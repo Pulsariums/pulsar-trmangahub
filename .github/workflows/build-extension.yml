@@ -111,6 +111,10 @@ jobs:
           cp pulsar-v2/repo-build/apk/*.apk pulsar-v2/repo/apk/
           cp pulsar-v2/repo-build/index.min.json pulsar-v2/repo/index.min.json
           cp pulsar-v2/repo-build/repo.json pulsar-v2/repo/repo.json
+          # id->kaynak haritasi: bakim bacasi (07_maintain.py) MIHON_<id>'leri
+          # bundan cozer; build her yayinda tazeler.
+          cp pulsar-v2/repo-build/source_map.json pulsar-v2/repo/source_map.json
+          test -s pulsar-v2/repo/source_map.json
 
       - name: Commit and push artifacts
         run: |

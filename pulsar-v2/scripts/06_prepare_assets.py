@@ -106,6 +106,18 @@ def main():
         ):
             dead_sources.add(brand.upper())
 
+    # ---- bakım bacasının KALICI kararları (07_maintain.py) ----
+    # overrides.json liveness'in ÜZERİNE yazılır; unpinned listesi bayat
+    # liveness pin'lerini kalıcı olarak susturur (spam faciası tekrarı olmasın).
+    ov = load(os.path.join(DATA, "maintenance", "overrides.json"), {}) or {}
+    unpinned = set(ov.get("unpinned") or [])
+    for k in list(domain_overrides):
+        if k in unpinned:
+            del domain_overrides[k]
+    domain_overrides.update(ov.get("domainOverrides") or {})
+    dead_sources |= set(ov.get("deadSources") or [])
+    dead_hosts |= {bare(h) for h in (ov.get("deadHosts") or [])}
+
     patches = {
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "domainOverrides": dict(sorted(domain_overrides.items())),
@@ -113,6 +125,20 @@ def main():
         "deadHosts": sorted(dead_hosts),
         "titleOverrides": dict(sorted(title_overrides.items())),
     }
+
+    # katalog tekilleştirme: aynı (domain, lang) => AYNI Mihon id'si => çakışma.
+    if isinstance(catalogue, dict) and isinstance(catalogue.get("sources"), list):
+        seen, uniq = set(), []
+        for s in catalogue["sources"]:
+            key = (bare(s.get("domain")), (s.get("lang") or "all").lower())
+            if key in seen:
+                continue
+            seen.add(key)
+            uniq.append(s)
+        dropped = len(catalogue["sources"]) - len(uniq)
+        if dropped:
+            catalogue = dict(catalogue, sources=uniq)
+            print(f"[06] katalog tekilleştirme: {dropped} aynı-domain kaydı elendi")
 
     os.makedirs(ASSETS, exist_ok=True)
     cat_out = os.path.join(ASSETS, "catalogue.json")

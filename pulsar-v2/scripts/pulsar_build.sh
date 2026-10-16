@@ -93,8 +93,22 @@ for f in "${FLIST[@]}"; do
     cp "$out" "$ROOT/repo-build/apk/eu.kanade.tachiyomi.extension.all.pulsar${suffix}.apk"
 done
 
-# 4) İndeksi APK'lardan üret (Nyora generate-repo örüntüsü: sürüm/parmak izi
+# 4) id->kaynak haritası: bakım bacası (07_maintain.py) MIHON_<id>'leri ancak
+#    bununla isimlendirebilir. Parsers deposu annotation taraması + katalog hash'i.
+# Kısa sha fetch edilmez; GitHub API ile tam sha'ya çözülür (branch/tag ise geçersiz
+# sha kalır ve normal fetch denenir).
+FULL_REF="$(curl -sf "https://api.github.com/repos/Kotatsu-Redo/kotatsu-parsers-redo/commits/$PARSERS_REF" \
+    | sed -n 's/.*"sha": "\([0-9a-f]\{40\}\)".*/\1/p' | head -1 || true)"
+FULL_REF="${FULL_REF:-$PARSERS_REF}"
+git clone --quiet --depth 1 https://github.com/Kotatsu-Redo/kotatsu-parsers-redo "$WORK/parsers"
+git -C "$WORK/parsers" fetch --quiet --depth 1 origin "$FULL_REF" 2>/dev/null || FULL_REF="$PARSERS_REF"
+git -C "$WORK/parsers" checkout --quiet "$FULL_REF" 2>/dev/null || \
+    git -C "$WORK/parsers" checkout --quiet FETCH_HEAD
+python3 "$SCRIPTS/emit_source_map.py" "$WORK/parsers" \
+    "$ROOT/extension/src/main/assets/catalogue.json" "$ROOT/repo-build/source_map.json"
+
+# 5) İndeksi APK'lardan üret (Nyora generate-repo örüntüsü: sürüm/parmak izi
 #    APK'nın KENDİSİNDEN okunur, elle yazılamaz; kontrat bekçisi dahil).
 python3 "$ROOT/scripts/generate_repo.py" "$ROOT/repo-build"
 
-echo "✔ done → $ROOT/repo-build  (apk/, icon/, index.min.json, repo.json)"
+echo "✔ done → $ROOT/repo-build  (apk/, icon/, index.min.json, repo.json, source_map.json)"

@@ -49,7 +49,12 @@ class PulsarSourceFactory : SourceFactory {
                     when {
                         name in PulsarPatches.DEAD_SOURCES -> null
                         (entry.contentType == ContentType.HENTAI) != wantAdult -> null
-                        targetLang != "all" && entry.locale.isNotBlank() && entry.locale != targetLang -> null
+                        // DİL SAFİĞİ (kullanıcı kuralı): "multi"/boş locale Türkçe
+                        // DEĞİLDİR. Dil-paketleri yalnız kendi locale'ini alır;
+                        // boş ve "all" locale sadece Global paketlere girer.
+                        // NSFW saflığı da aynı sıkılıkla: wantAdult HENTAI
+                        // olmayanı 18+'a, HENTAI olanı SFW paketle asla almaz.
+                        targetLang != "all" && entry.locale != targetLang -> null
                         else -> PulsarKotatsuSource(entry, entry.locale.ifBlank { "all" })
                     }
                 }.getOrNull()

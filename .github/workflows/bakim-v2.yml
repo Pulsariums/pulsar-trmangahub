@@ -1,0 +1,114 @@
+name: 'Bakım V2: otomatik tamir + yeniden derleme (APK dünyası)'
+
+# Eski JAR bakim.yml'nin yeni APK sistemindeki karşılığı. Zincir:
+#   cihaz/test sonucu JSON'ları (MIHON_<id> formatı) + istenirse --sweep
+#   -> 07_maintain.py (sınıflandır, içerik-doğrulamalı tamir, karantina,
+#      bayat pin geri-alımı) -> data/maintenance/* commit
+#   -> karar değiştiyse build-extension.yml tetiklenir (patches asset'i ve
+#      source_map yenilenmiş APK'lar olarak yayına çıkar).
+#
+# Cihazdan sonuç getirme: muhabber JSON'unu pulsar-v2/data/live-apk/ altına
+# bırak (örn apk-tr.json) ya da dispatch'te URL ver.
+
+on:
+  workflow_dispatch:
+    inputs:
+      sonuc:
+        description: 'Sonuç JSON dosya yolları/URLleri (virgülle; boş = yalnız mevcut sweep)'
+        required: false
+        default: 'pulsar-v2/data/live-apk/apk-tr.json'
+      sweep:
+        description: 'Hiç test edilmemiş TR kaynaklarını da proaktif tara'
+        type: boolean
+        default: true
+      rebuild:
+        description: 'Karar değiştiyse APKları yeniden derle/yayımla'
+        type: boolean
+        default: true
+  schedule:
+    # Haftada bir Salı 05:17 — tam sweep'li otomatik bakım
+    - cron: '17 5 * * 2'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: hub-v2
+  cancel-in-progress: false
+
+jobs:
+  bakim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    outputs:
+      changed: ${{ steps.run.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Harita hazır mı? (build-extension publish eder)
+        run: |
+          if [ ! -s pulsar-v2/repo/source_map.json ]; then
+            echo "::error::pulsar-v2/repo/source_map.json yok — önce build-extension.yml çalıştır"
+            exit 1
+          fi
+          python3 -c "import json;d=json.load(open('pulsar-v2/repo/source_map.json'));print('motor:',len(d['engine']),'katalog:',len(d['catalogue']))"
+
+      - name: Bakımı çalıştır (07_maintain.py)
+        id: run
+        env:
+          SONUC: ${{ inputs.sonuc }}
+          SWEEP: ${{ inputs.sweep && '1' || (github.event_name == 'schedule' && '1' || '0') }}
+        run: |
+          cd pulsar-v2
+          ARGS=()
+          IFS=',' read -ra LST <<< "$SONUC"
+          for s in "${LST[@]}"; do
+            s="$(echo "$s" | xargs)"
+            [ -n "$s" ] && ARGS+=("$s")
+          done
+          SW=""; [ "$SWEEP" = "1" ] && SW="--sweep"
+          set +e
+          python3 scripts/07_maintain.py "${ARGS[@]}" --map repo/source_map.json $SW
+          code=$?
+          set -e
+          echo "$code"
+          if [ "$code" = "2" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; else echo "changed=false" >> "$GITHUB_OUTPUT"; fi
+          [ "$code" -le 2 ] || { echo "::error::bakım script'i hata verdi ($code)"; exit 1; }
+
+      - name: Raporu step summary'ye yaz
+        run: cat pulsar-v2/data/maintenance/report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Bakım kararlarını commit et
+        run: |
+          git config user.name "pulsar-build-bot"
+          git config user.email "noreply@pulsariums.dev"
+          git add -A pulsar-v2/data/maintenance pulsar-v2/data/live-apk
+          git commit -m "chore(bakim-v2): tamir/karantina kararları + rapor" || echo "degisiklik yok"
+          git push origin HEAD:main
+
+  rebuild:
+    needs: bakim
+    if: >-
+      always() && needs.bakim.result == 'success' &&
+      needs.bakim.outputs.changed == 'true' &&
+      (inputs.rebuild || github.event_name == 'schedule')
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: build-extension.yml tetikle
+        run: |
+          gh workflow run build-extension.yml --ref main
+          sleep 25
+          RUN_ID="$(gh run list --workflow build-extension.yml --branch main --limit 1 --json databaseId --jq '.[0].databaseId')"
+          echo "izleniyor: run $RUN_ID"
+          gh run watch "$RUN_ID" --exit-status --interval 30 || {
+            gh run view "$RUN_ID" --log-failed | tail -60 || true
+            exit 1
+          }
