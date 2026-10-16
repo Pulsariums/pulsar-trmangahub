@@ -106,11 +106,12 @@ jobs:
     steps:
       - name: build-extension.yml tetikle
         run: |
-          gh workflow run build-extension.yml --ref main
+          # bu job'da actions/checkout YOK — gh, git bağlamı olmadan depoyu -R ile bulur
+          gh workflow run build-extension.yml --repo "$GITHUB_REPOSITORY" --ref main
           sleep 25
-          RUN_ID="$(gh run list --workflow build-extension.yml --branch main --limit 1 --json databaseId --jq '.[0].databaseId')"
+          RUN_ID="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow build-extension.yml --branch main --limit 1 --json databaseId --jq '.[0].databaseId')"
           echo "izleniyor: run $RUN_ID"
-          gh run watch "$RUN_ID" --exit-status --interval 30 || {
-            gh run view "$RUN_ID" --log-failed | tail -60 || true
+          gh run watch "$RUN_ID" --repo "$GITHUB_REPOSITORY" --exit-status --interval 30 || {
+            gh run view "$RUN_ID" --repo "$GITHUB_REPOSITORY" --log-failed | tail -60 || true
             exit 1
           }
