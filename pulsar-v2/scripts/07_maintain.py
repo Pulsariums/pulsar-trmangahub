@@ -51,11 +51,30 @@ UA = ("Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36")
 CTX = ssl._create_unverified_context()  # probe amaçlı; onaylamayı içerik yapar
 
-SPAM_RE = re.compile(
-    r"bahis|slot|casino|poker|kumar|jackpot|rulet|jack pot|para çekme|yatır|"
-    r"crash game|aviator|domain (?:for sale|is parked)|sedoparking|under construction|"
-    r"buy this domain|the domain .{0,40} is (?:for sale|parked)|topdomains|domain showcase|"
-    r"afternic|dan\.com/|parkingcrew|voodoo:\s*this domain", re.I)
+# Spam/park tespiki GÖRÜNÜR METİN üzerinde yapılır; ham HTML'de "slot" JS
+# değişkeniyle "var slot=document.createElement..." diye eşleşip TilkiScans'ı
+# haksız karantinaya atmıştı (kullanıcının elle doğruladığı listeden çıktı).
+SPAM_STRONG_RE = re.compile(
+    r"sedoparking|domain (?:for sale|is parked)|buy this domain|"
+    r"the domain .{0,40} is (?:for sale|parked)|topdomains|afternic|parkingcrew|"
+    r"under construction|voodoo:?\s*this domain", re.I)
+SPAM_WEAK_RE = re.compile(
+    r"\b(bahis|slot|casino|poker|kumar|jackpot|rulet|crash game|aviator)\b|"
+    r"para\s*(?:[çc]ekme|yat[ıi]r)", re.I)
+
+
+def visible_text(body):
+    b = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", body, flags=re.I | re.S)
+    return re.sub(r"<[^>]+>", " ", b)
+
+
+def is_spam_text(text):
+    """Kuvvetli tek kanıt (park sayfası) YA DA en az İKİ FARKLI kumar sözcüğü.
+    Tek zayıf eşleşme (manga konusu 'bahis' olabilir) karantina sebebi değildir."""
+    if SPAM_STRONG_RE.search(text):
+        return True
+    weak = {m.group(0).lower() for m in SPAM_WEAK_RE.finditer(text)}
+    return len(weak) >= 2
 # Host bazlı kumar/park desisleri: "situsbet200resmi.org", "814292.toplakehorizon.com"
 SPAM_HOST_RE = re.compile(
     r"bet\d|bet[a-z]*(?:resmi|official)|\d{4,}[a-z]|slot|casino|poker|kumar|rulet|jackpot|"
@@ -140,11 +159,12 @@ def validate_candidate(domain, brand=None, depth=0, must=None, lang=None):
     lang: KEŞİF adayı kaynakla AYNI dilin sitesi olmalı (yaoi.me faciası:
     İngilizce yaoi okuma sitesi, TR "YAOITR" fansub'unun marka kelimesini
     başlıkta taşıyor diye pin'lenmişti — DİL SAFİĞİ bunu da yasaklar)."""
-    if not domain or SPAM_RE.search(domain) or SPAM_HOST_RE.search(domain):
+    if not domain or SPAM_STRONG_RE.search(domain) or SPAM_HOST_RE.search(domain):
         return False, "spam-desi"
     if depth > 2:
         return False, "yonlendirme-zinciri"
     status, final_url, body = fetch(f"https://{domain}/")
+    text = visible_text(body)
     fh = URL_RE.search(final_url)
     final_host = re.sub(r"^www\.", "", (fh.group(1) if fh else domain).lower())
     if status == 0:
@@ -156,12 +176,12 @@ def validate_candidate(domain, brand=None, depth=0, must=None, lang=None):
         return False, f"erişilemedi({kind})"
     if apex(final_host) != apex(re.sub(r"^www\.", "", domain.lower())):
         # aday cross-apex yönlendiriyor — hedef ayrı bir sitedir; marka eşecek
-        if SPAM_RE.search(body[:60_000]) or SPAM_HOST_RE.search(final_host):
+        if is_spam_text(text[:60_000]) or SPAM_HOST_RE.search(final_host):
             return False, "spam-yonlendirme"
         if brand and not any(t in final_host.replace(".", "").replace("-", "") for t in brand):
             return False, f"marka-farkli-yonlendirme({final_host})"
         return validate_candidate(final_host, brand, depth + 1, must, lang)
-    if SPAM_RE.search(body[:60_000]) or SPAM_HOST_RE.search(final_host):
+    if is_spam_text(text[:60_000]) or SPAM_HOST_RE.search(final_host):
         return False, "spam-icerik"
     if not MANGA_RE.search(body):
         return False, "manga-izi-yok"
@@ -344,8 +364,9 @@ def main():
     os.makedirs(MAINT_DIR, exist_ok=True)
     ov = load_json(OVERRIDES, None) if os.path.exists(OVERRIDES) else None
     ov = ov or {"domainOverrides": {}, "deadSources": [], "deadHosts": [], "unpinned": []}
-    for k in ("domainOverrides", "deadSources", "deadHosts", "unpinned"):
-        ov.setdefault(k, ov.get(k) or ([] if "dead" in k or k == "unpinned" else {}))
+    for k in ("domainOverrides", "deadSources", "deadHosts", "unpinned",
+              "revivedSources", "revivedHosts"):
+        ov.setdefault(k, ov.get(k) or ([] if k != "domainOverrides" else {}))
     before = json.dumps(ov, sort_keys=True)
 
     entries = results_docs
@@ -465,6 +486,8 @@ def main():
             # 403/5xx/JS-duvarları CI IP'si yanıltması olabilir -> watch.
             toks = tokens(name)
             ok, why = validate_candidate(cur, toks) if cur else (False, "domain-yok")
+            if ok and src.get("broken"):
+                return t, "quarantine", f"{cur} canlı görünüyor AMA upstream @Broken"
             if ok:
                 return t, "ok", "sweep: sağlam"
             if why.startswith("marka-farkli-yonlendirme"):
@@ -494,10 +517,8 @@ def main():
             toks = tokens(name)
             # önce mevcut domain CANLI mı? çapraz-apex/marka kontrolü ile
             ok, why = validate_candidate(cur, toks) if cur else (False, "domain-bilinmiyor")
-            if ok and klass != "DNS":
-                return t, "watch", f"site şu an canlı görünüyor ({why}) — geçici test hatası"
-            if ok and klass == "DNS":
-                return t, "watch", f"test DNS diyordu ama {cur} şu an yanıt veriyor"
+            if ok:
+                return t, "ok", f"site şu an canlı görünüyor ({why}) — test hatası/karantina kalkar"
             # KEŞİF: aynı markanın AYNI DİLDEKİ kardeş domainleri — multi/global
             # bir domain'i TR enum'una pin'lemek "multi Türkçe değildir" kuralını
             # ihlal eder; NSFW kardeşleri de birbirine giremez.
@@ -529,9 +550,25 @@ def main():
             results += list(pool.map(work, stasks))
 
     for (sid, src, klass, doms, cur), action, detail in results:
-        if action == "ok":
-            continue
         name, kind = src["name"], src["kind"]
+        if action == "ok":
+            # KENDİNİ İYİLEŞTİRME: domain bugün CANLI doğrulandıysa eski
+            # karantina kararı yanlıştı (TilkiScans vakası) — geri al.
+            host = re.sub(r"^www\.", "", (cur or src.get("domain") or "").lower())
+            if kind == "engine" and name in ov["deadSources"]:
+                ov["deadSources"].remove(name)
+                if name not in ov["revivedSources"]:
+                    ov["revivedSources"].append(name)
+                rows.append({"id": sid, "kind": kind, "name": name, "title": src.get("title", ""),
+                             "lang": src["lang"], "nsfw": src["nsfw"], "class": klass,
+                             "action": "karantina-kalktı", "detail": detail})
+            if host and host in ov["deadHosts"]:
+                ov["deadHosts"].remove(host)
+                if host not in ov["revivedHosts"]:
+                    ov["revivedHosts"].append(host)
+                rows.append({"id": sid, "kind": "host", "name": host, "class": klass,
+                             "action": "host-açıldı", "detail": detail})
+            continue
         if action.startswith("repair->"):
             cand = action.split("->", 1)[1]
             # motor enum adı ve ölü host'un ikisi de anahtar olarak pin'lenir:
@@ -542,6 +579,8 @@ def main():
                 ov["domainOverrides"][cur] = cand
             if name in ov["deadSources"]:
                 ov["deadSources"].remove(name)
+                if name not in ov["revivedSources"]:
+                    ov["revivedSources"].append(name)
             pinned_names.add(name)
         elif action == "quarantine":
             quarantine(src, cur)
@@ -551,11 +590,15 @@ def main():
 
     ov["deadSources"] = sorted(set(ov["deadSources"]))
     ov["deadHosts"] = sorted(set(ov["deadHosts"]))
+    ov["revivedSources"] = sorted(set(ov["revivedSources"]))
+    ov["revivedHosts"] = sorted(set(ov["revivedHosts"]))
     ov["updated"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
-    changed = json.dumps({k: ov[k] for k in ("domainOverrides", "deadSources", "deadHosts", "unpinned")},
+    KEYS = ("domainOverrides", "deadSources", "deadHosts", "unpinned",
+            "revivedSources", "revivedHosts")
+    changed = json.dumps({k: ov[k] for k in KEYS},
                          sort_keys=True) != json.dumps({k: json.loads(before)[k]
-                        for k in ("domainOverrides", "deadSources", "deadHosts", "unpinned")}, sort_keys=True)
+                        for k in KEYS}, sort_keys=True)
 
     # rapor
     summary = {}

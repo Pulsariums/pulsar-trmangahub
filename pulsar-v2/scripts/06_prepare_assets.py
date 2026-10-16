@@ -117,6 +117,10 @@ def main():
     domain_overrides.update(ov.get("domainOverrides") or {})
     dead_sources |= set(ov.get("deadSources") or [])
     dead_hosts |= {bare(h) for h in (ov.get("deadHosts") or [])}
+    # Kendini iyileştirme (07): domain'ı CANLI doğrulanmış kaynak/host, bayat
+    # liveness birleşiminden de düşürülür — yanlış karantina bir daha yapışmaz.
+    dead_sources -= set(ov.get("revivedSources") or [])
+    dead_hosts -= {bare(h) for h in (ov.get("revivedHosts") or [])}
 
     patches = {
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
