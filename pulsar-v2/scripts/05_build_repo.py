@@ -140,10 +140,12 @@ def main():
 
     # 2. repo.json
     repo_meta = {
+        "index_v2": None,
         "meta": {
             "name": "Pulsar Manga Hub (V2)",
+            "shortName": "Pulsar",
             "website": "https://github.com/Pulsariums/pulsar-trmangahub",
-            "shortDescription": "Nyora mimarisiyle tekil/birleşik çok dilli Mihon eklenti deposu."
+            "signingKeyFingerprint": "9add655a78e96c4ec7a53ef89dccb557cb5d767489fac5e785d671a5a75d4da2"
         }
     }
     with open(REPO_META_FILE, "w", encoding="utf-8") as f:
