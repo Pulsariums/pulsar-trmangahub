@@ -45,9 +45,19 @@ jobs:
           echo "ANDROID_HOME=$ANDROID_HOME" >> $GITHUB_ENV
           SDKM="$(ls "$ANDROID_HOME"/cmdline-tools/*/bin/sdkmanager | sort -V | tail -1)"
           yes | "$SDKM" --sdk_root="$ANDROID_HOME" --licenses >/dev/null 2>&1 || true
-          # API 37 paketleri minor ("android-37.0") olarak listeleniyor; klasör android-37 olur.
           "$SDKM" --sdk_root="$ANDROID_HOME" \
-            "platforms;android-37.0" "build-tools;37.0.0" "build-tools;34.0.0" "platform-tools"
+            "build-tools;37.0.0" "build-tools;34.0.0" "platform-tools"
+          # sdkmanager API 37 platformunu gormuyor (repository2-1 cache); Google'nin
+          # dogrudan zip'ini kur: klasor adi android-37 olmali (AGP api-level'den okur).
+          if [ ! -d "$ANDROID_HOME/platforms/android-37" ]; then
+            curl -sfL "https://dl.google.com/android/repository/platform-37.0_r02.zip" -o /tmp/p37.zip
+            unzip -q /tmp/p37.zip -d /tmp/p37
+            SRC="$(find /tmp/p37 -maxdepth 1 -type d | tail -1)"
+            mkdir -p "$ANDROID_HOME/platforms"
+            mv "$SRC" "$ANDROID_HOME/platforms/android-37"
+            grep -qE "^AndroidVersion.ApiLevel=(37|37\.0)" "$ANDROID_HOME/platforms/android-37/source.properties" \
+              || echo "unexpected source.properties: $(cat "$ANDROID_HOME/platforms/android-37/source.properties")"
+          fi
           ls -d "$ANDROID_HOME"/platforms/android-37 >/dev/null
           ls "$ANDROID_HOME"/build-tools/*/aapt >/dev/null
 
