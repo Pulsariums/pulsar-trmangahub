@@ -1,41 +1,63 @@
-# 🌟 Pulsar Manga Hub (V2)
+# 🌟 Pulsar Manga Hub
 
-**Mihon / Tachiyomi için Nyora Mimarisiyle Güçlendirilmiş, Çok Dilli ve Birleşik Manga Eklenti Deposu**
+**Hem Mihon / Tachiyomi (APK) hem de Kototoro (JAR) için Bağımsız, Çok Dilli Manga Depoları**
 
-Artık onlarca farklı APK kurup güncellemekle uğraşmanıza gerek yok! Pulsar-V2, tüm Türkçe ve küresel manga kaynaklarını **Nyora tekniğiyle tek bir eklenti paketi** içinde toplar, ölü siteleri otomatik eler, yeni adrese taşınanları otomatik onarır ve cihaz üzerinde (on-device) sıfır sunucu bağımlılığıyla çalışır.
+Bu depo iki ayrı dağıtım hattı sunar:
+1. **Kototoro için Klasik JAR Deposu:** Kototoro uygulamasının yerel uzantı sistemiyle %100 uyumlu, 4 modüler `.jar` paketi (`tr`, `tr_nsfw`, `global`, `global_nsfw`).
+2. **Mihon için Yeni Birleşik APK Deposu (Pulsar-V2):** Nyora tekniğiyle tek APK altında toplanmış, sıfır sunucu bağımlılıklı otomatik tamirli eklenti deposu.
 
 ---
 
-## 🚀 Mihon'a Tek Tıkla Ekleme
+## ☕ 1. Kototoro (JAR) Deposu Kurulumu
 
-Mihon veya Tachiyomi yüklü cihazınızdan aşağıdaki butona tıklayarak depoyu anında ekleyebilirsiniz:
+Kototoro uygulamasında doğrudan çalışan klasik JAR paketleridir:
 
-[![Mihon'a Ekle](https://img.shields.io/badge/Mihon'a%20Ekle-Depo%20Bağlantısı-blue?style=for-the-badge&logo=android)](tachiyomi://add-repo?url=https%3A%2F%2Fraw.githubusercontent.com%2FPulsariums%2Fpulsar-trmangahub%2Fmain%2Fpulsar-v2%2Frepo%2Findex.min.json)
+1. Kototoro uygulamasında **Ayarlar → Eklentiler / Paketler** bölümüne gidin.
+2. Depo URL'si olarak şunu ekleyin:
+   ```text
+   https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/jar/index.min.json
+   ```
+   *(veya doğrudan klasör yolu: `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/jar`)*
+3. İstediğiniz paketi (`tr`, `tr_nsfw`, `global`, `global_nsfw`) seçip indirin.
+
+---
+
+## 🚀 2. Mihon / Tachiyomi (APK) Deposu Kurulumu
+
+Mihon yüklü cihazınızdan tek tıkla eklemek için:
+
+[![Mihon'a Ekle](https://img.shields.io/badge/Mihon'a%20Ekle-Depo%20Bağlantısı-blue?style=for-the-badge&logo=android)](tachiyomi://add-repo?url=https%3A%2F%2Fraw.githubusercontent.com%2FPulsariums%2Fpulsar-trmangahub%2Fmain%2Findex.min.json)
 
 ### 📋 Manuel Ekleme (Tek Link)
 
 1. **Mihon / Tachiyomi** uygulamasını açın.
 2. **Daha Fazla (More) → Ayarlar (Settings) → Gözat (Browse) → Eklenti depoları (Extension repos) → +** simgesine dokunun.
-3. Aşağıdaki **tek bağlantıyı** yapıştırın:
-
-```text
-https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/pulsar-v2/repo/index.min.json
-```
-
-*(Alternatif GitHub Pages Aynası: `https://pulsariums.github.io/pulsar-trmangahub/index.min.json`)*
-
-4. **Gözat → Eklentiler** sekmesine gidin ve ihtiyacınız olan paketi tek tıkla kurun.
+3. Aşağıdaki bağlantıyı yapıştırın:
+   ```text
+   https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/index.min.json
+   ```
+   *(veya doğrudan v2 alt yolu: `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/pulsar-v2/repo/index.min.json`)*
+4. **Gözat → Eklentiler** sekmesinden dilediğiniz paketi kurun.
 
 ---
 
-## 📦 Dağıtılan Birleşik Paketler
+## 📦 Paket Dağıtımları ve Kapsam
 
-| Eklenti Adı | Paket Kimliği | İçerik ve Kapsam | Kaynak Sayısı |
+### Kototoro (JAR) Paketleri
+| Paket | Dosya | Kapsam |
+|---|---|---|
+| **Pulsar TR** | `jar/apk/tr.jar` | Türkçe normal manga/webtoon kaynakları |
+| **Pulsar TR (NSFW)** | `jar/apk/tr-nsfw.jar` | Türkçe yetişkin / +18 kaynaklar |
+| **Pulsar Global** | `jar/apk/global.jar` | Dünya çapında normal kaynaklar (İngilizce, Japonca vb.) |
+| **Pulsar Global (NSFW)** | `jar/apk/global-nsfw.jar` | Dünya çapında yetişkin kaynaklar |
+
+### Mihon (APK) Birleşik Paketleri
+| Eklenti Adı | Paket Kimliği | İçerik ve Kapsam | Sürüm |
 |---|---|---|---|
-| **Pulsar TR** | `…pulsar.tr` | Tüm Türkçe Normal (SFW) Manga ve Webtoon Siteleri | **92 Kaynak** |
-| **Pulsar TR 18+** | `…pulsar.tr18` | Tüm Türkçe Yetişkin (+18 / NSFW / Yaoi / Yuri) Siteleri | **17 Kaynak** |
-| **Pulsar Global** | `…pulsar.global` | Dünya Genelindeki Normal Manga Siteleri | **92+ Kaynak** |
-| **Pulsar Global 18+** | `…pulsar.global18` | Dünya Genelindeki Yetişkin Manga Siteleri | **17+ Kaynak** |
+| **Pulsar TR** | `…pulsar.tr` | Tüm Türkçe Normal Manga ve Webtoon Siteleri | **v1.6.15** |
+| **Pulsar TR 18+** | `…pulsar.tr18` | Tüm Türkçe Yetişkin (+18 / NSFW) Siteleri | **v1.6.15** |
+| **Pulsar Global** | `…pulsar.global` | Dünya Genelindeki Normal Manga Siteleri | **v1.6.15** |
+| **Pulsar Global 18+** | `…pulsar.global18` | Dünya Genelindeki Yetişkin Siteleri | **v1.6.15** |
 
 > **Not:** Tek bir eklenti (örn: *Pulsar TR*) yüklediğinizde, içindeki 92 kaynak Mihon'un kaynaklar listesinde ayrı ayrı görünür ve dilediğinizi kullanabilirsiniz.
 

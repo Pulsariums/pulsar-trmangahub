@@ -1,0 +1,25 @@
+{
+  "bucket": "tr_nsfw",
+  "fingerprint": "4f49f8d450308296c7ef9836db78d535f6974ac410c4d46e05abb3af653ad210",
+  "upstream_commit": "b3c000024563920d3eecde5816f2e9d3734fa467",
+  "builtAt": "2026-10-14T05:28:38Z",
+  "jarSha256": "4afac39de71ecb487331cbe49045d5d0f41f8e13aad23276ad766c15f346ff19",
+  "jarBytes": 392517,
+  "keptCount": 5,
+  "patchedDomains": [
+    {
+      "id": "JIANGZAITOON",
+      "old": "jiangzaitoon.top",
+      "new": "jiangzaitoon.icu",
+      "confidence": "medium"
+    },
+    {
+      "id": "YAOIFLIX",
+      "old": "yaoiflix.me",
+      "new": "yaoiflix.fit",
+      "confidence": "medium"
+    }
+  ],
+  "fallback": 0,
+  "runNumber": 27
+}
