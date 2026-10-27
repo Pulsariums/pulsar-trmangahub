@@ -1,11 +1,11 @@
 {
- "generated": "2026-10-20T10:08:58Z",
+ "generated": "2026-10-27T10:39:38Z",
  "summary": {
-  "gecici-erişim-hata": 2,
-  "dogrulandi": 15,
-  "quarantine": 38,
-  "watch": 88,
-  "host-açıldı": 5
+  "gecici-erişim-hata": 7,
+  "dogrulandi": 10,
+  "watch": 93,
+  "quarantine": 40,
+  "host-açıldı": 3
  },
  "rows": [
   {
@@ -21,8 +21,8 @@
    "kind": "pin",
    "name": "ELECEEDTRKIYE->nabicix.com",
    "class": "PIN",
-   "action": "dogrulandi",
-   "detail": "ok"
+   "action": "gecici-erişim-hata",
+   "detail": "yanit-403 — pin korundu, sonraki bakımda yeniden denenir"
   },
   {
    "id": "-",
@@ -37,8 +37,8 @@
    "kind": "pin",
    "name": "KORELISCANS->nabicix.com",
    "class": "PIN",
-   "action": "dogrulandi",
-   "detail": "ok"
+   "action": "gecici-erişim-hata",
+   "detail": "yanit-403 — pin korundu, sonraki bakımda yeniden denenir"
   },
   {
    "id": "-",
@@ -85,8 +85,8 @@
    "kind": "pin",
    "name": "eleceedturkiye.com->nabicix.com",
    "class": "PIN",
-   "action": "dogrulandi",
-   "detail": "ok"
+   "action": "gecici-erişim-hata",
+   "detail": "yanit-403 — pin korundu, sonraki bakımda yeniden denenir"
   },
   {
    "id": "-",
@@ -101,8 +101,8 @@
    "kind": "pin",
    "name": "koreliscans.com->nabicix.com",
    "class": "PIN",
-   "action": "dogrulandi",
-   "detail": "ok"
+   "action": "gecici-erişim-hata",
+   "detail": "yanit-403 — pin korundu, sonraki bakımda yeniden denenir"
   },
   {
    "id": "-",
@@ -117,8 +117,8 @@
    "kind": "pin",
    "name": "mangaokutr.net->mangaoku.info",
    "class": "PIN",
-   "action": "dogrulandi",
-   "detail": "ok"
+   "action": "gecici-erişim-hata",
+   "detail": "erişilemedi(URLError) — pin korundu, sonraki bakımda yeniden denenir"
   },
   {
    "id": "-",
@@ -143,6 +143,18 @@
    "class": "PIN",
    "action": "dogrulandi",
    "detail": "ok"
+  },
+  {
+   "id": 5779873155655263510,
+   "kind": "engine",
+   "name": "ADUMANGA",
+   "title": "AduManga",
+   "lang": "tr",
+   "nsfw": 0,
+   "class": "SWEEP",
+   "action": "watch",
+   "detail": "sweep: manga-izi-yok (kesin ölüm değil, izlenir)",
+   "domain": "adumanga.com"
   },
   {
    "id": 1769466275926738671,
@@ -357,7 +369,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: yanit-403 (kesin ölüm değil, izlenir)",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "gaiatoon.com"
   },
   {
@@ -889,18 +901,6 @@
    "domain": "piedpiperfansub.me"
   },
   {
-   "id": 1153896383471563721,
-   "kind": "engine",
-   "name": "PIEDPIPERFANSUBYY",
-   "title": "PiedPiperFansubyy",
-   "lang": "tr",
-   "nsfw": 1,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: yanit-401 (kesin ölüm değil, izlenir)",
-   "domain": "piedpiperfansubyy.me"
-  },
-  {
    "id": 5425569062261084453,
    "kind": "engine",
    "name": "PRUNUSSCANS",
@@ -921,7 +921,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: manga-izi-yok (kesin ölüm değil, izlenir)",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "www.raindropteamfan.com"
   },
   {
@@ -981,20 +981,8 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: yanit-429 (kesin ölüm değil, izlenir)",
+   "detail": "sweep: yanit-503 (kesin ölüm değil, izlenir)",
    "domain": "shadowceviri.blogspot.com"
-  },
-  {
-   "id": 1610469579808167756,
-   "kind": "engine",
-   "name": "SNSCOEURTURKEY",
-   "title": "SnscoeurTurkey",
-   "lang": "tr",
-   "nsfw": 1,
-   "class": "SWEEP",
-   "action": "watch",
-   "detail": "sweep: yanit-429 (kesin ölüm değil, izlenir)",
-   "domain": "snscoeurturkey.blogspot.com"
   },
   {
    "id": 6379770814877065740,
@@ -1065,7 +1053,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "quarantine",
-   "detail": "adumanga.com marka-farkli-yonlendirme(koplo77-irama.com)",
+   "detail": "adumanga.com marka-farkli-yonlendirme(riddles-with-answers.com)",
    "domain": "adumanga.com"
   },
   {
@@ -1297,7 +1285,7 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: yanit-403 (kesin ölüm değil, izlenir)",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "gaiatoon.com"
   },
   {
@@ -1323,6 +1311,18 @@
    "action": "watch",
    "detail": "sweep: yanit-403 (kesin ölüm değil, izlenir)",
    "domain": "juratempe.st"
+  },
+  {
+   "id": 4906103541379031343,
+   "kind": "catalogue",
+   "name": "Koreli Scans",
+   "title": "Koreli Scans",
+   "lang": "tr",
+   "nsfw": 0,
+   "class": "SWEEP",
+   "action": "watch",
+   "detail": "sweep: yanit-403 (kesin ölüm değil, izlenir)",
+   "domain": "nabicix.com"
   },
   {
    "id": 1254625717579109559,
@@ -1446,11 +1446,15 @@
   },
   {
    "id": 2493276940576347494,
-   "kind": "host",
-   "name": "mangasiginagi.com",
+   "kind": "catalogue",
+   "name": "MangaSiginagi",
+   "title": "MangaSiginagi",
+   "lang": "tr",
+   "nsfw": 0,
    "class": "SWEEP",
-   "action": "host-açıldı",
-   "detail": "sweep: sağlam"
+   "action": "watch",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
+   "domain": "mangasiginagi.com"
   },
   {
    "id": 8461894771860958934,
@@ -1501,6 +1505,18 @@
    "domain": "mikrokosmosfb.blogspot.com"
   },
   {
+   "id": 7567809191033269015,
+   "kind": "catalogue",
+   "name": "Minda Fansub",
+   "title": "Minda Fansub",
+   "lang": "tr",
+   "nsfw": 1,
+   "class": "SWEEP",
+   "action": "quarantine",
+   "detail": "mindafansub.dev marka-farkli-yonlendirme(mindafansub.nl)",
+   "domain": "mindafansub.dev"
+  },
+  {
    "id": 4231843737385138446,
    "kind": "catalogue",
    "name": "NoxScans",
@@ -1521,6 +1537,18 @@
    "detail": "sweep: sağlam"
   },
   {
+   "id": 798888619164960500,
+   "kind": "catalogue",
+   "name": "OkuToon",
+   "title": "OkuToon",
+   "lang": "tr",
+   "nsfw": 0,
+   "class": "SWEEP",
+   "action": "watch",
+   "detail": "sweep: yanit-403 (kesin ölüm değil, izlenir)",
+   "domain": "okutoon.com"
+  },
+  {
    "id": 670740038008065849,
    "kind": "catalogue",
    "name": "Pati Manga",
@@ -1533,14 +1561,6 @@
    "domain": "patimanga.com"
   },
   {
-   "id": 8119700570236890181,
-   "kind": "host",
-   "name": "ww17.piedpiperfansub.me",
-   "class": "SWEEP",
-   "action": "host-açıldı",
-   "detail": "sweep: sağlam"
-  },
-  {
    "id": 357698414057326452,
    "kind": "catalogue",
    "name": "Raindrop Fansub",
@@ -1549,8 +1569,20 @@
    "nsfw": 0,
    "class": "SWEEP",
    "action": "watch",
-   "detail": "sweep: manga-izi-yok (kesin ölüm değil, izlenir)",
+   "detail": "sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir)",
    "domain": "raindropteamfan.com"
+  },
+  {
+   "id": 6279075557994312388,
+   "kind": "catalogue",
+   "name": "RavenScans",
+   "title": "RavenScans",
+   "lang": "tr",
+   "nsfw": 0,
+   "class": "SWEEP",
+   "action": "watch",
+   "detail": "sweep: yanit-403 (kesin ölüm değil, izlenir)",
+   "domain": "ravenscans.org"
   },
   {
    "id": 3154568042786734518,
@@ -1575,6 +1607,18 @@
    "action": "watch",
    "detail": "sweep: yanit-403 (kesin ölüm değil, izlenir)",
    "domain": "sadscans.com"
+  },
+  {
+   "id": 7663701235462277388,
+   "kind": "catalogue",
+   "name": "SeraphManga",
+   "title": "SeraphManga",
+   "lang": "tr",
+   "nsfw": 0,
+   "class": "SWEEP",
+   "action": "watch",
+   "detail": "sweep: yanit-401 (kesin ölüm değil, izlenir)",
+   "domain": "seraphmanga.com"
   },
   {
    "id": 7170599070299314950,
@@ -1649,6 +1693,18 @@
    "domain": "timenaight.org"
   },
   {
+   "id": 794336668265180348,
+   "kind": "catalogue",
+   "name": "Toontaku",
+   "title": "Toontaku",
+   "lang": "tr",
+   "nsfw": 0,
+   "class": "SWEEP",
+   "action": "watch",
+   "detail": "sweep: erişilemedi(TimeoutError) (kesin ölüm değil, izlenir)",
+   "domain": "toontaku.com"
+  },
+  {
    "id": 3541806057642489392,
    "kind": "catalogue",
    "name": "Uzay Manga",
@@ -1683,6 +1739,18 @@
    "action": "watch",
    "detail": "sweep: yanit-403 (kesin ölüm değil, izlenir)",
    "domain": "gafeland.com"
+  },
+  {
+   "id": 8961164446912091378,
+   "kind": "catalogue",
+   "name": "jiangzaitoon",
+   "title": "jiangzaitoon",
+   "lang": "tr",
+   "nsfw": 1,
+   "class": "SWEEP",
+   "action": "quarantine",
+   "detail": "jiangzaitoon.icu marka-farkli-yonlendirme(jiangzaitoon.nl)",
+   "domain": "jiangzaitoon.icu"
   },
   {
    "id": 7470363989556742895,
