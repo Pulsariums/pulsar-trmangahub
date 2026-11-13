@@ -290,7 +290,13 @@
         "listPath": "/manga",
         "itemSelector": "div.page-item-detail, div.manga",
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
+        "readerSelector": "div.page-break img, div.reading-content img",
+        "searchUrl": "https://www.kuroimanga.site/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+        "searchMethod": "POST",
+        "searchBody": "title={query}",
+        "searchJsonItems": "data",
+        "searchJsonUrl": "url",
+        "searchJsonTitle": "title"
       },
       "verified_by_user": true,
       "origins": [
@@ -967,7 +973,8 @@
         "readerSelector": "div#readerarea img",
         "pageScriptSelector": "script:contains(ts_reader)",
         "pageJsonArray": "images",
-        "pageScriptFirst": "1"
+        "pageScriptFirst": "1",
+        "pageUrlAllow": "amip-proxy"
       },
       "verified_by_user": false,
       "origins": [
@@ -1877,9 +1884,10 @@
         "datePattern": "d MMMM",
         "engine": "madara",
         "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
+        "itemSelector": "div.page-item-detail, div.manga, div.c-tabs-item__content",
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
+        "readerSelector": "div.page-break img, div.reading-content img",
+        "searchUrl": "https://opiatoon.shop/?s={query}&post_type=wp-manga"
       },
       "verified_by_user": false,
       "origins": [

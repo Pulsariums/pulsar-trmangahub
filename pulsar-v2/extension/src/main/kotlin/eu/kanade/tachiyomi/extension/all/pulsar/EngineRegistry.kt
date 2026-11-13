@@ -249,26 +249,33 @@ object EngineRegistry {
         urlField: String,
         arrayName: String,
         baseUrl: String,
+        allowPattern: String = "",
     ): List<String> {
         if (scriptSelector.isBlank() || (urlField.isBlank() && arrayName.isBlank())) {
             return emptyList()
         }
+        val allow = if (allowPattern.isBlank()) null else runCatching { Regex(allowPattern) }.getOrNull()
         val doc = Jsoup.parse(html, baseUrl)
         val out = LinkedHashSet<String>()
         for (script in doc.select(scriptSelector)) {
             val text = script.data().ifBlank { script.html() }
             if (text.isBlank()) continue
             if (urlField.isNotEmpty()) {
-                val re = Regex("\"?${Regex.escape(urlField)}\"?\\s*:\\s*\"([^\"]+)\"")
-                for (m in re.findAll(text)) addPageUrl(out, m.groupValues[1])
+                val re = Regex(
+                    "\"?${Regex.escape(urlField)}\"?\\s*:\\s*(?:\\\$R\\[\\d+\\]\\s*=\\s*)?\"([^\"]+)\"",
+                )
+                for (m in re.findAll(text)) addPageUrl(out, m.groupValues[1], allow)
             }
             if (arrayName.isNotEmpty()) {
-                val head = Regex("\"?${Regex.escape(arrayName)}\"?\\s*:\\s*\\[").find(text)
+                // İki biçim var: düz JSON `"alan":[...]` ve Qwik durum dizisi
+                // `"alan",<tip>,[0,"adres",0,"adres",...]` (xcomic imageUrls).
+                val head = Regex(
+                    "\"?${Regex.escape(arrayName)}\"?\\s*(?::\\s*|,\\s*\\d+\\s*,\\s*)\\[([\\s\\S]*?)\\]",
+                ).find(text)
                 if (head != null) {
-                    val from = head.range.last + 1
-                    val close = text.indexOf(']', from)
-                    val region = if (close > from) text.substring(from, close) else text.substring(from)
-                    for (m in Regex("\"([^\"]+)\"").findAll(region)) addPageUrl(out, m.groupValues[1])
+                    for (m in Regex("\"([^\"]+)\"").findAll(head.groupValues[1])) {
+                        addPageUrl(out, m.groupValues[1], allow)
+                    }
                 }
             }
             if (out.size >= 500) break
@@ -278,11 +285,12 @@ object EngineRegistry {
 
     private val PAGE_URL_HINT = Regex("\\.(webp|jpg|jpeg|png|avif|gif)(\\?|$)", RegexOption.IGNORE_CASE)
 
-    private fun addPageUrl(out: MutableSet<String>, raw: String) {
+    private fun addPageUrl(out: MutableSet<String>, raw: String, allow: Regex? = null) {
         val u = raw.trim().replace("\\/", "/")
         if (u.length < 8) return
         if (!u.startsWith("http") && !u.startsWith("/")) return
-        if (!PAGE_URL_HINT.containsMatchIn(u)) return
+        val ok = PAGE_URL_HINT.containsMatchIn(u) || (allow != null && allow.containsMatchIn(u))
+        if (!ok) return
         out.add(u)
     }
 
