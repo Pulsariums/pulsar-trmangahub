@@ -301,6 +301,7 @@ struct Row {
     stage: String,
     msg: String,
     fail_rid: String,
+    eser: String,
 }
 
 fn csv_escape(s: &str) -> String {
@@ -469,7 +470,7 @@ fn sweep(root: &Path, argv: &[String]) -> Result<(), String> {
 
     // 3) Her kaynak: list → details → chapters → pages.
     let mut rows: Vec<Row> = Vec::with_capacity(targets.len());
-    for t in &targets {
+    'targets: for t in &targets {
         let mut row = Row {
             id: t.id.clone(),
             site: t.site.clone(),
@@ -480,6 +481,7 @@ fn sweep(root: &Path, argv: &[String]) -> Result<(), String> {
             stage: String::new(),
             msg: String::new(),
             fail_rid: String::new(),
+            eser: String::new(),
         };
 
         let list_rid = format!("s{}-list", t.id);
@@ -511,59 +513,107 @@ fn sweep(root: &Path, argv: &[String]) -> Result<(), String> {
             .cloned()
             .unwrap_or_default();
         row.list = content.len().to_string();
-        let Some(first) = content.first().cloned() else {
+        if content.is_empty() {
             row.stage = "list".to_string();
             row.msg = "liste boş".to_string();
             rows.push(row);
             continue;
-        };
+        }
 
-        let details_rid = format!("s{}-details", t.id);
-        let details_resp = match host.request(
-            &details_rid,
-            json!({"operation": "details", "content": first}),
-        ) {
-            Ok(v) => v,
-            Err(f) => {
-                if f.kind == FailKind::Fatal {
-                    return Err(f.msg);
+        // Bölümü olan eseri bul: ilk eser 0 bölüm dönerse listedeki sonraki
+        // eserleri dene (en fazla 3). Diğer hata türleri (RUNTIME_FAILURE,
+        // zaman aşımı) eski davranışla aynı: o kaynak o adımda biter.
+        const MAX_ESER: usize = 3;
+        let attempts = content.len().min(MAX_ESER);
+        let mut detail_ok: Option<Value> = None;
+        let mut attempted = 0usize;
+        for (i, item) in content.iter().take(MAX_ESER).enumerate() {
+            attempted = i + 1;
+            if let Some(t) = item.get("title").and_then(|v| v.as_str()) {
+                if !t.is_empty() {
+                    row.eser = t.chars().take(60).collect();
                 }
-                row.details = "hata".to_string();
-                row.fail_rid = details_rid.clone();
-                row.stage = if f.kind == FailKind::Timeout {
-                    "zaman_asimi".to_string()
-                } else if f.harness {
-                    "harness".to_string()
-                } else {
-                    "details".to_string()
-                };
-                row.msg = f.msg;
-                rows.push(row);
-                continue;
             }
-        };
-        let detail = details_resp.pointer("/result/content");
-        let title = detail
-            .and_then(|c| c.get("title"))
-            .and_then(|v| v.as_str())
-            .unwrap_or("");
-        row.details = if title.is_empty() {
-            "(başlıksız)".to_string()
-        } else {
-            title.chars().take(60).collect()
+            let details_rid = if i == 0 {
+                format!("s{}-details", t.id)
+            } else {
+                format!("s{}-details{}", t.id, i)
+            };
+            let details_resp = match host.request(
+                &details_rid,
+                json!({"operation": "details", "content": item}),
+            ) {
+                Ok(v) => v,
+                Err(f) => {
+                    if f.kind == FailKind::Fatal {
+                        return Err(f.msg);
+                    }
+                    // Harness arızası: eski davranış, sonraki esere geçme.
+                    let harness = f.harness
+                        || f.msg.contains("suwayomi")
+                        || f.msg.contains("NoClassDefFoundError")
+                        || f.msg.contains("CloudflareInterceptor");
+                    if harness {
+                        row.details = "hata".to_string();
+                        row.fail_rid = details_rid.clone();
+                        row.stage = "harness".to_string();
+                        row.msg = f.msg;
+                        rows.push(row);
+                        continue 'targets;
+                    }
+                    // Diğer hatalar (RUNTIME_FAILURE, zaman aşımı): sonraki
+                    // eseri dene; son denemede kaydı yaz.
+                    if i + 1 >= attempts {
+                        row.details = "hata".to_string();
+                        row.fail_rid = details_rid.clone();
+                        row.stage = "details".to_string();
+                        row.msg = f.msg;
+                        rows.push(row);
+                        continue 'targets;
+                    }
+                    continue;
+                }
+            };
+            let detail = details_resp.pointer("/result/content");
+            let title = detail
+                .and_then(|c| c.get("title"))
+                .and_then(|v| v.as_str())
+                .unwrap_or("");
+            row.details = if title.is_empty() {
+                "(başlıksız)".to_string()
+            } else {
+                title.chars().take(60).collect()
+            };
+            row.eser = title.chars().take(60).collect();
+            let has_chapters = detail
+                .and_then(|c| c.get("chapters"))
+                .and_then(|v| v.as_array())
+                .map(|a| !a.is_empty())
+                .unwrap_or(false);
+            if has_chapters {
+                detail_ok = detail.cloned();
+                break;
+            }
+        }
+
+        let Some(detail) = detail_ok else {
+            row.stage = "chapters".to_string();
+            row.msg = if attempted >= MAX_ESER {
+                "3 eserde de bölüm yok".to_string()
+            } else if attempted <= 1 {
+                "bölüm yok".to_string()
+            } else {
+                format!("{attempted} eserde de bölüm yok")
+            };
+            rows.push(row);
+            continue;
         };
 
         let chapters = detail
-            .and_then(|c| c.get("chapters"))
+            .get("chapters")
             .and_then(|v| v.as_array())
             .cloned()
             .unwrap_or_default();
-        if chapters.is_empty() {
-            row.stage = "chapters".to_string();
-            row.msg = "bölüm yok".to_string();
-            rows.push(row);
-            continue;
-        }
         row.chapters = chapters.len().to_string();
         let first_chapter = chapters[0].clone();
 
@@ -620,10 +670,10 @@ fn sweep(root: &Path, argv: &[String]) -> Result<(), String> {
     }
 
     // 4) CSV.
-    let mut csv = String::from("id,site,list,details,chapters,pages,asama_hata,mesaj\n");
+    let mut csv = String::from("id,site,list,details,chapters,pages,asama_hata,mesaj,eser\n");
     for r in &rows {
         csv.push_str(&format!(
-            "{},{},{},{},{},{},{},{}\n",
+            "{},{},{},{},{},{},{},{},{}\n",
             r.id,
             csv_escape(&r.site),
             r.list,
@@ -631,7 +681,8 @@ fn sweep(root: &Path, argv: &[String]) -> Result<(), String> {
             r.chapters,
             r.pages,
             r.stage,
-            csv_escape(&r.msg)
+            csv_escape(&r.msg),
+            csv_escape(&r.eser)
         ));
     }
     if let Some(parent) = out_path.parent() {
