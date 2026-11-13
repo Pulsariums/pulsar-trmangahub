@@ -114,7 +114,7 @@ def main(repo_dir, flavors="tr,tr18,global,global18"):
         index.append({
             "name": meta["name"], "pkg": pkg, "apk": apk,
             "lang": meta["lang"], "code": code, "version": version,
-            "nsfw": meta["nsfw"], "sources": None,
+            "nsfw": meta["nsfw"], "sources": [],
         })
 
     if not index:
