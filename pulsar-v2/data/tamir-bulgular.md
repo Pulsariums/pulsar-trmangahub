@@ -152,6 +152,7 @@ Amanga: `referer=site: 200` · `referer=chapter: 200` · `no-referer: 403` · `w
 | A5/A6 Nyx sayfa | nyxscans `readerSelector` kaldırıldı (kabı olmayan `#readerarea`) | 1.6.32 |
 | Ham metin görselleri | `rawImages`: DOM boşsa inline JSON/Qwik state'ten görsel (xcomic 35, koreli 33 aday) | 1.6.32 |
 | A5 Lunar liste | `rscList`: RSC yükündeki `siteUrl` kartları (90 kart, title.romaji + coverImage.large) | 1.6.33 |
+| A5 Lunar arama | `searchUrl` + `searchJsonPathPrefix`: api.lunarx.to JSON araması, `/manga/<slug>` | 1.6.34 |
 
 ### Bilinen sınırlar (eklenti tarafında çözülemez)
 

@@ -54,6 +54,13 @@ kanıta dayanır; kanıtsız iddia yok.
   ölçüm xcomic 35, koreli 33 aday.
 - **JSON bölüm API'si**: mangaball.com `GET /api/v1/title/chapter-listing?title_id=<24hex>…`
   `data[]` (`name`, `number`, `url`). Kod: `chapterApiUrl` + `chapterApiIdPattern`.
+- **JSON arama API'si**: lunarx araması sitede çalışmıyor (istemci tarafı); gerçek uç
+  nokta `https://api.lunarx.to/api/manga/search?query=<q>`, yanıt `{"manga":[...]}`
+  (`slug`, `title`, `cover_url`). Site yolu yanıtta YOK → `searchJsonPathPrefix`
+  ile `/manga/<slug>` kurulur. Ayar: `searchUrl` + `searchJsonItems=manga` +
+  `searchJsonUrl=slug` + `searchJsonTitle=title` + `searchJsonPathPrefix=/manga/`.
+- **Ders**: arama sayfası 200 dönüp sonuç üretmiyorsa sayfa değil API aranır; HTML'de
+  `API_BASE` / `fetch(\`${...}/api/...\`)` izleri uç noktayı verir.
 
 ## 5. Çözülemeyenler (avı kapandı)
 
