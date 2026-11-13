@@ -286,7 +286,16 @@ class PulsarSource(
         } else {
             emptyList<ParsedChapter>()
         }
-        val chapters = htmlChapters.ifEmpty { rscChapters }
+        val jsonChapters = EngineRegistry.scriptJsonChapters(
+            html,
+            config.optString("chapterScriptSelector", ""),
+            config.optString("chapterScriptContains", ""),
+            config.optString("chapterJsonArray", ""),
+            config.optString("chapterUrlTemplate", ""),
+            response.request.url.toString().trimEnd('/').substringAfterLast('/'),
+            baseUrl,
+        )
+        val chapters = htmlChapters.ifEmpty { rscChapters }.ifEmpty { jsonChapters }
         val diag = EngineRegistry.diagnose(
             doc, chapterSelector, baseUrl, html,
             response.code, response.request.url.toString(),

@@ -1820,7 +1820,10 @@
         "engine": "mangareader",
         "listPath": "/series",
         "itemSelector": "div.bsx",
-        "chapterSelector": "div.eph-num a",
+        "chapterSelector": "",
+        "chapterScriptSelector": "script[data-tsr-stream-part]",
+        "chapterJsonArray": "initialChapters",
+        "chapterUrlTemplate": "/series/{series}/{slug}",
         "pageScriptSelector": "script[data-tsr-stream-part]",
         "pageJsonUrlField": "displaySrc"
       },

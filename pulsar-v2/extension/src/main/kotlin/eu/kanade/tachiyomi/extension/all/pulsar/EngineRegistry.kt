@@ -467,6 +467,46 @@ object EngineRegistry {
         return out
     }
 
+    // Nyx Scans gibi siteler bölüm listesini DOM'a değil gömülü Qwik durumuna
+    // yazıyor: initialChapters:[{$R[1]={slug:"chapter-60",number:60,...}}, ...].
+    // URL şablonu {series} ve {slug} yer tutucularını taşır.
+    fun scriptJsonChapters(
+        html: String,
+        scriptSelector: String,
+        containsMarker: String,
+        arrayName: String,
+        urlTemplate: String,
+        series: String,
+        baseUrl: String,
+    ): List<ParsedChapter> {
+        if (scriptSelector.isBlank() || arrayName.isBlank() || urlTemplate.isBlank()) {
+            return emptyList()
+        }
+        val doc = Jsoup.parse(html, baseUrl)
+        val out = ArrayList<ParsedChapter>()
+        for (script in doc.select(scriptSelector)) {
+            val text = script.data().ifBlank { script.html() }
+            if (text.isBlank()) continue
+            if (containsMarker.isNotEmpty() && !text.contains(containsMarker)) continue
+            val head = Regex("\"?${Regex.escape(arrayName)}\"?\\s*(?::\\s*|=\\s*)\\[").find(text) ?: continue
+            val from = head.range.last + 1
+            val close = text.indexOf(']', from)
+            val region = if (close > from) text.substring(from, close) else text.substring(from)
+            val slugs = Regex("\"?slug\"?\\s*:\\s*\"([^\"]+)\"").findAll(region)
+                .map { it.groupValues[1] }.toList()
+            val numbers = Regex("\"?number\"?\\s*:\\s*(\\d+(?:\\.\\d+)?)").findAll(region)
+                .map { it.groupValues[1] }.toList()
+            for (i in slugs.indices) {
+                val slug = slugs[i]
+                val num = numbers.getOrNull(i)?.toFloatOrNull() ?: 0f
+                val url = urlTemplate.replace("{series}", series).replace("{slug}", slug)
+                out.add(ParsedChapter(name = "Bölüm " + numText(num), url = url, chapterNumber = num, dateUpload = 0L))
+            }
+            if (out.isNotEmpty()) break
+        }
+        return out
+    }
+
     /** Bölüm listesi boş kaldığında cihaz raporuna sebebi taşıyan geçici tanı satırı. */
     fun diagnose(doc: Document, selector: String, baseUrl: String, html: String, code: Int, url: String): String {
         val sel = selector.ifBlank { "div.chapter-item, li.wp-manga-chapter, div.eph-num, ul.clstyle li" }
