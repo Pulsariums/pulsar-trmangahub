@@ -86,7 +86,15 @@ class PulsarSourceFactory : SourceFactory {
             list
         }.getOrDefault(emptyList())
 
-        return engine + catalogue
+        // YAYIN FİLTRESİ: paketimiz için indekste YAYINLANAN id'ler dışındaki
+        // kaynak hiç oluşturulmaz. Böylece uygulamadaki liste (ör. Global'de
+        // 1053 filtresiz motor kaynağı) indeksle birebir aynı olur; doğrulanmamış
+        // kaynaklar eklenti yüzeyine çıkmaz. Build zamanı üretilen PulsarData'ya
+        // dayanır, dosya/Context erişimi yoktur.
+        val suffix = BuildConfig.APPLICATION_ID.substringAfterLast('.')
+        val allowed = PulsarData.allowed(suffix)
+        val all = engine + catalogue
+        return if (allowed == null) all else all.filter { it.id.toString() in allowed }
     }
 
     private fun org.json.JSONArray?.orEmptyStrings(): List<String> {

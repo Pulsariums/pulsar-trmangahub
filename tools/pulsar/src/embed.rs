@@ -22,10 +22,14 @@ const PATCH_REL: &str = "pulsar-v2/extension/src/main/assets/patches.json";
 const CAT_REL: &str = "pulsar-v2/extension/src/main/assets/catalogue.json";
 const OUT_REL: &str =
     "pulsar-v2/extension/src/main/kotlin/eu/kanade/tachiyomi/extension/all/pulsar/PulsarData.kt";
+const STATUS_REL: &str = "pulsar-v2/data/source-status.json";
+const REPORT_REL: &str = "pulsar-v2/data/merge-report.json";
 
 struct Opts {
     patches: PathBuf,
     catalogue: PathBuf,
+    status: PathBuf,
+    report: PathBuf,
     out: PathBuf,
     dry: bool,
 }
@@ -34,6 +38,8 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
     let mut o = Opts {
         patches: root.join(PATCH_REL),
         catalogue: root.join(CAT_REL),
+        status: root.join(STATUS_REL),
+        report: root.join(REPORT_REL),
         out: root.join(OUT_REL),
         dry: false,
     };
@@ -92,6 +98,59 @@ fn embed(o: &Opts) -> Result<(), String> {
     serde_json::from_slice::<serde_json::Value>(&catalogue)
         .map_err(|e| format!("catalogue.json geçersiz: {e}"))?;
 
+    // YAYIN BEYAZ LİSTESİ: paket başına yalnız indekste yayınlanan (kanıtlı)
+    // kaynak id'leri. Eklenti bunun dışındaki kaynağı hiç oluşturmaz; böylece
+    // uygulamadaki liste indeksle birebir aynı olur (Global'de 1053 filtresiz
+    // motor kaynağı görünmesi bu yüzden biter).
+    let status = std::fs::read(&o.status)
+        .map_err(|e| format!("{} okunamadı: {e}", o.status.display()))?;
+    let status_json: serde_json::Value =
+        serde_json::from_slice(&status).map_err(|e| format!("source-status.json geçersiz: {e}"))?;
+    let mut allowed: std::collections::BTreeMap<String, Vec<String>> = Default::default();
+    // Dört paket her zaman üretilir; boş paket Kotlin'de tanımsız sabit bırakmasın.
+    for pkg in ["tr", "tr18", "global", "global18"] {
+        allowed.entry(pkg.to_string()).or_default();
+    }
+    // merge'in elediği katalog klonları APK'da yok; izin listesine de girmezler.
+    let dropped: std::collections::BTreeSet<String> = std::fs::read(&o.report)
+        .ok()
+        .and_then(|b| serde_json::from_slice::<serde_json::Value>(&b).ok())
+        .and_then(|v| v.get("dropped_ids").and_then(|d| d.as_array()).cloned())
+        .unwrap_or_default()
+        .iter()
+        .filter_map(|v| v.as_i64().map(|i| i.to_string()))
+        .collect();
+    if let Some(sources) = status_json.get("sources").and_then(|v| v.as_object()) {
+        for (id, e) in sources {
+            if e.get("state").and_then(|v| v.as_str()) != Some("active") {
+                continue;
+            }
+            if dropped.contains(id) {
+                continue;
+            }
+            for pkg in e
+                .get("packages")
+                .and_then(|v| v.as_array())
+                .into_iter()
+                .flatten()
+                .filter_map(|p| p.as_str())
+            {
+                allowed.entry(pkg.to_string()).or_default().push(id.clone());
+            }
+        }
+    }
+    let mut allowed_kt = String::new();
+    for (pkg, ids) in &allowed {
+        let mut ids = ids.clone();
+        ids.sort();
+        ids.dedup();
+        let const_name = format!("{}_IDS", pkg.to_uppercase());
+        allowed_kt.push_str(&format!(
+            "    private const val {const_name} = \"{}\"\n\n",
+            ids.join(",")
+        ));
+    }
+
     let p64 = b64(&patches);
     let c64 = b64(&catalogue);
     // Kotlin/JVM sabit havuzu tek string için 65535 BAYT sınırı koyar.
@@ -115,6 +174,25 @@ import android.util.Base64
 
 internal object PulsarData {{
 
+    // Paket başına YAYINLANAN (indekste kanıtlı) kaynak id'leri.
+{a}
+    private fun String.toIdSet(): Set<String> =
+        split(',').filter {{ it.isNotEmpty() }}.toSet()
+
+    private val trIds: Set<String> by lazy {{ TR_IDS.toIdSet() }}
+    private val tr18Ids: Set<String> by lazy {{ TR18_IDS.toIdSet() }}
+    private val globalIds: Set<String> by lazy {{ GLOBAL_IDS.toIdSet() }}
+    private val global18Ids: Set<String> by lazy {{ GLOBAL18_IDS.toIdSet() }}
+
+    /** Paket soneki için izinli id kümesi; bilinmeyen pakette null (filtre yok). */
+    fun allowed(suffix: String): Set<String>? = when (suffix) {{
+        "tr" -> trIds
+        "tr18" -> tr18Ids
+        "global" -> globalIds
+        "global18" -> global18Ids
+        else -> null
+    }}
+
     private const val PATCHES_B64 = "{p}"
 
     private const val CATALOGUE_B64 = "{c}"
@@ -133,6 +211,7 @@ internal object PulsarData {{
     }}
 }}
 "#,
+        a = allowed_kt,
         p = p64,
         c = c64
     );
@@ -150,12 +229,20 @@ internal object PulsarData {{
         std::fs::create_dir_all(parent).map_err(|e| format!("dizin: {e}"))?;
     }
     std::fs::write(&o.out, kt).map_err(|e| format!("{} yazılamadı: {e}", o.out.display()))?;
+    let counts: Vec<String> = ["tr", "tr18", "global", "global18"]
+        .iter()
+        .map(|p| {
+            let n = allowed.get(*p).map(|v| v.len()).unwrap_or(0);
+            format!("{p}:{n}")
+        })
+        .collect();
     println!(
-        "[embed] gömüldü: patches {} B + catalogue {} B (base64 {}+{}) -> {}",
+        "[embed] gömüldü: patches {} B + catalogue {} B (base64 {}+{}); yayın id'leri [{}] -> {}",
         patches.len(),
         catalogue.len(),
         p64.len(),
         c64.len(),
+        counts.join(" "),
         o.out.display()
     );
     Ok(())
