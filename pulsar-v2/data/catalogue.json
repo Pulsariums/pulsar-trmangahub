@@ -738,8 +738,8 @@
         "engine": "custom",
         "listPath": "/manga",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "chapterSelector": "a[href*=\"-bolum-oku\"]",
+        "readerSelector": ".manga-reader-container .ep-item img"
       },
       "verified_by_user": true,
       "origins": [
@@ -964,7 +964,10 @@
         "listPath": "/manga",
         "itemSelector": "div.bsx",
         "chapterSelector": "div.eph-num, li.wp-manga-chapter",
-        "readerSelector": "div#readerarea img"
+        "readerSelector": "div#readerarea img",
+        "pageScriptSelector": "script:contains(ts_reader)",
+        "pageJsonArray": "images",
+        "pageScriptFirst": "1"
       },
       "verified_by_user": false,
       "origins": [

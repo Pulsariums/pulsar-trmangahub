@@ -317,17 +317,24 @@ class PulsarSource(
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
         val readerSelector = config.optString("readerSelector", "")
-        val imageUrls = EngineRegistry.parsePages(doc, readerSelector, baseUrl)
-            .ifEmpty { EngineRegistry.rawImages(html, baseUrl) }
-            .ifEmpty {
-                EngineRegistry.scriptJsonPages(
-                    html,
-                    config.optString("pageScriptSelector", ""),
-                    config.optString("pageJsonUrlField", ""),
-                    config.optString("pageJsonArray", ""),
-                    baseUrl,
-                )
-            }
+        val scriptPages = EngineRegistry.scriptJsonPages(
+            html,
+            config.optString("pageScriptSelector", ""),
+            config.optString("pageJsonUrlField", ""),
+            config.optString("pageJsonArray", ""),
+            baseUrl,
+        )
+        // Bazı sitelerde DOM'daki <img> adresleri doğrudan çalışmıyor (Amanga: .link
+        // origin'de 403). Site kendi okuyucusunda <script> içindedir ve proxy adresi
+        // üretir; "pageScriptFirst" işaretliyse script sonucu DOM'dan önce gelir.
+        val scriptFirst = config.optString("pageScriptFirst", "").isNotBlank() && scriptPages.isNotEmpty()
+        val imageUrls = if (scriptFirst) {
+            scriptPages
+        } else {
+            EngineRegistry.parsePages(doc, readerSelector, baseUrl)
+                .ifEmpty { EngineRegistry.rawImages(html, baseUrl) }
+                .ifEmpty { scriptPages }
+        }
 
         val chapterUrl = response.request.url.toString()
         return imageUrls.mapIndexed { index, imgUrl ->
