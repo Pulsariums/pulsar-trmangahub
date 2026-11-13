@@ -90,3 +90,20 @@ kanıta dayanır; kanıtsız iddia yok.
 - Okuma, yazma ve doğrulama ayrı ajanlarda: doğrulayıcı bu oturumda iki gerçek hata
   yakaladı (gövdenin iki kez okunması, char sabitinden kaynaklı sahte parantez dengesizliği).
 ---
+
+## 8. Yerel testçi (source-host) ve aldatıcı NO_SOURCES
+
+Kototoro'nun kendi kaynak testini masaüstünde koşturmak istediğinde ilk duvar `sources` alt komutudur:
+
+- `sources` platformu HİÇ başlatmaz (`SourceHostCli.kt:20-25`); Injekt/Koin kurulmaz. Fabrikası `Injekt.get<Application>()` çağıran bir eklenti (bizim `PulsarSourceFactory.kt:38-39`) bu yüzden boş liste döner ve `MihonJarRegistry.kt:138` **NO_SOURCES** fırlatır. Bu eklentinin suçu değil, CLI'nin sınırıdır; aynı fabrika cihazda sorunsuz çalışır.
+- NO_SOURCES'un üç kaynağı: `createSources()` null / öğe null (:132-133), liste boş (:138), öğe `CatalogueSource` değil (:140). Sınıf yüklenemezse mesaj `CONSTRUCTION_FAILED` olur (:162-168). Yani NO_SOURCES "sınıf bulunamadı" DEMEK DEĞİLDİR.
+- `HttpSource`, `CatalogueSource` uygular (`HttpSource.kt:35`); tip kontrolü normalde geçer.
+- Gerçek test yolu `serve`: `platformClass` zorunlu ve varsayılanı yok (`SourceHostConfig.kt:9`); aday `org.skepsun.kototoro.desktop.compat.MihonDesktopPlatform`. Platform `initialize` içinde Koin + `Injekt` kurar (`MihonDesktopPlatform.kt:90-94`), `NetworkHelper` bağlar (:121). Ama **`preferenceDirectory` verilmezse** `initialize()` boş sürüme düşer ve platform "error"da patlar (`:58`) — config'te bu alan şart.
+- `Application` bağlaması repodaki koddan doğrulanamadı; dış `createAppModule(app)`'a devredilmiş (`:91`). `serve` altında `Injekt.get<Application>()` çalışır mı sorusu ancak çalıştırarak kapanır.
+- APK→JAR: `ApkExtensionConverter` kullanılır; `inspect` düz metin `AndroidManifest.xml` beklediği için APK'ya doğrudan verilirse `INVALID_MANIFEST` döner. jshell ile çağırırken `-R-Xmx2000m` şart, yoksa "State engine terminated" (OOM).
+
+## 9. Aralıklı 403 (Amanga Planet CDN)
+
+Aynı görsel adresi 10 GET'in ~4'ünde 200, ~6'sında 403 dönüyor. User-Agent (6 varyant), Referer ve çerez değiştirmek sonucu değiştirmiyor; `www.` yolu 404. Yani engel kalıcı bir kimlik kontrolü değil, kaynak taraflı aralıklı reddetme.
+
+Çözüm yeniden deneme: `PulsarSource.client` içine interceptor eklendi (1.6.35). Yalnız `GET` + `403` için en fazla 3 deneme, artan bekleme (250/500/750 ms); POST isteklerine dokunmaz. Kalıcı çözüm değildir ama tek seferlik düşmeleri kapatır.
