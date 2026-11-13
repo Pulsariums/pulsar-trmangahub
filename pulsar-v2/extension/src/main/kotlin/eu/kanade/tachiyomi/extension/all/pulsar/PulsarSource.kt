@@ -324,6 +324,7 @@ class PulsarSource(
             config.optString("pageJsonArray", ""),
             baseUrl,
             config.optString("pageUrlAllow", ""),
+            config.optString("pageScriptContains", ""),
         )
         // Bazı sitelerde DOM'daki <img> adresleri doğrudan çalışmıyor (Amanga: .link
         // origin'de 403). Site kendi okuyucusunda <script> içindedir ve proxy adresi

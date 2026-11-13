@@ -250,6 +250,7 @@ object EngineRegistry {
         arrayName: String,
         baseUrl: String,
         allowPattern: String = "",
+        containsMarker: String = "",
     ): List<String> {
         if (scriptSelector.isBlank() || (urlField.isBlank() && arrayName.isBlank())) {
             return emptyList()
@@ -259,6 +260,7 @@ object EngineRegistry {
         val out = LinkedHashSet<String>()
         for (script in doc.select(scriptSelector)) {
             val text = script.data().ifBlank { script.html() }
+            if (containsMarker.isNotEmpty() && !text.contains(containsMarker)) continue
             if (text.isBlank()) continue
             if (urlField.isNotEmpty()) {
                 val re = Regex(

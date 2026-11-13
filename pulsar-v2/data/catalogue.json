@@ -971,7 +971,8 @@
         "itemSelector": "div.bsx",
         "chapterSelector": "div.eph-num, li.wp-manga-chapter",
         "readerSelector": "div#readerarea img",
-        "pageScriptSelector": "script:contains(ts_reader)",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "ts_reader",
         "pageJsonArray": "images",
         "pageScriptFirst": "1",
         "pageUrlAllow": "amip-proxy"
