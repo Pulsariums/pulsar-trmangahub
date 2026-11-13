@@ -319,6 +319,15 @@ class PulsarSource(
         val readerSelector = config.optString("readerSelector", "")
         val imageUrls = EngineRegistry.parsePages(doc, readerSelector, baseUrl)
             .ifEmpty { EngineRegistry.rawImages(html, baseUrl) }
+            .ifEmpty {
+                EngineRegistry.scriptJsonPages(
+                    html,
+                    config.optString("pageScriptSelector", ""),
+                    config.optString("pageJsonUrlField", ""),
+                    config.optString("pageJsonArray", ""),
+                    baseUrl,
+                )
+            }
 
         val chapterUrl = response.request.url.toString()
         return imageUrls.mapIndexed { index, imgUrl ->

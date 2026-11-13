@@ -1,5 +1,6 @@
 package eu.kanade.tachiyomi.extension.all.pulsar
 
+import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.json.JSONArray
@@ -236,6 +237,53 @@ object EngineRegistry {
             seen[full] = full
         }
         return seen.keys.toList()
+    }
+
+    // Bazı okuyucular görselleri DOM'a hiç koymuyor; adresler <script> içine gömülü
+    // Qwik/TSR durumunda duruyor (nyxscans: displaySrc, xcomic: imageUrls). İki biçim:
+    //  - urlField : "alan":"adres" çiftleri (anahtar tırnaklı ya da tırnaksız olabilir)
+    //  - arrayName: "alan":[ ... ] dizisi; içindeki tırnaklı adresler
+    fun scriptJsonPages(
+        html: String,
+        scriptSelector: String,
+        urlField: String,
+        arrayName: String,
+        baseUrl: String,
+    ): List<String> {
+        if (scriptSelector.isBlank() || (urlField.isBlank() && arrayName.isBlank())) {
+            return emptyList()
+        }
+        val doc = Jsoup.parse(html, baseUrl)
+        val out = LinkedHashSet<String>()
+        for (script in doc.select(scriptSelector)) {
+            val text = script.data().ifBlank { script.html() }
+            if (text.isBlank()) continue
+            if (urlField.isNotEmpty()) {
+                val re = Regex("\"?${Regex.escape(urlField)}\"?\\s*:\\s*\"([^\"]+)\"")
+                for (m in re.findAll(text)) addPageUrl(out, m.groupValues[1])
+            }
+            if (arrayName.isNotEmpty()) {
+                val head = Regex("\"?${Regex.escape(arrayName)}\"?\\s*:\\s*\\[").find(text)
+                if (head != null) {
+                    val from = head.range.last + 1
+                    val close = text.indexOf(']', from)
+                    val region = if (close > from) text.substring(from, close) else text.substring(from)
+                    for (m in Regex("\"([^\"]+)\"").findAll(region)) addPageUrl(out, m.groupValues[1])
+                }
+            }
+            if (out.size >= 500) break
+        }
+        return out.toList()
+    }
+
+    private val PAGE_URL_HINT = Regex("\\.(webp|jpg|jpeg|png|avif|gif)(\\?|$)", RegexOption.IGNORE_CASE)
+
+    private fun addPageUrl(out: MutableSet<String>, raw: String) {
+        val u = raw.trim().replace("\\/", "/")
+        if (u.length < 8) return
+        if (!u.startsWith("http") && !u.startsWith("/")) return
+        if (!PAGE_URL_HINT.containsMatchIn(u)) return
+        out.add(u)
     }
 
     // ---- Next.js RSC (self.__next_f.push) ---------------------------------

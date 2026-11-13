@@ -1809,7 +1809,9 @@
         "engine": "mangareader",
         "listPath": "/series",
         "itemSelector": "div.bsx",
-        "chapterSelector": "div.eph-num a"
+        "chapterSelector": "div.eph-num a",
+        "pageScriptSelector": "script[data-tsr-stream-part]",
+        "pageJsonUrlField": "displaySrc"
       },
       "verified_by_user": false,
       "origins": [
@@ -2462,7 +2464,9 @@
         "listPath": "/",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+        "pageScriptSelector": "script[type=\"qwik/state\"]",
+        "pageJsonArray": "imageUrls"
       },
       "verified_by_user": false,
       "origins": [
