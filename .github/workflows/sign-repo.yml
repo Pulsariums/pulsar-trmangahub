@@ -1,13 +1,26 @@
-name: Sign Pulsar APKs & Update Fingerprint
+name: Verify Signing Fingerprint
+
+# Bu iş akışı HİÇBİR ŞEY imzalamaz, üretmez veya commit etmez.
+# Tek işi: imza anahtarı ile yayındaki repo.json parmak izi ve depodaki APK'lar
+# birbirini tutuyor mu, onu denetlemek.
+#
+# Neden ayrı: imzalama zaten build-extension.yml içinde yapılıyor; ayrıca ikinci
+# bir imzalama akışı iki farklı çıktı üretme riski taşıyordu. Kototoro/Mihon
+# parmak izi eşleşmezse eklenti "Untrusted" olur.
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'signing/pulsar.keystore'
+      - 'repo.json'
+      - 'pulsar-v2/repo/repo.json'
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  sign:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -19,71 +32,57 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Locate Preinstalled Android SDK
+      - name: Locate preinstalled Android SDK
         run: |
-          export ANDROID_HOME="/usr/local/lib/android/sdk"
-          if [ ! -d "$ANDROID_HOME" ]; then
-            export ANDROID_HOME="$ANDROID_SDK_ROOT"
-          fi
-          echo "ANDROID_HOME=$ANDROID_HOME" >> $GITHUB_ENV
+          ANDROID_HOME="/usr/local/lib/android/sdk"
+          [ -d "$ANDROID_HOME" ] || ANDROID_HOME="$ANDROID_SDK_ROOT"
           APKSIGNER="$(ls "$ANDROID_HOME"/build-tools/*/apksigner 2>/dev/null | sort -V | tail -1)"
-          echo "APKSIGNER=$APKSIGNER" >> $GITHUB_ENV
-          echo "Using apksigner: $APKSIGNER"
+          [ -n "$APKSIGNER" ] || { echo "::error::apksigner bulunamadi"; exit 1; }
+          echo "APKSIGNER=$APKSIGNER" >> "$GITHUB_ENV"
+          echo "apksigner: $APKSIGNER"
 
-      - name: Verify committed Pulsar keystore
+      - name: Keystore certificate fingerprint
         run: |
-          # Yeni anahtar ÜRETİLMEZ: üretilirse APK sertifikası değişir ve
-          # kullanıcıların kurulu eklentileri güncellenemez.
           test -f signing/pulsar.keystore || { echo "::error::signing/pulsar.keystore yok"; exit 1; }
-          ls -l signing/pulsar.keystore
+          FP="$(keytool -exportcert -alias pulsar \
+                  -keystore signing/pulsar.keystore \
+                  -storepass pulsarmangahub 2>/dev/null | sha256sum | cut -d' ' -f1)"
+          [ -n "$FP" ] || { echo "::error::Anahtardan sertifika okunamadi"; exit 1; }
+          echo "KEYSTORE_FP=$FP" >> "$GITHUB_ENV"
+          echo "Anahtar sertifikasi SHA-256: $FP"
 
-      - name: Sign APKs with v1 and v2/v3 signatures
+      - name: Compare with published repo.json
         run: |
-          # Function to sign an APK
-          sign_file() {
-            local apk="$1"
-            if [ -f "$apk" ]; then
-              echo "Signing $apk..."
-              "$APKSIGNER" sign \
-                --ks signing/pulsar.keystore \
-                --ks-key-alias pulsar \
-                --ks-pass pass:pulsarmangahub \
-                --key-pass pass:pulsarmangahub \
-                "$apk"
-              "$APKSIGNER" verify "$apk"
+          fail=0
+          for f in repo.json pulsar-v2/repo/repo.json; do
+            [ -f "$f" ] || { echo "::warning::$f yok, atlandi"; continue; }
+            got="$(grep -oE '"[0-9a-f]{64}"' "$f" | head -1 | tr -d '"')"
+            if [ "$got" != "$KEYSTORE_FP" ]; then
+              echo "::error file=$f::$f parmak izi anahtarla uyusmuyor (repo=$got anahtar=$KEYSTORE_FP)"
+              fail=1
+            else
+              echo "OK $f -> $got"
             fi
-          }
-
-          for apk in apk/*.apk pulsar-v2/repo/apk/*.apk; do
-            sign_file "$apk"
           done
+          [ "$fail" -eq 0 ] || exit 1
 
-      - name: Extract Cert SHA-256 Fingerprint and Update repo.json
+      - name: Compare with APKs in repository
         run: |
-          "$APKSIGNER" verify --print-certs apk/eu.kanade.tachiyomi.extension.all.nyoralocal.apk
-          FP="$("$APKSIGNER" verify --print-certs apk/eu.kanade.tachiyomi.extension.all.nyoralocal.apk | grep -i 'SHA-256' | head -1 | grep -oE '[0-9a-f]{64}')"
-          echo "Unique Pulsar Fingerprint: $FP"
-
-          python3 -c "
-          import json
-          fp = '$FP'
-          files = ['repo.json', 'pulsar-v2/repo/repo.json', 'site/repo.json']
-          for f in files:
-              try:
-                  with open(f, 'r', encoding='utf-8') as fh:
-                      d = json.load(fh)
-                  d['meta']['signingKeyFingerprint'] = fp
-                  with open(f, 'w', encoding='utf-8') as fh:
-                      json.dump(d, fh, ensure_ascii=False, indent=2)
-                  print(f'Updated {f} with {fp}')
-              except Exception as e:
-                  print(f'Error updating {f}: {e}')
-          "
-
-      - name: Commit and Push Signed APKs and repo.json
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add apk/*.apk pulsar-v2/repo/apk/*.apk repo.json pulsar-v2/repo/repo.json signing/pulsar.keystore
-          git commit -m "chore(signing): APK'lar benzersiz Pulsar anahtariyla imzalandi ve repo.json guncellendi" || echo "No changes to commit"
-          git push origin main
+          shopt -s nullglob
+          apks=(pulsar-v2/repo/apk/*.apk)
+          if [ ${#apks[@]} -eq 0 ]; then
+            echo "::warning::Depoda APK yok, imza karsilastirmasi atlandi"
+            exit 0
+          fi
+          fail=0
+          for apk in "${apks[@]}"; do
+            fp="$("$APKSIGNER" verify --print-certs "$apk" \
+                  | grep -i 'SHA-256' | head -1 | grep -oE '[0-9a-f]{64}')"
+            if [ "$fp" != "$KEYSTORE_FP" ]; then
+              echo "::error file=$apk::$apk imzasi anahtarla uyusmuyor (apk=$fp anahtar=$KEYSTORE_FP)"
+              fail=1
+            else
+              echo "OK $apk"
+            fi
+          done
+          [ "$fail" -eq 0 ] || exit 1
