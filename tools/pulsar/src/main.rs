@@ -4,6 +4,8 @@ use std::collections::BTreeMap;
 use std::path::{Path, PathBuf};
 use std::process::{Command, ExitCode};
 
+mod health;
+
 const CONFIG_REL: &str = "pulsar-v2/config/upstreams.json";
 const STATE_REL: &str = "pulsar-v2/data/upstreams-state.json";
 const WORK_REL: &str = "pulsar-v2/.work/upstreams";
@@ -391,10 +393,12 @@ fn main() -> ExitCode {
     match (args.first().map(|s| s.as_str()), args.get(1).map(|s| s.as_str())) {
         (Some("sources"), Some("list")) => cmd_list(&root),
         (Some("sources"), Some("update")) => cmd_update(&root, &args[2..]),
+        (Some("health"), _) => health::run(&root, &args[1..]),
         _ => {
             eprintln!("kullanım:");
             eprintln!("  pulsar sources list");
             eprintln!("  pulsar sources update [--only <id>] [--dry-run]");
+            eprintln!("  pulsar health [--lang tr] [--nsfw 0|1] [--limit N] [--jobs N] [--timeout sn]");
             ExitCode::from(64)
         }
     }
