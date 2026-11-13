@@ -8,7 +8,6 @@ import org.koitharu.kotatsu.parsers.model.ContentType
 import org.koitharu.kotatsu.parsers.model.MangaParserSource
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
-import java.io.InputStreamReader
 
 /**
  * Pulsar-V2 çift motorlu kaynak fabrikası.
@@ -63,9 +62,8 @@ class PulsarSourceFactory : SourceFactory {
 
         // 2) kendi data-driven kataloğumuz — motorun tanımadığı TR/özel siteler
         val catalogue: List<Source> = runCatching<List<Source>> {
-            val jsonText = app.assets.open("catalogue.json").use {
-                InputStreamReader(it, Charsets.UTF_8).readText()
-            }
+            // Kendi APK'mızın asset'i: app.assets konak uygulamayı gösterir.
+            val jsonText = PulsarAssets.read(app, "catalogue.json")
             val root = JSONObject(jsonText)
             val sourcesArray = root.optJSONArray("sources")
 

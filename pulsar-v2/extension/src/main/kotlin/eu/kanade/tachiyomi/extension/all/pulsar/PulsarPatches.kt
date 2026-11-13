@@ -4,7 +4,6 @@ import android.app.Application
 import org.json.JSONObject
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
-import java.io.InputStreamReader
 
 /**
  * Derleme hattımızın (06_prepare_assets.py) ürettiği asset tabanlı yama defteri.
@@ -33,10 +32,11 @@ object PulsarPatches {
         if (loaded) return
         synchronized(this) {
             if (loaded) return
-            runCatching {
-                val text = app.assets.open("patches.json").use {
-                    InputStreamReader(it, Charsets.UTF_8).readText()
-                }
+            // Başarısızlıkta loaded=true YAPILMAZ: asset bir sonraki denemede
+            // (ör. Context hazır olduğunda) tekrar okunabilsin. Önceden hata
+            // yutulup bayrak açılıyordu ve yamalar kalıcı olarak boş kalıyordu.
+            loaded = runCatching {
+                val text = PulsarAssets.read(app, "patches.json")
                 val root = JSONObject(text)
                 root.optJSONObject("domainOverrides")?.let { o ->
                     o.keys().forEach { k -> DOMAIN_OVERRIDES[k] = o.getString(k) }
@@ -50,8 +50,7 @@ object PulsarPatches {
                 root.optJSONObject("titleOverrides")?.let { o ->
                     o.keys().forEach { k -> TITLE_OVERRIDES[k] = o.getString(k) }
                 }
-            }
-            loaded = true
+            }.isSuccess
         }
     }
 
