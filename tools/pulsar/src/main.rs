@@ -4,6 +4,7 @@ use std::collections::BTreeMap;
 use std::path::{Path, PathBuf};
 use std::process::{Command, ExitCode};
 
+mod embed;
 mod health;
 mod merge;
 mod quarantine;
@@ -400,6 +401,7 @@ fn main() -> ExitCode {
         (Some("status"), _) => status::run(&root, &args[1..]),
         (Some("merge"), _) => merge::run(&root, &args[1..]),
         (Some("quarantine"), _) => quarantine::run(&root, &args[1..]),
+        (Some("embed"), _) => embed::run(&root, &args[1..]),
         _ => {
             eprintln!("kullanım:");
             eprintln!("  pulsar sources list");
@@ -408,6 +410,7 @@ fn main() -> ExitCode {
             eprintln!("  pulsar status [--device <cihaz-raporu.json>]");
             eprintln!("  pulsar merge [--dry-run]");
             eprintln!("  pulsar quarantine [--dry-run] [--clear]");
+            eprintln!("  pulsar embed [--dry-run]");
             eprintln!("  pulsar merge [--map <source_map.json>] [--catalogue <catalogue.json>] [--dry-run]");
             ExitCode::from(64)
         }

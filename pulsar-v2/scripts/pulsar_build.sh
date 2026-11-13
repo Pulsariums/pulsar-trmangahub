@@ -64,8 +64,10 @@ python3 "$ROOT/scripts/06_prepare_assets.py"
 PULSAR_BIN="${PULSAR_BIN:-$ROOT/../tools/pulsar/target/release/pulsar}"
 if [ -x "$PULSAR_BIN" ]; then
     ( cd "$ROOT/.." && "$PULSAR_BIN" merge )
+    # Veriyi Kotlin kaynağına göm: eklenti asset/Context erişimine muhtaç kalmasın.
+    ( cd "$ROOT/.." && "$PULSAR_BIN" embed )
 else
-    echo "⚠ pulsar aracı yok ($PULSAR_BIN) — klon birleştirme atlandı"
+    echo "⚠ pulsar aracı yok ($PULSAR_BIN) — klon birleştirme ve gömme atlandı"
 fi
 
 # 1) Geçici resmi Mihon checkout'u — yalnız build API'si.

@@ -26,6 +26,10 @@ object PulsarAssets {
     }.getOrNull()
 
     fun read(app: Application, name: String): String {
+        // Önce dex'e GÖMÜLÜ veri (build anında üretilen PulsarData). Dosya ve
+        // Context erişimi gerektirmez; asıl yol budur.
+        PulsarData.embedded(name)?.let { return it }
+        // Yedek: kendi paketimizin asset'i, o da yoksa konak asset'i.
         val ctx = ownContext(app)
         val stream = (ctx?.assets ?: app.assets).open(name)
         return stream.use { InputStreamReader(it, Charsets.UTF_8).readText() }
