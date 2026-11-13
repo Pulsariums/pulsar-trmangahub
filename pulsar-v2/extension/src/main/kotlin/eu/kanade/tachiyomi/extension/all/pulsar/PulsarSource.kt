@@ -39,6 +39,21 @@ class PulsarSource(
             .connectTimeout(15, TimeUnit.SECONDS)
             .readTimeout(20, TimeUnit.SECONDS)
             .followRedirects(true)
+            // Amanga Planet'in görsel CDN'i isteğe göre aralıklı 403 veriyor
+            // (aynı URL 10 GET'in 4'ünde 200 dönüyor, çerez/UA/Referer etkisiz).
+            // Yalnız GET + 403 için kısa aralıklarla yeniden deniyoruz.
+            .addInterceptor { chain ->
+                val request = chain.request()
+                var response = chain.proceed(request)
+                var attempt = 0
+                while (response.code == 403 && attempt < 3 && request.method == "GET") {
+                    response.close()
+                    attempt++
+                    Thread.sleep(250L * attempt)
+                    response = chain.proceed(request)
+                }
+                response
+            }
             .build()
     }
 

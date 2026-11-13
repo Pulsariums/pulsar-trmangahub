@@ -261,7 +261,6 @@
       "baseUrl": "https://www.nabicix.com",
       "engine": "madara",
       "config": {
-        "diag": "1",
         "datePattern": "d MMMM",
         "engine": "madara",
         "listPath": "/manga",
@@ -868,7 +867,6 @@
       "baseUrl": "https://webtoonoku.org",
       "engine": "custom",
       "config": {
-        "diag": "1",
         "engine": "custom",
         "listPath": "/manhwa",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
@@ -1076,7 +1074,6 @@
       "baseUrl": "https://nabicix.com",
       "engine": "custom",
       "config": {
-        "diag": "1",
         "engine": "custom",
         "listPath": "/manga",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
@@ -1255,7 +1252,6 @@
       "baseUrl": "https://lunarx.to",
       "engine": "custom",
       "config": {
-        "diag": "1",
         "engine": "custom",
         "listPath": "/manga",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
@@ -1282,7 +1278,6 @@
       "baseUrl": "https://manga.araznovel.com",
       "engine": "custom",
       "config": {
-        "diag": "1",
         "engine": "custom",
         "listPath": "/manga",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
@@ -1303,7 +1298,6 @@
       "baseUrl": "https://mangaball.com",
       "engine": "custom",
       "config": {
-        "diag": "1",
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
@@ -2380,7 +2374,6 @@
       "baseUrl": "https://webtoonoku.org",
       "engine": "custom",
       "config": {
-        "diag": "1",
         "engine": "custom",
         "listPath": "/manhwa",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
