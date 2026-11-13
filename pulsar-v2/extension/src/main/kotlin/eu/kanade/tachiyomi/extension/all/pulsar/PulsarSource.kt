@@ -295,7 +295,10 @@ class PulsarSource(
             response.request.url.toString().trimEnd('/').substringAfterLast('/'),
             baseUrl,
         )
-        val chapters = htmlChapters.ifEmpty { rscChapters }.ifEmpty { jsonChapters }
+        // Gömülü JSON'dan bölüm listesi varsa DOM sezgisinden üstündür: seçici boş
+        // bırakıldığında parseChapters tek bir bağlantı bulup listeyi eksik bırakıyor
+        // (nyxscans: 60 bölümün 1'i).
+        val chapters = if (jsonChapters.isNotEmpty()) jsonChapters else htmlChapters.ifEmpty { rscChapters }
         val diag = EngineRegistry.diagnose(
             doc, chapterSelector, baseUrl, html,
             response.code, response.request.url.toString(),
