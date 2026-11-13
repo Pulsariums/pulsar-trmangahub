@@ -62,9 +62,53 @@ def load_dropped_ids(repo_dir):
         return set()
 
 
-def package_sources(status, suffix, dropped=()):
+def load_runtime_filters(repo_dir):
+    """Eklentinin ÇALIŞMA ANINDA uyguladığı elemeler.
+
+    İndeks "aktif" sayarken eklenti ayrıca patches.json'daki deadSources /
+    deadHosts listesine bakıp kaynağı hiç oluşturmuyor. Bu ikisi eşitlenmezse
+    depo kartı 48, yüklü kart 45 gösterir (TR'de tam olarak bu oldu:
+    RobinManga, NoxScans, MangaKazani).
+    """
+    base = os.path.dirname(repo_dir)
+    filters = {"dead_hosts": set(), "dead_sources": set(), "engine_name": {}}
+    try:
+        with open(os.path.join(base, "extension", "src", "main", "assets", "patches.json"),
+                  encoding="utf-8") as f:
+            patches = json.load(f)
+        filters["dead_hosts"] = {
+            (h or "").lower().removeprefix("www.") for h in patches.get("deadHosts") or []
+        }
+        filters["dead_sources"] = set(patches.get("deadSources") or [])
+    except (OSError, ValueError):
+        pass
+    try:
+        with open(os.path.join(repo_dir, "source_map.json"), encoding="utf-8") as f:
+            source_map = json.load(f)
+        filters["engine_name"] = {
+            str(e.get("id")): e.get("name", "") for e in source_map.get("engine") or []
+        }
+    except (OSError, ValueError):
+        pass
+    return filters
+
+
+def runtime_filtered(entry, filters):
+    """Bu kayıt eklenti tarafından oluşturulmuyor mu?"""
+    kind = entry.get("kind")
+    if kind == "catalogue":
+        host = (entry.get("domain") or "").lower().removeprefix("www.")
+        return host in filters["dead_hosts"]
+    if kind == "engine":
+        name = filters["engine_name"].get(str(entry.get("id", "")))
+        return bool(name) and name in filters["dead_sources"]
+    return False
+
+
+def package_sources(status, suffix, dropped=(), filters=None):
     """Yalnız state=active ve paketi eşleşen kaynaklar indekse girer."""
     pkg = suffix.lstrip(".")
+    filters = filters or {"dead_hosts": set(), "dead_sources": set(), "engine_name": {}}
     rows = []
     for entry in status.values():
         if entry.get("state") != "active":
@@ -72,6 +116,8 @@ def package_sources(status, suffix, dropped=()):
         if pkg not in (entry.get("packages") or []):
             continue
         if str(entry.get("id", "")) in dropped:
+            continue
+        if runtime_filtered(entry, filters):
             continue
         rows.append({
             "name": entry.get("title") or "",
@@ -160,6 +206,7 @@ def main(repo_dir, flavors="tr,tr18,global,global18"):
 
     status = load_status(repo_dir)
     dropped_ids = load_dropped_ids(repo_dir)
+    filters = load_runtime_filters(repo_dir)
     index = []
     fingerprint = None
     for suffix in suffixes:
@@ -189,7 +236,7 @@ def main(repo_dir, flavors="tr,tr18,global,global18"):
         index.append({
             "name": meta["name"], "pkg": pkg, "apk": apk,
             "lang": meta["lang"], "code": code, "version": version,
-            "nsfw": meta["nsfw"], "sources": package_sources(status, suffix, dropped_ids),
+            "nsfw": meta["nsfw"], "sources": package_sources(status, suffix, dropped_ids, filters),
         })
 
     if not index:
