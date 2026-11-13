@@ -1077,26 +1077,6 @@
       ]
     },
     {
-      "id": "eleceedturkiye.com",
-      "name": "Eleceed Türkiye",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "nabicix.com",
-      "baseUrl": "https://nabicix.com",
-      "engine": "custom",
-      "config": {
-        "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "local_tr"
-      ]
-    },
-    {
       "id": "esomanga.com",
       "name": "EsoManga",
       "lang": "tr",
@@ -1165,31 +1145,6 @@
       ]
     },
     {
-      "id": "golgebahcesi",
-      "name": "GolgeBahcesi",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "golgebahcesi.com",
-      "baseUrl": "https://golgebahcesi.com",
-      "engine": "mangareader",
-      "config": {
-        "pageSize": 14,
-        "searchPageSize": 9,
-        "capabilities": {
-          "tagsExclusion": false
-        },
-        "engine": "mangareader",
-        "listPath": "/manga",
-        "itemSelector": "div.bsx",
-        "chapterSelector": "div.eph-num a",
-        "readerSelector": "div#readerarea img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "nyora_datadriven"
-      ]
-    },
-    {
       "id": "hoifansub.com",
       "name": "HoiFansub",
       "lang": "tr",
@@ -1232,26 +1187,6 @@
         "local_custom",
         "local_tr",
         "nyora_datadriven"
-      ]
-    },
-    {
-      "id": "juratempe.st",
-      "name": "juratempe",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "juratempe.st",
-      "baseUrl": "https://juratempe.st",
-      "engine": "custom",
-      "config": {
-        "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "local_custom"
       ]
     },
     {
@@ -1433,26 +1368,6 @@
       ]
     },
     {
-      "id": "mangadiyari.com",
-      "name": "mangadiyari",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangadiyari.com",
-      "baseUrl": "https://mangadiyari.com",
-      "engine": "custom",
-      "config": {
-        "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "local_custom"
-      ]
-    },
-    {
       "id": "5964430973280552505",
       "name": "MangaDot",
       "lang": "tr",
@@ -1565,26 +1480,6 @@
       ]
     },
     {
-      "id": "mangaportali.com",
-      "name": "mangaportali",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangaportali.com",
-      "baseUrl": "https://mangaportali.com",
-      "engine": "custom",
-      "config": {
-        "engine": "custom",
-        "listPath": "/series",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "local_custom"
-      ]
-    },
-    {
       "id": "mangaruhu.com",
       "name": "MangaRuhu",
       "lang": "tr",
@@ -1629,49 +1524,6 @@
       ]
     },
     {
-      "id": "mangtto.com",
-      "name": "mangtto",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangtto.com",
-      "baseUrl": "https://mangtto.com",
-      "engine": "custom",
-      "config": {
-        "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "local_custom"
-      ]
-    },
-    {
-      "id": "mikrokosmosfb",
-      "name": "Mikrokosmosfb",
-      "lang": "tr",
-      "nsfw": 1,
-      "domain": "mikrokosmosfb.blogspot.com",
-      "baseUrl": "https://mikrokosmosfb.blogspot.com",
-      "engine": "zeistmanga",
-      "config": {
-        "stateOngoing": "Devam Ediyor",
-        "stateFinished": "Tamamlandı",
-        "stateAbandoned": "Güncel",
-        "engine": "zeistmanga",
-        "listPath": "/p/manga-list.html",
-        "itemSelector": "div.grid-item, div.animepost",
-        "chapterSelector": "ul.clstyle li, div.chapter-list li",
-        "readerSelector": "div#readerarea img, div.separator img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "nyora_datadriven"
-      ]
-    },
-    {
       "id": "millascan.com",
       "name": "MilaSub",
       "lang": "tr",
@@ -1692,26 +1544,6 @@
         "keiyoushi_index",
         "local_tr",
         "nyora_datadriven"
-      ]
-    },
-    {
-      "id": "millascan.com",
-      "name": "millascan",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "millascan.com",
-      "baseUrl": "https://millascan.com",
-      "engine": "madara",
-      "config": {
-        "engine": "madara",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
-        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "local_custom"
       ]
     },
     {
@@ -1754,27 +1586,6 @@
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index"
-      ]
-    },
-    {
-      "id": "nemesisscans.com",
-      "name": "Nemesisscans",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "nemesisscans.com",
-      "baseUrl": "https://nemesisscans.com",
-      "engine": "custom",
-      "config": {
-        "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "keiyoushi_index",
-        "local_tr"
       ]
     },
     {
@@ -2062,52 +1873,6 @@
       ]
     },
     {
-      "id": "ROMANTIKMANGA",
-      "name": "RomantikManga",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "webtoonhatti.club",
-      "baseUrl": "https://webtoonhatti.club",
-      "engine": "madara",
-      "config": {
-        "engine": "madara",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
-        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "nyora_datadriven"
-      ]
-    },
-    {
-      "id": "ruyamanga2.com",
-      "name": "ruyamanga2",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "ruyamanga2.com",
-      "baseUrl": "https://ruyamanga2.com",
-      "engine": "madara",
-      "config": {
-        "engine": "madara",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
-        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img",
-        "searchUrl": "https://www.ruyamanga2.com/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
-        "searchMethod": "POST",
-        "searchBody": "title={query}",
-        "searchJsonItems": "data",
-        "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "local_custom"
-      ]
-    },
-    {
       "id": "sadscans.com",
       "name": "SadScans",
       "lang": "tr",
@@ -2172,29 +1937,6 @@
       "origins": [
         "keiyoushi_index",
         "local_tr"
-      ]
-    },
-    {
-      "id": "shadowceviri",
-      "name": "ShadowCeviri",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "shadowceviri.blogspot.com",
-      "baseUrl": "https://shadowceviri.blogspot.com",
-      "engine": "zeistmanga",
-      "config": {
-        "stateOngoing": "Devam Ediyor",
-        "stateFinished": "Tamamlandı",
-        "stateAbandoned": "Güncel",
-        "engine": "zeistmanga",
-        "listPath": "/p/manga-list.html",
-        "itemSelector": "div.grid-item, div.animepost",
-        "chapterSelector": "ul.clstyle li, div.chapter-list li",
-        "readerSelector": "div#readerarea img, div.separator img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "nyora_datadriven"
       ]
     },
     {
@@ -2359,67 +2101,6 @@
       "origins": [
         "keiyoushi_index",
         "local_tr"
-      ]
-    },
-    {
-      "id": "TRMANGAOKU",
-      "name": "TrMangaOku",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "trmangaoku.com",
-      "baseUrl": "https://trmangaoku.com",
-      "engine": "madara",
-      "config": {
-        "tagPrefix": "tur/",
-        "engine": "madara",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
-        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "nyora_datadriven"
-      ]
-    },
-    {
-      "id": "webtoonoku.org",
-      "name": "Türkçe Manga ve Webtoon Oku",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "webtoonoku.org",
-      "baseUrl": "https://webtoonoku.org",
-      "engine": "custom",
-      "config": {
-        "engine": "custom",
-        "listPath": "/manhwa",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "local_custom"
-      ]
-    },
-    {
-      "id": "summertoons.net",
-      "name": "Webtoon Oku, Manhwa Oku, Manga O",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "summertoons.net",
-      "baseUrl": "https://summertoons.net",
-      "engine": "custom",
-      "config": {
-        "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "local_custom"
       ]
     },
     {
