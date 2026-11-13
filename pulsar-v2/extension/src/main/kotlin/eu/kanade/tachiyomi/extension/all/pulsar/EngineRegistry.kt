@@ -467,8 +467,8 @@ object EngineRegistry {
         return out
     }
 
-    // Nyx Scans gibi siteler bölüm listesini DOM'a değil gömülü Qwik durumuna
-    // yazıyor: initialChapters:[{$R[1]={slug:"chapter-60",number:60,...}}, ...].
+    // Nyx Scans gibi siteler bölüm listesini DOM'a değil gömülü RSC/Qwik durumuna
+    // yazıyor: initialChapters:$R[73]=[$R[74]={slug:"chapter-60",number:60,...}, ...].
     // URL şablonu {series} ve {slug} yer tutucularını taşır.
     fun scriptJsonChapters(
         html: String,
@@ -488,14 +488,44 @@ object EngineRegistry {
             val text = script.data().ifBlank { script.html() }
             if (text.isBlank()) continue
             if (containsMarker.isNotEmpty() && !text.contains(containsMarker)) continue
-            val head = Regex("\"?${Regex.escape(arrayName)}\"?\\s*(?::\\s*|=\\s*)\\[").find(text) ?: continue
+            // RSC'de dizi başlığı "$R[73]=" önekiyle gelir: initialChapters:$R[73]=[...]
+            val head = Regex(
+                "\"?${Regex.escape(arrayName)}\"?\\s*(?::\\s*|=\\s*)(?:\\\$R\\[\\d+\\]\\s*=\\s*)?\\[",
+            ).find(text) ?: continue
             val from = head.range.last + 1
-            val close = text.indexOf(']', from)
-            val region = if (close > from) text.substring(from, close) else text.substring(from)
+            // Elemanlar $R[n]={...} referansları ve iç içe diziler taşır; "ilk ]" ile
+            // kesmek listeyi eksik bırakıyordu (nyx: 60 bölümün 0'ı). Derinlik sayılır.
+            var depth = 1
+            var idx = from
+            var inString = false
+            var escaped = false
+            while (idx < text.length) {
+                val c = text[idx]
+                if (inString) {
+                    if (escaped) {
+                        escaped = false
+                    } else if (c == '\\') {
+                        escaped = true
+                    } else if (c == '"') {
+                        inString = false
+                    }
+                } else {
+                    when (c) {
+                        '"' -> inString = true
+                        '[' -> depth++
+                        ']' -> {
+                            depth--
+                            if (depth == 0) break
+                        }
+                    }
+                }
+                idx++
+            }
+            val region = text.substring(from, idx.coerceAtMost(text.length))
             val slugs = Regex("\"?slug\"?\\s*:\\s*\"([^\"]+)\"").findAll(region)
                 .map { it.groupValues[1] }.toList()
-            val numbers = Regex("\"?number\"?\\s*:\\s*(\\d+(?:\\.\\d+)?)").findAll(region)
-                .map { it.groupValues[1] }.toList()
+            val numbers = Regex("\"?number\"?\\s*:\\s*(?:\\\$R\\[\\d+\\]\\s*=\\s*)?(\\d+(?:\\.\\d+)?)")
+                .findAll(region).map { it.groupValues[1] }.toList()
             for (i in slugs.indices) {
                 val slug = slugs[i]
                 val num = numbers.getOrNull(i)?.toFloatOrNull() ?: 0f
