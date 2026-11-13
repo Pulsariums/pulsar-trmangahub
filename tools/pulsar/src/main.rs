@@ -10,6 +10,7 @@ mod probe;
 mod merge;
 mod quarantine;
 mod status;
+mod sweep;
 
 const CONFIG_REL: &str = "pulsar-v2/config/upstreams.json";
 const STATE_REL: &str = "pulsar-v2/data/upstreams-state.json";
@@ -404,6 +405,7 @@ fn main() -> ExitCode {
         (Some("quarantine"), _) => quarantine::run(&root, &args[1..]),
         (Some("embed"), _) => embed::run(&root, &args[1..]),
         (Some("probe"), _) => probe::run(&root, &args[1..]),
+        (Some("sweep"), _) => sweep::run(&root, &args[1..]),
         _ => {
             eprintln!("kullanım:");
             eprintln!("  pulsar sources list");
@@ -414,6 +416,7 @@ fn main() -> ExitCode {
             eprintln!("  pulsar quarantine [--dry-run] [--clear]");
             eprintln!("  pulsar embed [--dry-run]");
             eprintln!("  pulsar probe [--lang tr] [--nsfw 0|1] [--compare <cihaz.json>]");
+            eprintln!("  pulsar sweep --jar <yol> --java <yol> --app <dizin> --catalogue <yol> [--out <csv>] [--site <domain>]... [--limit N] [--timeout sn]");
             eprintln!("  pulsar merge [--map <source_map.json>] [--catalogue <catalogue.json>] [--dry-run]");
             ExitCode::from(64)
         }
