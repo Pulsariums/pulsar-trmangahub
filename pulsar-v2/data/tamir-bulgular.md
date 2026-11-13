@@ -157,9 +157,10 @@ Amanga: `referer=site: 200` · `referer=chapter: 200` · `no-referer: 403` · `w
 
 - **Slept Manga sayfalar**: uç nokta `GET /api/chapters/{slug}/{bölüm}/images`, ama gerçek görseller yalnız `x-turnstile-token` (Cloudflare Turnstile) ile dönüyor. Tokensız istek 200 verip 5 adet `/api/watermark` yer tutucusu döndürüyor.
 - **Sunset Manga sayfalar**: şifreli okuyucu (`data-token` + `toon-reader.js`); çözme yolu bulunamadı.
-- **araznovel "manga"**: detay sayfası 5,4 KB / 1 link — sunucu boş kabuk, içerik JS'te.
 - **Manga Kusu / MangaRuhu**: liste adımında `IOException: Connection reset` (bot koruması).
 - **Bayat alan adları**: `ragnarscans.net` → `ragnarscans2.com`, `mangaruhu.com` → `mangaruhu.net` (301); `baseUrl` 1.6.33'te güncellendi, `domain` alanı kimlik için korundu.
+- **araznovel**: Cloudflare Turnstile bot kapısı (`ao_bot_gate_verify`); eklenti geçemez.
+- **Lunar Manga sayfalar**: HTML'de görsel yok, `/api/page-locks` + `/api/proxy/m/` istemci tarafı.
 
 ### Ölçüm kipi
 
