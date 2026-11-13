@@ -54,15 +54,14 @@ android {
 
     signingConfigs {
         create("pulsar") {
-            // Tek kararlı imza anahtarı: CI'da workflows/derleme adımında her seferinde
-            // üretilir (SIGNING KEY FINGERPRINT = repo.json'daki değer; APK'lardan
-            // otomatik okunur — elle eşleştirme YOK, Nyora generate-repo örüntüsü).
-            // Depoya konan keystore Android'e APK kuramaz; Kototoro/Mihon yalnız
-            // sertifika PARMAK İZİNİ karşılaştırır.
+            // Tek kalıcı imza anahtarı: depodaki signing/pulsar.keystore.
+            // CI bu dosyayı pulsar-v2/signing/ altına kopyalar; her derlemede YENİ
+            // anahtar ÜRETİLMEZ. Anahtar değişirse Kototoro/Mihon parmak izi
+            // eşleşmez ve eklenti "Untrusted" görünür.
             storeFile = file(prop("pulsarKeystore", System.getProperty("user.home") + "/.android/debug.keystore"))
-            storePassword = "android"
-            keyAlias = "androiddebugkey"
-            keyPassword = "android"
+            storePassword = prop("pulsarStorePass", "pulsarmangahub")
+            keyAlias = prop("pulsarKeyAlias", "pulsar")
+            keyPassword = prop("pulsarKeyPass", "pulsarmangahub")
         }
     }
 

@@ -30,18 +30,12 @@ jobs:
           echo "APKSIGNER=$APKSIGNER" >> $GITHUB_ENV
           echo "Using apksigner: $APKSIGNER"
 
-      - name: Generate Unique Pulsar Keystore
+      - name: Verify committed Pulsar keystore
         run: |
-          mkdir -p signing
-          keytool -genkeypair -v \
-            -keystore signing/pulsar.keystore \
-            -alias pulsar \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -storepass "pulsarmangahub" \
-            -keypass "pulsarmangahub" \
-            -dname "CN=Pulsar Manga Hub, OU=Pulsar, O=Pulsariums, C=TR"
+          # Yeni anahtar ÜRETİLMEZ: üretilirse APK sertifikası değişir ve
+          # kullanıcıların kurulu eklentileri güncellenemez.
+          test -f signing/pulsar.keystore || { echo "::error::signing/pulsar.keystore yok"; exit 1; }
+          ls -l signing/pulsar.keystore
 
       - name: Sign APKs with v1 and v2/v3 signatures
         run: |

@@ -68,16 +68,14 @@ jobs:
           key: gradle-${{ inputs.mihon_ref }}-${{ inputs.parsers_ref }}-${{ hashFiles('pulsar-v2/extension/build.gradle.kts') }}
           restore-keys: gradle-
 
-      - name: Generate throwaway signing key (fingerprint read from APKs later)
+      - name: Use committed stable signing key
         run: |
+          # Her derlemede yeni anahtar üretilmez: anahtar değişirse Kototoro/Mihon
+          # parmak izi eşleşmez ve eklenti "Untrusted" olur.
+          test -f signing/pulsar.keystore || { echo "::error::signing/pulsar.keystore yok"; exit 1; }
           mkdir -p pulsar-v2/signing
-          keytool -genkeypair -v \
-            -keystore pulsar-v2/signing/pulsar.keystore \
-            -storetype PKCS12 \
-            -alias androiddebugkey \
-            -keyalg RSA -keysize 2048 -validity 10000 \
-            -storepass android -keypass android \
-            -dname "CN=Pulsar Manga Hub CI, OU=Pulsar, O=Pulsariums, C=TR"
+          cp signing/pulsar.keystore pulsar-v2/signing/pulsar.keystore
+          ls -l pulsar-v2/signing/pulsar.keystore
 
       - name: Build all flavors (Mihon checkout + our module)
         working-directory: pulsar-v2
