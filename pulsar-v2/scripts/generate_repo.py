@@ -37,6 +37,63 @@ FLAVOR_DEFS = {
     ".global18": {"name": "Pulsar Global 18+", "lang": "all", "nsfw": 1},
 }
 
+
+def load_status(repo_dir):
+    """Tek durum dosyası: pulsar-v2/data/source-status.json (health + cihaz testi)."""
+    path = os.path.join(os.path.dirname(repo_dir), "data", "source-status.json")
+    if not os.path.exists(path):
+        print(f"  ! durum dosyası yok: {path} — sources boş kalacak", file=sys.stderr)
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f).get("sources", {})
+
+
+def package_sources(status, suffix):
+    """Yalnız state=active ve paketi eşleşen kaynaklar indekse girer."""
+    pkg = suffix.lstrip(".")
+    rows = []
+    for entry in status.values():
+        if entry.get("state") != "active":
+            continue
+        if pkg not in (entry.get("packages") or []):
+            continue
+        rows.append({
+            "name": entry.get("title") or "",
+            "id": str(entry.get("id", "")),
+            "lang": entry.get("lang") or "all",
+            "baseUrl": f"https://{entry.get('domain')}" if entry.get("domain") else "",
+        })
+    rows.sort(key=lambda r: r["name"].lower())
+    return rows
+
+
+def write_pending_report(repo_dir, status):
+    """Çalışmayan/bekleyen kaynaklar silinmez; sebebiyle burada raporlanır."""
+    path = os.path.join(os.path.dirname(repo_dir), "data", "pending-sources.md")
+    lines = [
+        "# Beklemedeki kaynaklar",
+        "",
+        "Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada dururlar.",
+        "",
+        "| Paket | Kaynak | Dil | Domain | Sebep |",
+        "|---|---|---|---|---|",
+    ]
+    rows = [e for e in status.values() if e.get("state") != "active"]
+    rows.sort(key=lambda e: (",".join(e.get("packages") or []), (e.get("title") or "").lower()))
+    for e in rows:
+        health = e.get("health") or {}
+        device = e.get("device") or {}
+        reason = health.get("status") or device.get("status") or e.get("state") or ""
+        detail = (health.get("detail") or device.get("detail") or "").replace("|", "/")[:90]
+        lines.append(
+            f"| {','.join(e.get('packages') or [])} | {e.get('title','')} | "
+            f"{e.get('lang','')} | {e.get('domain','')} | {reason} {detail} |"
+        )
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+    print(f"  beklemede: {len(rows)} kaynak -> {path}")
+
+
 _SDK_ROOTS = [
     os.environ.get("ANDROID_HOME"),
     os.environ.get("ANDROID_SDK_ROOT"),
@@ -85,6 +142,7 @@ def apk_extension_lib(apk):
 def main(repo_dir, flavors="tr,tr18,global,global18"):
     suffixes = ["." + f.strip().removeprefix(".") for f in flavors.split(",")]
 
+    status = load_status(repo_dir)
     index = []
     fingerprint = None
     for suffix in suffixes:
@@ -114,7 +172,7 @@ def main(repo_dir, flavors="tr,tr18,global,global18"):
         index.append({
             "name": meta["name"], "pkg": pkg, "apk": apk,
             "lang": meta["lang"], "code": code, "version": version,
-            "nsfw": meta["nsfw"], "sources": [],
+            "nsfw": meta["nsfw"], "sources": package_sources(status, suffix),
         })
 
     if not index:
@@ -142,6 +200,7 @@ def main(repo_dir, flavors="tr,tr18,global,global18"):
                 "signingKeyFingerprint": fingerprint,
             },
         }, f, ensure_ascii=False, indent=2)
+    write_pending_report(repo_dir, status)
     print(f"  wrote index for {len(index)} extension(s); fingerprint={fingerprint[:16]}...")
 
 

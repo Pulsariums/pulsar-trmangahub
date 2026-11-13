@@ -1,0 +1,227 @@
+use crate::health::HealthRow;
+use serde::{Deserialize, Serialize};
+use std::collections::BTreeMap;
+use std::path::Path;
+use std::process::ExitCode;
+
+pub const STATUS_REL: &str = "pulsar-v2/data/source-status.json";
+
+#[derive(Deserialize, Clone, Debug, Default)]
+pub struct SourceEntry {
+    pub id: i64,
+    #[serde(default)] pub kind: String,
+    #[serde(default)] pub name: String,
+    #[serde(default)] pub title: String,
+    #[serde(default)] pub lang: String,
+    #[serde(default)] pub nsfw: i32,
+    #[serde(default)] pub domain: String,
+}
+
+#[derive(Deserialize, Default)]
+pub struct SourceMap {
+    #[serde(default)] pub engine: Vec<SourceEntry>,
+    #[serde(default)] pub catalogue: Vec<SourceEntry>,
+}
+
+#[derive(Serialize, Deserialize, Clone, Debug, Default)]
+pub struct Probe {
+    pub status: String,
+    #[serde(default)] pub http_code: String,
+    #[serde(default)] pub ms: u64,
+    #[serde(default)] pub detail: String,
+    pub at: String,
+}
+
+#[derive(Serialize, Deserialize, Clone, Debug)]
+pub struct StatusEntry {
+    pub id: i64,
+    pub kind: String,
+    pub title: String,
+    pub lang: String,
+    pub nsfw: i32,
+    pub domain: String,
+    pub packages: Vec<String>,
+    pub state: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")] pub health: Option<Probe>,
+    #[serde(default, skip_serializing_if = "Option::is_none")] pub device: Option<Probe>,
+    #[serde(default, skip_serializing_if = "String::is_empty")] pub note: String,
+}
+
+#[derive(Serialize, Deserialize, Clone, Debug, Default)]
+pub struct StatusFile {
+    pub generated: String,
+    pub sources: BTreeMap<String, StatusEntry>,
+}
+
+pub fn packages_for(e: &SourceEntry) -> Vec<String> {
+    let tr = e.lang == "tr";
+    let nsfw = e.nsfw == 1;
+    let pkg = match (tr, nsfw) {
+        (true, false) => "tr",
+        (true, true) => "tr18",
+        (false, false) => "global",
+        (false, true) => "global18",
+    };
+    vec![pkg.to_string()]
+}
+
+pub fn recompute_state(e: &mut StatusEntry) {
+    let device = e.device.as_ref().map(|p| p.status.as_str()).unwrap_or("");
+    let health = e.health.as_ref().map(|p| p.status.as_str()).unwrap_or("");
+    e.state = if device == "fail" || device == "cloudflare" {
+        "pending".to_string()
+    } else if health == "ok" {
+        "active".to_string()
+    } else if health.is_empty() {
+        "unknown".to_string()
+    } else {
+        "pending".to_string()
+    };
+}
+
+fn load(root: &Path) -> StatusFile {
+    std::fs::read_to_string(root.join(STATUS_REL))
+        .ok()
+        .and_then(|t| serde_json::from_str(&t).ok())
+        .unwrap_or_default()
+}
+
+fn save(root: &Path, file: &StatusFile) -> Result<(), String> {
+    let path = root.join(STATUS_REL);
+    if let Some(parent) = path.parent() {
+        std::fs::create_dir_all(parent).map_err(|e| e.to_string())?;
+    }
+    let text = serde_json::to_string_pretty(file).map_err(|e| e.to_string())?;
+    std::fs::write(&path, text + "\n").map_err(|e| e.to_string())
+}
+
+pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
+    let map_path = root.join("pulsar-v2/repo/source_map.json");
+    let text = std::fs::read_to_string(&map_path).map_err(|e| format!("{}: {e}", map_path.display()))?;
+    let map: SourceMap = serde_json::from_str(&text).map_err(|e| format!("source_map.json: {e}"))?;
+    let mut file = load(root);
+    for e in map.engine.into_iter().chain(map.catalogue) {
+        let key = e.id.to_string();
+        file.sources.entry(key).or_insert_with(|| {
+            let mut s = StatusEntry {
+                id: e.id,
+                kind: e.kind.clone(),
+                title: if e.title.is_empty() { e.name.clone() } else { e.title.clone() },
+                lang: e.lang.clone(),
+                nsfw: e.nsfw,
+                domain: e.domain.clone(),
+                packages: packages_for(&e),
+                state: "unknown".to_string(),
+                health: None,
+                device: None,
+                note: String::new(),
+            };
+            recompute_state(&mut s);
+            s
+        });
+    }
+    file.generated = now();
+    save(root, &file)?;
+    Ok(file)
+}
+
+pub fn record_health(root: &Path, rows: &[HealthRow]) -> Result<(), String> {
+    let mut file = ensure_all(root)?;
+    let at = now();
+    for r in rows {
+        let key = r.id.to_string();
+        if let Some(entry) = file.sources.get_mut(&key) {
+            entry.health = Some(Probe {
+                status: r.status.clone(),
+                http_code: r.http_code.clone(),
+                ms: r.ms as u64,
+                detail: r.detail.clone(),
+                at: at.clone(),
+            });
+            recompute_state(entry);
+        }
+    }
+    save(root, &file)
+}
+
+pub fn record_device(root: &Path, device_path: &Path) -> Result<usize, String> {
+    let text = std::fs::read_to_string(device_path).map_err(|e| format!("{}: {e}", device_path.display()))?;
+    let value: serde_json::Value = serde_json::from_str(&text).map_err(|e| format!("cihaz raporu JSON değil: {e}"))?;
+    let list = value.get("sources").and_then(|v| v.as_array()).cloned().unwrap_or_default();
+    let mut file = ensure_all(root)?;
+    let at = now();
+    let mut merged = 0usize;
+    for item in list {
+        let name = item.get("name").and_then(|v| v.as_str()).unwrap_or("");
+        let id: Option<i64> = name.strip_prefix("MIHON_").and_then(|s| s.parse().ok());
+        let Some(id) = id else { continue };
+        let Some(entry) = file.sources.get_mut(&id.to_string()) else { continue };
+        let status = item.get("status").and_then(|v| v.as_str()).unwrap_or("fail").to_string();
+        let detail = item
+            .get("steps")
+            .and_then(|s| s.get("list"))
+            .and_then(|l| l.get("message"))
+            .and_then(|m| m.as_str())
+            .unwrap_or("")
+            .chars()
+            .take(180)
+            .collect::<String>();
+        entry.device = Some(Probe { status, http_code: String::new(), ms: 0, detail, at: at.clone() });
+        recompute_state(entry);
+        merged += 1;
+    }
+    save(root, &file)?;
+    Ok(merged)
+}
+
+fn now() -> String {
+    let secs = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map(|d| d.as_secs())
+        .unwrap_or(0);
+    let days = (secs / 86400) as i64;
+    let rem = secs % 86400;
+    let (y, m, d) = civil_from_days(days);
+    format!("{:04}-{:02}-{:02}T{:02}:{:02}:{:02}Z", y, m, d, rem / 3600, (rem % 3600) / 60, rem % 60)
+}
+
+fn civil_from_days(z: i64) -> (i64, u32, u32) {
+    let z = z + 719468;
+    let era = if z >= 0 { z } else { z - 146096 } / 146097;
+    let doe = (z - era * 146097) as u64;
+    let yoe = (doe - doe / 1460 + doe / 36524 - doe / 146096) / 365;
+    let y = yoe as i64 + era * 400;
+    let doy = doe - (365 * yoe + yoe / 4 - yoe / 100);
+    let mp = (5 * doy + 2) / 153;
+    let d = (doy - (153 * mp + 2) / 5 + 1) as u32;
+    let m = if mp < 10 { mp + 3 } else { mp - 9 } as u32;
+    (if m <= 2 { y + 1 } else { y }, m, d)
+}
+
+pub fn run(root: &Path, argv: &[String]) -> ExitCode {
+    let result = if let Some(pos) = argv.iter().position(|a| a == "--device") {
+        match argv.get(pos + 1) {
+            Some(p) => record_device(root, Path::new(p)).map(|n| println!("cihaz sonucu işlendi: {n} kaynak")),
+            None => Err("--device için dosya yolu gerekli".to_string()),
+        }
+    } else {
+        ensure_all(root).map(|_| ())
+    };
+    if let Err(e) = result {
+        eprintln!("HATA: {e}");
+        return ExitCode::FAILURE;
+    }
+    let file = match ensure_all(root) {
+        Ok(f) => f,
+        Err(e) => { eprintln!("HATA: {e}"); return ExitCode::FAILURE; }
+    };
+    let mut by_state: BTreeMap<String, usize> = BTreeMap::new();
+    for s in file.sources.values() {
+        *by_state.entry(s.state.clone()).or_insert(0) += 1;
+    }
+    println!("DURUM DOSYASI: {} kaynak", file.sources.len());
+    for (k, v) in &by_state {
+        println!("  {k:<10} {v}");
+    }
+    ExitCode::SUCCESS
+}

@@ -30,18 +30,18 @@ struct SourceMap {
 }
 
 #[derive(Serialize, Clone, Debug)]
-struct HealthRow {
-    id: i64,
-    kind: String,
-    title: String,
-    lang: String,
-    nsfw: i32,
-    domain: String,
-    url: String,
-    status: String,
-    http_code: String,
-    ms: u128,
-    detail: String,
+pub struct HealthRow {
+    pub id: i64,
+    pub kind: String,
+    pub title: String,
+    pub lang: String,
+    pub nsfw: i32,
+    pub domain: String,
+    pub url: String,
+    pub status: String,
+    pub http_code: String,
+    pub ms: u128,
+    pub detail: String,
 }
 
 #[derive(Serialize, Debug)]
@@ -259,7 +259,7 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
         ok,
         failed: selected - ok,
         by_reason: by_reason.clone(),
-        sources: rows,
+        sources: rows.clone(),
     };
 
     println!("\nÖZET: {} test | ok={} başarısız={}", report.selected, report.ok, report.failed);
@@ -283,6 +283,11 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
             eprintln!("HATA: rapor serileştirilemedi: {e}");
             return ExitCode::FAILURE;
         }
+    }
+    if let Err(e) = crate::status::record_health(root, &report.sources) {
+        eprintln!("UYARI: durum dosyası güncellenemedi: {e}");
+    } else {
+        println!("DURUM: {}", crate::status::STATUS_REL);
     }
     ExitCode::SUCCESS
 }
