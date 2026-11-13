@@ -117,6 +117,7 @@ class PulsarSource(
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
         return SManga.create().apply {
+            url = relativize(response.request.url.toString())
             title = doc.selectFirst("h1, .entry-title")?.text()?.trim() ?: "Manga"
             description = doc.selectFirst("div.description, div.manga-description, div.summary__content, div.entry-content")?.text()?.trim()
             thumbnail_url = doc.selectFirst("div.thumb img, div.manga-poster img, div.summary_image img")?.let { img ->
@@ -131,7 +132,21 @@ class PulsarSource(
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
         val chapterSelector = config.optString("chapterSelector", "")
-        val chapters = EngineRegistry.parseChapters(doc, chapterSelector, baseUrl)
+        val chapters = EngineRegistry.parseChapters(doc, chapterSelector, baseUrl).ifEmpty {
+            EngineRegistry.rscChapters(
+                html,
+                config.optString("rscChapterUrl", ""),
+                response.request.url.toString(),
+            )
+        }
+        if (chapters.isEmpty()) {
+            throw IllegalStateException(
+                EngineRegistry.diagnose(
+                    doc, chapterSelector, baseUrl, html,
+                    response.code, response.request.url.toString(),
+                ),
+            )
+        }
 
         return chapters.map { ch ->
             SChapter.create().apply {
