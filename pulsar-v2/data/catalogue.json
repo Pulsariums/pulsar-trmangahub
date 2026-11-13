@@ -261,6 +261,7 @@
       "baseUrl": "https://www.nabicix.com",
       "engine": "madara",
       "config": {
+        "diag": "1",
         "datePattern": "d MMMM",
         "engine": "madara",
         "listPath": "/manga",
@@ -640,7 +641,13 @@
         "listPath": "/manga",
         "itemSelector": "div.page-item-detail, div.manga",
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
+        "readerSelector": "div.page-break img, div.reading-content img",
+        "searchUrl": "https://www.ruyamanga2.com/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+        "searchMethod": "POST",
+        "searchBody": "title={query}",
+        "searchJsonItems": "data",
+        "searchJsonUrl": "url",
+        "searchJsonTitle": "title"
       },
       "verified_by_user": true,
       "origins": [
@@ -710,7 +717,8 @@
         "listPath": "/manga",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+        "rscChapterUrl": "/manga/{slug}/{number}"
       },
       "verified_by_user": true,
       "origins": [
@@ -860,6 +868,7 @@
       "baseUrl": "https://webtoonoku.org",
       "engine": "custom",
       "config": {
+        "diag": "1",
         "engine": "custom",
         "listPath": "/manhwa",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
@@ -1067,6 +1076,7 @@
       "baseUrl": "https://nabicix.com",
       "engine": "custom",
       "config": {
+        "diag": "1",
         "engine": "custom",
         "listPath": "/manga",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
@@ -1245,11 +1255,13 @@
       "baseUrl": "https://lunarx.to",
       "engine": "custom",
       "config": {
+        "diag": "1",
         "engine": "custom",
         "listPath": "/manga",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+        "rscChapterUrl": "/manga/{slug}/{number}"
       },
       "verified_by_user": false,
       "origins": [
@@ -1265,6 +1277,7 @@
       "baseUrl": "https://manga.araznovel.com",
       "engine": "custom",
       "config": {
+        "diag": "1",
         "engine": "custom",
         "listPath": "/manga",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
@@ -1285,6 +1298,7 @@
       "baseUrl": "https://mangaball.com",
       "engine": "custom",
       "config": {
+        "diag": "1",
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
@@ -2059,7 +2073,13 @@
         "listPath": "/manga",
         "itemSelector": "div.page-item-detail, div.manga",
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
+        "readerSelector": "div.page-break img, div.reading-content img",
+        "searchUrl": "https://www.ruyamanga2.com/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+        "searchMethod": "POST",
+        "searchBody": "title={query}",
+        "searchJsonItems": "data",
+        "searchJsonUrl": "url",
+        "searchJsonTitle": "title"
       },
       "verified_by_user": false,
       "origins": [
@@ -2350,6 +2370,7 @@
       "baseUrl": "https://webtoonoku.org",
       "engine": "custom",
       "config": {
+        "diag": "1",
         "engine": "custom",
         "listPath": "/manhwa",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",

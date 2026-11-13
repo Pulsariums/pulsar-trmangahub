@@ -27,6 +27,11 @@ class PulsarSource(
     val engine: String = rawConfig.optString("engine", "custom")
     val config: JSONObject = rawConfig.optJSONObject("config") ?: JSONObject()
 
+    // Kototoro'nun varsayılan (mobil WebView) UA'sını kaldırıp tek masaüstü UA bırakıyoruz;
+    // iki User-Agent başlığı bazı CDN'lerde 403'e yol açıyor.
+    private val desktopUserAgent: String =
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+
     override val supportsLatest: Boolean = true
 
     override val client: OkHttpClient by lazy {
@@ -38,8 +43,9 @@ class PulsarSource(
     }
 
     override fun headersBuilder(): Headers.Builder = super.headersBuilder()
+        .removeAll("User-Agent")
         .add("Referer", "$baseUrl/")
-        .add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
+        .add("User-Agent", desktopUserAgent)
 
     override val id: Long by lazy {
         val key = "pulsar/$domain/$lang"
@@ -65,7 +71,7 @@ class PulsarSource(
             SManga.create().apply {
                 url = relativize(item.url)
                 title = item.title
-                thumbnail_url = item.coverUrl
+                thumbnail_url = realImageUrl(item.coverUrl)
             }
         }
         return MangasPage(mangas, hasNextPage = mangas.size >= 10)
@@ -126,6 +132,22 @@ class PulsarSource(
     private fun hostOf(u: String): String =
         u.substringAfter("://", u).substringBefore('/').removePrefix("www.").lowercase()
 
+    // Slept Manga kapakları /api/image-proxy?url=<CDN adresi> biçiminde geliyor ve
+    // proxy 403 dönüyor ("API Access Denied"); CDN adresinin kendisi Referer'la 200.
+    // Bu yüzden proxy adresini çözüp doğrudan CDN'i kullanıyoruz.
+    private fun realImageUrl(raw: String?): String? {
+        val u = raw?.trim().orEmpty()
+        if (u.isEmpty()) return null
+        val abs = if (u.startsWith("http")) u else "$baseUrl/${u.trimStart('/')}"
+        if (!abs.contains("image-proxy")) return abs
+        val enc = abs.substringAfter("url=", "").substringBefore('&')
+        if (enc.isEmpty()) return abs
+        val decoded = runCatching {
+            java.net.URLDecoder.decode(enc.replace("+", "%2B"), "UTF-8")
+        }.getOrNull()
+        return if (decoded != null && decoded.startsWith("http")) decoded else abs
+    }
+
     private fun relativize(url: String): String {
         if (!url.startsWith("http")) return url
         val path = url.substringAfter("://").substringAfter('/', "")
@@ -167,9 +189,11 @@ class PulsarSource(
             url = relativize(response.request.url.toString())
             title = doc.selectFirst("h1, .entry-title")?.text()?.trim() ?: "Manga"
             description = doc.selectFirst("div.description, div.manga-description, div.summary__content, div.entry-content")?.text()?.trim()
-            thumbnail_url = doc.selectFirst("div.thumb img, div.manga-poster img, div.summary_image img")?.let { img ->
-                img.attr("data-src").ifBlank { null as String? } ?: img.attr("src").ifBlank { null as String? }
-            }
+            thumbnail_url = realImageUrl(
+                doc.selectFirst("div.thumb img, div.manga-poster img, div.summary_image img, img[data-nimg]")?.let { img ->
+                    img.attr("data-src").ifBlank { null as String? } ?: img.attr("src").ifBlank { null as String? }
+                },
+            )
             status = SManga.UNKNOWN
         }
     }
@@ -179,20 +203,30 @@ class PulsarSource(
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
         val chapterSelector = config.optString("chapterSelector", "")
-        val chapters = EngineRegistry.parseChapters(doc, chapterSelector, baseUrl).ifEmpty {
+        val htmlChapters = EngineRegistry.parseChapters(doc, chapterSelector, baseUrl)
+        val rscChapters = if (htmlChapters.isEmpty()) {
             EngineRegistry.rscChapters(
                 html,
                 config.optString("rscChapterUrl", ""),
                 response.request.url.toString(),
             )
+        } else {
+            emptyList<ParsedChapter>()
+        }
+        val chapters = htmlChapters.ifEmpty { rscChapters }
+        val diag = EngineRegistry.diagnose(
+            doc, chapterSelector, baseUrl, html,
+            response.code, response.request.url.toString(),
+        )
+        // TANI2: "diag" işaretli kaynaklarda her durumda atılır; cihaz raporu böylece
+        // ayrıştırıcının kaç bölüm bulduğunu gösterir. Geçici ölçüm kipi.
+        if (config.optString("diag", "").isNotBlank()) {
+            throw IllegalStateException(
+                "TANI2 gen=${chapters.size} html=${htmlChapters.size} rsc=${rscChapters.size} $diag",
+            )
         }
         if (chapters.isEmpty()) {
-            throw IllegalStateException(
-                EngineRegistry.diagnose(
-                    doc, chapterSelector, baseUrl, html,
-                    response.code, response.request.url.toString(),
-                ),
-            )
+            throw IllegalStateException(diag)
         }
 
         return chapters.map { ch ->
