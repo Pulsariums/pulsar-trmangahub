@@ -1303,7 +1303,13 @@
         "listPath": "/",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+        "chapterApiUrl": "https://mangaball.com/api/v1/title/chapter-listing?title_id={id}&page={page}&limit=500&group_by=flat&sort_order=desc&language=all&search=&user_id=",
+        "chapterApiIdPattern": "([0-9a-fA-F]{24})",
+        "chapterApiItems": "data",
+        "chapterApiFieldName": "name",
+        "chapterApiFieldNumber": "number",
+        "chapterApiFieldUrl": "url"
       },
       "verified_by_user": false,
       "origins": [
@@ -1804,8 +1810,7 @@
         "engine": "mangareader",
         "listPath": "/series",
         "itemSelector": "div.bsx",
-        "chapterSelector": "div.eph-num a",
-        "readerSelector": "div#readerarea img"
+        "chapterSelector": "div.eph-num a"
       },
       "verified_by_user": false,
       "origins": [

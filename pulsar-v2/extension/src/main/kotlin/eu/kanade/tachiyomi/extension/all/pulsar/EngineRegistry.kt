@@ -209,6 +209,35 @@ object EngineRegistry {
         return if (items.isNotEmpty()) items else genericPages(doc, baseUrl)
     }
 
+    // Bazı siteler sayfa görsellerini DOM'a koymuyor: inline `ts_reader.run` JSON'u
+    // (nabicix), Qwik state (xcomic) gibi metin bloklarında duruyorlar. DOM'da aday
+    // çıkmadığında ham HTML metninde mutlak/göreli görsel adresi arıyoruz.
+    private val RAW_IMAGE = Regex(
+        """(?:"|\\"|=)((?:https?://|/)[^\s"'\\<>()]+?\.(?:webp|jpe?g|png|avif))""",
+        RegexOption.IGNORE_CASE,
+    )
+
+    fun rawImages(html: String, baseUrl: String): List<String> {
+        val seen = LinkedHashMap<String, String>()
+        for (m in RAW_IMAGE.findAll(html)) {
+            val u = m.groupValues[1].trimEnd(',', ']', '}', ';', ')')
+            val low = u.lowercase()
+            if (low.contains("logo") || low.contains("icon") || low.contains("avatar") ||
+                low.contains("banner") || low.contains("favicon") || low.contains("badge") ||
+                low.contains("placeholder") || low.contains("theme")
+            ) continue
+            val file = low.substringAfterLast('/')
+            val pageLike = file.contains("page") || file.contains("sayfa") ||
+                Regex("""^\d{1,4}[._-]""").containsMatchIn(file) ||
+                Regex("""/ch[_-]?\d+/""").containsMatchIn(low) ||
+                Regex("""/manga_chapters?/""").containsMatchIn(low)
+            if (!pageLike) continue
+            val full = if (u.startsWith("http")) u else "$baseUrl/${u.trimStart('/')}"
+            seen[full] = full
+        }
+        return seen.keys.toList()
+    }
+
     // ---- Next.js RSC (self.__next_f.push) ---------------------------------
     // Slept Manga, Lunar Manga, Manga Ball gibi Next.js App Router siteleri
     // bölüm verisini HTML'e koymuyor; kaçışlı "flight" metnine gömüyor.

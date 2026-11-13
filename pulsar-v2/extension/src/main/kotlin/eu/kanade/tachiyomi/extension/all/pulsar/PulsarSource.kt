@@ -166,8 +166,54 @@ class PulsarSource(
     override fun mangaDetailsRequest(manga: SManga): Request =
         Request.Builder().url(absolute(manga.url)).headers(headers).build()
 
-    override fun chapterListRequest(manga: SManga): Request =
-        Request.Builder().url(absolute(manga.url)).headers(headers).build()
+    // Bölümler sayfada <a> olarak yoksa, JSON API'den geliyorsa (mangaball.com):
+    // chapterApiUrl şablonu {id} ve {page} yer tutucularını taşır, id manga
+    // adresinden chapterApiIdPattern ile çıkarılır. Ayar boşsa eski yol işler.
+    private fun apiChapterUrl(manga: SManga): String? {
+        val template = config.optString("chapterApiUrl", "")
+        if (template.isBlank()) return null
+        val pattern = config.optString("chapterApiIdPattern", "")
+        if (pattern.isBlank()) return null
+        val id = runCatching { Regex(pattern).find(manga.url)?.groupValues?.getOrNull(1) }
+            .getOrNull().orEmpty()
+        if (id.isEmpty()) return null
+        return template.replace("{id}", id).replace("{page}", "1")
+    }
+
+    private fun apiChapters(response: Response): List<SChapter> {
+        val text = response.body?.string().orEmpty()
+        val itemsKey = config.optString("chapterApiItems", "data")
+        val arr = runCatching { org.json.JSONObject(text).optJSONArray(itemsKey) }.getOrNull()
+            ?: throw IllegalStateException(
+                "TANI3 api url=${response.request.url} len=${text.length} ilk=${text.take(160)}",
+            )
+        val nameKey = config.optString("chapterApiFieldName", "name")
+        val numKey = config.optString("chapterApiFieldNumber", "number")
+        val urlKey = config.optString("chapterApiFieldUrl", "url")
+        val out = ArrayList<SChapter>(arr.length())
+        for (i in 0 until arr.length()) {
+            val o = arr.optJSONObject(i) ?: continue
+            val raw = o.optString(urlKey).trim()
+            if (raw.isEmpty()) continue
+            val num = o.optString(numKey).replace(',', '.').toFloatOrNull() ?: 0f
+            val title = o.optString(nameKey).trim().ifBlank { "Bölüm " + num }
+            out.add(
+                SChapter.create().apply {
+                    url = relativize(raw)
+                    name = title
+                    chapter_number = num
+                    date_upload = 0L
+                },
+            )
+        }
+        return out
+    }
+
+    override fun chapterListRequest(manga: SManga): Request {
+        val api = apiChapterUrl(manga)
+        if (api != null) return Request.Builder().url(api).headers(headers).build()
+        return Request.Builder().url(absolute(manga.url)).headers(headers).build()
+    }
 
     override fun pageListRequest(chapter: SChapter): Request =
         Request.Builder().url(absolute(chapter.url)).headers(headers).build()
@@ -200,6 +246,11 @@ class PulsarSource(
 
     // Chapters
     override fun chapterListParse(response: Response): List<SChapter> {
+        // JSON API yolu gövdeyi apiChapters içinde tüketir; gövdeyi burada
+        // okumadan önce ayrılmalı (OkHttp gövdesi tek okumalıktır).
+        if (config.optString("chapterApiUrl", "").isNotBlank()) {
+            return apiChapters(response)
+        }
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
         val chapterSelector = config.optString("chapterSelector", "")
@@ -245,6 +296,7 @@ class PulsarSource(
         val doc = Jsoup.parse(html, baseUrl)
         val readerSelector = config.optString("readerSelector", "")
         val imageUrls = EngineRegistry.parsePages(doc, readerSelector, baseUrl)
+            .ifEmpty { EngineRegistry.rawImages(html, baseUrl) }
 
         val chapterUrl = response.request.url.toString()
         return imageUrls.mapIndexed { index, imgUrl ->
