@@ -6,6 +6,7 @@ use std::process::{Command, ExitCode};
 
 mod health;
 mod merge;
+mod quarantine;
 mod status;
 
 const CONFIG_REL: &str = "pulsar-v2/config/upstreams.json";
@@ -398,12 +399,15 @@ fn main() -> ExitCode {
         (Some("health"), _) => health::run(&root, &args[1..]),
         (Some("status"), _) => status::run(&root, &args[1..]),
         (Some("merge"), _) => merge::run(&root, &args[1..]),
+        (Some("quarantine"), _) => quarantine::run(&root, &args[1..]),
         _ => {
             eprintln!("kullanım:");
             eprintln!("  pulsar sources list");
             eprintln!("  pulsar sources update [--only <id>] [--dry-run]");
             eprintln!("  pulsar health [--lang tr] [--nsfw 0|1] [--limit N] [--jobs N] [--timeout sn]");
             eprintln!("  pulsar status [--device <cihaz-raporu.json>]");
+            eprintln!("  pulsar merge [--dry-run]");
+            eprintln!("  pulsar quarantine [--dry-run] [--clear]");
             eprintln!("  pulsar merge [--map <source_map.json>] [--catalogue <catalogue.json>] [--dry-run]");
             ExitCode::from(64)
         }

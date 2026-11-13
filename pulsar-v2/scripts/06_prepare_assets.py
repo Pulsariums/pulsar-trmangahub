@@ -117,6 +117,11 @@ def main():
     domain_overrides.update(ov.get("domainOverrides") or {})
     dead_sources |= set(ov.get("deadSources") or [])
     dead_hosts |= {bare(h) for h in (ov.get("deadHosts") or [])}
+    # Cihaz kanıtından karantina (pulsar quarantine): listede görünmesin.
+    # Ayrı anahtar: --clear yalnız bunları siler, elle doğrulanmış kararlara
+    # dokunmaz.
+    dead_sources |= set(ov.get("quarantineSources") or [])
+    dead_hosts |= {bare(h) for h in (ov.get("quarantineHosts") or [])}
     # Kendini iyileştirme (07): domain'ı CANLI doğrulanmış kaynak/host, bayat
     # liveness birleşiminden de düşürülür — yanlış karantina bir daha yapışmaz.
     dead_sources -= set(ov.get("revivedSources") or [])
