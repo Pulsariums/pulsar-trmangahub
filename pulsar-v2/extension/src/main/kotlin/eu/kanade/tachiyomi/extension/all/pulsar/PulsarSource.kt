@@ -81,6 +81,24 @@ class PulsarSource(
 
     override fun searchMangaParse(response: Response): MangasPage = popularMangaParse(response)
 
+    // ---- URL birleştirme -------------------------------------------------
+    // EngineRegistry MUTLAK URL üretir (https://site/manga/x). HttpSource ise
+    // istek kurarken baseUrl + manga.url yapar; ikisi birleşince host
+    // "site.comhttps" oluyordu. Cihaz raporu: Unable to resolve host
+    // "anikiga.comhttps" — Amanga Planet, Anikiga, Rüya Manga bu yüzden düştü.
+    private fun absolute(url: String): String =
+        if (url.startsWith("http://") || url.startsWith("https://")) url
+        else "$baseUrl/${url.trimStart('/')}"
+
+    override fun mangaDetailsRequest(manga: SManga): Request =
+        Request.Builder().url(absolute(manga.url)).headers(headers).build()
+
+    override fun chapterListRequest(manga: SManga): Request =
+        Request.Builder().url(absolute(manga.url)).headers(headers).build()
+
+    override fun pageListRequest(chapter: SChapter): Request =
+        Request.Builder().url(absolute(chapter.url)).headers(headers).build()
+
     // Details
     override fun mangaDetailsParse(response: Response): SManga {
         val html = response.body?.string().orEmpty()

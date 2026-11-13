@@ -6,6 +6,7 @@ use std::process::{Command, ExitCode};
 
 mod embed;
 mod health;
+mod probe;
 mod merge;
 mod quarantine;
 mod status;
@@ -402,6 +403,7 @@ fn main() -> ExitCode {
         (Some("merge"), _) => merge::run(&root, &args[1..]),
         (Some("quarantine"), _) => quarantine::run(&root, &args[1..]),
         (Some("embed"), _) => embed::run(&root, &args[1..]),
+        (Some("probe"), _) => probe::run(&root, &args[1..]),
         _ => {
             eprintln!("kullanım:");
             eprintln!("  pulsar sources list");
@@ -411,6 +413,7 @@ fn main() -> ExitCode {
             eprintln!("  pulsar merge [--dry-run]");
             eprintln!("  pulsar quarantine [--dry-run] [--clear]");
             eprintln!("  pulsar embed [--dry-run]");
+            eprintln!("  pulsar probe [--lang tr] [--nsfw 0|1] [--compare <cihaz.json>]");
             eprintln!("  pulsar merge [--map <source_map.json>] [--catalogue <catalogue.json>] [--dry-run]");
             ExitCode::from(64)
         }

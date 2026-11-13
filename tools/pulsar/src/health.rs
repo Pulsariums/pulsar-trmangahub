@@ -54,7 +54,7 @@ struct Report {
     sources: Vec<HealthRow>,
 }
 
-fn now_iso() -> String {
+pub(crate) fn now_iso() -> String {
     let secs = std::time::SystemTime::now()
         .duration_since(std::time::UNIX_EPOCH)
         .map(|d| d.as_secs())

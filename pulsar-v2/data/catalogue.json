@@ -750,7 +750,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
+        "listPath": "/seriler",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
@@ -861,7 +861,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
+        "listPath": "/manhwa",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
@@ -1286,7 +1286,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
+        "listPath": "/",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
@@ -1348,7 +1348,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
+        "listPath": "/series",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
@@ -1544,7 +1544,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
+        "listPath": "/series",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
@@ -1788,7 +1788,7 @@
           "tagsExclusion": false
         },
         "engine": "mangareader",
-        "listPath": "/manga",
+        "listPath": "/series",
         "itemSelector": "div.bsx",
         "chapterSelector": "div.eph-num a",
         "readerSelector": "div#readerarea img"
@@ -1896,7 +1896,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
+        "listPath": "/seri",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
@@ -2309,7 +2309,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
+        "listPath": "/liste",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
@@ -2351,7 +2351,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
+        "listPath": "/manhwa",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
@@ -2435,7 +2435,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
+        "listPath": "/",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
