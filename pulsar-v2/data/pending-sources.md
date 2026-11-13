@@ -4,352 +4,204 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 
 | Paket | Kaynak | Dil | Domain | Sebep |
 |---|---|---|---|---|
-| global | 1stKissManga.com | en | 1stkissmanga.mom | unknown  |
-| global | 1StKissManga.net | en | 1stkissmanga.org | unknown  |
-| global | 20ThCenturyBoys | fr | 20thcenturyboys.fr | unknown  |
-| global | 3Asq | ar | 3asq.org | unknown  |
-| global | 4uScans | ar | 4uscans.com | unknown  |
+| global | 1stKissManga.com | en | 1stkissmanga.mom | timeout curl: (28) Connection timed out after 15003 milliseconds |
+| global | 1StKissManga.net | en | 1stkissmanga.org | dns curl: (6) Could not resolve host: 1stkissmanga.org |
+| global | 20ThCenturyBoys | fr | 20thcenturyboys.fr | http5xx  |
 | global | AComics | ru |  | unknown  |
-| global | AgsComics | en | agrcomics.com | unknown  |
-| global | AinzScans | id | ainzscans.net | unknown  |
-| global | AiyuManhua | es | www.aiyumanhua.com | unknown  |
-| global | AlceaScan | id | alceacomic.my.id | unknown  |
-| global | AloneScanlator | pt | alonescanlator.com.br | unknown  |
-| global | AltayScans | en | altayscans.com | unknown  |
-| global | AlterkaiScans | id | alterkaiscans.my.id | unknown  |
-| global | AncientComics | pt | ancientcomics.com.br | unknown  |
+| global | AinzScans | id | ainzscans.net | cloudflare  |
+| global | AiyuManhua | es | www.aiyumanhua.com | dns curl: (6) Could not resolve host: www.aiyumanhua.com |
+| global | AlceaScan | id | alceacomic.my.id | dns curl: (6) Could not resolve host: alceacomic.my.id |
+| global | AloneScanlator | pt | alonescanlator.com.br | http  |
+| global | AltayScans | en | altayscans.com | ssl curl: (60) schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - Sertifika zinciri g�venilmeyen bi |
+| global | AncientComics | pt | ancientcomics.com.br | dns curl: (6) Could not resolve host: ancientcomics.com.br |
 | global | Anibel | be |  | unknown  |
-| global | AnigliScans | en | anigliscans.xyz | unknown  |
 | global | AnimeSama | fr |  | unknown  |
-| global | AnimeXNovel | pt | www.animexnovel.com | unknown  |
-| global | AnisaScans | en | anisascans.in | unknown  |
-| global | AnshScans | en | anshscans.org | unknown  |
-| global | AnteikuScan | fr | anteikuscan.fr | unknown  |
-| global | AnzMangasHd | es | www.anzmangashd.com | unknown  |
-| global | Apkomik | id | apkomik.cc | unknown  |
-| global | ApollComics | es | apollcomics.es | unknown  |
-| global | AquaManga | en | aquareader.net | unknown  |
-| global | AquaScans.com | en | aquascans.com | unknown  |
-| global | ArAreaScans | ar | ar.kenmanga.com | unknown  |
-| global | Arc-Relight | en | arc-relight.com | unknown  |
-| global | ArcaneScans | en | arcanescans.com | unknown  |
-| global | ArcticScan | pt | arcticscan.top | unknown  |
-| global | AreaScans | ar | ar.kenmanga.com | unknown  |
-| global | Arenascans | en | arenascan.com | unknown  |
-| global | ArgosComics | pt | argoscomic.com | unknown  |
-| global | ArtesSupremas | es | artessupremas.com | unknown  |
-| global | ArthurScan | pt | arthurscan.xyz | unknown  |
-| global | ArvenComics | en | arvencomics.com | unknown  |
-| global | AryaScans | en | aryascans.com | unknown  |
-| global | AscalonScans | en | ascalonscans.com | unknown  |
-| global | AsiaLotuss | es | asialotuss.com | unknown  |
-| global | AssortedScans | en | assortedscans.com | unknown  |
-| global | AstralManga | fr | astral-manga.fr | unknown  |
-| global | Astrames | fr | astrames.fr | unknown  |
-| global | AstraScans | en | astrascans.org | unknown  |
-| global | AsupanKomik | id | www.asupankomik.my.id | unknown  |
+| global | AnisaScans | en | anisascans.in | dns curl: (6) Could not resolve host: anisascans.in |
+| global | Apkomik | id | apkomik.cc | cloudflare  |
+| global | AquaManga | en | aquareader.net | cloudflare  |
+| global | AquaScans.com | en | aquascans.com | dns curl: (6) Could not resolve host: aquascans.com |
+| global | ArAreaScans | ar | ar.kenmanga.com | cloudflare  |
+| global | ArcaneScans | en | arcanescans.com | timeout curl: (28) Operation timed out after 15002 milliseconds with 0 bytes received |
+| global | AreaScans | ar | ar.kenmanga.com | cloudflare  |
+| global | ArtesSupremas | es | artessupremas.com | http  |
+| global | ArthurScan | pt | arthurscan.xyz | timeout curl: (28) Operation timed out after 15016 milliseconds with 223875 bytes received |
+| global | AryaScans | en | aryascans.com | timeout curl: (28) Operation timed out after 15033 milliseconds with 0 bytes received |
+| global | AstralManga | fr | astral-manga.fr | cloudflare  |
+| global | AstraScans | en | astrascans.org | timeout curl: (28) Connection timed out after 15005 milliseconds |
+| global | AsupanKomik | id | www.asupankomik.my.id | dns curl: (6) Could not resolve host: www.asupankomik.my.id |
 | global | AsuraComic | en |  | unknown  |
-| global | AsuraScans.us | en | asurascans.us | unknown  |
-| global | AsuraScansGg | en | asurascans.us | unknown  |
-| global | Atemporal | pt | atemporal.cloud | unknown  |
-| global | AtlantisScan | es | scansatlanticos.com | unknown  |
 | global | Atsu.moe | en |  | unknown  |
 | global | Azoramoon | ar |  | unknown  |
-| global | Babelwuxia | en | babelwuxia.com | unknown  |
-| global | BacaKomik | id | bacakomik.my | unknown  |
-| global | BakaMan | th | bakaman.net | unknown  |
-| global | Bakamh | zh | bakamh.com | unknown  |
-| global | BananaManga | en | bananamanga.net | unknown  |
-| global | BananaScan | fr | banana-scan.com | unknown  |
-| global | BananaScan.Com | en | bananascans.com | unknown  |
+| global | BakaMan | th | bakaman.net | dns curl: (6) Could not resolve host: bakaman.net |
+| global | Bakamh | zh | bakamh.com | cloudflare  |
+| global | BananaManga | en | bananamanga.net | dns curl: (6) Could not resolve host: bananamanga.net |
 | global | Baozimh | zh |  | unknown  |
-| global | BarManga | es | barmanga.com | unknown  |
 | global | BatCave | en |  | unknown  |
 | global | BeeToon.net | en |  | unknown  |
-| global | BegaTranslation | es | begatranslation.com | unknown  |
+| global | BegaTranslation | es | begatranslation.com | cloudflare  |
 | global | BentoManga | fr |  | unknown  |
-| global | BentoScan | fr | bentoscan.com | unknown  |
-| global | BerserkScan | fr | berserkscan.com | unknown  |
-| global | BestManga | ru | bestmanga.club | unknown  |
-| global | BestManhua.com | en | bestmanhua.com | unknown  |
-| global | Beyond The Ataraxia | it | www.beyondtheataraxia.com | unknown  |
-| global | BirdManga | en | birdmanga.com | unknown  |
+| global | BerserkScan | fr | berserkscan.com | cloudflare  |
+| global | BestManhua.com | en | bestmanhua.com | http  |
+| global | BirdManga | en | birdmanga.com | dns curl: (6) Could not resolve host: birdmanga.com |
 | global | Blog Truyện | vi |  | unknown  |
 | global | BlogTruyen.vn (Unofficial) | vi |  | unknown  |
-| global | BlueLockScan | fr | bluelockscan.com | unknown  |
-| global | BlueSolo | fr | www1.bluesolo.org | unknown  |
-| global | Bokugents | es | bokugents.com | unknown  |
-| global | BookManga | en | bookmanga.com | unknown  |
-| global | BorutoExplorer | pt | leitor.borutoexplorer.com.br | unknown  |
-| global | Brakeout | es | brakeout.xyz | unknown  |
+| global | BlueLockScan | fr | bluelockscan.com | cloudflare  |
+| global | Bokugents | es | bokugents.com | cloudflare  |
 | global | BrMangas | pt |  | unknown  |
-| global | BrMangasTop | pt | brmangas.top | unknown  |
-| global | BurningScans | pt | burningscans.com | unknown  |
-| global | Cartel De Manhwas | es | cartelmanhwas.net | unknown  |
-| global | CatharsisFantasy | es | catharsisfantasy.com | unknown  |
-| global | CatharsisWorld | es | catharsisworld.dig-it.info | unknown  |
-| global | CerberusSeries | es | legionscans.com | unknown  |
-| global | CeriseScans | pt | cerise.leitorweb.com | unknown  |
-| global | ChainsawManScan | fr | chainsawman-scan.com | unknown  |
+| global | BurningScans | pt | burningscans.com | dns curl: (6) Could not resolve host: burningscans.com |
+| global | Cartel De Manhwas | es | cartelmanhwas.net | dns curl: (6) Could not resolve host: cartelmanhwas.net |
+| global | CatharsisFantasy | es | catharsisfantasy.com | dns curl: (6) Could not resolve host: catharsisfantasy.com |
+| global | CatharsisWorld | es | catharsisworld.dig-it.info | timeout curl: (28) Operation timed out after 15010 milliseconds with 0 bytes received |
+| global | ChainsawManScan | fr | chainsawman-scan.com | http5xx  |
 | global | CloneManga | en |  | unknown  |
 | global | CManga | vi |  | unknown  |
-| global | Cocorip | es | cocorip.net | unknown  |
-| global | CoffeeManga | en | coffeemanga.io | unknown  |
-| global | ColoredManga | en | coloredmanga.net | unknown  |
+| global | Cocorip | es | cocorip.net | timeout curl: (28) Connection timed out after 15007 milliseconds |
+| global | ColoredManga | en | coloredmanga.net | timeout curl: (28) Connection timed out after 15007 milliseconds |
 | global | Com-X | ru |  | unknown  |
-| global | Comic1000 | en | comic1000.com | unknown  |
-| global | Comic21 | id | comic21.me | unknown  |
-| global | ComicArab | ar | comicarab.com | unknown  |
-| global | Comicazen | id | comicazen.com | unknown  |
+| global | Comic21 | id | comic21.me | dns curl: (6) Could not resolve host: comic21.me |
+| global | ComicArab | ar | comicarab.com | dns curl: (6) Could not resolve host: comicarab.com |
 | global | ComicExtra | en |  | unknown  |
 | global | ComicK | all |  | fail  |
 | global | Comix | en |  | unknown  |
-| global | CopyPasteScan | es | copypastescan.xyz | unknown  |
-| global | CosmicScans.com | en | cosmic-scans.com | unknown  |
-| global | CosmicScans.id | id | lc5.cosmicscans.asia | unknown  |
-| global | CreepyScans | en | creepyscans.com | unknown  |
-| global | CrunchyScan | fr | crunchyscan.fr | unknown  |
-| global | CrystalComics | pt | crystalcomics.com | unknown  |
-| global | CulturedWorks | en | culturedworks.com | unknown  |
-| global | CypherScans | en | cypheroscans.xyz | unknown  |
+| global | CopyPasteScan | es | copypastescan.xyz | timeout curl: (28) Connection timed out after 15004 milliseconds |
+| global | CosmicScans.id | id | lc5.cosmicscans.asia | dns curl: (6) Could not resolve host: lc5.cosmicscans.asia |
+| global | CrystalComics | pt | crystalcomics.com | timeout curl: (28) Connection timed out after 15016 milliseconds |
+| global | CulturedWorks | en | culturedworks.com | http5xx  |
 | global | Cứu Truyện | vi |  | unknown  |
-| global | Dandadan | fr | dandadan.fr | unknown  |
-| global | DankeFursLesen | en | danke.moe | unknown  |
-| global | Daprob | es | daprob.com | unknown  |
-| global | Dark-Scan | en | dark-scan.com | unknown  |
-| global | Darknebulus | es | www.darknebulus.com | unknown  |
-| global | DarkScans | en | darkscans.net | unknown  |
-| global | DatgarScanlation | es | datgarscanlation.blogspot.com | unknown  |
+| global | Dandadan | fr | dandadan.fr | http5xx  |
 | global | DayComics | en |  | unknown  |
-| global | DeathTollScans | en | reader.deathtollscans.net | unknown  |
 | global | DemonicScans | en |  | unknown  |
 | global | DemonSect | pt |  | unknown  |
-| global | DemonSlayerScan | fr | demonslayerscan.com | unknown  |
-| global | DessertScan | pt | cabaredowatame.site | unknown  |
+| global | DemonSlayerScan | fr | demonslayerscan.com | http5xx  |
+| global | DessertScan | pt | cabaredowatame.site | dns curl: (6) Could not resolve host: cabaredowatame.site |
 | global | Desu | ru |  | unknown  |
-| global | DianxiaTrads | pt | dianxiatrads.com | unknown  |
+| global | DianxiaTrads | pt | dianxiatrads.com | timeout curl: (28) Connection timed out after 15008 milliseconds |
 | global | Dilar Tube | ar |  | unknown  |
-| global | DiskusScan | pt | diskusscan.online | unknown  |
-| global | DocTruyen3Q | vi | doctruyen3qui15.pro | unknown  |
-| global | DocTruyen5s | vi | manga.io.vn | unknown  |
+| global | DocTruyen3Q | vi | doctruyen3qui15.pro | timeout curl: (28) Connection timed out after 15006 milliseconds |
 | global | DoujinDesu.tv | id |  | unknown  |
 | global | Dragon Translation | es |  | unknown  |
-| global | DragonTea | en | dragontea.ink | unknown  |
-| global | DragonTranslation.org | es | dragontranslation.org | unknown  |
-| global | DrakeComic | en | drakecomic.org | unknown  |
-| global | DreamScan | pt | fairydream.com.br | unknown  |
-| global | DrStone | fr | drstone.fr | unknown  |
-| global | DtupScan | es | dtupscan.com | unknown  |
-| global | DuoScanlators | pt | duoscanlators.blogspot.com | unknown  |
+| global | DragonTea | en | dragontea.ink | cloudflare  |
+| global | DragonTranslation.org | es | dragontranslation.org | cloudflare  |
+| global | DreamScan | pt | fairydream.com.br | dns curl: (6) Could not resolve host: fairydream.com.br |
+| global | DrStone | fr | drstone.fr | http5xx  |
+| global | DtupScan | es | dtupscan.com | timeout curl: (28) Connection timed out after 15009 milliseconds |
 | global | DynastyScans | en |  | unknown  |
-| global | EdScanlation | fr | edscanlation.fr | unknown  |
-| global | ElarcPage | en | elarctoon.com | unknown  |
-| global | ElevenScanlator | pt | elevenscanlator.blogspot.com | unknown  |
-| global | Elftoon | en | elftoon.com | unknown  |
-| global | EliteManga | en | www.beinmanga.com | unknown  |
-| global | EmperorScan | es | emperorscan.mundoalterno.org | unknown  |
-| global | EnHuntersScan | en | en.huntersscan.xyz | unknown  |
-| global | EnLigneManga | fr | www.enlignemanga.com | unknown  |
-| global | EnryuManga | en | enryumanga.net | unknown  |
-| global | EnThunderScans | en | en-thunderscans.com | unknown  |
-| global | EpsilonSoft | fr | beta.epsilonsoft.to | unknown  |
-| global | ErosScans | en | erosxscans.xyz | unknown  |
-| global | EtheralRadiance | fr | www.etheralradiance.eu | unknown  |
-| global | EvilFlowers | en | evilflowers.com | unknown  |
-| global | EzManga | en | ezmanga.org | unknown  |
-| global | FactManga | en | factmanga.com | unknown  |
-| global | FayScans | pt | fayscans.net | unknown  |
-| global | Fecomic | vi | mangasup.net | unknown  |
-| global | FenixProject | pt | fenixproject.site | unknown  |
-| global | FireForce | fr | fireforce.fr | unknown  |
-| global | FireScans | en | firescans.xyz | unknown  |
-| global | FirstKissManhua | en | 1stkissmanhua.net | unknown  |
-| global | Fl-Ares | ar | fl-ares.com | unknown  |
+| global | EdScanlation | fr | edscanlation.fr | dns curl: (6) Could not resolve host: edscanlation.fr |
+| global | ElarcPage | en | elarctoon.com | http  |
+| global | ElevenScanlator | pt | elevenscanlator.blogspot.com | http404  |
+| global | EliteManga | en | www.beinmanga.com | dns curl: (6) Could not resolve host: www.beinmanga.com |
+| global | EmperorScan | es | emperorscan.mundoalterno.org | cloudflare  |
+| global | EnLigneManga | fr | www.enlignemanga.com | dns curl: (6) Could not resolve host: www.enlignemanga.com |
+| global | EpsilonSoft | fr | beta.epsilonsoft.to | cloudflare  |
+| global | EtheralRadiance | fr | www.etheralradiance.eu | dns curl: (6) Could not resolve host: www.etheralradiance.eu |
+| global | EvilFlowers | en | evilflowers.com | http5xx  |
+| global | FactManga | en | factmanga.com | timeout curl: (28) Connection timed out after 15012 milliseconds |
+| global | Fecomic | vi | mangasup.net | dns curl: (6) Could not resolve host: mangasup.net |
+| global | FenixProject | pt | fenixproject.site | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global | FireForce | fr | fireforce.fr | http5xx  |
+| global | FireScans | en | firescans.xyz | timeout curl: (28) Connection timed out after 15015 milliseconds |
+| global | FirstKissManhua | en | 1stkissmanhua.net | timeout curl: (28) Connection timed out after 15010 milliseconds |
 | global | FlameComics | en |  | unknown  |
 | global | FlixScans.net | ar |  | unknown  |
 | global | FlixScans.org | en |  | unknown  |
-| global | FlowerManga | pt | flowermanga.net | unknown  |
-| global | FmTeam | fr | fmteam.fr | unknown  |
+| global | FlowerManga | pt | flowermanga.net | http5xx  |
 | global | FoxTruyen | vi |  | unknown  |
-| global | FoxWhite | pt | foxwhite.com.br | unknown  |
-| global | Fr-Scan | fr | fr-scan.com | unknown  |
-| global | FranxxMangas | pt | franxxmangas.net | unknown  |
-| global | FreakComic | en | freakcomic.com | unknown  |
-| global | FreakScans | en | freakscans.com | unknown  |
-| global | FreeManga | en | freemanga.me | unknown  |
-| global | FreeMangaTop | en | freemangatop.com | unknown  |
-| global | FreeWebtoonCoins | en | freewebtooncoins.com | unknown  |
-| global | FrManga | fr | www.frmanga.com | unknown  |
-| global | FrScans.com | fr | frscans.com | unknown  |
+| global | FoxWhite | pt | foxwhite.com.br | dns curl: (6) Could not resolve host: foxwhite.com.br |
+| global | Fr-Scan | fr | fr-scan.com | http  |
+| global | FranxxMangas | pt | franxxmangas.net | dns curl: (6) Could not resolve host: franxxmangas.net |
+| global | FreakScans | en | freakscans.com | http  |
+| global | FreeWebtoonCoins | en | freewebtooncoins.com | timeout curl: (28) Connection timed out after 15013 milliseconds |
+| global | FrManga | fr | www.frmanga.com | timeout curl: (28) Connection timed out after 15015 milliseconds |
+| global | FrScans.com | fr | frscans.com | dns curl: (6) Could not resolve host: frscans.com |
 | global | FuryoSociety | fr |  | unknown  |
-| global | Futari | id | futari.info | unknown  |
-| global | GalaxScanlator | pt | galaxscanlator.blogspot.com | unknown  |
-| global | GalinhaSamurai | pt | galinhasamurai.com | unknown  |
-| global | GateManga | ar | gatemanga.com | unknown  |
-| global | GdScans | en | gdscans.com | unknown  |
 | global | Geass Comics | pt |  | unknown  |
-| global | GenzToon | en | genzupdates.com | unknown  |
-| global | GhostScan | pt | ghostscan.xyz | unknown  |
-| global | GistamisHouseFansub | es | gistamishousefansub.blogspot.com | unknown  |
-| global | GloryScans | fr | gloryscans.fr | unknown  |
-| global | Gmanga | ar | gmanga.site | unknown  |
-| global | GoodGirls | en | goodgirls.moe | unknown  |
-| global | GourmetScans | en | gourmetsupremacy.com | unknown  |
-| global | Grabber | en | grabber.zone | unknown  |
-| global | Greed Scans | en | greedscans.com | unknown  |
-| global | GremoryMangas | es | gremorymangas.com | unknown  |
-| global | GtoTheGreatSite | it | reader.gtothegreatsite.net | unknown  |
-| global | Gufengmh | zh | www.gufengmh.com | unknown  |
-| global | GuildaTierDraw | pt | www.guildatierdraw.top | unknown  |
-| global | GuyaCubari | en | guya.cubari.moe | unknown  |
+| global | GhostScan | pt | ghostscan.xyz | dns curl: (6) Could not resolve host: ghostscan.xyz |
+| global | GloryScans | fr | gloryscans.fr | dns curl: (6) Could not resolve host: gloryscans.fr |
+| global | GoodGirls | en | goodgirls.moe | ssl curl: (60) schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - Sertifika zinciri g�venilmeyen bi |
+| global | GourmetScans | en | gourmetsupremacy.com | timeout curl: (28) Operation timed out after 15010 milliseconds with 0 bytes received |
+| global | Greed Scans | en | greedscans.com | timeout curl: (28) Operation timed out after 15297 milliseconds with 0 bytes received |
+| global | Gufengmh | zh | www.gufengmh.com | dns curl: (6) Could not resolve host: www.gufengmh.com |
+| global | GuildaTierDraw | pt | www.guildatierdraw.top | dns curl: (6) Could not resolve host: www.guildatierdraw.top |
 | global | Góc Truyện Tranh | vi |  | unknown  |
 | global | Góc Truyện Tranh Vui | vi |  | unknown  |
-| global | HadesNoFansub | es | hadesnofansub.com | unknown  |
-| global | Haikyuu | fr | haikyuu.fr | unknown  |
-| global | Ham Truyện | vi | hamtruyen1.com | unknown  |
+| global | Haikyuu | fr | haikyuu.fr | cloudflare  |
+| global | Ham Truyện | vi | hamtruyen1.com | dns curl: (6) Could not resolve host: hamtruyen1.com |
 | global | Hang Truyện | vi |  | unknown  |
-| global | HaremScann | es | haremscann.es | unknown  |
-| global | HariManga | en | harimanga.me | unknown  |
-| global | HarmonyScan | fr | harmony-scan.fr | unknown  |
-| global | HastaTeamDdt | it | ddt.hastateam.com | unknown  |
-| global | HastaTeamReader | it | reader.hastateam.com | unknown  |
-| global | HeckScans | pt | heckscans.blogspot.com | unknown  |
-| global | HellsParadiseScan | fr | hellsparadisescan.com | unknown  |
-| global | HerenScan | es | herenscan.com | unknown  |
-| global | Hijala | ar | hijala.com | unknown  |
-| global | Hijalacom | ar | hijala.com | unknown  |
-| global | HikariScan | pt | hikariscan.org | unknown  |
-| global | HiveComic | en | hivetoons.org | unknown  |
-| global | HiveToon | en | hivetoon.com | unknown  |
-| global | HniScantrad | fr | hni-scantrad.net | unknown  |
+| global | HastaTeamDdt | it | ddt.hastateam.com | cloudflare  |
+| global | HastaTeamReader | it | reader.hastateam.com | cloudflare  |
+| global | HellsParadiseScan | fr | hellsparadisescan.com | cloudflare  |
+| global | Hijala | ar | hijala.com | cloudflare  |
+| global | Hijalacom | ar | hijala.com | cloudflare  |
+| global | HikariScan | pt | hikariscan.org | dns curl: (6) Could not resolve host: hikariscan.org |
 | global | HoloEarth | all |  | unknown  |
-| global | Holotoon | id | 01.holotoon.site | unknown  |
 | global | HoneyManga | uk |  | unknown  |
 | global | HotComics | en |  | unknown  |
-| global | HouseMangas | es | visormanga.com | unknown  |
-| global | HouseOfOtakus | es | houseofotakus.xyz | unknown  |
-| global | HunLight | en | hunlight.com | unknown  |
-| global | HuntersScan | pt | readhunters.xyz | unknown  |
-| global | HunterXHunterScan | fr | hunterxhunterscan.com | unknown  |
-| global | Hwago | id | 01.hwago.xyz | unknown  |
-| global | IchiroManga | id | ichiromanga.my.id | unknown  |
+| global | HouseOfOtakus | es | houseofotakus.xyz | http  |
+| global | HunLight | en | hunlight.com | timeout curl: (28) Connection timed out after 15007 milliseconds |
+| global | HunterXHunterScan | fr | hunterxhunterscan.com | http5xx  |
+| global | Hwago | id | 01.hwago.xyz | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global | IchiroManga | id | ichiromanga.my.id | dns curl: (6) Could not resolve host: ichiromanga.my.id |
 | global | Ikiru | id |  | unknown  |
-| global | ImmortalUpdates | en | immortalupdates.com | unknown  |
 | global | Imp\u00e9rio da Britannia | pt |  | unknown  |
-| global | ImperioScans | pt | imperioscans.com.br | unknown  |
-| global | InariManga | es | clubinari.org | unknown  |
-| global | InariPikav | es | clubinari.org | unknown  |
-| global | InfamousScans | en | infamous-scans.com | unknown  |
-| global | InfraFandub | es | infrafandub.com | unknown  |
-| global | InkReads | en | inkreads.com | unknown  |
+| global | ImperioScans | pt | imperioscans.com.br | dns curl: (6) Could not resolve host: imperioscans.com.br |
+| global | InariManga | es | clubinari.org | dns curl: (6) Could not resolve host: clubinari.org |
+| global | InariPikav | es | clubinari.org | dns curl: (6) Could not resolve host: clubinari.org |
+| global | InfamousScans | en | infamous-scans.com | timeout curl: (28) Connection timed out after 15009 milliseconds |
+| global | InkReads | en | inkreads.com | cloudflare  |
 | global | InManga | es |  | unknown  |
-| global | InmoralNoFansub | es | inmoralnofansub.xyz | unknown  |
-| global | InmortalScan | es | scaninmortal.com | unknown  |
-| global | InuManga | th | www.inu-manga.com | unknown  |
-| global | IrisScanlator | pt | irisscanlator.com.br | unknown  |
-| global | IsekaiScan.top | en | www.isekaiscan.top | unknown  |
-| global | ItsYouRightManhua | en | itsyourightmanhua.com | unknown  |
-| global | IzanamiScans | id | izanamiscans.my.id | unknown  |
-| global | JapScans.fr | fr | japscans.fr | unknown  |
+| global | InmoralNoFansub | es | inmoralnofansub.xyz | timeout curl: (28) Connection timed out after 15006 milliseconds |
+| global | IrisScanlator | pt | irisscanlator.com.br | ssl_trust curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - |
+| global | IsekaiScan.top | en | www.isekaiscan.top | timeout curl: (28) Operation timed out after 15007 milliseconds with 0 bytes received |
+| global | ItsYouRightManhua | en | itsyourightmanhua.com | cloudflare  |
 | global | Jeaz Scans | es |  | unknown  |
-| global | JpMangas | fr | jpmangas.xyz | unknown  |
+| global | JpMangas | fr | jpmangas.xyz | timeout curl: (28) Connection timed out after 15003 milliseconds |
 | global | Kagane | all |  | fail UnknownHostException: Unable to resolve host "yuzuki.kagane.org": No address associated wi |
-| global | KaijuNo8 | fr | kaijuno8.fr | unknown  |
-| global | KaiScans | en | luascans.com | unknown  |
-| global | KakuseiProject | pt | kakuseiproject.com | unknown  |
-| global | Kalango | pt | kalango.org | unknown  |
-| global | kaliscan.io | en | kaliscan.io | unknown  |
-| global | KataKomik | id | katakomik.my.id | unknown  |
+| global | kaliscan.io | en | kaliscan.io | dns curl: (6) Could not resolve host: kaliscan.io |
+| global | KataKomik | id | katakomik.my.id | timeout curl: (28) Connection timed out after 15006 milliseconds |
 | global | KdtScans | en |  | unknown  |
-| global | Kenhuav2Scan | es | kenhuav2scan.com | unknown  |
-| global | KenScans | en | kenscans.com | unknown  |
-| global | KewnScans | en | kewnscans.org | unknown  |
-| global | KingdomScan | fr | kingdomscan.com | unknown  |
-| global | KingOfScans | en | myshojo.com | unknown  |
+| global | Kenhuav2Scan | es | kenhuav2scan.com | http5xx  |
+| global | KingdomScan | fr | kingdomscan.com | cloudflare  |
 | global | Kiryuu | id |  | unknown  |
-| global | Kishisan | id | www.kishisan.site | unknown  |
-| global | KissManga | en | kissmanga.in | unknown  |
-| global | Klz9 | ja | klz9.com | unknown  |
-| global | KofiScans | id | isekaikomik.com | unknown  |
-| global | KoinoboriScan | es | visorkoi.com | unknown  |
+| global | Kishisan | id | www.kishisan.site | dns curl: (6) Could not resolve host: www.kishisan.site |
+| global | KissManga | en | kissmanga.in | cloudflare  |
 | global | Komiic | zh |  | unknown  |
-| global | KomikAv | id | komikav.net | unknown  |
 | global | KomikCast | id |  | unknown  |
-| global | KomikGes | id | www.komikges.my.id | unknown  |
-| global | KomikId | id | komiku.org | unknown  |
-| global | KomikIndo.ch | id | komikindo.ch | unknown  |
-| global | KomikLab | en | komiklab.com | unknown  |
-| global | KomikLokal | id | komikmu.top | unknown  |
-| global | KomikLovers | id | komiklovers.com | unknown  |
-| global | KomikMama | id | komikmama.lat | unknown  |
-| global | KomikRealm | id | komikrealm.org | unknown  |
-| global | KomikSan | id | komiksan.link | unknown  |
-| global | KomikSay | id | komiksay.info | unknown  |
-| global | Komiksin | id | komiksin.net | unknown  |
-| global | KomikStation | id | komikstation.org | unknown  |
-| global | Komiku | id | komiku.org | unknown  |
-| global | KomikzoId | id | komikzoid.id | unknown  |
-| global | KsGroupScans | en | ksgroupscans.com | unknown  |
+| global | KomikGes | id | www.komikges.my.id | dns curl: (6) Could not resolve host: www.komikges.my.id |
+| global | KomikLovers | id | komiklovers.com | http5xx  |
+| global | KomikMama | id | komikmama.lat | dns curl: (6) Could not resolve host: komikmama.lat |
+| global | KomikSan | id | komiksan.link | dns curl: (6) Could not resolve host: komiksan.link |
+| global | Komiksin | id | komiksin.net | dns curl: (6) Could not resolve host: komiksin.net |
+| global | KomikzoId | id | komikzoid.id | cloudflare  |
 | global | Kumapage | id |  | unknown  |
-| global | KunManga | en | kunmanga.com | unknown  |
-| global | LadyEstelarScan | pt | ladyestelarscan.com.br | unknown  |
-| global | Lagoon Scans | en | lagoonscans.com | unknown  |
-| global | LaidBackScans | en | laidbackscans.org | unknown  |
-| global | LamiManga | th | mangalami.com | unknown  |
-| global | Lector KNS | es | lectorknight.com | unknown  |
-| global | LectorManga | es | lectormangaa.com | unknown  |
-| global | LectorMiau | es | leemiau.com | unknown  |
-| global | LectoruniToon | es | lectorunitoon.com | unknown  |
-| global | Lectorunm.life | es | lectorunm.life | unknown  |
+| global | KunManga | en | kunmanga.com | cloudflare  |
+| global | LadyEstelarScan | pt | ladyestelarscan.com.br | dns curl: (6) Could not resolve host: ladyestelarscan.com.br |
+| global | LaidBackScans | en | laidbackscans.org | dns curl: (6) Could not resolve host: laidbackscans.org |
+| global | LectorManga | es | lectormangaa.com | http5xx  |
 | global | LegacyScans | fr |  | unknown  |
-| global | LegendScanlations | es | escaneodeleyendas.com | unknown  |
-| global | LeitorDeManga | pt | leitordemanga.com | unknown  |
-| global | LeitorKamisama | pt | leitor.kamisama.com.br | unknown  |
-| global | LekManga | ar | lekmanga.net | unknown  |
-| global | LekManga.org | ar | lekmanga.org | unknown  |
-| global | LekMangaCom | ar | lekmanga.com | unknown  |
-| global | LelManga | fr | www.lelmanga.com | unknown  |
-| global | LelScanFr | fr | lelscanfr.com | unknown  |
-| global | Lepoytl | id | www.lepoytl.cloud | unknown  |
-| global | Ler999 | pt | ler999.blogspot.com | unknown  |
+| global | LegendScanlations | es | escaneodeleyendas.com | http  |
+| global | LeitorDeManga | pt | leitordemanga.com | cloudflare  |
+| global | LekManga.org | ar | lekmanga.org | cloudflare  |
+| global | Lepoytl | id | www.lepoytl.cloud | dns curl: (6) Could not resolve host: www.lepoytl.cloud |
 | global | LerManga | pt |  | unknown  |
 | global | LerMangaOnline | pt |  | unknown  |
-| global | Lermangas | pt | lermangas.me | unknown  |
-| global | LhTranslation | en | lhtranslation.net | unknown  |
-| global | LichMangas | pt | lichmangas.com | unknown  |
-| global | Like-Manga.net | ar | like-manga.net | unknown  |
-| global | LikeManga | en | likemanga.ink | unknown  |
-| global | LikeManga.in | en | likemanga.in | unknown  |
-| global | LimboScan | pt | limboscan.com.br | unknown  |
-| global | LimitedTimePoject | pt | limitedtimeproject.com | unknown  |
-| global | Link-Manga.com | ar | link-manga.com | unknown  |
-| global | LinkStartScan | pt | www.linkstartscan.xyz | unknown  |
+| global | Lermangas | pt | lermangas.me | cloudflare  |
+| global | LikeManga | en | likemanga.ink | cloudflare  |
+| global | Link-Manga.com | ar | link-manga.com | cloudflare  |
+| global | LinkStartScan | pt | www.linkstartscan.xyz | timeout curl: (28) Connection timed out after 15006 milliseconds |
 | global | LireScan | fr |  | unknown  |
-| global | LireScanVf.com | fr | lirescanvf.com | unknown  |
-| global | LkScanlation | es | lkscanlation.com | unknown  |
-| global | Lmtos | es | lmtos.com | unknown  |
-| global | LonerTranslations | ar | loner-tl.blogspot.com | unknown  |
-| global | LsComic | en | lscomic.com | unknown  |
-| global | Lua Scans | en | luacomic.com | unknown  |
-| global | LuffyManga | en | luffymanga.com | unknown  |
+| global | LireScanVf.com | fr | lirescanvf.com | http5xx  |
+| global | LkScanlation | es | lkscanlation.com | dns curl: (6) Could not resolve host: lkscanlation.com |
+| global | Lmtos | es | lmtos.com | dns curl: (6) Could not resolve host: lmtos.com |
+| global | LsComic | en | lscomic.com | timeout curl: (28) Operation timed out after 15009 milliseconds with 0 bytes received |
+| global | Lua Scans | en | luacomic.com | timeout curl: (28) Operation timed out after 15013 milliseconds with 0 bytes received |
 | global | LugnicaScans | fr |  | unknown  |
-| global | LumosKomik | id | lumos01.com | unknown  |
 | global | Lunar Manga | all |  | fail UnknownHostException: Unable to resolve host "api.lunaranime.ru": No address associated wi |
-| global | LunarrScan.com | pt | lunarrscan.com | unknown  |
-| global | LunarScans | fr | lunarscans.fr | unknown  |
-| global | LupiTeam | it | lupiteam.net | unknown  |
+| global | LunarScans | fr | lunarscans.fr | dns curl: (6) Could not resolve host: lunarscans.fr |
 | global | LuratoonScan | pt |  | unknown  |
-| global | LuxManga | en | luxmanga.net | unknown  |
 | global | Làng Geek | vi |  | unknown  |
-| global | Madara Scans | en | madarascans.com | unknown  |
-| global | MafiaManga | th | mafia-manga.com | unknown  |
-| global | Magerin | id | www.magerin.com | unknown  |
-| global | MagusToon | en | magustoon.org | unknown  |
-| global | MahouShoujobu | all | mahoushoujobu.com | unknown  |
-| global | MaidId | id | www.maid.my.id | unknown  |
+| global | MafiaManga | th | mafia-manga.com | http5xx  |
+| global | MagusToon | en | magustoon.org | cloudflare  |
 | global | MaidScan | pt |  | unknown  |
-| global | MaidSecret | pt | maidsecret.com | unknown  |
-| global | Makimaaaaa | th | makimaaaaa.com | unknown  |
 | global | Manga Ball (Albanian) | sq |  | unknown  |
 | global | Manga Ball (Arabic) | ar |  | unknown  |
 | global | Manga Ball (Bengali) | bn |  | unknown  |
@@ -391,7 +243,7 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | global | Manga Ball (Thai) | th |  | unknown  |
 | global | Manga Ball (Ukrainian) | uk |  | unknown  |
 | global | Manga Ball (Vietnamese) | vi |  | unknown  |
-| global | Manga Livre | pt | mangalivre.tv | unknown  |
+| global | Manga Livre | pt | mangalivre.tv | dns curl: (6) Could not resolve host: www.mangalivre.net |
 | global | MANGA Plus English | en |  | unknown  |
 | global | MANGA Plus French | fr |  | unknown  |
 | global | MANGA Plus German | de |  | unknown  |
@@ -402,39 +254,22 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | global | MANGA Plus Thai | th |  | unknown  |
 | global | MANGA Plus Vietnamese | vi |  | unknown  |
 | global | Manga Swat | ar |  | unknown  |
-| global | Manga-Leko.org | ar | manga-leko.org | unknown  |
-| global | Manga-Lionz | ar | manga-lionz.com | unknown  |
-| global | Manga-Spark | ar | manga-spark.com | unknown  |
-| global | Manga-Starz | ar | manga-starz.net | unknown  |
+| global | Manga-Leko.org | ar | manga-leko.org | cloudflare  |
+| global | Manga-Lionz | ar | manga-lionz.com | cloudflare  |
 | global | MANGA/in/UA | uk |  | unknown  |
-| global | Manga1001 | en | manga-1001.com | unknown  |
-| global | Manga1st | en | manga1st.online | unknown  |
-| global | Manga4Life | en | manga4life.com | unknown  |
-| global | Manga68 | en | manga68.com | unknown  |
-| global | Manga689 | th | manga689.com | unknown  |
-| global | MangaAction | en | mangaaction.com | unknown  |
-| global | MangaAiLand | ar | manga-ai-land.blogspot.com | unknown  |
-| global | MangaArabic | ar | lekmanga.net | unknown  |
-| global | MangaAtrend | ar | mangaatrend.net | unknown  |
+| global | Manga4Life | en | manga4life.com | dns curl: (6) Could not resolve host: manga4life.com |
+| global | Manga689 | th | manga689.com | timeout curl: (28) Operation timed out after 15001 milliseconds with 0 bytes received |
 | global | MangaBat | en |  | unknown  |
-| global | MangaBob | en | mangabob.com | unknown  |
-| global | MangaBr | pt | mangabr.net | unknown  |
-| global | MangaBuddy | en | mangabuddy.com | unknown  |
+| global | MangaBr | pt | mangabr.net | timeout curl: (28) Connection timed out after 15003 milliseconds |
 | global | MangaBuff | ru |  | unknown  |
 | global | MangaCloud | en |  | unknown  |
-| global | MangaCrab | es | mangacrab.org | unknown  |
-| global | MangaCultivator | en | mangacultivator.com | unknown  |
-| global | MangaCute | en | mangacute.com | unknown  |
-| global | MangaDeemak | th | mangadeemak.com | unknown  |
+| global | MangaCrab | es | mangacrab.org | cloudflare  |
+| global | MangaDeemak | th | mangadeemak.com | timeout curl: (28) Connection timed out after 15001 milliseconds |
 | global | MangaDex | all |  | fail JSONException: Value <!doctype of type java.lang.String cannot be converted to JSONObject |
-| global | MangaDoor | es | mangadoor.com | unknown  |
+| global | MangaDoor | es | mangadoor.com | cloudflare  |
 | global | Mangadotnet | en |  | unknown  |
-| global | MangaEclipse | en | mangaeclipse.com | unknown  |
-| global | MangaEffect | en | www.mangaread.org | unknown  |
-| global | MangaEmpress | en | mangaempress.com | unknown  |
-| global | MangaEsp | es | mangaesp.topmanhuas.org | unknown  |
-| global | MangaFast.net | en | manhuafast.net | unknown  |
-| global | MangaFenxi | ja | mangafenxi.net | unknown  |
+| global | MangaEmpress | en | mangaempress.com | timeout curl: (28) Connection timed out after 15013 milliseconds |
+| global | MangaFast.net | en | manhuafast.net | cloudflare  |
 | global | MangaFire English | en |  | unknown  |
 | global | MangaFire French | fr |  | unknown  |
 | global | MangaFire Japanese | ja |  | unknown  |
@@ -442,384 +277,230 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | global | MangaFire Portuguese (Brazil) | pt |  | unknown  |
 | global | MangaFire Spanish | es |  | unknown  |
 | global | MangaFire Spanish (Latim) | es |  | unknown  |
-| global | MangaFlame | ar | mangaflame.org | unknown  |
-| global | MangaForest | en | mangaforest.me | unknown  |
-| global | MangaFoxFull | en | mangafoxfull.com | unknown  |
-| global | MangaFr | fr | www.mangafr.org | unknown  |
+| global | MangaForest | en | mangaforest.me | http5xx  |
 | global | MangaFreak | en |  | unknown  |
-| global | MangaGalaxy | en | vortexscans.org | unknown  |
 | global | MangaGeko | en |  | unknown  |
-| global | MangaGg | en | mangagg.com | unknown  |
 | global | Mangago | en |  | unknown  |
-| global | MangaGojo | en | mangagojo.com | unknown  |
-| global | MangaHaus | de | www.mangahaus.com | unknown  |
-| global | MangaHona | pl | mangahona.pl | unknown  |
-| global | MangaHubIO | en | mangahub.io | unknown  |
-| global | MangaId | id | mangaid.click | unknown  |
+| global | MangaGojo | en | mangagojo.com | dns curl: (6) Could not resolve host: mangagojo.com |
+| global | MangaHaus | de | www.mangahaus.com | dns curl: (6) Could not resolve host: www.mangahaus.com |
+| global | MangaHona | pl | mangahona.pl | dns curl: (6) Could not resolve host: mangahona.pl |
+| global | MangaId | id | mangaid.click | dns curl: (6) Could not resolve host: mangaid.click |
 | global | MangaIro | en |  | unknown  |
-| global | MangaItalia | it | mangaita.io | unknown  |
-| global | MangaJinx | en | mgjinx.com | unknown  |
-| global | MangaJp | ja | mangajp.top | unknown  |
+| global | MangaJinx | en | mgjinx.com | dns curl: (6) Could not resolve host: mgjinx.com |
+| global | MangaJp | ja | mangajp.top | refused curl: (7) Failed to connect to mangajp.top:443 after 709 ms: Could not connect to server |
 | global | Mangakakalot.gg | en |  | unknown  |
 | global | Mangakakalot.tv | en |  | unknown  |
 | global | MangaKawaii En | en |  | unknown  |
 | global | MangaKawaii Fr | fr |  | unknown  |
-| global | MangaKimi | th | www.mangakimi.com | unknown  |
-| global | MangaKiss | en | mangakiss.org | unknown  |
-| global | MangaKita | id | mangakita.id | unknown  |
-| global | MangaKoinu | ja | www.mangakoinu.com | unknown  |
-| global | MangaKoma01 | ja | mangakoma01.com | unknown  |
-| global | MangaKomi | en | mangakomi.io | unknown  |
-| global | MangaKyo | id | mangakyo.vip | unknown  |
-| global | MangaLc | th | manga-lc.net | unknown  |
-| global | MangaLesen | de | mangalesen.net | unknown  |
-| global | MangaLeveling | en | mangaleveling.com | unknown  |
+| global | MangaKiss | en | mangakiss.org | timeout curl: (28) Operation timed out after 15015 milliseconds with 0 bytes received |
+| global | MangaKita | id | mangakita.id | ssl curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_ILLEGAL_MESSAGE (0x80090 |
+| global | MangaKoinu | ja | www.mangakoinu.com | dns curl: (6) Could not resolve host: www.mangakoinu.com |
+| global | MangaLeveling | en | mangaleveling.com | timeout curl: (28) Connection timed out after 15015 milliseconds |
 | global | MangaLib | ru |  | unknown  |
-| global | MangaMammy | ru | mangamammy.ru | unknown  |
 | global | MangaMana | fr |  | unknown  |
-| global | MangaManhua | en | mangaonlineteam.com | unknown  |
-| global | MangaMate | ja | manga-mate.org | unknown  |
+| global | MangaMate | ja | manga-mate.org | dns curl: (6) Could not resolve host: manga-mate.org |
 | global | MangaMoins | fr |  | unknown  |
-| global | MangaMoons | th | manga-moons.net | unknown  |
-| global | MangaMukai.com | es | mangamukai.com | unknown  |
-| global | MangaNanquim | pt | mangananquim.site | unknown  |
+| global | MangaNanquim | pt | mangananquim.site | dns curl: (6) Could not resolve host: mangananquim.site |
 | global | Manganato | en |  | unknown  |
 | global | MangaNelo.com | en |  | unknown  |
-| global | MangaNinja | pt | manganinja.com | unknown  |
-| global | MangaNoon | ar | vrnoin.site | unknown  |
-| global | MangaOneLove | ru | mangaonelove.site | unknown  |
+| global | MangaNinja | pt | manganinja.com | timeout curl: (28) Connection timed out after 15013 milliseconds |
+| global | MangaNoon | ar | vrnoin.site | dns curl: (6) Could not resolve host: vrnoin.site |
+| global | MangaOneLove | ru | mangaonelove.site | timeout curl: (28) Connection timed out after 15014 milliseconds |
 | global | MangaOni | es |  | unknown  |
-| global | MangaOnline | pt | mangaonline.blog | unknown  |
+| global | MangaOnline | pt | mangaonline.blog | reset curl: (56) schannel: server closed abruptly (missing close_notify) |
 | global | MangaOnline.biz | pt |  | unknown  |
-| global | MangaOnlineTeam | en | mangaonlineteam.com | unknown  |
-| global | MangaOwl.io | en | mangaowl.io | unknown  |
 | global | MangaOwl.to | en |  | unknown  |
-| global | MangaOwlnet.com | en | mangaowlnet.com | unknown  |
+| global | MangaOwlnet.com | en | mangaowlnet.com | dns curl: (6) Could not resolve host: mangaowlnet.com |
 | global | MangaPark | all |  | fail SocketException: Connection reset |
-| global | MangaPeak | ar | mangapeak.org | unknown  |
+| global | MangaPeak | ar | mangapeak.org | dns curl: (6) Could not resolve host: mangapeak.org |
 | global | MangaPill | en |  | unknown  |
-| global | MangaPuma | en | mangapuma.com | unknown  |
-| global | MangaPure | en | mangapure.net | unknown  |
-| global | MangaQueen | en | mangaqueen.com | unknown  |
-| global | MangaRaw | ja | mangaraw.best | unknown  |
-| global | MangaRead | en | www.mangaread.org | unknown  |
-| global | MangaRead.co | en | mangaread.co | unknown  |
+| global | MangaQueen | en | mangaqueen.com | cloudflare  |
+| global | MangaRead.co | en | mangaread.co | http5xx  |
 | global | MangaReader.To | all |  | fail Zaman aşımı (20s) |
-| global | MangaRock | en | mangarockteam.com | unknown  |
-| global | MangaRock.team | en | mangarockteam.com | unknown  |
-| global | MangaRolls | en | mangarolls.net | unknown  |
-| global | MangaRose | ar | mangarose.net | unknown  |
-| global | MangaRuby | en | mangaruby.com | unknown  |
-| global | MangaScan | fr | mangascan-fr.net | unknown  |
-| global | MangaScantrad.io | fr | manga-scantrad.io | unknown  |
-| global | MangasChan | pt | mangaschan.net | unknown  |
-| global | MangaSect | en | mangasect.net | unknown  |
-| global | MangaSee | en | mangasee123.com | unknown  |
-| global | MangaShiro | id | mangashiro.me | unknown  |
-| global | MangasNoSekai | es | mangasnosekai.com | unknown  |
-| global | MangasOnline | pt | mangasonline.cc | unknown  |
-| global | MangasOrigines.fr | fr | mangas-origines.fr | unknown  |
-| global | MangaSoul | ar | www.manga-soul.com | unknown  |
-| global | MangasScans | fr | mangas-scans.com | unknown  |
+| global | MangaRuby | en | mangaruby.com | dns curl: (6) Could not resolve host: mangaruby.com |
+| global | MangaScan | fr | mangascan-fr.net | dns curl: (6) Could not resolve host: mangascan-fr.net |
+| global | MangaScantrad.io | fr | manga-scantrad.io | cloudflare  |
+| global | MangasChan | pt | mangaschan.net | dns curl: (6) Could not resolve host: mangaschan.net |
+| global | MangaSect | en | mangasect.net | timeout curl: (28) Operation timed out after 15015 milliseconds with 0 bytes received |
+| global | MangaShiro | id | mangashiro.me | timeout curl: (28) Connection timed out after 15011 milliseconds |
+| global | MangasNoSekai | es | mangasnosekai.com | cloudflare  |
+| global | MangasOnline | pt | mangasonline.cc | dns curl: (6) Could not resolve host: mangasonline.cc |
+| global | MangasScans | fr | mangas-scans.com | dns curl: (6) Could not resolve host: mangas-scans.com |
 | global | MangaStorm | ar |  | unknown  |
-| global | MangaSushi | en | mangasushi.org | unknown  |
-| global | MangaSwat | ar | swatscans.com | unknown  |
-| global | Mangasy | en | www.mangasy.com | unknown  |
-| global | MangaTale | id | ikiru.one | unknown  |
+| global | MangaSwat | ar | swatscans.com | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
 | global | Mangataro | en |  | unknown  |
-| global | Mangatellers | en | reader.mangatellers.gr | unknown  |
-| global | MangaTerra | pt | manga-terra.com | unknown  |
-| global | MangaTime | ar | mangatime.org | unknown  |
+| global | Mangatellers | en | reader.mangatellers.gr | http5xx  |
+| global | MangaTerra | pt | manga-terra.com | dns curl: (6) Could not resolve host: manga-terra.com |
 | global | MangaTown | en |  | unknown  |
-| global | MangaTv | es | www.mangatv.net | unknown  |
-| global | MangaTx.cc | en | mangatx.cc | unknown  |
-| global | MangaTx.gg | en | mangatx.gg | unknown  |
-| global | MangaTyrant | en | mangatyrant.com | unknown  |
-| global | Mangaus | en | mangaus.xyz | unknown  |
-| global | MangaWeebs | en | mangaweebs.in | unknown  |
-| global | MangaWorld | it | mangaworld.mx | unknown  |
-| global | MangaWorldAdult | it | mangaworldadult.net | unknown  |
+| global | MangaTx.cc | en | mangatx.cc | dns curl: (6) Could not resolve host: mangatx.cc |
+| global | MangaTx.gg | en | mangatx.gg | dns curl: (6) Could not resolve host: mangatx.gg |
+| global | MangaTyrant | en | mangatyrant.com | timeout curl: (28) Connection timed out after 15001 milliseconds |
 | global | MangaWtf | ru |  | unknown  |
-| global | MangaXyz | en | mangaxyz.com | unknown  |
-| global | MangaYaro | id | mangayaro.id | unknown  |
-| global | MangaZin | en | mangazin.org | unknown  |
-| global | MangaZodiac | vi | mangazodiac.com | unknown  |
-| global | Manhastro | pt | manhastro.net | unknown  |
-| global | ManhaTok | ar | manhatok.blogspot.com | unknown  |
-| global | ManhuaBug | th | www.manhuabug.com | unknown  |
-| global | ManhuaEs | en | manhuaes.com | unknown  |
-| global | ManhuaFast | en | manhuafast.com | unknown  |
-| global | ManhuaGa | en | manhuaga.com | unknown  |
-| global | ManhuaGold | en | manhuagold.top | unknown  |
+| global | MangaXyz | en | mangaxyz.com | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global | MangaYaro | id | mangayaro.id | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global | ManhuaFast | en | manhuafast.com | cloudflare  |
+| global | ManhuaGold | en | manhuagold.top | timeout curl: (28) Operation timed out after 15007 milliseconds with 0 bytes received |
 | global | Manhuagui | zh |  | unknown  |
-| global | ManhuaHot | en | manhuahot.com | unknown  |
-| global | ManhuaKey | th | www.manhuakey.com | unknown  |
-| global | ManhuaManhwa | en | manhuamanhwa.com | unknown  |
-| global | ManhuaPlus | en | manhuaplus.com | unknown  |
-| global | ManhuaPlus.org | en | manhuaplus.org | unknown  |
-| global | ManhuaSy | en | www.manhuasy.com | unknown  |
-| global | ManhuaTop | en | manhuatop.org | unknown  |
-| global | ManhuaUs | en | manhuaus.com | unknown  |
-| global | Manhuauss | en | manhuauss.com | unknown  |
-| global | ManhuaZone | en | manhuazone.org | unknown  |
-| global | ManhuaZonghe | en | www.manhuazonghe.com | unknown  |
-| global | Manhwa-Es | es | manhwa-es.com | unknown  |
-| global | ManhwaBreakup | th | www.manhwabreakup.com | unknown  |
-| global | ManhwaClan | en | manhwaclan.com | unknown  |
-| global | ManhwaFreak | en | manhwafreak.xyz | unknown  |
-| global | ManhwaFreake | en | manhwafreake.com | unknown  |
-| global | ManhwaFull | en | manhwafull.com | unknown  |
-| global | ManhwaIndo | id | manhwaindo.one | unknown  |
-| global | Manhwaku | id | manhwaku.id | unknown  |
-| global | ManhwaLatino | es | manhwa-latino.com | unknown  |
-| global | ManhwaList | id | manhwalist.xyz | unknown  |
-| global | ManhwaList.org | id | isekaikomik.com | unknown  |
-| global | ManhwaManhua | en | manhwamanhua.com | unknown  |
-| global | ManhwaNew | en | manhwanew.com | unknown  |
-| global | ManhwaOnline | es | manhwa-online.com | unknown  |
-| global | ManhwaSco | en | manhwasco.net | unknown  |
-| global | ManhwaTop | en | manhwatop.com | unknown  |
-| global | ManhwaZ | en | manhwaz.com | unknown  |
-| global | Manjanoon | ar | vrnoin.site | unknown  |
-| global | MantrazScan | es | mantrazscan.org | unknown  |
-| global | Marmota | es | marmota.me | unknown  |
-| global | MashleScan | fr | mashlescan.fr | unknown  |
-| global | MaxgsScan | pt | www.maxgsscan.online | unknown  |
+| global | ManhuaSy | en | www.manhuasy.com | dns curl: (6) Could not resolve host: www.manhuasy.com |
+| global | ManhuaUs | en | manhuaus.com | cloudflare  |
+| global | Manhuauss | en | manhuauss.com | cloudflare  |
+| global | ManhuaZonghe | en | www.manhuazonghe.com | http5xx  |
+| global | Manhwa-Es | es | manhwa-es.com | cloudflare  |
+| global | ManhwaClan | en | manhwaclan.com | cloudflare  |
+| global | ManhwaFreak | en | manhwafreak.xyz | timeout curl: (28) Connection timed out after 15001 milliseconds |
+| global | ManhwaFreake | en | manhwafreake.com | timeout curl: (28) Connection timed out after 15001 milliseconds |
+| global | ManhwaFull | en | manhwafull.com | cloudflare  |
+| global | Manhwaku | id | manhwaku.id | timeout curl: (28) Operation timed out after 15010 milliseconds with 0 bytes received |
+| global | ManhwaLatino | es | manhwa-latino.com | cloudflare  |
+| global | ManhwaList | id | manhwalist.xyz | timeout curl: (28) Connection timed out after 15011 milliseconds |
+| global | ManhwaManhua | en | manhwamanhua.com | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global | ManhwaNew | en | manhwanew.com | dns curl: (6) Could not resolve host: manhwanew.com |
+| global | ManhwaOnline | es | manhwa-online.com | cloudflare  |
+| global | ManhwaSco | en | manhwasco.net | cloudflare  |
+| global | ManhwaZ | en | manhwaz.com | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global | Manjanoon | ar | vrnoin.site | dns curl: (6) Could not resolve host: vrnoin.site |
+| global | MantrazScan | es | mantrazscan.org | dns curl: (6) Could not resolve host: mantrazscan.org |
+| global | MashleScan | fr | mashlescan.fr | http5xx  |
+| global | MaxgsScan | pt | www.maxgsscan.online | dns curl: (6) Could not resolve host: www.maxgsscan.online |
 | global | MediocreToons | pt |  | unknown  |
-| global | Menudo Fansub | es | www.menudo-fansub.com | unknown  |
-| global | MgKomik | id | id.mgkomik.cc | unknown  |
-| global | MhScans | es | mhscans.mundoalterno.org | unknown  |
-| global | Mi2MangaEs | es | mi2manga.lat | unknown  |
-| global | MiniTwoScan | pt | minitwoscan.com | unknown  |
+| global | MgKomik | id | id.mgkomik.cc | cloudflare  |
+| global | MhScans | es | mhscans.mundoalterno.org | timeout curl: (28) Operation timed out after 15012 milliseconds with 0 bytes received |
+| global | MiniTwoScan | pt | minitwoscan.com | cloudflare  |
 | global | MintManga | ru |  | unknown  |
-| global | Mmdaos | es | mmdaos.com | unknown  |
-| global | MmScans | en | mm-scans.org | unknown  |
-| global | ModeScanlator | pt | site.modescanlator.net | unknown  |
-| global | MomonohanaScan | pt | momonohanascan.com | unknown  |
-| global | MonarcaManga | es | visormonarca.com | unknown  |
-| global | MonzeeKomik | id | monzee01.my.id | unknown  |
-| global | MoonWitchinScan | pt | moonwitchscan.com.br | unknown  |
-| global | MortalsGroove | en | mortalsgroove.com | unknown  |
-| global | MsyPublisher | en | msypublisher.com | unknown  |
-| global | MugiwarasOficial | pt | mugiwarasoficial.com | unknown  |
+| global | MomonohanaScan | pt | momonohanascan.com | timeout curl: (28) Connection timed out after 15011 milliseconds |
+| global | MonarcaManga | es | visormonarca.com | dns curl: (6) Could not resolve host: visormonarca.com |
+| global | MonzeeKomik | id | monzee01.my.id | dns curl: (6) Could not resolve host: monzee01.my.id |
+| global | MoonWitchinScan | pt | moonwitchscan.com.br | dns curl: (6) Could not resolve host: moonwitchscan.com.br |
+| global | MsyPublisher | en | msypublisher.com | dns curl: (6) Could not resolve host: msypublisher.com |
+| global | MugiwarasOficial | pt | mugiwarasoficial.com | cloudflare  |
 | global | Multporn | all |  | fail SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for cer |
-| global | MundoManhwa | es | mundomanhwa.com | unknown  |
 | global | MyComicList | en |  | unknown  |
-| global | MyHeroacAdemiaScan | fr | myheroacademiascan.com | unknown  |
-| global | MyShojo | en | myshojo.com | unknown  |
+| global | MyHeroacAdemiaScan | fr | myheroacademiascan.com | cloudflare  |
 | global | Natsu | id |  | unknown  |
-| global | NeatManga | en | neatmangas.com | unknown  |
-| global | NecroScans | en | necroscans.com | unknown  |
-| global | NekoScans | es | www.nekoscans.org | unknown  |
-| global | NeoxScans | pt | mangalivre.net | unknown  |
-| global | Neroxus | pt | neroxus.com.br | unknown  |
-| global | NetTruyen | vi | nettruyenar.com | unknown  |
+| global | NeatManga | en | neatmangas.com | ssl_trust curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - |
+| global | NecroScans | en | necroscans.com | dns curl: (6) Could not resolve host: necroscans.com |
+| global | NekoScans | es | www.nekoscans.org | timeout curl: (28) Connection timed out after 15014 milliseconds |
+| global | Neroxus | pt | neroxus.com.br | dns curl: (6) Could not resolve host: neroxus.com.br |
+| global | NetTruyen | vi | nettruyenar.com | cloudflare  |
 | global | NetTruyen1975 | vi |  | unknown  |
 | global | NetTruyenFE | vi |  | unknown  |
-| global | NetTruyenHE | vi | nettruyenhe.com | unknown  |
+| global | NetTruyenHE | vi | nettruyenhe.com | cloudflare  |
 | global | NetTruyenLL | vi |  | unknown  |
 | global | NetTruyenSSR | vi |  | unknown  |
 | global | NetTruyenUU | vi |  | unknown  |
-| global | NetTruyenVie | vi | nettruyenvia.com | unknown  |
-| global | NetTruyenX | vi | nettruyenx.net | unknown  |
-| global | NeuManga.xyz | id | neumanga.xyz | unknown  |
-| global | NewManhua | en | newmanhua.com | unknown  |
-| global | NewTruyen | vi | newtruyentranh4.com | unknown  |
-| global | NgamenKomik | id | ngamenkomik05.blogspot.com | unknown  |
-| global | Ngomik | id | ngomik.mom | unknown  |
-| global | NhatTruyenVN | vi | nhattruyenqq.com | unknown  |
+| global | NetTruyenVie | vi | nettruyenvia.com | cloudflare  |
+| global | NetTruyenX | vi | nettruyenx.net | cloudflare  |
+| global | NewManhua | en | newmanhua.com | ssl curl: (60) schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - Sertifika zinciri g�venilmeyen bi |
+| global | NewTruyen | vi | newtruyentranh4.com | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global | NhatTruyenVN | vi | nhattruyenqq.com | cloudflare  |
 | global | NicoVideo Seiga | ja |  | unknown  |
-| global | Night Comic | en | www.nightcomic.com | unknown  |
-| global | NightScans | en | nightsup.net | unknown  |
-| global | Nimemob | id | www.nimemob.my.id | unknown  |
-| global | NineManga Brasil | pt | br.ninemanga.com | unknown  |
-| global | NineManga Deutsch | de | de.ninemanga.com | unknown  |
-| global | NineManga English | en | www.ninemanga.com | unknown  |
-| global | NineManga Español | es | es.ninemanga.com | unknown  |
-| global | NineManga Français | fr | fr.ninemanga.com | unknown  |
-| global | NineManga Italiano | it | it.ninemanga.com | unknown  |
-| global | NineManga Русский | ru | ru.ninemanga.com | unknown  |
-| global | NinjaComics | pt | ninjacomics.xyz | unknown  |
-| global | NirvanaScan | pt | nirvanascan.com | unknown  |
-| global | NitroManga | en | nitroscans.net | unknown  |
-| global | NoblesseTranslations | es | nobledicion.yoveo.xyz | unknown  |
-| global | NoonScan.com | ar | noonscan.com | unknown  |
-| global | NoonScan.net | en | noonscan.net | unknown  |
-| global | Noromax | id | noromax02.my.id | unknown  |
-| global | Norterose | pt | norterose.com.br | unknown  |
-| global | NovelMic | en | novelmic.com | unknown  |
-| global | NovelsTown | ar | novelstown.com | unknown  |
-| global | NvManga | en | 1manhwa.com | unknown  |
-| global | Nyx Scans | en | nyxscans.com | unknown  |
-| global | OioiVn | vi | oioivn.com | unknown  |
-| global | OkyyKomik | id | www.okyykomik.my.id | unknown  |
-| global | Olaoe | ar | olaoe.cyou | unknown  |
+| global | Nimemob | id | www.nimemob.my.id | dns curl: (6) Could not resolve host: www.nimemob.my.id |
+| global | NineManga Brasil | pt | br.ninemanga.com | dns curl: (6) Could not resolve host: br.ninemanga.com |
+| global | NineManga Deutsch | de | de.ninemanga.com | dns curl: (6) Could not resolve host: de.ninemanga.com |
+| global | NineManga English | en | www.ninemanga.com | http5xx  |
+| global | NineManga Español | es | es.ninemanga.com | dns curl: (6) Could not resolve host: es.ninemanga.com |
+| global | NineManga Français | fr | fr.ninemanga.com | dns curl: (6) Could not resolve host: fr.ninemanga.com |
+| global | NineManga Italiano | it | it.ninemanga.com | dns curl: (6) Could not resolve host: it.ninemanga.com |
+| global | NineManga Русский | ru | ru.ninemanga.com | dns curl: (6) Could not resolve host: ru.ninemanga.com |
+| global | NitroManga | en | nitroscans.net | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global | NoblesseTranslations | es | nobledicion.yoveo.xyz | http5xx  |
+| global | NoonScan.com | ar | noonscan.com | dns curl: (6) Could not resolve host: noonscan.com |
+| global | NoonScan.net | en | noonscan.net | dns curl: (6) Could not resolve host: noonscan.net |
+| global | Norterose | pt | norterose.com.br | dns curl: (6) Could not resolve host: norterose.com.br |
+| global | NovelsTown | ar | novelstown.com | dns curl: (6) Could not resolve host: novelstown.com |
+| global | NvManga | en | 1manhwa.com | dns curl: (6) Could not resolve host: 1manhwa.com |
+| global | OioiVn | vi | oioivn.com | dns curl: (6) Could not resolve host: oioivn.com |
+| global | OkyyKomik | id | www.okyykomik.my.id | dns curl: (6) Could not resolve host: www.okyykomik.my.id |
 | global | OlimpoScans | es |  | unknown  |
 | global | OnePieceEx | pt |  | unknown  |
-| global | OnePieceScan | fr | onepiecescan.fr | unknown  |
-| global | OnePunchManScan | fr | onepunchmanscan.com | unknown  |
-| global | OnlyManhwa | en | onlymanhwa.org | unknown  |
-| global | Onma | ar | onma.me | unknown  |
-| global | Origami Orpheans | pt | origami-orpheans.com | unknown  |
-| global | OshiNoKo | fr | oshinoko.fr | unknown  |
-| global | Otaku Sanctuary (EN) | en | otakusan.me | unknown  |
-| global | Otaku Sanctuary (VN) | vi | otakusan.me | unknown  |
-| global | Otsugami | id | otsugami.id | unknown  |
-| global | Panconcola | es | artessupremas.com | unknown  |
-| global | PantheonScan.com | fr | pantheon-scan.com | unknown  |
-| global | PantheonScan.fr | fr | www.pantheon-scan.fr | unknown  |
-| global | PapScan | fr | papscan.com | unknown  |
-| global | ParagonScans | en | paragonscans.com | unknown  |
-| global | PassamaoScan | pt | passamaoscan.com | unknown  |
-| global | PerfScan | fr | perf-scan.xyz | unknown  |
+| global | OnePieceScan | fr | onepiecescan.fr | http5xx  |
+| global | OnePunchManScan | fr | onepunchmanscan.com | http5xx  |
+| global | Origami Orpheans | pt | origami-orpheans.com | dns curl: (6) Could not resolve host: origami-orpheans.com |
+| global | OshiNoKo | fr | oshinoko.fr | http5xx  |
+| global | Otaku Sanctuary (EN) | en | otakusan.me | dns curl: (6) Could not resolve host: otakusan.me |
+| global | Otaku Sanctuary (VN) | vi | otakusan.me | dns curl: (6) Could not resolve host: otakusan.me |
+| global | Otsugami | id | otsugami.id | dns curl: (6) Could not resolve host: otsugami.id |
+| global | PantheonScan.fr | fr | www.pantheon-scan.fr | ssl_trust curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - |
+| global | ParagonScans | en | paragonscans.com | timeout curl: (28) Connection timed out after 15009 milliseconds |
+| global | PerfScan | fr | perf-scan.xyz | dns curl: (6) Could not resolve host: perf-scan.xyz |
 | global | PhenixScans | fr |  | unknown  |
-| global | PheTruyen | vi | phetruyen.vip | unknown  |
-| global | Philia Scans | en | philiascans.org | unknown  |
-| global | PhoenixScans | it | www.phoenixscans.com | unknown  |
-| global | PianManga | en | pianmanga.me | unknown  |
-| global | PinkTeaComic | vi | pinkteacomics.com | unknown  |
-| global | PlatinumScans | en | platinumscans.com | unknown  |
-| global | PlumaComics | pt | plumacomics.cloud | unknown  |
+| global | PheTruyen | vi | phetruyen.vip | dns curl: (6) Could not resolve host: phetruyen.vip |
+| global | PinkTeaComic | vi | pinkteacomics.com | timeout curl: (28) Connection timed out after 15002 milliseconds |
 | global | Po2Scans | en |  | unknown  |
-| global | PointZero Toons | pt | pointzerotoons.com | unknown  |
-| global | PojokManga | id | pojokmanga.info | unknown  |
-| global | PopsManga | th | popsmanga.com | unknown  |
-| global | PornhwaScans | fr | pornhwascans.fr | unknown  |
+| global | PojokManga | id | pojokmanga.info | dns curl: (6) Could not resolve host: pojokmanga.info |
+| global | PopsManga | th | popsmanga.com | dns curl: (6) Could not resolve host: popsmanga.com |
 | global | Poseidon Scans | fr |  | unknown  |
-| global | PotatoManga | ar | potatomanga.xyz | unknown  |
-| global | PowerManga | it | reader.powermanga.org | unknown  |
 | global | Prochan | ar |  | unknown  |
-| global | ProjetoScanlator | pt | projetoscanlator.com | unknown  |
 | global | Qi Scans | en |  | unknown  |
-| global | RackusReads | en | rackusreads.com | unknown  |
-| global | RadiantScans | en | radiantscans.com | unknown  |
-| global | RagnarokScan | es | ragnarokscan.com | unknown  |
-| global | RagnarokScanlation | es | ragnarokscanlation.org | unknown  |
-| global | RagnaScan | es | ragnascan.com | unknown  |
-| global | RaijinScans | fr | raijin-scans.fr | unknown  |
-| global | RaikiScan | es | raikiscan.com | unknown  |
-| global | RainbowFairyScan | pt | rainbowfairyscan.com | unknown  |
-| global | RamaReader | it | www.ramareader.it | unknown  |
-| global | RavenScans | en | ravenscans.org | unknown  |
-| global | Raw1001 | ja | raw1001.net | unknown  |
-| global | Rawkuma | ja | old.rawkuma.net | unknown  |
-| global | RawManga | ja | rawmanga.su | unknown  |
-| global | RawXz | ja | rawxz.ac | unknown  |
-| global | RaysScan | pt | raysscan.blogspot.com | unknown  |
+| global | RadiantScans | en | radiantscans.com | timeout curl: (28) Connection timed out after 15007 milliseconds |
+| global | RagnarokScan | es | ragnarokscan.com | dns curl: (6) Could not resolve host: ragnarokscan.com |
+| global | RaijinScans | fr | raijin-scans.fr | cloudflare  |
+| global | RainbowFairyScan | pt | rainbowfairyscan.com | dns curl: (6) Could not resolve host: rainbowfairyscan.com |
+| global | RamaReader | it | www.ramareader.it | dns curl: (6) Could not resolve host: www.ramareader.it |
+| global | RavenScans | en | ravenscans.org | cloudflare  |
+| global | Rawkuma | ja | old.rawkuma.net | http5xx  |
+| global | RawManga | ja | rawmanga.su | dns curl: (6) Could not resolve host: rawmanga.su |
+| global | RaysScan | pt | raysscan.blogspot.com | http404  |
 | global | ReadComicOnline | en |  | unknown  |
-| global | ReadComicsOnline.ru | en | readcomicsonline.ru | unknown  |
-| global | ReaderGen | fr | fr.readergen.fr | unknown  |
-| global | ReadersPoint | en | qscomics.org | unknown  |
-| global | ReadFreeComics | en | readfreecomics.com | unknown  |
-| global | ReadKomik | en | novelstreams.com | unknown  |
+| global | ReadComicsOnline.ru | en | readcomicsonline.ru | cloudflare  |
+| global | ReaderGen | fr | fr.readergen.fr | http5xx  |
+| global | ReadersPoint | en | qscomics.org | timeout curl: (28) Connection timed out after 15005 milliseconds |
 | global | ReadManga | ru |  | unknown  |
-| global | ReadNifTeam | it | read-nifteam.info | unknown  |
 | global | ReadOnePiece | en |  | unknown  |
-| global | ReaperComics | en | reaperscans.com | unknown  |
-| global | ReaperScans.fr | fr | reaper-scans.fr | unknown  |
-| global | ReaperScansUnoriginal | en | reaper-scans.com | unknown  |
-| global | ReaperTrans | th | reapertrans.com | unknown  |
-| global | ReMangas | pt | remangas.net | unknown  |
-| global | Resetscans | en | reset-scans.org | unknown  |
-| global | Retsu | en | retsu.org | unknown  |
-| global | RevolutionScantrad | fr | www.revolutionscantrad.com | unknown  |
-| global | ReYume | id | www.re-yume.my.id | unknown  |
-| global | RezoScans | en | rezoscans.com | unknown  |
-| global | Rh2PlusManga | th | www.rh2plusmanga.com | unknown  |
-| global | RichtoScan | es | r1.richtoon.top | unknown  |
-| global | RightDarkScan | es | rsdleft.com | unknown  |
-| global | RimuScans | fr | rimuscans.com | unknown  |
+| global | ReaperComics | en | reaperscans.com | timeout curl: (28) Operation timed out after 15011 milliseconds with 0 bytes received |
+| global | ReMangas | pt | remangas.net | timeout curl: (28) Connection timed out after 15012 milliseconds |
+| global | Resetscans | en | reset-scans.org | dns curl: (6) Could not resolve host: reset-scans.org |
+| global | RezoScans | en | rezoscans.com | dns curl: (6) Could not resolve host: rezoscans.com |
+| global | Rh2PlusManga | th | www.rh2plusmanga.com | dns curl: (6) Could not resolve host: www.rh2plusmanga.com |
+| global | RightDarkScan | es | rsdleft.com | dns curl: (6) Could not resolve host: rsdleft.com |
 | global | Rinko Comics | en |  | unknown  |
-| global | RizzComic | en | rizzfables.com | unknown  |
-| global | RocksManga | ar | rocksmanga.com | unknown  |
-| global | RogMangas | pt | rogmangas.com | unknown  |
+| global | RogMangas | pt | rogmangas.com | dns curl: (6) Could not resolve host: rogmangas.com |
 | global | Rokari Comics | en |  | unknown  |
 | global | Rolia Scan | en |  | unknown  |
-| global | Roseveil | id | roseveil.org | unknown  |
+| global | Roseveil | id | roseveil.org | dns curl: (6) Could not resolve host: roseveil.org |
 | global | Ryzukomik | id |  | unknown  |
-| global | Rùa Hấp Chanh Dây | vi | ruahapchanhday.com | unknown  |
-| global | S2Manga | en | s2manga.com | unknown  |
-| global | S2Manga.io | en | s2manga.io | unknown  |
-| global | SakamotoDays | fr | sakamotodays.fr | unknown  |
-| global | SamuraiScan | es | samuraiscan.com | unknown  |
-| global | SapphireScan | es | sapphirescan.com | unknown  |
-| global | Sasangeyou | id | sasangeyou.net | unknown  |
-| global | ScamberTraslator | es | scambertraslator.com | unknown  |
-| global | ScanBoruto | fr | scanboruto.fr | unknown  |
-| global | ScanIta.org | it | scanita.org | unknown  |
-| global | ScanJujutsuKaisen | fr | scanjujutsukaisen.com | unknown  |
-| global | ScanManga | fr | scan-manga.me | unknown  |
-| global | ScanMangaVf.ws | fr | scanmanga-vf.me | unknown  |
+| global | Rùa Hấp Chanh Dây | vi | ruahapchanhday.com | timeout curl: (28) Connection timed out after 15006 milliseconds |
+| global | S2Manga.io | en | s2manga.io | dns curl: (6) Could not resolve host: s2manga.io |
+| global | SakamotoDays | fr | sakamotodays.fr | http5xx  |
+| global | SamuraiScan | es | samuraiscan.com | http  |
+| global | ScanBoruto | fr | scanboruto.fr | cloudflare  |
+| global | ScanJujutsuKaisen | fr | scanjujutsukaisen.com | cloudflare  |
+| global | ScanManga | fr | scan-manga.me | dns curl: (6) Could not resolve host: scan-manga.me |
 | global | ScansMangas.me | fr |  | unknown  |
-| global | ScanTrad | fr | scan-trad.com | unknown  |
-| global | Scantrad-Vf | fr | scantrad-vf.me | unknown  |
 | global | ScantradUnion | fr |  | unknown  |
-| global | ScanVf | fr | www.scan-vf.net | unknown  |
-| global | ScanVf.org | fr | scanvf.org | unknown  |
-| global | ScarManga | ar | scarmanga.com | unknown  |
-| global | ScyllaComics | en | scyllacomics.xyz | unknown  |
-| global | SectScans | en | sectscans.com | unknown  |
+| global | SectScans | en | sectscans.com | timeout curl: (28) Connection timed out after 15010 milliseconds |
 | global | SeiManga | ru |  | unknown  |
-| global | Seinagi | en | reader.seinagi.org.es | unknown  |
-| global | SeineManga | fr | www.seinemanga.com | unknown  |
-| global | SekaiKomik | id | sekaikomik.mom | unknown  |
-| global | SekteKomik | id | sektekomik.xyz | unknown  |
+| global | SeineManga | fr | www.seinemanga.com | dns curl: (6) Could not resolve host: www.seinemanga.com |
+| global | SekteKomik | id | sektekomik.xyz | cloudflare  |
 | global | Senkuro | ru |  | unknown  |
-| global | SenpaiEdiciones | es | senpaiediciones.com | unknown  |
-| global | SetsuScans | en | setsuscans.com | unknown  |
-| global | ShadowMangas | es | shadowmangas.com | unknown  |
-| global | ShadowXManga | ar | www.shadowxmanga.com | unknown  |
-| global | SheaKomik | id | sheakomik.com | unknown  |
-| global | ShibaManga | en | shibamanga.com | unknown  |
+| global | SetsuScans | en | setsuscans.com | cloudflare  |
+| global | ShadowXManga | ar | www.shadowxmanga.com | dns curl: (6) Could not resolve host: www.shadowxmanga.com |
+| global | SheaKomik | id | sheakomik.com | timeout curl: (28) Connection timed out after 15012 milliseconds |
 | global | Shinigami | id |  | unknown  |
-| global | Shirakami | id | shirakami.xyz | unknown  |
-| global | ShiyuraSub | id | shiyurasub.blogspot.com | unknown  |
-| global | ShojoScans | en | violetscans.com | unknown  |
-| global | Shooting Star Scans | en | shootingstarscans.com | unknown  |
-| global | SiiKomik | id | siikomik.fun | unknown  |
-| global | SinensisScans | pt | sinensis.leitorweb.com | unknown  |
-| global | SirenKomik | id | sirenkomik.xyz | unknown  |
-| global | SiteManga | en | sitemanga.com | unknown  |
-| global | SkanlacjeFeniksy | pl | skanlacje-feniksy.pl | unknown  |
-| global | SkyManga | en | skymanga.work | unknown  |
-| global | SkyMangas | es | skymangas.com | unknown  |
+| global | Shirakami | id | shirakami.xyz | cloudflare  |
+| global | Shooting Star Scans | en | shootingstarscans.com | http5xx  |
+| global | SiiKomik | id | siikomik.fun | dns curl: (6) Could not resolve host: siikomik.fun |
+| global | SinensisScans | pt | sinensis.leitorweb.com | timeout curl: (28) Connection timed out after 15013 milliseconds |
+| global | SiteManga | en | sitemanga.com | timeout curl: (28) Connection timed out after 15013 milliseconds |
+| global | SkanlacjeFeniksy | pl | skanlacje-feniksy.pl | dns curl: (6) Could not resolve host: skanlacje-feniksy.pl |
+| global | SkyManga | en | skymanga.work | dns curl: (6) Could not resolve host: skymanga.work |
 | global | SlashLib | ru |  | unknown  |
-| global | Sleepy Translations | en | sleepytranslations.com | unknown  |
-| global | SnkScan | fr | snkscan.com | unknown  |
-| global | Snow Machine Translation | en | snowmachinetranslation.com | unknown  |
-| global | SnowScans | en | flixscans.net | unknown  |
-| global | Sobatmanku | id | www.sobatmanku19.cab | unknown  |
-| global | SolooScan | pt | solooscan.blogspot.com | unknown  |
-| global | SoManga | th | so-manga.com | unknown  |
-| global | SoulScans | id | soulscans.my.id | unknown  |
-| global | SpiderScans | en | spiderscans.xyz | unknown  |
-| global | SsReading | pt | ssreading.com.br | unknown  |
-| global | StarboundScans | fr | starboundscans.com | unknown  |
-| global | StellarSaber | ar | stellarsaber.pro | unknown  |
-| global | StickHorse | es | www.stickhorse.cl | unknown  |
+| global | SnkScan | fr | snkscan.com | http5xx  |
+| global | Snow Machine Translation | en | snowmachinetranslation.com | dns curl: (6) Could not resolve host: snowmachinetranslation.com |
+| global | Sobatmanku | id | www.sobatmanku19.cab | dns curl: (6) Could not resolve host: www.sobatmanku19.cab |
+| global | SsReading | pt | ssreading.com.br | dns curl: (6) Could not resolve host: ssreading.com.br |
+| global | StarboundScans | fr | starboundscans.com | dns curl: (6) Could not resolve host: starboundscans.com |
+| global | StellarSaber | ar | stellarsaber.pro | cloudflare  |
+| global | StickHorse | es | www.stickhorse.cl | timeout curl: (28) Connection timed out after 15004 milliseconds |
 | global | StoneScape | en |  | unknown  |
-| global | SushiScan.fr | fr | sushiscan.fr | unknown  |
-| global | SushiScan.Net | fr | sushiscan.net | unknown  |
 | global | SussyScan | pt |  | unknown  |
-| global | SweetScan | pt | sweetscan.net | unknown  |
-| global | TanukiManga | th | www.tanuki-manga.com | unknown  |
-| global | TatakaeScans | pt | tatakaescan.com | unknown  |
-| global | TaurusManga | es | taurus.topmanhuas.org | unknown  |
-| global | TcbScansManga | en | tcbscans-manga.com | unknown  |
+| global | TcbScansManga | en | tcbscans-manga.com | timeout curl: (28) Operation timed out after 15010 milliseconds with 0 bytes received |
 | global | TeamXNovel | ar |  | unknown  |
-| global | TecnoProjects | es | tecnoprojects.xyz | unknown  |
-| global | TecnoScann | es | tecnoscann.com | unknown  |
-| global | TecnoScans | en | olyteconscans.xyz | unknown  |
-| global | TeenManhua | en | teenmanhua.com | unknown  |
-| global | TemakiMangas | pt | temakimangas.blogspot.com | unknown  |
-| global | TempleScan | en | templetoons.com | unknown  |
-| global | Tenshi | id | tenshi01.id | unknown  |
-| global | TerritorioLeal | es | territorioleal.com | unknown  |
-| global | ThaiManga | th | www.thaimanga.net | unknown  |
-| global | TheGuildScans | en | theguildscans.com | unknown  |
-| global | ThunderScans | ar | lavascans.com | unknown  |
-| global | TmoManga | es | tmomanga.com | unknown  |
-| global | TokyoRevengers | fr | tokyorevengers.fr | unknown  |
+| global | TecnoScann | es | tecnoscann.com | timeout curl: (28) Connection timed out after 15001 milliseconds |
+| global | TecnoScans | en | olyteconscans.xyz | dns curl: (6) Could not resolve host: olyteconscans.xyz |
+| global | Tenshi | id | tenshi01.id | dns curl: (6) Could not resolve host: tenshi01.id |
+| global | TheGuildScans | en | theguildscans.com | timeout curl: (28) Connection timed out after 15016 milliseconds |
+| global | TokyoRevengers | fr | tokyorevengers.fr | http5xx  |
 | global | Toomics | de |  | unknown  |
 | global | TooMicsDe | de |  | unknown  |
 | global | TooMicsEn | en |  | unknown  |
@@ -831,49 +512,28 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | global | TooMicsPt | pt |  | unknown  |
 | global | TooMicsSc | zh |  | unknown  |
 | global | TooMicsTc | zh |  | unknown  |
-| global | Toon69 | en | toon69.com | unknown  |
-| global | ToonChill | en | toonchill.com | unknown  |
-| global | ToonClash | en | toonclash.com | unknown  |
-| global | ToonHunter | th | toonhunter.com | unknown  |
-| global | Toonily | en | toonily.com | unknown  |
-| global | TopReadManhwa | en | topreadmanhwa.com | unknown  |
-| global | TopTruyen | vi | www.toptruyentv11.com | unknown  |
-| global | TraduccionesAmistosas | es | traduccionesamistosas.topmanhuas.org | unknown  |
-| global | TreeManga | en | treemanga.com | unknown  |
-| global | Tresdaos | es | threedaos.zdrz.xyz | unknown  |
-| global | Tritinia | en | tritinia.org | unknown  |
-| global | TrueManga | en | mangamonk.com | unknown  |
+| global | ToonChill | en | toonchill.com | timeout curl: (28) Connection timed out after 15011 milliseconds |
+| global | ToonClash | en | toonclash.com | dns curl: (6) Could not resolve host: toonclash.com |
+| global | TopTruyen | vi | www.toptruyentv11.com | dns curl: (6) Could not resolve host: www.toptruyentv11.com |
+| global | TraduccionesAmistosas | es | traduccionesamistosas.topmanhuas.org | http404  |
 | global | TruyenQQ | vi |  | unknown  |
 | global | TruyenTranh3Q | vi |  | unknown  |
-| global | Truyện Tranh Full | vi | truyentranhfull.net | unknown  |
-| global | Truyện Tranh Đam Mỹ | vi | truyentranhdammyy.site | unknown  |
-| global | Tsundoku | pt | tsundoku.com.br | unknown  |
-| global | Tukang Komik | id | tukangkomik.co | unknown  |
+| global | Truyện Tranh Full | vi | truyentranhfull.net | dns curl: (6) Could not resolve host: truyentranhfull.net |
 | global | TuMangaOnline | es |  | unknown  |
-| global | TuManhwas.com | es | tumanhwas.com | unknown  |
-| global | TuttoAnimeManga | it | tuttoanimemanga.net | unknown  |
-| global | TyrantScans | pt | www.tyrantscans.com | unknown  |
-| global | UkiyoToon | es | nakamatoon.com | unknown  |
-| global | UlasComic | id | www.ulascomic00.xyz | unknown  |
-| global | UmiManga | ar | www.umimanga.com | unknown  |
+| global | TyrantScans | pt | www.tyrantscans.com | dns curl: (6) Could not resolve host: www.tyrantscans.com |
 | global | Usagi | ru |  | unknown  |
-| global | UToon | en | utoon.net | unknown  |
-| global | VarnaScan | en | varnascan.xyz | unknown  |
+| global | VarnaScan | en | varnascan.xyz | timeout curl: (28) Connection timed out after 15006 milliseconds |
 | global | Vcomycs | vi |  | unknown  |
-| global | VexManga | ar | vortexscans.org | unknown  |
-| global | VfScan | fr | www.vfscan.net | unknown  |
-| global | VinlandSaga | fr | vinlandsaga.fr | unknown  |
+| global | VfScan | fr | www.vfscan.net | dns curl: (6) Could not resolve host: www.vfscan.net |
+| global | VinlandSaga | fr | vinlandsaga.fr | http5xx  |
 | global | VioletScans | en |  | unknown  |
 | global | VipManga | ar |  | unknown  |
-| global | VoidScans | en | voidscans.co | unknown  |
-| global | VortexScans | en | vortexscans.org | unknown  |
+| global | VoidScans | en | voidscans.co | dns curl: (6) Could not resolve host: voidscans.co |
 | global | VyManga | en |  | unknown  |
-| global | VyvyManga | en | vyvymanga.org | unknown  |
-| global | WalpurgiScan | it | www.walpurgiscan.it | unknown  |
-| global | WarungKomik | id | warungkomik.com | unknown  |
+| global | WalpurgiScan | it | www.walpurgiscan.it | cloudflare  |
+| global | WarungKomik | id | warungkomik.com | timeout curl: (28) Connection timed out after 15016 milliseconds |
 | global | Waveteamy | ar |  | unknown  |
-| global | WebDexScans | en | webdexscans.com | unknown  |
-| global | Webtoon.uk | en | webtoon.uk | unknown  |
+| global | Webtoon.uk | en | webtoon.uk | http5xx  |
 | global | Weeb Central | en |  | unknown  |
 | global | WeebDex (Deutsch) | de |  | unknown  |
 | global | WeebDex (English) | en |  | unknown  |
@@ -885,289 +545,134 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | global | WeebDex (中文) | zh |  | unknown  |
 | global | WeebDex (日本語) | ja |  | unknown  |
 | global | WeebDex (한국어) | ko |  | unknown  |
-| global | Weloma | ja | weloma.art | unknown  |
-| global | WeLoveManga | ja | welovemanga.one | unknown  |
 | global | WestManga | id |  | unknown  |
-| global | WhaleManga | en | whalemanga.com | unknown  |
-| global | WickedWitchScan | pt | wicked-witch-scan.com | unknown  |
-| global | WinterScan | pt | winterscan.com | unknown  |
-| global | WitchScans | en | altayscans.com | unknown  |
-| global | WitComics | it | www.witcomics.net | unknown  |
-| global | WolfScanBr | pt | wolfscanbr.blogspot.com | unknown  |
-| global | WonderlandScan | pt | wonderlandscan.com | unknown  |
-| global | Woopread | en | woopread.com | unknown  |
+| global | WickedWitchScan | pt | wicked-witch-scan.com | timeout curl: (28) Connection timed out after 15006 milliseconds |
+| global | WinterScan | pt | winterscan.com | dns curl: (6) Could not resolve host: winterscan.com |
+| global | WitchScans | en | altayscans.com | ssl curl: (60) schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - Sertifika zinciri g�venilmeyen bi |
+| global | WitComics | it | www.witcomics.net | dns curl: (6) Could not resolve host: www.witcomics.net |
 | global | XBatCat | all |  | fail JSONException: Value Under of type java.lang.String cannot be converted to JSONObject |
-| global | XCalibrScans | en | xcalibrscans.com | unknown  |
-| global | XoxoComics | en | xoxocomic.com | unknown  |
-| global | XsanoManga | ar | www.xsano-manga.com | unknown  |
-| global | XsScan | pt | xsscan.xyz | unknown  |
-| global | YakshaComics | en | yakshacomics.com | unknown  |
-| global | YanpFansub | pt | trisalyanp.com | unknown  |
-| global | YaoiFanClub | pt | www.yaoifanclub.com | unknown  |
-| global | YaoiManga | es | yaoimanga.es | unknown  |
-| global | YdComics | en | yd-comics.com | unknown  |
-| global | Ykmh | zh | www.ykmh.net | unknown  |
-| global | YokaiTeam | ar | yokai-team.blogspot.com | unknown  |
+| global | YaoiManga | es | yaoimanga.es | ssl curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x800903 |
+| global | YdComics | en | yd-comics.com | dns curl: (6) Could not resolve host: yd-comics.com |
 | global | Yomu Mangas | pt |  | unknown  |
-| global | YomuComics | pt | yomucomics.com | unknown  |
-| global | YonaBar | ar | yonabar.xyz | unknown  |
-| global | Yubikiri | id | yubikiri.my.id | unknown  |
+| global | YomuComics | pt | yomucomics.com | cloudflare  |
+| global | Yubikiri | id | yubikiri.my.id | dns curl: (6) Could not resolve host: yubikiri.my.id |
 | global | YugenApp | pt |  | unknown  |
-| global | YumeKomik | id | yumekomik.com | unknown  |
-| global | YuraManga | id | www.yuramanga.my.id | unknown  |
-| global | Yuri Garden | vi | yurigarden.com | unknown  |
-| global | Zahard | en | zahard.xyz | unknown  |
-| global | Zandyno Fansub | en | zandynofansub.aishiteru.org | unknown  |
+| global | YuraManga | id | www.yuramanga.my.id | dns curl: (6) Could not resolve host: www.yuramanga.my.id |
+| global | Yuri Garden | vi | yurigarden.com | http404  |
+| global | Zahard | en | zahard.xyz | http  |
+| global | Zandyno Fansub | en | zandynofansub.aishiteru.org | dns curl: (6) Could not resolve host: zandynofansub.aishiteru.org |
 | global | ZenManga | ru |  | unknown  |
-| global | Zevep | es | zevep.com | unknown  |
-| global | Zin-Manga.com | en | zin-manga.com | unknown  |
-| global | ZinchanManga.mobi | en | zinchanmanga.mobi | unknown  |
-| global | ZinchanManga.net | en | zinchangmanga.net | unknown  |
-| global | ZinManga.cc | en | zinmanga.cc | unknown  |
-| global | ZinManga.ms | en | zinmanga.ms | unknown  |
-| global | ZinManga.net | en | zinmanga.net | unknown  |
+| global | Zevep | es | zevep.com | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global | Zin-Manga.com | en | zin-manga.com | http5xx  |
+| global | ZinManga.cc | en | zinmanga.cc | dns curl: (6) Could not resolve host: zinmanga.cc |
+| global | ZinManga.ms | en | zinmanga.ms | dns curl: (6) Could not resolve host: zinmanga.ms |
 | global | Манга-тян | ru |  | unknown  |
 | global | Реманга | ru |  | unknown  |
 | global | Яой-тян | ru |  | unknown  |
-| global | สดใสเมะ | th | www.xn--l3c0azab5a2gta.com | unknown  |
 | global | Ổ Truyện | vi |  | unknown  |
-| global18 | 18PornComic | en | 18porncomic.com | unknown  |
-| global18 | 3XYaoi | pt | 3xyaoi.com | unknown  |
-| global18 | AdultWebtoon | en | adultwebtoon.com | unknown  |
-| global18 | AllPornComic | en | allporncomic.com | unknown  |
-| global18 | Apenasmaisum Yaoi | pt | apenasmaisumyaoi.com | unknown  |
+| global18 | 3XYaoi | pt | 3xyaoi.com | cloudflare  |
+| global18 | AdultWebtoon | en | adultwebtoon.com | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global18 | Apenasmaisum Yaoi | pt | apenasmaisumyaoi.com | cloudflare  |
 | global18 | Arabs Hentai | ar |  | unknown  |
-| global18 | ArabsDoujin | ar | www.arabsdoujin.online | unknown  |
-| global18 | ArabToons | ar | arabtoons.net | unknown  |
-| global18 | BeeHentai | en | beehentai.com | unknown  |
-| global18 | BibiManga | en | bibimanga.com | unknown  |
-| global18 | BirdToon | id | birdtoon.shop | unknown  |
-| global18 | BoysLove | en | boyslove.me | unknown  |
-| global18 | Bymichiby | es | bymichiby.com | unknown  |
-| global18 | CafecomYaoi | pt | cafecomyaoi.com.br | unknown  |
-| global18 | Cat300 | th | cat-300.com | unknown  |
-| global18 | CBHentai | vi | hentaicube.xyz | unknown  |
-| global18 | CoComic | en | cocomic.co | unknown  |
-| global18 | ComicsValley | en | comicsvalley.com | unknown  |
-| global18 | Comiz | en | v2.comiz.net | unknown  |
-| global18 | ConstellarComic | en | constellarcomic.com | unknown  |
-| global18 | CvnScan | pt | covendasbruxonas.com | unknown  |
-| global18 | DecadenceScans | en | reader.decadencescans.com | unknown  |
-| global18 | DexHentai | en | dexhentai.com | unknown  |
-| global18 | Dojing | id | dojing.net | unknown  |
-| global18 | DoujinDesu.click | id | doujindesu.asia | unknown  |
-| global18 | DoujinHentai.net | es | doujinhentai.net | unknown  |
-| global18 | DoujinKu | id | doujinku.org | unknown  |
-| global18 | Doujins.lat | es | doujins.lat | unknown  |
-| global18 | DoujinShell | es | www.doujinshell.com | unknown  |
-| global18 | Doujinza | th | doujinza.com | unknown  |
-| global18 | DragonManga | th | www.dragon-manga.com | unknown  |
-| global18 | DuckManga | en | duckmanga.com | unknown  |
-| global18 | DuniaKomik | id | duniakomik.org | unknown  |
-| global18 | EcchiDoujin | th | ecchi-doujin.com | unknown  |
-| global18 | EHentaiManga | en | ehentaimanga.com | unknown  |
-| global18 | EpsilonScan | fr | beta.epsilonscan.to | unknown  |
-| global18 | EuphoriaScan | pt | euphoriascan.com | unknown  |
-| global18 | EvilManga | cs | evil-manga.eu | unknown  |
-| global18 | FbSquads | pt | fbsquadx.com | unknown  |
-| global18 | FreeComicOnline | en | freecomiconline.me | unknown  |
-| global18 | GedeComix | en | gedecomix.com | unknown  |
-| global18 | GekkouScans | pt | gekkou.site | unknown  |
-| global18 | GoofFansub | pt | gooffansub.com | unknown  |
-| global18 | H-Hentai | fr | hhentai.fr | unknown  |
-| global18 | Hachirumi | en | hachirumi.com | unknown  |
-| global18 | Hanman18 | zh | hanman18.com | unknown  |
-| global18 | Hensekai | id | hensekai.com | unknown  |
-| global18 | Hentai x Comic | en | hentaixcomic.com | unknown  |
-| global18 | Hentai x Dickgirl | en | hentaixdickgirl.com | unknown  |
-| global18 | Hentai-Scantrad | fr | hentai.scantrad-vf.cc | unknown  |
-| global18 | Hentai20 | en | hentai20.io | unknown  |
-| global18 | Hentai3z | en | manga18h.xyz | unknown  |
-| global18 | Hentai3z.cc | en | hentai3z.cc | unknown  |
-| global18 | Hentai4Free | en | hentai4free.net | unknown  |
+| global18 | ArabsDoujin | ar | www.arabsdoujin.online | dns curl: (6) Could not resolve host: www.arabsdoujin.online |
+| global18 | BirdToon | id | birdtoon.shop | dns curl: (6) Could not resolve host: birdtoon.shop |
+| global18 | BoysLove | en | boyslove.me | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global18 | CBHentai | vi | hentaicube.xyz | cloudflare  |
+| global18 | Comiz | en | v2.comiz.net | dns curl: (6) Could not resolve host: v2.comiz.net |
+| global18 | DoujinDesu.click | id | doujindesu.asia | timeout curl: (28) Connection timed out after 15006 milliseconds |
+| global18 | DoujinKu | id | doujinku.org | cloudflare  |
+| global18 | Doujins.lat | es | doujins.lat | dns curl: (6) Could not resolve host: doujins.lat |
+| global18 | DoujinShell | es | www.doujinshell.com | dns curl: (6) Could not resolve host: www.doujinshell.com |
+| global18 | DragonManga | th | www.dragon-manga.com | dns curl: (6) Could not resolve host: www.dragon-manga.com |
+| global18 | EpsilonScan | fr | beta.epsilonscan.to | cloudflare  |
+| global18 | EvilManga | cs | evil-manga.eu | cloudflare  |
+| global18 | FbSquads | pt | fbsquadx.com | dns curl: (6) Could not resolve host: fbsquadx.com |
+| global18 | Hentai3z | en | manga18h.xyz | timeout curl: (28) Connection timed out after 15009 milliseconds |
 | global18 | HentaiCrot | id |  | unknown  |
-| global18 | HentaiManga | en | hentaimanga.me | unknown  |
-| global18 | HentaiOrigines | fr | hentai-origines.fr | unknown  |
-| global18 | HentaiReader | es | hentaireader.org | unknown  |
-| global18 | HentaiSeason | pt | hentaiseason.com | unknown  |
-| global18 | HentaiSlayer | ar | hentaislayer.net | unknown  |
-| global18 | Hentaiteca | pt | hentaiteca.net | unknown  |
-| global18 | HentaiTokyo | pt | hentaitokyo.net | unknown  |
+| global18 | HentaiSeason | pt | hentaiseason.com | cloudflare  |
+| global18 | Hentaiteca | pt | hentaiteca.net | cloudflare  |
 | global18 | HentaiUkr | uk |  | unknown  |
-| global18 | HentaiVN.plus | vi | hentaivn.party | unknown  |
-| global18 | HentaiWebtoon | en | hentaiwebtoon.com | unknown  |
-| global18 | HentaiXYuri | en | hentaixyuri.com | unknown  |
-| global18 | HentaiZ | vi | hentaiz.news | unknown  |
-| global18 | HentaiZone | fr | hentaizone.xyz | unknown  |
+| global18 | HentaiVN.plus | vi | hentaivn.party | http5xx  |
+| global18 | HentaiZ | vi | hentaiz.news | dns curl: (6) Could not resolve host: hentaiz.news |
+| global18 | HentaiZone | fr | hentaizone.xyz | cloudflare  |
 | global18 | Hentaman | ar |  | unknown  |
 | global18 | HeyToon | en |  | unknown  |
-| global18 | Hipercool | pt | hiper.cool | unknown  |
-| global18 | HiperToon | en | hiperdex.com | unknown  |
-| global18 | IllusionScan | pt | illusionscan.com | unknown  |
-| global18 | Indo18h | id | indo18h.com | unknown  |
-| global18 | InstaManhwa | en | www.manhwaden.com | unknown  |
-| global18 | Kanzenin | id | kanzenin.info | unknown  |
-| global18 | Kiara18 | en | 18.kiara.cool | unknown  |
-| global18 | KlikManga | id | klikmanga.com | unknown  |
-| global18 | KlManhua | id | klmanhua.blogspot.com | unknown  |
-| global18 | KomBatch | id | kombatch.cc | unknown  |
-| global18 | KomikCinta | id | komikdewasa.art | unknown  |
-| global18 | KomikDewasa.Online | id | komikdewasa.art | unknown  |
-| global18 | KomikGo | id | komikgo.xyz | unknown  |
-| global18 | KomikIndo.info | id | mangasusuku.com | unknown  |
-| global18 | KomikLokal.mom | id | komikmu.icu | unknown  |
-| global18 | KomikPix | id | komikpix.com | unknown  |
-| global18 | KomikPoi | id | komikpoi.com | unknown  |
-| global18 | komikRemaja.icu | id | komikremaja.icu | unknown  |
-| global18 | KomikTap | id | komiktap.info | unknown  |
-| global18 | Kyumik | id | kyumik.com | unknown  |
-| global18 | LectorHentai | es | lectorhentai.com | unknown  |
-| global18 | LerHentai | pt | lerhentai.com | unknown  |
-| global18 | LerYaoi | pt | leryaoi.com | unknown  |
-| global18 | LianScans | id | www.lianscans.com | unknown  |
-| global18 | LilyManga | en | lilymanga.net | unknown  |
-| global18 | LoliconMobi | en | lolicon.mobi | unknown  |
-| global18 | LunarScan.org | en | lunarscan.org | unknown  |
-| global18 | Luvyaa | id | luvyaa.org | unknown  |
-| global18 | MadaraDex | en | madaradex.org | unknown  |
-| global18 | Manga168 | th | manga168.net | unknown  |
-| global18 | Manga18 | en | manga18.club | unknown  |
-| global18 | Manga18.xyz | en | manga18.xyz | unknown  |
-| global18 | Manga18h | en | manga18h.xyz | unknown  |
-| global18 | Manga18x | en | manga18x.net | unknown  |
-| global18 | Manga1k | en | manga1k.com | unknown  |
-| global18 | MangaBee | en | mangazin.org | unknown  |
-| global18 | MangaDass | en | mangadass.com | unknown  |
-| global18 | MangaDistrict | en | mangadistrict.com | unknown  |
-| global18 | MangaDna | en | mangadna.com | unknown  |
-| global18 | MangaDop | id | mangadop.net | unknown  |
-| global18 | MangaForFree | en | mangaforfree.com | unknown  |
-| global18 | MangaHentai | en | mangahentai.me | unknown  |
-| global18 | MangaHolic | en | mangaholic.org | unknown  |
-| global18 | MangaHub | fr | mangahub.fr | unknown  |
-| global18 | MangaHub.link | ar | www.mangahub.link | unknown  |
-| global18 | MangaLand | es | mangaland.net | unknown  |
-| global18 | MangaManiacs | en | mangamaniacs.org | unknown  |
-| global18 | MangaOwl.one | en | mangaowl.one | unknown  |
-| global18 | MangaOwlYaoi | en | mangaowlyaoi.com | unknown  |
-| global18 | MangaRyu | en | mangaryu.com | unknown  |
-| global18 | MangaSusuku | id | mangasusuku.com | unknown  |
-| global18 | MangaXico | es | mangagojo18.com | unknown  |
-| global18 | Mangazavr | ru | mangazavr.ru | unknown  |
-| global18 | Manhatic | ar | manhatic.com | unknown  |
-| global18 | ManhuaScan.Us | en | manhuascan.us | unknown  |
-| global18 | Manhwa18.app | en | manhwa18.app | unknown  |
-| global18 | Manhwa18.org | en | manhwa18.org | unknown  |
-| global18 | Manhwa68 | en | manhwa68.com | unknown  |
-| global18 | ManhwaDen | en | www.manhwaden.com | unknown  |
-| global18 | ManhwaDesu | id | manhwadesu.asia | unknown  |
-| global18 | ManhwaHentai | en | manhwahentai.me | unknown  |
-| global18 | ManhwaHentai.to | en | manhwahentai.to | unknown  |
-| global18 | ManhwaHub | id | manhwahub.net | unknown  |
-| global18 | ManhwaLand.ink | id | manhwaland.asia | unknown  |
-| global18 | ManhwaLand.vip | id | www.manhwaland.baby | unknown  |
-| global18 | ManhwaLover | en | www.manhwalover.com | unknown  |
-| global18 | ManhwaPlus | id | manhwablue.com | unknown  |
-| global18 | ManhwaRaw.com | en | manhwaraw.com | unknown  |
-| global18 | Manhwas.es | es | manhwas.es | unknown  |
-| global18 | ManhwaToon | en | www.manhwatoon.com | unknown  |
-| global18 | ManhwaX | en | manhwax.org | unknown  |
-| global18 | ManyComic | en | manycomic.com | unknown  |
-| global18 | ManyToon | en | manytoon.org | unknown  |
-| global18 | ManyToon.me | en | manytoon.me | unknown  |
-| global18 | Medusascans | id | medusascans.com | unknown  |
-| global18 | MeHentaiVN | vi | www.hentaivnx.autos | unknown  |
-| global18 | MiHentai | id | mihentai.com | unknown  |
-| global18 | Mikoroku | id | www.mikoroku.com | unknown  |
-| global18 | MilfToon | en | milftoon.xxx | unknown  |
-| global18 | MoonLoversScan | pt | moonloversscan.com.br | unknown  |
-| global18 | MrBenne | pt | mrbenne.com | unknown  |
+| global18 | Hipercool | pt | hiper.cool | dns curl: (6) Could not resolve host: hiper.cool |
+| global18 | IllusionScan | pt | illusionscan.com | timeout curl: (28) Connection timed out after 15006 milliseconds |
+| global18 | KlManhua | id | klmanhua.blogspot.com | http404  |
+| global18 | KomikCinta | id | komikdewasa.art | cloudflare  |
+| global18 | KomikDewasa.Online | id | komikdewasa.art | cloudflare  |
+| global18 | KomikGo | id | komikgo.xyz | timeout curl: (28) Connection timed out after 15004 milliseconds |
+| global18 | Kyumik | id | kyumik.com | timeout curl: (28) Connection timed out after 15001 milliseconds |
+| global18 | Luvyaa | id | luvyaa.org | cloudflare  |
+| global18 | Manga18.xyz | en | manga18.xyz | timeout curl: (28) Connection timed out after 15011 milliseconds |
+| global18 | Manga18h | en | manga18h.xyz | timeout curl: (28) Connection timed out after 15001 milliseconds |
+| global18 | MangaHub | fr | mangahub.fr | cloudflare  |
+| global18 | MangaLand | es | mangaland.net | dns curl: (6) Could not resolve host: mangaland.net |
+| global18 | MangaOwl.one | en | mangaowl.one | dns curl: (6) Could not resolve host: mangaowl.one |
+| global18 | MangaOwlYaoi | en | mangaowlyaoi.com | dns curl: (6) Could not resolve host: mangaowlyaoi.com |
+| global18 | Mangazavr | ru | mangazavr.ru | ssl curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328 |
+| global18 | ManhuaScan.Us | en | manhuascan.us | dns curl: (6) Could not resolve host: manhuascan.us |
+| global18 | Manhwa18.app | en | manhwa18.app | dns curl: (6) Could not resolve host: manhwa18.app |
+| global18 | Manhwa18.org | en | manhwa18.org | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global18 | Manhwa68 | en | manhwa68.com | http5xx  |
+| global18 | ManhwaHentai.to | en | manhwahentai.to | ssl curl: (60) schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - Sertifika zinciri g�venilmeyen bi |
+| global18 | ManhwaHub | id | manhwahub.net | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global18 | ManhwaPlus | id | manhwablue.com | dns curl: (6) Could not resolve host: manhwablue.com |
+| global18 | ManyToon | en | manytoon.org | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
+| global18 | MeHentaiVN | vi | www.hentaivnx.autos | cloudflare  |
+| global18 | MoonLoversScan | pt | moonloversscan.com.br | dns curl: (6) Could not resolve host: moonloversscan.com.br |
 | global18 | MuitoHentai | pt |  | unknown  |
-| global18 | MundoHentaiOficial | pt | mundohentaioficial.com | unknown  |
-| global18 | NekoPost | th | www.superdoujin.org | unknown  |
 | global18 | Nhentai World | vi |  | unknown  |
-| global18 | NocturneSummer | pt | nocfsb.com | unknown  |
-| global18 | NoindexScan | pt | noindexscan.com | unknown  |
-| global18 | NovelCrow | en | novelcrow.com | unknown  |
-| global18 | NtrManga | th | www.ntr-manga.com | unknown  |
-| global18 | OmegaScans | en | omegascans.org | unknown  |
-| global18 | Paritehaber | en | www.paritehaber.com | unknown  |
-| global18 | PawManga | en | pawmanga.com | unknown  |
-| global18 | PeachBl | ar | peach-bl.com | unknown  |
-| global18 | Petrotech Society | en | www.petrotechsociety.org | unknown  |
-| global18 | PirulitoRosa | pt | pirulitorosa.site | unknown  |
+| global18 | NovelCrow | en | novelcrow.com | cloudflare  |
+| global18 | PirulitoRosa | pt | pirulitorosa.site | ssl curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x800903 |
 | global18 | PixHentai | id |  | unknown  |
-| global18 | PonyManga | en | ponymanga.com | unknown  |
-| global18 | PornComix.online | en | porncomix.online | unknown  |
-| global18 | PortalYaoi | pt | portalyaoi.com | unknown  |
-| global18 | PrismaHentai | pt | prismahentai.com | unknown  |
-| global18 | PsUnicorn | pt | psunicorn.com | unknown  |
+| global18 | PonyManga | en | ponymanga.com | dns curl: (6) Could not resolve host: ponymanga.com |
+| global18 | PortalYaoi | pt | portalyaoi.com | cloudflare  |
 | global18 | Pururin | en |  | unknown  |
-| global18 | PussySussyToons | pt | pussy.sussytoons.com | unknown  |
-| global18 | Pzykosis666h Fansub | es | lector.pzykosis666hfansub.com | unknown  |
-| global18 | Quả Anh Đào Cuteo | vi | qadcuteo.cc | unknown  |
-| global18 | RawDex | ko | rawdex.net | unknown  |
-| global18 | ReadManhua (Broken) | en | readmanhua.net | unknown  |
+| global18 | PussySussyToons | pt | pussy.sussytoons.com | dns curl: (6) Could not resolve host: pussy.sussytoons.com |
 | global18 | SayHentai | vi |  | unknown  |
-| global18 | ScanHentai | fr | scan-hentai.fr | unknown  |
-| global18 | ScanHentai.Menu | fr | x-manga.org | unknown  |
-| global18 | Seinagi Adulto | es | adulto.seinagi.org.es | unknown  |
-| global18 | SekteDoujin | id | sektedoujin.cc | unknown  |
-| global18 | ShiroDoujin | id | shirodoujin.com | unknown  |
-| global18 | SilenceScan | pt | silencescan.com.br | unknown  |
-| global18 | SumManga | en | summanga.com | unknown  |
-| global18 | SuperDoujin | th | www.superdoujin.org | unknown  |
-| global18 | TankouHentai | pt | tankouhentai.com | unknown  |
+| global18 | ScanHentai | fr | scan-hentai.fr | dns curl: (6) Could not resolve host: scan-hentai.fr |
+| global18 | ScanHentai.Menu | fr | x-manga.org | cloudflare  |
+| global18 | SilenceScan | pt | silencescan.com.br | dns curl: (6) Could not resolve host: silencescan.com.br |
 | global18 | TempleScanEsp | es |  | unknown  |
-| global18 | TenkaiScan | es | falcoscan.net | unknown  |
-| global18 | TheBlank | en | theblank.net | unknown  |
-| global18 | ToomtamManga | th | toomtam-manga.com | unknown  |
-| global18 | ToonCubus | id | www.tooncubus.top | unknown  |
-| global18 | ToonFr | fr | toonfr.com | unknown  |
-| global18 | ToonGod | en | www.toongod.org | unknown  |
-| global18 | Toonily.Me | en | toonily.me | unknown  |
-| global18 | TooniTube | en | toonitube.com | unknown  |
-| global18 | Toonizy | en | toonizy.com | unknown  |
-| global18 | TopComicPorno | es | topcomicporno.net | unknown  |
-| global18 | TraduccionesMoonlight | es | traduccionesmoonlight.com | unknown  |
+| global18 | TheBlank | en | theblank.net | cloudflare  |
+| global18 | ToonFr | fr | toonfr.com | cloudflare  |
+| global18 | ToonGod | en | www.toongod.org | cloudflare  |
+| global18 | TopComicPorno | es | topcomicporno.net | cloudflare  |
 | global18 | TruyenHentai18 | vi |  | unknown  |
-| global18 | TruyenVn | vi | truyenvn.shop | unknown  |
-| global18 | Tumanhwas | es | tumanhwas.club | unknown  |
-| global18 | UniversoHentai | pt | universohentai.com | unknown  |
-| global18 | ValkyrieScan | pt | valkyriescan.com | unknown  |
-| global18 | VerComicsPorno | es | vercomicsporno.com | unknown  |
-| global18 | VerMangasPorno | es | vermangasporno.com | unknown  |
-| global18 | Vermanhwa | es | vermanhwa.com | unknown  |
-| global18 | VillainessScan | pt | villainessscan.xyz | unknown  |
-| global18 | Webtoon.xyz | en | www.webtoon.xyz | unknown  |
-| global18 | WebtoonScan | en | webtoonscan.com | unknown  |
-| global18 | WorldManhwas | id | worldmanhwas.zone | unknown  |
-| global18 | XManhwa | id | www.manhwaden.com | unknown  |
-| global18 | Xxx.RevolutionScantrad | fr | xxx.revolutionscantrad.com | unknown  |
-| global18 | Yaoi.Mobi | en | yaoi.mobi | unknown  |
-| global18 | YaoiHub | en | yaoihub.com | unknown  |
+| global18 | TruyenVn | vi | truyenvn.shop | http5xx  |
+| global18 | Tumanhwas | es | tumanhwas.club | dns curl: (6) Could not resolve host: tumanhwas.club |
+| global18 | VerComicsPorno | es | vercomicsporno.com | cloudflare  |
+| global18 | VerMangasPorno | es | vermangasporno.com | cloudflare  |
+| global18 | Vermanhwa | es | vermanhwa.com | cloudflare  |
+| global18 | VillainessScan | pt | villainessscan.xyz | dns curl: (6) Could not resolve host: villainessscan.xyz |
+| global18 | Webtoon.xyz | en | www.webtoon.xyz | cloudflare  |
+| global18 | WebtoonScan | en | webtoonscan.com | dns curl: (6) Could not resolve host: webtoonscan.com |
+| global18 | Xxx.RevolutionScantrad | fr | xxx.revolutionscantrad.com | dns curl: (6) Could not resolve host: xxx.revolutionscantrad.com |
+| global18 | Yaoi.Mobi | en | yaoi.mobi | dns curl: (6) Could not resolve host: yaoi.mobi |
+| global18 | YaoiHub | en | yaoihub.com | http5xx  |
 | global18 | YaoiMangaOnline | en |  | unknown  |
-| global18 | YaoiScan | en | yaoiscan.com | unknown  |
-| global18 | YcScan | pt | ycscan.com | unknown  |
-| global18 | YugenMangas.lat | es | lectorikigai.acamu.net | unknown  |
-| global18 | YuriLab | id | yurilabs.my.id | unknown  |
-| global18 | YuriLive | pt | yuri.live | unknown  |
+| global18 | YaoiScan | en | yaoiscan.com | cloudflare  |
+| global18 | YcScan | pt | ycscan.com | timeout curl: (28) Operation timed out after 15005 milliseconds with 0 bytes received |
+| global18 | YugenMangas.lat | es | lectorikigai.acamu.net | dns curl: (6) Could not resolve host: lectorikigai.acamu.net |
+| global18 | YuriLab | id | yurilabs.my.id | dns curl: (6) Could not resolve host: yurilabs.my.id |
+| global18 | YuriLive | pt | yuri.live | refused curl: (7) Failed to connect to yuri.live:443 after 180 ms: Could not connect to server |
 | global18 | YuriNeko | vi |  | unknown  |
-| global18 | ZinChanManga.Com | en | zinchangmanga.net | unknown  |
-| global18 | ZScanlation | pt | www.zscanlation.com | unknown  |
+| global18 | ZScanlation | pt | www.zscanlation.com | dns curl: (6) Could not resolve host: www.zscanlation.com |
 | tr | AduManga | tr | adumanga.com | ok Liste boş |
 | tr | AfroditScans | tr | afroditscans.com | ok Liste boş |
 | tr | AlucardScans | tr |  | fail HttpStatusException: . Status=525, URL=[https://alucardscans.com/api/series?sort=views&ord |
 | tr | Anikiga | tr | anikiga.com | ok  |
 | tr | AnisaManga | tr | anisamanga.com | dns curl: (6) Could not resolve host: anisamanga.com |
 | tr | ArazNovel | tr | araznovel.com | ok NotFoundException: . Status=404, URL=[https://araznovel.com/wp-admin/admin-ajax.php] |
-| tr | ArmoniScans | tr | armoniscans.net | timeout curl: (28) Operation timed out after 20479 milliseconds with 0 bytes received |
+| tr | ArmoniScans | tr | armoniscans.net | timeout curl: (28) Operation timed out after 15970 milliseconds with 0 bytes received |
 | tr | AsemiFansub | tr | asemifansub.com | ok Liste boş |
 | tr | AsuraScansTR | tr | asurascans.com.tr | dns curl: (6) Could not resolve host: asurascans.com.tr |
-| tr | AthenaManga | tr | athenamanga.com | ok Liste boş |
+| tr | AthenaManga | tr | athenamanga.com | http Liste boş |
 | tr | Atikrost | tr | www.mangaoku.org | ok SocketException: Connection reset |
 | tr | AyaToon | tr | ayatoon.com | ssl curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_ILLEGAL_MESSAGE (0x80090 |
-| tr | CloverManga | tr | webtoonhatti.me | ok SocketException: Connection reset |
+| tr | CloverManga | tr | webtoonhatti.me | timeout curl: (28) Connection timed out after 15005 milliseconds |
 | tr | CultureSubs | tr | culturesubs.com | dns curl: (6) Could not resolve host: culturesubs.com |
 | tr | DomalFansub | tr | domalfansb.com.tr | ok SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for cer |
 | tr | Elder Manga | tr |  | fail UnsupportedOperationException: Browser is not available |
@@ -1179,7 +684,7 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | tr | GaiaToon | tr | gaiatoon.com | cloudflare  |
 | tr | GarciaManga | tr | garciamanga.com | ok Liste boş |
 | tr | GhostFansub | tr | ghostfansub.co | dns curl: (6) Could not resolve host: ghostfansub.co |
-| tr | GloryManga | tr | mangagezgini.site | ok SocketException: Connection reset |
+| tr | GloryManga | tr | mangagezgini.site | timeout curl: (28) Connection timed out after 15011 milliseconds |
 | tr | GolgeBahcesi | tr | golgebahcesi.com | ok Liste boş |
 | tr | Grimelek | tr | siyahmelek.org | dns curl: (6) Could not resolve host: siyahmelek.org |
 | tr | GuncelManga | tr | guncelmanga.net | ok HttpStatusException: . Status=400, URL=[https://m.slotmurai.cc/wp-admin/admin-ajax.php] |
@@ -1187,14 +692,12 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | tr | HoiFansub | tr | hoifansub.com | ok UnknownHostException: Unable to resolve host "hoifansub.com": No address associated with h |
 | tr | ImparatorManga | tr | www.imparatormanga.com | dns curl: (6) Could not resolve host: www.imparatormanga.com |
 | tr | Jellyring | tr | jellyring.co | dns curl: (6) Could not resolve host: jellyring.co |
-| tr | KabusManga | tr | kabusmanga.com | http5xx HttpStatusException: . Status=522, URL=[https://kabusmanga.com/wp-admin/admin-ajax.php] |
+| tr | KabusManga | tr | kabusmanga.com | timeout curl: (28) Operation timed out after 15010 milliseconds with 0 bytes received |
 | tr | Kedi | tr | kedi.to | dns curl: (6) Could not resolve host: kedi.to |
 | tr | KoreliScans | tr | koreliscans.com | ok SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for cer |
 | tr | LichSubs | tr | www.kuroimanga.com | ok SocketException: Connection reset |
 | tr | LilyumFansub | tr | lilyumfansub.com.tr | dns curl: (6) Could not resolve host: lilyumfansub.com.tr |
-| tr | manga | tr | manga.araznovel.com | timeout curl: (28) Operation timed out after 20006 milliseconds with 0 bytes received |
 | tr | Manga Ball (Turkish) | tr |  | fail IllegalStateException: CSRF token not found |
-| tr | Manga Diyarı | tr | mangadiyari.com | timeout curl: (28) Operation timed out after 20014 milliseconds with 0 bytes received |
 | tr | Manga-TR | tr | manga-tr.com | cloudflare  |
 | tr | MangaAy | tr |  | fail ParseException: Cannot find "#ecommerce-products" at https://manga-ay.com/seriler |
 | tr | Mangacim | tr | mangacim.com.tr | dns curl: (6) Could not resolve host: mangacim.com.tr |
@@ -1207,7 +710,7 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | tr | MangaKazani | tr | mangakazani.com | ok Liste boş |
 | tr | MangaKings | tr | mangakings.com.tr | dns curl: (6) Could not resolve host: mangakings.com.tr |
 | tr | MangaKoleji | tr | mangakoleji.com | ssl curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed |
-| tr | Mangaoku | tr | mangaoku.info | ok Liste boş |
+| tr | Mangaoku | tr | mangaoku.info | timeout curl: (28) Connection timed out after 15002 milliseconds |
 | tr | MangaOkusana | tr | mangaokusana.com | ok Liste boş |
 | tr | MangaOkuTr | tr | mangaokutr.net | dns curl: (6) Could not resolve host: mangaokutr.net |
 | tr | MangaRuhu | tr | mangaruhu.com | ok SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for cer |
@@ -1230,7 +733,7 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | tr | OpiaToon | tr | opiatoon.art | dns curl: (6) Could not resolve host: opiatoon.art |
 | tr | Ori Manga | tr | orimanga.net | http5xx  |
 | tr | PatiManga | tr | www.patimanga.com | ok Liste boş |
-| tr | PiedpiperFansub | tr | piedpiperfansub.me | ok Liste boş |
+| tr | PiedpiperFansub | tr | piedpiperfansub.me | timeout curl: (28) Connection timed out after 15004 milliseconds |
 | tr | PrunusScans | tr | prunusscans.com | dns curl: (6) Could not resolve host: prunusscans.com |
 | tr | Ragnarscans | tr |  | fail SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for cer |
 | tr | Raindrop Fansub | tr | www.raindropteamfan.com | ok Liste boş |
@@ -1242,9 +745,9 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | tr | SadScans | tr |  | cloudflare Cloudflare engelledi, manuel doğrulama gerekli |
 | tr | SeraphManga | tr | www.seraphmanga.com | ok Liste boş |
 | tr | ShadowCeviri | tr | shadowceviri.blogspot.com | ok  |
-| tr | StrayFansub | tr | strayfansub.com | ok SocketException: Connection reset |
+| tr | StrayFansub | tr | strayfansub.com | timeout curl: (28) Connection timed out after 15011 milliseconds |
 | tr | SummerToon | tr | summertoon.co | ok SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for cer |
-| tr | SummerToon | tr | summertoons.net | timeout curl: (28) Operation timed out after 20003 milliseconds with 0 bytes received |
+| tr | SummerToon | tr | summertoons.net | timeout curl: (28) Operation timed out after 15011 milliseconds with 0 bytes received |
 | tr | TarotScans | tr | www.tarotscans.com | ok Liste boş |
 | tr | TempestFansub.Com | tr | tempestscans.net | dns curl: (6) Could not resolve host: tempestscans.net |
 | tr | tempestmangas.com | tr | tempestfansub.net | dns curl: (6) Could not resolve host: tempestfansub.net |
@@ -1253,7 +756,7 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | tr | TilkiScans | tr | www.tilkiscans.com | ok  |
 | tr | TimeNaight | tr | timenaight.org | ok Liste boş |
 | tr | TitanManga | tr | titanmanga.com | cloudflare SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for cer |
-| tr | ToonHane | tr | toonhane.com | http5xx  |
+| tr | ToonHane | tr | toonhane.com | timeout curl: (28) Operation timed out after 15006 milliseconds with 0 bytes received |
 | tr | TrWebtoon | tr |  | fail SocketException: Connection reset |
 | tr | Uzay Manga | tr |  | fail UnsupportedOperationException: Browser is not available |
 | tr | Webtoon Hatti | tr | webtoonhatti.club | cloudflare  |
@@ -1265,7 +768,8 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | tr | ZamanManga | tr | zamanmanga.com | ok SocketException: Connection reset |
 | tr | ZenithScans | tr | zenithscans.com | http5xx  |
 | tr | ZenithScans | tr | zenithscans.com | http5xx HttpStatusException: . Status=503, URL=[https://zenithscans.com/manga/?order=popular&page= |
-| tr18 | AlliedFansub | tr | alliedfansub.net | ok Liste boş |
+| tr18 | AlliedFansub | tr | alliedfansub.net | timeout curl: (28) Connection timed out after 15001 milliseconds |
+| tr18 | AlliedFansub | tr | alliedfansub.net | timeout curl: (28) Connection timed out after 15006 milliseconds |
 | tr18 | Arcura Fansub | tr | arcurafansub.com | cloudflare  |
 | tr18 | ArcuraFansub | tr | arcurafansub.com | cloudflare Zaman aşımı (20s) |
 | tr18 | DeccalScans | tr | fuchscans.com | dns curl: (6) Could not resolve host: fuchscans.com |
@@ -1276,8 +780,8 @@ Bu kaynaklar yayınlanan paketlerde aktif değil; sebebiyle birlikte burada duru
 | tr18 | LaviniaFansub | tr | laviniafansub.site | ok SocketException: Connection reset |
 | tr18 | LunaScans | tr | tuhafscans.com | ok Liste boş |
 | tr18 | Minda Fansub | tr | mindafansub.dev | http5xx  |
-| tr18 | MindaFansub | tr | mindafansub.online | ssl curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328 |
-| tr18 | MoonDaisyScans | tr | moondaisyscans.biz | ok SocketException: Connection reset |
+| tr18 | MindaFansub | tr | mindafansub.online | timeout curl: (28) Connection timed out after 15009 milliseconds |
+| tr18 | MoonDaisyScans | tr | moondaisyscans.biz | timeout curl: (28) Connection timed out after 15014 milliseconds |
 | tr18 | NiveraFansub | tr | niverafansub.org | ok SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for cer |
 | tr18 | PiedPiperFansubyy | tr | piedpiperfansubyy.me | ok Liste boş |
 | tr18 | SarcasmScans | tr | sarcasmscans.com | dns curl: (6) Could not resolve host: sarcasmscans.com |
