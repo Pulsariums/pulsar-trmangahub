@@ -7,8 +7,10 @@ import eu.kanade.tachiyomi.source.model.SChapter
 import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.source.online.HttpSource
 import okhttp3.Headers
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.Response
 import org.json.JSONObject
 import org.jsoup.Jsoup
@@ -74,12 +76,48 @@ class PulsarSource(
     override fun latestUpdatesParse(response: Response): MangasPage = popularMangaParse(response)
 
     // Search
+    // Arama çoğu sitede ?s= ile çalışır; Madara/WordPress sitelerinde arama
+    // admin-ajax.php üzerinden POST gövdesiyle döner (ör. ruyamanga2.com:
+    // action=wp-manga-search-manga, gövde title=one). Bu yüzden adres ve yöntem
+    // catalogue.json'dan gelir.
     override fun searchMangaRequest(page: Int, query: String, filters: FilterList): Request {
-        val searchUrl = "$baseUrl/?s=$query"
-        return Request.Builder().url(searchUrl).headers(headers).build()
+        val apiUrl = config.optString("searchUrl", "")
+        if (apiUrl.isBlank()) {
+            return Request.Builder().url("$baseUrl/?s=$query").headers(headers).build()
+        }
+        val isPost = config.optString("searchMethod", "GET").equals("POST", ignoreCase = true)
+        if (!isPost) {
+            val target = apiUrl.replace("{query}", query)
+            return Request.Builder().url(target).headers(headers).build()
+        }
+        val target = if (page > 1) "$apiUrl&page=$page" else apiUrl
+        val body = config.optString("searchBody", "title={query}").replace("{query}", query)
+        return Request.Builder()
+            .url(target)
+            .headers(headers)
+            .post(body.toRequestBody("application/x-www-form-urlencoded; charset=UTF-8".toMediaType()))
+            .build()
     }
 
-    override fun searchMangaParse(response: Response): MangasPage = popularMangaParse(response)
+    override fun searchMangaParse(response: Response): MangasPage {
+        val arrayKey = config.optString("searchJsonItems", "")
+        if (arrayKey.isBlank()) return popularMangaParse(response)
+        val text = response.body?.string().orEmpty()
+        val arr = runCatching { JSONObject(text).optJSONArray(arrayKey) }.getOrNull()
+            ?: return MangasPage(emptyList(), hasNextPage = false)
+        val urlKey = config.optString("searchJsonUrl", "url")
+        val titleKey = config.optString("searchJsonTitle", "title")
+        val mangas = (0 until arr.length()).mapNotNull { i ->
+            val o = arr.optJSONObject(i) ?: return@mapNotNull null
+            val u = o.optString(urlKey).trim()
+            if (u.isEmpty()) return@mapNotNull null
+            SManga.create().apply {
+                url = relativize(u)
+                title = o.optString(titleKey).trim()
+            }
+        }
+        return MangasPage(mangas, hasNextPage = false)
+    }
 
     // Kototoro ve Mihon istek kurarken baseUrl + manga.url yapar. Mutlak URL
     // verilirse host "site.comhttps" olur (cihaz: www.amangaplanet.com.trhttps).
@@ -111,6 +149,15 @@ class PulsarSource(
 
     override fun pageListRequest(chapter: SChapter): Request =
         Request.Builder().url(absolute(chapter.url)).headers(headers).build()
+
+    // Bazı CDN'ler Referer'sız isteği 403 ile reddediyor (amangaplanet.link).
+    // Görseli bölüm sayfasını Referer vererek istiyoruz.
+    override fun imageRequest(page: Page): Request =
+        Request.Builder()
+            .url(page.imageUrl.orEmpty())
+            .headers(headers)
+            .header("Referer", if (page.url.startsWith("http")) page.url else "$baseUrl/")
+            .build()
 
     // Details
     override fun mangaDetailsParse(response: Response): SManga {
@@ -165,8 +212,9 @@ class PulsarSource(
         val readerSelector = config.optString("readerSelector", "")
         val imageUrls = EngineRegistry.parsePages(doc, readerSelector, baseUrl)
 
+        val chapterUrl = response.request.url.toString()
         return imageUrls.mapIndexed { index, imgUrl ->
-            Page(index, "", imgUrl)
+            Page(index, chapterUrl, imgUrl)
         }
     }
 
