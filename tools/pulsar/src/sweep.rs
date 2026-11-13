@@ -520,9 +520,9 @@ fn sweep(root: &Path, argv: &[String]) -> Result<(), String> {
             continue;
         }
 
-        // Bölümü olan eseri bul: ilk eser 0 bölüm dönerse listedeki sonraki
-        // eserleri dene (en fazla 3). Diğer hata türleri (RUNTIME_FAILURE,
-        // zaman aşımı) eski davranışla aynı: o kaynak o adımda biter.
+        // details hatası (RUNTIME_FAILURE, zaman aşımı dahil) sonraki esere geçirir;
+        // harness imzalı hatalar (suwayomi/NoClassDefFoundError/CloudflareInterceptor)
+        // geçiş yapmaz, o adımda biter.
         const MAX_ESER: usize = 3;
         let attempts = content.len().min(MAX_ESER);
         let mut detail_ok: Option<Value> = None;
