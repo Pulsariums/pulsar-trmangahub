@@ -42,10 +42,10 @@ object EngineRegistry {
             val title = a.text().trim()
                 .ifBlank { a.selectFirst("img[alt]")?.attr("alt")?.trim().orEmpty() }
             if (title.length < 2) continue
-            val img = a.selectFirst("img")
-            val cover = img?.attr("data-src")?.ifBlank { null }
-                ?: img?.attr("data-lazy-src")?.ifBlank { null }
-                ?: img?.attr("src")?.ifBlank { null }
+            val img = a.selectFirst("img") ?: a.parent()?.selectFirst("img")
+            val cover = sequenceOf("data-src", "data-lazy-src", "src")
+                .map { img?.attr(it)?.trim().orEmpty() }
+                .firstOrNull { it.isNotEmpty() && !it.startsWith("data:") }
             seen[key] = ParsedManga(title = title, url = full, coverUrl = cover)
         }
         return seen.values.toList()
@@ -53,10 +53,14 @@ object EngineRegistry {
 
     private val CHAPTER_HINT =
         Regex("""(?:bolum|bölüm|chapter|chap|ch)[-_ ]?(\d+(?:[.,]\d+)?)""", RegexOption.IGNORE_CASE)
-    private val LEADING_NUMBER = Regex("""^(\d+(?:[.,]\d+)?)[-_ ]""")
+    private val CHAPTER_NUM = Regex("""^(\d+(?:[.,]\d+)?)(?:$|[-_].*)""")
+    private val ASSET_PREFIXES = setOf("_next", "assets", "static", "images", "build", "_f", "wp-content", "uploads", "media")
+    private val CHAPTER_ROOTS = setOf("chapter", "bolum", "bölüm", "oku", "read", "episode")
 
     private fun genericChapters(doc: Document, baseUrl: String): List<ParsedChapter> {
-        val seen = LinkedHashMap<String, ParsedChapter>()
+        val byUrl = LinkedHashMap<String, ParsedChapter>()
+        val prefixCount = LinkedHashMap<String, Int>()
+        val urlPrefix = LinkedHashMap<String, String>()
         for (a in doc.select("a[href]")) {
             val raw = a.attr("href").trim()
             if (raw.isEmpty() || raw.startsWith("#")) continue
@@ -64,18 +68,27 @@ object EngineRegistry {
             val path = full.substringAfter("://", full).substringAfter('/', "")
                 .substringBefore('?').substringBefore('#').trim('/')
             val parts = path.split('/')
-            if (parts.size < 3) continue
+            val twoSeg = parts.size == 2 && parts[0].lowercase() in CHAPTER_ROOTS
+            if (parts.size < 3 && !twoSeg) continue
+            if (parts[0].lowercase() in ASSET_PREFIXES) continue
             val last = parts.last().lowercase()
             val numText = CHAPTER_HINT.find(last)?.groupValues?.get(1)
-                ?: LEADING_NUMBER.find(last)?.groupValues?.get(1)
-                ?: continue
-            val num = numText.replace(',', '.').toFloatOrNull() ?: continue
+                ?: CHAPTER_NUM.find(last)?.groupValues?.get(1)
+            val num = numText?.replace(',', '.')?.toFloatOrNull() ?: if (twoSeg) 0f else continue
             val key = full.substringBefore('?').trimEnd('/')
-            if (seen.containsKey(key)) continue
+            if (byUrl.containsKey(key)) continue
+            val prefix = parts.dropLast(1).joinToString("/")
             val name = a.text().trim().ifBlank { parts.last() }
-            seen[key] = ParsedChapter(name = name, url = full, chapterNumber = num, dateUpload = 0L)
+            byUrl[key] = ParsedChapter(name = name, url = full, chapterNumber = num, dateUpload = 0L)
+            urlPrefix[key] = prefix
+            prefixCount[prefix] = (prefixCount[prefix] ?: 0) + 1
         }
-        return seen.values.toList()
+        val best = prefixCount.maxByOrNull { it.value }?.key ?: return emptyList()
+        val picked = byUrl.entries.filter { urlPrefix[it.key] == best }.map { it.value }
+        if (picked.none { it.chapterNumber == 0f }) return picked
+        return picked.mapIndexed { i, ch ->
+            if (ch.chapterNumber == 0f) ch.copy(chapterNumber = (i + 1).toFloat()) else ch
+        }
     }
 
     private val PAGE_FILE = Regex("""/\d+(?:\.\d+)?\.(?:jpe?g|png|webp|avif)$""")
@@ -92,7 +105,11 @@ object EngineRegistry {
                 low.contains("banner") || low.contains("favicon")
             ) continue
             val alt = img.attr("alt").lowercase()
-            val hinted = alt.contains("sayfa") || alt.contains("page") || PAGE_FILE.containsMatchIn(low)
+            val file = low.substringAfterLast('/')
+            val hinted = alt.contains("sayfa") || alt.contains("page") ||
+                file.contains("page") || file.contains("sayfa") ||
+                PAGE_FILE.containsMatchIn(low) ||
+                Regex("""^\d{1,4}[._-]""").containsMatchIn(file)
             if (!hinted) continue
             seen[full] = full
         }

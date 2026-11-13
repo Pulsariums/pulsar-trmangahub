@@ -61,7 +61,7 @@ class PulsarSource(
 
         val mangas = items.map { item ->
             SManga.create().apply {
-                url = item.url
+                url = relativize(item.url)
                 title = item.title
                 thumbnail_url = item.coverUrl
             }
@@ -80,6 +80,19 @@ class PulsarSource(
     }
 
     override fun searchMangaParse(response: Response): MangasPage = popularMangaParse(response)
+
+    // Kototoro ve Mihon istek kurarken baseUrl + manga.url yapar. Mutlak URL
+    // verilirse host "site.comhttps" olur (cihaz: www.amangaplanet.com.trhttps).
+    // Bu yüzden SManga/SChapter url'i GÖRELİ tutulur; farklı host (CDN) olduğu
+    // gibi bırakılır.
+    private fun hostOf(u: String): String =
+        u.substringAfter("://", u).substringBefore('/').removePrefix("www.").lowercase()
+
+    private fun relativize(url: String): String {
+        if (!url.startsWith("http")) return url
+        val path = url.substringAfter("://").substringAfter('/', "")
+        return if (hostOf(url) == hostOf(baseUrl)) "/" + path else url
+    }
 
     // ---- URL birleştirme -------------------------------------------------
     // EngineRegistry MUTLAK URL üretir (https://site/manga/x). HttpSource ise
@@ -122,7 +135,7 @@ class PulsarSource(
 
         return chapters.map { ch ->
             SChapter.create().apply {
-                url = ch.url
+                url = relativize(ch.url)
                 name = ch.name
                 chapter_number = ch.chapterNumber
                 date_upload = ch.dateUpload
