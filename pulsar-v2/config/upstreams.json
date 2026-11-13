@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "upstreams": [
+    {
+      "id": "keiyoushi",
+      "name": "Keiyoushi (Mihon) eklenti indeksi",
+      "kind": "http",
+      "url": "https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.json",
+      "enabled": true
+    },
+    {
+      "id": "nyora-catalogue",
+      "name": "Nyora veri odaklı katalog",
+      "kind": "http",
+      "url": "https://raw.githubusercontent.com/Nyora-Manga/nyora-data-driven/main/catalogue.json",
+      "enabled": true
+    },
+    {
+      "id": "nyora-liveness",
+      "name": "Nyora canlılık damgası",
+      "kind": "http",
+      "url": "https://raw.githubusercontent.com/Nyora-Manga/nyora-data-driven/main/liveness.json",
+      "enabled": true
+    },
+    {
+      "id": "kotatsu-redo",
+      "name": "Kotatsu-Redo parser ağacı",
+      "kind": "git",
+      "url": "https://github.com/Kotatsu-Redo/kotatsu-parsers-redo.git",
+      "enabled": true
+    }
+  ]
+}
