@@ -116,8 +116,14 @@ class PulsarSource(
         val titleKey = config.optString("searchJsonTitle", "title")
         val mangas = (0 until arr.length()).mapNotNull { i ->
             val o = arr.optJSONObject(i) ?: return@mapNotNull null
-            val u = o.optString(urlKey).trim()
-            if (u.isEmpty()) return@mapNotNull null
+            val raw = o.optString(urlKey).trim()
+            if (raw.isEmpty()) return@mapNotNull null
+            val prefix = config.optString("searchJsonPathPrefix", "")
+            val u = if (prefix.isNotEmpty() && !raw.startsWith("http") && !raw.startsWith("/")) {
+                prefix.trimEnd('/') + "/" + raw.trimStart('/')
+            } else {
+                raw
+            }
             SManga.create().apply {
                 url = relativize(u)
                 title = o.optString(titleKey).trim()

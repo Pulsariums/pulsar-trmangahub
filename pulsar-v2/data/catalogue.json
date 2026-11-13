@@ -1261,6 +1261,11 @@
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+        "searchUrl": "https://api.lunarx.to/api/manga/search?query={query}",
+        "searchJsonItems": "manga",
+        "searchJsonUrl": "slug",
+        "searchJsonTitle": "title",
+        "searchJsonPathPrefix": "/manga/",
         "rscChapterUrl": "/manga/{slug}/{number}"
       },
       "verified_by_user": false,
