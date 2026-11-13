@@ -44,6 +44,9 @@ pub struct StatusEntry {
     pub state: String,
     #[serde(default, skip_serializing_if = "Option::is_none")] pub health: Option<Probe>,
     #[serde(default, skip_serializing_if = "Option::is_none")] pub device: Option<Probe>,
+    /// Cihaz testinde ilk düşen adım (list/search/details/chapters/covers/pages).
+    /// "list" düşerse kaynak tamamen ölü; sonraki adımlar kısmi arıza demektir.
+    #[serde(default, skip_serializing_if = "Option::is_none")] pub device_step: Option<String>,
     #[serde(default, skip_serializing_if = "String::is_empty")] pub note: String,
 }
 
@@ -114,6 +117,7 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
                 state: "unknown".to_string(),
                 health: None,
                 device: None,
+                device_step: None,
                 note: String::new(),
             };
             recompute_state(&mut s);
@@ -157,21 +161,43 @@ pub fn record_device(root: &Path, device_path: &Path) -> Result<usize, String> {
         let Some(id) = id else { continue };
         let Some(entry) = file.sources.get_mut(&id.to_string()) else { continue };
         let status = item.get("status").and_then(|v| v.as_str()).unwrap_or("fail").to_string();
-        let detail = item
-            .get("steps")
-            .and_then(|s| s.get("list"))
-            .and_then(|l| l.get("message"))
-            .and_then(|m| m.as_str())
-            .unwrap_or("")
-            .chars()
-            .take(180)
-            .collect::<String>();
-        entry.device = Some(Probe { status, http_code: String::new(), ms: 0, detail, at: at.clone() });
+        // İlk DÜŞEN adım rapora yazılır. Sıra bilinçli: liste adımı kaynağın
+        // tamamen ölü olduğunu gösterir; sayfa hatası ise kaynağın büyük ölçüde
+        // çalıştığını. Raporda ikisini ayırt edebilmek için adım adı korunur.
+        let (step, message) = first_failing_step(&item);
+        let detail = if step.is_empty() { message } else { format!("{step}: {message}") };
+        entry.device = Some(Probe {
+            status,
+            http_code: String::new(),
+            ms: 0,
+            detail: detail.chars().take(180).collect(),
+            at: at.clone(),
+        });
+        entry.device_step = if step.is_empty() { None } else { Some(step.to_string()) };
         recompute_state(entry);
         merged += 1;
     }
     save(root, &file)?;
     Ok(merged)
+}
+
+/// Cihaz raporunda ilk düşen adımı ve mesajını döner (adım yoksa boş).
+/// Sıra sabit: liste adımı kaynağın bütünüyle ölü olduğunu gösterir; alfabetik
+/// sıralama "chapters"ı öne alıp asıl sebebi gizlerdi.
+fn first_failing_step(item: &serde_json::Value) -> (String, String) {
+    const ORDER: [&str; 7] = ["list", "search", "details", "chapters", "covers", "pages", "random"];
+    let Some(steps) = item.get("steps").and_then(|v| v.as_object()) else {
+        return (String::new(), String::new());
+    };
+    for name in ORDER {
+        let Some(step) = steps.get(name) else { continue };
+        let status = step.get("status").and_then(|v| v.as_str()).unwrap_or("");
+        if status == "fail" || status == "cloudflare" {
+            let message = step.get("message").and_then(|v| v.as_str()).unwrap_or("").to_string();
+            return (name.to_string(), message);
+        }
+    }
+    (String::new(), String::new())
 }
 
 fn now() -> String {

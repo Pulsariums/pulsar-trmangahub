@@ -48,7 +48,21 @@ def load_status(repo_dir):
         return json.load(f).get("sources", {})
 
 
-def package_sources(status, suffix):
+def load_dropped_ids(repo_dir):
+    """pulsar merge'in elediği katalog klonlarının id'leri (data/merge-report.json).
+
+    Bu id'ler APK'da artık YOK; indekse yazılırsa istemci olmayan kaynağı
+    listeler. Rapor yoksa (ilk derleme / araç çalışmadıysa) boş küme döner.
+    """
+    path = os.path.join(os.path.dirname(repo_dir), "data", "merge-report.json")
+    try:
+        with open(path, encoding="utf-8") as f:
+            return {str(i) for i in (json.load(f).get("dropped_ids") or [])}
+    except (OSError, ValueError):
+        return set()
+
+
+def package_sources(status, suffix, dropped=()):
     """Yalnız state=active ve paketi eşleşen kaynaklar indekse girer."""
     pkg = suffix.lstrip(".")
     rows = []
@@ -56,6 +70,8 @@ def package_sources(status, suffix):
         if entry.get("state") != "active":
             continue
         if pkg not in (entry.get("packages") or []):
+            continue
+        if str(entry.get("id", "")) in dropped:
             continue
         rows.append({
             "name": entry.get("title") or "",
@@ -143,6 +159,7 @@ def main(repo_dir, flavors="tr,tr18,global,global18"):
     suffixes = ["." + f.strip().removeprefix(".") for f in flavors.split(",")]
 
     status = load_status(repo_dir)
+    dropped_ids = load_dropped_ids(repo_dir)
     index = []
     fingerprint = None
     for suffix in suffixes:
@@ -172,7 +189,7 @@ def main(repo_dir, flavors="tr,tr18,global,global18"):
         index.append({
             "name": meta["name"], "pkg": pkg, "apk": apk,
             "lang": meta["lang"], "code": code, "version": version,
-            "nsfw": meta["nsfw"], "sources": package_sources(status, suffix),
+            "nsfw": meta["nsfw"], "sources": package_sources(status, suffix, dropped_ids),
         })
 
     if not index:

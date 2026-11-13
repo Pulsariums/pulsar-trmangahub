@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T17:07:52Z",
+  "generated": "2026-11-13T17:32:24Z",
   "sources": {
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -125,9 +125,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1141920126157789855": {
       "id": 1141920126157789855,
@@ -481,9 +482,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "details: HttpStatusException: . Status=400, URL=[https://anikiga.com/wp-admin/admin-ajax.php]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "details"
     },
     "1376570003715008387": {
       "id": 1376570003715008387,
@@ -538,9 +540,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: Read error: ssl=0xb4000078fc02dc48: Failure in SSL library, usually a protocol error\nerror:10000410:SSL routines:OPENSSL_internal:SSLV3_ALERT_HANDSHAKE_FAILU",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: Read error: ssl=0xb4000079376d9188: Failure in SSL library, usually a protocol error\nerror:10000410:SSL routines:OPENSSL_internal:SSLV3_ALERT_HANDSHAKE",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1376583637539257459": {
       "id": 1376583637539257459,
@@ -790,9 +793,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"www.epikman.ga\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"www.epikman.ga\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1376684333740686254": {
       "id": 1376684333740686254,
@@ -1251,9 +1255,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "ParseException: Cannot find \"#ecommerce-products\" at https://manga-ay.com/seriler",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLPeerUnverifiedException: Hostname manga-ay.com not verified:\n    certificate: sha256/5FdvnnkyHlmHkygUZQbuMij31w2Cps8tk0fuSPSrmTA=\n    DN: CN=*.web-hosting.com\n    subjectA",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1376874560903382020": {
       "id": 1376874560903382020,
@@ -1422,9 +1427,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1376874560920124220": {
       "id": 1376874560920124220,
@@ -1486,9 +1492,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1376874562419981901": {
       "id": 1376874562419981901,
@@ -1607,9 +1614,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketException: Connection reset",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1376884929619998839": {
       "id": 1376884929619998839,
@@ -2159,9 +2167,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"yaoibar.gay\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"yaoibar.gay\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1377191865874405498": {
       "id": 1377191865874405498,
@@ -2677,9 +2686,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1608878723405981938": {
       "id": 1608878723405981938,
@@ -2703,9 +2713,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: connection closed",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: connection closed",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1608878724154242158": {
       "id": 1608878724154242158,
@@ -2893,9 +2904,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1608891509777540327": {
       "id": 1608891509777540327,
@@ -3209,9 +3221,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "1793420480712657216": {
       "id": 1793420480712657216,
@@ -3746,9 +3759,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "search: Sonuç yok: a, one",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "search"
     },
     "2121025303286850185": {
       "id": 2121025303286850185,
@@ -4088,9 +4102,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"mangakings.com.tr\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"mangakings.com.tr\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "2134596225128838841": {
       "id": 2134596225128838841,
@@ -4259,9 +4274,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"mangaokutr.net\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"mangaokutr.net\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "2134596350520665723": {
       "id": 2134596350520665723,
@@ -4361,9 +4377,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"manga-sehri.com\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"manga-sehri.com\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "2134596439020741272": {
       "id": 2134596439020741272,
@@ -5977,9 +5994,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Zaman aşımı (20s)",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "2424650585843186305": {
       "id": 2424650585843186305,
@@ -6533,9 +6551,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "HttpStatusException: . Status=525, URL=[https://alucardscans.com/api/series?sort=views&order=desc&calculateTotalViews=true&page=1&limit=24]",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: HttpStatusException: . Status=525, URL=[https://alucardscans.com/api/series?sort=views&order=desc&calculateTotalViews=true&page=1&limit=24]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "2757001393088596194": {
       "id": 2757001393088596194,
@@ -6578,9 +6597,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "2795667246194061368": {
       "id": 2795667246194061368,
@@ -7280,9 +7300,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketException: Connection reset",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3154568042786734518": {
       "id": 3154568042786734518,
@@ -7705,9 +7726,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "HttpStatusException: . Status=521, URL=[https://nirvanamanga.com/manga/?order=popular&page=1]",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: HttpStatusException: . Status=521, URL=[https://nirvanamanga.com/manga/?order=popular&page=1]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3443824211052309412": {
       "id": 3443824211052309412,
@@ -7826,9 +7848,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3581619951854792193": {
       "id": 3581619951854792193,
@@ -7883,9 +7906,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3623239322859855998": {
       "id": 3623239322859855998,
@@ -7997,9 +8021,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3691027854447844931": {
       "id": 3691027854447844931,
@@ -8080,9 +8105,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"culturesubs.com\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"culturesubs.com\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3736714740149822308": {
       "id": 3736714740149822308,
@@ -8600,9 +8626,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "IllegalStateException: CSRF token not found",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: IllegalStateException: CSRF token not found",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3758130351063179054": {
       "id": 3758130351063179054,
@@ -8798,9 +8825,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"mangagezginim.com\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"mangagezginim.com\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3758368269838243122": {
       "id": 3758368269838243122,
@@ -8893,9 +8921,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3758484960689134009": {
       "id": 3758484960689134009,
@@ -9014,9 +9043,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"www.mangatilkisi.net\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"www.mangatilkisi.net\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3758899467340376098": {
       "id": 3758899467340376098,
@@ -9040,9 +9070,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "NotFoundException: . Status=404, URL=[https://mangadenizi.net/filterList?page=1&author=&tag=&alpha=&cat=&sortBy=views&asc=false]",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: NotFoundException: . Status=404, URL=[https://mangadenizi.net/filterList?page=1&author=&tag=&alpha=&cat=&sortBy=views&asc=false]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3758907033275771070": {
       "id": 3758907033275771070,
@@ -9299,9 +9330,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "NotFoundException: . Status=404, URL=[https://riddles-with-answers.com/manga/?order=popular&page=1]",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: NotFoundException: . Status=404, URL=[https://riddles-with-answers.com/manga/?order=popular&page=1]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "381484129732438666": {
       "id": 381484129732438666,
@@ -9615,9 +9647,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "NotFoundException: . Status=404, URL=[https://araznovel.com/wp-admin/admin-ajax.php]",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: NotFoundException: . Status=404, URL=[https://araznovel.com/wp-admin/admin-ajax.php]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "3943041137748889772": {
       "id": 3943041137748889772,
@@ -10806,9 +10839,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"hoifansub.com\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Zaman aşımı (20s)",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4118839790320721096": {
       "id": 4118839790320721096,
@@ -10844,9 +10878,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"jellyring.co\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"jellyring.co\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4177200439259800459": {
       "id": 4177200439259800459,
@@ -11885,9 +11920,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4234251772650137494": {
       "id": 4234251772650137494,
@@ -12420,9 +12456,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "HttpStatusException: . Status=400, URL=[https://mugimanga.com/wp-admin/admin-ajax.php]",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: HttpStatusException: . Status=400, URL=[https://mugimanga.com/wp-admin/admin-ajax.php]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4250602956249399538": {
       "id": 4250602956249399538,
@@ -12484,9 +12521,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"nabiscans.com\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"nabiscans.com\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4262606449626957027": {
       "id": 4262606449626957027,
@@ -12738,9 +12776,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4313861447404019709": {
       "id": 4313861447404019709,
@@ -13092,9 +13131,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"ruyamanga.net\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"ruyamanga.net\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4381294723770585814": {
       "id": 4381294723770585814,
@@ -13723,9 +13763,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketException: Connection reset",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4428472468111092856": {
       "id": 4428472468111092856,
@@ -13799,9 +13840,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnsupportedOperationException: Browser is not available",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnsupportedOperationException: Browser is not available",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4463039793384401654": {
       "id": 4463039793384401654,
@@ -13913,9 +13955,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnsupportedOperationException: Browser is not available",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnsupportedOperationException: Browser is not available",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4484868970340545249": {
       "id": 4484868970340545249,
@@ -13970,9 +14013,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "NotFoundException: . Status=404, URL=[https://webtoontr.net/wp-admin/admin-ajax.php]",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: NotFoundException: . Status=404, URL=[https://webtoontr.net/wp-admin/admin-ajax.php]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4491758654893492698": {
       "id": 4491758654893492698,
@@ -14172,9 +14216,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4630545497105384397": {
       "id": 4630545497105384397,
@@ -14286,9 +14331,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4670366393428216076": {
       "id": 4670366393428216076,
@@ -14499,12 +14545,13 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Zaman aşımı (20s)",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4850244828520154280": {
       "id": 4850244828520154280,
@@ -14578,9 +14625,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "4872650919616038499": {
       "id": 4872650919616038499,
@@ -14773,9 +14821,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"tempestfansub.net\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"tempestfansub.net\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "507162270957965065": {
       "id": 507162270957965065,
@@ -15044,9 +15093,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnsupportedOperationException: Browser is not available",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnsupportedOperationException: Browser is not available",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5332408265489266018": {
       "id": 5332408265489266018,
@@ -15208,9 +15258,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"prunusscans.com\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"prunusscans.com\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5443582880216157130": {
       "id": 5443582880216157130,
@@ -15315,9 +15366,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "HttpStatusException: . Status=522, URL=[https://kabusmanga.com/wp-admin/admin-ajax.php]",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Zaman aşımı (20s)",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5508199094423291149": {
       "id": 5508199094423291149,
@@ -15517,9 +15569,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: NotFoundException: . Status=404, URL=[https://riddles-with-answers.com/manga/?order=popular&page=1]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5780269034629766300": {
       "id": 5780269034629766300,
@@ -15562,9 +15615,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketException: Connection reset",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5780610906402649511": {
       "id": 5780610906402649511,
@@ -15771,9 +15825,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: HttpStatusException: Bad Gateway. Status=502, URL=[https://survey-matt.com/wp-admin/admin-ajax.php]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5783895556273349094": {
       "id": 5783895556273349094,
@@ -15873,9 +15928,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5784701058565822220": {
       "id": 5784701058565822220,
@@ -15918,9 +15974,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketException: Connection reset",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5785227396830298855": {
       "id": 5785227396830298855,
@@ -16498,9 +16555,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketException: Connection reset",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5789018501803821785": {
       "id": 5789018501803821785,
@@ -16719,9 +16777,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"mangacim.com.tr\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"mangacim.com.tr\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5789623240607215930": {
       "id": 5789623240607215930,
@@ -16745,9 +16804,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"mangaoku.org.tr\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"mangaoku.org.tr\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5789623240639777024": {
       "id": 5789623240639777024,
@@ -16909,9 +16969,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5789623240954936018": {
       "id": 5789623240954936018,
@@ -17415,9 +17476,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5790948798667472326": {
       "id": 5790948798667472326,
@@ -17460,9 +17522,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: TooManyRequestExceptions: Too man requests",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5791086280610013818": {
       "id": 5791086280610013818,
@@ -17505,9 +17568,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketException: Connection reset",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5791733359941749340": {
       "id": 5791733359941749340,
@@ -17688,9 +17752,10 @@
         "status": "cloudflare",
         "http_code": "",
         "ms": 0,
-        "detail": "Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5794583010975319217": {
       "id": 5794583010975319217,
@@ -18285,9 +18350,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"mangaefendisi.net\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"mangaefendisi.net\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5827014979493050397": {
       "id": 5827014979493050397,
@@ -18392,9 +18458,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLPeerUnverifiedException: Hostname manga-sehri.net not verified:\n    certificate: sha256/4lmc6ec5akxGDGzWQUz4/V4QzWNERSWMK28BBrlo1Sc=\n    DN: CN=*.squarespace.com,O=Squarespace\\,",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLPeerUnverifiedException: Hostname manga-sehri.net not verified:\n    certificate: sha256/4lmc6ec5akxGDGzWQUz4/V4QzWNERSWMK28BBrlo1Sc=\n    DN: CN=*.squarespace.com,O=Squares",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5835717275901038433": {
       "id": 5835717275901038433,
@@ -18418,9 +18485,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: TooManyRequestExceptions: Too man requests",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5835856564559499217": {
       "id": 5835856564559499217,
@@ -18482,9 +18550,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5890559186142010175": {
       "id": 5890559186142010175,
@@ -18496,14 +18565,22 @@
       "packages": [
         "tr"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 1286,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "pages: HttpException: HTTP error 400",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "pages"
     },
     "5895806800779874739": {
       "id": 5895806800779874739,
@@ -18596,9 +18673,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketException: Connection reset",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "594512146449951667": {
       "id": 594512146449951667,
@@ -18691,9 +18769,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "5972281005079028369": {
       "id": 5972281005079028369,
@@ -19482,7 +19561,15 @@
         "ms": 434,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list: Zaman aşımı (20s)",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "6359822944885655295": {
       "id": 6359822944885655295,
@@ -19594,9 +19681,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketException: Connection reset",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "6380263472802307634": {
       "id": 6380263472802307634,
@@ -19772,9 +19860,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "6419734062728044805": {
       "id": 6419734062728044805,
@@ -20506,9 +20595,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "HttpStatusException: . Status=456, URL=[https://manwe.pro/wp-admin/admin-ajax.php]",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: HttpStatusException: . Status=456, URL=[https://manwe.pro/wp-admin/admin-ajax.php]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "673270492982977468": {
       "id": 673270492982977468,
@@ -20841,9 +20931,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketException: Connection reset",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "6946651026380347829": {
       "id": 6946651026380347829,
@@ -21582,9 +21673,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"tempestscans.net\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"tempestscans.net\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "7368085083996674415": {
       "id": 7368085083996674415,
@@ -21608,9 +21700,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "7368107232446028215": {
       "id": 7368107232446028215,
@@ -21722,9 +21815,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "7437503977254350462": {
       "id": 7437503977254350462,
@@ -22157,9 +22251,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "7652509331851274426": {
       "id": 7652509331851274426,
@@ -22221,9 +22316,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"www.imparatormanga.com\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"www.imparatormanga.com\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "7699615627407197318": {
       "id": 7699615627407197318,
@@ -22504,9 +22600,10 @@
         "status": "cloudflare",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "covers: Cloudflare engelledi, manuel doğrulama gerekli",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "covers"
     },
     "7850641826358118318": {
       "id": 7850641826358118318,
@@ -22530,9 +22627,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"timenaight.org\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "7856273789128595632": {
       "id": 7856273789128595632,
@@ -22556,9 +22654,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "7893052437992694291": {
       "id": 7893052437992694291,
@@ -22601,9 +22700,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Zaman aşımı (20s)",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Zaman aşımı (20s)",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "7901110876800051171": {
       "id": 7901110876800051171,
@@ -22786,9 +22886,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "7951393228188674498": {
       "id": 7951393228188674498,
@@ -22995,9 +23096,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"asurascans.com.tr\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"asurascans.com.tr\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "8066929319663682510": {
       "id": 8066929319663682510,
@@ -23299,9 +23401,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "8225768823080191385": {
       "id": 8225768823080191385,
@@ -23325,9 +23428,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: Liste boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "8226934736647195750": {
       "id": 8226934736647195750,
@@ -23351,9 +23455,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketException: Connection reset",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "8242157299877837327": {
       "id": 8242157299877837327,
@@ -23757,9 +23862,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: NotFoundException: . Status=404, URL=[https://quoterivers.com/manga/?order=popular&page=1]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "8527269860460256743": {
       "id": 8527269860460256743,
@@ -23852,9 +23958,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "chapters: Bölüm listesi boş",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "chapters"
     },
     "8587838737476438198": {
       "id": 8587838737476438198,
@@ -23897,9 +24004,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "HttpStatusException: . Status=503, URL=[https://zenithscans.com/manga/?order=popular&page=1]",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: HttpStatusException: . Status=503, URL=[https://zenithscans.com/manga/?order=popular&page=1]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "8599633753611393348": {
       "id": 8599633753611393348,
@@ -23980,9 +24088,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "HttpStatusException: . Status=400, URL=[https://m.slotmurai.cc/wp-admin/admin-ajax.php]",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: HttpStatusException: . Status=400, URL=[https://m.slotmurai.cc/wp-admin/admin-ajax.php]",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "8637660296393393875": {
       "id": 8637660296393393875,
@@ -24689,9 +24798,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"www.yetiskinruyamanga.com\": No address associated with hostname",
-        "at": "2026-11-13T17:00:54Z"
-      }
+        "detail": "list: UnknownHostException: Unable to resolve host \"www.yetiskinruyamanga.com\": No address associated with hostname",
+        "at": "2026-11-13T17:32:24Z"
+      },
+      "device_step": "list"
     },
     "8986677657343345148": {
       "id": 8986677657343345148,
