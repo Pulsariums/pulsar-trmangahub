@@ -107,3 +107,11 @@ Kototoro'nun kendi kaynak testini masaüstünde koşturmak istediğinde ilk duva
 Aynı görsel adresi 10 GET'in ~4'ünde 200, ~6'sında 403 dönüyor. User-Agent (6 varyant), Referer ve çerez değiştirmek sonucu değiştirmiyor; `www.` yolu 404. Yani engel kalıcı bir kimlik kontrolü değil, kaynak taraflı aralıklı reddetme.
 
 Çözüm yeniden deneme: `PulsarSource.client` içine interceptor eklendi (1.6.35). Yalnız `GET` + `403` için en fazla 3 deneme, artan bekleme (250/500/750 ms); POST isteklerine dokunmaz. Kalıcı çözüm değildir ama tek seferlik düşmeleri kapatır.
+
+## 10. 1.6.44–1.6.45 dersleri
+
+- **RSC bölüm dizisi**: Nyx'te bölüm listesi `initialChapters:$R[73]=[$R[74]={slug:"chapter-60",number:60,...}, ...]` biçiminde. Başlık deseni `$R[n]=` önekini kabul etmeli; dizi sınırı köşeli parantez derinliği sayılarak bulunmalı. "İlk `]`" ile kesmek 60 bölümü 0'a düşürüyordu. Ön sınama: indirilmiş HTML üzerinde aynı algoritmayı `python -I -c` ile koştur; slug ve number sayısı 60 çıkmalı.
+- **Cihaz raporu sürümü**: `diag` anahtarı 466efd1'de eklendi, fc53b2f'de silindi. TANI2 satırı içeren rapor ≤ 1.6.34'tür. Yayındaki APK'nın `assets/catalogue.json`'unda `diag` anahtarının yokluğu bunu doğrular. Sürüm numarası repoda tutulmaz (CI run number'ından gelir), o yüzden sha ile bağ kurulur.
+- **Katalog tekilleştirme**: 109 kayıt, 15 mükerrer (aynı domain+lang). `06_prepare_assets.py:138-150` dosya sırasındaki ilk kaydı tutar. Temizlik 109→94; `total_count` alanı da güncellenmeli. Kanıt: CI sonrası index'te paket başına id/ad listeleri birebir aynı (tr 30, tr18 4, global 361, global18 134).
+- **`pulsar sweep`**: `details` HATASI da (harness imzalı hatalar hariç) sıradaki esere geçirir, en fazla 3 eser. `eser` sütunu hangi eserin denendiğini gösterir. 0 bölümlü eser artık "bozuk" sayılmaz (tenshimanga 39 bölüm / 61 sayfa).
+- **Yerel sınama sınırı**: harness yalnız catalogue kaynaklarını sınar; engine kaynakları `newParserInstance(MangaSource)` ABI uyuşmazlığı yüzünden çalışmaz.
