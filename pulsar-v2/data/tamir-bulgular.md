@@ -138,4 +138,29 @@ Amanga: `referer=site: 200` · `referer=chapter: 200` · `no-referer: 403` · `w
 
 ## Karar (ana oturum doldurur)
 
-_(boş)_
+### Uygulananlar
+
+| Bulgu | Değişiklik | Sürüm |
+|---|---|---|
+| A1 TrManga | `mangaDetailsParse` manga url'ini korur (`relativize`) | 1.6.30 |
+| A4/A5 tek parçalı bölüm yolları | `oneSegmentPrefix`: `/<slug>-chapter-N/`, `/<slug>-bolum-N/` | 1.6.30 |
+| RSC bölüm okuyucu | `rscChapters` + `rscChapterUrl` (slept, lunarx) | 1.6.31 |
+| Rüya Manga arama | `searchUrl/searchMethod/searchBody/searchJson*` (admin-ajax POST) | 1.6.31 |
+| Slept kapak 403 | `/api/image-proxy?url=` çözülür, CDN doğrudan kullanılır | 1.6.31 |
+| Amanga 403 | `headersBuilder` tek UA (`removeAll("User-Agent")`) | 1.6.31 |
+| A3 Manga Ball | `chapterApiUrl` şablonu (JSON bölüm API'si) | 1.6.32 |
+| A5/A6 Nyx sayfa | nyxscans `readerSelector` kaldırıldı (kabı olmayan `#readerarea`) | 1.6.32 |
+| Ham metin görselleri | `rawImages`: DOM boşsa inline JSON/Qwik state'ten görsel (xcomic 35, koreli 33 aday) | 1.6.32 |
+| A5 Lunar liste | `rscList`: RSC yükündeki `siteUrl` kartları (90 kart, title.romaji + coverImage.large) | 1.6.33 |
+
+### Bilinen sınırlar (eklenti tarafında çözülemez)
+
+- **Slept Manga sayfalar**: uç nokta `GET /api/chapters/{slug}/{bölüm}/images`, ama gerçek görseller yalnız `x-turnstile-token` (Cloudflare Turnstile) ile dönüyor. Tokensız istek 200 verip 5 adet `/api/watermark` yer tutucusu döndürüyor.
+- **Sunset Manga sayfalar**: şifreli okuyucu (`data-token` + `toon-reader.js`); çözme yolu bulunamadı.
+- **araznovel "manga"**: detay sayfası 5,4 KB / 1 link — sunucu boş kabuk, içerik JS'te.
+- **Manga Kusu / MangaRuhu**: liste adımında `IOException: Connection reset` (bot koruması).
+- **Bayat alan adları**: `ragnarscans.net` → `ragnarscans2.com`, `mangaruhu.com` → `mangaruhu.net` (301); `baseUrl` 1.6.33'te güncellendi, `domain` alanı kimlik için korundu.
+
+### Ölçüm kipi
+
+`diag` anahtarı 5 domainde (webtoonoku, nabicix, mangaball, lunarx, araznovel) duruyor; bu kaynaklarda `chapterListParse` her durumda `TANI2 gen=… html=… rsc=…` atar. Ölçüm bitince anahtarlar kaldırılmalı, yoksa kaynaklar geçemez.

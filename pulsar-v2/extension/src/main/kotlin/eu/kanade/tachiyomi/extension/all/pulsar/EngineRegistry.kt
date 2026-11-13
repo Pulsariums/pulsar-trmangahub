@@ -321,6 +321,69 @@ object EngineRegistry {
     private fun numText(f: Float): String =
         if (f == f.toInt().toFloat()) f.toInt().toString() else f.toString()
 
+    private fun jsonUnescape(s: String): String {
+        if (!s.contains('\\')) return s
+        val sb = StringBuilder()
+        var i = 0
+        while (i < s.length) {
+            val c = s[i]
+            if (c == '\\' && i + 1 < s.length) {
+                when (s[i + 1]) {
+                    'u' -> {
+                        if (i + 5 < s.length) {
+                            sb.append(s.substring(i + 2, i + 6).toIntOrNull(16)?.toChar() ?: ' ')
+                            i += 6
+                            continue
+                        }
+                        sb.append(s[i + 1])
+                        i += 2
+                    }
+                    'n' -> { sb.append('\n'); i += 2 }
+                    't' -> { sb.append('\t'); i += 2 }
+                    'r' -> { sb.append('\r'); i += 2 }
+                    '"' -> { sb.append('"'); i += 2 }
+                    '\\' -> { sb.append('\\'); i += 2 }
+                    '/' -> { sb.append('/'); i += 2 }
+                    else -> { sb.append(s[i + 1]); i += 2 }
+                }
+            } else {
+                sb.append(c)
+                i++
+            }
+        }
+        return sb.toString()
+    }
+
+    /**
+     * Kartlar DOM'da <a> olarak yoksa RSC yükündeki siteUrl nesnelerinden üretir.
+     * lunarx.to: {"title":{"romaji":…},"coverImage":{"large":…},"siteUrl":"/manga/<id>"}
+     */
+    fun rscList(html: String, baseUrl: String): List<ParsedManga> {
+        val raw = rscText(html).replace("\\\"", "\"")
+        if (!raw.contains("\"siteUrl\"")) return emptyList()
+        val siteRe = Regex("\"siteUrl\":\"(/[^\"]+)\"")
+        val titleRe = Regex("\"title\":\\{\"(?:romaji|english|native)\":\"((?:[^\"\\\\]|\\\\.)*)\"")
+        val coverRe = Regex("\"coverImage\":\\{\"large\":\"((?:[^\"\\\\]|\\\\.)*)\"")
+        val seen = LinkedHashMap<String, ParsedManga>()
+        for (chunk in raw.split("{\"id\":\"")) {
+            val site = siteRe.find(chunk)?.groupValues?.get(1) ?: continue
+            if (!site.contains("/manga/")) continue
+            val key = site
+            if (seen.containsKey(key)) continue
+            val title = titleRe.find(chunk)?.groupValues?.get(1)
+                ?.let { jsonUnescape(it) }?.trim().orEmpty()
+                .ifBlank { site.trimEnd('/').substringAfterLast('/') }
+            val cover = coverRe.find(chunk)?.groupValues?.get(1)
+                ?.let { jsonUnescape(it) }?.trim().orEmpty().ifBlank { null }
+            seen[key] = ParsedManga(
+                title = title,
+                url = baseUrl.trimEnd('/') + site,
+                coverUrl = cover,
+            )
+        }
+        return seen.values.toList()
+    }
+
     /**
      * RSC yükündeki "chapters" dizisinden bölüm üretir.
      * template: "/manga/{slug}/{number}" gibi; {slug} istek URL'sinin son parçası.

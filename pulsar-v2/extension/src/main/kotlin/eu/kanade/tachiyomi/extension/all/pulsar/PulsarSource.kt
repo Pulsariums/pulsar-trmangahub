@@ -66,6 +66,7 @@ class PulsarSource(
         val doc = Jsoup.parse(html, baseUrl)
         val itemSelector = config.optString("itemSelector", "")
         val items = EngineRegistry.parseList(doc, itemSelector, baseUrl)
+            .ifEmpty { EngineRegistry.rscList(html, baseUrl) }
 
         val mangas = items.map { item ->
             SManga.create().apply {
