@@ -1234,10 +1234,15 @@
         "searchJsonUrl": "slug",
         "searchJsonTitle": "title",
         "searchJsonPathPrefix": "/manga/",
-        "rscChapterUrl": "/manga/{slug}/{number}",
-        "pageApiUrl": "https://api.lunarx.to/api/manga/{1}/{2}",
+        "pageApiUrl": "https://api.lunarx.to/api/manga/{1}/{2}?lang=tr",
         "pageApiIdPattern": "^(?:https?://[^/]+)?/manga/([^/]+)/([0-9.]+)/?$",
-        "pageApiItems": "data.images"
+        "pageApiItems": "data.images",
+        "chapterApiUrl": "https://api.lunarx.to/api/manga/{id}",
+        "chapterApiIdPattern": "^(?:https?://[^/]+)?/manga/([^/]+)/?$",
+        "chapterApiItems": "data",
+        "chapterApiFieldNumber": "chapter",
+        "chapterApiUrlTemplate": "/manga/{id}/{value}",
+        "chapterApiPreferLang": "tr"
       },
       "verified_by_user": false,
       "origins": [
