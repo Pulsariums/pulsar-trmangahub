@@ -131,7 +131,14 @@ fn embed(o: &Opts) -> Result<(), String> {
         .collect();
     if let Some(sources) = status_json.get("sources").and_then(|v| v.as_object()) {
         for (id, e) in sources {
-            if e.get("state").and_then(|v| v.as_str()) != Some("active") {
+            let is_active = e.get("state").and_then(|v| v.as_str()) == Some("active");
+            let marked_sorun = e
+                .get("sorun")
+                .and_then(|v| v.as_str())
+                .map(|s| !s.trim().is_empty())
+                .unwrap_or(false);
+            // Elle sorunlu isaretli kaynak, state'i ne olursa olsun gomulur.
+            if !is_active && !marked_sorun {
                 continue;
             }
             if dropped.contains(id) {

@@ -23,7 +23,7 @@ internal object PulsarData {
 
     private const val TR18_SORUNLU_IDS = ""
 
-    private const val TR_SORUNLU_IDS = ""
+    private const val TR_SORUNLU_IDS = "3239581495078724965,3942956575215849264,4234251772225348094,6086089492503336323,7470363989556742895"
 
 
     private fun String.toIdSet(): Set<String> =
