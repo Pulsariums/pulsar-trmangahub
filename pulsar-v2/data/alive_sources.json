@@ -2286,5 +2286,24 @@
     ],
     "verified_by_user": false,
     "merged_variant_count": 1
+  },
+  {
+    "id": "kencomics.com",
+    "brand": "kencomics",
+    "name": "KenComics",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "kencomics.com",
+    "baseUrl": "https://kencomics.com",
+    "altDomains": [
+      "kenscans.com"
+    ],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
   }
 ]

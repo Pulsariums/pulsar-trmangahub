@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "generated_at": "2026-10-16T10:45:41Z",
-  "total_count": 97,
+  "total_count": 98,
   "languages": [
     "tr"
   ],
@@ -2057,16 +2057,17 @@
         },
         "engine": "mangareader",
         "listPath": "/manga",
-        "itemSelector": "div.bsx",
-        "chapterSelector": "div.eph-num a",
-        "readerSelector": "div#readerarea img"
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "div.chapter-item",
+        "readerSelector": "div.page-break img"
       },
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index",
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "timenaight.org",
@@ -2174,7 +2175,8 @@
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "webtoontr.net",
@@ -2266,7 +2268,8 @@
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "mangamac.com",
@@ -2286,7 +2289,29 @@
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index"
-      ]
+      ],
+      "selector_verified": true
+    },
+    {
+      "id": "kencomics.com",
+      "name": "KenComics",
+      "lang": "tr",
+      "nsfw": 0,
+      "domain": "kencomics.com",
+      "baseUrl": "https://kencomics.com",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "/",
+        "itemSelector": "figure.card-group",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": "img[data-reader-page-image]"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "keiyoushi_index"
+      ],
+      "selector_verified": true
     }
   ]
 }

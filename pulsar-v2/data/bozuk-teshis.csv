@@ -13,3 +13,39 @@ manga-tr.com,ddos-guard,"DDoS-Guard 403; tarayici JS/cerezi olmadan acilmiyor",c
 mangaruhu.com,js-api,".com -> .net; bolum HTML'inde yayin gorseli yok, 9 REST uc denemesi 403/404; seciciyle cozulmez","curl bolum: img=6 hepsi logo/avatar, ts_reader=0, classli img=0",.work/tani/mangaruhu.com-sayfa.md,ana oturum + ajan raporu
 sleptmanga.com.tr,js-api,"sayfa listesi /api/chapter/<id>; uygulama anahtari istiyor, curl 403 API Access Denied","curl: chapter HTML img=5 hepsi susleme; API 3 farkli header ile 403",.work/tani/sleptmanga.com.tr-sayfa.md,ana oturum curl ile dogrulandi
 lunarx.to,json-api,"sayfa listesi ayri API: GET api.lunarx.to/api/manga/{slug}/{number} -> data.images[]; PulsarSource'a pageApiUrl/pageApiIdPattern/pageApiItems eklendi, config yazildi","curl chapter: img=1 banner, self.__next_f=2; API 200, data.images 21 tam jpg URL",.work/tani/lunarx.to-sayfa.md + ana oturum curl,config+kod degisti; derleme/cihaz testi YAPILMADI
+tarotscans.com,secici-duzeltildi,"liste div.page-item-detail 10, bolum div.chapter-item 20, sayfa div.page-break img 10 (data-src)",curl 2026-11-15: /manga 10 kart; detay 20 chapter-item; bolum 10 page-break img,ana oturum curl,ana oturum dogruladi
+kencomics.com,secici-duzeltildi,"kenscans.com -> kencomics.com; liste figure.card-group 60, bolum a[href*=/chapter-] 9+, sayfa img[data-reader-page-image] 47",curl 2026-11-15: ana sayfa 60 figure.card-group; detay 9 chapter link; bolum 47 data-reader-page-image,ana oturum curl,ana oturum dogruladi
+manga.adonisfansub.com,js-api,Bolum sayfasi statik DOMda sayfa gorseli yok; yalniz logo/menu img,curl 2026-11-15: bolum HTML 62KB; page-break/reading-content/readerarea 0; img 39 hepsi site sablonu,ana oturum curl,ana oturum dogruladi
+afroditscans.com,js-api,Liste a.group 20 ve bolum 42 DOMda var; sayfa gorselleri istemci tarafinda,curl 2026-11-15: bolum HTML 35KB; page-break/readerarea 0; img 2,ana oturum curl,ana oturum dogruladi
+golgebahcesi.com,js-render,Next.js reader-stage; bolum ve sayfa icerigi SSR DOMda yok,curl 2026-11-15: bolum HTML 174KB; reader-stage 1; sayfa img yok,ana oturum curl,ana oturum dogruladi
+tuhafscans.com,js-api,Bolum sayfasi 412KB ama ts_reader 0; sayfa gorselleri JSON/istekle geliyor,curl 2026-11-15: ts_reader 0; page-break/reading-content 0; img yalniz logo/avatar,ana oturum curl,ana oturum dogruladi
+madarascans.net,js-api,Bolum sayfasinda ts_reader yok; yalniz 3 img (logo),curl 2026-11-15: chapter-106 HTML 78KB; ts_reader 0; img 3,ana oturum curl,ana oturum dogruladi
+www.mangadenizi.net,eksik-dom,Detay sayfasinda 1 bolum linki; liste 15 manga-card,curl 2026-11-15: /manga 16 link; detay href*bolum 1,ana oturum curl,ana oturum dogruladi
+anikiga.com,js-api,Liste 12 page-item-detail; detayda 2 bolum linki (Madara chapter AJAX 400),curl 2026-11-15: /manga 12 kart; detay href*bolum 2,ana oturum curl,ana oturum dogruladi
+www.gafeland.com,js-api,Liste 24 ymk-card-title-link; detayda 3 chapter-item (tembel yukleme),curl 2026-11-15: detay chapter-item 3; bolum sayfasi img 14 data-src 12,ana oturum curl,ana oturum dogruladi
+www.patimanga.com,js-api,Liste 24 ymk-card-title-link; Gafeland ile ayni tema,curl 2026-11-15: liste 24 kart; detay olculmedi,ana oturum curl,KISMEN: detay olculmedi
+webtoontr.net,js-render,/manga 200 ama seri linki 0,"curl 2026-11-15: /manga HTTP 200, href /manga/<slug> 0",ana oturum curl,ana oturum dogruladi
+mugimanga.com,js-render,/manga 200 ama seri linki 0,"curl 2026-11-15: /manga HTTP 200, kart 0",ana oturum curl,ana oturum dogruladi
+guncelmanga.net,js-render,/manga 200 ama seri linki 0,"curl 2026-11-15: /manga HTTP 200, kart 0",ana oturum curl,ana oturum dogruladi
+mangawt.com,js-render,Ana sayfa 4KB JS kabugu; /manga seri linki 0,curl 2026-11-15: home 4075B; /manga kart 0,ana oturum curl,ana oturum dogruladi
+araznovel.com,js-render,Ana sayfa 7.5KB kabuk; /manga kart 0,curl 2026-11-15: home 7501B; /manga kart 0,ana oturum curl,ana oturum dogruladi
+asemifansub.com,js-render,/manga 200 ama seri linki 0,"curl 2026-11-15: /manga HTTP 200, kart 0",ana oturum curl,ana oturum dogruladi
+alterkaiscans.my.id,js-render,Liste DOMda yok; bolumler Nuxt verisinde,curl 2026-11-15: /manga kart 0; onceki teshis __NUXT_DATA__,ana oturum curl,ana oturum dogruladi
+mangakazani.com,js-challenge,Redirecting... JS bot challenge; manga icerigi yok,"curl 2026-11-15: title Redirecting..., /.IGV0hOcNus... challenge",ana oturum curl,ana oturum dogruladi
+www.noxscans.com,js-challenge,Redirecting... JS bot challenge,"curl 2026-11-15: title Redirecting..., ayni challenge",ana oturum curl,ana oturum dogruladi
+mangatr.app,js-challenge,Redirecting... JS bot challenge,"curl 2026-11-15: title Redirecting..., ayni challenge",ana oturum curl,ana oturum dogruladi
+www.raindropteamfan.com,bot-koruma,Bot Verification sayfasi,curl 2026-11-15: title Bot Verification,ana oturum curl,ana oturum dogruladi
+piedpiperfansubyy.me,bot-koruma,JS cerez/JWT challenge (Loading...),"curl 2026-11-15: title Loading..., ?ch=1&js=JWT",ana oturum curl,ana oturum dogruladi
+www.seraphmanga.com,bot-koruma,Kok istek HTTP 429 (rate limit),curl 2026-11-15: home 429 17B,ana oturum curl,ana oturum dogruladi
+garciamanga.com,olu-park,Account Suspended,curl 2026-11-15: title Account Suspended,ana oturum curl,ana oturum dogruladi
+mangaokusana.com,olu-park,Coming Soon,curl 2026-11-15: title Coming Soon,ana oturum curl,ana oturum dogruladi
+www.guildknives.com,olu-park,/lander yonlendirmesi (park),"curl 2026-11-15: 114B, window.location=/lander",ana oturum curl,ana oturum dogruladi
+koreliscans.com,ssl-zincir,Sunucu ara sertifikayi gondermiyor; Android trust anchor bulamiyor,openssl s_client: Verify return code 20 (unable to get local issuer certificate); cihaz: SSLHandshakeException,ana oturum openssl,ana oturum dogruladi
+milascans.tr,ssl-zincir,Eksik sertifika zinciri,openssl s_client: Verify return code 20; cihaz MILASUB SSLHandshakeException,ana oturum openssl,ana oturum dogruladi
+laviniafansub.site,ssl-zincir,Eksik sertifika zinciri,openssl s_client: Verify return code 20; cihaz LAVINIAFANSUB SocketException/SSL,ana oturum openssl,ana oturum dogruladi
+www.kuroimanga.com,ssl-supheli,Zincir openssl ile saglam; cihaz hatasi bayat olabilir,openssl: Verify return code 0; cihaz KUROIMANGA/LICHSUBS SSLHandshakeException,ana oturum openssl,cihazda yeniden test gerekli
+niverafansub.org,ssl-supheli,Zincir openssl ile saglam; engine cihazda SSL hatasi verdi,openssl: code 0; cihaz NIVERAFANSUB SSLHandshakeException,ana oturum openssl,cihazda yeniden test gerekli
+zamanmanga.com,ssl-supheli,Zincir saglam; cihaz hatasi bayat olabilir,openssl: code 0; cihaz ZAMANMANGA SSLHandshakeException,ana oturum openssl,cihazda yeniden test gerekli
+summertoon.co,ssl-supheli,Zincir saglam,openssl: code 0; cihaz SUMMERTOON SSLHandshakeException,ana oturum openssl,cihazda yeniden test gerekli
+www.mangaoku.org,ssl-supheli,Zincir saglam,openssl: code 0; cihaz ATIKROST SSLHandshakeException,ana oturum openssl,cihazda yeniden test gerekli
+snscoeurturkey.blogspot.com,ssl-supheli,Zincir saglam,openssl: code 0; cihaz SNSCOEURTURKEY SSLHandshakeException,ana oturum openssl,cihazda yeniden test gerekli

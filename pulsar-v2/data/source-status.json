@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14T19:17:31Z",
+  "generated": "2026-11-14T21:07:01Z",
   "sources": {
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -357,7 +357,14 @@
       "packages": [
         "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 2026,
+        "detail": "",
+        "at": "2026-11-14T21:07:01Z"
+      }
     },
     "1336513517169247551": {
       "id": 1336513517169247551,
@@ -9133,6 +9140,25 @@
         "ms": 15034,
         "detail": "curl: (28) Connection timed out after 15006 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      }
+    },
+    "3789389920063824891": {
+      "id": 3789389920063824891,
+      "kind": "catalogue",
+      "title": "KenComics",
+      "lang": "tr",
+      "nsfw": 0,
+      "domain": "kencomics.com",
+      "packages": [
+        "tr"
+      ],
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 1080,
+        "detail": "",
+        "at": "2026-11-14T21:07:01Z"
       }
     },
     "3790686809102889845": {
@@ -22179,9 +22205,9 @@
       "health": {
         "status": "ok",
         "http_code": "200",
-        "ms": 1147,
+        "ms": 1975,
         "detail": "",
-        "at": "2026-11-13T17:07:52Z"
+        "at": "2026-11-14T21:07:01Z"
       },
       "device": {
         "status": "fail",

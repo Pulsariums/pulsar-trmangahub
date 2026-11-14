@@ -46,16 +46,20 @@ struct Opts {
     map: PathBuf,
     catalogue: PathBuf,
     patches: PathBuf,
+    status: PathBuf,
     out: PathBuf,
     report: PathBuf,
     dry: bool,
 }
+
+const STATUS_REL: &str = "pulsar-v2/data/source-status.json";
 
 fn parse_args(root: &Path, argv: &[String]) -> Result<Opts, String> {
     let mut o = Opts {
         map: root.join(MAP_REL),
         catalogue: root.join(CAT_REL),
         patches: root.join(PATCH_REL),
+        status: root.join(STATUS_REL),
         out: root.join(CAT_REL),
         report: root.join(REPORT_REL),
         dry: false,
@@ -66,6 +70,7 @@ fn parse_args(root: &Path, argv: &[String]) -> Result<Opts, String> {
             "--map" => o.map = next_path(argv, &mut i, "--map")?,
             "--catalogue" => o.catalogue = next_path(argv, &mut i, "--catalogue")?,
             "--patches" => o.patches = next_path(argv, &mut i, "--patches")?,
+            "--status" => o.status = next_path(argv, &mut i, "--status")?,
             "--out" => o.out = next_path(argv, &mut i, "--out")?,
             "--report" => o.report = next_path(argv, &mut i, "--report")?,
             "--dry-run" => o.dry = true,
@@ -83,14 +88,41 @@ fn next_path(argv: &[String], i: &mut usize, what: &str) -> Result<PathBuf, Stri
         .ok_or_else(|| format!("{what} için yol gerekli"))
 }
 
+/// Yayında sayılan motor id'leri: state=active veya elle "sorun" işaretli.
+/// Dosya yoksa boş küme döner; merge o zaman eski davranışı (tüm motorlar
+/// yayındaymış gibi) uygular.
+fn published_ids(path: &Path) -> Option<BTreeSet<i64>> {
+    let text = std::fs::read_to_string(path).ok()?;
+    let v = serde_json::from_str::<Value>(&text).ok()?;
+    let mut out = BTreeSet::new();
+    if let Some(sources) = v.get("sources").and_then(|s| s.as_object()) {
+        for (id, e) in sources {
+            let active = e.get("state").and_then(|s| s.as_str()) == Some("active");
+            let sorun = e.get("sorun").and_then(|s| s.as_str()).map(|s| !s.trim().is_empty()).unwrap_or(false);
+            if active || sorun {
+                if let Ok(n) = id.parse::<i64>() { out.insert(n); }
+            }
+        }
+    }
+    Some(out)
+}
+
 /// (host, lang, nsfw) anahtarları — katalogda klonu varsa düşürülecek motor kümesi.
-fn engine_keys(map: &Value) -> BTreeMap<(String, String, i64), String> {
+fn engine_keys(map: &Value, published: &Option<BTreeSet<i64>>) -> BTreeMap<(String, String, i64), (String, bool)> {
     let mut keys = BTreeMap::new();
     let engine = map.get("engine").and_then(|v| v.as_array()).cloned().unwrap_or_default();
     for row in engine {
         if row.get("broken").and_then(|v| v.as_bool()).unwrap_or(false) {
             continue;
         }
+        // Yayında OLMAYAN motor (cihazda düşmüş, izin listesinde yok) klonu
+        // düşürmemeli. Yalnız seçicisi doğrulanmış katalog kaydı motorun
+        // yerine geçebilir; doğrulanmamış varsayılan config yayına girmez.
+        let id = row.get("id").and_then(|v| v.as_i64()).unwrap_or(0);
+        let is_published = match published {
+            Some(pub_ids) => id == 0 || pub_ids.contains(&id),
+            None => true,
+        };
         let host = bare(row.get("domain").and_then(|v| v.as_str()).unwrap_or(""));
         if host.is_empty() {
             continue;
@@ -104,7 +136,7 @@ fn engine_keys(map: &Value) -> BTreeMap<(String, String, i64), String> {
             .or_else(|| row.get("name").and_then(|v| v.as_str()))
             .unwrap_or("")
             .to_string();
-        keys.insert((host, lang, nsfw), title);
+        keys.insert((host, lang, nsfw), (title, is_published));
     }
     keys
 }
@@ -179,7 +211,8 @@ fn merge(_root: &Path, opts: &Opts) -> Result<ExitCode, String> {
         _ => return Err("catalogue.json beklenmeyen biçimde".into()),
     };
 
-    let engines = engine_keys(&map);
+    let published = published_ids(&opts.status);
+    let engines = engine_keys(&map, &published);
     let mirrors = mirrors_by_domain(&patches);
 
     let mut dropped: Vec<Value> = Vec::new();
@@ -199,16 +232,21 @@ fn merge(_root: &Path, opts: &Opts) -> Result<ExitCode, String> {
         let lang = obj.get("lang").and_then(|v| v.as_str()).unwrap_or("all").to_lowercase();
         let nsfw = obj.get("nsfw").and_then(|v| v.as_i64()).unwrap_or(0);
 
-        if let Some(engine_title) = engines.get(&(host.clone(), lang.clone(), nsfw)) {
-            dropped_ids.push(pulsar_id(&format!("pulsar/{raw_domain}/{lang}")));
-            dropped.push(json!({
-                "name": obj.get("name").cloned().unwrap_or(Value::Null),
-                "domain": host,
-                "lang": lang,
-                "nsfw": nsfw,
-                "kept": engine_title,
-            }));
-            continue;
+        if let Some((engine_title, engine_published)) = engines.get(&(host.clone(), lang.clone(), nsfw)) {
+            let selector_verified = obj.get("selector_verified").and_then(|v| v.as_bool()).unwrap_or(false);
+            // Motor yayındaysa katalog klonu her zaman düşer. Motor yayında
+            // değilse yalnız seçicisi ölçülmüş (selector_verified) klon kalır.
+            if *engine_published || !selector_verified {
+                dropped_ids.push(pulsar_id(&format!("pulsar/{raw_domain}/{lang}")));
+                dropped.push(json!({
+                    "name": obj.get("name").cloned().unwrap_or(Value::Null),
+                    "domain": host,
+                    "lang": lang,
+                    "nsfw": nsfw,
+                    "kept": engine_title,
+                }));
+                continue;
+            }
         }
 
         obj.remove("mirrors");
