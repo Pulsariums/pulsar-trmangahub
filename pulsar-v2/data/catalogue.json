@@ -365,7 +365,13 @@
         "listPath": "/manga",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+        "listJsonUrl": "https://mangadiyari.com/api/series?page={page}",
+        "listJsonItems": "series",
+        "listJsonTitle": "title",
+        "listJsonUrlField": "slug",
+        "listJsonUrlTemplate": "/seri/{slug}",
+        "listJsonCover": "cover_url"
       },
       "verified_by_user": true,
       "origins": [
@@ -489,7 +495,13 @@
         "listPath": "/manga",
         "itemSelector": "div.page-item-detail, div.manga",
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
+        "readerSelector": "div.page-break img, div.reading-content img",
+        "listJsonUrl": "https://mangawt.com/api/mangas?page={page}",
+        "listJsonItems": "mangas",
+        "listJsonTitle": "title",
+        "listJsonUrlField": "slug",
+        "listJsonUrlTemplate": "/manga/{slug}",
+        "listJsonCover": "coverUrl"
       },
       "verified_by_user": true,
       "origins": [

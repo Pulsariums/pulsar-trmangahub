@@ -71,12 +71,21 @@ class PulsarSource(
 
     // Popular Manga
     override fun popularMangaRequest(page: Int): Request {
+        // Bazı siteler listeyi HTML yerine JSON API'de veriyor (mangadiyari, mangawt).
+        val listJsonUrl = config.optString("listJsonUrl", "")
+        if (listJsonUrl.isNotBlank()) {
+            val target = listJsonUrl.replace("{page}", page.toString())
+            return Request.Builder().url(target).headers(headers).build()
+        }
         val listPath = config.optString("listPath", "/manga").trimStart('/')
         val url = if (page > 1) "$baseUrl/$listPath?page=$page" else "$baseUrl/$listPath"
         return Request.Builder().url(url).headers(headers).build()
     }
 
     override fun popularMangaParse(response: Response): MangasPage {
+        if (config.optString("listJsonUrl", "").isNotBlank()) {
+            return jsonListParse(response)
+        }
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
         val itemSelector = config.optString("itemSelector", "")
@@ -88,6 +97,31 @@ class PulsarSource(
                 url = relativize(item.url)
                 title = item.title
                 thumbnail_url = realImageUrl(item.coverUrl)
+            }
+        }
+        return MangasPage(mangas, hasNextPage = mangas.size >= 10)
+    }
+
+    // JSON liste: config'teki alan adlarıyla eşlenir; url'ler GÖRELİ üretilir.
+    private fun jsonListParse(response: Response): MangasPage {
+        val text = response.body?.string().orEmpty()
+        val root = runCatching { JSONObject(text) }.getOrNull()
+            ?: return MangasPage(emptyList(), hasNextPage = false)
+        val itemsKey = config.optString("listJsonItems", "")
+        val arr = if (itemsKey.isBlank()) root.optJSONArray("data") else root.optJSONArray(itemsKey)
+            ?: return MangasPage(emptyList(), hasNextPage = false)
+        val titleKey = config.optString("listJsonTitle", "title")
+        val slugKey = config.optString("listJsonUrlField", "slug")
+        val template = config.optString("listJsonUrlTemplate", "")
+        val coverKey = config.optString("listJsonCover", "")
+        val mangas = (0 until arr.length()).mapNotNull { i ->
+            val o = arr.optJSONObject(i) ?: return@mapNotNull null
+            val slug = o.optString(slugKey).trim()
+            if (slug.isEmpty() || template.isBlank()) return@mapNotNull null
+            SManga.create().apply {
+                url = template.replace("{slug}", slug)
+                title = o.optString(titleKey).trim()
+                thumbnail_url = if (coverKey.isBlank()) null else realImageUrl(o.optString(coverKey))
             }
         }
         return MangasPage(mangas, hasNextPage = mangas.size >= 10)
