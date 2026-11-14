@@ -86,7 +86,12 @@ pub fn packages_for(e: &SourceEntry, sorun: &str) -> Vec<String> {
 pub fn recompute_state(e: &mut StatusEntry) {
     let device = e.device.as_ref().map(|p| p.status.as_str()).unwrap_or("");
     let health = e.health.as_ref().map(|p| p.status.as_str()).unwrap_or("");
-    e.state = if device == "fail" || device == "cloudflare" {
+    let step = e.device_step.as_deref().unwrap_or("");
+    // Cihazda liste adımı düşerse kaynak uygulamada hiç açılmıyor: tek kesin ölüm kanıtı.
+    // Sonraki adımların (details/chapters/covers/pages/search) düşmesi kaynağın
+    // listelendiğini ama bir alt adımının bozuk olduğunu gösterir; kaynak yayında kalır.
+    let list_dead = (device == "fail" || device == "cloudflare") && (step == "list" || step.is_empty());
+    e.state = if list_dead {
         "pending".to_string()
     } else if health == "ok" {
         "active".to_string()
