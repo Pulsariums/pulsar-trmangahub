@@ -28,6 +28,7 @@ pub struct CatEntry {
     #[serde(default)] pub domain: String,
     #[serde(default)] pub lang: String,
     #[serde(default)] pub sorun: String,
+    #[serde(default)] pub dead: bool,
 }
 
 #[derive(Deserialize, Default)]
@@ -62,6 +63,8 @@ pub struct StatusEntry {
     #[serde(default, skip_serializing_if = "String::is_empty")] pub note: String,
     /// Sorun türü ("cloudflare"/"login"). Dolu ise kaynak `*_sorunlu` paketine ayrılır.
     #[serde(default, skip_serializing_if = "String::is_empty")] pub sorun: String,
+    /// Kesin ölü (park sayfası, NXDOMAIN, satılık). Hiçbir pakete girmez.
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")] pub dead: bool,
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, Default)]
@@ -70,7 +73,10 @@ pub struct StatusFile {
     pub sources: BTreeMap<String, StatusEntry>,
 }
 
-pub fn packages_for(e: &SourceEntry, sorun: &str) -> Vec<String> {
+pub fn packages_for(e: &SourceEntry, sorun: &str, dead: bool) -> Vec<String> {
+    if dead {
+        return Vec::new();
+    }
     let tr = e.lang == "tr";
     let nsfw = e.nsfw == 1;
     let sorunlu = !sorun.is_empty();
@@ -84,6 +90,10 @@ pub fn packages_for(e: &SourceEntry, sorun: &str) -> Vec<String> {
 }
 
 pub fn recompute_state(e: &mut StatusEntry) {
+    if e.dead {
+        e.state = "dead".to_string();
+        return;
+    }
     let device = e.device.as_ref().map(|p| p.status.as_str()).unwrap_or("");
     let health = e.health.as_ref().map(|p| p.status.as_str()).unwrap_or("");
     let step = e.device_step.as_deref().unwrap_or("");
@@ -126,11 +136,15 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
     // Elle işaretli "sorun" alanları cihaz sonucundan önce gelir.
     let cat_path = root.join("pulsar-v2/data/catalogue.json");
     let mut manual: std::collections::HashMap<(String, String), String> = std::collections::HashMap::new();
+    let mut dead: std::collections::HashSet<(String, String)> = std::collections::HashSet::new();
     if let Ok(cat_text) = std::fs::read_to_string(&cat_path) {
         if let Ok(cat) = serde_json::from_str::<CatalogueFile>(&cat_text) {
             for c in cat.sources {
                 if !c.sorun.is_empty() {
                     manual.insert((c.domain.to_lowercase(), c.lang.to_lowercase()), c.sorun);
+                }
+                if c.dead {
+                    dead.insert((c.domain.to_lowercase(), c.lang.to_lowercase()));
                 }
             }
         }
@@ -153,6 +167,7 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
             device_step: None,
             note: String::new(),
             sorun: String::new(),
+            dead: false,
         });
         // Katalogda dil/domain/nsfw değişince kimlik alanları güncellenmeli; eskiden
         // `or_insert_with` yüzünden eski id olduğu gibi kalıyor ve yayında bayat
@@ -171,7 +186,8 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
             .cloned()
             .unwrap_or_default();
         s.sorun = sorun.clone();
-        s.packages = packages_for(&e, &sorun);
+        s.dead = dead.contains(&(e.domain.to_lowercase(), e.lang.to_lowercase()));
+        s.packages = packages_for(&e, &sorun, s.dead);
         recompute_state(s);
     }
     // Katalogdan düşen id'ler yayın listesinde kalmasın.

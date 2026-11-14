@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14T08:07:01Z",
+  "generated": "2026-11-14T08:52:28Z",
   "sources": {
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -2641,10 +2641,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangakazani.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2659,7 +2657,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-13T17:32:24Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "dead": true
     },
     "1608878723405981938": {
       "id": 1608878723405981938,
@@ -6137,17 +6136,16 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "fuchscans.com",
-      "packages": [
-        "tr18"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "http",
         "http_code": "000",
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "dead": true
     },
     "2507851544741178776": {
       "id": 2507851544741178776,
@@ -7298,17 +7296,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "guildknives.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "empty",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "dead": true
     },
     "3201609293231115184": {
       "id": 3201609293231115184,
@@ -10001,17 +9998,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "ww16.mangaoku.info",
-      "packages": [
-        "tr"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "empty",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "dead": true
     },
     "4021680936479585906": {
       "id": 4021680936479585906,
@@ -11160,17 +11156,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "noxscans.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "empty",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "dead": true
     },
     "4233982710795016822": {
       "id": 4233982710795016822,
@@ -12729,17 +12724,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangakazani.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "empty",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "dead": true
     },
     "4336195771638288362": {
       "id": 4336195771638288362,
@@ -14234,17 +14228,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "juratempe.st",
-      "packages": [
-        "tr"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "empty",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "dead": true
     },
     "4714465711693073737": {
       "id": 4714465711693073737,
@@ -18887,10 +18880,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "fuchscans.com",
-      "packages": [
-        "tr18"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -18904,7 +18895,8 @@
         "ms": 0,
         "detail": "UnknownHostException: Unable to resolve host \"fuchscans.com\": No address associated with hostname",
         "at": "2026-11-13T17:00:54Z"
-      }
+      },
+      "dead": true
     },
     "6086089492503336323": {
       "id": 6086089492503336323,
@@ -24090,10 +24082,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "alliedfansub.net",
-      "packages": [
-        "tr18"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -24107,7 +24097,8 @@
         "ms": 0,
         "detail": "Liste boş",
         "at": "2026-11-13T17:00:54Z"
-      }
+      },
+      "dead": true
     },
     "8886024849128413454": {
       "id": 8886024849128413454,
@@ -24185,17 +24176,16 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "alliedfansub.net",
-      "packages": [
-        "tr18"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "empty",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "dead": true
     },
     "8927390274036640763": {
       "id": 8927390274036640763,
@@ -24242,17 +24232,16 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "jiangzaitoon.icu",
-      "packages": [
-        "tr18"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "http",
         "http_code": "502",
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "dead": true
     },
     "8970835273563196311": {
       "id": 8970835273563196311,

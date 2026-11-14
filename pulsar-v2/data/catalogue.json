@@ -246,6 +246,7 @@
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
+      "dead": true,
       "verified_by_user": true,
       "origins": [
         "keiyoushi_index",
@@ -964,6 +965,7 @@
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
         "readerSelector": "div.page-break img, div.reading-content img"
       },
+      "dead": true,
       "verified_by_user": false,
       "origins": [
         "local_tr",
@@ -1064,6 +1066,7 @@
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
         "readerSelector": "div.page-break img, div.reading-content img"
       },
+      "dead": true,
       "verified_by_user": false,
       "origins": [
         "local_tr",
@@ -1080,8 +1083,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "listPath": "/en/read.html",
+        "itemSelector": ".cadrelect.dbm-read",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
@@ -1148,8 +1151,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "listPath": "/browse/comics",
+        "itemSelector": "a[href^=\"/c/\"]",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
@@ -1196,6 +1199,7 @@
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
         "readerSelector": "div.page-break img, div.reading-content img"
       },
+      "dead": true,
       "verified_by_user": false,
       "origins": [
         "local_custom",
@@ -1412,8 +1416,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "listPath": "/latest.php",
+        "itemSelector": ".recent-card",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
@@ -1464,6 +1468,7 @@
         "chapterSelector": "div.eph-num a",
         "readerSelector": "div#readerarea img"
       },
+      "dead": true,
       "verified_by_user": false,
       "origins": [
         "local_tr",
@@ -1488,6 +1493,7 @@
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
         "readerSelector": "div.page-break img, div.reading-content img"
       },
+      "dead": true,
       "verified_by_user": false,
       "origins": [
         "local_tr",
@@ -1624,6 +1630,7 @@
         "chapterSelector": "div.eph-num a",
         "readerSelector": "div#readerarea img"
       },
+      "dead": true,
       "verified_by_user": false,
       "origins": [
         "local_tr",
@@ -1738,8 +1745,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "listPath": "/",
+        "itemSelector": "tr.result-list",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
@@ -1882,6 +1889,7 @@
         "chapterSelector": "div.eph-num a",
         "readerSelector": "div#readerarea img"
       },
+      "dead": true,
       "verified_by_user": false,
       "origins": [
         "local_tr",
