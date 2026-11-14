@@ -92,9 +92,12 @@ class PulsarSourceFactory : SourceFactory {
         // kaynaklar eklenti yüzeyine çıkmaz. Build zamanı üretilen PulsarData'ya
         // dayanır, dosya/Context erişimi yoktur.
         val suffix = BuildConfig.APPLICATION_ID.substringAfterLast('.')
+        // Bilinmeyen paket sessizce TÜM kaynakları açmasın (eski null = filtre yok
+        // davranışı yanlış applicationId'de listeyi şişiriyordu): açıkça patla.
         val allowed = PulsarData.allowed(suffix)
+            ?: throw IllegalStateException("bilinmeyen paket: $suffix")
         val all = engine + catalogue
-        return if (allowed == null) all else all.filter { it.id.toString() in allowed }
+        return all.filter { it.id.toString() in allowed }
     }
 
     private fun org.json.JSONArray?.orEmptyStrings(): List<String> {

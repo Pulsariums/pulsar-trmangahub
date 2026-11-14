@@ -7,7 +7,7 @@
 # ve parmak izi APK'dan OTOMATİK okunur (generate_repo.py).
 #
 # Kullanım:  pulsar_build.sh [flavor ...]
-#            FLAVORS="tr,tr18,global,global18" pulsar_build.sh
+#            FLAVORS="tr,tr18,global,global18,tr_sorunlu,tr18_sorunlu,global_sorunlu,global18_sorunlu" pulsar_build.sh
 # Değişken:  PARSERS_REF (kotatsu-parsers-redo revresi), MIHON_REF (varsayılan v0.20.1)
 #
 set -euo pipefail
@@ -27,6 +27,10 @@ flavor_args() {
         tr18)     echo ".tr18|tr|1" ;;
         global)   echo ".global|all|0" ;;
         global18) echo ".global18|all|1" ;;
+        tr_sorunlu)       echo ".tr_sorunlu|tr|0" ;;
+        tr18_sorunlu)     echo ".tr18_sorunlu|tr|1" ;;
+        global_sorunlu)   echo ".global_sorunlu|all|0" ;;
+        global18_sorunlu) echo ".global18_sorunlu|all|1" ;;
         *)        echo ".${1}|${1}|0" ;;
     esac
 }
@@ -36,11 +40,15 @@ flavor_name() {
         tr18) echo "Pulsar TR 18+" ;;
         global) echo "Pulsar Global" ;;
         global18) echo "Pulsar Global 18+" ;;
+        tr_sorunlu) echo "Pulsar TR Sorunlu" ;;
+        tr18_sorunlu) echo "Pulsar TR 18+ Sorunlu" ;;
+        global_sorunlu) echo "Pulsar Global Sorunlu" ;;
+        global18_sorunlu) echo "Pulsar Global 18+ Sorunlu" ;;
         *) echo "Pulsar $(echo "$1" | tr a-z A-Z)" ;;
     esac
 }
 
-FLAVORS="${FLAVORS:-tr,tr18,global,global18}"
+FLAVORS="${FLAVORS:-tr,tr18,global,global18,tr_sorunlu,tr18_sorunlu,global_sorunlu,global18_sorunlu}"
 
 # Sürüm: versionCode ARTMALI ki bakım tamirleri cihazda "güncelleme" olsun.
 # CI'da GITHUB_RUN_NUMBER (monotonik); yerelde sabit 1. versionName kontratı:

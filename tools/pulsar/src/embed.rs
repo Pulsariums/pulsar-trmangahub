@@ -107,8 +107,17 @@ fn embed(o: &Opts) -> Result<(), String> {
     let status_json: serde_json::Value =
         serde_json::from_slice(&status).map_err(|e| format!("source-status.json geçersiz: {e}"))?;
     let mut allowed: std::collections::BTreeMap<String, Vec<String>> = Default::default();
-    // Dört paket her zaman üretilir; boş paket Kotlin'de tanımsız sabit bırakmasın.
-    for pkg in ["tr", "tr18", "global", "global18"] {
+    // Sekiz paket her zaman üretilir; boş paket Kotlin'de tanımsız sabit bırakmasın.
+    for pkg in [
+        "tr",
+        "tr18",
+        "global",
+        "global18",
+        "tr_sorunlu",
+        "tr18_sorunlu",
+        "global_sorunlu",
+        "global18_sorunlu",
+    ] {
         allowed.entry(pkg.to_string()).or_default();
     }
     // merge'in elediği katalog klonları APK'da yok; izin listesine de girmezler.
@@ -183,13 +192,21 @@ internal object PulsarData {{
     private val tr18Ids: Set<String> by lazy {{ TR18_IDS.toIdSet() }}
     private val globalIds: Set<String> by lazy {{ GLOBAL_IDS.toIdSet() }}
     private val global18Ids: Set<String> by lazy {{ GLOBAL18_IDS.toIdSet() }}
+    private val trSorunluIds: Set<String> by lazy {{ TR_SORUNLU_IDS.toIdSet() }}
+    private val tr18SorunluIds: Set<String> by lazy {{ TR18_SORUNLU_IDS.toIdSet() }}
+    private val globalSorunluIds: Set<String> by lazy {{ GLOBAL_SORUNLU_IDS.toIdSet() }}
+    private val global18SorunluIds: Set<String> by lazy {{ GLOBAL18_SORUNLU_IDS.toIdSet() }}
 
-    /** Paket soneki için izinli id kümesi; bilinmeyen pakette null (filtre yok). */
+    /** Paket soneki için izinli id kümesi; bilinmeyen pakette null (fabrika patlar). */
     fun allowed(suffix: String): Set<String>? = when (suffix) {{
         "tr" -> trIds
         "tr18" -> tr18Ids
         "global" -> globalIds
         "global18" -> global18Ids
+        "tr_sorunlu" -> trSorunluIds
+        "tr18_sorunlu" -> tr18SorunluIds
+        "global_sorunlu" -> globalSorunluIds
+        "global18_sorunlu" -> global18SorunluIds
         else -> null
     }}
 
@@ -229,7 +246,16 @@ internal object PulsarData {{
         std::fs::create_dir_all(parent).map_err(|e| format!("dizin: {e}"))?;
     }
     std::fs::write(&o.out, kt).map_err(|e| format!("{} yazılamadı: {e}", o.out.display()))?;
-    let counts: Vec<String> = ["tr", "tr18", "global", "global18"]
+    let counts: Vec<String> = [
+        "tr",
+        "tr18",
+        "global",
+        "global18",
+        "tr_sorunlu",
+        "tr18_sorunlu",
+        "global_sorunlu",
+        "global18_sorunlu",
+    ]
         .iter()
         .map(|p| {
             let n = allowed.get(*p).map(|v| v.len()).unwrap_or(0);
