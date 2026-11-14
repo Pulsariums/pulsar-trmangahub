@@ -525,11 +525,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "merlintoon.com",
-      "baseUrl": "https://merlintoon.com",
+      "baseUrl": "https://merlintoon.net",
       "engine": "mangareader",
       "config": {
         "engine": "mangareader",
-        "listPath": "/manga",
+        "listPath": "/seri/",
         "itemSelector": "div.bsx",
         "chapterSelector": "div.eph-num a",
         "readerSelector": "div#readerarea img"
