@@ -261,23 +261,37 @@ class PulsarSource(
         val nameKey = config.optString("chapterApiFieldName", "name")
         val numKey = config.optString("chapterApiFieldNumber", "number")
         val urlKey = config.optString("chapterApiFieldUrl", "url")
-        val out = ArrayList<SChapter>(arr.length())
+        // url alanı yoksa şablon: {id} = API adresinin son yol parçası, {value} = numKey değeri (lunarx).
+        val urlTemplate = config.optString("chapterApiUrlTemplate", "")
+        val preferLang = config.optString("chapterApiPreferLang", "")
+        val apiId = response.request.url.encodedPath.trimEnd('/').substringAfterLast('/')
+        val byUrl = LinkedHashMap<String, SChapter>()
         for (i in 0 until arr.length()) {
             val o = arr.optJSONObject(i) ?: continue
-            val raw = o.optString(urlKey).trim()
+            val raw = if (urlTemplate.isNotBlank()) {
+                val v = o.optString(numKey).trim()
+                if (v.isEmpty()) "" else urlTemplate.replace("{id}", apiId).replace("{value}", v)
+            } else {
+                o.optString(urlKey).trim()
+            }
             if (raw.isEmpty()) continue
             val num = o.optString(numKey).replace(',', '.').toFloatOrNull() ?: 0f
-            val title = o.optString(nameKey).trim().ifBlank { "Bölüm " + num }
-            out.add(
-                SChapter.create().apply {
-                    url = relativize(raw)
-                    name = title
-                    chapter_number = num
-                    date_upload = 0L
-                },
-            )
+            val numText = if (num % 1f == 0f) num.toInt().toString() else num.toString()
+            val title = (if (urlTemplate.isBlank()) o.optString(nameKey).trim() else "")
+                .ifBlank { "Bölüm $numText" }
+            val ch = SChapter.create().apply {
+                url = relativize(raw)
+                name = title
+                chapter_number = num
+                date_upload = 0L
+            }
+            // Aynı bölüm birden çok dilde gelebilir: tercih edilen dil kazanır.
+            val exists = byUrl.containsKey(ch.url)
+            if (!exists || (preferLang.isNotBlank() && o.optString("language") == preferLang)) {
+                byUrl[ch.url] = ch
+            }
         }
-        return out
+        return byUrl.values.toList()
     }
 
     override fun chapterListRequest(manga: SManga): Request {
