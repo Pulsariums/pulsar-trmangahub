@@ -1,0 +1,33 @@
+name: 'JAR canlı testi (elle)'
+
+# _test.yml yalnız workflow_call ile çalışır (bakim/kaynak-ekle zincirinden).
+# Bu dosya aynı testi tek başına tetiklemek için ince bir dispatch kabuğudur:
+# JAR parser'larını (bozuk/karantina dahil) worker'da canlı test eder.
+
+on:
+  workflow_dispatch:
+    inputs:
+      bolum:
+        description: 'Paket: hepsi | tr | tr_nsfw'
+        type: choice
+        options: [hepsi, tr, tr_nsfw]
+        default: hepsi
+      only:
+        description: 'Yalnız bu parser adları (virgülle; boş = hepsi)'
+        type: string
+        default: ''
+      parallel:
+        description: 'Eşzamanlı kaynak sayısı'
+        type: string
+        default: '4'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    uses: ./.github/workflows/_test.yml
+    with:
+      bolum: ${{ inputs.bolum }}
+      only: ${{ inputs.only }}
+      parallel: ${{ inputs.parallel }}

@@ -101,6 +101,11 @@ def generate_source_config(src):
             base_defaults["readerSelector"] = css["reader_images"]
         if css.get("list_item"):
             base_defaults["itemSelector"] = css["list_item"]
+        # Liste yolu motor varsayılanından farklıysa (mangamac /mangalar,
+        # webtoonia /seri) spec'ten alınır; aksi halde /manga 404 verir.
+        if spec.get("list_path"):
+            path = str(spec["list_path"]).strip()
+            base_defaults["listPath"] = path if path.startswith("/") else "/" + path
 
     # Ragnarscans özel statik HTML seçicileri (Daha önce başarıyla onardığımız)
     if "ragnarscans" in domain:

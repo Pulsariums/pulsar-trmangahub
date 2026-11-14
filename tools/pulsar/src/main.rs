@@ -410,13 +410,16 @@ fn main() -> ExitCode {
             eprintln!("kullanım:");
             eprintln!("  pulsar sources list");
             eprintln!("  pulsar sources update [--only <id>] [--dry-run]");
-            eprintln!("  pulsar health [--lang tr] [--nsfw 0|1] [--limit N] [--jobs N] [--timeout sn]");
+            eprintln!("  pulsar health [--lang tr] [--nsfw 0|1] [--domain a.com,b.com] [--limit N] [--jobs N] [--timeout sn]");
             eprintln!("  pulsar status [--device <cihaz-raporu.json>]");
             eprintln!("  pulsar merge [--dry-run]");
             eprintln!("  pulsar quarantine [--dry-run] [--clear]");
             eprintln!("  pulsar embed [--dry-run]");
             eprintln!("  pulsar probe [--lang tr] [--nsfw 0|1] [--compare <cihaz.json>]");
-            eprintln!("  pulsar sweep --jar <yol> --java <yol> --app <dizin> --catalogue <yol> [--out <csv>] [--site <domain>]... [--limit N] [--timeout sn]");
+            eprintln!("  pulsar sweep --lang <dil> [--nsfw 0|1] [--name <parça>]... [--limit N] [--out <csv>]");
+            eprintln!("  pulsar sweep --apk <dosya.apk> [--lang <dil>] [--site <domain>]... [--limit N]");
+            eprintln!("  pulsar sweep --jar <dosya.jar> --package <ad> --version-code <n> [--site <domain>]...");
+            eprintln!("    ortak: [--java <yol>] [--app <dizin>] [--catalogue <yol>] [--timeout sn] [--apk-dir <dizin>] [--debug] [--engine]");
             eprintln!("  pulsar merge [--map <source_map.json>] [--catalogue <catalogue.json>] [--dry-run]");
             ExitCode::from(64)
         }

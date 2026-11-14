@@ -1048,7 +1048,17 @@
     "baseUrl": "https://lunarx.to",
     "altDomains": [],
     "engine": "keiyoushi",
-    "config": {},
+    "config": {
+      "searchUrl": "https://api.lunarx.to/api/manga/search?query={query}",
+      "searchJsonItems": "manga",
+      "searchJsonUrl": "slug",
+      "searchJsonTitle": "title",
+      "searchJsonPathPrefix": "/manga/",
+      "rscChapterUrl": "/manga/{slug}/{number}",
+      "pageApiUrl": "https://api.lunarx.to/api/manga/{1}/{2}",
+      "pageApiIdPattern": "^(?:https?://[^/]+)?/manga/([^/]+)/([0-9.]+)/?$",
+      "pageApiItems": "data.images"
+    },
     "origins": [
       "keiyoushi_index"
     ],
@@ -2225,5 +2235,56 @@
     ],
     "verified_by_user": false,
     "merged_variant_count": 2
+  },
+  {
+    "id": "niverafansub.org",
+    "brand": "niverafansub",
+    "name": "NiveraFansub",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "niverafansub.org",
+    "baseUrl": "https://niverafansub.org",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {},
+    "origins": [
+      "kotatsu"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "mangakulesi.com",
+    "brand": "mangakulesi",
+    "name": "Manga Kulesi",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangakulesi.com",
+    "baseUrl": "https://mangakulesi.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "mangamac.com",
+    "brand": "mangamac",
+    "name": "MangaMac",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangamac.com",
+    "baseUrl": "https://mangamac.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
   }
 ]

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "generated_at": "2026-10-16T10:45:41Z",
-  "total_count": 94,
+  "total_count": 97,
   "languages": [
     "tr"
   ],
@@ -889,9 +889,9 @@
       "config": {
         "engine": "custom",
         "listPath": "/manhwa",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail, a[href*=\"/manhwa/\"]",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "itemSelector": "article.manga-item",
+        "chapterSelector": "a.chapter-box",
+        "readerSelector": "div.reader-images img"
       },
       "verified_by_user": true,
       "origins": [
@@ -1226,7 +1226,10 @@
         "searchJsonUrl": "slug",
         "searchJsonTitle": "title",
         "searchJsonPathPrefix": "/manga/",
-        "rscChapterUrl": "/manga/{slug}/{number}"
+        "rscChapterUrl": "/manga/{slug}/{number}",
+        "pageApiUrl": "https://api.lunarx.to/api/manga/{1}/{2}",
+        "pageApiIdPattern": "^(?:https?://[^/]+)?/manga/([^/]+)/([0-9.]+)/?$",
+        "pageApiItems": "data.images"
       },
       "verified_by_user": false,
       "origins": [
@@ -1639,6 +1642,26 @@
       "origins": [
         "local_tr",
         "nyora_datadriven"
+      ]
+    },
+    {
+      "id": "niverafansub.org",
+      "name": "NiveraFansub",
+      "lang": "tr",
+      "nsfw": 1,
+      "domain": "niverafansub.org",
+      "baseUrl": "https://niverafansub.org",
+      "engine": "madara",
+      "config": {
+        "engine": "madara",
+        "listPath": "/manga",
+        "itemSelector": "div.page-item-detail, div.manga",
+        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
+        "readerSelector": "div.page-break img, div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "kotatsu"
       ]
     },
     {
@@ -2144,9 +2167,9 @@
       "config": {
         "engine": "custom",
         "listPath": "/seri",
-        "itemSelector": "a[href*=\"/seri/\"]",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": ".wtsp-chapter a.wtsp-chapter-thumb",
+        "readerSelector": "div.reading-content img.wp-manga-chapter-img"
       },
       "verified_by_user": false,
       "origins": [
@@ -2223,6 +2246,46 @@
       "origins": [
         "local_tr",
         "nyora_datadriven"
+      ]
+    },
+    {
+      "id": "mangakulesi.com",
+      "name": "Manga Kulesi",
+      "lang": "tr",
+      "nsfw": 0,
+      "domain": "mangakulesi.com",
+      "baseUrl": "https://mangakulesi.com",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "/manga",
+        "itemSelector": "a.group[href*=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"-bolum-oku\"]",
+        "readerSelector": "div.ep-item img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "keiyoushi_index"
+      ]
+    },
+    {
+      "id": "mangamac.com",
+      "name": "MangaMac",
+      "lang": "tr",
+      "nsfw": 0,
+      "domain": "mangamac.com",
+      "baseUrl": "https://mangamac.com",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "/mangalar",
+        "itemSelector": ".bw-grid article.bw-card",
+        "chapterSelector": "a.arc-chapter-item",
+        "readerSelector": ".reader-container img.reader-page"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "keiyoushi_index"
       ]
     }
   ]

@@ -114,7 +114,7 @@ Aynı görsel adresi 10 GET'in ~4'ünde 200, ~6'sında 403 dönüyor. User-Agent
 - **Cihaz raporu sürümü**: `diag` anahtarı 466efd1'de eklendi, fc53b2f'de silindi. TANI2 satırı içeren rapor ≤ 1.6.34'tür. Yayındaki APK'nın `assets/catalogue.json`'unda `diag` anahtarının yokluğu bunu doğrular. Sürüm numarası repoda tutulmaz (CI run number'ından gelir), o yüzden sha ile bağ kurulur.
 - **Katalog tekilleştirme**: 109 kayıt, 15 mükerrer (aynı domain+lang). `06_prepare_assets.py:138-150` dosya sırasındaki ilk kaydı tutar. Temizlik 109→94; `total_count` alanı da güncellenmeli. Kanıt: CI sonrası index'te paket başına id/ad listeleri birebir aynı (tr 30, tr18 4, global 361, global18 134).
 - **`pulsar sweep`**: `details` HATASI da (harness imzalı hatalar hariç) sıradaki esere geçirir, en fazla 3 eser. `eser` sütunu hangi eserin denendiğini gösterir. 0 bölümlü eser artık "bozuk" sayılmaz (tenshimanga 39 bölüm / 61 sayfa).
-- **Yerel sınama sınırı**: harness yalnız catalogue kaynaklarını sınar; engine kaynakları `newParserInstance(MangaSource)` ABI uyuşmazlığı yüzünden çalışmaz.
+- **Yerel sınama sınırı (aşıldı, bkz. 14)**: harness eskiden yalnız catalogue kaynaklarını sınıyordu; engine kaynakları `newParserInstance(MangaSource)` ABI uyuşmazlığı yüzünden çalışmıyordu. `--engine` artık child-first yükleyici + Maven parser JAR'ı ile bunu aşıyor.
 
 ## 11. Yayın listesi `source-status.json`'dan gelir
 
@@ -131,3 +131,62 @@ Aynı görsel adresi 10 GET'in ~4'ünde 200, ~6'sında 403 dönüyor. User-Agent
 - **Cloudflare / DDoS-Guard** (`sorun: "cloudflare"`): sadscans.com, ravenscans.org, mangagezgini.online, millascan.com, mangadot.net, manga-tr.com. `tr_sorunlu` paketine giderler.
 - **Cihaz verisi tek yönlüdür**: rapor yalnız düşen kaynakları yazar, geçen kaynağın eski `fail` etiketi silinmez. Bu yüzden `state` kuralı adım bazlı: cihazda `list` (veya adım bilgisi yok) + health `ok` → `pending`; `pages/details/search` düşmesi kaynağı yayından çıkarmaz (`d48d10a`, 1.6.47→1.6.48'de tr 29→20 kaybının sebebi buydu).
 - **Belirsiz ≠ ölü**: anti-bot/SPA engeli (nyxmanga, mangasiginagi, esomanga, mangacix, namicomi, mindafansub, toonhane, summertoons, piedpiperfansub) ölü sayılmadı; yalnız park/NXDOMAIN/satılık kanıtı `dead` yapar.
+
+## 13. Tek komutla tam zincir testi (`pulsar sweep`, 1.6.49)
+
+- **Komut**: `tools/pulsar/target/release/pulsar.exe sweep --lang tr --engine`. `index.min.json` içinden `lang=tr` paketlerini (tr, tr18, tr_sorunlu) bulur; her APK'yı Kototoro'nun `DexConvertCliKt` sınıfıyla geçici JAR'a çevirir; `source-host serve` ile adımları koşar. `--java`/`--app` verilmezse `%USERPROFILE%\Desktop\Kototoro` altında `runtime/bin/java.exe` + `app` aranır. Seçim: `--lang`, `--nsfw 0|1`, `--name <parça>`, `--site <domain>`, `--limit`, `--out`; ortak: `--catalogue`, `--index`, `--apk-dir`, `--status`, `--timeout`, `--engine`, `--debug`.
+- **Adımlar cihazla aynı sırada**: list → cover → search → details → chapters → pages. Arama cihazın iki sorgusunu dener: `"a"`, `"one"` (`SourceTestModels.kt`). Kapak `cover` işlemiyle gerçekten indirilir (`/result/artifact/byteSize`). `random` yerel protokolde yok, test edilmez.
+- **Sonuç (2026-11-14, 1.6.49 APK'ları, `--engine` ile)**: 45 yayındaki tr kaynağı; **28 sağlam, 11 gerçek bozuk, 6 yerel harness dışı**. Gerçek bozuklar ve `sebep` sütunu: lunarx.to (pages, sayfa listesi boş), webtoonoku.org (cover, INVALID_ARGUMENT), opiatoon.shop (details, `IllegalStateException: TANI kod=200 …/giris-yapmalisiniz/` — oturum kapısı), manga.araznovel.com (details, `TANI …/series/… len=5456` — Turnstile kapısı), manga-tr.com (list, `HttpException: HTTP error 403`), anikiga.com (details, admin-ajax 400), araznovel.com (list, admin-ajax 404), mangaruhu.com (list, admin-ajax 400; ikinci kayıt pages boş), shadowceviri.blogspot.com (search, arama boş), sleptmanga.com.tr (pages, sayfa listesi boş). Rapor: `pulsar-v2/data/test-report-tr-all.csv` (45 satır, 45 tekil id).
+- **`sebep` alanı**: `SOURCE_FAILURE <rid> <Call>` sonrası yığın izinden okunur. RxJava sarmalayıcısı (`rx.exceptions.OnErrorThrowable…`) sebep sayılmaz; mesajı olan ilk gerçek istisna, yoksa ilk Rx dışı `Caused by:` satırı alınır (180 karakter). Ham yığın izi için `--debug` (istek başına en fazla 120 satır, stderr). Protokol düzeyinde dönen `INVALID_ARGUMENT` gibi hatalarda mesajın kendisi sebebe yazılır.
+- **Engine kaynakları artık koşar**: 45'in **19'u** engine (status'taki `kind=engine` 13'ü; kalan 6'sı çağrı sırasında ABI imzasıyla yakalanır). `--engine` child-first yükleyiciyi devreye alır; ayrıntı bölüm 14. Kalan 6 harness: 5 Cloudflare köprüsü (mangadot, mangagezgini, millascan, ravenscans, sadscans) + tilkiscans (parser `suwayomi/tachidesk/server/ServerConfigKt` sınıfını arıyor, masaüstü host'ta yok).
+- **Hedef listesi indeksten gelir**: `index.min.json` paketlerinin `sources[]` alanı `id`/`baseUrl`/`lang` taşır; host'un döndürdüğü ad `MIHON_<id>`. Katalog yalnız data-driven kaynakları kapsadığı için hedef üretiminde tek başına yetmez (45'in 13'ü kaybolur).
+- **İki Windows tuzağı**: (1) `DexConvertCliKt` çıktısındaki `CONVERTED {...}` satırı geçerli JSON değildir — `output` alanındaki ters bölüler kaçışsızdır; `packageName`/`versionCode`/`sha256` alanları metinden ayrıştırılır. (2) Protokolde `Long` alanları ondalık string gelir (`byteSize`, `contentId`); `as_i64()` None döner.
+
+## 14. Engine kaynaklarını yerelde koşmak (`--engine`)
+
+- **Belirti**: engine kaynağında `list` düşer; yığın izinde
+  `NoSuchMethodError: PulsarContext.newParserInstance(MangaParserSource)`,
+  `Caused by` altta `Mihon runtime ABI failure`. Bu bir kaynak hatası değil, harness hatasıdır.
+- **Neden**: `source-host` eklenti JAR'ını **parent-first** `URLClassLoader` ile açar. Host'ın
+  kendi `parser-api` sürümü `newParserInstance(MangaSource)` (arayüz) taşır; eklenti ise
+  `MangaParserSource` (enum) ile derlenmiştir. Cihazda eklenti child-first yüklendiği için
+  çakışma görünmez; masaüstünde görünür.
+- **Çözüm**: `tools/pulsar/java/ChildFirstPlatform.java` — `MihonDesktopPlatform`'u sarar,
+  yalnız `org.koitharu.kotatsu.parsers.*` için child-first davranan bir yükleyici döndürür.
+  `pulsar sweep --engine` bu sınıfı `javac` ile geçici dizine derler, `platformClass` olarak
+  verir ve `-Dpulsar.engineJar=<APK→JAR>` geçer.
+- **İkinci tuzak**: APK'nın dex'ten çevrilen JAR'ı, Kotlin arayüz varsayılan metotlarını
+  `Methodref` sabitiyle taşır; masaüstü JVM bunu
+  `IncompatibleClassChangeError: Method 'WebClient.httpGet' must be InterfaceMethodref`
+  ile reddeder. Aynı rev'in Maven JAR'ı (`com.github.clquwu:kotatsu-parsers-redo:<ref>`)
+  doğru `InterfaceMethodref` taşır. `-Dpulsar.parsersJar` bu JAR'ı gösterir; ilk kullanımda
+  `pulsar-v2/.work/harness/` altına indirilir. `parsersRef` `extension/build.gradle.kts`
+  ile aynı olmalı (şu an `59c033ecfd`).
+- **Harness yanlış-pozitifi**: `stderr_has_harness` bu isteğe ait `SOURCE_FAILURE <rid>`
+  bloğu yoksa artık `false` döner. Önce tüm stderr arabelleği taranıyordu; önceki kaynağın
+  `NoClassDefFoundError` izi, sayfa listesi boş gibi protokol hatası olmayan düşüşleri
+  yanlışlıkla `harness` yazıyordu (lunarx, webtoonoku, mangaruhu, sleptmanga).
+- **Kalan harness**: Cloudflare köprüsü (5) `CloudflareInterceptor` içinde
+  `suwayomi/tachidesk/server/ServerConfigKt` arıyor; sınıf masaüstü host'ta yok. Tilkiscans
+  aynı sınıfı parser üzerinden arıyor. Bu kaynaklar cihazda Cloudflare çözücüsüyle ayrıca
+  denenmeli.
+
+## 15. Bozuk kaynak avı: dış parser sınırı (2026-11-14)
+
+- **256 bozuk kaydın dağılımı**: TR paketlerindeki 11 bozuk kaydın 8'i bizim katalog, 3'ü dış engine; globalde bozukların neredeyse tamamı JitPack `kotatsu-parsers-redo` parser'ı. Yani global bozukların çoğu bizim kodumuzda değil, upstream'de. Tek tek tamir yerine canlı olanı katalog kaydına çevirmek gerekir.
+- **Site taşınmaları (curl ile doğrulandı)**: `kenscans.com → kencomics.com` (yeni DOM: `div.card-group` 60, bölüm 17, ücretsiz bölümde `img[data-reader-page-image=true]` 42, arama `?searchTerm=`), `madarascans.com → .net` (`div.bsx` 30, bölüm `li[data-num]` 38, sayfa `ts_reader.run → images`). İki sitede de eski parser seçicileri 0; domain override tek başına yetmez.
+- **JAR parser'ı düzeltmenin yolu**: eklenti parser'ı JitPack commit'inden alır (`parsersRef`); yerel fork yoksa seçici değişikliği APK'ya girmez. Bu yüzden canlı siteler katalog (data-driven) kaydına taşınmalı veya upstream'e yama gönderilmeli.
+- **`parseChapters` kendini bulmaz**: `chapterSelector` doğrudan `<a>` eşleştiriyorsa (webtoonoku `a.chapter-box`) Jsoup alt öğe arar ve 0 döner. `parseList`'teki `el.tagName()=="a"` kontrolü `parseChapters`'a da eklendi (`EngineRegistry.kt`).
+- **Sayfa API'si**: LunarX sayfaları HTML'de yok; `GET api.lunarx.to/api/manga/{slug}/{number}` → `data.images[]`. `PulsarSource`'a `pageApiUrl` + `pageApiIdPattern` + `pageApiItems` (noktalı yol) eklendi; config `catalogue.json` ve `alive_sources.json`'a yazıldı. Derleme/cihaz testi yapılmadı.
+- **Seçiciyle çözülmeyenler**: manga-tr.com DDoS-Guard 403; mangaruhu.net bölüm HTML'inde görsel yok, REST uçları 403/404; sleptmanga.com.tr `/api/chapter/<id>` uygulama anahtarı istiyor (curl 403). Bunlar katalog seçicisiyle düzeltilemez.
+- **WebtoonOku kapak hatası**: `itemSelector` içindeki `a[href*="/manhwa/"]` nav linklerini de alıyordu, kapak null kalıp `cover INVALID_ARGUMENT` veriyordu. `article.manga-item` + `a.chapter-box` + `div.reader-images img` yapıldı; spec `css` bloğuna da yazıldı.
+
+## 16. JAR'da olup katalogda olmayan 7 kaynak (2026-11-14)
+
+- **Yöntem**: Her siteye ayrı ajan gitti; yalnız GET/curl ile DOM sayıldı, seçici uydurulmadı. Sonuçlar `.work/tani/<domain>-secici.md`; ana oturum sayıları curl ile tekrar doğruladı.
+- **Katalog kaydı eklendi (3)**: `mangakulesi.com` (liste `a.group[href*="/manga/"]` 13, bölüm `a[href*="-bolum-oku"]` 19, sayfa `div.ep-item img` 45), `mangamac.com` (liste `/mangalar` 24 kart, bölüm `a.arc-chapter-item`, sayfa `.reader-container img.reader-page`), `webtoonia.fun` (eski kayıt vardı ama seçicileri varsayılandı: liste `/seri` 10 kart, bölüm `.wtsp-chapter a.wtsp-chapter-thumb` 24, sayfa `div.reading-content img.wp-manga-chapter-img` 4; `data-src` başında boşluk var, `parsePages` `trim()` yapıyor).
+- **Seçiciyle çözülmeyenler (4)**: `merlinmanga.com` bölüm listesi yalnız admin-ajax POST (`action=manga_get_chapters` → HTTP 400); `norascans.com` SPA + `/api/series/{slug}/chapter/{n}` `pages:[]` (gerçek görsel yok); `outcatscans.net` bölüm sayfası login/rol istiyor, anonimde görsel 0; `kazescans.com` Blogger/JS — liste DOM'da 0, bölümler feed JSON'unda (motor desteği gerekir).
+- **Spec `list_path`**: `04_auto_generator.py` artık spec'teki `list_path` alanını `listPath` olarak alıyor (mangamac `/mangalar`, webtoonia `/seri`). Aksi halde motor varsayılanı `/manga` 404 veriyordu.
+- **Durum akışı**: `repo/source_map.json` katalog bölümü 97 kayıtla tazelendi (engine listesi korunarak), `pulsar status` + `pulsar health --domain ...` ile 4 kayıt `active` oldu. `pulsar health` artık `--domain a.com,b.com` süzgeci alıyor; tüm TR'yi yeniden test etmeden tek kaynak doğrulanabiliyor.
+- **Merge tuzağı**: `niverafansub.org` engine parser'ı da olduğu için merge katalog klonunu düşürüyor (`kept: NiveraFansub`); engine kaydı cihazda SSL zinciri hatasıyla `pending` olduğundan Nivera APK'da görünmüyor. Katalog klonunun yaşaması için engine'ın düşmesi/ölü işaretlenmesi gerekir.
+- **Doğrulanmadı**: Üç yeni kayıt hiçbir APK'da derlenmedi ve cihazda açılmadı; seçici sayıları yalnız curl DOM sayımı. Arama üç sitede de yok (LiveCheck arama adımı koşmuyor).

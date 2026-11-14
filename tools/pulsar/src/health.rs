@@ -151,6 +151,9 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
     let mut lang: Option<String> = None;
     let mut nsfw: Option<i32> = None;
     let mut limit: Option<usize> = None;
+    // Tek kaynağı (veya birkaçını) doğrulamak için alan adı süzgeci. Bakım
+    // koşusu tüm TR'yi yeniden test edip geçici hatalarla durum bozmasın.
+    let mut domains: Vec<String> = Vec::new();
     let mut jobs: usize = 8;
     let mut timeout_secs: u64 = 20;
     let mut i = 0;
@@ -175,6 +178,13 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
                 match argv.get(i).and_then(|v| v.parse::<usize>().ok()) {
                     Some(v) => limit = Some(v),
                     None => { eprintln!("HATA: --limit sayı gerekli"); return ExitCode::from(64); }
+                }
+            }
+            "--domain" => {
+                i += 1;
+                match argv.get(i) {
+                    Some(v) => domains.extend(v.split(',').map(|d| d.trim().to_lowercase()).filter(|d| !d.is_empty())),
+                    None => { eprintln!("HATA: --domain için değer gerekli"); return ExitCode::from(64); }
                 }
             }
             "--jobs" => {
@@ -213,6 +223,12 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
     }
     if let Some(n) = nsfw {
         list.retain(|s| s.nsfw == n);
+    }
+    if !domains.is_empty() {
+        list.retain(|s| {
+            let d = s.domain.to_lowercase();
+            domains.iter().any(|want| d == *want || d.ends_with(&format!(".{want}")) || d.contains(want))
+        });
     }
     if let Some(l) = limit {
         list.truncate(l);

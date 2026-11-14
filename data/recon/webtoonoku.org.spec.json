@@ -2,6 +2,11 @@
  "domain": "webtoonoku.org",
  "title": "Türkçe Manga ve Webtoon Oku - Güncel Türkçe Manga ve Webtoon oku",
  "mode": "html",
+ "css": {
+  "list_item": "article.manga-item",
+  "chapter_item": "a.chapter-box",
+  "reader_images": "div.reader-images img"
+ },
  "list": {
   "path": "/",
   "pageParam": "page",

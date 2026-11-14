@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-10-14T08:49:30+00:00",
-  "count": 171,
+  "count": 178,
   "sources": [
     {
       "id": "adumanga.com",
@@ -1825,6 +1825,33 @@
       ]
     },
     {
+      "id": "kazescans.com",
+      "name": "KazeScans",
+      "domain": "kazescans.com",
+      "baseUrl": "https://kazescans.com",
+      "engine": null,
+      "nsfw": false,
+      "scope": "tr_native",
+      "formats": {
+        "mihon": {
+          "pkg": "eu.kanade.tachiyomi.extension.tr.kazescans",
+          "version": "1.6.19",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/3cf15bc/tachiyomi-tr.kazescans-v1.6.19.apk"
+        },
+        "jar": null,
+        "catalog": null
+      },
+      "firstSeen": "2026-11-14T20:50:00+00:00",
+      "status": "unverified",
+      "unverified": true,
+      "reason": "mihon upstream taramasi 2026-11-14; henuz test edilmedi",
+      "lastChecked": null,
+      "consecutiveFailures": 0,
+      "upstreams": [
+        "mihon"
+      ]
+    },
+    {
       "id": "kedi.to",
       "name": "Kedi",
       "domain": "kedi.to",
@@ -2958,6 +2985,33 @@
       ]
     },
     {
+      "id": "mangakulesi.com",
+      "name": "Manga Kulesi",
+      "domain": "mangakulesi.com",
+      "baseUrl": "https://mangakulesi.com",
+      "engine": null,
+      "nsfw": false,
+      "scope": "tr_native",
+      "formats": {
+        "mihon": {
+          "pkg": "eu.kanade.tachiyomi.extension.tr.mangakulesi",
+          "version": "1.6.8",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-3/tachiyomi-tr.mangakulesi-v1.6.8.apk"
+        },
+        "jar": null,
+        "catalog": null
+      },
+      "firstSeen": "2026-11-14T20:50:00+00:00",
+      "status": "unverified",
+      "unverified": true,
+      "reason": "mihon upstream taramasi 2026-11-14; henuz test edilmedi",
+      "lastChecked": null,
+      "consecutiveFailures": 0,
+      "upstreams": [
+        "mihon"
+      ]
+    },
+    {
       "id": "mangakusu.com",
       "name": "Manga Kusu",
       "domain": "mangakusu.com",
@@ -2983,6 +3037,33 @@
         "functional": null
       },
       "lastChecked": "2026-10-14T08:49:30+00:00",
+      "consecutiveFailures": 0,
+      "upstreams": [
+        "mihon"
+      ]
+    },
+    {
+      "id": "mangamac.com",
+      "name": "MangaMAC",
+      "domain": "mangamac.com",
+      "baseUrl": "https://mangamac.com",
+      "engine": null,
+      "nsfw": false,
+      "scope": "tr_native",
+      "formats": {
+        "mihon": {
+          "pkg": "eu.kanade.tachiyomi.extension.tr.mangamac",
+          "version": "1.6.1",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/2c02d07/tachiyomi-tr.mangamac-v1.6.1.apk"
+        },
+        "jar": null,
+        "catalog": null
+      },
+      "firstSeen": "2026-11-14T20:50:00+00:00",
+      "status": "unverified",
+      "unverified": true,
+      "reason": "mihon upstream taramasi 2026-11-14; henuz test edilmedi",
+      "lastChecked": null,
       "consecutiveFailures": 0,
       "upstreams": [
         "mihon"
@@ -3590,6 +3671,33 @@
       "upstreams": [
         "kotatsu",
         "nyora"
+      ]
+    },
+    {
+      "id": "merlinmanga.com",
+      "name": "Merlin Manga",
+      "domain": "merlinmanga.com",
+      "baseUrl": "https://merlinmanga.com",
+      "engine": null,
+      "nsfw": false,
+      "scope": "tr_native",
+      "formats": {
+        "mihon": {
+          "pkg": "eu.kanade.tachiyomi.extension.tr.merlinmanga",
+          "version": "1.6.58",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d0478bb/tachiyomi-tr.merlinmanga-v1.6.58.apk"
+        },
+        "jar": null,
+        "catalog": null
+      },
+      "firstSeen": "2026-11-14T20:50:00+00:00",
+      "status": "unverified",
+      "unverified": true,
+      "reason": "mihon upstream taramasi 2026-11-14; henuz test edilmedi",
+      "lastChecked": null,
+      "consecutiveFailures": 0,
+      "upstreams": [
+        "mihon"
       ]
     },
     {
@@ -4213,6 +4321,33 @@
       ]
     },
     {
+      "id": "norascans.com",
+      "name": "Nora Scans",
+      "domain": "norascans.com",
+      "baseUrl": "https://norascans.com",
+      "engine": null,
+      "nsfw": false,
+      "scope": "tr_native",
+      "formats": {
+        "mihon": {
+          "pkg": "eu.kanade.tachiyomi.extension.tr.norascans",
+          "version": "1.6.2",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-3/tachiyomi-tr.norascans-v1.6.2.apk"
+        },
+        "jar": null,
+        "catalog": null
+      },
+      "firstSeen": "2026-11-14T20:50:00+00:00",
+      "status": "unverified",
+      "unverified": true,
+      "reason": "mihon upstream taramasi 2026-11-14; henuz test edilmedi",
+      "lastChecked": null,
+      "consecutiveFailures": 0,
+      "upstreams": [
+        "mihon"
+      ]
+    },
+    {
       "id": "noxscans.com",
       "name": "NoxScans",
       "domain": "noxscans.com",
@@ -4471,6 +4606,33 @@
       ],
       "verifiedWorkingByUser": true,
       "verifiedWorkingSource": "kototoro_export_2026-10-16"
+    },
+    {
+      "id": "outcatscans.net",
+      "name": "Outcats Scans",
+      "domain": "outcatscans.net",
+      "baseUrl": "https://outcatscans.net",
+      "engine": null,
+      "nsfw": false,
+      "scope": "tr_native",
+      "formats": {
+        "mihon": {
+          "pkg": "eu.kanade.tachiyomi.extension.tr.outcatsscans",
+          "version": "1.6.59",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/2c02d07/tachiyomi-tr.outcatsscans-v1.6.59.apk"
+        },
+        "jar": null,
+        "catalog": null
+      },
+      "firstSeen": "2026-11-14T20:50:00+00:00",
+      "status": "unverified",
+      "unverified": true,
+      "reason": "mihon upstream taramasi 2026-11-14; henuz test edilmedi",
+      "lastChecked": null,
+      "consecutiveFailures": 0,
+      "upstreams": [
+        "mihon"
+      ]
     },
     {
       "id": "paradoxscans.com",
@@ -6289,6 +6451,33 @@
       "upstreams": [
         "kotatsu",
         "nyora"
+      ]
+    },
+    {
+      "id": "webtoonia.fun",
+      "name": "Webtoonia",
+      "domain": "webtoonia.fun",
+      "baseUrl": "https://webtoonia.fun",
+      "engine": null,
+      "nsfw": false,
+      "scope": "tr_native",
+      "formats": {
+        "mihon": {
+          "pkg": "eu.kanade.tachiyomi.extension.tr.webtoonia",
+          "version": "1.6.58",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-3/tachiyomi-tr.webtoonia-v1.6.58.apk"
+        },
+        "jar": null,
+        "catalog": null
+      },
+      "firstSeen": "2026-11-14T20:50:00+00:00",
+      "status": "unverified",
+      "unverified": true,
+      "reason": "mihon upstream taramasi 2026-11-14; henuz test edilmedi",
+      "lastChecked": null,
+      "consecutiveFailures": 0,
+      "upstreams": [
+        "mihon"
       ]
     },
     {

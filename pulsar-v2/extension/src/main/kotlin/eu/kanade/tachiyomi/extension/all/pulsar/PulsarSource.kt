@@ -271,8 +271,52 @@ class PulsarSource(
         return Request.Builder().url(absolute(manga.url)).headers(headers).build()
     }
 
-    override fun pageListRequest(chapter: SChapter): Request =
-        Request.Builder().url(absolute(chapter.url)).headers(headers).build()
+    // Sayfa listesi bölüm HTML'inde değil ayrı JSON API'de olabilir (lunarx).
+    // pageApiUrl şablonundaki {1},{2}... yakalama gruplarıyla doldurulur.
+    private fun apiPageUrl(chapter: SChapter): String? {
+        val template = config.optString("pageApiUrl", "")
+        if (template.isBlank()) return null
+        val pattern = config.optString("pageApiIdPattern", "")
+        if (pattern.isBlank()) return null
+        val m = runCatching { Regex(pattern).find(chapter.url) }.getOrNull() ?: return null
+        var url = template
+        for (i in 1 until m.groupValues.size) url = url.replace("{$i}", m.groupValues[i])
+        return url.takeIf { !it.contains("{") }
+    }
+
+    private fun apiPages(response: Response): List<Page> {
+        val text = response.body?.string().orEmpty()
+        val root = runCatching { JSONObject(text) }.getOrNull()
+            ?: throw IllegalStateException(
+                "TANI4 api url=${response.request.url} len=${text.length} ilk=${text.take(160)}",
+            )
+        // pageApiItems noktalı yol olabilir: "data.images".
+        var node: Any? = root
+        for (part in config.optString("pageApiItems", "images").split('.')) {
+            node = (node as? JSONObject)?.opt(part)
+        }
+        val arr = node as? org.json.JSONArray
+            ?: throw IllegalStateException("TANI4 dizi yok: ${config.optString("pageApiItems")} url=${response.request.url}")
+        val urlField = config.optString("pageApiFieldUrl", "")
+        val out = ArrayList<Page>(arr.length())
+        for (i in 0 until arr.length()) {
+            val raw = if (urlField.isBlank()) {
+                arr.optString(i)
+            } else {
+                arr.optJSONObject(i)?.optString(urlField).orEmpty()
+            }
+            if (raw.isBlank()) continue
+            val u = if (raw.startsWith("http")) raw else "$baseUrl/${raw.trimStart('/')}"
+            out.add(Page(out.size, response.request.url.toString(), u))
+        }
+        return out
+    }
+
+    override fun pageListRequest(chapter: SChapter): Request {
+        val api = apiPageUrl(chapter)
+        if (api != null) return Request.Builder().url(api).headers(headers).build()
+        return Request.Builder().url(absolute(chapter.url)).headers(headers).build()
+    }
 
     // Bazı CDN'ler Referer'sız isteği 403 ile reddediyor (amangaplanet.link).
     // Görseli bölüm sayfasını Referer vererek istiyoruz.
@@ -360,6 +404,12 @@ class PulsarSource(
 
     // Pages
     override fun pageListParse(response: Response): List<Page> {
+        // API yanıtı HTML değil JSON'dur; gövdeyi tüketmeden ilk bayta bakılır.
+        if (config.optString("pageApiUrl", "").isNotBlank() &&
+            response.peekBody(1).string().trimStart().startsWith("{")
+        ) {
+            return apiPages(response)
+        }
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
         val readerSelector = config.optString("readerSelector", "")

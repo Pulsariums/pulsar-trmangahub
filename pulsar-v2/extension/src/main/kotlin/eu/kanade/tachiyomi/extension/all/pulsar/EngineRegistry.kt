@@ -173,10 +173,18 @@ object EngineRegistry {
                     .ifBlank { el.selectFirst("img[alt]")?.attr("alt").orEmpty() }
                     .trim()
 
-                val imgEl = el.selectFirst("img[src], img[data-src], img[data-lazy-src]")
-                val cover = imgEl?.attr("data-src")?.ifBlank { null }
-                    ?: imgEl?.attr("data-lazy-src")?.ifBlank { null }
-                    ?: imgEl?.attr("src")?.ifBlank { null }
+                // Karttaki ilk <img> çoğu temada "manhwa.png" tür rozeti veya
+                // data: yer tutucusudur. Rozeti ve data: URL'yi atla; kapağı
+                // gerçek adresten al ve göreliyse mutlaklaştır.
+                val cover = el.select("img").asSequence()
+                    .filterNot { it.className().contains("badge", ignoreCase = true) }
+                    .mapNotNull { img ->
+                        sequenceOf("data-src", "data-lazy-src", "src")
+                            .map { img.attr(it).trim() }
+                            .firstOrNull { it.isNotEmpty() && !it.startsWith("data:") }
+                    }
+                    .firstOrNull { !looksLikeBadge(it) }
+                    ?.let { raw -> if (raw.startsWith("http")) raw else "$baseUrl/${raw.trimStart('/')}" }
 
                 ParsedManga(title = title.trim(), url = fullUrl, coverUrl = cover)
             }.getOrNull()
@@ -190,7 +198,14 @@ object EngineRegistry {
 
         val items = doc.select(sel).mapIndexedNotNull { index, el ->
             runCatching {
-                val linkEl = el.selectFirst("a[href]") ?: return@runCatching null
+                // Seçici doğrudan bölüm bağlantısını eşleştirebilir (a.chapter-box).
+                // Jsoup'un alt öğe araması kendini bulmaz; önce kendine bakılır.
+                val linkEl = if (el.tagName() == "a" && el.hasAttr("href")) {
+                    el
+                } else {
+                    el.selectFirst("a[href]")
+                }
+                linkEl ?: return@runCatching null
                 val rawUrl = linkEl.attr("href")
                 val fullUrl = if (rawUrl.startsWith("http")) rawUrl else "$baseUrl/${rawUrl.trimStart('/')}"
                 val name = linkEl.text().ifBlank { el.text() }.trim()
