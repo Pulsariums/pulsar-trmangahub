@@ -1,56 +1,23 @@
 {
-  "selected": 62,
-  "ok": 27,
+  "selected": 61,
+  "ok": 30,
   "by_status": {
-    "blocked": 7,
-    "empty": 14,
+    "blocked": 8,
+    "empty": 15,
     "http": 6,
-    "http404": 8,
-    "ok": 27
+    "http404": 2,
+    "ok": 30
   },
   "sources": [
-    {
-      "id": "3691027854447844931",
-      "title": "Webtoonia",
-      "lang": "tr",
-      "nsfw": 1,
-      "url": "https://webtoonia.fun/manga",
-      "status": "http404",
-      "http_code": "404",
-      "links": 0,
-      "detail": ""
-    },
-    {
-      "id": "8457596619990167255",
-      "title": "XCOMIC",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://xcomic.me/",
-      "status": "ok",
-      "http_code": "200",
-      "links": 24,
-      "detail": ""
-    },
     {
       "id": "8277548740759618769",
       "title": "TrManga",
       "lang": "tr",
       "nsfw": 0,
-      "url": "https://trmanga.com/liste",
+      "url": "https://trmanga.com/webtoon-listesi",
       "status": "ok",
       "http_code": "200",
-      "links": 65,
-      "detail": ""
-    },
-    {
-      "id": "7276031357538379431",
-      "title": "Sunset Manga",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://sunsetscans.com.tr/manga",
-      "status": "ok",
-      "http_code": "200",
-      "links": 21,
+      "links": 24,
       "detail": ""
     },
     {
@@ -59,17 +26,6 @@
       "lang": "tr",
       "nsfw": 0,
       "url": "https://sadscans.com/manga",
-      "status": "blocked",
-      "http_code": "403",
-      "links": 0,
-      "detail": ""
-    },
-    {
-      "id": "6279075557994312388",
-      "title": "RavenScans",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://ravenscans.org/manga",
       "status": "blocked",
       "http_code": "403",
       "links": 0,
@@ -87,13 +43,46 @@
       "detail": ""
     },
     {
+      "id": "8457596619990167255",
+      "title": "XCOMIC",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://xcomic.me/",
+      "status": "ok",
+      "http_code": "200",
+      "links": 24,
+      "detail": ""
+    },
+    {
+      "id": "3691027854447844931",
+      "title": "Webtoonia",
+      "lang": "tr",
+      "nsfw": 1,
+      "url": "https://webtoonia.fun/seri",
+      "status": "ok",
+      "http_code": "200",
+      "links": 12,
+      "detail": ""
+    },
+    {
+      "id": "6279075557994312388",
+      "title": "RavenScans",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://ravenscans.org/manga",
+      "status": "blocked",
+      "http_code": "403",
+      "links": 0,
+      "detail": ""
+    },
+    {
       "id": "8349860464456712436",
       "title": "PandaChaika",
       "lang": "tr",
       "nsfw": 1,
-      "url": "https://panda.chaika.moe/manga",
-      "status": "http404",
-      "http_code": "404",
+      "url": "https://panda.chaika.moe/",
+      "status": "empty",
+      "http_code": "200",
       "links": 0,
       "detail": ""
     },
@@ -102,21 +91,21 @@
       "title": "OkuToon",
       "lang": "tr",
       "nsfw": 0,
-      "url": "https://okutoon.com/manga",
-      "status": "http404",
-      "http_code": "404",
+      "url": "https://okutoon.com/",
+      "status": "empty",
+      "http_code": "200",
       "links": 0,
       "detail": ""
     },
     {
-      "id": "8119700570236890181",
-      "title": "PiedpiperFansub",
+      "id": "7276031357538379431",
+      "title": "Sunset Manga",
       "lang": "tr",
       "nsfw": 0,
-      "url": "https://ww17.piedpiperfansub.me/manga",
-      "status": "empty",
+      "url": "https://sunsetscans.com.tr/manga",
+      "status": "ok",
       "http_code": "200",
-      "links": 0,
+      "links": 21,
       "detail": ""
     },
     {
@@ -127,7 +116,7 @@
       "url": "https://paradoxscans.com/seri",
       "status": "ok",
       "http_code": "200",
-      "links": 39,
+      "links": 36,
       "detail": ""
     },
     {
@@ -139,17 +128,6 @@
       "status": "blocked",
       "http_code": "429",
       "links": 0,
-      "detail": ""
-    },
-    {
-      "id": "1851475661416641513",
-      "title": "OpiaToon",
-      "lang": "tr",
-      "nsfw": 1,
-      "url": "https://opiatoon.shop/manga",
-      "status": "ok",
-      "http_code": "200",
-      "links": 29,
       "detail": ""
     },
     {
@@ -175,14 +153,25 @@
       "detail": ""
     },
     {
-      "id": "2493276940576347494",
-      "title": "MangaSiginagi",
+      "id": "8119700570236890181",
+      "title": "PiedpiperFansub",
       "lang": "tr",
       "nsfw": 0,
-      "url": "https://mangasiginagi.com/manga",
+      "url": "https://ww17.piedpiperfansub.me/manga",
       "status": "empty",
       "http_code": "200",
       "links": 0,
+      "detail": ""
+    },
+    {
+      "id": "1851475661416641513",
+      "title": "OpiaToon",
+      "lang": "tr",
+      "nsfw": 1,
+      "url": "https://opiatoon.shop/manga",
+      "status": "ok",
+      "http_code": "200",
+      "links": 29,
       "detail": ""
     },
     {
@@ -193,7 +182,18 @@
       "url": "https://nyxscans.com/series",
       "status": "ok",
       "http_code": "200",
-      "links": 27,
+      "links": 26,
+      "detail": ""
+    },
+    {
+      "id": "2493276940576347494",
+      "title": "MangaSiginagi",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://mangasiginagi.com/manga",
+      "status": "blocked",
+      "http_code": "429",
+      "links": 0,
       "detail": ""
     },
     {
@@ -208,6 +208,17 @@
       "detail": ""
     },
     {
+      "id": "6086089492503336323",
+      "title": "MangaRuhu",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://mangaruhu.net/manga",
+      "status": "ok",
+      "http_code": "200",
+      "links": 30,
+      "detail": ""
+    },
+    {
       "id": "4329973151094502235",
       "title": "MangaKazani",
       "lang": "tr",
@@ -219,6 +230,17 @@
       "detail": ""
     },
     {
+      "id": "6560643256604346821",
+      "title": "Mangadusleri",
+      "lang": "tr",
+      "nsfw": 1,
+      "url": "https://mangadusleri.mom/latest.php",
+      "status": "ok",
+      "http_code": "200",
+      "links": 24,
+      "detail": ""
+    },
+    {
       "id": "3956326609690998038",
       "title": "NamiComi",
       "lang": "tr",
@@ -226,28 +248,6 @@
       "url": "https://namicomi.com/manga",
       "status": "empty",
       "http_code": "200",
-      "links": 0,
-      "detail": ""
-    },
-    {
-      "id": "6560643256604346821",
-      "title": "Mangadusleri",
-      "lang": "tr",
-      "nsfw": 1,
-      "url": "https://mangadusleri.mom/manga",
-      "status": "http404",
-      "http_code": "404",
-      "links": 0,
-      "detail": ""
-    },
-    {
-      "id": "4063816157291029180",
-      "title": "MangaDot",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://mangadot.net/manga",
-      "status": "blocked",
-      "http_code": "403",
       "links": 0,
       "detail": ""
     },
@@ -263,28 +263,6 @@
       "detail": ""
     },
     {
-      "id": "6086089492503336323",
-      "title": "MangaRuhu",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://mangaruhu.com/manga",
-      "status": "ok",
-      "http_code": "200",
-      "links": 34,
-      "detail": ""
-    },
-    {
-      "id": "4063807738471358855",
-      "title": "MangaDex",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://mangadex.org/manga",
-      "status": "empty",
-      "http_code": "200",
-      "links": 0,
-      "detail": ""
-    },
-    {
       "id": "4062366187196257270",
       "title": "Manga-TR",
       "lang": "tr",
@@ -296,57 +274,13 @@
       "detail": ""
     },
     {
-      "id": "9201850297206503205",
-      "title": "Manga Oku, Webtoon Oku, Manhwa &",
+      "id": "4063807738471358855",
+      "title": "MangaDex",
       "lang": "tr",
       "nsfw": 0,
-      "url": "https://nemesisscans.com/manga",
-      "status": "http404",
-      "http_code": "404",
-      "links": 0,
-      "detail": ""
-    },
-    {
-      "id": "6072449811419052852",
-      "title": "Manga Ball",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://mangaball.com/",
-      "status": "ok",
+      "url": "https://mangadex.org/manga",
+      "status": "empty",
       "http_code": "200",
-      "links": 52,
-      "detail": ""
-    },
-    {
-      "id": "5787889444310861468",
-      "title": "Manga Kusu",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://ragnarscans.net/manga",
-      "status": "ok",
-      "http_code": "200",
-      "links": 37,
-      "detail": ""
-    },
-    {
-      "id": "7470363989556742895",
-      "title": "manga",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://manga.araznovel.com/manga",
-      "status": "ok",
-      "http_code": "200",
-      "links": 19,
-      "detail": ""
-    },
-    {
-      "id": "8961164446912091378",
-      "title": "jiangzaitoon",
-      "lang": "tr",
-      "nsfw": 1,
-      "url": "https://jiangzaitoon.icu/manga",
-      "status": "http",
-      "http_code": "502",
       "links": 0,
       "detail": ""
     },
@@ -362,6 +296,17 @@
       "detail": ""
     },
     {
+      "id": "4063816157291029180",
+      "title": "MangaDot",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://mangadot.net/manga",
+      "status": "blocked",
+      "http_code": "403",
+      "links": 0,
+      "detail": ""
+    },
+    {
       "id": "8167411798342220595",
       "title": "Lunar Manga",
       "lang": "tr",
@@ -370,6 +315,28 @@
       "status": "ok",
       "http_code": "200",
       "links": 2,
+      "detail": ""
+    },
+    {
+      "id": "9201850297206503205",
+      "title": "Manga Oku, Webtoon Oku, Manhwa &",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://nemesisscans.com/",
+      "status": "empty",
+      "http_code": "200",
+      "links": 0,
+      "detail": ""
+    },
+    {
+      "id": "5787889444310861468",
+      "title": "Manga Kusu",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://ragnarscans2.com/manga",
+      "status": "ok",
+      "http_code": "200",
+      "links": 38,
       "detail": ""
     },
     {
@@ -382,6 +349,17 @@
       "http_code": "000",
       "links": 0,
       "detail": "curl: (6) Could not resolve host: fuchscans.com"
+    },
+    {
+      "id": "8961164446912091378",
+      "title": "jiangzaitoon",
+      "lang": "tr",
+      "nsfw": 1,
+      "url": "https://jiangzaitoon.icu/manga",
+      "status": "http",
+      "http_code": "502",
+      "links": 0,
+      "detail": ""
     },
     {
       "id": "6002108884704424154",
@@ -410,7 +388,7 @@
       "title": "GlobalComix",
       "lang": "tr",
       "nsfw": 0,
-      "url": "https://globalcomix.com/manga",
+      "url": "https://globalcomix.com/browse/comics",
       "status": "empty",
       "http_code": "200",
       "links": 0,
@@ -439,14 +417,14 @@
       "detail": ""
     },
     {
-      "id": "3741568115798138687",
-      "title": "WebtoonOku",
+      "id": "7470363989556742895",
+      "title": "manga",
       "lang": "tr",
       "nsfw": 0,
-      "url": "https://webtoonoku.org/manhwa",
+      "url": "https://manga.araznovel.com/manga",
       "status": "ok",
       "http_code": "200",
-      "links": 38,
+      "links": 19,
       "detail": ""
     },
     {
@@ -457,18 +435,7 @@
       "url": "https://yaoiflix.fit/manga",
       "status": "ok",
       "http_code": "200",
-      "links": 13,
-      "detail": ""
-    },
-    {
-      "id": "794336668265180348",
-      "title": "Toontaku",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://toontaku.com/seriler",
-      "status": "ok",
-      "http_code": "200",
-      "links": 24,
+      "links": 14,
       "detail": ""
     },
     {
@@ -483,47 +450,14 @@
       "detail": ""
     },
     {
-      "id": "1579611945590569251",
-      "title": "Ori Manga",
+      "id": "794336668265180348",
+      "title": "Toontaku",
       "lang": "tr",
       "nsfw": 0,
-      "url": "https://orimanga.net/manga",
-      "status": "http",
-      "http_code": "503",
-      "links": 0,
-      "detail": ""
-    },
-    {
-      "id": "796370516133815754",
-      "title": "Tenshi Manga",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://tenshimanga.com/manga",
+      "url": "https://toontaku.com/seriler",
       "status": "ok",
       "http_code": "200",
-      "links": 20,
-      "detail": ""
-    },
-    {
-      "id": "7567809191033269015",
-      "title": "Minda Fansub",
-      "lang": "tr",
-      "nsfw": 1,
-      "url": "https://mindafansub.dev/manga",
-      "status": "http",
-      "http_code": "502",
-      "links": 0,
-      "detail": ""
-    },
-    {
-      "id": "3112899286608319204",
-      "title": "Rüya Manga",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://www.ruyamanga2.com/manga",
-      "status": "ok",
-      "http_code": "200",
-      "links": 11,
+      "links": 24,
       "detail": ""
     },
     {
@@ -538,14 +472,58 @@
       "detail": ""
     },
     {
-      "id": "8462394428445828805",
-      "title": "Mangitto",
+      "id": "796370516133815754",
+      "title": "Tenshi Manga",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://tenshimanga.com/manga",
+      "status": "ok",
+      "http_code": "200",
+      "links": 20,
+      "detail": ""
+    },
+    {
+      "id": "3741568115798138687",
+      "title": "WebtoonOku",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://webtoonoku.org/manhwa",
+      "status": "ok",
+      "http_code": "200",
+      "links": 37,
+      "detail": ""
+    },
+    {
+      "id": "1579611945590569251",
+      "title": "Ori Manga",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://orimanga.net/manga",
+      "status": "http",
+      "http_code": "503",
+      "links": 0,
+      "detail": ""
+    },
+    {
+      "id": "7567809191033269015",
+      "title": "Minda Fansub",
       "lang": "tr",
       "nsfw": 1,
-      "url": "https://mangtto.com/manga",
-      "status": "http404",
-      "http_code": "404",
+      "url": "https://mindafansub.dev/manga",
+      "status": "http",
+      "http_code": "502",
       "links": 0,
+      "detail": ""
+    },
+    {
+      "id": "661348012149783708",
+      "title": "Merlin Scans",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://merlintoon.net/seri/",
+      "status": "ok",
+      "http_code": "200",
+      "links": 37,
       "detail": ""
     },
     {
@@ -571,14 +549,25 @@
       "detail": ""
     },
     {
-      "id": "661348012149783708",
-      "title": "Merlin Scans",
+      "id": "8462394428445828805",
+      "title": "Mangitto",
+      "lang": "tr",
+      "nsfw": 1,
+      "url": "https://mangtto.com/",
+      "status": "ok",
+      "http_code": "200",
+      "links": 78,
+      "detail": ""
+    },
+    {
+      "id": "3112899286608319204",
+      "title": "Rüya Manga",
       "lang": "tr",
       "nsfw": 0,
-      "url": "https://merlintoon.com/manga",
-      "status": "empty",
+      "url": "https://www.ruyamanga2.com/manga",
+      "status": "ok",
       "http_code": "200",
-      "links": 0,
+      "links": 11,
       "detail": ""
     },
     {
@@ -593,39 +582,6 @@
       "detail": ""
     },
     {
-      "id": "7591424560280249953",
-      "title": "SummerToon",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://summertoons.net/manga",
-      "status": "http",
-      "http_code": "522",
-      "links": 0,
-      "detail": ""
-    },
-    {
-      "id": "784503247292697283",
-      "title": "ToonHane",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://toonhane.com/manga",
-      "status": "http",
-      "http_code": "522",
-      "links": 0,
-      "detail": ""
-    },
-    {
-      "id": "4906103541379031343",
-      "title": "Koreli Scans",
-      "lang": "tr",
-      "nsfw": 0,
-      "url": "https://www.nabicix.com/manga",
-      "status": "ok",
-      "http_code": "200",
-      "links": 26,
-      "detail": ""
-    },
-    {
       "id": "3105018861730110456",
       "title": "Eski Mangalar",
       "lang": "tr",
@@ -637,14 +593,36 @@
       "detail": ""
     },
     {
-      "id": "1254625717579109559",
-      "title": "Kuroi Manga",
+      "id": "1203470067124874019",
+      "title": "Elder Manga",
       "lang": "tr",
-      "nsfw": 1,
-      "url": "https://kuroimanga.site/manga",
+      "nsfw": 0,
+      "url": "https://eldermanga.com/manga",
       "status": "ok",
       "http_code": "200",
-      "links": 17,
+      "links": 25,
+      "detail": ""
+    },
+    {
+      "id": "2268549974061786227",
+      "title": "Anikiga",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://anikiga.com/manga",
+      "status": "ok",
+      "http_code": "200",
+      "links": 13,
+      "detail": ""
+    },
+    {
+      "id": "4906103541379031343",
+      "title": "Koreli Scans",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://www.nabicix.com/manga",
+      "status": "ok",
+      "http_code": "200",
+      "links": 26,
       "detail": ""
     },
     {
@@ -670,25 +648,36 @@
       "detail": ""
     },
     {
-      "id": "1203470067124874019",
-      "title": "Elder Manga",
+      "id": "1254625717579109559",
+      "title": "Kuroi Manga",
       "lang": "tr",
-      "nsfw": 0,
-      "url": "https://eldermanga.com/manga",
+      "nsfw": 1,
+      "url": "https://kuroimanga.site/manga",
       "status": "ok",
       "http_code": "200",
-      "links": 25,
+      "links": 17,
       "detail": ""
     },
     {
-      "id": "2268549974061786227",
-      "title": "Anikiga",
+      "id": "7591424560280249953",
+      "title": "SummerToon",
       "lang": "tr",
       "nsfw": 0,
-      "url": "https://anikiga.com/manga",
-      "status": "ok",
-      "http_code": "200",
-      "links": 13,
+      "url": "https://summertoons.net/manga",
+      "status": "http",
+      "http_code": "522",
+      "links": 0,
+      "detail": ""
+    },
+    {
+      "id": "784503247292697283",
+      "title": "ToonHane",
+      "lang": "tr",
+      "nsfw": 0,
+      "url": "https://toonhane.com/manga",
+      "status": "http",
+      "http_code": "522",
+      "links": 0,
       "detail": ""
     }
   ]
