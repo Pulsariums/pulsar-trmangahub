@@ -40,8 +40,6 @@ class PulsarSource(
             .connectTimeout(15, TimeUnit.SECONDS)
             .readTimeout(20, TimeUnit.SECONDS)
             .followRedirects(true)
-            // Kuroi gibi sitelerde HTTP/2 akışı "PROTOCOL_ERROR" ile sıfırlanıyor;
-            // config'te http1=true olan kaynak HTTP/1.1'e sabitlenir.
             .apply { if (config.optBoolean("http1", false)) protocols(listOf(Protocol.HTTP_1_1)) }
             // Aralıklı 403 (Amanga CDN): GET için 5 deneme; HTTP/2 akış sıfırlaması
             // (Kuroi PROTOCOL_ERROR) gibi IOException için 2 deneme.
@@ -103,8 +101,6 @@ class PulsarSource(
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
         val itemSelector = config.optString("itemSelector", "")
-        // listExcludeUrl: adresi bu düzenli ifadeye uyan kartlar atılır (Nyx romanları
-        // sayfa görseli taşımıyor; test ilk kartı roman seçince "sayfa listesi boş" çıkıyordu).
         val excl = config.optString("listExcludeUrl", "")
         val exclRe = if (excl.isBlank()) null else runCatching { Regex(excl) }.getOrNull()
         val items = EngineRegistry.parseList(doc, itemSelector, baseUrl)
@@ -288,17 +284,11 @@ class PulsarSource(
         val api = apiChapterUrl(manga)
         if (api != null) return Request.Builder().url(api).headers(headers).build()
         val mangaUrl = absolute(manga.url)
-        // Madara: bölümler sayfada değil POST {manga}/ajax/chapters/ yanıtında (anikiga);
-        // admin-ajax.php yolu bu sitede 400 veriyor.
+        // Madara: bölümler sayfada değil POST {manga}/ajax/chapters/ yanıtında (anikiga).
         if (config.optBoolean("chapterAjax", false)) {
             return Request.Builder()
                 .url(mangaUrl.trimEnd('/') + "/ajax/chapters/")
-                .headers(
-                    headers.newBuilder()
-                        .set("X-Requested-With", "XMLHttpRequest")
-                        .set("Referer", mangaUrl)
-                        .build(),
-                )
+                .headers(headers.newBuilder().set("X-Requested-With", "XMLHttpRequest").set("Referer", mangaUrl).build())
                 .post(okhttp3.FormBody.Builder().build())
                 .build()
         }
