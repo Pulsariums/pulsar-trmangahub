@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14T00:07:03Z",
+  "generated": "2026-11-14T07:26:23Z",
   "sources": {
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -7389,7 +7389,7 @@
       "nsfw": 0,
       "domain": "sleptmanga.com.tr",
       "packages": [
-        "tr"
+        "tr_sorunlu"
       ],
       "state": "active",
       "health": {
@@ -7398,7 +7398,8 @@
         "ms": 0,
         "detail": "liste: 8 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "sorun": "cloudflare"
     },
     "324065352936051183": {
       "id": 324065352936051183,
@@ -9481,7 +9482,7 @@
       "nsfw": 0,
       "domain": "araznovel.com",
       "packages": [
-        "tr"
+        "tr_sorunlu"
       ],
       "state": "pending",
       "health": {
@@ -9498,7 +9499,8 @@
         "detail": "list: NotFoundException: . Status=404, URL=[https://araznovel.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-13T17:32:24Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "sorun": "cloudflare"
     },
     "3943041137748889772": {
       "id": 3943041137748889772,
@@ -11716,7 +11718,7 @@
       "nsfw": 0,
       "domain": "mangaruhu.com",
       "packages": [
-        "tr"
+        "tr_sorunlu"
       ],
       "state": "pending",
       "health": {
@@ -11733,7 +11735,8 @@
         "detail": "list: SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.",
         "at": "2026-11-13T17:32:24Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "sorun": "login"
     },
     "4234251772650137494": {
       "id": 4234251772650137494,
@@ -17498,7 +17501,7 @@
       "nsfw": 0,
       "domain": "",
       "packages": [
-        "tr"
+        "tr_sorunlu"
       ],
       "state": "pending",
       "device": {
@@ -17508,7 +17511,8 @@
         "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
         "at": "2026-11-13T17:32:24Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "sorun": "cloudflare"
     },
     "5794583010975319217": {
       "id": 5794583010975319217,
@@ -18863,7 +18867,7 @@
       "nsfw": 0,
       "domain": "mangaruhu.com",
       "packages": [
-        "tr"
+        "tr_sorunlu"
       ],
       "state": "active",
       "health": {
@@ -18872,7 +18876,8 @@
         "ms": 0,
         "detail": "liste: 34 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "sorun": "login"
     },
     "6090117639599749850": {
       "id": 6090117639599749850,
@@ -21384,7 +21389,7 @@
       "nsfw": 0,
       "domain": "manga.araznovel.com",
       "packages": [
-        "tr"
+        "tr_sorunlu"
       ],
       "state": "active",
       "health": {
@@ -21393,7 +21398,8 @@
         "ms": 0,
         "detail": "liste: 19 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "sorun": "cloudflare"
     },
     "751725947791672488": {
       "id": 751725947791672488,
@@ -22047,7 +22053,7 @@
       "nsfw": 0,
       "domain": "www.tilkiscans.com",
       "packages": [
-        "tr"
+        "tr_sorunlu"
       ],
       "state": "pending",
       "health": {
@@ -22064,7 +22070,8 @@
         "detail": "covers: Cloudflare engelledi, manuel doğrulama gerekli",
         "at": "2026-11-13T17:32:24Z"
       },
-      "device_step": "covers"
+      "device_step": "covers",
+      "sorun": "cloudflare"
     },
     "7850641826358118318": {
       "id": 7850641826358118318,

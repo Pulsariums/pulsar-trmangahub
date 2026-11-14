@@ -23,6 +23,18 @@ pub struct SourceMap {
     #[serde(default)] pub catalogue: Vec<SourceEntry>,
 }
 
+#[derive(Deserialize, Default)]
+pub struct CatEntry {
+    #[serde(default)] pub domain: String,
+    #[serde(default)] pub lang: String,
+    #[serde(default)] pub sorun: String,
+}
+
+#[derive(Deserialize, Default)]
+pub struct CatalogueFile {
+    #[serde(default)] pub sources: Vec<CatEntry>,
+}
+
 #[derive(Serialize, Deserialize, Clone, Debug, Default)]
 pub struct Probe {
     pub status: String,
@@ -48,6 +60,8 @@ pub struct StatusEntry {
     /// "list" düşerse kaynak tamamen ölü; sonraki adımlar kısmi arıza demektir.
     #[serde(default, skip_serializing_if = "Option::is_none")] pub device_step: Option<String>,
     #[serde(default, skip_serializing_if = "String::is_empty")] pub note: String,
+    /// Sorun türü ("cloudflare"/"login"). Dolu ise kaynak `*_sorunlu` paketine ayrılır.
+    #[serde(default, skip_serializing_if = "String::is_empty")] pub sorun: String,
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, Default)]
@@ -56,16 +70,17 @@ pub struct StatusFile {
     pub sources: BTreeMap<String, StatusEntry>,
 }
 
-pub fn packages_for(e: &SourceEntry) -> Vec<String> {
+pub fn packages_for(e: &SourceEntry, sorun: &str) -> Vec<String> {
     let tr = e.lang == "tr";
     let nsfw = e.nsfw == 1;
-    let pkg = match (tr, nsfw) {
+    let sorunlu = !sorun.is_empty();
+    let base = match (tr, nsfw) {
         (true, false) => "tr",
         (true, true) => "tr18",
         (false, false) => "global",
         (false, true) => "global18",
     };
-    vec![pkg.to_string()]
+    vec![if sorunlu { format!("{base}_sorunlu") } else { base.to_string() }]
 }
 
 pub fn recompute_state(e: &mut StatusEntry) {
@@ -103,6 +118,18 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
     let text = std::fs::read_to_string(&map_path).map_err(|e| format!("{}: {e}", map_path.display()))?;
     let map: SourceMap = serde_json::from_str(&text).map_err(|e| format!("source_map.json: {e}"))?;
     let mut file = load(root);
+    // Elle işaretli "sorun" alanları cihaz sonucundan önce gelir.
+    let cat_path = root.join("pulsar-v2/data/catalogue.json");
+    let mut manual: std::collections::HashMap<(String, String), String> = std::collections::HashMap::new();
+    if let Ok(cat_text) = std::fs::read_to_string(&cat_path) {
+        if let Ok(cat) = serde_json::from_str::<CatalogueFile>(&cat_text) {
+            for c in cat.sources {
+                if !c.sorun.is_empty() {
+                    manual.insert((c.domain.to_lowercase(), c.lang.to_lowercase()), c.sorun);
+                }
+            }
+        }
+    }
     let mut seen: std::collections::HashSet<String> = std::collections::HashSet::new();
     for e in map.engine.into_iter().chain(map.catalogue) {
         let key = e.id.to_string();
@@ -120,6 +147,7 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
             device: None,
             device_step: None,
             note: String::new(),
+            sorun: String::new(),
         });
         // Katalogda dil/domain/nsfw değişince kimlik alanları güncellenmeli; eskiden
         // `or_insert_with` yüzünden eski id olduğu gibi kalıyor ve yayında bayat
@@ -130,7 +158,24 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
         s.lang = e.lang.clone();
         s.nsfw = e.nsfw;
         s.domain = e.domain.clone();
-        s.packages = packages_for(&e);
+        // Öncelik: elle işaret > cihaz sonucu (cloudflare, sonra 401/login).
+        let sorun = manual
+            .get(&(e.domain.to_lowercase(), e.lang.to_lowercase()))
+            .cloned()
+            .or_else(|| {
+                let dev = s.device.as_ref()?;
+                if dev.status == "cloudflare" {
+                    return Some("cloudflare".to_string());
+                }
+                let d = dev.detail.to_lowercase();
+                if d.contains("401") || d.contains("login") || d.contains("unauthorized") {
+                    return Some("login".to_string());
+                }
+                None
+            })
+            .unwrap_or_default();
+        s.sorun = sorun.clone();
+        s.packages = packages_for(&e, &sorun);
         recompute_state(s);
     }
     // Katalogdan düşen id'ler yayın listesinde kalmasın.
