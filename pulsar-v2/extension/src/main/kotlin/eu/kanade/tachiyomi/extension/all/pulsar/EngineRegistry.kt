@@ -159,11 +159,19 @@ object EngineRegistry {
         val sel = selector.ifBlank { "div.bsx, div.manga-card, div.page-item-detail, div.manga" }
         val items = doc.select(sel).mapNotNull { el ->
             runCatching {
-                val linkEl = el.selectFirst("a[href]") ?: return@runCatching null
+                // Seçici doğrudan <a href> eşleştirebilir (ör. okutoon a.update-card-cover);
+                // Jsoup'un alt öğe araması kendini bulamaz, o yüzden önce kendine bakılır.
+                val linkEl = if (el.tagName() == "a" && el.hasAttr("href")) el else el.selectFirst("a[href]")
+                linkEl ?: return@runCatching null
                 val rawUrl = linkEl.attr("href")
                 val fullUrl = if (rawUrl.startsWith("http")) rawUrl else "$baseUrl/${rawUrl.trimStart('/')}"
-                val title = el.selectFirst("h3, h2, h4, .title, a[title]")?.text()
-                    ?: linkEl.attr("title").ifBlank { linkEl.text() }
+                // Kapak bağlantılarında metin boştur; başlık aria-label veya img alt'ta durur.
+                val title = el.selectFirst("h3, h2, h4, .title, a[title]")?.text()?.trim().orEmpty()
+                    .ifBlank { linkEl.attr("title") }
+                    .ifBlank { linkEl.attr("aria-label") }
+                    .ifBlank { linkEl.text() }
+                    .ifBlank { el.selectFirst("img[alt]")?.attr("alt").orEmpty() }
+                    .trim()
 
                 val imgEl = el.selectFirst("img[src], img[data-src], img[data-lazy-src]")
                 val cover = imgEl?.attr("data-src")?.ifBlank { null }
