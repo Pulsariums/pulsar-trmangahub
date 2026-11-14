@@ -115,3 +115,10 @@ Aynı görsel adresi 10 GET'in ~4'ünde 200, ~6'sında 403 dönüyor. User-Agent
 - **Katalog tekilleştirme**: 109 kayıt, 15 mükerrer (aynı domain+lang). `06_prepare_assets.py:138-150` dosya sırasındaki ilk kaydı tutar. Temizlik 109→94; `total_count` alanı da güncellenmeli. Kanıt: CI sonrası index'te paket başına id/ad listeleri birebir aynı (tr 30, tr18 4, global 361, global18 134).
 - **`pulsar sweep`**: `details` HATASI da (harness imzalı hatalar hariç) sıradaki esere geçirir, en fazla 3 eser. `eser` sütunu hangi eserin denendiğini gösterir. 0 bölümlü eser artık "bozuk" sayılmaz (tenshimanga 39 bölüm / 61 sayfa).
 - **Yerel sınama sınırı**: harness yalnız catalogue kaynaklarını sınar; engine kaynakları `newParserInstance(MangaSource)` ABI uyuşmazlığı yüzünden çalışmaz.
+
+## 11. Yayın listesi `source-status.json`'dan gelir
+
+- `tools/pulsar/src/status.rs::ensure_all` eskiden yalnız eksik kaydı ekliyordu (`entry(...).or_insert_with`). Katalogda dil/domain değişince eski id yayında kalıyordu (mangaball: `tr` → `en`, tr paketinde 1.6.46'ya kadar göründü).
+- Düzeltme (`9921224`): her çalıştırmada kimlik alanları (id/kind/title/lang/nsfw/domain/packages) `source_map.json`'dan güncellenir, haritada olmayan id `retain` ile budanır; health/device/note korunur.
+- Yayına yalnız `state=active` kaynaklar girer (`generate_repo.py`). Katalog değişikliğinden doğan yeni id `unknown` başlar ve sağlık ölçümü yapılmadan global pakete girmez.
+- Kanıt: 1.6.47'de tr 30→29, diğer paketlerde id farkı yok; budanan 32 kayıt zaten yayında değildi.
