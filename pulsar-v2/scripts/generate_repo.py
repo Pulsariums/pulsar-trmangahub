@@ -110,12 +110,12 @@ def runtime_filtered(entry, filters):
 
 
 def package_sources(status, suffix, dropped=(), filters=None):
-    """Yalnız state=active ve paketi eşleşen kaynaklar indekse girer."""
+    """state=active ya da elle sorun işaretli ve paketi eşleşen kaynaklar indekse girer."""
     pkg = suffix.lstrip(".")
     filters = filters or {"dead_hosts": set(), "dead_sources": set(), "engine_name": {}}
     rows = []
     for entry in status.values():
-        if entry.get("state") != "active":
+        if entry.get("state") != "active" and not (entry.get("sorun") or "").strip():
             continue
         if pkg not in (entry.get("packages") or []):
             continue
@@ -144,7 +144,7 @@ def write_pending_report(repo_dir, status):
         "| Paket | Kaynak | Dil | Domain | Sebep |",
         "|---|---|---|---|---|",
     ]
-    rows = [e for e in status.values() if e.get("state") != "active"]
+    rows = [e for e in status.values() if e.get("state") != "active" and not (e.get("sorun") or "").strip()]
     rows.sort(key=lambda e: (",".join(e.get("packages") or []), (e.get("title") or "").lower()))
     for e in rows:
         health = e.get("health") or {}
