@@ -876,7 +876,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/manhwa",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail, a[href*=\"/manhwa/\"]",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
@@ -2096,8 +2096,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/liste",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "listPath": "/webtoon-listesi",
+        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail, a[href*=\"/webtoon/\"]",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
