@@ -47,6 +47,7 @@
         "tagPrefix": "manga-tur/",
         "datePattern": "d MMMM yyyy",
         "postReq": true,
+        "chapterAjax": true,
         "engine": "madara",
         "listPath": "/manga",
         "itemSelector": "div.page-item-detail, div.manga",
@@ -287,6 +288,7 @@
       "engine": "madara",
       "config": {
         "datePattern": "d MMMM yyyy",
+        "http1": true,
         "engine": "madara",
         "listPath": "/manga",
         "itemSelector": "div.page-item-detail, div.manga",
@@ -1686,6 +1688,7 @@
         },
         "engine": "mangareader",
         "listPath": "/series",
+        "listExcludeUrl": "-novel/?$",
         "itemSelector": "div.bsx",
         "chapterSelector": "",
         "chapterScriptSelector": "script[data-tsr-stream-part]",
@@ -1767,7 +1770,8 @@
         "local_custom",
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "sorun": "login"
     },
     {
       "id": "6830559705127350757",
