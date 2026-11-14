@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T19:01:05Z",
+  "generated": "2026-11-14T00:07:03Z",
   "sources": {
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -61,25 +61,6 @@
         "status": "ok",
         "http_code": "200",
         "ms": 3189,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "1084418383174697768": {
-      "id": 1084418383174697768,
-      "kind": "catalogue",
-      "title": "TonizuToon",
-      "lang": "tr",
-      "nsfw": 1,
-      "domain": "tonizu.top",
-      "packages": [
-        "tr18"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2364,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
       }
@@ -342,25 +323,6 @@
         "status": "http5xx",
         "http_code": "523",
         "ms": 984,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "1295018527397714241": {
-      "id": 1295018527397714241,
-      "kind": "catalogue",
-      "title": "Tarot Scans",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "tarotscans.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2283,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
       }
@@ -7324,44 +7286,6 @@
         "at": "2026-11-13T19:01:05Z"
       }
     },
-    "3179435076707922441": {
-      "id": 3179435076707922441,
-      "kind": "catalogue",
-      "title": "gafeland",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "gafeland.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2340,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "3194760788292645390": {
-      "id": 3194760788292645390,
-      "kind": "catalogue",
-      "title": "Arcura Fansub",
-      "lang": "tr",
-      "nsfw": 1,
-      "domain": "arcurafansub.com",
-      "packages": [
-        "tr18"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 748,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "3201609293231115184": {
       "id": 3201609293231115184,
       "kind": "engine",
@@ -7750,25 +7674,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "3483176489432573539": {
-      "id": 3483176489432573539,
-      "kind": "catalogue",
-      "title": "Luna Scans",
-      "lang": "tr",
-      "nsfw": 1,
-      "domain": "tuhafscans.com",
-      "packages": [
-        "tr18"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1119,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "3517094690583648677": {
       "id": 3517094690583648677,
       "kind": "engine",
@@ -7805,25 +7710,6 @@
         "ms": 0,
         "detail": "liste: 24 link",
         "at": "2026-11-13T19:01:05Z"
-      }
-    },
-    "357698414057326452": {
-      "id": 357698414057326452,
-      "kind": "catalogue",
-      "title": "Raindrop Fansub",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "raindropteamfan.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 384,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
       }
     },
     "3581135968918069737": {
@@ -8043,25 +7929,6 @@
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
-      }
-    },
-    "3691037704178132287": {
-      "id": 3691037704178132287,
-      "kind": "catalogue",
-      "title": "WebtoonTr",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "webtoontr.net",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2599,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
       }
     },
     "3705166607977328849": {
@@ -9335,25 +9202,6 @@
       },
       "device_step": "list"
     },
-    "381484129732438666": {
-      "id": 381484129732438666,
-      "kind": "catalogue",
-      "title": "Türkçe Manga Oku",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "trmangaoku.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2355,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "3828721067451506894": {
       "id": 3828721067451506894,
       "kind": "engine",
@@ -10268,25 +10116,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "4061344289012005112": {
-      "id": 4061344289012005112,
-      "kind": "catalogue",
-      "title": "Webtoon Hatti",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "webtoonhatti.club",
-      "packages": [
-        "tr"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1509,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "4062366187196257270": {
       "id": 4062366187196257270,
       "kind": "catalogue",
@@ -10399,25 +10228,6 @@
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
-      }
-    },
-    "4064318592690171903": {
-      "id": 4064318592690171903,
-      "kind": "catalogue",
-      "title": "MangaWOW",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangawow.org",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1537,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
       }
     },
     "4065291127491532948": {
@@ -12712,25 +12522,6 @@
         "status": "ok",
         "http_code": "200",
         "ms": 4800,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "4274410594283057355": {
-      "id": 4274410594283057355,
-      "kind": "catalogue",
-      "title": "ZenithScans",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "zenithscans.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "http5xx",
-        "http_code": "503",
-        "ms": 1426,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
       }
@@ -15141,25 +14932,6 @@
       ],
       "state": "unknown"
     },
-    "5335900657314089990": {
-      "id": 5335900657314089990,
-      "kind": "catalogue",
-      "title": "DiamondFansub",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "diamondfansub.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1690,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "5390747718232305300": {
       "id": 5390747718232305300,
       "kind": "engine",
@@ -15278,25 +15050,6 @@
         "status": "ok",
         "http_code": "200",
         "ms": 1936,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "5447717829511226753": {
-      "id": 5447717829511226753,
-      "kind": "catalogue",
-      "title": "Gaiatoon",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "gaiatoon.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 882,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
       }
@@ -18297,25 +18050,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "5815221491918609206": {
-      "id": 5815221491918609206,
-      "kind": "catalogue",
-      "title": "GarciaManga",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "garciamanga.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 865,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "5822259194978908981": {
       "id": 5822259194978908981,
       "kind": "engine",
@@ -18509,25 +18243,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "5863442274693704416": {
-      "id": 5863442274693704416,
-      "kind": "catalogue",
-      "title": "TimeNaight",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "timenaight.org",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1014,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "5888421834799938159": {
       "id": 5888421834799938159,
       "kind": "engine",
@@ -18593,25 +18308,6 @@
         "global"
       ],
       "state": "unknown"
-    },
-    "5925244894679392886": {
-      "id": 5925244894679392886,
-      "kind": "catalogue",
-      "title": "AthenaManga",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "athenamanga.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1504,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
     },
     "5929466406882050558": {
       "id": 5929466406882050558,
@@ -19102,24 +18798,17 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "6072449811419052852": {
-      "id": 6072449811419052852,
+    "6072449811419052383": {
+      "id": 6072449811419052383,
       "kind": "catalogue",
       "title": "Manga Ball",
-      "lang": "tr",
+      "lang": "en",
       "nsfw": 0,
       "domain": "mangaball.com",
       "packages": [
-        "tr"
+        "global"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 52 link",
-        "at": "2026-11-13T19:01:05Z"
-      }
+      "state": "unknown"
     },
     "6079425587928375229": {
       "id": 6079425587928375229,
@@ -19295,25 +18984,6 @@
         "status": "ok",
         "http_code": "200",
         "ms": 1930,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "6174331399853269477": {
-      "id": 6174331399853269477,
-      "kind": "catalogue",
-      "title": "Mikrokosmos Fansub",
-      "lang": "tr",
-      "nsfw": 1,
-      "domain": "mikrokosmosfb.blogspot.com",
-      "packages": [
-        "tr18"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1797,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
       }
@@ -19620,25 +19290,6 @@
         "global"
       ],
       "state": "unknown"
-    },
-    "6375261139970147741": {
-      "id": 6375261139970147741,
-      "kind": "catalogue",
-      "title": "MugiManga",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mugimanga.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1119,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
     },
     "6377507938794774820": {
       "id": 6377507938794774820,
@@ -20264,25 +19915,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "6620039325110469985": {
-      "id": 6620039325110469985,
-      "kind": "catalogue",
-      "title": "Shadow Çeviri",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "shadowceviri.blogspot.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2219,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "6620603193106345631": {
       "id": 6620603193106345631,
       "kind": "engine",
@@ -20393,25 +20025,6 @@
         "status": "ok",
         "http_code": "200",
         "ms": 645,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "670740038008065849": {
-      "id": 670740038008065849,
-      "kind": "catalogue",
-      "title": "Pati Manga",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "patimanga.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2464,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
       }
@@ -20700,25 +20313,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "6742627070718581513": {
-      "id": 6742627070718581513,
-      "kind": "catalogue",
-      "title": "Tortuga Ceviri",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "tortugaceviri.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2248,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "6778680128073846783": {
       "id": 6778680128073846783,
       "kind": "engine",
@@ -20754,25 +20348,6 @@
         "http_code": "000",
         "ms": 203,
         "detail": "curl: (6) Could not resolve host: silencescan.com.br",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "681306618208001196": {
-      "id": 681306618208001196,
-      "kind": "catalogue",
-      "title": "MangaTilkisi",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "tilkiscans.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1608,
-        "detail": "",
         "at": "2026-11-13T17:07:52Z"
       }
     },
@@ -20829,25 +20404,6 @@
         "status": "ok",
         "http_code": "200",
         "ms": 1540,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "6877555224237718104": {
-      "id": 6877555224237718104,
-      "kind": "catalogue",
-      "title": "HoiFansub",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "hoifansub.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1282,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
       }
@@ -20935,25 +20491,6 @@
         "at": "2026-11-13T17:32:24Z"
       },
       "device_step": "list"
-    },
-    "6946651026380347829": {
-      "id": 6946651026380347829,
-      "kind": "catalogue",
-      "title": "ArazNovel",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "araznovel.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1100,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
     },
     "6958297225666389056": {
       "id": 6958297225666389056,
@@ -21449,25 +20986,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "7170599070299314950": {
-      "id": 7170599070299314950,
-      "kind": "catalogue",
-      "title": "Serein Scan",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "sereinscan.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1935,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "7186759213619575356": {
       "id": 7186759213619575356,
       "kind": "engine",
@@ -21877,25 +21395,6 @@
         "at": "2026-11-13T19:01:05Z"
       }
     },
-    "7485371025792316291": {
-      "id": 7485371025792316291,
-      "kind": "catalogue",
-      "title": "Shijie Scans",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "shijiescans.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1844,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "751725947791672488": {
       "id": 751725947791672488,
       "kind": "engine",
@@ -22255,44 +21754,6 @@
         "at": "2026-11-13T17:32:24Z"
       },
       "device_step": "list"
-    },
-    "7652509331851274426": {
-      "id": 7652509331851274426,
-      "kind": "catalogue",
-      "title": "AdonisFansub",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "manga.adonisfansub.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1663,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "7663701235462277388": {
-      "id": 7663701235462277388,
-      "kind": "catalogue",
-      "title": "SeraphManga",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "seraphmanga.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 839,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
     },
     "767198593501925111": {
       "id": 767198593501925111,
@@ -22658,25 +22119,6 @@
         "at": "2026-11-13T17:32:24Z"
       },
       "device_step": "list"
-    },
-    "7893052437992694291": {
-      "id": 7893052437992694291,
-      "kind": "catalogue",
-      "title": "PiedPiperFansubyy",
-      "lang": "tr",
-      "nsfw": 1,
-      "domain": "piedpiperfansubyy.me",
-      "packages": [
-        "tr18"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 682,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
     },
     "7894614281626720954": {
       "id": 7894614281626720954,
@@ -23215,25 +22657,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "8131725821546908076": {
-      "id": 8131725821546908076,
-      "kind": "catalogue",
-      "title": "MangaDenizi",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangadenizi.net",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1666,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "8132452139723567734": {
       "id": 8132452139723567734,
       "kind": "engine",
@@ -23764,25 +23187,6 @@
         "at": "2026-11-13T19:01:05Z"
       }
     },
-    "8461894771860958934": {
-      "id": 8461894771860958934,
-      "kind": "catalogue",
-      "title": "MangaWT",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangawt.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 644,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
     "8462394428445828805": {
       "id": 8462394428445828805,
       "kind": "catalogue",
@@ -24241,25 +23645,6 @@
         "status": "ok",
         "http_code": "200",
         "ms": 2476,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "8731195067661568398": {
-      "id": 8731195067661568398,
-      "kind": "catalogue",
-      "title": "Gölge Bahçesi",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "golgebahcesi.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1835,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
       }

@@ -103,27 +103,38 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
     let text = std::fs::read_to_string(&map_path).map_err(|e| format!("{}: {e}", map_path.display()))?;
     let map: SourceMap = serde_json::from_str(&text).map_err(|e| format!("source_map.json: {e}"))?;
     let mut file = load(root);
+    let mut seen: std::collections::HashSet<String> = std::collections::HashSet::new();
     for e in map.engine.into_iter().chain(map.catalogue) {
         let key = e.id.to_string();
-        file.sources.entry(key).or_insert_with(|| {
-            let mut s = StatusEntry {
-                id: e.id,
-                kind: e.kind.clone(),
-                title: if e.title.is_empty() { e.name.clone() } else { e.title.clone() },
-                lang: e.lang.clone(),
-                nsfw: e.nsfw,
-                domain: e.domain.clone(),
-                packages: packages_for(&e),
-                state: "unknown".to_string(),
-                health: None,
-                device: None,
-                device_step: None,
-                note: String::new(),
-            };
-            recompute_state(&mut s);
-            s
+        seen.insert(key.clone());
+        let s = file.sources.entry(key).or_insert_with(|| StatusEntry {
+            id: e.id,
+            kind: e.kind.clone(),
+            title: String::new(),
+            lang: String::new(),
+            nsfw: 0,
+            domain: String::new(),
+            packages: Vec::new(),
+            state: "unknown".to_string(),
+            health: None,
+            device: None,
+            device_step: None,
+            note: String::new(),
         });
+        // Katalogda dil/domain/nsfw değişince kimlik alanları güncellenmeli; eskiden
+        // `or_insert_with` yüzünden eski id olduğu gibi kalıyor ve yayında bayat
+        // kaynak görünüyordu (mangaball: tr -> en). Sağlık/cihaz/not korunur.
+        s.id = e.id;
+        s.kind = e.kind.clone();
+        s.title = if e.title.is_empty() { e.name.clone() } else { e.title.clone() };
+        s.lang = e.lang.clone();
+        s.nsfw = e.nsfw;
+        s.domain = e.domain.clone();
+        s.packages = packages_for(&e);
+        recompute_state(s);
     }
+    // Katalogdan düşen id'ler yayın listesinde kalmasın.
+    file.sources.retain(|k, _| seen.contains(k));
     file.generated = now();
     save(root, &file)?;
     Ok(file)
