@@ -122,3 +122,12 @@ Aynı görsel adresi 10 GET'in ~4'ünde 200, ~6'sında 403 dönüyor. User-Agent
 - Düzeltme (`9921224`): her çalıştırmada kimlik alanları (id/kind/title/lang/nsfw/domain/packages) `source_map.json`'dan güncellenir, haritada olmayan id `retain` ile budanır; health/device/note korunur.
 - Yayına yalnız `state=active` kaynaklar girer (`generate_repo.py`). Katalog değişikliğinden doğan yeni id `unknown` başlar ve sağlık ölçümü yapılmadan global pakete girmez.
 - Kanıt: 1.6.47'de tr 30→29, diğer paketlerde id farkı yok; budanan 32 kayıt zaten yayında değildi.
+
+## 12. Liste adımı avı ve ölü ayrımı (1.6.49)
+
+- **`pulsar probe` kör noktaları**: sayım `(manga|seri|series|comic|manhwa|webtoon)/slug` kalıbına bakıyor. Tek segmentli `/slug` (okutoon), `/archive/N/` (panda.chaika) ve `/c/slug` (globalcomix) linklerini göremiyor; sayfa 200 olsa bile `empty` yazıyor. Bu üçünde karar "sayfa 200 + gerçek link sayısı" ile verildi (24 / 100 / 144).
+- **Jsoup kendini bulmaz**: `el.selectFirst("a[href]")` yalnız ALT öğelere bakar. Kartın kendisi `<a class="series-card" href="/slug">` ise liste 0 çıkar. Düzeltme (`3c532ae`): önce `el.tagName()=="a"` kontrolü; başlık sırası heading → `title` → `aria-label` → metin → `img[alt]`.
+- **Kesin ölü işareti**: katalogda `"dead": true`. `status.rs::packages_for` boş paket döner, durum `dead` olur; kaynak hiçbir APK'ya girmez. Kanıtlı ölüler: guildknives.com (GoDaddy park), noxscans.com ve mangakazani.com (ParkLogic), mangaoku.info ("satılıktır"), alliedfansub.net (177 bayt boş), jiangzaitoon.icu (502, .com park), fuchscans.com (NXDOMAIN), juratempe.st (YouTube'a yönlendiriyor).
+- **Cloudflare / DDoS-Guard** (`sorun: "cloudflare"`): sadscans.com, ravenscans.org, mangagezgini.online, millascan.com, mangadot.net, manga-tr.com. `tr_sorunlu` paketine giderler.
+- **Cihaz verisi tek yönlüdür**: rapor yalnız düşen kaynakları yazar, geçen kaynağın eski `fail` etiketi silinmez. Bu yüzden `state` kuralı adım bazlı: cihazda `list` (veya adım bilgisi yok) + health `ok` → `pending`; `pages/details/search` düşmesi kaynağı yayından çıkarmaz (`d48d10a`, 1.6.47→1.6.48'de tr 29→20 kaybının sebebi buydu).
+- **Belirsiz ≠ ölü**: anti-bot/SPA engeli (nyxmanga, mangasiginagi, esomanga, mangacix, namicomi, mindafansub, toonhane, summertoons, piedpiperfansub) ölü sayılmadı; yalnız park/NXDOMAIN/satılık kanıtı `dead` yapar.
