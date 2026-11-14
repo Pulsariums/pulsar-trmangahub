@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14T07:26:23Z",
+  "generated": "2026-11-14T07:31:57Z",
   "sources": {
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -280,14 +280,22 @@
       "packages": [
         "tr18"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 17 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "search: Sonuç yok: a, one",
+        "at": "2026-11-14T07:30:48Z"
+      },
+      "device_step": "search"
     },
     "1256178622669487949": {
       "id": 1256178622669487949,
@@ -3248,14 +3256,22 @@
       "packages": [
         "tr18"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 29 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "search: Sonuç yok: a, one",
+        "at": "2026-11-14T07:30:48Z"
+      },
+      "device_step": "search"
     },
     "1854510220106965266": {
       "id": 1854510220106965266,
@@ -3633,14 +3649,22 @@
       "packages": [
         "tr"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 20 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "pages: HttpException: HTTP error 403",
+        "at": "2026-11-14T07:30:48Z"
+      },
+      "device_step": "pages"
     },
     "2106433588541418302": {
       "id": 2106433588541418302,
@@ -7391,7 +7415,7 @@
       "packages": [
         "tr_sorunlu"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7399,6 +7423,14 @@
         "detail": "liste: 8 link",
         "at": "2026-11-13T19:01:05Z"
       },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "pages: Sayfa listesi boş",
+        "at": "2026-11-14T07:30:48Z"
+      },
+      "device_step": "pages",
       "sorun": "cloudflare"
     },
     "324065352936051183": {
@@ -8007,14 +8039,22 @@
       "packages": [
         "tr"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 38 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "details: IllegalStateException: TANI2 gen=50 html=50 rsc=0 TANI kod=200 url=https://webtoonoku.org/manhwa/hapci-prens/ len=154338 a=119 sel=0 gen=50 ilk=https://webtoonoku.org/ htt",
+        "at": "2026-11-14T07:30:48Z"
+      },
+      "device_step": "details"
     },
     "3755890727305152473": {
       "id": 3755890727305152473,
@@ -14484,14 +14524,22 @@
       "packages": [
         "tr"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 26 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "details: IllegalStateException: TANI2 gen=140 html=140 rsc=0 TANI kod=200 url=https://www.nabicix.com/manga/akademinin-basrol-oyuncusu/ len=168919 a=186 sel=0 gen=140 ilk=https://w",
+        "at": "2026-11-14T07:30:48Z"
+      },
+      "device_step": "details"
     },
     "4913495778819209502": {
       "id": 4913495778819209502,
@@ -17501,7 +17549,7 @@
       "nsfw": 0,
       "domain": "",
       "packages": [
-        "tr_sorunlu"
+        "tr"
       ],
       "state": "pending",
       "device": {
@@ -17511,8 +17559,7 @@
         "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
         "at": "2026-11-13T17:32:24Z"
       },
-      "device_step": "list",
-      "sorun": "cloudflare"
+      "device_step": "list"
     },
     "5794583010975319217": {
       "id": 5794583010975319217,
@@ -18869,7 +18916,7 @@
       "packages": [
         "tr_sorunlu"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18877,6 +18924,14 @@
         "detail": "liste: 34 link",
         "at": "2026-11-13T19:01:05Z"
       },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "pages: Sayfa listesi boş",
+        "at": "2026-11-14T07:30:48Z"
+      },
+      "device_step": "pages",
       "sorun": "login"
     },
     "6090117639599749850": {
@@ -21391,7 +21446,7 @@
       "packages": [
         "tr_sorunlu"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21399,6 +21454,14 @@
         "detail": "liste: 19 link",
         "at": "2026-11-13T19:01:05Z"
       },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "details: IllegalStateException: TANI2 gen=0 html=0 rsc=0 TANI kod=200 url=https://manga.araznovel.com/series/cohabitation-with-the-fiancee/ len=5404 a=1 sel=0 gen=0 ilk=https://man",
+        "at": "2026-11-14T07:30:48Z"
+      },
+      "device_step": "details",
       "sorun": "cloudflare"
     },
     "751725947791672488": {
@@ -22053,7 +22116,7 @@
       "nsfw": 0,
       "domain": "www.tilkiscans.com",
       "packages": [
-        "tr_sorunlu"
+        "tr"
       ],
       "state": "pending",
       "health": {
@@ -22070,8 +22133,7 @@
         "detail": "covers: Cloudflare engelledi, manuel doğrulama gerekli",
         "at": "2026-11-13T17:32:24Z"
       },
-      "device_step": "covers",
-      "sorun": "cloudflare"
+      "device_step": "covers"
     },
     "7850641826358118318": {
       "id": 7850641826358118318,
@@ -22731,14 +22793,22 @@
       "packages": [
         "tr"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 2 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "details: IllegalStateException: TANI2 gen=20 html=0 rsc=20 TANI kod=200 url=https://lunarx.to/manga/undercoverchaebolhighbyleylaxluvii len=150421 a=0 sel=0 gen=0 ilk=",
+        "at": "2026-11-14T07:30:48Z"
+      },
+      "device_step": "details"
     },
     "8170497644902480619": {
       "id": 8170497644902480619,
@@ -23185,14 +23255,22 @@
       "packages": [
         "tr"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 24 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "pages: Sayfa listesi boş",
+        "at": "2026-11-14T07:30:48Z"
+      },
+      "device_step": "pages"
     },
     "8462394428445828805": {
       "id": 8462394428445828805,
@@ -23430,14 +23508,22 @@
       "packages": [
         "tr"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
         "detail": "liste: 27 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "pages: Sayfa listesi boş",
+        "at": "2026-11-14T07:30:48Z"
+      },
+      "device_step": "pages"
     },
     "8617765395947838237": {
       "id": 8617765395947838237,

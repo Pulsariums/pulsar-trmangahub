@@ -158,21 +158,12 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
         s.lang = e.lang.clone();
         s.nsfw = e.nsfw;
         s.domain = e.domain.clone();
-        // Öncelik: elle işaret > cihaz sonucu (cloudflare, sonra 401/login).
+        // Sınıflama yalnız elle işarete bağlıdır. Cihaz raporu yalnızca düşen
+        // kaynakları listeler; geçen kaynağın eski etiketi güncellenmediği için
+        // cihazdan türetilen "sorun" bayat kalıyordu. Cihaz verisi saklanır.
         let sorun = manual
             .get(&(e.domain.to_lowercase(), e.lang.to_lowercase()))
             .cloned()
-            .or_else(|| {
-                let dev = s.device.as_ref()?;
-                if dev.status == "cloudflare" {
-                    return Some("cloudflare".to_string());
-                }
-                let d = dev.detail.to_lowercase();
-                if d.contains("401") || d.contains("login") || d.contains("unauthorized") {
-                    return Some("login".to_string());
-                }
-                None
-            })
             .unwrap_or_default();
         s.sorun = sorun.clone();
         s.packages = packages_for(&e, &sorun);
