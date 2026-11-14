@@ -9,6 +9,7 @@ import eu.kanade.tachiyomi.source.online.HttpSource
 import okhttp3.Headers
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
+import okhttp3.Protocol
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.Response
@@ -39,20 +40,33 @@ class PulsarSource(
             .connectTimeout(15, TimeUnit.SECONDS)
             .readTimeout(20, TimeUnit.SECONDS)
             .followRedirects(true)
-            // Amanga Planet'in görsel CDN'i isteğe göre aralıklı 403 veriyor
-            // (aynı URL 10 GET'in 4'ünde 200 dönüyor, çerez/UA/Referer etkisiz).
-            // Yalnız GET + 403 için kısa aralıklarla yeniden deniyoruz.
+            // Kuroi gibi sitelerde HTTP/2 akışı "PROTOCOL_ERROR" ile sıfırlanıyor;
+            // config'te http1=true olan kaynak HTTP/1.1'e sabitlenir.
+            .apply { if (config.optBoolean("http1", false)) protocols(listOf(Protocol.HTTP_1_1)) }
+            // Aralıklı 403 (Amanga CDN): GET için 5 deneme; HTTP/2 akış sıfırlaması
+            // (Kuroi PROTOCOL_ERROR) gibi IOException için 2 deneme.
             .addInterceptor { chain ->
                 val request = chain.request()
-                var response = chain.proceed(request)
+                val idempotent = request.method == "GET"
                 var attempt = 0
-                while (response.code == 403 && attempt < 3 && request.method == "GET") {
-                    response.close()
-                    attempt++
-                    Thread.sleep(250L * attempt)
-                    response = chain.proceed(request)
+                var result: Response? = null
+                while (result == null) {
+                    try {
+                        val r = chain.proceed(request)
+                        if (idempotent && r.code == 403 && attempt < 5) {
+                            r.close()
+                            attempt++
+                            Thread.sleep(250L * attempt + (0..150).random())
+                        } else {
+                            result = r
+                        }
+                    } catch (e: java.io.IOException) {
+                        if (!idempotent || attempt >= 2 || e is java.net.SocketTimeoutException) throw e
+                        attempt++
+                        Thread.sleep(300L * attempt)
+                    }
                 }
-                response
+                checkNotNull(result)
             }
             .build()
     }
@@ -89,8 +103,13 @@ class PulsarSource(
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
         val itemSelector = config.optString("itemSelector", "")
+        // listExcludeUrl: adresi bu düzenli ifadeye uyan kartlar atılır (Nyx romanları
+        // sayfa görseli taşımıyor; test ilk kartı roman seçince "sayfa listesi boş" çıkıyordu).
+        val excl = config.optString("listExcludeUrl", "")
+        val exclRe = if (excl.isBlank()) null else runCatching { Regex(excl) }.getOrNull()
         val items = EngineRegistry.parseList(doc, itemSelector, baseUrl)
             .ifEmpty { EngineRegistry.rscList(html, baseUrl) }
+            .filter { exclRe == null || !exclRe.containsMatchIn(it.url) }
 
         val mangas = items.map { item ->
             SManga.create().apply {
@@ -268,7 +287,22 @@ class PulsarSource(
     override fun chapterListRequest(manga: SManga): Request {
         val api = apiChapterUrl(manga)
         if (api != null) return Request.Builder().url(api).headers(headers).build()
-        return Request.Builder().url(absolute(manga.url)).headers(headers).build()
+        val mangaUrl = absolute(manga.url)
+        // Madara: bölümler sayfada değil POST {manga}/ajax/chapters/ yanıtında (anikiga);
+        // admin-ajax.php yolu bu sitede 400 veriyor.
+        if (config.optBoolean("chapterAjax", false)) {
+            return Request.Builder()
+                .url(mangaUrl.trimEnd('/') + "/ajax/chapters/")
+                .headers(
+                    headers.newBuilder()
+                        .set("X-Requested-With", "XMLHttpRequest")
+                        .set("Referer", mangaUrl)
+                        .build(),
+                )
+                .post(okhttp3.FormBody.Builder().build())
+                .build()
+        }
+        return Request.Builder().url(mangaUrl).headers(headers).build()
     }
 
     // Sayfa listesi bölüm HTML'inde değil ayrı JSON API'de olabilir (lunarx).
