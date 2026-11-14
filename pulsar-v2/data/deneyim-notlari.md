@@ -199,3 +199,14 @@ Aynı görsel adresi 10 GET'in ~4'ünde 200, ~6'sında 403 dönüyor. User-Agent
 - **Seçiciyle çözülmeyenler** (bozuk-teshis.csv'ye siniflandi): adonisfansub/afroditscans/tuhafscans/madarascans sayfa gorselleri JS/API'de; golgebahcesi Next.js reader-stage; anikiga/gafeland chapter listesi tembel/AJAX; mangadenizi detayda 1 bolum; webtoontr/mugimanga/guncelmanga/mangawt/araznovel/asemifansub/alterkaiscans liste DOM'da yok; mangakazani/noxscans/mangatr.app JS challenge; raindropteam/piedpiper/seraphmanga bot/rate-limit; garciamanga/mangaokusana/guildknives olu.
 - **SSL ayrimi**: `openssl s_client` ile zincir kontrolu. koreliscans, milascans.tr, laviniafansub.site `code 20` → Android'de onarilamaz. Kuroimanga, niverafansub, zamanmanga, summertoon, mangaoku.org, snscoeurturkey zinciri saglam → cihaz hatasi bayat olabilir, yeniden test gerekir.
 - **Dogrulanmadi**: yeni iki kaynak APK'da derlenmedi/cihazda acilmadi; bu turda APK testi yapilmadi.
+
+## 18. Tum paket cihaz raporu ve uc tamir (2026-11-15)
+
+- **Rapor**: `kototoro-source-test-1794693078.json` (2026-11-14T21:51Z). 530 kaynak denendi: 143 gecti, 381 dustu, 6 Cloudflare. Hata listesi 387 kayit: 378 engine (JitPack parser) + 9 TR.
+- **TR hatalari (9)**: Amanga Planet (pages 403), Anikiga (details admin-ajax 400), Kuroi Manga (pages PROTOCOL_ERROR), Lunar Manga (pages 404), Nyx Scans (pages bos), OpiaToon (details login sayfasi), ShadowCeviri (search bos), Tarot Scans (search bos), TilkiScans (covers/pages Cloudflare).
+- **Tamir 1 - Tarot arama**: `?s=` arama sayfasi sonuc dondurmuyor; dogru uc `?s={query}&post_type=wp-manga`, sonuclar `div.c-tabs-item__content` icinde. `searchUrl` eklendi, `itemSelector` birlestirildi. Curl: arama 10 kart, liste 12 kart.
+- **Tamir 2 - Nyx sayfa**: script (`data-tsr-stream-part`) sayfa listesi bos donuyordu; sayfalar duz `<img src=".../page-0001...">`. `readerSelector: img[src*="/page-"]` eklendi. Curl: reader 200, 66 gorsel.
+- **Tamir 3 - Lunar liste**: liste JS ile geliyor, HTML'de gercek manga bagi yok; `genericList` `/manga/search` bagini manga sanip 404 uretiyordu. `listJsonUrl=api.lunarx.to/api/manga/search?query=&page={page}`, `listJsonItems=manga`, `listJsonUrlTemplate=/manga/{slug}`, `listJsonCover=cover_url` eklendi. Curl: s1 30 (the-cliff), s2 30 (melting-slowly), bolum API 15 gorsel.
+- **Cozulemeyenler**: Amanga `amip-proxy` referer/cerez/UA ile de 403; OpiaToon uye girisi istiyor; Kuroi sayfa isteginde stream reset; Anikiga engine parser admin-ajax 400; ShadowCeviri engine aramayi desteklemiyor; TilkiScans Cloudflare.
+- **Global/Turkce denetimi**: global paketlerde `lang=tr` kayit 0. Tek domain ortusmesi Nyx Scans: globalde Ingilizce engine parser, TR'de Turkce katalog kaydi; TR tarafinda eksik yok.
+- **Dogrulanmadi**: bu uc config degisikligi APK'da derlenmedi, cihazda test edilmedi. Telefona adb ile erisim yok; rapor dosyasi analiz edildi.

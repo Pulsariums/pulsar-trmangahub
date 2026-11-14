@@ -1221,6 +1221,12 @@
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+        "listJsonUrl": "https://api.lunarx.to/api/manga/search?query=&page={page}",
+        "listJsonItems": "manga",
+        "listJsonTitle": "title",
+        "listJsonUrlField": "slug",
+        "listJsonUrlTemplate": "/manga/{slug}",
+        "listJsonCover": "cover_url",
         "searchUrl": "https://api.lunarx.to/api/manga/search?query={query}",
         "searchJsonItems": "manga",
         "searchJsonUrl": "slug",
@@ -1686,7 +1692,8 @@
         "chapterJsonArray": "initialChapters",
         "chapterUrlTemplate": "/series/{series}/{slug}",
         "pageScriptSelector": "script[data-tsr-stream-part]",
-        "pageJsonUrlField": "displaySrc"
+        "pageJsonUrlField": "displaySrc",
+        "readerSelector": "img[src*=\"/page-\"]"
       },
       "verified_by_user": false,
       "origins": [
@@ -2057,7 +2064,8 @@
         },
         "engine": "mangareader",
         "listPath": "/manga",
-        "itemSelector": "div.page-item-detail",
+        "itemSelector": "div.page-item-detail, div.c-tabs-item__content",
+        "searchUrl": "https://www.tarotscans.com/?s={query}&post_type=wp-manga",
         "chapterSelector": "div.chapter-item",
         "readerSelector": "div.page-break img"
       },
