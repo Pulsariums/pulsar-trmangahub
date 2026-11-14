@@ -35,10 +35,10 @@ FLAVOR_DEFS = {
     ".tr18":    {"name": "Pulsar TR 18+",    "lang": "tr",  "nsfw": 1},
     ".global":  {"name": "Pulsar Global",    "lang": "all", "nsfw": 0},
     ".global18": {"name": "Pulsar Global 18+", "lang": "all", "nsfw": 1},
-    ".tr_sorunlu":      {"name": "Pulsar TR Sorunlu",          "lang": "tr",  "nsfw": 0},
-    ".tr18_sorunlu":    {"name": "Pulsar TR 18+ Sorunlu",      "lang": "tr",  "nsfw": 1},
-    ".global_sorunlu":  {"name": "Pulsar Global Sorunlu",      "lang": "all", "nsfw": 0},
-    ".global18_sorunlu": {"name": "Pulsar Global 18+ Sorunlu", "lang": "all", "nsfw": 1},
+    ".tr_sorunlu":      {"name": "Pulsar TR Cloudflare",          "lang": "tr",  "nsfw": 0},
+    ".tr18_sorunlu":    {"name": "Pulsar TR 18+ Cloudflare",      "lang": "tr",  "nsfw": 1},
+    ".global_sorunlu":  {"name": "Pulsar Global Cloudflare",      "lang": "all", "nsfw": 0},
+    ".global18_sorunlu": {"name": "Pulsar Global 18+ Cloudflare", "lang": "all", "nsfw": 1},
 }
 
 

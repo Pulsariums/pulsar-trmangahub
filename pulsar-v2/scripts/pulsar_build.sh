@@ -40,10 +40,10 @@ flavor_name() {
         tr18) echo "Pulsar TR 18+" ;;
         global) echo "Pulsar Global" ;;
         global18) echo "Pulsar Global 18+" ;;
-        tr_sorunlu) echo "Pulsar TR Sorunlu" ;;
-        tr18_sorunlu) echo "Pulsar TR 18+ Sorunlu" ;;
-        global_sorunlu) echo "Pulsar Global Sorunlu" ;;
-        global18_sorunlu) echo "Pulsar Global 18+ Sorunlu" ;;
+        tr_sorunlu) echo "Pulsar TR Cloudflare" ;;
+        tr18_sorunlu) echo "Pulsar TR 18+ Cloudflare" ;;
+        global_sorunlu) echo "Pulsar Global Cloudflare" ;;
+        global18_sorunlu) echo "Pulsar Global 18+ Cloudflare" ;;
         *) echo "Pulsar $(echo "$1" | tr a-z A-Z)" ;;
     esac
 }
