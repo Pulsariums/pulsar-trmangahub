@@ -117,6 +117,7 @@ fn embed(o: &Opts) -> Result<(), String> {
         "tr18_sorunlu",
         "global_sorunlu",
         "global18_sorunlu",
+        "tamir",
     ] {
         allowed.entry(pkg.to_string()).or_default();
     }
@@ -138,7 +139,12 @@ fn embed(o: &Opts) -> Result<(), String> {
                 .map(|s| !s.trim().is_empty())
                 .unwrap_or(false);
             // Elle sorunlu isaretli kaynak, state'i ne olursa olsun gomulur.
-            if !is_active && !marked_sorun {
+            let in_tamir = e
+                .get("packages")
+                .and_then(|v| v.as_array())
+                .map(|a| a.iter().any(|p| p.as_str() == Some("tamir")))
+                .unwrap_or(false);
+            if !is_active && !marked_sorun && !in_tamir {
                 continue;
             }
             if dropped.contains(id) {
@@ -203,6 +209,7 @@ internal object PulsarData {{
     private val tr18SorunluIds: Set<String> by lazy {{ TR18_SORUNLU_IDS.toIdSet() }}
     private val globalSorunluIds: Set<String> by lazy {{ GLOBAL_SORUNLU_IDS.toIdSet() }}
     private val global18SorunluIds: Set<String> by lazy {{ GLOBAL18_SORUNLU_IDS.toIdSet() }}
+    private val tamirIds: Set<String> by lazy {{ TAMIR_IDS.toIdSet() }}
 
     /** Paket soneki için izinli id kümesi; bilinmeyen pakette null (fabrika patlar). */
     fun allowed(suffix: String): Set<String>? = when (suffix) {{
@@ -214,6 +221,7 @@ internal object PulsarData {{
         "tr18_sorunlu" -> tr18SorunluIds
         "global_sorunlu" -> globalSorunluIds
         "global18_sorunlu" -> global18SorunluIds
+        "tamir" -> tamirIds
         else -> null
     }}
 

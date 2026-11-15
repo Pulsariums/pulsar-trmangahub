@@ -190,6 +190,9 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
         let dev_bad = matches!(s.device.as_ref().map(|p| p.status.as_str()), Some("fail") | Some("cloudflare"));
         let pk_sorun: &str = if dev_bad && sorun.is_empty() { "cihaz" } else { sorun.as_str() };
         s.packages = packages_for(&e, pk_sorun, s.dead);
+        if dev_bad && sorun.is_empty() && !s.dead {
+            s.packages = vec!["tamir".to_string()];
+        }
         recompute_state(s);
     }
     // Katalogdan düşen id'ler yayın listesinde kalmasın.

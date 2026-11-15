@@ -39,6 +39,7 @@ FLAVOR_DEFS = {
     ".tr18_sorunlu":    {"name": "Pulsar TR 18+ Cloudflare",      "lang": "tr",  "nsfw": 1},
     ".global_sorunlu":  {"name": "Pulsar Global Cloudflare",      "lang": "all", "nsfw": 0},
     ".global18_sorunlu": {"name": "Pulsar Global 18+ Cloudflare", "lang": "all", "nsfw": 1},
+    ".tamir": {"name": "Pulsar Tamir", "lang": "all", "nsfw": 0},
 }
 
 
@@ -205,7 +206,7 @@ def apk_extension_lib(apk):
     return struct.unpack(">f", struct.pack(">I", int(m.group(1), 16)))[0]
 
 
-def main(repo_dir, flavors="tr,tr18,global,global18,tr_sorunlu,tr18_sorunlu,global_sorunlu,global18_sorunlu"):
+def main(repo_dir, flavors="tr,tr18,global,global18,tr_sorunlu,tr18_sorunlu,global_sorunlu,global18_sorunlu,tamir"):
     suffixes = ["." + f.strip().removeprefix(".") for f in flavors.split(",")]
 
     status = load_status(repo_dir)
@@ -275,4 +276,4 @@ def main(repo_dir, flavors="tr,tr18,global,global18,tr_sorunlu,tr18_sorunlu,glob
 if __name__ == "__main__":
     main(sys.argv[1] if len(sys.argv) > 1 else "repo-build",
          sys.argv[2] if len(sys.argv) > 2
-         else "tr,tr18,global,global18,tr_sorunlu,tr18_sorunlu,global_sorunlu,global18_sorunlu")
+         else "tr,tr18,global,global18,tr_sorunlu,tr18_sorunlu,global_sorunlu,global18_sorunlu,tamir")

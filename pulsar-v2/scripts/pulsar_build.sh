@@ -31,6 +31,7 @@ flavor_args() {
         tr18_sorunlu)     echo ".tr18_sorunlu|tr|1" ;;
         global_sorunlu)   echo ".global_sorunlu|all|0" ;;
         global18_sorunlu) echo ".global18_sorunlu|all|1" ;;
+        tamir)            echo ".tamir|all|0" ;;
         *)        echo ".${1}|${1}|0" ;;
     esac
 }
@@ -44,11 +45,12 @@ flavor_name() {
         tr18_sorunlu) echo "Pulsar TR 18+ Cloudflare" ;;
         global_sorunlu) echo "Pulsar Global Cloudflare" ;;
         global18_sorunlu) echo "Pulsar Global 18+ Cloudflare" ;;
+        tamir) echo "Pulsar Tamir" ;;
         *) echo "Pulsar $(echo "$1" | tr a-z A-Z)" ;;
     esac
 }
 
-FLAVORS="${FLAVORS:-tr,tr18,global,global18,tr_sorunlu,tr18_sorunlu,global_sorunlu,global18_sorunlu}"
+FLAVORS="${FLAVORS:-tr,tr18,global,global18,tr_sorunlu,tr18_sorunlu,global_sorunlu,global18_sorunlu,tamir}"
 
 # Sürüm: versionCode ARTMALI ki bakım tamirleri cihazda "güncelleme" olsun.
 # CI'da GITHUB_RUN_NUMBER (monotonik); yerelde sabit 1. versionName kontratı:
