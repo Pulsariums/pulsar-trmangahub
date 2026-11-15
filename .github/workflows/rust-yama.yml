@@ -1,0 +1,24 @@
+name: 'rust-yama (gecici)'
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Yama
+        run: |
+          f=tools/pulsar/src/status.rs
+          perl -0pi -e 's/s\.packages = packages_for\(&e, &sorun, s\.dead\);/let dev_bad = matches!(s.device.as_ref().map(|p| p.status.as_str()), Some("fail") | Some("cloudflare"));\n        let pk_sorun: &str = if dev_bad \&\& sorun.is_empty() { "cihaz" } else { sorun.as_str() };\n        s.packages = packages_for(\&e, pk_sorun, s.dead);/' $f
+          perl -0pi -e 's/    save\(root, &file\)\?;\n    Ok\(merged\)/    \/\/ Tam testte yalniz dusenler listelenir; raporda olmayan kaynak gecmistir.\n    let seen_ids: std::collections::HashSet<String> = list_ids.into_iter().collect();\n    if full_run {\n        for (k, v) in file.sources.iter_mut() {\n            if v.device.is_some() \&\& !seen_ids.contains(k) {\n                v.device = None;\n                v.device_step = None;\n                recompute_state(v);\n            }\n        }\n    }\n    save(root, \&file)?;\n    ensure_all(root)?;\n    Ok(merged)/' $f
+          perl -0pi -e 's/(let mut merged = 0usize;\n)/$1    let full_run = value.get("total").and_then(|v| v.as_i64()).unwrap_or(0) >= 100;\n    let mut list_ids: Vec<String> = Vec::new();\n/' $f
+          perl -0pi -e 's/(let Some\(id\) = id else \{ continue \};\n)/$1    list_ids.push(id.to_string());\n/' $f
+          git diff --stat
+          grep -n 'dev_bad\|full_run\|list_ids' $f | head
+          git config user.name pulsarium
+          git config user.email pulsariums@gmail.com
+          git diff --quiet && { echo 'degisiklik yok'; exit 1; }
+          git commit -qam "feat(status): cihazda dusen kaynak ana paketten sorunlu pakete, gecen kaynak geri doner"
+          git pull -q --rebase origin main && git push -q origin main
