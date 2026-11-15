@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T16:56:36Z",
+ "generated": "2026-11-15T17:01:07Z",
  "note": "id = Kotlin PulsarKotatsuSource/PulsarSource hash'inin Python kopyası; bakım bacası (07_maintain.py) MIHON_<id> -> kaynak eşlemesini bundan yapar.",
  "engine": [
   {
@@ -9,7 +9,7 @@
    "title": "AComics",
    "lang": "ru",
    "nsfw": 0,
-   "broken": true,
+   "broken": false,
    "domain": "acomics.ru",
    "file": "org/koitharu/kotatsu/parsers/site/ru/AComics.kt"
   },
@@ -76,7 +76,7 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "ainzscans.net",
+   "domain": "api.ainzscans01.com",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/AinzScans.kt"
   },
   {
@@ -111,6 +111,17 @@
    "broken": true,
    "domain": "alliedfansub.net",
    "file": "org/koitharu/kotatsu/parsers/site/madara/tr/AlliedFansub.kt"
+  },
+  {
+   "id": 5780076996613211440,
+   "kind": "engine",
+   "name": "ALLMANGA",
+   "title": "Mkissa",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "mkissa.to",
+   "file": "org/koitharu/kotatsu/parsers/site/en/AllManga.kt"
   },
   {
    "id": 5420850623413657493,
@@ -307,7 +318,7 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "apkomik.cc",
+   "domain": "01.apkomik.com",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/Apkomik.kt"
   },
   {
@@ -329,7 +340,7 @@
    "lang": "en",
    "nsfw": 0,
    "broken": false,
-   "domain": "aquareader.net",
+   "domain": "aquareader.org",
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/AquaManga.kt"
   },
   {
@@ -363,7 +374,7 @@
    "nsfw": 1,
    "broken": false,
    "domain": "arabtoons.net",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/ar/ArabToons.kt"
+   "file": "org/koitharu/kotatsu/parsers/site/ar/ArabToons.kt"
   },
   {
    "id": 7591926664003059229,
@@ -501,12 +512,12 @@
    "id": 2344474407616687227,
    "kind": "engine",
    "name": "ARVENSCANS",
-   "title": "ArvenComics",
+   "title": "ArvenScans",
    "lang": "en",
    "nsfw": 0,
    "broken": false,
-   "domain": "arvencomics.com",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/en/ArvenScans.kt"
+   "domain": "arvenscans.net",
+   "file": "org/koitharu/kotatsu/parsers/site/en/ArvenScans.kt"
   },
   {
    "id": 3943569930192103312,
@@ -685,6 +696,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/tr/AthenaManga.kt"
   },
   {
+   "id": 121739533000216880,
+   "kind": "engine",
+   "name": "ATHREASCANS",
+   "title": "AthreaScans",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "athreascans.com",
+   "file": "org/koitharu/kotatsu/parsers/site/mangareader/en/AthreaScans.kt"
+  },
+  {
    "id": 5780285915019996741,
    "kind": "engine",
    "name": "ATIKROST",
@@ -732,11 +754,11 @@
    "id": 3949876573463544879,
    "kind": "engine",
    "name": "AZORAMOON",
-   "title": "Azoramoon",
+   "title": "Azorafly",
    "lang": "ar",
    "nsfw": 0,
    "broken": false,
-   "domain": "azoramoon.com",
+   "domain": "azorafly.com",
    "file": "org/koitharu/kotatsu/parsers/site/ar/Azoramoon.kt"
   },
   {
@@ -848,17 +870,6 @@
    "broken": false,
    "domain": "batcave.biz",
    "file": "org/koitharu/kotatsu/parsers/site/en/BatCave.kt"
-  },
-  {
-   "id": 3957800042269399520,
-   "kind": "engine",
-   "name": "BEEHENTAI",
-   "title": "BeeHentai",
-   "lang": "en",
-   "nsfw": 1,
-   "broken": false,
-   "domain": "beehentai.com",
-   "file": "org/koitharu/kotatsu/parsers/site/madtheme/en/BeeHentai.kt"
   },
   {
    "id": 1376586900960479633,
@@ -977,7 +988,7 @@
    "title": "BirdToon",
    "lang": "id",
    "nsfw": 1,
-   "broken": false,
+   "broken": true,
    "domain": "birdtoon.shop",
    "file": "org/koitharu/kotatsu/parsers/site/madara/id/BirdToon.kt"
   },
@@ -1213,6 +1224,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/madara/pt/CeriseScans.kt"
   },
   {
+   "id": 673270195155528329,
+   "kind": "engine",
+   "name": "CGBUM",
+   "title": "CGBUM",
+   "lang": "id",
+   "nsfw": 1,
+   "broken": false,
+   "domain": "cgbum.com",
+   "file": "org/koitharu/kotatsu/parsers/site/id/CgBum.kt"
+  },
+  {
    "id": 1517957525448774817,
    "kind": "engine",
    "name": "CHAINSAWMANSCAN",
@@ -1224,6 +1246,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/onemanga/fr/ChainsawManScan.kt"
   },
   {
+   "id": 1376616000920489436,
+   "kind": "engine",
+   "name": "CHIKARI",
+   "title": "Chikari",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "chikari.moe",
+   "file": "org/koitharu/kotatsu/parsers/site/en/ChikariParser.kt"
+  },
+  {
    "id": 3761841829901087276,
    "kind": "engine",
    "name": "CLONEMANGA",
@@ -1233,17 +1266,6 @@
    "broken": false,
    "domain": "manga.clone-army.org",
    "file": "org/koitharu/kotatsu/parsers/site/en/CloneMangaParser.kt"
-  },
-  {
-   "id": 5943193894247680779,
-   "kind": "engine",
-   "name": "CLOVERMANGA",
-   "title": "CloverManga",
-   "lang": "tr",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "webtoonhatti.me",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/tr/CloverManga.kt"
   },
   {
    "id": 2424632140094543548,
@@ -1263,7 +1285,7 @@
    "title": "CoComic",
    "lang": "en",
    "nsfw": 1,
-   "broken": true,
+   "broken": false,
    "domain": "cocomic.co",
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/CoComic.kt"
   },
@@ -1340,8 +1362,8 @@
    "title": "Comicazen",
    "lang": "id",
    "nsfw": 0,
-   "broken": true,
-   "domain": "comicazen.com",
+   "broken": false,
+   "domain": "",
    "file": "org/koitharu/kotatsu/parsers/site/comicaso/id/Comicazen.kt"
   },
   {
@@ -1378,6 +1400,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/ComicsValley.kt"
   },
   {
+   "id": 5781796323980252724,
+   "kind": "engine",
+   "name": "COMIKURO",
+   "title": "Comikuro",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": true,
+   "domain": "comikuro.to",
+   "file": "org/koitharu/kotatsu/parsers/site/en/Comikuro.kt"
+  },
+  {
    "id": 673270202559723773,
    "kind": "engine",
    "name": "COMIX",
@@ -1398,6 +1431,17 @@
    "broken": false,
    "domain": "v2.comiz.net",
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/Comiz.kt"
+  },
+  {
+   "id": 5781796337399012854,
+   "kind": "engine",
+   "name": "COMIZYIO",
+   "title": "Comizy.io",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "comizy.io",
+   "file": "org/koitharu/kotatsu/parsers/site/mangak/en/Comizy.kt"
   },
   {
    "id": 5972280998053804390,
@@ -1451,8 +1495,8 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "lc5.cosmicscans.asia",
-   "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/CosmicScans.kt"
+   "domain": "02.cosmicscans.to",
+   "file": "org/koitharu/kotatsu/parsers/site/id/CosmicScans.kt"
   },
   {
    "id": 1178077082848024559,
@@ -1704,7 +1748,7 @@
    "lang": "ru",
    "nsfw": 0,
    "broken": false,
-   "domain": "x.desu.city",
+   "domain": "desu.uno",
    "file": "org/koitharu/kotatsu/parsers/site/ru/DesuMeParser.kt"
   },
   {
@@ -1810,11 +1854,11 @@
    "id": 4630545497105384397,
    "kind": "engine",
    "name": "DOUJINDESU",
-   "title": "DoujinDesu.tv",
+   "title": "DoujinDesu",
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "doujindesu.tv",
+   "domain": "doujin.desu.xxx",
    "file": "org/koitharu/kotatsu/parsers/site/id/DoujinDesuParser.kt"
   },
   {
@@ -1827,6 +1871,17 @@
    "broken": false,
    "domain": "doujindesu.asia",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/DoujinDesuRip.kt"
+  },
+  {
+   "id": 4735115866201029584,
+   "kind": "engine",
+   "name": "DOUJINDESU_MANHWA",
+   "title": "DoujinDesu Manhwa",
+   "lang": "id",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/id/DoujinDesuManhwaParser.kt"
   },
   {
    "id": 5782622800926449958,
@@ -1904,17 +1959,6 @@
    "broken": false,
    "domain": "dragontea.ink",
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/DragonTea.kt"
-  },
-  {
-   "id": 2937673368054310516,
-   "kind": "engine",
-   "name": "DRAGONTRANSLATION",
-   "title": "Dragon Translation",
-   "lang": "es",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "dragontranslation.net",
-   "file": "org/koitharu/kotatsu/parsers/site/es/DragonTranslationParser.kt"
   },
   {
    "id": 4873422028749039394,
@@ -2066,7 +2110,7 @@
    "title": "Elder Manga",
    "lang": "tr",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "eldermanga.com",
    "file": "org/koitharu/kotatsu/parsers/site/tr/ElderManga.kt"
   },
@@ -2100,8 +2144,8 @@
    "lang": "en",
    "nsfw": 0,
    "broken": false,
-   "domain": "elftoon.com",
-   "file": "org/koitharu/kotatsu/parsers/site/mangareader/en/Elftoon.kt"
+   "domain": "elftoon.net",
+   "file": "org/koitharu/kotatsu/parsers/site/en/Elftoon.kt"
   },
   {
    "id": 5332408265489266018,
@@ -2122,7 +2166,7 @@
    "lang": "es",
    "nsfw": 0,
    "broken": false,
-   "domain": "emperorscan.mundoalterno.org",
+   "domain": "imperiomanhua.com",
    "file": "org/koitharu/kotatsu/parsers/site/madara/es/EmperorScan.kt"
   },
   {
@@ -2561,7 +2605,7 @@
    "title": "Futari",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "futari.info",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/Futari.kt"
   },
@@ -2676,17 +2720,6 @@
    "file": "org/koitharu/kotatsu/parsers/site/madara/pt/GekkouScans.kt"
   },
   {
-   "id": 8226934736647195750,
-   "kind": "engine",
-   "name": "GHOSTFANSUB",
-   "title": "GhostFansub",
-   "lang": "tr",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "ghostfansub.co",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/tr/GhostFansub.kt"
-  },
-  {
    "id": 4087575506275568444,
    "kind": "engine",
    "name": "GHOSTSCAN",
@@ -2707,17 +2740,6 @@
    "broken": false,
    "domain": "gistamishousefansub.blogspot.com",
    "file": "org/koitharu/kotatsu/parsers/site/zeistmanga/es/GistamisHouseFansub.kt"
-  },
-  {
-   "id": 6912615781364678293,
-   "kind": "engine",
-   "name": "GLORYMANGA",
-   "title": "GloryManga",
-   "lang": "tr",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "mangagezgini.site",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/tr/GloryManga.kt"
   },
   {
    "id": 2424635551658692670,
@@ -2749,7 +2771,7 @@
    "lang": "vi",
    "nsfw": 0,
    "broken": false,
-   "domain": "goctruyentranhvui17.com",
+   "domain": "goctruyentranhvui41.com",
    "file": "org/koitharu/kotatsu/parsers/site/vi/GocTruyenTranhVui.kt"
   },
   {
@@ -3133,8 +3155,8 @@
    "title": "HentaiOrigines",
    "lang": "fr",
    "nsfw": 1,
-   "broken": false,
-   "domain": "hentai-origines.fr",
+   "broken": true,
+   "domain": "hentai-origines.com",
    "file": "org/koitharu/kotatsu/parsers/site/madara/fr/HentaiOrigines.kt"
   },
   {
@@ -3413,6 +3435,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/iken/en/HiveComic.kt"
   },
   {
+   "id": 4114090827495280695,
+   "kind": "engine",
+   "name": "HIZOMANGA",
+   "title": "HizoManga",
+   "lang": "ar",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "hizomanga.net",
+   "file": "org/koitharu/kotatsu/parsers/site/madara/ar/HizoManga.kt"
+  },
+  {
    "id": 4116707331773940228,
    "kind": "engine",
    "name": "HMANGABAT",
@@ -3486,8 +3519,8 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "01.holotoon.site",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/id/Holotoon.kt"
+   "domain": "v1.holotoon.site",
+   "file": "org/koitharu/kotatsu/parsers/site/id/Holotoon.kt"
   },
   {
    "id": 1416692610114750195,
@@ -3563,8 +3596,8 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "01.hwago.xyz",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/id/Hwago.kt"
+   "domain": "02.hwago.xyz",
+   "file": "org/koitharu/kotatsu/parsers/site/id/Hwago.kt"
   },
   {
    "id": 8219791118026558216,
@@ -3584,7 +3617,7 @@
    "title": "IchiroManga",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "ichiromanga.my.id",
    "file": "org/koitharu/kotatsu/parsers/site/zeistmanga/id/IchiroManga.kt"
   },
@@ -3596,8 +3629,8 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "03.ikiru.wtf",
-   "file": "org/koitharu/kotatsu/parsers/site/natsu/id/Ikiru.kt"
+   "domain": "09.ikiru.wtf",
+   "file": "org/koitharu/kotatsu/parsers/site/id/Ikiru.kt"
   },
   {
    "id": 1158981255736960832,
@@ -3609,17 +3642,6 @@
    "broken": false,
    "domain": "illusionscan.com",
    "file": "org/koitharu/kotatsu/parsers/site/madara/pt/IllusionScan.kt"
-  },
-  {
-   "id": 7143527669604187926,
-   "kind": "engine",
-   "name": "IMMORTALUPDATES",
-   "title": "ImmortalUpdates",
-   "lang": "en",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "immortalupdates.com",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/en/ImmortalUpdates.kt"
   },
   {
    "id": 767198593501925111,
@@ -3787,6 +3809,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/IsekaiScanEuParser.kt"
   },
   {
+   "id": 1516371889043194299,
+   "kind": "engine",
+   "name": "ITHINKILIKEYOU",
+   "title": "IThinkILikeYou",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "ithinkilikeyou.net",
+   "file": "org/koitharu/kotatsu/parsers/site/en/IThinkILikeYou.kt"
+  },
+  {
    "id": 2545162512713330158,
    "kind": "engine",
    "name": "ITSYOURIGHTMANHUA",
@@ -3904,7 +3937,7 @@
    "lang": "all",
    "nsfw": 0,
    "broken": false,
-   "domain": "kagane.org",
+   "domain": "kagane.moe",
    "file": "org/koitharu/kotatsu/parsers/site/en/Kagane.kt"
   },
   {
@@ -3963,13 +3996,24 @@
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/Kanzenin.kt"
   },
   {
+   "id": 561147614012137615,
+   "kind": "engine",
+   "name": "KAPPABEAST",
+   "title": "KappaBeast",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "kappabeast.com",
+   "file": "org/koitharu/kotatsu/parsers/site/en/KappaBeast.kt"
+  },
+  {
    "id": 4183588611054499927,
    "kind": "engine",
    "name": "KATAKOMIK",
    "title": "KataKomik",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "katakomik.my.id",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/KataKomik.kt"
   },
@@ -3981,7 +4025,7 @@
    "lang": "en",
    "nsfw": 0,
    "broken": false,
-   "domain": "www.silentquill.net",
+   "domain": "silentquill.net",
    "file": "org/koitharu/kotatsu/parsers/site/en/KdtScans.kt"
   },
   {
@@ -4058,7 +4102,7 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "v5.kiryuu.to",
+   "domain": "v6.kiryuu.to",
    "file": "org/koitharu/kotatsu/parsers/site/natsu/id/Kiryuu.kt"
   },
   {
@@ -4101,7 +4145,7 @@
    "title": "KlManhua",
    "lang": "id",
    "nsfw": 1,
-   "broken": false,
+   "broken": true,
    "domain": "klmanhua.blogspot.com",
    "file": "org/koitharu/kotatsu/parsers/site/zeistmanga/id/KlManhua.kt"
   },
@@ -4172,6 +4216,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/zh/KomiicParser.kt"
   },
   {
+   "id": 5788353349701550020,
+   "kind": "engine",
+   "name": "KOMIKAPK",
+   "title": "KomikAPK",
+   "lang": "id",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "komikapk.app",
+   "file": "org/koitharu/kotatsu/parsers/site/id/KomikApk.kt"
+  },
+  {
    "id": 1376833596681465023,
    "kind": "engine",
    "name": "KOMIKAV",
@@ -4181,17 +4236,6 @@
    "broken": true,
    "domain": "komikav.net",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/KomikAvParser.kt"
-  },
-  {
-   "id": 4194885141861315317,
-   "kind": "engine",
-   "name": "KOMIKCAST",
-   "title": "KomikCast",
-   "lang": "id",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "be.komikcast.fit",
-   "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/Komikcast.kt"
   },
   {
    "id": 671042189166553819,
@@ -4233,7 +4277,7 @@
    "title": "KomikGo",
    "lang": "id",
    "nsfw": 1,
-   "broken": false,
+   "broken": true,
    "domain": "komikgo.xyz",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/KomikGo.kt"
   },
@@ -4269,6 +4313,17 @@
    "broken": false,
    "domain": "mangasusuku.com",
    "file": "org/koitharu/kotatsu/parsers/site/zmanga/id/KomikIndoInfo.kt"
+  },
+  {
+   "id": 4104582563863814533,
+   "kind": "engine",
+   "name": "KOMIKINDO_LIVE",
+   "title": "Komikindo.live",
+   "lang": "id",
+   "nsfw": 1,
+   "broken": false,
+   "domain": "komikindo.live",
+   "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/KomikIndoLive.kt"
   },
   {
    "id": 5788353350002349633,
@@ -4322,7 +4377,7 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "komikmama.lat",
+   "domain": "komikmama.online",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/KomikMama.kt"
   },
   {
@@ -4387,7 +4442,7 @@
    "title": "Komiksin",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "komiksin.net",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/Komiksin.kt"
   },
@@ -4464,7 +4519,7 @@
    "title": "Kumapage",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "www.kumapage.com",
    "file": "org/koitharu/kotatsu/parsers/site/id/Kumapage.kt"
   },
@@ -4685,7 +4740,7 @@
    "lang": "ar",
    "nsfw": 0,
    "broken": false,
-   "domain": "lekmanga.com",
+   "domain": "lekmanga.site",
    "file": "org/koitharu/kotatsu/parsers/site/madara/ar/LekMangaCom.kt"
   },
   {
@@ -4696,7 +4751,7 @@
    "lang": "ar",
    "nsfw": 0,
    "broken": false,
-   "domain": "lekmanga.org",
+   "domain": "manga-leko.site",
    "file": "org/koitharu/kotatsu/parsers/site/madara/ar/LekMangaOrg.kt"
   },
   {
@@ -4857,11 +4912,11 @@
    "id": 4215319611838115664,
    "kind": "engine",
    "name": "LIKEMANGA",
-   "title": "LikeManga",
+   "title": "MGRead (LikeManga)",
    "lang": "en",
    "nsfw": 0,
    "broken": false,
-   "domain": "likemanga.ink",
+   "domain": "mgread.io",
    "file": "org/koitharu/kotatsu/parsers/site/likemanga/en/LikeManga.kt"
   },
   {
@@ -5003,7 +5058,7 @@
    "title": "Lua Scans",
    "lang": "en",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "luacomic.com",
    "file": "org/koitharu/kotatsu/parsers/site/heancms/en/LuaScans.kt"
   },
@@ -5048,8 +5103,8 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "lumos01.com",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/id/LumosKomik.kt"
+   "domain": "03.lumosgg.com",
+   "file": "org/koitharu/kotatsu/parsers/site/id/LumosKomik.kt"
   },
   {
    "id": 2163483283579746245,
@@ -5059,7 +5114,7 @@
    "lang": "all",
    "nsfw": 0,
    "broken": false,
-   "domain": "lunaranime.ru",
+   "domain": "lunarx.to",
    "file": "org/koitharu/kotatsu/parsers/site/all/LunarAnime.kt"
   },
   {
@@ -5136,7 +5191,7 @@
    "lang": "id",
    "nsfw": 1,
    "broken": false,
-   "domain": "luvyaa.org",
+   "domain": "v4.luvyaa.co",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/Luvyaa.kt"
   },
   {
@@ -5190,7 +5245,7 @@
    "title": "Magerin",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "www.magerin.com",
    "file": "org/koitharu/kotatsu/parsers/site/zeistmanga/id/Magerin.kt"
   },
@@ -5224,7 +5279,7 @@
    "lang": "pt",
    "nsfw": 0,
    "broken": false,
-   "domain": "empreguetes.xyz",
+   "domain": "verdinha.wtf",
    "file": "org/koitharu/kotatsu/parsers/site/madara/pt/MaidScan.kt"
   },
   {
@@ -5921,17 +5976,6 @@
    "file": "org/koitharu/kotatsu/parsers/site/scan/pt/MangaBr.kt"
   },
   {
-   "id": 2134595982688071985,
-   "kind": "engine",
-   "name": "MANGABUDDY",
-   "title": "MangaBuddy",
-   "lang": "en",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "mangabuddy.com",
-   "file": "org/koitharu/kotatsu/parsers/site/madtheme/en/MangaBuddy.kt"
-  },
-  {
    "id": 4234251758022995232,
    "kind": "engine",
    "name": "MANGABUFF",
@@ -6007,17 +6051,6 @@
    "broken": true,
    "domain": "mangacultivator.com",
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/MangaCultivator.kt"
-  },
-  {
-   "id": 4234251758923398006,
-   "kind": "engine",
-   "name": "MANGACUTE",
-   "title": "MangaCute",
-   "lang": "en",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "mangacute.com",
-   "file": "org/koitharu/kotatsu/parsers/site/madtheme/en/MangaCute.kt"
   },
   {
    "id": 4234251759237812220,
@@ -6166,7 +6199,7 @@
    "id": 3758243091528592709,
    "kind": "engine",
    "name": "MANGAFIRE_EN",
-   "title": "MangaFire English",
+   "title": "MangaFire (English)",
    "lang": "en",
    "nsfw": 0,
    "broken": false,
@@ -6177,7 +6210,7 @@
    "id": 3758243091528741669,
    "kind": "engine",
    "name": "MANGAFIRE_ES",
-   "title": "MangaFire Spanish",
+   "title": "MangaFire (Spanish)",
    "lang": "es",
    "nsfw": 0,
    "broken": false,
@@ -6188,7 +6221,7 @@
    "id": 5333144548929050512,
    "kind": "engine",
    "name": "MANGAFIRE_ESLA",
-   "title": "MangaFire Spanish (Latim)",
+   "title": "MangaFire Spanish (Latin)",
    "lang": "es",
    "nsfw": 0,
    "broken": false,
@@ -6199,7 +6232,7 @@
    "id": 3758243091529635429,
    "kind": "engine",
    "name": "MANGAFIRE_FR",
-   "title": "MangaFire French",
+   "title": "MangaFire (French)",
    "lang": "fr",
    "nsfw": 0,
    "broken": false,
@@ -6210,7 +6243,7 @@
    "id": 3758243091532823173,
    "kind": "engine",
    "name": "MANGAFIRE_JA",
-   "title": "MangaFire Japanese",
+   "title": "MangaFire (Japanese)",
    "lang": "ja",
    "nsfw": 0,
    "broken": false,
@@ -6221,7 +6254,7 @@
    "id": 3758243091538930533,
    "kind": "engine",
    "name": "MANGAFIRE_PT",
-   "title": "MangaFire Portuguese",
+   "title": "MangaFire (Portuguese)",
    "lang": "pt",
    "nsfw": 0,
    "broken": false,
@@ -6405,6 +6438,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/MangaHentai.kt"
   },
   {
+   "id": 4234251762901002953,
+   "kind": "engine",
+   "name": "MANGAHERE",
+   "title": "MangaHere",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "www.mangahere.cc",
+   "file": "org/koitharu/kotatsu/parsers/site/en/MangaHere.kt"
+  },
+  {
    "id": 4234251763183481554,
    "kind": "engine",
    "name": "MANGAHONA",
@@ -6537,6 +6581,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/mangabox/en/MangakakalotTv.kt"
   },
   {
+   "id": 1608878345218352515,
+   "kind": "engine",
+   "name": "MANGAKATANA",
+   "title": "MangaKatana",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "mangakatana.com",
+   "file": "org/koitharu/kotatsu/parsers/site/en/MangaKatana.kt"
+  },
+  {
    "id": 1608878347876484316,
    "kind": "engine",
    "name": "MANGAKAWAII",
@@ -6590,6 +6645,17 @@
    "broken": false,
    "domain": "mangakings.com.tr",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/tr/MangaKings.kt"
+  },
+  {
+   "id": 5789623240835980550,
+   "kind": "engine",
+   "name": "MANGAKIO",
+   "title": "MangaKIO",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "mangak.io",
+   "file": "org/koitharu/kotatsu/parsers/site/mangak/en/MangaK.kt"
   },
   {
    "id": 4234251765679371195,
@@ -6653,7 +6719,7 @@
    "title": "MangaKyo",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "mangakyo.vip",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/Mangakyo.kt"
   },
@@ -6687,7 +6753,7 @@
    "lang": "ar",
    "nsfw": 0,
    "broken": false,
-   "domain": "lekmanga.net",
+   "domain": "mangalik.net",
    "file": "org/koitharu/kotatsu/parsers/site/madara/ar/LekManga.kt"
   },
   {
@@ -6832,6 +6898,17 @@
    "broken": true,
    "domain": "manga-moons.net",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/th/MangaMoons.kt"
+  },
+  {
+   "id": 4234251767624932554,
+   "kind": "engine",
+   "name": "MANGAMORI",
+   "title": "MangaMori",
+   "lang": "vi",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "mangamori.dev",
+   "file": "org/koitharu/kotatsu/parsers/site/vi/MangaMori.kt"
   },
   {
    "id": 5122006934961152520,
@@ -7173,17 +7250,6 @@
    "broken": false,
    "domain": "",
    "file": "org/koitharu/kotatsu/parsers/site/all/MangaPlusParser.kt"
-  },
-  {
-   "id": 4234251770454362048,
-   "kind": "engine",
-   "name": "MANGAPUMA",
-   "title": "MangaPuma",
-   "lang": "en",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "mangapuma.com",
-   "file": "org/koitharu/kotatsu/parsers/site/madtheme/en/MangaPuma.kt"
   },
   {
    "id": 4234251770459098817,
@@ -7571,17 +7637,6 @@
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/Mangasy.kt"
   },
   {
-   "id": 4234251773430989509,
-   "kind": "engine",
-   "name": "MANGATALE",
-   "title": "MangaTale",
-   "lang": "id",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "ikiru.one",
-   "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/MangaTaleParser.kt"
-  },
-  {
    "id": 4234251773436828431,
    "kind": "engine",
    "name": "MANGATARO",
@@ -7666,7 +7721,7 @@
    "lang": "es",
    "nsfw": 0,
    "broken": false,
-   "domain": "www.mangatv.net",
+   "domain": "mangatv.net",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/es/MangaTv.kt"
   },
   {
@@ -7802,26 +7857,26 @@
    "file": "org/koitharu/kotatsu/parsers/site/madara/es/Mangaxico.kt"
   },
   {
-   "id": 5789623241223263550,
-   "kind": "engine",
-   "name": "MANGAXYZ",
-   "title": "MangaXyz",
-   "lang": "en",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "mangaxyz.com",
-   "file": "org/koitharu/kotatsu/parsers/site/madtheme/en/Mangaxyz.kt"
-  },
-  {
    "id": 4234251777874346950,
    "kind": "engine",
    "name": "MANGAYARO",
    "title": "MangaYaro",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "mangayaro.id",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/Mangayaro.kt"
+  },
+  {
+   "id": 1376874560924831193,
+   "kind": "engine",
+   "name": "MANGAYY",
+   "title": "MangaYY",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": true,
+   "domain": "mangayy.org",
+   "file": "org/koitharu/kotatsu/parsers/site/madara/en/MangaYY.kt"
   },
   {
    "id": 4234251778765634384,
@@ -7875,7 +7930,7 @@
    "lang": "tr",
    "nsfw": 0,
    "broken": false,
-   "domain": "mangadenizi.net",
+   "domain": "www.mangadenizi.net",
    "file": "org/koitharu/kotatsu/parsers/site/mmrcms/tr/MangaDenizi.kt"
   },
   {
@@ -8260,7 +8315,7 @@
    "lang": "id",
    "nsfw": 1,
    "broken": false,
-   "domain": "manhwadesu.asia",
+   "domain": "manhwadesu.im",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/ManhwadesuParser.kt"
   },
   {
@@ -8326,7 +8381,7 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "manhwaindo.one",
+   "domain": "www.manhwaindo.my",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/ManhwaIndoParser.kt"
   },
   {
@@ -8473,6 +8528,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/ManhwaRawCom.kt"
   },
   {
+   "id": 2134641155763164181,
+   "kind": "engine",
+   "name": "MANHWAREAD",
+   "title": "ManhwaRead",
+   "lang": "en",
+   "nsfw": 1,
+   "broken": false,
+   "domain": "manhwaread.com",
+   "file": "org/koitharu/kotatsu/parsers/site/en/ManhwaRead.kt"
+  },
+  {
    "id": 4234253215244278278,
    "kind": "engine",
    "name": "MANHWASCO",
@@ -8535,7 +8601,7 @@
    "lang": "en",
    "nsfw": 0,
    "broken": false,
-   "domain": "manhwaz.com",
+   "domain": "manhwaz.cc",
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/Manhwaz.kt"
   },
   {
@@ -8666,7 +8732,7 @@
    "title": "Tenshi",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "tenshi01.id",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/MasterKomik.kt"
   },
@@ -8700,7 +8766,7 @@
    "lang": "id",
    "nsfw": 1,
    "broken": false,
-   "domain": "medusascans.com",
+   "domain": "medusascans.pro",
    "file": "org/koitharu/kotatsu/parsers/site/comicaso/id/Medusascans.kt"
   },
   {
@@ -8755,8 +8821,8 @@
    "lang": "es",
    "nsfw": 0,
    "broken": false,
-   "domain": "mhscans.mundoalterno.org",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/es/MhScans.kt"
+   "domain": "mhscans.com",
+   "file": "org/koitharu/kotatsu/parsers/site/es/MhScans.kt"
   },
   {
    "id": 2315073161197987356,
@@ -8930,7 +8996,7 @@
    "title": "MonzeeKomik",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "monzee01.my.id",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/MonzeeKomik.kt"
   },
@@ -9032,17 +9098,6 @@
    "broken": false,
    "domain": "www.muitohentai.com",
    "file": "org/koitharu/kotatsu/parsers/site/pt/MuitoHentai.kt"
-  },
-  {
-   "id": 4250602956249399538,
-   "kind": "engine",
-   "name": "MULTPORN",
-   "title": "Multporn",
-   "lang": "all",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "multporn.net",
-   "file": "org/koitharu/kotatsu/parsers/site/all/Multporn.kt"
   },
   {
    "id": 2118098309490634743,
@@ -9305,7 +9360,7 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "neumanga.xyz",
+   "domain": "neumanga.id",
    "file": "org/koitharu/kotatsu/parsers/site/animebootstrap/id/NeuManga.kt"
   },
   {
@@ -9349,7 +9404,7 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "ngomik.mom",
+   "domain": "id.ngomik.cloud",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/Ngomik.kt"
   },
   {
@@ -9414,7 +9469,7 @@
    "title": "Nimemob",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "www.nimemob.my.id",
    "file": "org/koitharu/kotatsu/parsers/site/zeistmanga/id/Nimemob.kt"
   },
@@ -9425,8 +9480,8 @@
    "title": "NineManga Brasil",
    "lang": "pt",
    "nsfw": 0,
-   "broken": false,
-   "domain": "br.ninemanga.com",
+   "broken": true,
+   "domain": "br.niadd.com",
    "file": "org/koitharu/kotatsu/parsers/site/all/NineMangaParser.kt"
   },
   {
@@ -9436,8 +9491,8 @@
    "title": "NineManga Deutsch",
    "lang": "de",
    "nsfw": 0,
-   "broken": false,
-   "domain": "de.ninemanga.com",
+   "broken": true,
+   "domain": "de.niadd.com",
    "file": "org/koitharu/kotatsu/parsers/site/all/NineMangaParser.kt"
   },
   {
@@ -9447,8 +9502,8 @@
    "title": "NineManga English",
    "lang": "en",
    "nsfw": 0,
-   "broken": false,
-   "domain": "www.ninemanga.com",
+   "broken": true,
+   "domain": "www.niadd.com",
    "file": "org/koitharu/kotatsu/parsers/site/all/NineMangaParser.kt"
   },
   {
@@ -9458,8 +9513,8 @@
    "title": "NineManga Español",
    "lang": "es",
    "nsfw": 0,
-   "broken": false,
-   "domain": "es.ninemanga.com",
+   "broken": true,
+   "domain": "es.niadd.com",
    "file": "org/koitharu/kotatsu/parsers/site/all/NineMangaParser.kt"
   },
   {
@@ -9469,8 +9524,8 @@
    "title": "NineManga Français",
    "lang": "fr",
    "nsfw": 0,
-   "broken": false,
-   "domain": "fr.ninemanga.com",
+   "broken": true,
+   "domain": "fr.niadd.com",
    "file": "org/koitharu/kotatsu/parsers/site/all/NineMangaParser.kt"
   },
   {
@@ -9480,8 +9535,8 @@
    "title": "NineManga Italiano",
    "lang": "it",
    "nsfw": 0,
-   "broken": false,
-   "domain": "it.ninemanga.com",
+   "broken": true,
+   "domain": "it.niadd.com",
    "file": "org/koitharu/kotatsu/parsers/site/all/NineMangaParser.kt"
   },
   {
@@ -9491,8 +9546,8 @@
    "title": "NineManga Русский",
    "lang": "ru",
    "nsfw": 0,
-   "broken": false,
-   "domain": "ru.ninemanga.com",
+   "broken": true,
+   "domain": "ru.niadd.com",
    "file": "org/koitharu/kotatsu/parsers/site/all/NineMangaParser.kt"
   },
   {
@@ -9756,7 +9811,7 @@
    "lang": "es",
    "nsfw": 0,
    "broken": false,
-   "domain": "olympusbiblioteca.com",
+   "domain": "olympusxyz.com",
    "file": "org/koitharu/kotatsu/parsers/site/fmreader/es/OlimpoScans.kt"
   },
   {
@@ -9802,6 +9857,83 @@
    "broken": false,
    "domain": "onepunchmanscan.com",
    "file": "org/koitharu/kotatsu/parsers/site/onemanga/fr/OnePunchManScan.kt"
+  },
+  {
+   "id": 4036451004536038189,
+   "kind": "engine",
+   "name": "ONISAGA_EN",
+   "title": "OniSaga (English)",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/OniSaga.kt"
+  },
+  {
+   "id": 4036451004536187149,
+   "kind": "engine",
+   "name": "ONISAGA_ES",
+   "title": "OniSaga (Español)",
+   "lang": "es",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/OniSaga.kt"
+  },
+  {
+   "id": 1555628968475285328,
+   "kind": "engine",
+   "name": "ONISAGA_ES_419",
+   "title": "OniSaga (Español Latinoamérica)",
+   "lang": "es",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/OniSaga.kt"
+  },
+  {
+   "id": 4036451004537080909,
+   "kind": "engine",
+   "name": "ONISAGA_FR",
+   "title": "OniSaga (Français)",
+   "lang": "fr",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/OniSaga.kt"
+  },
+  {
+   "id": 4036451004540268653,
+   "kind": "engine",
+   "name": "ONISAGA_JA",
+   "title": "OniSaga (日本語)",
+   "lang": "ja",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/OniSaga.kt"
+  },
+  {
+   "id": 4036451004546376013,
+   "kind": "engine",
+   "name": "ONISAGA_PT",
+   "title": "OniSaga (Português)",
+   "lang": "pt",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/OniSaga.kt"
+  },
+  {
+   "id": 4810631966706347530,
+   "kind": "engine",
+   "name": "ONISAGA_PT_BR",
+   "title": "OniSaga (Português Brasileiro)",
+   "lang": "pt",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/OniSaga.kt"
   },
   {
    "id": 4039078607642022719,
@@ -10043,7 +10175,7 @@
    "nsfw": 0,
    "broken": false,
    "domain": "philiascans.org",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/en/PhiliaScans.kt"
+   "file": "org/koitharu/kotatsu/parsers/site/en/PhiliaScans.kt"
   },
   {
    "id": 2066876204362989822,
@@ -10299,6 +10431,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/ar/Prochan.kt"
   },
   {
+   "id": 6554169917447043702,
+   "kind": "engine",
+   "name": "PROJECTSUKI",
+   "title": "Project Suki",
+   "lang": "all",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "projectsuki.com",
+   "file": "org/koitharu/kotatsu/parsers/site/all/ProjectSuki.kt"
+  },
+  {
    "id": 7186759213619575356,
    "kind": "engine",
    "name": "PROJETOSCANLATOR",
@@ -10445,12 +10588,12 @@
    "id": 3668404409500823599,
    "kind": "engine",
    "name": "RAIJINSCANS",
-   "title": "RaijinScans",
+   "title": "Aniverse",
    "lang": "fr",
    "nsfw": 0,
    "broken": false,
-   "domain": "raijin-scans.fr",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/fr/RaijinScans.kt"
+   "domain": "aniverse.fr",
+   "file": "org/koitharu/kotatsu/parsers/site/fr/Aniverse.kt"
   },
   {
    "id": 4361165590627136861,
@@ -10559,8 +10702,8 @@
    "lang": "ja",
    "nsfw": 0,
    "broken": false,
-   "domain": "old.rawkuma.net",
-   "file": "org/koitharu/kotatsu/parsers/site/mangareader/ja/Rawkuma.kt"
+   "domain": "rawkuma.net",
+   "file": "org/koitharu/kotatsu/parsers/site/natsu/ja/Rawkuma.kt"
   },
   {
    "id": 5793729223449529669,
@@ -10867,8 +11010,8 @@
    "lang": "fr",
    "nsfw": 0,
    "broken": false,
-   "domain": "rimuscans.com",
-   "file": "org/koitharu/kotatsu/parsers/site/mangareader/fr/RimuScans.kt"
+   "domain": "rimuscan.fr",
+   "file": "org/koitharu/kotatsu/parsers/site/fr/RimuScans.kt"
   },
   {
    "id": 874345810698457818,
@@ -10999,8 +11142,19 @@
    "lang": "tr",
    "nsfw": 0,
    "broken": false,
-   "domain": "ruyamanga2.com",
+   "domain": "ruyamanga.net",
    "file": "org/koitharu/kotatsu/parsers/site/madara/tr/RuyaManga.kt"
+  },
+  {
+   "id": 5794362025972649976,
+   "kind": "engine",
+   "name": "RYUKOMIK",
+   "title": "Ryukomik",
+   "lang": "id",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "ryukomik.my.id",
+   "file": "org/koitharu/kotatsu/parsers/site/id/Ryukomik.kt"
   },
   {
    "id": 4381294723770585814,
@@ -11017,11 +11171,11 @@
    "id": 1377020372809438008,
    "kind": "engine",
    "name": "S2MANGA",
-   "title": "S2Manga",
+   "title": "S2Read",
    "lang": "en",
    "nsfw": 0,
    "broken": false,
-   "domain": "s2manga.com",
+   "domain": "s2read.com",
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/S2Manga.kt"
   },
   {
@@ -11056,6 +11210,17 @@
    "broken": false,
    "domain": "samuraiscan.com",
    "file": "org/koitharu/kotatsu/parsers/site/madara/es/SamuraiScan.kt"
+  },
+  {
+   "id": 4386697997604949272,
+   "kind": "engine",
+   "name": "SANASCANS",
+   "title": "Sana Scans",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "sanascans.com",
+   "file": "org/koitharu/kotatsu/parsers/site/iken/en/SanaScans.kt"
   },
   {
    "id": 109266153397226665,
@@ -11395,7 +11560,7 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "sektekomik.xyz",
+   "domain": "sektekomik.id",
    "file": "org/koitharu/kotatsu/parsers/site/animebootstrap/id/SekteKomik.kt"
   },
   {
@@ -11406,7 +11571,7 @@
    "lang": "ru",
    "nsfw": 0,
    "broken": false,
-   "domain": "senkuro.me",
+   "domain": "senkuro.com",
    "file": "org/koitharu/kotatsu/parsers/site/ru/SenkuroParser.kt"
   },
   {
@@ -11460,7 +11625,7 @@
    "title": "ShadowMangas",
    "lang": "es",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "shadowmangas.com",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/es/Shadowmangas.kt"
   },
@@ -11614,7 +11779,7 @@
    "title": "SirenKomik",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "sirenkomik.xyz",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/SirenKomik.kt"
   },
@@ -11696,17 +11861,6 @@
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/en/SnowMachineTranslation.kt"
   },
   {
-   "id": 4397398368560684058,
-   "kind": "engine",
-   "name": "SNOWSCANS",
-   "title": "SnowScans",
-   "lang": "en",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "flixscans.net",
-   "file": "org/koitharu/kotatsu/parsers/site/mangareader/en/SnowScans.kt"
-  },
-  {
    "id": 1610469579808167756,
    "kind": "engine",
    "name": "SNSCOEURTURKEY",
@@ -11740,6 +11894,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/th/Sodsaime.kt"
   },
   {
+   "id": 4397977272462931774,
+   "kind": "engine",
+   "name": "SOFTKOMIK",
+   "title": "Softkomik",
+   "lang": "id",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "softkomik.co",
+   "file": "org/koitharu/kotatsu/parsers/site/id/SoftKomik.kt"
+  },
+  {
    "id": 4398131759047589691,
    "kind": "engine",
    "name": "SOLOOSCAN",
@@ -11769,7 +11934,7 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "soulscans.my.id",
+   "domain": "v1.soulscans.org",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/SoulScans.kt"
   },
   {
@@ -12197,9 +12362,9 @@
    "title": "TheBlank",
    "lang": "en",
    "nsfw": 1,
-   "broken": false,
+   "broken": true,
    "domain": "theblank.net",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/en/TheBlank.kt"
+   "file": "org/koitharu/kotatsu/parsers/site/madara/en/theblank/TheBlank.kt"
   },
   {
    "id": 908743684209593145,
@@ -12211,6 +12376,17 @@
    "broken": true,
    "domain": "theguildscans.com",
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/Theguildscans.kt"
+  },
+  {
+   "id": 2424646516637497883,
+   "kind": "engine",
+   "name": "THRIVE",
+   "title": "Thrive",
+   "lang": "id",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "thrive.moe",
+   "file": "org/koitharu/kotatsu/parsers/site/id/Thrive.kt"
   },
   {
    "id": 299562798421296729,
@@ -12277,6 +12453,17 @@
    "broken": false,
    "domain": "tokyorevengers.fr",
    "file": "org/koitharu/kotatsu/parsers/site/onemanga/fr/TokyoRevengers.kt"
+  },
+  {
+   "id": 4423561472396766588,
+   "kind": "engine",
+   "name": "TOMILOLIB",
+   "title": "TomiloLib",
+   "lang": "ru",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "tomilo-lib.ru",
+   "file": "org/koitharu/kotatsu/parsers/site/ru/TomiloLib.kt"
   },
   {
    "id": 8004028869454761901,
@@ -12488,28 +12675,6 @@
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/Toonily.kt"
   },
   {
-   "id": 8004965953984851752,
-   "kind": "engine",
-   "name": "TOONILY_ME",
-   "title": "Toonily.Me",
-   "lang": "en",
-   "nsfw": 1,
-   "broken": false,
-   "domain": "toonily.me",
-   "file": "org/koitharu/kotatsu/parsers/site/madtheme/en/ToonilyMe.kt"
-  },
-  {
-   "id": 4423618538247237882,
-   "kind": "engine",
-   "name": "TOONITUBE",
-   "title": "TooniTube",
-   "lang": "en",
-   "nsfw": 1,
-   "broken": false,
-   "domain": "toonitube.com",
-   "file": "org/koitharu/kotatsu/parsers/site/madtheme/en/TooniTube.kt"
-  },
-  {
    "id": 1377071612709576671,
    "kind": "engine",
    "name": "TOONIZY",
@@ -12519,6 +12684,28 @@
    "broken": false,
    "domain": "toonizy.com",
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/Toonizy.kt"
+  },
+  {
+   "id": 4423618588822495061,
+   "kind": "engine",
+   "name": "TOONKOTSU",
+   "title": "Toonkotsu",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "toonkotsu.com",
+   "file": "org/koitharu/kotatsu/parsers/site/en/Toonkotsu.kt"
+  },
+  {
+   "id": 4423618836312091500,
+   "kind": "engine",
+   "name": "TOONTOPIO",
+   "title": "ToonTop.io",
+   "lang": "en",
+   "nsfw": 1,
+   "broken": false,
+   "domain": "toontop.io",
+   "file": "org/koitharu/kotatsu/parsers/site/mangak/en/ToonTop.kt"
   },
   {
    "id": 3116057551706045636,
@@ -12540,7 +12727,7 @@
    "nsfw": 0,
    "broken": false,
    "domain": "manhuatop.org",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/en/TopManhua.kt"
+   "file": "org/koitharu/kotatsu/parsers/site/en/TopManhua.kt"
   },
   {
    "id": 5443582880216157130,
@@ -12642,17 +12829,6 @@
    "file": "org/koitharu/kotatsu/parsers/site/madara/tr/TrMangaOku.kt"
   },
   {
-   "id": 4426228477813788231,
-   "kind": "engine",
-   "name": "TRUEMANGA",
-   "title": "TrueManga",
-   "lang": "en",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "mangamonk.com",
-   "file": "org/koitharu/kotatsu/parsers/site/madtheme/en/TrueManga.kt"
-  },
-  {
    "id": 5795816581519710978,
    "kind": "engine",
    "name": "TRUYENGG",
@@ -12660,7 +12836,7 @@
    "lang": "vi",
    "nsfw": 0,
    "broken": false,
-   "domain": "foxtruyen.com",
+   "domain": "foxtruyen2.com",
    "file": "org/koitharu/kotatsu/parsers/site/vi/TruyenGG.kt"
   },
   {
@@ -12758,7 +12934,7 @@
    "title": "Tukang Komik",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "tukangkomik.co",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/Tukangkomik.kt"
   },
@@ -12807,6 +12983,28 @@
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/es/TuManhwas.kt"
   },
   {
+   "id": 5795943280655293264,
+   "kind": "engine",
+   "name": "TWOKINDS",
+   "title": "Twokinds",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "twokinds.keenspot.com",
+   "file": "org/koitharu/kotatsu/parsers/site/en/Twokinds.kt"
+  },
+  {
+   "id": 5421744081794458456,
+   "kind": "engine",
+   "name": "TWOKINDS_RU",
+   "title": "Twokinds на русском",
+   "lang": "ru",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "twokinds.ru",
+   "file": "org/koitharu/kotatsu/parsers/site/ru/TwokindsRu.kt"
+  },
+  {
    "id": 7065236510274516972,
    "kind": "engine",
    "name": "TYRANTSCANS",
@@ -12836,7 +13034,7 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "www.ulascomic00.xyz",
+   "domain": "www.ulascomic01.xyz",
    "file": "org/koitharu/kotatsu/parsers/site/zeistmanga/id/UlasComic.kt"
   },
   {
@@ -12890,7 +13088,7 @@
    "title": "Uzay Manga",
    "lang": "tr",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "",
    "file": "org/koitharu/kotatsu/parsers/site/tr/UzayManga.kt"
   },
@@ -12923,7 +13121,7 @@
    "title": "Vcomycs",
    "lang": "vi",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "vivicomi8.info",
    "file": "org/koitharu/kotatsu/parsers/site/vi/VcomycsParser.kt"
   },
@@ -13012,8 +13210,8 @@
    "lang": "en",
    "nsfw": 0,
    "broken": false,
-   "domain": "violetscans.org",
-   "file": "org/koitharu/kotatsu/parsers/site/en/VioletScans.kt"
+   "domain": "violetmanga.com",
+   "file": "org/koitharu/kotatsu/parsers/site/mangareader/en/VioletScans.kt"
   },
   {
    "id": 212318319699807184,
@@ -13049,6 +13247,17 @@
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/en/VoidScansCo.kt"
   },
   {
+   "id": 5797373313600120243,
+   "kind": "engine",
+   "name": "VORATOON",
+   "title": "Voratoon",
+   "lang": "id",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "voratoon.co",
+   "file": "org/koitharu/kotatsu/parsers/site/id/Voratoon.kt"
+  },
+  {
    "id": 1922179475422564101,
    "kind": "engine",
    "name": "VORTEXSCANS",
@@ -13067,19 +13276,8 @@
    "lang": "en",
    "nsfw": 0,
    "broken": false,
-   "domain": "vymanga.net",
+   "domain": "mangavyvy.net",
    "file": "org/koitharu/kotatsu/parsers/site/en/VyManga.kt"
-  },
-  {
-   "id": 4482826327058372991,
-   "kind": "engine",
-   "name": "VYVYMANGA",
-   "title": "VyvyManga",
-   "lang": "en",
-   "nsfw": 0,
-   "broken": false,
-   "domain": "vyvymanga.org",
-   "file": "org/koitharu/kotatsu/parsers/site/madara/en/VyvyManga.kt"
   },
   {
    "id": 8702583702495860859,
@@ -13124,6 +13322,17 @@
    "broken": false,
    "domain": "webdexscans.com",
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/WebDexScans.kt"
+  },
+  {
+   "id": 2424648978700720790,
+   "kind": "engine",
+   "name": "WEBNEX",
+   "title": "Webnex",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "webnex.cc",
+   "file": "org/koitharu/kotatsu/parsers/site/en/Webnex.kt"
   },
   {
    "id": 1377142050488011391,
@@ -13331,7 +13540,7 @@
    "lang": "id",
    "nsfw": 0,
    "broken": false,
-   "domain": "westmanga.tv",
+   "domain": "v1.westmanga.my",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/WestmangaParser.kt"
   },
   {
@@ -13375,7 +13584,7 @@
    "lang": "en",
    "nsfw": 0,
    "broken": false,
-   "domain": "altayscans.com",
+   "domain": "witchscans.com",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/en/WitchScans.kt"
   },
   {
@@ -13454,6 +13663,314 @@
    "broken": false,
    "domain": "xcalibrscans.com",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/en/XCalibrScans.kt"
+  },
+  {
+   "id": 1377167135595822442,
+   "kind": "engine",
+   "name": "XCOMIC",
+   "title": "XComic",
+   "lang": "all",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038696242728,
+   "kind": "engine",
+   "name": "XCOMIC_AR",
+   "title": "XComic (Arabic)",
+   "lang": "ar",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038696838568,
+   "kind": "engine",
+   "name": "XCOMIC_BG",
+   "title": "XComic (Bulgarian)",
+   "lang": "bg",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038697583368,
+   "kind": "engine",
+   "name": "XCOMIC_CA",
+   "title": "XComic (Catalan)",
+   "lang": "ca",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038698119624,
+   "kind": "engine",
+   "name": "XCOMIC_CS",
+   "title": "XComic (Czech)",
+   "lang": "cs",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038698626088,
+   "kind": "engine",
+   "name": "XCOMIC_DE",
+   "title": "XComic (German)",
+   "lang": "de",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038699817768,
+   "kind": "engine",
+   "name": "XCOMIC_EN",
+   "title": "XComic (English)",
+   "lang": "en",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038699966728,
+   "kind": "engine",
+   "name": "XCOMIC_ES",
+   "title": "XComic (Spanish)",
+   "lang": "es",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 1346801455017662923,
+   "kind": "engine",
+   "name": "XCOMIC_ES_419",
+   "title": "XComic (Spanish, Latin America)",
+   "lang": "es",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038700354024,
+   "kind": "engine",
+   "name": "XCOMIC_FA",
+   "title": "XComic (Persian)",
+   "lang": "fa",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038700860488,
+   "kind": "engine",
+   "name": "XCOMIC_FR",
+   "title": "XComic (French)",
+   "lang": "fr",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038702796968,
+   "kind": "engine",
+   "name": "XCOMIC_HU",
+   "title": "XComic (Hungarian)",
+   "lang": "hu",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038703214056,
+   "kind": "engine",
+   "name": "XCOMIC_ID",
+   "title": "XComic (Indonesian)",
+   "lang": "id",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038703690728,
+   "kind": "engine",
+   "name": "XCOMIC_IT",
+   "title": "XComic (Italian)",
+   "lang": "it",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038704048232,
+   "kind": "engine",
+   "name": "XCOMIC_JA",
+   "title": "XComic (Japanese)",
+   "lang": "ja",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038705388872,
+   "kind": "engine",
+   "name": "XCOMIC_KO",
+   "title": "XComic (Korean)",
+   "lang": "ko",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038707206184,
+   "kind": "engine",
+   "name": "XCOMIC_MN",
+   "title": "XComic (Mongolian)",
+   "lang": "mn",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038709917256,
+   "kind": "engine",
+   "name": "XCOMIC_PL",
+   "title": "XComic (Polish)",
+   "lang": "pl",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038710155592,
+   "kind": "engine",
+   "name": "XCOMIC_PT",
+   "title": "XComic (Portuguese)",
+   "lang": "pt",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 5101423725525610543,
+   "kind": "engine",
+   "name": "XCOMIC_PT_BR",
+   "title": "XComic (Portuguese, Brazil)",
+   "lang": "pt",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038711853736,
+   "kind": "engine",
+   "name": "XCOMIC_RO",
+   "title": "XComic (Romanian)",
+   "lang": "ro",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038712032488,
+   "kind": "engine",
+   "name": "XCOMIC_RU",
+   "title": "XComic (Russian)",
+   "lang": "ru",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038713492296,
+   "kind": "engine",
+   "name": "XCOMIC_TH",
+   "title": "XComic (Thai)",
+   "lang": "th",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038713790216,
+   "kind": "engine",
+   "name": "XCOMIC_TR",
+   "title": "XComic (Turkish)",
+   "lang": "tr",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038714505224,
+   "kind": "engine",
+   "name": "XCOMIC_UK",
+   "title": "XComic (Ukrainian)",
+   "lang": "uk",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038715369192,
+   "kind": "engine",
+   "name": "XCOMIC_VI",
+   "title": "XComic (Vietnamese)",
+   "lang": "vi",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 4515416038719033608,
+   "kind": "engine",
+   "name": "XCOMIC_ZH",
+   "title": "XComic (Chinese)",
+   "lang": "zh",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
+  },
+  {
+   "id": 5101423990007040368,
+   "kind": "engine",
+   "name": "XCOMIC_ZH_HK",
+   "title": "XComic (Chinese, Hong Kong)",
+   "lang": "zh",
+   "nsfw": 0,
+   "broken": false,
+   "domain": "",
+   "file": "org/koitharu/kotatsu/parsers/site/all/XComic.kt"
   },
   {
    "id": 1377175280207432335,
@@ -13792,7 +14309,7 @@
    "title": "YumeKomik",
    "lang": "id",
    "nsfw": 0,
-   "broken": false,
+   "broken": true,
    "domain": "yumekomik.com",
    "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/YumeKomik.kt"
   },
@@ -13826,8 +14343,8 @@
    "lang": "id",
    "nsfw": 1,
    "broken": false,
-   "domain": "yurilabs.my.id",
-   "file": "org/koitharu/kotatsu/parsers/site/mangareader/id/YuriLab.kt"
+   "domain": "yurilab.top",
+   "file": "org/koitharu/kotatsu/parsers/site/madara/id/YuriLab.kt"
   },
   {
    "id": 5799991049029331967,
@@ -13899,11 +14416,11 @@
    "id": 5800384332214682060,
    "kind": "engine",
    "name": "ZENMANGA",
-   "title": "ZenManga",
+   "title": "InkStory",
    "lang": "ru",
    "nsfw": 0,
-   "broken": true,
-   "domain": "inkstory.me",
+   "broken": false,
+   "domain": "inkstory.net",
    "file": "org/koitharu/kotatsu/parsers/site/ru/ZenMangaParser.kt"
   },
   {
@@ -13947,7 +14464,7 @@
    "lang": "en",
    "nsfw": 0,
    "broken": false,
-   "domain": "zinmanga.net",
+   "domain": "www.zinmanga.net",
    "file": "org/koitharu/kotatsu/parsers/site/madara/en/Zinmanga.kt"
   },
   {
