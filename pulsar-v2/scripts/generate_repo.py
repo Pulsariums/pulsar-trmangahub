@@ -112,7 +112,7 @@ def package_sources(status, suffix, dropped=(), filters=None):
     filters = filters or {"dead_hosts": set(), "dead_sources": set(), "engine_name": {}}
     rows = []
     for entry in status.values():
-        if entry.get("state") != "active" and not (entry.get("sorun") or "").strip():
+        if pkg != "test" and entry.get("state") != "active" and not (entry.get("sorun") or "").strip():
             continue
         if pkg not in (entry.get("packages") or []):
             continue
