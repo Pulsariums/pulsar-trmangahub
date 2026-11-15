@@ -1961,7 +1961,7 @@
     "datePattern": "dd/MM/yyyy",
     "engine": "madara",
     "listPath": "/webtoon",
-    "itemSelector": "a[href*='/webtoon/']",
+    "itemSelector": "div.page-item-detail.manga, div.popular-item-wrap",
     "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
     "readerSelector": "div.page-break img, div.reading-content img"
    },
