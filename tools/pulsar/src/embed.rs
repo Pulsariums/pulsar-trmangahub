@@ -156,15 +156,11 @@ fn embed(o: &Opts) -> Result<(), String> {
 
     let p64 = b64(&patches);
     let c64 = b64(&catalogue);
-    // Kotlin/JVM sabit havuzu tek string için 65535 BAYT sınırı koyar.
-    for (name, s) in [("patches", &p64), ("catalogue", &c64)] {
-        if s.len() > 65_000 {
-            return Err(format!(
-                "{name} Base64 {0} B — 65000 sınırını aşıyor; parçalara bölmek gerekir",
-                s.len()
-            ));
-        }
-    }
+    // Kotlin/JVM sabit havuzu tek string için 65535 BAYT sınırı koyar; katalog
+    // büyüdükçe base64 bunu aşar. Parçalara bölüp çalışma anında birleştiriyoruz:
+    // `const val` birleştirmesi derlemede tek sabite katlanır, sınır yine vurulur.
+    let p_lit = b64_chunks(&p64);
+    let c_lit = b64_chunks(&c64);
 
     let kt = format!(
         r#"// ÜRETİLMİŞ DOSYA — elle düzenleme. Kaynak: tools/pulsar `embed` komutu.
@@ -198,9 +194,11 @@ internal object PulsarData {{
         else -> null
     }}
 
-    private const val PATCHES_B64 = "{p}"
+    private val PATCHES_B64: String = {p}
 
-    private const val CATALOGUE_B64 = "{c}"
+    private val CATALOGUE_B64: String = {c}
+
+    private fun join(vararg parts: String): String = parts.joinToString("")
 
     private fun decode(data: String): String =
         String(Base64.decode(data, Base64.NO_WRAP), Charsets.UTF_8)
@@ -217,8 +215,8 @@ internal object PulsarData {{
 }}
 "#,
         a = allowed_kt,
-        p = p64,
-        c = c64
+        p = p_lit,
+        c = c_lit
     );
 
     if o.dry {
@@ -257,6 +255,18 @@ internal object PulsarData {{
         o.out.display()
     );
     Ok(())
+}
+
+/// Base64 metnini Kotlin'de `join(...)` ile birleştirilen parçalara böler.
+fn b64_chunks(s: &str) -> String {
+    // 65535 B sınırının altında kalacak güvenli parça boyu.
+    const LIMIT: usize = 40_000;
+    let parts: Vec<String> = s
+        .as_bytes()
+        .chunks(LIMIT)
+        .map(|c| format!("\"{}\"", std::str::from_utf8(c).expect("base64 ascii")))
+        .collect();
+    format!("join(\n        {},\n    )", parts.join(",\n        "))
 }
 
 /// Standart Base64 (bağımlılık eklememek için elle).

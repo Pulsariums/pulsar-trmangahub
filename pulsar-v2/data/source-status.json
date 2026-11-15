@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15T16:10:12Z",
+  "generated": "2026-11-15T16:17:09Z",
   "sources": {
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -7299,33 +7299,6 @@
         "at": "2026-11-15T11:49:53Z"
       }
     },
-    "258218291388547981": {
-      "id": 258218291388547981,
-      "kind": "catalogue",
-      "title": "SadScans",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "sadscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "active",
-      "health": {
-        "status": "blocked",
-        "http_code": "403",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "sorun": "cloudflare"
-    },
     "2586288247862613348": {
       "id": 2586288247862613348,
       "kind": "engine",
@@ -11631,18 +11604,6 @@
         "detail": "curl: (28) Connection timed out after 15012 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       }
-    },
-    "4062350174854844668": {
-      "id": 4062350174854844668,
-      "kind": "catalogue",
-      "title": "MangaAy",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "manga-ay.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "4062366187196257270": {
       "id": 4062366187196257270,

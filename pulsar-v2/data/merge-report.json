@@ -1,5 +1,5 @@
 {
-  "catalogue_after": 101,
+  "catalogue_after": 99,
   "catalogue_before": 136,
   "dropped": [
     {
@@ -185,6 +185,13 @@
       "nsfw": 0
     },
     {
+      "domain": "sadscans.com",
+      "kept": "SadScans",
+      "lang": "tr",
+      "name": "SadScans",
+      "nsfw": 0
+    },
+    {
       "domain": "seraphmanga.com",
       "kept": "SeraphManga",
       "lang": "tr",
@@ -234,6 +241,13 @@
       "nsfw": 1
     },
     {
+      "domain": "manga-ay.com",
+      "kept": "MangaAy",
+      "lang": "tr",
+      "name": "MangaAy",
+      "nsfw": 0
+    },
+    {
       "domain": "titanmanga.com",
       "kept": "TitanManga",
       "lang": "tr",
@@ -275,6 +289,7 @@
     1721265675649746340,
     7893052437992694291,
     357698414057326452,
+    258218291388547981,
     7663701235462277388,
     6620039325110469985,
     5863442274693704416,
@@ -282,11 +297,12 @@
     3691037704178132287,
     4274410594283057355,
     845371345206609558,
+    4062350174854844668,
     5117503242233509669,
     6718632900011266890
   ],
-  "engine_keys": 739,
-  "generated": "2026-11-15T16:00:29Z",
+  "engine_keys": 860,
+  "generated": "2026-11-15T16:17:07Z",
   "mirrors": 11,
   "note": "Ayni host+dil+nsfw motor kaynagi katalogdan dusuruldu; tasinmis alan adlari mirrors'a yazildi."
 }
