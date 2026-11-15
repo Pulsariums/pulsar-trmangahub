@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15T17:55:35Z",
+  "generated": "2026-11-15T20:26:57Z",
   "sources": {
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -392,9 +392,16 @@
       "nsfw": 0,
       "domain": "tarotscans.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T19:57:43Z"
+      }
     },
     "1336513517169247551": {
       "id": 1336513517169247551,
@@ -4241,9 +4248,9 @@
       "nsfw": 0,
       "domain": "amangaplanet.com.tr",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4252,13 +4259,12 @@
         "at": "2026-11-13T19:01:05Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T19:57:43Z"
+      }
     },
     "2106433588541418302": {
       "id": 2106433588541418302,
@@ -12203,14 +12209,21 @@
     "4180504126586091018": {
       "id": 4180504126586091018,
       "kind": "catalogue",
-      "title": "Manga Kusu",
+      "title": "RagnarScans",
       "lang": "tr",
       "nsfw": 0,
       "domain": "ragnarscans2.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T19:57:43Z"
+      }
     },
     "4183588611054499927": {
       "id": 4183588611054499927,
@@ -13387,7 +13400,7 @@
       "nsfw": 0,
       "domain": "mangaruhu.com",
       "packages": [
-        "test"
+        "tr"
       ],
       "state": "active",
       "health": {
@@ -13403,8 +13416,7 @@
         "ms": 0,
         "detail": "",
         "at": "2026-11-15T11:49:53Z"
-      },
-      "sorun": "login"
+      }
     },
     "4234251772650137494": {
       "id": 4234251772650137494,
@@ -18144,32 +18156,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "5787889444310861468": {
-      "id": 5787889444310861468,
-      "kind": "catalogue",
-      "title": "Manga Kusu",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "ragnarscans.net",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 37 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-15T11:49:53Z"
-      }
-    },
     "5787979820185491117": {
       "id": 5787979820185491117,
       "kind": "engine",
@@ -21442,33 +21428,6 @@
       },
       "dead": true
     },
-    "6086089492503336323": {
-      "id": 6086089492503336323,
-      "kind": "catalogue",
-      "title": "MangaRuhu",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangaruhu.com",
-      "packages": [
-        "test"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 34 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "sorun": "login"
-    },
     "6086089492809230311": {
       "id": 6086089492809230311,
       "kind": "catalogue",
@@ -21477,9 +21436,16 @@
       "nsfw": 0,
       "domain": "mangaruhu.net",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T19:57:43Z"
+      }
     },
     "6090117639599749850": {
       "id": 6090117639599749850,
@@ -22669,25 +22635,6 @@
         "at": "2026-11-15T11:49:53Z"
       }
     },
-    "661348012149783708": {
-      "id": 661348012149783708,
-      "kind": "catalogue",
-      "title": "Merlin Scans",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "merlintoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "empty",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      }
-    },
     "661348012455677696": {
       "id": 661348012455677696,
       "kind": "catalogue",
@@ -22696,9 +22643,16 @@
       "nsfw": 0,
       "domain": "merlintoon.net",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T19:57:43Z"
+      }
     },
     "6616234039953603106": {
       "id": 6616234039953603106,
@@ -25878,9 +25832,9 @@
       "nsfw": 0,
       "domain": "lunarx.to",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25889,14 +25843,12 @@
         "at": "2026-11-13T19:01:05Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages",
-      "sorun": "oturum"
+        "detail": "",
+        "at": "2026-11-15T19:57:43Z"
+      }
     },
     "8170497644902480619": {
       "id": 8170497644902480619,
@@ -26132,9 +26084,9 @@
       "nsfw": 0,
       "domain": "trmanga.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26143,13 +26095,12 @@
         "at": "2026-11-13T19:01:05Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T19:57:43Z"
+      }
     },
     "834213547143295877": {
       "id": 834213547143295877,
@@ -27707,15 +27658,22 @@
       "nsfw": 0,
       "domain": "nemesisscans.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "http404",
         "http_code": "404",
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T19:57:43Z"
       }
     },
     "9206637984064086149": {

@@ -1,7 +1,7 @@
 {
  "schema_version": 2,
  "generated_at": "2026-10-16T10:45:41Z",
- "total_count": 110,
+ "total_count": 107,
  "languages": [
   "tr"
  ],
@@ -506,27 +506,6 @@
     "itemSelector": "a[href*=\"/manga/\"]",
     "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
     "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-   },
-   "verified_by_user": true,
-   "origins": [
-    "keiyoushi_index",
-    "local_tr"
-   ]
-  },
-  {
-   "id": "merlintoon.com",
-   "name": "Merlin Scans",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "merlintoon.com",
-   "baseUrl": "https://merlintoon.net",
-   "engine": "mangareader",
-   "config": {
-    "engine": "mangareader",
-    "listPath": "/seri/",
-    "itemSelector": "div.bsx",
-    "chapterSelector": "div.eph-num a",
-    "readerSelector": "div#readerarea img"
    },
    "verified_by_user": true,
    "origins": [
@@ -1204,8 +1183,7 @@
    "verified_by_user": false,
    "origins": [
     "keiyoushi_index"
-   ],
-   "sorun": "oturum"
+   ]
   },
   {
    "id": "manga.araznovel.com",
@@ -1252,28 +1230,6 @@
    "verified_by_user": false,
    "origins": [
     "keiyoushi_index"
-   ]
-  },
-  {
-   "id": "mangakusu.com",
-   "name": "Manga Kusu",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "ragnarscans.net",
-   "baseUrl": "https://ragnarscans2.com",
-   "engine": "initmanga",
-   "config": {
-    "engine": "initmanga",
-    "listPath": "/manga",
-    "itemSelector": "div.manga-card",
-    "chapterSelector": "div.chapter-item",
-    "readerSelector": "#init-manga-single-chapter img, div.chapter-image img"
-   },
-   "verified_by_user": false,
-   "origins": [
-    "keiyoushi_index",
-    "local_custom",
-    "local_tr"
    ]
   },
   {
@@ -1456,28 +1412,6 @@
     "local_tr",
     "nyora_datadriven"
    ]
-  },
-  {
-   "id": "mangaruhu.com",
-   "name": "MangaRuhu",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "mangaruhu.com",
-   "baseUrl": "https://mangaruhu.net",
-   "engine": "madara",
-   "config": {
-    "engine": "madara",
-    "listPath": "/manga",
-    "itemSelector": "div.page-item-detail, div.manga",
-    "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-    "readerSelector": "div.page-break img, div.reading-content img"
-   },
-   "verified_by_user": false,
-   "origins": [
-    "local_tr",
-    "nyora_datadriven"
-   ],
-   "sorun": "login"
   },
   {
    "id": "millascan.com",
@@ -2364,7 +2298,7 @@
   },
   {
    "id": "mangakusu.com",
-   "name": "Manga Kusu",
+   "name": "RagnarScans",
    "lang": "tr",
    "nsfw": 0,
    "domain": "ragnarscans2.com",
@@ -2378,7 +2312,8 @@
     "readerSelector": "#init-manga-single-chapter img, div.chapter-image img"
    },
    "altDomains": [
-    "mangakusu.com"
+    "mangakusu.com",
+    "ragnarscans.net"
    ],
    "verified_by_user": false,
    "origins": [

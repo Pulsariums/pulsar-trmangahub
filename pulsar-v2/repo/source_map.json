@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T17:58:17Z",
+ "generated": "2026-11-15T20:26:57Z",
  "note": "id = Kotlin PulsarKotatsuSource/PulsarSource hash'inin Python kopyası; bakım bacası (07_maintain.py) MIHON_<id> -> kaynak eşlemesini bundan yapar.",
  "engine": [
   {
@@ -14257,26 +14257,6 @@
    "engine": "custom"
   },
   {
-   "id": 5787889444310861468,
-   "kind": "catalogue",
-   "name": "Manga Kusu",
-   "title": "Manga Kusu",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "ragnarscans.net",
-   "engine": "initmanga"
-  },
-  {
-   "id": 4180504126586091018,
-   "kind": "catalogue",
-   "name": "Manga Kusu",
-   "title": "Manga Kusu",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "ragnarscans2.com",
-   "engine": "initmanga"
-  },
-  {
    "id": 9201850297206503205,
    "kind": "catalogue",
    "name": "Manga Oku, Webtoon Oku, Manhwa &",
@@ -14347,16 +14327,6 @@
    "engine": "custom"
   },
   {
-   "id": 6086089492503336323,
-   "kind": "catalogue",
-   "name": "MangaRuhu",
-   "title": "MangaRuhu",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "mangaruhu.com",
-   "engine": "madara"
-  },
-  {
    "id": 6086089492809230311,
    "kind": "catalogue",
    "name": "MangaRuhu",
@@ -14395,16 +14365,6 @@
    "nsfw": 1,
    "domain": "mangtto.com",
    "engine": "custom"
-  },
-  {
-   "id": 661348012149783708,
-   "kind": "catalogue",
-   "name": "Merlin Scans",
-   "title": "Merlin Scans",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "merlintoon.com",
-   "engine": "mangareader"
   },
   {
    "id": 661348012455677696,
@@ -14535,6 +14495,16 @@
    "nsfw": 0,
    "domain": "paradoxscans.com",
    "engine": "custom"
+  },
+  {
+   "id": 4180504126586091018,
+   "kind": "catalogue",
+   "name": "RagnarScans",
+   "title": "RagnarScans",
+   "lang": "tr",
+   "nsfw": 0,
+   "domain": "ragnarscans2.com",
+   "engine": "initmanga"
   },
   {
    "id": 6279075557994312388,
