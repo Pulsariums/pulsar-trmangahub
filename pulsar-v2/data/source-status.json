@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15T22:53:03Z",
+  "generated": "2026-11-15T23:20:25Z",
   "sources": {
     "1045587388600521946": {
       "id": 1045587388600521946,
@@ -9,9 +9,16 @@
       "nsfw": 0,
       "domain": "peach-bl.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -40,9 +47,16 @@
       "nsfw": 0,
       "domain": "v5.kiryuu.to",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "1070937091469606342": {
       "id": 1070937091469606342,
@@ -505,12 +519,19 @@
       "kind": "catalogue",
       "title": "ShiroDoujin",
       "lang": "id",
-      "nsfw": 0,
+      "nsfw": 1,
       "domain": "shirodoujin.com",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "1344025467833272995": {
       "id": 1344025467833272995,
@@ -539,9 +560,16 @@
       "nsfw": 0,
       "domain": "fl-ares.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "1348804626010052830": {
       "id": 1348804626010052830,
@@ -2908,9 +2936,16 @@
       "nsfw": 0,
       "domain": "madarascans.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "1608869871563550339": {
       "id": 1608869871563550339,
@@ -3766,9 +3801,16 @@
       "nsfw": 0,
       "domain": "mgeko.cc",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "1753223689331303382": {
       "id": 1753223689331303382,
@@ -3796,18 +3838,6 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "luxmanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "1766722666673138305": {
-      "id": 1766722666673138305,
-      "kind": "catalogue",
-      "title": "CafecomYaoi",
-      "lang": "pt",
-      "nsfw": 0,
-      "domain": "cafecomyaoi.com.br",
       "packages": [
         "test"
       ],
@@ -4046,9 +4076,16 @@
       "nsfw": 0,
       "domain": "rocksmanga.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "1922179475422564101": {
       "id": 1922179475422564101,
@@ -5882,30 +5919,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "215920273723129978": {
-      "id": 215920273723129978,
-      "kind": "catalogue",
-      "title": "Hentai20",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "hentai20.io",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "215920366905117865": {
-      "id": 215920366905117865,
-      "kind": "catalogue",
-      "title": "Hentai3z.cc",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "hentai3z.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "2162105181326002302": {
       "id": 2162105181326002302,
       "kind": "engine",
@@ -5964,9 +5977,16 @@
       "nsfw": 0,
       "domain": "trwebtoon.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "2190287912977065806": {
       "id": 2190287912977065806,
@@ -8011,9 +8031,16 @@
       "nsfw": 0,
       "domain": "komikrealm.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "2889180128102656390": {
       "id": 2889180128102656390,
@@ -8073,9 +8100,16 @@
       "nsfw": 0,
       "domain": "eleceedturkiye.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "2922748393657669149": {
       "id": 2922748393657669149,
@@ -8390,18 +8424,6 @@
         "detail": "",
         "at": "2026-11-15T11:49:53Z"
       }
-    },
-    "3071018066433221133": {
-      "id": 3071018066433221133,
-      "kind": "catalogue",
-      "title": "Pzykosis666h Fansub",
-      "lang": "es",
-      "nsfw": 0,
-      "domain": "lector.pzykosis666hfansub.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "3076140639542878834": {
       "id": 3076140639542878834,
@@ -9557,18 +9579,6 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "olympusbiblioteca.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "3654046632179003768": {
-      "id": 3654046632179003768,
-      "kind": "catalogue",
-      "title": "TankouHentai",
-      "lang": "pt",
-      "nsfw": 0,
-      "domain": "tankouhentai.com",
       "packages": [
         "test"
       ],
@@ -11021,12 +11031,19 @@
       "kind": "catalogue",
       "title": "HentaiManga",
       "lang": "en",
-      "nsfw": 0,
+      "nsfw": 1,
       "domain": "hentaimanga.me",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "386746428516970468": {
       "id": 386746428516970468,
@@ -12114,29 +12131,24 @@
       ],
       "state": "unknown"
     },
-    "4062418948665464354": {
-      "id": 4062418948665464354,
-      "kind": "catalogue",
-      "title": "Manga18",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "manga18.club",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "4062420937604231679": {
       "id": 4062420937604231679,
       "kind": "catalogue",
       "title": "Manga18x",
       "lang": "en",
-      "nsfw": 0,
+      "nsfw": 1,
       "domain": "manga18x.net",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "4063053647762505851": {
       "id": 4063053647762505851,
@@ -12183,18 +12195,6 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "mangabuff.ru",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "4063814781354429173": {
-      "id": 4063814781354429173,
-      "kind": "catalogue",
-      "title": "MangaDna",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "mangadna.com",
       "packages": [
         "test"
       ],
@@ -12430,9 +12430,16 @@
       "nsfw": 0,
       "domain": "manhatic.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "4093299744819596787": {
       "id": 4093299744819596787,
@@ -15219,18 +15226,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "4345487257700612863": {
-      "id": 4345487257700612863,
-      "kind": "catalogue",
-      "title": "Petrotech Society",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "petrotechsociety.org",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "4361115049955014954": {
       "id": 4361115049955014954,
       "kind": "engine",
@@ -16230,9 +16225,16 @@
       "nsfw": 0,
       "domain": "maid.my.id",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "4445599410980350991": {
       "id": 4445599410980350991,
@@ -16592,18 +16594,6 @@
       },
       "device_step": "list"
     },
-    "4522905235038818327": {
-      "id": 4522905235038818327,
-      "kind": "catalogue",
-      "title": "MangaForFree",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "mangaforfree.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "4539181955248324512": {
       "id": 4539181955248324512,
       "kind": "engine",
@@ -16622,18 +16612,6 @@
         "detail": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - Yerel G�venlik Yetkilisi ile ba�lant� kurulam�yor",
         "at": "2026-11-13T17:07:52Z"
       }
-    },
-    "4541581599350902844": {
-      "id": 4541581599350902844,
-      "kind": "catalogue",
-      "title": "Hentai x Dickgirl",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "hentaixdickgirl.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "4543072178093183112": {
       "id": 4543072178093183112,
@@ -17241,18 +17219,6 @@
         "detail": "",
         "at": "2026-11-15T11:49:53Z"
       }
-    },
-    "4833557399830880853": {
-      "id": 4833557399830880853,
-      "kind": "catalogue",
-      "title": "Paritehaber",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "paritehaber.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "48344863515944583": {
       "id": 48344863515944583,
@@ -18149,9 +18115,16 @@
       "nsfw": 0,
       "domain": "flamecomics.xyz",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "5453440904367965424": {
       "id": 5453440904367965424,
@@ -18408,18 +18381,6 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "kalango.org",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "5752357045920128975": {
-      "id": 5752357045920128975,
-      "kind": "catalogue",
-      "title": "Bymichiby",
-      "lang": "es",
-      "nsfw": 0,
-      "domain": "bymichiby.com",
       "packages": [
         "test"
       ],
@@ -21576,18 +21537,6 @@
       },
       "device_step": "list"
     },
-    "5814728730223319705": {
-      "id": 5814728730223319705,
-      "kind": "catalogue",
-      "title": "18PornComic",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "18porncomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "5815221491918609206": {
       "id": 5815221491918609206,
       "kind": "catalogue",
@@ -21886,21 +21835,16 @@
       "nsfw": 0,
       "domain": "azoramoon.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
-    },
-    "5922755793366266846": {
-      "id": 5922755793366266846,
-      "kind": "catalogue",
-      "title": "SekteDoujin",
-      "lang": "id",
-      "nsfw": 0,
-      "domain": "sektedoujin.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "5925244894679392886": {
       "id": 5925244894679392886,
@@ -22492,9 +22436,16 @@
       "nsfw": 0,
       "domain": "mangadass.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "6077080744014927896": {
       "id": 6077080744014927896,
@@ -22593,12 +22544,19 @@
       "kind": "catalogue",
       "title": "HentaiWebtoon",
       "lang": "en",
-      "nsfw": 0,
+      "nsfw": 1,
       "domain": "hentaiwebtoon.com",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "6090117639599749850": {
       "id": 6090117639599749850,
@@ -22657,18 +22615,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "6132026486342764608": {
-      "id": 6132026486342764608,
-      "kind": "catalogue",
-      "title": "CoComic",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "cocomic.co",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "6136639672694483708": {
       "id": 6136639672694483708,
       "kind": "engine",
@@ -22714,18 +22660,6 @@
         "detail": "curl: (6) Could not resolve host: moonloversscan.com.br",
         "at": "2026-11-13T17:07:52Z"
       }
-    },
-    "6148763025404542491": {
-      "id": 6148763025404542491,
-      "kind": "catalogue",
-      "title": "HentaiSlayer",
-      "lang": "ar",
-      "nsfw": 0,
-      "domain": "hentaislayer.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "6163819523716018579": {
       "id": 6163819523716018579,
@@ -23043,18 +22977,6 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "silentquill.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "6317475901129395470": {
-      "id": 6317475901129395470,
-      "kind": "catalogue",
-      "title": "RizzComic",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "rizzfables.com",
       "packages": [
         "test"
       ],
@@ -23699,9 +23621,16 @@
       "nsfw": 0,
       "domain": "olympusbiblioteca.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "6537085686219641703": {
       "id": 6537085686219641703,
@@ -24009,18 +23938,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "6633253287394906936": {
-      "id": 6633253287394906936,
-      "kind": "catalogue",
-      "title": "MadaraDex",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "madaradex.org",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "6641761942101538615": {
       "id": 6641761942101538615,
       "kind": "catalogue",
@@ -24041,9 +23958,16 @@
       "nsfw": 0,
       "domain": "hivetoons.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "664923948860891578": {
       "id": 664923948860891578,
@@ -24718,18 +24642,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "6925268783069591851": {
-      "id": 6925268783069591851,
-      "kind": "catalogue",
-      "title": "Dojing",
-      "lang": "id",
-      "nsfw": 0,
-      "domain": "dojing.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "6958297225666389056": {
       "id": 6958297225666389056,
       "kind": "engine",
@@ -24748,18 +24660,6 @@
         "detail": "curl: (6) Could not resolve host: www.seinemanga.com",
         "at": "2026-11-13T17:07:52Z"
       }
-    },
-    "695919474095457579": {
-      "id": 695919474095457579,
-      "kind": "catalogue",
-      "title": "Kanzenin",
-      "lang": "id",
-      "nsfw": 0,
-      "domain": "kanzenin.info",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "6959596136089750891": {
       "id": 6959596136089750891,
@@ -25554,9 +25454,16 @@
       "nsfw": 0,
       "domain": "vortexscans.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "7328594960091535432": {
       "id": 7328594960091535432,
@@ -25769,9 +25676,16 @@
       "nsfw": 0,
       "domain": "manhwaden.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "7418784480186149141": {
       "id": 7418784480186149141,
@@ -25954,30 +25868,6 @@
         "at": "2026-11-15T11:49:53Z"
       }
     },
-    "7518059702657300570": {
-      "id": 7518059702657300570,
-      "kind": "catalogue",
-      "title": "KomBatch",
-      "lang": "id",
-      "nsfw": 0,
-      "domain": "kombatch.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "7521499901022487047": {
-      "id": 7521499901022487047,
-      "kind": "catalogue",
-      "title": "MangaManiacs",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "mangamaniacs.org",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "7521631886315243057": {
       "id": 7521631886315243057,
       "kind": "engine",
@@ -26081,9 +25971,16 @@
       "nsfw": 0,
       "domain": "komikav.net",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "7533210681705529466": {
       "id": 7533210681705529466,
@@ -27161,9 +27058,16 @@
       "nsfw": 0,
       "domain": "ezmanga.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "8036167423689503081": {
       "id": 8036167423689503081,
@@ -27648,18 +27552,6 @@
       ],
       "state": "unknown"
     },
-    "8262567829743709632": {
-      "id": 8262567829743709632,
-      "kind": "catalogue",
-      "title": "OmegaScans",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "omegascans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "8263744577511030659": {
       "id": 8263744577511030659,
       "kind": "engine",
@@ -27816,9 +27708,16 @@
       "nsfw": 0,
       "domain": "spiderscans.xyz",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "837385888220200875": {
       "id": 837385888220200875,
@@ -27901,21 +27800,16 @@
       "nsfw": 0,
       "domain": "rawdex.net",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
-    },
-    "8399921646016000819": {
-      "id": 8399921646016000819,
-      "kind": "catalogue",
-      "title": "EuphoriaScan",
-      "lang": "pt",
-      "nsfw": 0,
-      "domain": "euphoriascan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "8400532630224716727": {
       "id": 8400532630224716727,
@@ -27962,18 +27856,6 @@
         "detail": "curl: (6) Could not resolve host: villainessscan.xyz",
         "at": "2026-11-13T17:07:52Z"
       }
-    },
-    "845297677165041745": {
-      "id": 845297677165041745,
-      "kind": "catalogue",
-      "title": "ManhwaList.org",
-      "lang": "id",
-      "nsfw": 0,
-      "domain": "isekaikomik.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "845371345206609558": {
       "id": 845371345206609558,
@@ -28224,9 +28106,16 @@
       "nsfw": 0,
       "domain": "philiascans.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "8551885360868824886": {
       "id": 8551885360868824886,
@@ -28236,9 +28125,16 @@
       "nsfw": 0,
       "domain": "kenscans.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "8561514664425031852": {
       "id": 8561514664425031852,
@@ -28627,18 +28523,6 @@
         "at": "2026-11-15T11:49:53Z"
       },
       "device_step": "list"
-    },
-    "8722747601435132499": {
-      "id": 8722747601435132499,
-      "kind": "catalogue",
-      "title": "KomikTap",
-      "lang": "id",
-      "nsfw": 0,
-      "domain": "komiktap.info",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "8731195067661568398": {
       "id": 8731195067661568398,
@@ -29045,9 +28929,16 @@
       "nsfw": 0,
       "domain": "hivetoon.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T23:20:25Z"
+      }
     },
     "8862253965650556151": {
       "id": 8862253965650556151,
@@ -29564,30 +29455,6 @@
       ],
       "state": "unknown"
     },
-    "9212452232657097591": {
-      "id": 9212452232657097591,
-      "kind": "catalogue",
-      "title": "Seinagi Adulto",
-      "lang": "es",
-      "nsfw": 0,
-      "domain": "adulto.seinagi.org.es",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "9220284408987837345": {
-      "id": 9220284408987837345,
-      "kind": "catalogue",
-      "title": "DecadenceScans",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "reader.decadencescans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "925134491016928900": {
       "id": 925134491016928900,
       "kind": "engine",
@@ -29632,42 +29499,6 @@
         "detail": "curl: (6) Could not resolve host: pussy.sussytoons.com",
         "at": "2026-11-13T17:07:52Z"
       }
-    },
-    "939535656995890735": {
-      "id": 939535656995890735,
-      "kind": "catalogue",
-      "title": "ToomtamManga",
-      "lang": "th",
-      "nsfw": 0,
-      "domain": "toomtam-manga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "944153391978600072": {
-      "id": 944153391978600072,
-      "kind": "catalogue",
-      "title": "Hachirumi",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "hachirumi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "947646064643117123": {
-      "id": 947646064643117123,
-      "kind": "catalogue",
-      "title": "MiHentai",
-      "lang": "id",
-      "nsfw": 0,
-      "domain": "mihentai.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "955191849114859000": {
       "id": 955191849114859000,
