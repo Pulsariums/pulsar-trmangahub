@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T16:19:49Z",
+ "generated": "2026-11-15T16:56:36Z",
  "note": "id = Kotlin PulsarKotatsuSource/PulsarSource hash'inin Python kopyası; bakım bacası (07_maintain.py) MIHON_<id> -> kaynak eşlemesini bundan yapar.",
  "engine": [
   {
@@ -7875,7 +7875,7 @@
    "lang": "tr",
    "nsfw": 0,
    "broken": false,
-   "domain": "www.mangadenizi.net",
+   "domain": "mangadenizi.net",
    "file": "org/koitharu/kotatsu/parsers/site/mmrcms/tr/MangaDenizi.kt"
   },
   {
@@ -10999,7 +10999,7 @@
    "lang": "tr",
    "nsfw": 0,
    "broken": false,
-   "domain": "ruyamanga.net",
+   "domain": "ruyamanga2.com",
    "file": "org/koitharu/kotatsu/parsers/site/madara/tr/RuyaManga.kt"
   },
   {
@@ -14007,26 +14007,6 @@
    "engine": "custom"
   },
   {
-   "id": 7867639215423998477,
-   "kind": "catalogue",
-   "name": "AeroToon",
-   "title": "AeroToon",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "aerotoon.vercel.app",
-   "engine": "custom"
-  },
-  {
-   "id": 5691103369229392451,
-   "kind": "catalogue",
-   "name": "AesirScans",
-   "title": "AesirScans",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "aesirscans.site",
-   "engine": "custom"
-  },
-  {
    "id": 386746428516970468,
    "kind": "catalogue",
    "name": "Afrodit Scans",
@@ -14035,16 +14015,6 @@
    "nsfw": 0,
    "domain": "afroditscans.com",
    "engine": "mangareader"
-  },
-  {
-   "id": 7879917050068542150,
-   "kind": "catalogue",
-   "name": "Akuma",
-   "title": "Akuma",
-   "lang": "tr",
-   "nsfw": 1,
-   "domain": "akuma.moe",
-   "engine": "custom"
   },
   {
    "id": 891763215572096733,
@@ -14074,16 +14044,6 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "anikiga.com",
-   "engine": "madara"
-  },
-  {
-   "id": 7729253330722077638,
-   "kind": "catalogue",
-   "name": "Atikrost",
-   "title": "Atikrost",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "mangaoku.com.tr",
    "engine": "madara"
   },
   {
@@ -14157,16 +14117,6 @@
    "engine": "madara"
   },
   {
-   "id": 4506281207724429348,
-   "kind": "catalogue",
-   "name": "FaichiSubs",
-   "title": "FaichiSubs",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "faichisubs.com",
-   "engine": "custom"
-  },
-  {
    "id": 6309802498252370062,
    "kind": "catalogue",
    "name": "GhosToon",
@@ -14184,36 +14134,6 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "globalcomix.com",
-   "engine": "custom"
-  },
-  {
-   "id": 92575176704678943,
-   "kind": "catalogue",
-   "name": "Grimelek",
-   "title": "Grimelek",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "siyahmelek.fun",
-   "engine": "madara"
-  },
-  {
-   "id": 5467252222704958794,
-   "kind": "catalogue",
-   "name": "Hattori Manga",
-   "title": "Hattori Manga",
-   "lang": "tr",
-   "nsfw": 1,
-   "domain": "hattorimanga.net",
-   "engine": "custom"
-  },
-  {
-   "id": 3836174658242829107,
-   "kind": "catalogue",
-   "name": "HentaiHand",
-   "title": "HentaiHand",
-   "lang": "tr",
-   "nsfw": 1,
-   "domain": "hentaihand.com",
    "engine": "custom"
   },
   {
@@ -14244,16 +14164,6 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "kairatoon.net",
-   "engine": "custom"
-  },
-  {
-   "id": 810888572349731186,
-   "kind": "catalogue",
-   "name": "KazeScans",
-   "title": "KazeScans",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "kazescans.com",
    "engine": "custom"
   },
   {
@@ -14377,16 +14287,6 @@
    "engine": "initmanga"
   },
   {
-   "id": 4074397627490106536,
-   "kind": "catalogue",
-   "name": "Manga Multi",
-   "title": "Manga Multi",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "mangamulti.com",
-   "engine": "custom"
-  },
-  {
    "id": 9201850297206503205,
    "kind": "catalogue",
    "name": "Manga Oku, Webtoon Oku, Manhwa &",
@@ -14465,16 +14365,6 @@
    "nsfw": 0,
    "domain": "mangamac.com",
    "engine": "custom"
-  },
-  {
-   "id": 9079052620042273511,
-   "kind": "catalogue",
-   "name": "MangaOkusana",
-   "title": "MangaOkusana",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "mangaokusana.com",
-   "engine": "madara"
   },
   {
    "id": 6086089492503336323,
@@ -14597,16 +14487,6 @@
    "engine": "custom"
   },
   {
-   "id": 7612466596920302834,
-   "kind": "catalogue",
-   "name": "MyReadingManga",
-   "title": "MyReadingManga",
-   "lang": "tr",
-   "nsfw": 1,
-   "domain": "myreadingmanga.info",
-   "engine": "custom"
-  },
-  {
    "id": 3956326609690998038,
    "kind": "catalogue",
    "name": "NamiComi",
@@ -14614,16 +14494,6 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "namicomi.com",
-   "engine": "custom"
-  },
-  {
-   "id": 7805264871860163489,
-   "kind": "catalogue",
-   "name": "Nora Scans",
-   "title": "Nora Scans",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "norascans.com",
    "engine": "custom"
   },
   {
@@ -14767,16 +14637,6 @@
    "engine": "madara"
   },
   {
-   "id": 4465908249346083984,
-   "kind": "catalogue",
-   "name": "Siyah Melek",
-   "title": "Siyah Melek",
-   "lang": "tr",
-   "nsfw": 1,
-   "domain": "siyahmelek.my",
-   "engine": "initmanga"
-  },
-  {
    "id": 3239581495078724965,
    "kind": "catalogue",
    "name": "Slept Manga",
@@ -14804,16 +14664,6 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "sunsetscans.com.tr",
-   "engine": "custom"
-  },
-  {
-   "id": 1756885198721718190,
-   "kind": "catalogue",
-   "name": "Swarm",
-   "title": "Swarm",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "swarm.ws",
    "engine": "custom"
   },
   {
@@ -14964,26 +14814,6 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "manga.araznovel.com",
-   "engine": "custom"
-  },
-  {
-   "id": 1277136800927442574,
-   "kind": "catalogue",
-   "name": "nHentai.com (unoriginal)",
-   "title": "nHentai.com (unoriginal)",
-   "lang": "tr",
-   "nsfw": 1,
-   "domain": "nhentai.com",
-   "engine": "custom"
-  },
-  {
-   "id": 4884339601423547465,
-   "kind": "catalogue",
-   "name": "Ücra Çizgi Roman",
-   "title": "Ücra Çizgi Roman",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "ucracizgiroman.com",
    "engine": "custom"
   }
  ]

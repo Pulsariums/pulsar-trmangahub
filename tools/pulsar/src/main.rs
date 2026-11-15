@@ -6,6 +6,7 @@ use std::process::{Command, ExitCode};
 
 mod embed;
 mod health;
+mod listpath;
 mod probe;
 mod merge;
 mod quarantine;
@@ -405,6 +406,7 @@ fn main() -> ExitCode {
         (Some("quarantine"), _) => quarantine::run(&root, &args[1..]),
         (Some("embed"), _) => embed::run(&root, &args[1..]),
         (Some("probe"), _) => probe::run(&root, &args[1..]),
+        (Some("listpath"), _) => listpath::run(&root, &args[1..]),
         (Some("sweep"), _) => sweep::run(&root, &args[1..]),
         _ => {
             eprintln!("kullanım:");
