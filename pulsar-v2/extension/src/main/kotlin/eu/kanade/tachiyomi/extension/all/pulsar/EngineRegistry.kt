@@ -276,6 +276,7 @@ object EngineRegistry {
         baseUrl: String,
         allowPattern: String = "",
         containsMarker: String = "",
+        urlBase: String = "",
     ): List<String> {
         if (scriptSelector.isBlank() || (urlField.isBlank() && arrayName.isBlank())) {
             return emptyList()
@@ -291,7 +292,7 @@ object EngineRegistry {
                 val re = Regex(
                     "\"?${Regex.escape(urlField)}\"?\\s*:\\s*(?:\\\$R\\[\\d+\\]\\s*=\\s*)?\"([^\"]+)\"",
                 )
-                for (m in re.findAll(text)) addPageUrl(out, m.groupValues[1], allow)
+                for (m in re.findAll(text)) addPageUrl(out, m.groupValues[1], allow, urlBase)
             }
             if (arrayName.isNotEmpty()) {
                 // İki biçim var: düz JSON `"alan":[...]` ve Qwik durum dizisi
@@ -301,7 +302,7 @@ object EngineRegistry {
                 ).find(text)
                 if (head != null) {
                     for (m in Regex("\"([^\"]+)\"").findAll(head.groupValues[1])) {
-                        addPageUrl(out, m.groupValues[1], allow)
+                        addPageUrl(out, m.groupValues[1], allow, urlBase)
                     }
                 }
             }
@@ -312,9 +313,15 @@ object EngineRegistry {
 
     private val PAGE_URL_HINT = Regex("\\.(webp|jpg|jpeg|png|avif|gif)(\\?|$)", RegexOption.IGNORE_CASE)
 
-    private fun addPageUrl(out: MutableSet<String>, raw: String, allow: Regex? = null) {
-        val u = raw.trim().replace("\\/", "/")
-        if (u.length < 8) return
+    private fun addPageUrl(out: MutableSet<String>, raw: String, allow: Regex? = null, urlBase: String = "") {
+        val rawUrl = raw.trim().replace("\\/", "/")
+        if (rawUrl.length < 8) return
+        val u = when {
+            rawUrl.startsWith("http") -> rawUrl
+            urlBase.isBlank() -> rawUrl
+            rawUrl.startsWith("/") -> urlBase.trimEnd('/') + rawUrl
+            else -> urlBase.trimEnd('/') + "/" + rawUrl.trimStart('/')
+        }
         if (!u.startsWith("http") && !u.startsWith("/")) return
         val ok = PAGE_URL_HINT.containsMatchIn(u) || (allow != null && allow.containsMatchIn(u))
         if (!ok) return
@@ -503,6 +510,8 @@ object EngineRegistry {
         urlTemplate: String,
         series: String,
         baseUrl: String,
+        slugField: String = "slug",
+        numberField: String = "number",
     ): List<ParsedChapter> {
         if (scriptSelector.isBlank() || arrayName.isBlank() || urlTemplate.isBlank()) {
             return emptyList()
@@ -547,14 +556,15 @@ object EngineRegistry {
                 idx++
             }
             val region = text.substring(from, idx.coerceAtMost(text.length))
-            val slugs = Regex("\"?slug\"?\\s*:\\s*\"([^\"]+)\"").findAll(region)
+            val slugs = Regex("\"?${Regex.escape(slugField)}\"?\\s*:\\s*\"([^\"]+)\"").findAll(region)
                 .map { it.groupValues[1] }.toList()
-            val numbers = Regex("\"?number\"?\\s*:\\s*(?:\\\$R\\[\\d+\\]\\s*=\\s*)?(\\d+(?:\\.\\d+)?)")
-                .findAll(region).map { it.groupValues[1] }.toList()
+            val numbers = Regex(
+                "\"?${Regex.escape(numberField)}\"?\\s*:\\s*(?:\\\$R\\[\\d+\\]\\s*=\\s*)?(\\d+(?:\\.\\d+)?)",
+            ).findAll(region).map { it.groupValues[1] }.toList()
             for (i in slugs.indices) {
                 val slug = slugs[i]
                 val num = numbers.getOrNull(i)?.toFloatOrNull() ?: 0f
-                val url = urlTemplate.replace("{series}", series).replace("{slug}", slug)
+                val url = urlTemplate.replace("{series}", series).replace("{slug}", slug).replace("{number}", numText(num))
                 out.add(ParsedChapter(name = "Bölüm " + numText(num), url = url, chapterNumber = num, dateUpload = 0L))
             }
             if (out.isNotEmpty()) break

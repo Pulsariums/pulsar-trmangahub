@@ -410,6 +410,8 @@ class PulsarSource(
             config.optString("chapterUrlTemplate", ""),
             response.request.url.toString().trimEnd('/').substringAfterLast('/'),
             baseUrl,
+            config.optString("chapterJsonSlugField", "slug"),
+            config.optString("chapterJsonNumberField", "number"),
         )
         // Gömülü JSON'dan bölüm listesi varsa DOM sezgisinden üstündür: seçici boş
         // bırakıldığında parseChapters tek bir bağlantı bulup listeyi eksik bırakıyor
@@ -459,6 +461,7 @@ class PulsarSource(
             baseUrl,
             config.optString("pageUrlAllow", ""),
             config.optString("pageScriptContains", ""),
+            config.optString("pageUrlBase", ""),
         )
         // Bazı sitelerde DOM'daki <img> adresleri doğrudan çalışmıyor (Amanga: .link
         // origin'de 403). Site kendi okuyucusunda <script> içindedir ve proxy adresi
