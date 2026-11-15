@@ -187,7 +187,9 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
             .unwrap_or_default();
         s.sorun = sorun.clone();
         s.dead = dead.contains(&(e.domain.to_lowercase(), e.lang.to_lowercase()));
-        s.packages = packages_for(&e, &sorun, s.dead);
+        let dev_bad = matches!(s.device.as_ref().map(|p| p.status.as_str()), Some("fail") | Some("cloudflare"));
+        let pk_sorun: &str = if dev_bad && sorun.is_empty() { "cihaz" } else { sorun.as_str() };
+        s.packages = packages_for(&e, pk_sorun, s.dead);
         recompute_state(s);
     }
     // Katalogdan düşen id'ler yayın listesinde kalmasın.
@@ -223,10 +225,13 @@ pub fn record_device(root: &Path, device_path: &Path) -> Result<usize, String> {
     let mut file = ensure_all(root)?;
     let at = now();
     let mut merged = 0usize;
+    let full_run = value.get("total").and_then(|v| v.as_i64()).unwrap_or(0) >= 100;
+    let mut list_ids: Vec<String> = Vec::new();
     for item in list {
         let name = item.get("name").and_then(|v| v.as_str()).unwrap_or("");
         let id: Option<i64> = name.strip_prefix("MIHON_").and_then(|s| s.parse().ok());
         let Some(id) = id else { continue };
+    list_ids.push(id.to_string());
         let Some(entry) = file.sources.get_mut(&id.to_string()) else { continue };
         let status = item.get("status").and_then(|v| v.as_str()).unwrap_or("fail").to_string();
         // İlk DÜŞEN adım rapora yazılır. Sıra bilinçli: liste adımı kaynağın
@@ -245,7 +250,19 @@ pub fn record_device(root: &Path, device_path: &Path) -> Result<usize, String> {
         recompute_state(entry);
         merged += 1;
     }
+    // Tam testte yalniz dusenler listelenir; raporda olmayan kaynak gecmistir.
+    let seen_ids: std::collections::HashSet<String> = list_ids.into_iter().collect();
+    if full_run {
+        for (k, v) in file.sources.iter_mut() {
+            if v.device.is_some() && !seen_ids.contains(k) {
+                v.device = None;
+                v.device_step = None;
+                recompute_state(v);
+            }
+        }
+    }
     save(root, &file)?;
+    ensure_all(root)?;
     Ok(merged)
 }
 
