@@ -9,14 +9,13 @@ jobs:
           set +e
           UA='Mozilla/5.0 (Linux; Android 14) Chrome/124.0 Mobile Safari/537.36'
           B=https://api.lunarx.to/api/manga
-          curl -s -A "$UA" "$B/search?query=&page=1" | jq -r '.manga[0:8][].slug' > slugs.txt
-          while read s; do
-            curl -s -A "$UA" "$B/$s" > d.json
-            echo "== $s total=$(jq '.data|length' d.json) langs=$(jq -r '[.data[].language]|unique|join(",")' d.json)"
-            jq -r '.data[]|"\(.chapter)|\(.language)"' d.json | head -40 | while IFS='|' read c l; do
-              a=$(curl -s -A "$UA" -o /dev/null -w '%{http_code}' "$B/$s/$c?lang=tr")
-              b=$(curl -s -A "$UA" -o /dev/null -w '%{http_code}' "$B/$s/$c")
-              [ "$a" != 200 -o "$b" != 200 ] && echo "FAIL $s ch=$c lang=$l tr=$a plain=$b"
+          for s in what-we-shouldn-t the-cliff weak-hero; do
+            img=$(curl -s -A "$UA" "$B/$s/1" | jq -r '.data.images[0]')
+            echo "IMG $s $img"
+            for ref in "" "https://lunarx.to/" "https://www.lunarx.to/" "https://lunarx.to/manga/$s/1"; do
+              c=$(curl -s -A "$UA" ${ref:+-e "$ref"} -o /dev/null -w '%{http_code}' "$img")
+              o=$(curl -s -A "$UA" ${ref:+-H "Origin: https://lunarx.to"} ${ref:+-e "$ref"} -o /dev/null -w '%{http_code}' "$img")
+              echo "RES ref=[$ref] noOrigin=$c origin=$o"
             done
-          done < slugs.txt
+          done
           echo done
