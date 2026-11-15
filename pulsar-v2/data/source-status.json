@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15T20:56:04Z",
+  "generated": "2026-11-15T22:10:51Z",
   "sources": {
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -320,9 +320,9 @@
       "nsfw": 1,
       "domain": "kuroimanga.site",
       "packages": [
-        "test"
+        "tr18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -331,13 +331,12 @@
         "at": "2026-11-13T19:01:05Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "1256178622669487949": {
       "id": 1256178622669487949,
@@ -685,9 +684,9 @@
       "nsfw": 1,
       "domain": "cocomic.co",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -696,13 +695,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "1376621810110674001": {
       "id": 1376621810110674001,
@@ -1360,9 +1358,9 @@
       "nsfw": 1,
       "domain": "manga18.club",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1371,13 +1369,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "list"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "1376874560887473279": {
       "id": 1376874560887473279,
@@ -2368,9 +2365,9 @@
       "nsfw": 0,
       "domain": "toonily.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2379,13 +2376,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "cloudflare",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "1377071612709576671": {
       "id": 1377071612709576671,
@@ -3963,9 +3959,9 @@
       "nsfw": 0,
       "domain": "xoxocomic.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3974,13 +3970,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "1956357450137632728": {
       "id": 1956357450137632728,
@@ -4319,9 +4314,9 @@
       "nsfw": 1,
       "domain": "mundohentaioficial.com",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4330,13 +4325,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "2121016891599622380": {
       "id": 2121016891599622380,
@@ -7297,9 +7291,9 @@
       "nsfw": 1,
       "domain": "hentaitokyo.net",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7308,13 +7302,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "2586288572012258029": {
       "id": 2586288572012258029,
@@ -8442,9 +8435,9 @@
       "nsfw": 0,
       "domain": "mundomanhwa.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8453,13 +8446,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "3207069200167402538": {
       "id": 3207069200167402538,
@@ -9039,9 +9031,9 @@
       "nsfw": 1,
       "domain": "sektedoujin.cc",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9050,13 +9042,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "covers"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "3626292428546573843": {
       "id": 3626292428546573843,
@@ -12312,9 +12303,9 @@
       "nsfw": 0,
       "domain": "isekaikomik.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12323,13 +12314,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "4194885141861315317": {
       "id": 4194885141861315317,
@@ -12435,9 +12425,9 @@
       "nsfw": 0,
       "domain": "mangalami.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12446,13 +12436,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "4211842445398485707": {
       "id": 4211842445398485707,
@@ -12724,9 +12713,9 @@
       "nsfw": 1,
       "domain": "madaradex.org",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12735,13 +12724,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "cloudflare",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "4234251741855210585": {
       "id": 4234251741855210585,
@@ -13460,9 +13448,16 @@
       "nsfw": 0,
       "domain": "meshmanga.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "4234251773430989509": {
       "id": 4234251773430989509,
@@ -14906,9 +14901,16 @@
       "nsfw": 0,
       "domain": "id.shinigami.asia",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "4392317208522402154": {
       "id": 4392317208522402154,
@@ -16034,9 +16036,9 @@
       "nsfw": 1,
       "domain": "toomtam-manga.com",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16045,13 +16047,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "covers"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "4635719333346734367": {
       "id": 4635719333346734367,
@@ -18777,9 +18778,9 @@
       "nsfw": 1,
       "domain": "mangazin.org",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18788,13 +18789,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "5789623240583472034": {
       "id": 5789623240583472034,
@@ -19215,9 +19215,9 @@
       "nsfw": 0,
       "domain": "mangazin.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19226,13 +19226,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "5789623268605899408": {
       "id": 5789623268605899408,
@@ -19735,9 +19734,9 @@
       "nsfw": 0,
       "domain": "nyxscans.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19746,13 +19745,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "details"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "5791654679194078693": {
       "id": 5791654679194078693,
@@ -20177,9 +20175,9 @@
       "nsfw": 0,
       "domain": "tritinia.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20188,13 +20186,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "search: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "search"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "5795816581519710978": {
       "id": 5795816581519710978,
@@ -21313,9 +21310,16 @@
       "nsfw": 0,
       "domain": "scantrad-union.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "6059324491134420586": {
       "id": 6059324491134420586,
@@ -21817,9 +21821,16 @@
       "nsfw": 0,
       "domain": "ghostoon.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "6311269189769404898": {
       "id": 6311269189769404898,
@@ -24836,9 +24847,16 @@
       "nsfw": 0,
       "domain": "olympustaff.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "7741050935128793386": {
       "id": 7741050935128793386,
@@ -25988,15 +26006,22 @@
       "nsfw": 0,
       "domain": "mangadiyari.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "http404",
         "http_code": "404",
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
       }
     },
     "8244651774479139223": {
@@ -26331,9 +26356,9 @@
       "nsfw": 1,
       "domain": "adulto.seinagi.org.es",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26342,13 +26367,12 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-15T11:49:53Z"
-      },
-      "device_step": "covers"
+        "detail": "",
+        "at": "2026-11-15T22:10:51Z"
+      }
     },
     "8465684427768516806": {
       "id": 8465684427768516806,
