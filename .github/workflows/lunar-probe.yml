@@ -8,20 +8,12 @@ jobs:
       - run: |
           set +e
           UA='Mozilla/5.0 (Linux; Android 14) Chrome/124.0 Mobile Safari/537.36'
-          B=https://api.lunarx.to/api/manga
-          s=the-cliff
-          echo "RES keys: $(curl -s -A "$UA" "$B/$s/1" | jq -c '.data|del(.images)|keys')"
-          echo "RES chapter-obj: $(curl -s -A "$UA" "$B/$s/1" | jq -c '.data|del(.images)' | cut -c1-600)"
-          echo "RES list0: $(curl -s -A "$UA" "$B/$s" | jq -c '.data[0]|del(.uploader_profile)' | cut -c1-700)"
-          for u in "https://lunarx.to/manga/$s/1" "https://lunarx.to/manga/$s/1?lang=en"; do
-            curl -s -L -A "$UA" "$u" -o p.html -w "RES page $u %{http_code}\n"
-            echo "RES vault-urls: $(grep -oE 'https://[a-z.]*lunarx\.to/[^"\\ ]+\.(jpg|jpeg|png|webp|avif)' p.html | sort -u | head -5 | tr '\n' ' ')"
-            echo "RES scripts: $(grep -oE '/_next/static/chunks/[^"]+' p.html | head -3 | tr '\n' ' ')"
-          done
-          for p in "$B/$s/1/pages" "$B/$s/1/images" "https://api.lunarx.to/api/chapter/$s/1" "$B/$s/1?lang=en&format=pages"; do
-            echo "RES $p -> $(curl -s -A "$UA" -o /tmp/x -w '%{http_code}' "$p") $(head -c 200 /tmp/x | tr '\n' ' ')"
-          done
-          for ext in jpg webp png avif jpeg; do
-            echo "RES ext $ext: $(curl -s -A "$UA" -e https://lunarx.to/ -o /dev/null -w '%{http_code}' "https://vault.lunarx.to/cdn/admin/manga/$s/1/en/page_1.$ext")"
+          curl -s -L -A "$UA" https://lunarx.to/manga/the-cliff/1 -o p.html
+          for c in $(grep -oE '/_next/static/chunks/[A-Za-z0-9_.~-]+\.js' p.html | sort -u); do
+            curl -s -A "$UA" "https://lunarx.to$c" -o c.js
+            if grep -q 'session_data' c.js; then
+              echo "RES chunk $c"
+              grep -oE '.{250}session_data.{350}' c.js | head -4 | sed 's/^/RES ctx: /'
+            fi
           done
           echo "RES done"
