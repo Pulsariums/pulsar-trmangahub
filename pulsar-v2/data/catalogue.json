@@ -1102,7 +1102,7 @@
     "engine": "custom",
     "listPath": "/browse/comics",
     "itemSelector": "a[href^=\"/c/\"]",
-    "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
+    "chapterSelector": "a[data-testid=\"series-release-cover\"]",
     "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
    },
    "verified_by_user": false,

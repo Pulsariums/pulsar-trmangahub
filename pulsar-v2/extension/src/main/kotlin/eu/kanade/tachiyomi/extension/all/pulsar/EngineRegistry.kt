@@ -194,7 +194,10 @@ object EngineRegistry {
 
     fun parseChapters(doc: Document, selector: String, baseUrl: String): List<ParsedChapter> {
         val sel = selector.ifBlank { "div.chapter-item, li.wp-manga-chapter, div.eph-num, ul.clstyle li" }
-        val chapterRegex = Regex("""(?:bolum|chapter|ch\.?|ep\.?)\s*[:#\-]?\s*(\d+(?:\.\d+)?)""", RegexOption.IGNORE_CASE)
+        val chapterRegex = Regex(
+            """(?:bolum|chapter|ch\.?|ep\.?)\s*[:#\-]?\s*(\d+(?:\.\d+)?)|#\s*(\d+(?:\.\d+)?)""",
+            RegexOption.IGNORE_CASE,
+        )
 
         val items = doc.select(sel).mapIndexedNotNull { index, el ->
             runCatching {
@@ -208,9 +211,13 @@ object EngineRegistry {
                 linkEl ?: return@runCatching null
                 val rawUrl = linkEl.attr("href")
                 val fullUrl = if (rawUrl.startsWith("http")) rawUrl else "$baseUrl/${rawUrl.trimStart('/')}"
-                val name = linkEl.text().ifBlank { el.text() }.trim()
+                // Kart bağlantılarında metin boş olabiliyor; ad aria-label/title'da durur.
+                val name = linkEl.text().ifBlank { linkEl.attr("aria-label") }
+                    .ifBlank { linkEl.attr("title") }.ifBlank { el.text() }.trim()
 
-                val num = chapterRegex.find(name)?.groupValues?.getOrNull(1)?.toFloatOrNull()
+                val match = chapterRegex.find(name)
+                val num = (match?.groupValues?.getOrNull(1)?.takeIf { it.isNotBlank() }
+                    ?: match?.groupValues?.getOrNull(2))?.toFloatOrNull()
                     ?: (index + 1).toFloat()
 
                 ParsedChapter(name = name, url = fullUrl, chapterNumber = num, dateUpload = 0L)
