@@ -1,0 +1,36 @@
+name: '6) Cihaz sonucunu isle'
+
+# pulsar-v2/data/device-fails.tsv ("id durum adim" satirlari, tam test = yalniz dusenler)
+# -> source-status.json: dusenler tamir paketine, gecenler ana pakete doner.
+on:
+  workflow_dispatch:
+    inputs:
+      toplam:
+        description: 'Cihaz testindeki toplam kaynak sayisi (tam test: >=100)'
+        type: string
+        default: '530'
+
+permissions:
+  contents: write
+
+jobs:
+  isle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo build --release --manifest-path tools/pulsar/Cargo.toml
+      - name: Isle
+        env:
+          TOPLAM: ${{ inputs.toplam }}
+        run: |
+          set -e
+          jq -R -s --argjson t "$TOPLAM" '{total:$t, sources:(split("\n")|map(select(length>0)|split(" ")|{name:("MIHON_"+.[0]),status:.[1],steps:{(.[2]):{status:.[1],message:""}}}))}' pulsar-v2/data/device-fails.tsv > /tmp/device.json
+          jq '.sources|length' /tmp/device.json
+          ./tools/pulsar/target/release/pulsar status --device /tmp/device.json
+          jq -r '[.sources[]|.packages[0]//"-"]|group_by(.)|map("\(.[0]) \(length)")|.[]' pulsar-v2/data/source-status.json
+          git config user.name pulsarium
+          git config user.email pulsariums@gmail.com
+          git add pulsar-v2/data/source-status.json
+          git diff --cached --quiet && { echo 'degisiklik yok'; exit 0; }
+          git commit -qm "data(status): build 55 cihaz sonucu islendi; dusenler tamir paketinde"
+          git pull -q --rebase origin main && git push -q origin main
