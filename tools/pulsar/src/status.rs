@@ -61,7 +61,7 @@ pub struct StatusEntry {
     /// "list" düşerse kaynak tamamen ölü; sonraki adımlar kısmi arıza demektir.
     #[serde(default, skip_serializing_if = "Option::is_none")] pub device_step: Option<String>,
     #[serde(default, skip_serializing_if = "String::is_empty")] pub note: String,
-    /// Sorun türü ("cloudflare"/"login"). Dolu ise kaynak `*_sorunlu` paketine ayrılır.
+    /// Sorun türü ("cloudflare"/"login"). Dolu ise kaynak "test" paketinde kalır (etiket silinmez).
     #[serde(default, skip_serializing_if = "String::is_empty")] pub sorun: String,
     /// Kesin ölü (park sayfası, NXDOMAIN, satılık). Hiçbir pakete girmez.
     #[serde(default, skip_serializing_if = "std::ops::Not::not")] pub dead: bool,
@@ -73,47 +73,43 @@ pub struct StatusFile {
     pub sources: BTreeMap<String, StatusEntry>,
 }
 
-pub fn packages_for(e: &SourceEntry, sorun: &str, dead: bool) -> Vec<String> {
-    if dead {
+/// Paket kuralı: ana gruba (tr/tr18/global/global18) YALNIZ cihaz testinde geçen
+/// (state active) ve "sorun" etiketi olmayan kaynak girer. Kesin ölü hiçbir pakete
+/// girmez; geri kalan her şey (pending, unknown, cihazda düşen, sorun etiketli)
+/// "test" paketindedir. Sağlık taraması tek başına ne ana gruba sokar ne dışlar.
+pub fn packages_for(e: &StatusEntry) -> Vec<String> {
+    if e.dead {
         return Vec::new();
     }
-    let tr = e.lang == "tr";
-    let nsfw = e.nsfw == 1;
-    let sorunlu = !sorun.is_empty();
-    let base = match (tr, nsfw) {
+    if e.state != "active" || !e.sorun.is_empty() {
+        return vec!["test".to_string()];
+    }
+    let base = match (e.lang == "tr", e.nsfw == 1) {
         (true, false) => "tr",
         (true, true) => "tr18",
         (false, false) => "global",
         (false, true) => "global18",
     };
-    vec![if sorunlu { format!("{base}_sorunlu") } else { base.to_string() }]
+    vec![base.to_string()]
 }
 
+/// Durumu yeniden hesaplar ve paketi buna göre atar. "active" yalnız cihaz "pass"
+/// ile olur; sağlık sonucu (GitHub sunucusundan, canlı siteleri yanlışlıkla
+/// "empty" sayabilir) durumu yalnız pending/unknown arasında ayırır.
 pub fn recompute_state(e: &mut StatusEntry) {
-    if e.dead {
-        e.state = "dead".to_string();
-        return;
-    }
     let device = e.device.as_ref().map(|p| p.status.as_str()).unwrap_or("");
     let health = e.health.as_ref().map(|p| p.status.as_str()).unwrap_or("");
-    let step = e.device_step.as_deref().unwrap_or("");
-    if device == "pass" {
-        e.state = "active".to_string();
-        return;
-    }
-    // Cihazda liste adımı düşerse kaynak uygulamada hiç açılmıyor: tek kesin ölüm kanıtı.
-    // Sonraki adımların (details/chapters/covers/pages/search) düşmesi kaynağın
-    // listelendiğini ama bir alt adımının bozuk olduğunu gösterir; kaynak yayında kalır.
-    let list_dead = (device == "fail" || device == "cloudflare") && (step == "list" || step.is_empty());
-    e.state = if list_dead {
-        "pending".to_string()
-    } else if health == "ok" {
-        "active".to_string()
-    } else if health.is_empty() {
-        "unknown".to_string()
+    e.state = if e.dead {
+        "dead"
+    } else if device == "pass" {
+        "active"
+    } else if device.is_empty() && health.is_empty() {
+        "unknown"
     } else {
-        "pending".to_string()
-    };
+        "pending"
+    }
+    .to_string();
+    e.packages = packages_for(e);
 }
 
 fn load(root: &Path) -> StatusFile {
@@ -185,22 +181,13 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
         // Sınıflama yalnız elle işarete bağlıdır. Cihaz raporu yalnızca düşen
         // kaynakları listeler; geçen kaynağın eski etiketi güncellenmediği için
         // cihazdan türetilen "sorun" bayat kalıyordu. Cihaz verisi saklanır.
-        let sorun = manual
+        let sorun: String = manual
             .get(&(e.domain.to_lowercase(), e.lang.to_lowercase()))
             .cloned()
             .unwrap_or_default();
-        s.sorun = sorun.clone();
+        s.sorun = sorun;
         s.dead = dead.contains(&(e.domain.to_lowercase(), e.lang.to_lowercase()));
-        let dev_bad = matches!(s.device.as_ref().map(|p| p.status.as_str()), Some("fail") | Some("cloudflare"));
-        let pk_sorun: &str = if dev_bad && sorun.is_empty() { "cihaz" } else { sorun.as_str() };
-        s.packages = packages_for(&e, pk_sorun, s.dead);
-        if dev_bad && sorun.is_empty() && !s.dead {
-            s.packages = vec!["tamir".to_string()];
-        }
         recompute_state(s);
-        if !s.dead && sorun.is_empty() && s.state != "active" {
-            s.packages = vec!["tamir".to_string()];
-        }
     }
     // Katalogdan düşen id'ler yayın listesinde kalmasın.
     file.sources.retain(|k, _| seen.contains(k));
@@ -236,12 +223,12 @@ pub fn record_device(root: &Path, device_path: &Path) -> Result<usize, String> {
     let at = now();
     let mut merged = 0usize;
     let full_run = value.get("total").and_then(|v| v.as_i64()).unwrap_or(0) >= 100;
-    let mut list_ids: Vec<String> = Vec::new();
+    let mut seen_ids: std::collections::HashSet<String> = std::collections::HashSet::new();
     for item in list {
         let name = item.get("name").and_then(|v| v.as_str()).unwrap_or("");
         let id: Option<i64> = name.strip_prefix("MIHON_").and_then(|s| s.parse().ok());
         let Some(id) = id else { continue };
-    list_ids.push(id.to_string());
+        seen_ids.insert(id.to_string());
         let Some(entry) = file.sources.get_mut(&id.to_string()) else { continue };
         let status = item.get("status").and_then(|v| v.as_str()).unwrap_or("fail").to_string();
         // İlk DÜŞEN adım rapora yazılır. Sıra bilinçli: liste adımı kaynağın
@@ -261,15 +248,10 @@ pub fn record_device(root: &Path, device_path: &Path) -> Result<usize, String> {
         merged += 1;
     }
     // Tam testte yalniz dusenler listelenir; raporda olmayan kaynak gecmistir.
-    let seen_ids: std::collections::HashSet<String> = list_ids.into_iter().collect();
     if full_run {
         for (k, v) in file.sources.iter_mut() {
-            if !seen_ids.contains(k) && (v.device.is_some() || !v.packages.is_empty()) {
-                v.device = if v.packages.is_empty() {
-                    None
-                } else {
-                    Some(Probe { status: "pass".to_string(), http_code: String::new(), ms: 0, detail: String::new(), at: at.clone() })
-                };
+            if !seen_ids.contains(k) && !v.dead {
+                v.device = Some(Probe { status: "pass".to_string(), http_code: String::new(), ms: 0, detail: String::new(), at: at.clone() });
                 v.device_step = None;
                 recompute_state(v);
             }

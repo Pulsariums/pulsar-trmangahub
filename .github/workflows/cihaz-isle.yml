@@ -1,7 +1,7 @@
 name: '6) Cihaz sonucunu isle'
 
 # pulsar-v2/data/device-fails.tsv ("id<TAB>durum<TAB>adim" satirlari, tam test = yalniz dusenler)
-# -> source-status.json: dusenler tamir paketine, gecenler ana pakete doner.
+# -> source-status.json: gecenler ana pakete, digerleri test paketine.
 on:
   workflow_dispatch:
     inputs:
@@ -32,5 +32,5 @@ jobs:
           git config user.email pulsariums@gmail.com
           git add pulsar-v2/data/source-status.json
           git diff --cached --quiet && { echo 'degisiklik yok'; exit 0; }
-          git commit -qm "data(status): build 55 cihaz sonucu islendi; dusenler tamir paketinde"
+          git commit -qm "data(status): build 55 cihaz sonucu islendi; dusenler test paketinde"
           git pull -q --rebase origin main && git push -q origin main
