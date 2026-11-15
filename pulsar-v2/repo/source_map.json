@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T16:56:36Z",
+ "generated": "2026-11-15T17:55:34Z",
  "note": "id = Kotlin PulsarKotatsuSource/PulsarSource hash'inin Python kopyası; bakım bacası (07_maintain.py) MIHON_<id> -> kaynak eşlemesini bundan yapar.",
  "engine": [
   {
@@ -7875,7 +7875,7 @@
    "lang": "tr",
    "nsfw": 0,
    "broken": false,
-   "domain": "mangadenizi.net",
+   "domain": "www.mangadenizi.net",
    "file": "org/koitharu/kotatsu/parsers/site/mmrcms/tr/MangaDenizi.kt"
   },
   {
@@ -10999,7 +10999,7 @@
    "lang": "tr",
    "nsfw": 0,
    "broken": false,
-   "domain": "ruyamanga2.com",
+   "domain": "ruyamanga.net",
    "file": "org/koitharu/kotatsu/parsers/site/madara/tr/RuyaManga.kt"
   },
   {
@@ -14107,16 +14107,6 @@
    "engine": "custom"
   },
   {
-   "id": 6002108884704424154,
-   "kind": "catalogue",
-   "name": "EsoManga",
-   "title": "EsoManga",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "esomanga.com",
-   "engine": "madara"
-  },
-  {
    "id": 6309802498252370062,
    "kind": "catalogue",
    "name": "GhosToon",
@@ -14317,16 +14307,6 @@
    "engine": "madara"
   },
   {
-   "id": 4063807738471358855,
-   "kind": "catalogue",
-   "name": "MangaDex",
-   "title": "MangaDex",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "mangadex.org",
-   "engine": "custom"
-  },
-  {
    "id": 4063816157291029180,
    "kind": "catalogue",
    "name": "MangaDot",
@@ -14385,26 +14365,6 @@
    "nsfw": 0,
    "domain": "mangaruhu.net",
    "engine": "madara"
-  },
-  {
-   "id": 2493276940576347494,
-   "kind": "catalogue",
-   "name": "MangaSiginagi",
-   "title": "MangaSiginagi",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "mangasiginagi.com",
-   "engine": "mangareader"
-  },
-  {
-   "id": 4063784710373100307,
-   "kind": "catalogue",
-   "name": "MangaciX",
-   "title": "MangaciX",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "mangacix.net",
-   "engine": "mangareader"
   },
   {
    "id": 6560643256604346821,
@@ -14487,16 +14447,6 @@
    "engine": "custom"
   },
   {
-   "id": 3956326609690998038,
-   "kind": "catalogue",
-   "name": "NamiComi",
-   "title": "NamiComi",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "namicomi.com",
-   "engine": "custom"
-  },
-  {
    "id": 4231843737385138446,
    "kind": "catalogue",
    "name": "NoxScans",
@@ -14514,16 +14464,6 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "nyxscans.com",
-   "engine": "mangareader"
-  },
-  {
-   "id": 8445880885282775398,
-   "kind": "catalogue",
-   "name": "NyxManga",
-   "title": "NyxManga",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "nyxmanga.com",
    "engine": "mangareader"
   },
   {
@@ -14597,16 +14537,6 @@
    "engine": "custom"
   },
   {
-   "id": 8119700570236890181,
-   "kind": "catalogue",
-   "name": "PiedpiperFansub",
-   "title": "PiedpiperFansub",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "ww17.piedpiperfansub.me",
-   "engine": "madara"
-  },
-  {
    "id": 6279075557994312388,
    "kind": "catalogue",
    "name": "RavenScans",
@@ -14647,16 +14577,6 @@
    "engine": "custom"
   },
   {
-   "id": 7591424560280249953,
-   "kind": "catalogue",
-   "name": "SummerToon",
-   "title": "SummerToon",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "summertoons.net",
-   "engine": "mangathemesia"
-  },
-  {
    "id": 7276031357538379431,
    "kind": "catalogue",
    "name": "Sunset Manga",
@@ -14684,16 +14604,6 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "tenshimanga.com",
-   "engine": "custom"
-  },
-  {
-   "id": 784503247292697283,
-   "kind": "catalogue",
-   "name": "ToonHane",
-   "title": "ToonHane",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "toonhane.com",
    "engine": "custom"
   },
   {

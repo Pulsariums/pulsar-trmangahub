@@ -1,7 +1,7 @@
 {
  "schema_version": 2,
  "generated_at": "2026-10-16T10:45:41Z",
- "total_count": 119,
+ "total_count": 110,
  "languages": [
   "tr"
  ],
@@ -386,33 +386,6 @@
    "origins": [
     "keiyoushi_index",
     "local_tr"
-   ]
-  },
-  {
-   "id": "mangacix.net",
-   "name": "MangaciX",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "mangacix.net",
-   "baseUrl": "https://mangacix.net",
-   "engine": "mangareader",
-   "config": {
-    "pageSize": 20,
-    "searchPageSize": 10,
-    "capabilities": {
-     "tagsExclusion": true
-    },
-    "engine": "mangareader",
-    "listPath": "/manga",
-    "itemSelector": "div.bsx",
-    "chapterSelector": "div.eph-num a",
-    "readerSelector": "div#readerarea img"
-   },
-   "verified_by_user": true,
-   "origins": [
-    "keiyoushi_index",
-    "local_tr",
-    "nyora_datadriven"
    ]
   },
   {
@@ -1103,30 +1076,6 @@
    ]
   },
   {
-   "id": "esomanga.com",
-   "name": "EsoManga",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "esomanga.com",
-   "baseUrl": "https://esomanga.com",
-   "engine": "madara",
-   "config": {
-    "postReq": true,
-    "datePattern": "dd/MM/yyyy",
-    "tagPrefix": "manga-kategoriler/",
-    "engine": "madara",
-    "listPath": "/manga",
-    "itemSelector": "div.page-item-detail, div.manga",
-    "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-    "readerSelector": "div.page-break img, div.reading-content img"
-   },
-   "verified_by_user": false,
-   "origins": [
-    "local_tr",
-    "nyora_datadriven"
-   ]
-  },
-  {
    "id": "garciamanga.com",
    "name": "GarciaManga",
    "lang": "tr",
@@ -1168,7 +1117,8 @@
    "verified_by_user": false,
    "origins": [
     "keiyoushi_index"
-   ]
+   ],
+   "sorun": "oturum"
   },
   {
    "id": "hoifansub.com",
@@ -1392,26 +1342,6 @@
    ]
   },
   {
-   "id": "3846770256925560569",
-   "name": "MangaDex",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "mangadex.org",
-   "baseUrl": "https://mangadex.org",
-   "engine": "custom",
-   "config": {
-    "engine": "custom",
-    "listPath": "/manga",
-    "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-    "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-    "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-   },
-   "verified_by_user": false,
-   "origins": [
-    "keiyoushi_index"
-   ]
-  },
-  {
    "id": "5964430973280552505",
    "name": "MangaDot",
    "lang": "tr",
@@ -1550,29 +1480,6 @@
    "sorun": "login"
   },
   {
-   "id": "mangasiginagi.com",
-   "name": "MangaSiginagi",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "mangasiginagi.com",
-   "baseUrl": "https://mangasiginagi.com",
-   "engine": "mangareader",
-   "config": {
-    "pageSize": 20,
-    "searchPageSize": 10,
-    "engine": "mangareader",
-    "listPath": "/manga",
-    "itemSelector": "div.bsx",
-    "chapterSelector": "div.eph-num a",
-    "readerSelector": "div#readerarea img"
-   },
-   "verified_by_user": false,
-   "origins": [
-    "local_tr",
-    "nyora_datadriven"
-   ]
-  },
-  {
    "id": "millascan.com",
    "name": "MilaSub",
    "lang": "tr",
@@ -1616,26 +1523,6 @@
    "origins": [
     "local_tr",
     "nyora_datadriven"
-   ]
-  },
-  {
-   "id": "1404231504220588104",
-   "name": "NamiComi",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "namicomi.com",
-   "baseUrl": "https://namicomi.com",
-   "engine": "custom",
-   "config": {
-    "engine": "custom",
-    "listPath": "/manga",
-    "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-    "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-    "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-   },
-   "verified_by_user": false,
-   "origins": [
-    "keiyoushi_index"
    ]
   },
   {
@@ -1716,26 +1603,6 @@
     "local_custom",
     "local_tr",
     "nyora_datadriven"
-   ]
-  },
-  {
-   "id": "nyxmanga.com",
-   "name": "NyxManga",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "nyxmanga.com",
-   "baseUrl": "https://nyxmanga.com",
-   "engine": "mangareader",
-   "config": {
-    "engine": "mangareader",
-    "listPath": "/manga",
-    "itemSelector": "div.bsx",
-    "chapterSelector": "div.eph-num a",
-    "readerSelector": "div#readerarea img"
-   },
-   "verified_by_user": false,
-   "origins": [
-    "local_tr"
    ]
   },
   {
@@ -1826,28 +1693,6 @@
     "keiyoushi_index",
     "local_custom",
     "local_tr"
-   ]
-  },
-  {
-   "id": "piedpiperfansub.me",
-   "name": "PiedpiperFansub",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "ww17.piedpiperfansub.me",
-   "baseUrl": "https://ww17.piedpiperfansub.me",
-   "engine": "madara",
-   "config": {
-    "datePattern": "d MMMM yyyy",
-    "engine": "madara",
-    "listPath": "/manga",
-    "itemSelector": "div.page-item-detail, div.manga",
-    "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-    "readerSelector": "div.page-break img, div.reading-content img"
-   },
-   "verified_by_user": false,
-   "origins": [
-    "local_tr",
-    "nyora_datadriven"
    ]
   },
   {
@@ -2017,33 +1862,6 @@
    ]
   },
   {
-   "id": "summertoons.net",
-   "name": "SummerToon",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "summertoons.net",
-   "baseUrl": "https://summertoons.net",
-   "engine": "mangathemesia",
-   "config": {
-    "pageSize": 10,
-    "searchPageSize": 10,
-    "capabilities": {
-     "tagsExclusion": false
-    },
-    "engine": "mangathemesia",
-    "listPath": "/manga",
-    "itemSelector": "div.bsx",
-    "chapterSelector": "div.eph-num, li.wp-manga-chapter",
-    "readerSelector": "div#readerarea img"
-   },
-   "verified_by_user": false,
-   "origins": [
-    "keiyoushi_index",
-    "local_tr",
-    "nyora_datadriven"
-   ]
-  },
-  {
    "id": "sunsetmanga.com",
    "name": "Sunset Manga",
    "lang": "tr",
@@ -2138,27 +1956,6 @@
     "keiyoushi_index",
     "local_tr",
     "nyora_datadriven"
-   ]
-  },
-  {
-   "id": "toonhane.com",
-   "name": "ToonHane",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "toonhane.com",
-   "baseUrl": "https://toonhane.com",
-   "engine": "custom",
-   "config": {
-    "engine": "custom",
-    "listPath": "/manga",
-    "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-    "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-    "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
-   },
-   "verified_by_user": false,
-   "origins": [
-    "local_custom",
-    "local_tr"
    ]
   },
   {
@@ -2348,7 +2145,7 @@
    "engine": "mangareader",
    "config": {
     "engine": "mangareader",
-    "listPath": "/manga",
+    "listPath": "/seri",
     "itemSelector": "div.bsx",
     "chapterSelector": "div.eph-num a",
     "readerSelector": "div#readerarea img"

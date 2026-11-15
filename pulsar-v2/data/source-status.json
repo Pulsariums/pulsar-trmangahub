@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15T16:56:36Z",
+  "generated": "2026-11-15T17:55:35Z",
   "sources": {
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -7086,25 +7086,6 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
-    "2493276940576347494": {
-      "id": 2493276940576347494,
-      "kind": "catalogue",
-      "title": "MangaSiginagi",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangasiginagi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "empty",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      }
-    },
     "2498280634065554519": {
       "id": 2498280634065554519,
       "kind": "engine",
@@ -10174,7 +10155,7 @@
       "title": "MangaDenizi",
       "lang": "tr",
       "nsfw": 0,
-      "domain": "mangadenizi.net",
+      "domain": "www.mangadenizi.net",
       "packages": [
         "test"
       ],
@@ -10937,25 +10918,6 @@
         "at": "2026-11-15T11:49:53Z"
       }
     },
-    "3956326609690998038": {
-      "id": 3956326609690998038,
-      "kind": "catalogue",
-      "title": "NamiComi",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "namicomi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "empty",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      }
-    },
     "3957800042269399520": {
       "id": 3957800042269399520,
       "kind": "engine",
@@ -11632,44 +11594,6 @@
         "ms": 15046,
         "detail": "curl: (28) Connection timed out after 15015 milliseconds",
         "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "4063784710373100307": {
-      "id": 4063784710373100307,
-      "kind": "catalogue",
-      "title": "MangaciX",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangacix.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "empty",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      }
-    },
-    "4063807738471358855": {
-      "id": 4063807738471358855,
-      "kind": "catalogue",
-      "title": "MangaDex",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangadex.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "empty",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
       }
     },
     "4063816157291029180": {
@@ -14799,7 +14723,7 @@
       "title": "RuyaManga",
       "lang": "tr",
       "nsfw": 0,
-      "domain": "ruyamanga2.com",
+      "domain": "ruyamanga.net",
       "packages": [
         "test"
       ],
@@ -21407,25 +21331,6 @@
       ],
       "state": "unknown"
     },
-    "6002108884704424154": {
-      "id": 6002108884704424154,
-      "kind": "catalogue",
-      "title": "EsoManga",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "esomanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "empty",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      }
-    },
     "6050296713552241791": {
       "id": 6050296713552241791,
       "kind": "engine",
@@ -22911,7 +22816,8 @@
         "ms": 0,
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
-      }
+      },
+      "sorun": "oturum"
     },
     "6654923665789802916": {
       "id": 6654923665789802916,
@@ -24760,25 +24666,6 @@
       ],
       "state": "unknown"
     },
-    "7591424560280249953": {
-      "id": 7591424560280249953,
-      "kind": "catalogue",
-      "title": "SummerToon",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "summertoons.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "http",
-        "http_code": "522",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      }
-    },
     "7591926664003059229": {
       "id": 7591926664003059229,
       "kind": "engine",
@@ -25269,25 +25156,6 @@
         "at": "2026-11-15T11:49:53Z"
       },
       "device_step": "list"
-    },
-    "784503247292697283": {
-      "id": 784503247292697283,
-      "kind": "catalogue",
-      "title": "ToonHane",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "toonhane.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "http",
-        "http_code": "522",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      }
     },
     "7849977061084682679": {
       "id": 7849977061084682679,
@@ -25891,25 +25759,6 @@
         "at": "2026-11-15T11:49:53Z"
       }
     },
-    "8119700570236890181": {
-      "id": 8119700570236890181,
-      "kind": "catalogue",
-      "title": "PiedpiperFansub",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "ww17.piedpiperfansub.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "empty",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      }
-    },
     "8123620034208406844": {
       "id": 8123620034208406844,
       "kind": "engine",
@@ -26488,25 +26337,6 @@
         "ms": 210,
         "detail": "curl: (6) Could not resolve host: villainessscan.xyz",
         "at": "2026-11-13T17:07:52Z"
-      }
-    },
-    "8445880885282775398": {
-      "id": 8445880885282775398,
-      "kind": "catalogue",
-      "title": "NyxManga",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "nyxmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "blocked",
-        "http_code": "429",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
       }
     },
     "8457596619990167255": {
