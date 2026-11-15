@@ -9,13 +9,19 @@ jobs:
           set +e
           UA='Mozilla/5.0 (Linux; Android 14) Chrome/124.0 Mobile Safari/537.36'
           B=https://api.lunarx.to/api/manga
-          for s in what-we-shouldn-t the-cliff weak-hero; do
-            img=$(curl -s -A "$UA" "$B/$s/1" | jq -r '.data.images[0]')
-            echo "IMG $s $img"
-            for ref in "" "https://lunarx.to/" "https://www.lunarx.to/" "https://lunarx.to/manga/$s/1"; do
-              c=$(curl -s -A "$UA" ${ref:+-e "$ref"} -o /dev/null -w '%{http_code}' "$img")
-              o=$(curl -s -A "$UA" ${ref:+-H "Origin: https://lunarx.to"} ${ref:+-e "$ref"} -o /dev/null -w '%{http_code}' "$img")
-              echo "RES ref=[$ref] noOrigin=$c origin=$o"
-            done
+          s=the-cliff
+          echo "RES keys: $(curl -s -A "$UA" "$B/$s/1" | jq -c '.data|del(.images)|keys')"
+          echo "RES chapter-obj: $(curl -s -A "$UA" "$B/$s/1" | jq -c '.data|del(.images)' | cut -c1-600)"
+          echo "RES list0: $(curl -s -A "$UA" "$B/$s" | jq -c '.data[0]|del(.uploader_profile)' | cut -c1-700)"
+          for u in "https://lunarx.to/manga/$s/1" "https://lunarx.to/manga/$s/1?lang=en"; do
+            curl -s -L -A "$UA" "$u" -o p.html -w "RES page $u %{http_code}\n"
+            echo "RES vault-urls: $(grep -oE 'https://[a-z.]*lunarx\.to/[^"\\ ]+\.(jpg|jpeg|png|webp|avif)' p.html | sort -u | head -5 | tr '\n' ' ')"
+            echo "RES scripts: $(grep -oE '/_next/static/chunks/[^"]+' p.html | head -3 | tr '\n' ' ')"
           done
-          echo done
+          for p in "$B/$s/1/pages" "$B/$s/1/images" "https://api.lunarx.to/api/chapter/$s/1" "$B/$s/1?lang=en&format=pages"; do
+            echo "RES $p -> $(curl -s -A "$UA" -o /tmp/x -w '%{http_code}' "$p") $(head -c 200 /tmp/x | tr '\n' ' ')"
+          done
+          for ext in jpg webp png avif jpeg; do
+            echo "RES ext $ext: $(curl -s -A "$UA" -e https://lunarx.to/ -o /dev/null -w '%{http_code}' "https://vault.lunarx.to/cdn/admin/manga/$s/1/en/page_1.$ext")"
+          done
+          echo "RES done"
