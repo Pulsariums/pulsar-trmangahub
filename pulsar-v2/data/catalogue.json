@@ -386,6 +386,11 @@
     "searchJsonPathPrefix": "/seri",
     "pageApiUrl": "https://mangadiyari.com/api/chapters/{1}",
     "pageApiIdPattern": "/bolum/(\\d+)",
+    "pageApiLookupUrl": "https://mangadiyari.com/api/series/{1}",
+    "pageApiLookupPattern": "/seri/([^/]+)/bolum/(\\d+(?:\\.\\d+)?)",
+    "pageApiLookupItems": "chapters",
+    "pageApiLookupNumberField": "chapter_number",
+    "pageApiLookupIdField": "id",
     "pageApiItems": "pages",
     "pageApiFieldUrl": "display_image"
    },

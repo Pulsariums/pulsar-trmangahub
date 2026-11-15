@@ -314,12 +314,46 @@ class PulsarSource(
     private fun apiPageUrl(chapter: SChapter): String? {
         val template = config.optString("pageApiUrl", "")
         if (template.isBlank()) return null
+        val lookup = lookupApiId(chapter)
+        if (lookup != null) return template.replace("{1}", lookup).takeIf { !it.contains("{") }
         val pattern = config.optString("pageApiIdPattern", "")
         if (pattern.isBlank()) return null
         val m = runCatching { Regex(pattern).find(chapter.url) }.getOrNull() ?: return null
         var url = template
         for (i in 1 until m.groupValues.size) url = url.replace("{$i}", m.groupValues[i])
         return url.takeIf { !it.contains("{") }
+    }
+
+    // Bölüm URL'sindeki sayı gerçek id değilse: seri JSON'undaki numara alanından id çözülür.
+    // Örn. /seri/<slug>/bolum/3851 -> /api/series/<slug> -> chapter_number=3851 -> id=6417.
+    private fun lookupApiId(chapter: SChapter): String? {
+        val lookupTemplate = config.optString("pageApiLookupUrl", "")
+        val lookupPattern = config.optString("pageApiLookupPattern", "")
+        if (lookupTemplate.isBlank() || lookupPattern.isBlank()) return null
+        val m = runCatching { Regex(lookupPattern).find(chapter.url) }.getOrNull() ?: return null
+        if (m.groupValues.size < 2) return null
+        var url = lookupTemplate
+        for (i in 1 until m.groupValues.size) url = url.replace("{$i}", m.groupValues[i])
+        if (url.contains("{")) return null
+        val text = runCatching {
+            client.newCall(Request.Builder().url(url).headers(headers).build())
+                .execute().use { it.body?.string().orEmpty() }
+        }.getOrNull().orEmpty()
+        val root = runCatching { JSONObject(text) }.getOrNull() ?: return null
+        var node: Any? = root
+        for (part in config.optString("pageApiLookupItems", "chapters").split('.')) {
+            node = (node as? JSONObject)?.opt(part)
+        }
+        val arr = node as? org.json.JSONArray ?: return null
+        val numberField = config.optString("pageApiLookupNumberField", "chapter_number")
+        val idField = config.optString("pageApiLookupIdField", "id")
+        val wanted = m.groupValues.last().toDoubleOrNull() ?: return null
+        for (i in 0 until arr.length()) {
+            val o = arr.optJSONObject(i) ?: continue
+            val n = o.optString(numberField).toDoubleOrNull() ?: continue
+            if (n == wanted) return o.optString(idField).takeIf { it.isNotBlank() }
+        }
+        return null
     }
 
     private fun apiPages(response: Response): List<Page> {
