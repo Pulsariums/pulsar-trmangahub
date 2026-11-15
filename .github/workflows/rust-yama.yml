@@ -10,15 +10,32 @@ jobs:
       - uses: actions/checkout@v4
       - name: Yama
         run: |
-          f=tools/pulsar/src/status.rs
-          perl -0pi -e 's/s\.packages = packages_for\(&e, &sorun, s\.dead\);/let dev_bad = matches!(s.device.as_ref().map(|p| p.status.as_str()), Some("fail") | Some("cloudflare"));\n        let pk_sorun: &str = if dev_bad \&\& sorun.is_empty() { "cihaz" } else { sorun.as_str() };\n        s.packages = packages_for(\&e, pk_sorun, s.dead);/' $f
-          perl -0pi -e 's/    save\(root, &file\)\?;\n    Ok\(merged\)/    \/\/ Tam testte yalniz dusenler listelenir; raporda olmayan kaynak gecmistir.\n    let seen_ids: std::collections::HashSet<String> = list_ids.into_iter().collect();\n    if full_run {\n        for (k, v) in file.sources.iter_mut() {\n            if v.device.is_some() \&\& !seen_ids.contains(k) {\n                v.device = None;\n                v.device_step = None;\n                recompute_state(v);\n            }\n        }\n    }\n    save(root, \&file)?;\n    ensure_all(root)?;\n    Ok(merged)/' $f
-          perl -0pi -e 's/(let mut merged = 0usize;\n)/$1    let full_run = value.get("total").and_then(|v| v.as_i64()).unwrap_or(0) >= 100;\n    let mut list_ids: Vec<String> = Vec::new();\n/' $f
-          perl -0pi -e 's/(let Some\(id\) = id else \{ continue \};\n)/$1    list_ids.push(id.to_string());\n/' $f
+          set -e
+          S=tools/pulsar/src/status.rs
+          E=tools/pulsar/src/embed.rs
+          B=pulsar-v2/scripts/pulsar_build.sh
+          G=pulsar-v2/scripts/generate_repo.py
+          W=.github/workflows/build-extension.yml
+          # status.rs: cihazda dusen -> tamir paketi
+          perl -0pi -e 's/(        s\.packages = packages_for\(&e, pk_sorun, s\.dead\);\n)/$1        if dev_bad \&\& sorun.is_empty() \&\& !s.dead {\n            s.packages = vec!["tamir".to_string()];\n        }\n/' $S
+          # embed.rs
+          perl -0pi -e 's/("global18_sorunlu",\n)(    \] \{\n        allowed)/$1        "tamir",\n$2/' $E
+          perl -0pi -e 's/            if !is_active && !marked_sorun \{/            let in_tamir = e\n                .get("packages")\n                .and_then(|v| v.as_array())\n                .map(|a| a.iter().any(|p| p.as_str() == Some("tamir")))\n                .unwrap_or(false);\n            if !is_active \&\& !marked_sorun \&\& !in_tamir {/' $E
+          perl -0pi -e 's/(    private val global18SorunluIds: Set<String> by lazy \{\{ GLOBAL18_SORUNLU_IDS\.toIdSet\(\) \}\}\n)/$1    private val tamirIds: Set<String> by lazy {{ TAMIR_IDS.toIdSet() }}\n/' $E
+          perl -0pi -e 's/(        "global18_sorunlu" -> global18SorunluIds\n)/$1        "tamir" -> tamirIds\n/' $E
+          # build script
+          perl -0pi -e 's/(        global18_sorunlu\) echo "\.global18_sorunlu\|all\|1" ;;\n)/$1        tamir)            echo ".tamir|all|0" ;;\n/' $B
+          perl -0pi -e 's/(        global18_sorunlu\) echo "Pulsar Global 18\+ Cloudflare" ;;\n)/$1        tamir) echo "Pulsar Tamir" ;;\n/' $B
+          perl -0pi -e 's/(FLAVORS="\$\{FLAVORS:-[^}"]*global18_sorunlu)\}"/$1,tamir}"/' $B
+          # generate_repo.py
+          perl -0pi -e 's/(    "\.global18_sorunlu": \{[^\n]*\n)/$1    ".tamir": {"name": "Pulsar Tamir", "lang": "all", "nsfw": 0},\n/' $G
+          perl -0pi -e 's/global_sorunlu,global18_sorunlu"/global_sorunlu,global18_sorunlu,tamir"/g' $G
+          # workflow
+          perl -0pi -e 's/(default: .tr,tr18,global,global18,tr_sorunlu,tr18_sorunlu,global_sorunlu,global18_sorunlu)\x27/$1,tamir\x27/' $W
           git diff --stat
-          grep -n 'dev_bad\|full_run\|list_ids' $f | head
+          git diff | grep -E '^\+' | grep -v '^+++' | head -40
           git config user.name pulsarium
           git config user.email pulsariums@gmail.com
           git diff --quiet && { echo 'degisiklik yok'; exit 1; }
-          git commit -qam "feat(status): cihazda dusen kaynak ana paketten sorunlu pakete, gecen kaynak geri doner"
+          git commit -qam "feat(tamir): onarimdaki kaynaklar icin tek 'Pulsar Tamir' paketi"
           git pull -q --rebase origin main && git push -q origin main
