@@ -1,0 +1,22 @@
+name: 'lunar-probe (gecici)'
+on:
+  workflow_dispatch:
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          set +e
+          UA='Mozilla/5.0 (Linux; Android 14) Chrome/124.0 Mobile Safari/537.36'
+          B=https://api.lunarx.to/api/manga
+          curl -s -A "$UA" "$B/search?query=&page=1" | jq -r '.manga[0:8][].slug' > slugs.txt
+          while read s; do
+            curl -s -A "$UA" "$B/$s" > d.json
+            echo "== $s total=$(jq '.data|length' d.json) langs=$(jq -r '[.data[].language]|unique|join(",")' d.json)"
+            jq -r '.data[]|"\(.chapter)|\(.language)"' d.json | head -40 | while IFS='|' read c l; do
+              a=$(curl -s -A "$UA" -o /dev/null -w '%{http_code}' "$B/$s/$c?lang=tr")
+              b=$(curl -s -A "$UA" -o /dev/null -w '%{http_code}' "$B/$s/$c")
+              [ "$a" != 200 -o "$b" != 200 ] && echo "FAIL $s ch=$c lang=$l tr=$a plain=$b"
+            done
+          done < slugs.txt
+          echo done
