@@ -28,6 +28,20 @@
       "kind": "git",
       "url": "https://github.com/Kotatsu-Redo/kotatsu-parsers-redo.git",
       "enabled": true
+    },
+    {
+      "id": "yuzono",
+      "name": "Yuzono manga deposu (Keiyoushi'yi 6 saatte bir birleştirir; index.min.json artık kupur, gerçek liste index.pb)",
+      "kind": "http",
+      "url": "https://raw.githubusercontent.com/yuzono/manga-repo/repo/index.min.json",
+      "enabled": false
+    },
+    {
+      "id": "miguelma3-pack",
+      "name": "MiguelMA3 süzülmüş paket (1979 kaynak, 87 TR; bizde olmayan ~28 TR alan adı var)",
+      "kind": "http",
+      "url": "https://raw.githubusercontent.com/MiguelMA3/mihon-extensions/mypack/index.min.json",
+      "enabled": false
     }
   ]
 }
