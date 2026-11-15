@@ -383,7 +383,11 @@
     "searchJsonItems": "series",
     "searchJsonUrl": "slug",
     "searchJsonTitle": "title",
-    "searchJsonPathPrefix": "/seri"
+    "searchJsonPathPrefix": "/seri",
+    "pageApiUrl": "https://mangadiyari.com/api/chapters/{1}",
+    "pageApiIdPattern": "/bolum/(\\d+)",
+    "pageApiItems": "pages",
+    "pageApiFieldUrl": "display_image"
    },
    "verified_by_user": true,
    "origins": [
@@ -2153,7 +2157,12 @@
     "listPath": "/manga",
     "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
     "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-    "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+    "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+    "searchUrl": "https://duckscans.com/api/series?search={query}",
+    "searchJsonItems": "data",
+    "searchJsonUrl": "slug",
+    "searchJsonTitle": "title",
+    "searchJsonPathPrefix": "/seri"
    },
    "altDomains": [],
    "verified_by_user": false,
@@ -2174,7 +2183,13 @@
     "listPath": "/manga",
     "itemSelector": "div.page-item-detail, div.manga",
     "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-    "readerSelector": "div.page-break img, div.reading-content img"
+    "readerSelector": "div.page-break img, div.reading-content img",
+    "searchUrl": "https://ghostoon.com/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+    "searchMethod": "POST",
+    "searchBody": "title={query}",
+    "searchJsonItems": "data",
+    "searchJsonUrl": "url",
+    "searchJsonTitle": "title"
    },
    "altDomains": [],
    "verified_by_user": false,
