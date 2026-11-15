@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T22:13:55Z",
+ "generated": "2026-11-15T22:13:49Z",
  "note": "id = Kotlin PulsarKotatsuSource/PulsarSource hash'inin Python kopyası; bakım bacası (07_maintain.py) MIHON_<id> -> kaynak eşlemesini bundan yapar.",
  "engine": [
   {
@@ -14487,6 +14487,16 @@
    "engine": "custom"
   },
   {
+   "id": 670740038008065849,
+   "kind": "catalogue",
+   "name": "Pati Manga",
+   "title": "Pati Manga",
+   "lang": "tr",
+   "nsfw": 0,
+   "domain": "patimanga.com",
+   "engine": "mangareader"
+  },
+  {
    "id": 4180504126586091018,
    "kind": "catalogue",
    "name": "RagnarScans",
@@ -14615,6 +14625,16 @@
    "nsfw": 0,
    "domain": "webtoonoku.org",
    "engine": "custom"
+  },
+  {
+   "id": 3691037704178132287,
+   "kind": "catalogue",
+   "name": "WebtoonTr",
+   "title": "WebtoonTr",
+   "lang": "tr",
+   "nsfw": 0,
+   "domain": "webtoontr.net",
+   "engine": "madara"
   },
   {
    "id": 3691027854447844931,

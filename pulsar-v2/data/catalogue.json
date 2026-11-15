@@ -607,7 +607,7 @@
     },
     "engine": "mangareader",
     "listPath": "/manga",
-    "itemSelector": "div.bsx",
+    "itemSelector": "a[href*='/manga/']",
     "chapterSelector": "div.eph-num a",
     "readerSelector": "div#readerarea img"
    },
@@ -616,7 +616,8 @@
     "keiyoushi_index",
     "local_tr",
     "nyora_datadriven"
-   ]
+   ],
+   "selector_verified": true
   },
   {
    "id": "ruyamanga2.com",
@@ -1959,8 +1960,8 @@
     "listUrl": "webtoon/",
     "datePattern": "dd/MM/yyyy",
     "engine": "madara",
-    "listPath": "/manga",
-    "itemSelector": "div.page-item-detail, div.manga",
+    "listPath": "/webtoon",
+    "itemSelector": "a[href*='/webtoon/']",
     "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
     "readerSelector": "div.page-break img, div.reading-content img"
    },
@@ -1968,7 +1969,8 @@
    "origins": [
     "local_tr",
     "nyora_datadriven"
-   ]
+   ],
+   "selector_verified": true
   },
   {
    "id": "6593451456647607548",
