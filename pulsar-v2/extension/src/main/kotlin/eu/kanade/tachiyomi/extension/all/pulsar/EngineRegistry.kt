@@ -253,6 +253,8 @@ object EngineRegistry {
             val file = low.substringAfterLast('/')
             val pageLike = file.contains("page") || file.contains("sayfa") ||
                 Regex("""^\d{1,4}[._-]""").containsMatchIn(file) ||
+                // mangaball: .../<hash>-001.webp — sayfa numarası dosya adının sonunda.
+                Regex("""[-_]\d{1,4}\.(?:webp|jpe?g|png|avif)$""").containsMatchIn(file) ||
                 Regex("""/ch[_-]?\d+/""").containsMatchIn(low) ||
                 Regex("""/manga_chapters?/""").containsMatchIn(low)
             if (!pageLike) continue

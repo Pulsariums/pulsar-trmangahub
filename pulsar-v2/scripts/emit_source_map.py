@@ -69,6 +69,12 @@ def scan_engine(parsers_dir: str):
                 dm = re.search(
                     r'MangaParserSource\.' + re.escape(name) +
                     r',\s*"([A-Za-z0-9.-]+\.[A-Za-z]{2,})"', text)
+                if not dm and len(ANNOT.findall(text)) == 1:
+                    # Kendi yazılmış ayrıştırıcılar (PagedMangaParser tabanlı) alan
+                    # adını ConfigKey.Domain ile verir; ctor satırında domain yok.
+                    # Tek anotasyonlu dosyada çağrı o sınıfa aittir; çok kaynaklı
+                    # dosyada eşleştirme belirsiz olduğu için dokunulmaz.
+                    dm = re.search(r'ConfigKey\.Domain\(\s*"([A-Za-z0-9.-]+\.[A-Za-z]{2,})"', text)
                 domain = dm.group(1).lower() if dm else ""
                 lang = locale if locale else "all"
                 rows.append({

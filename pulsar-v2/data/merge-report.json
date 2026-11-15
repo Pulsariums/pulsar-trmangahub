@@ -1,6 +1,6 @@
 {
-  "catalogue_after": 66,
-  "catalogue_before": 98,
+  "catalogue_after": 101,
+  "catalogue_before": 136,
   "dropped": [
     {
       "domain": "arcurafansub.com",
@@ -225,6 +225,27 @@
       "lang": "tr",
       "name": "ZenithScans",
       "nsfw": 0
+    },
+    {
+      "domain": "laviniafansub.site",
+      "kept": "LaviniaFansub",
+      "lang": "tr",
+      "name": "LaviniaFansub",
+      "nsfw": 1
+    },
+    {
+      "domain": "titanmanga.com",
+      "kept": "TitanManga",
+      "lang": "tr",
+      "name": "TitanManga",
+      "nsfw": 0
+    },
+    {
+      "domain": "yaoimangaoku.net",
+      "kept": "YaoiMangaOku",
+      "lang": "tr",
+      "name": "Yaoi Manga Oku",
+      "nsfw": 1
     }
   ],
   "dropped_ids": [
@@ -259,10 +280,13 @@
     5863442274693704416,
     1084418383174697768,
     3691037704178132287,
-    4274410594283057355
+    4274410594283057355,
+    845371345206609558,
+    5117503242233509669,
+    6718632900011266890
   ],
   "engine_keys": 739,
-  "generated": "2026-11-14T21:08:16Z",
-  "mirrors": 5,
+  "generated": "2026-11-15T16:00:29Z",
+  "mirrors": 11,
   "note": "Ayni host+dil+nsfw motor kaynagi katalogdan dusuruldu; tasinmis alan adlari mirrors'a yazildi."
 }

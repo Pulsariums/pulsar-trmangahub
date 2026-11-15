@@ -1,45 +1,19 @@
 [
   {
-    "id": "kuroimanga.site",
-    "brand": "kuroi",
-    "name": "Kuroi Manga",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "kuroimanga.site",
-    "baseUrl": "https://kuroimanga.site",
-    "altDomains": [
-      "kuroimanga.com"
-    ],
-    "engine": "madara",
-    "config": {
-      "datePattern": "d MMMM yyyy"
-    },
-    "origins": [
-      "keiyoushi_index",
-      "local_custom",
-      "local_tr",
-      "nyora_datadriven"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 5
-  },
-  {
-    "id": "mangacix.net",
-    "brand": "mangacix",
-    "name": "MangaciX",
+    "id": "gaiatoon.com",
+    "brand": "gaia",
+    "name": "Gaiatoon",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "mangacix.net",
-    "baseUrl": "https://mangacix.net",
-    "altDomains": [
-      "mangacix.com"
-    ],
+    "domain": "gaiatoon.com",
+    "baseUrl": "https://gaiatoon.com",
+    "altDomains": [],
     "engine": "mangareader",
     "config": {
-      "pageSize": 20,
+      "pageSize": 50,
       "searchPageSize": 10,
       "capabilities": {
-        "tagsExclusion": true
+        "multipleTags": false
       }
     },
     "origins": [
@@ -48,16 +22,39 @@
       "nyora_datadriven"
     ],
     "verified_by_user": true,
-    "merged_variant_count": 4
+    "merged_variant_count": 3
   },
   {
-    "id": "merlintoon.com",
-    "brand": "merlin",
-    "name": "Merlin Scans",
+    "id": "tilkiscans.com",
+    "brand": "mangatilkisi",
+    "name": "MangaTilkisi",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "merlintoon.com",
-    "baseUrl": "https://merlintoon.com",
+    "domain": "tilkiscans.com",
+    "baseUrl": "https://www.tilkiscans.com",
+    "altDomains": [
+      "mangatilkisi.net"
+    ],
+    "engine": "madara",
+    "config": {
+      "datePattern": "dd/MM/yyyy"
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 5
+  },
+  {
+    "id": "golgebahcesi.com",
+    "brand": "glgebahesi",
+    "name": "Gölge Bahçesi",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "golgebahcesi.com",
+    "baseUrl": "https://golgebahcesi.com",
     "altDomains": [],
     "engine": "mangareader",
     "config": {},
@@ -69,18 +66,19 @@
     "merged_variant_count": 2
   },
   {
-    "id": "gafeland.com",
-    "brand": "gafeland",
-    "name": "gafeland",
+    "id": "arcurafansub.com",
+    "brand": "arcura",
+    "name": "Arcura Fansub",
     "lang": "tr",
-    "nsfw": 0,
-    "domain": "gafeland.com",
-    "baseUrl": "https://gafeland.com",
+    "nsfw": 1,
+    "domain": "arcurafansub.com",
+    "baseUrl": "https://arcurafansub.com",
     "altDomains": [],
     "engine": "mangareader",
     "config": {
       "pageSize": 20,
       "searchPageSize": 10,
+      "listUrl": "/seri",
       "capabilities": {
         "tagsExclusion": false
       }
@@ -113,19 +111,36 @@
     "merged_variant_count": 4
   },
   {
-    "id": "anikiga.com",
-    "brand": "anikiga",
-    "name": "Anikiga",
+    "id": "mangtto.com",
+    "brand": "mangitto",
+    "name": "Mangitto",
     "lang": "tr",
-    "nsfw": 0,
-    "domain": "anikiga.com",
-    "baseUrl": "https://anikiga.com",
+    "nsfw": 1,
+    "domain": "mangtto.com",
+    "baseUrl": "https://mangtto.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_tr"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "tuhafscans.com",
+    "brand": "luna",
+    "name": "Luna Scans",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "tuhafscans.com",
+    "baseUrl": "https://tuhafscans.com",
     "altDomains": [],
     "engine": "madara",
     "config": {
-      "tagPrefix": "manga-tur/",
-      "datePattern": "d MMMM yyyy",
-      "postReq": true
+      "postReq": true,
+      "datePattern": "dd MMMM yyyy"
     },
     "origins": [
       "keiyoushi_index",
@@ -136,15 +151,15 @@
     "merged_variant_count": 3
   },
   {
-    "id": "orimanga.net",
-    "brand": "orimanga",
-    "name": "Ori Manga",
+    "id": "limonmanga.com",
+    "brand": "limon",
+    "name": "Limon Manga",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "orimanga.net",
-    "baseUrl": "https://orimanga.net",
+    "domain": "limonmanga.com",
+    "baseUrl": "https://limonmanga.com",
     "altDomains": [],
-    "engine": "initmanga",
+    "engine": "custom",
     "config": {},
     "origins": [
       "keiyoushi_index",
@@ -155,15 +170,44 @@
     "merged_variant_count": 3
   },
   {
-    "id": "golgebahcesi.com",
-    "brand": "glgebahesi",
-    "name": "Gölge Bahçesi",
+    "id": "mangacix.net",
+    "brand": "mangacix",
+    "name": "MangaciX",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "golgebahcesi.com",
-    "baseUrl": "https://golgebahcesi.com",
-    "altDomains": [],
+    "domain": "mangacix.net",
+    "baseUrl": "https://mangacix.net",
+    "altDomains": [
+      "mangacix.com"
+    ],
     "engine": "mangareader",
+    "config": {
+      "pageSize": 20,
+      "searchPageSize": 10,
+      "capabilities": {
+        "tagsExclusion": true
+      }
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 4
+  },
+  {
+    "id": "mikrokosmosfb.blogspot.com",
+    "brand": "mikrokosmos",
+    "name": "Mikrokosmos Fansub",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "mikrokosmosfb.blogspot.com",
+    "baseUrl": "https://mikrokosmosfb.blogspot.com",
+    "altDomains": [
+      "mikrokosmos.fans"
+    ],
+    "engine": "zeistmanga",
     "config": {},
     "origins": [
       "keiyoushi_index",
@@ -171,6 +215,47 @@
     ],
     "verified_by_user": true,
     "merged_variant_count": 2
+  },
+  {
+    "id": "mangadiyari.com",
+    "brand": "mangadiyar",
+    "name": "Manga Diyarı",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangadiyari.com",
+    "baseUrl": "https://mangadiyari.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_tr"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "mindafansub.dev",
+    "brand": "minda",
+    "name": "Minda Fansub",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "mindafansub.dev",
+    "baseUrl": "https://mindafansub.dev",
+    "altDomains": [
+      "mindafansub.nl",
+      "mindafansub.online"
+    ],
+    "engine": "madara",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 5
   },
   {
     "id": "afroditscans.com",
@@ -200,87 +285,15 @@
     "merged_variant_count": 3
   },
   {
-    "id": "juratempe.st",
-    "brand": "juratempest",
-    "name": "JuraTempest",
+    "id": "orimanga.net",
+    "brand": "orimanga",
+    "name": "Ori Manga",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "juratempe.st",
-    "baseUrl": "https://juratempe.st",
+    "domain": "orimanga.net",
+    "baseUrl": "https://orimanga.net",
     "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_tr"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 2
-  },
-  {
-    "id": "mikrokosmosfb.blogspot.com",
-    "brand": "mikrokosmos",
-    "name": "Mikrokosmos Fansub",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "mikrokosmosfb.blogspot.com",
-    "baseUrl": "https://mikrokosmosfb.blogspot.com",
-    "altDomains": [],
-    "engine": "zeistmanga",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_tr"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 2
-  },
-  {
-    "id": "mangtto.com",
-    "brand": "mangitto",
-    "name": "Mangitto",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "mangtto.com",
-    "baseUrl": "https://mangtto.com",
-    "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_tr"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 2
-  },
-  {
-    "id": "mangadiyari.com",
-    "brand": "mangadiyar",
-    "name": "Manga Diyarı",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "mangadiyari.com",
-    "baseUrl": "https://mangadiyari.com",
-    "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_tr"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 2
-  },
-  {
-    "id": "limonmanga.com",
-    "brand": "limon",
-    "name": "Limon Manga",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "limonmanga.com",
-    "baseUrl": "https://limonmanga.com",
-    "altDomains": [],
-    "engine": "custom",
+    "engine": "initmanga",
     "config": {},
     "origins": [
       "keiyoushi_index",
@@ -298,6 +311,139 @@
     "nsfw": 0,
     "domain": "eskimangalar.com",
     "baseUrl": "https://eskimangalar.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "mangadenizi.net",
+    "brand": "mangadenizi",
+    "name": "MangaDenizi",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangadenizi.net",
+    "baseUrl": "https://mangadenizi.net",
+    "altDomains": [],
+    "engine": "mmrcms",
+    "config": {
+      "locale": "en",
+      "datePattern": "dd.MM.yyyy",
+      "selectors": {
+        "state": "dt:contains(Durum)",
+        "alt": "dt:contains(Diğer Adları)",
+        "author": "dt:contains(Yazar & Çizer)",
+        "tag": "dt:contains(Kategoriler)"
+      }
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "anikiga.com",
+    "brand": "anikiga",
+    "name": "Anikiga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "anikiga.com",
+    "baseUrl": "https://anikiga.com",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {
+      "tagPrefix": "manga-tur/",
+      "datePattern": "d MMMM yyyy",
+      "postReq": true
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "diamondfansub.com",
+    "brand": "diamond",
+    "name": "DiamondFansub",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "diamondfansub.com",
+    "baseUrl": "https://diamondfansub.com",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {
+      "datePattern": "d MMMM",
+      "listUrl": "seri/",
+      "tagPrefix": "seri-turu/"
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "eldermanga.com",
+    "brand": "elder",
+    "name": "Elder Manga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "eldermanga.com",
+    "baseUrl": "https://eldermanga.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_tr"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "merlintoon.com",
+    "brand": "merlin",
+    "name": "Merlin Scans",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "merlintoon.net",
+    "baseUrl": "https://merlintoon.net",
+    "altDomains": [
+      "merlinmanga.com",
+      "merlintoon.com",
+      "merlintoon.net"
+    ],
+    "engine": "mangareader",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_tr"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 4
+  },
+  {
+    "id": "sleptmanga.com.tr",
+    "brand": "slept",
+    "name": "Slept Manga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "sleptmanga.com.tr",
+    "baseUrl": "https://sleptmanga.com.tr",
     "altDomains": [],
     "engine": "custom",
     "config": {},
@@ -335,23 +481,20 @@
     "merged_variant_count": 8
   },
   {
-    "id": "mangadenizi.net",
-    "brand": "mangadenizi",
-    "name": "MangaDenizi",
+    "id": "patimanga.com",
+    "brand": "pati",
+    "name": "Pati Manga",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "mangadenizi.net",
-    "baseUrl": "https://mangadenizi.net",
+    "domain": "patimanga.com",
+    "baseUrl": "https://www.patimanga.com",
     "altDomains": [],
-    "engine": "mmrcms",
+    "engine": "mangareader",
     "config": {
-      "locale": "en",
-      "datePattern": "dd.MM.yyyy",
-      "selectors": {
-        "state": "dt:contains(Durum)",
-        "alt": "dt:contains(Diğer Adları)",
-        "author": "dt:contains(Yazar & Çizer)",
-        "tag": "dt:contains(Kategoriler)"
+      "pageSize": 20,
+      "searchPageSize": 10,
+      "capabilities": {
+        "tagsExclusion": false
       }
     },
     "origins": [
@@ -363,37 +506,16 @@
     "merged_variant_count": 3
   },
   {
-    "id": "tilkiscans.com",
-    "brand": "mangatilkisi",
-    "name": "MangaTilkisi",
+    "id": "juratempe.st",
+    "brand": "juratempest",
+    "name": "JuraTempest",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "tilkiscans.com",
-    "baseUrl": "https://www.tilkiscans.com",
+    "domain": "youtube.com",
+    "baseUrl": "https://youtube.com",
     "altDomains": [
-      "mangatilkisi.net"
+      "juratempe.st"
     ],
-    "engine": "madara",
-    "config": {
-      "datePattern": "dd/MM/yyyy"
-    },
-    "origins": [
-      "keiyoushi_index",
-      "local_tr",
-      "nyora_datadriven"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 5
-  },
-  {
-    "id": "eldermanga.com",
-    "brand": "elder",
-    "name": "Elder Manga",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "eldermanga.com",
-    "baseUrl": "https://eldermanga.com",
-    "altDomains": [],
     "engine": "custom",
     "config": {},
     "origins": [
@@ -402,28 +524,6 @@
     ],
     "verified_by_user": true,
     "merged_variant_count": 2
-  },
-  {
-    "id": "mindafansub.dev",
-    "brand": "minda",
-    "name": "Minda Fansub",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "mindafansub.dev",
-    "baseUrl": "https://mindafansub.dev",
-    "altDomains": [
-      "mindafansub.online"
-    ],
-    "engine": "madara",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_custom",
-      "local_tr",
-      "nyora_datadriven"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 5
   },
   {
     "id": "webtoonhatti.club",
@@ -449,118 +549,56 @@
     "merged_variant_count": 3
   },
   {
-    "id": "diamondfansub.com",
-    "brand": "diamond",
-    "name": "DiamondFansub",
+    "id": "trmangaoku.com",
+    "brand": "trkemangaoku",
+    "name": "Türkçe Manga Oku",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "diamondfansub.com",
-    "baseUrl": "https://diamondfansub.com",
+    "domain": "trmangaoku.com",
+    "baseUrl": "https://trmangaoku.com",
     "altDomains": [],
     "engine": "madara",
-    "config": {
-      "datePattern": "d MMMM",
-      "listUrl": "seri/",
-      "tagPrefix": "seri-turu/"
-    },
-    "origins": [
-      "keiyoushi_index",
-      "local_tr",
-      "nyora_datadriven"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 3
-  },
-  {
-    "id": "sleptmanga.com.tr",
-    "brand": "slept",
-    "name": "Slept Manga",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "sleptmanga.com.tr",
-    "baseUrl": "https://sleptmanga.com.tr",
-    "altDomains": [],
-    "engine": "custom",
     "config": {},
     "origins": [
       "keiyoushi_index",
-      "local_custom",
       "local_tr"
     ],
     "verified_by_user": true,
-    "merged_variant_count": 3
+    "merged_variant_count": 2
   },
   {
-    "id": "webtoonoku.org",
-    "brand": "webtoonoku",
-    "name": "WebtoonOku",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "webtoonoku.org",
-    "baseUrl": "https://webtoonoku.org",
-    "altDomains": [
-      "trmanga.com"
-    ],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_custom",
-      "local_tr"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 3
-  },
-  {
-    "id": "gaiatoon.com",
-    "brand": "gaia",
-    "name": "Gaiatoon",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "gaiatoon.com",
-    "baseUrl": "https://gaiatoon.com",
-    "altDomains": [],
-    "engine": "mangareader",
-    "config": {
-      "pageSize": 50,
-      "searchPageSize": 10,
-      "capabilities": {
-        "multipleTags": false
-      }
-    },
-    "origins": [
-      "keiyoushi_index",
-      "local_tr",
-      "nyora_datadriven"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 3
-  },
-  {
-    "id": "arcurafansub.com",
-    "brand": "arcura",
-    "name": "Arcura Fansub",
+    "id": "2760962895634785428",
+    "brand": "akuma",
+    "name": "Akuma",
     "lang": "tr",
     "nsfw": 1,
-    "domain": "arcurafansub.com",
-    "baseUrl": "https://arcurafansub.com",
+    "domain": "akuma.moe",
+    "baseUrl": "https://akuma.moe",
     "altDomains": [],
-    "engine": "mangareader",
-    "config": {
-      "pageSize": 20,
-      "searchPageSize": 10,
-      "listUrl": "/seri",
-      "capabilities": {
-        "tagsExclusion": false
-      }
-    },
+    "engine": "keiyoushi",
+    "config": {},
     "origins": [
-      "keiyoushi_index",
-      "local_tr",
-      "nyora_datadriven"
+      "keiyoushi_index"
     ],
-    "verified_by_user": true,
-    "merged_variant_count": 3
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "359674482170560410",
+    "brand": "3hentai",
+    "name": "3Hentai",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "3hentai.net",
+    "baseUrl": "https://3hentai.net",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
   },
   {
     "id": "mangawow.org",
@@ -584,24 +622,6 @@
     "merged_variant_count": 3
   },
   {
-    "id": "tenshimanga.com",
-    "brand": "tenshi",
-    "name": "Tenshi Manga",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "tenshimanga.com",
-    "baseUrl": "https://tenshimanga.com",
-    "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_tr"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 2
-  },
-  {
     "id": "ruyamanga2.com",
     "brand": "ruyamanga",
     "name": "Rüya Manga",
@@ -609,24 +629,6 @@
     "nsfw": 0,
     "domain": "ruyamanga2.com",
     "baseUrl": "https://www.ruyamanga2.com",
-    "altDomains": [],
-    "engine": "madara",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_tr"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 2
-  },
-  {
-    "id": "trmangaoku.com",
-    "brand": "trkemangaoku",
-    "name": "Türkçe Manga Oku",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "trmangaoku.com",
-    "baseUrl": "https://trmangaoku.com",
     "altDomains": [],
     "engine": "madara",
     "config": {},
@@ -681,22 +683,88 @@
     "merged_variant_count": 4
   },
   {
-    "id": "amangaplanet.com.tr",
-    "brand": "amangapla",
-    "name": "Amanga Planet",
+    "id": "uzaymanga.com",
+    "brand": "uzay",
+    "name": "Uzay Manga",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "amangaplanet.com.tr",
-    "baseUrl": "https://www.amangaplanet.com.tr",
+    "domain": "uzaymanga.com",
+    "baseUrl": "https://uzaymanga.com",
     "altDomains": [],
-    "engine": "mangathemesia",
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_tr"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "yaoiflix.fit",
+    "brand": "yaoiflix",
+    "name": "Yaoi Flix",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "yaoiflix.fit",
+    "baseUrl": "https://yaoiflix.fit",
+    "altDomains": [
+      "yaoiflix.me"
+    ],
+    "engine": "madara",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 5
+  },
+  {
+    "id": "manga.adonisfansub.com",
+    "brand": "adonis",
+    "name": "AdonisFansub",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "manga.adonisfansub.com",
+    "baseUrl": "https://manga.adonisfansub.com",
+    "altDomains": [],
+    "engine": "mangareader",
+    "config": {
+      "pageSize": 20,
+      "searchPageSize": 20,
+      "capabilities": {
+        "tagsExclusion": false
+      }
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "webtoonoku.org",
+    "brand": "webtoonoku",
+    "name": "WebtoonOku",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "webtoonoku.org",
+    "baseUrl": "https://webtoonoku.org",
+    "altDomains": [
+      "trmanga.com"
+    ],
+    "engine": "custom",
     "config": {},
     "origins": [
       "keiyoushi_index",
       "local_custom",
       "local_tr"
     ],
-    "verified_by_user": false,
+    "verified_by_user": true,
     "merged_variant_count": 3
   },
   {
@@ -724,61 +792,39 @@
     "merged_variant_count": 2
   },
   {
-    "id": "uzaymanga.com",
-    "brand": "uzay",
-    "name": "Uzay Manga",
+    "id": "amangaplanet.com.tr",
+    "brand": "amangapla",
+    "name": "Amanga Planet",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "uzaymanga.com",
-    "baseUrl": "https://uzaymanga.com",
+    "domain": "amangaplanet.com.tr",
+    "baseUrl": "https://www.amangaplanet.com.tr",
+    "altDomains": [],
+    "engine": "mangathemesia",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "toontaku.com",
+    "brand": "toontaku",
+    "name": "Toontaku",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "toontaku.com",
+    "baseUrl": "https://toontaku.com",
     "altDomains": [],
     "engine": "custom",
     "config": {},
     "origins": [
       "keiyoushi_index",
+      "local_custom",
       "local_tr"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 2
-  },
-  {
-    "id": "alliedfansub.net",
-    "brand": "allied",
-    "name": "AlliedFansub",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "alliedfansub.net",
-    "baseUrl": "https://alliedfansub.net",
-    "altDomains": [],
-    "engine": "madara",
-    "config": {
-      "datePattern": "dd/MM/yyyy"
-    },
-    "origins": [
-      "local_tr",
-      "nyora_datadriven"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 2
-  },
-  {
-    "id": "tuhafscans.com",
-    "brand": "luna",
-    "name": "Luna Scans",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "tuhafscans.com",
-    "baseUrl": "https://tuhafscans.com",
-    "altDomains": [],
-    "engine": "madara",
-    "config": {
-      "postReq": true,
-      "datePattern": "dd MMMM yyyy"
-    },
-    "origins": [
-      "keiyoushi_index",
-      "local_tr",
-      "nyora_datadriven"
     ],
     "verified_by_user": true,
     "merged_variant_count": 3
@@ -807,35 +853,50 @@
     "merged_variant_count": 3
   },
   {
-    "id": "yaoiflix.fit",
-    "brand": "yaoiflix",
-    "name": "Yaoi Flix",
+    "id": "4421049203208952015",
+    "brand": "aesir",
+    "name": "AesirScans",
     "lang": "tr",
-    "nsfw": 1,
-    "domain": "yaoiflix.fit",
-    "baseUrl": "https://yaoiflix.fit",
-    "altDomains": [
-      "yaoiflix.me"
-    ],
-    "engine": "madara",
+    "nsfw": 0,
+    "domain": "aesirscans.site",
+    "baseUrl": "https://www.aesirscans.site",
+    "altDomains": [],
+    "engine": "keiyoushi",
     "config": {},
     "origins": [
-      "keiyoushi_index",
-      "local_custom",
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "alliedfansub.net",
+    "brand": "allied",
+    "name": "AlliedFansub",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "alliedfansub.net",
+    "baseUrl": "https://alliedfansub.net",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {
+      "datePattern": "dd/MM/yyyy"
+    },
+    "origins": [
       "local_tr",
       "nyora_datadriven"
     ],
-    "verified_by_user": true,
-    "merged_variant_count": 5
+    "verified_by_user": false,
+    "merged_variant_count": 2
   },
   {
-    "id": "7492246554765916610",
-    "brand": "dragonballmultiverse",
-    "name": "Dragon Ball Multiverse",
+    "id": "3678110616121957660",
+    "brand": "averis",
+    "name": "Averis Fansub",
     "lang": "tr",
-    "nsfw": 0,
-    "domain": "dragonball-multiverse.com",
-    "baseUrl": "https://www.dragonball-multiverse.com",
+    "nsfw": 1,
+    "domain": "averisfansub.site",
+    "baseUrl": "https://averisfansub.site",
     "altDomains": [],
     "engine": "keiyoushi",
     "config": {},
@@ -863,25 +924,6 @@
       "keiyoushi_index",
       "local_tr",
       "nyora_datadriven"
-    ],
-    "verified_by_user": true,
-    "merged_variant_count": 3
-  },
-  {
-    "id": "toontaku.com",
-    "brand": "toontaku",
-    "name": "Toontaku",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "toontaku.com",
-    "baseUrl": "https://toontaku.com",
-    "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_custom",
-      "local_tr"
     ],
     "verified_by_user": true,
     "merged_variant_count": 3
@@ -932,49 +974,90 @@
     "merged_variant_count": 2
   },
   {
-    "id": "patimanga.com",
-    "brand": "pati",
-    "name": "Pati Manga",
+    "id": "tenshimanga.com",
+    "brand": "tenshi",
+    "name": "Tenshi Manga",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "patimanga.com",
-    "baseUrl": "https://www.patimanga.com",
+    "domain": "tenshimanga.com",
+    "baseUrl": "https://tenshimanga.com",
     "altDomains": [],
-    "engine": "mangareader",
-    "config": {
-      "pageSize": 20,
-      "searchPageSize": 10,
-      "capabilities": {
-        "tagsExclusion": false
-      }
-    },
+    "engine": "custom",
+    "config": {},
     "origins": [
       "keiyoushi_index",
-      "local_tr",
-      "nyora_datadriven"
+      "local_tr"
     ],
     "verified_by_user": true,
-    "merged_variant_count": 3
+    "merged_variant_count": 2
   },
   {
-    "id": "fuchscans.com",
-    "brand": "deccal",
-    "name": "DeccalScans",
+    "id": "2641311214423625823",
+    "brand": "globalcomix",
+    "name": "GlobalComix",
     "lang": "tr",
-    "nsfw": 1,
-    "domain": "fuchscans.com",
-    "baseUrl": "https://fuchscans.com",
+    "nsfw": 0,
+    "domain": "globalcomix.com",
+    "baseUrl": "https://globalcomix.com",
     "altDomains": [],
-    "engine": "madara",
-    "config": {
-      "tagPrefix": "turler/"
-    },
+    "engine": "keiyoushi",
+    "config": {},
     "origins": [
-      "local_tr",
-      "nyora_datadriven"
+      "keiyoushi_index"
     ],
     "verified_by_user": false,
-    "merged_variant_count": 2
+    "merged_variant_count": 1
+  },
+  {
+    "id": "7492246554765916610",
+    "brand": "dragonballmultiverse",
+    "name": "Dragon Ball Multiverse",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "dragonball-multiverse.com",
+    "baseUrl": "https://www.dragonball-multiverse.com",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "4089747984244989816",
+    "brand": "duck",
+    "name": "Duck Scans",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "duckscans.com",
+    "baseUrl": "https://duckscans.com",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "8160196832207812846",
+    "brand": "faichisubs",
+    "name": "FaichiSubs",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "faichisubs.com",
+    "baseUrl": "https://faichisubs.com",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
   },
   {
     "id": "garciamanga.com",
@@ -999,13 +1082,418 @@
     "merged_variant_count": 2
   },
   {
+    "id": "hattorimanga.net",
+    "brand": "hattori",
+    "name": "Hattori Manga",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "hattorimanga.net",
+    "baseUrl": "https://hattorimanga.net",
+    "altDomains": [
+      "hattoriscans.com"
+    ],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 6
+  },
+  {
+    "id": "asemifansub.com",
+    "brand": "asemi",
+    "name": "AsemiFansub",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "quoterivers.com",
+    "baseUrl": "https://quoterivers.com",
+    "altDomains": [
+      "asemifansub.com"
+    ],
+    "engine": "mangareader",
+    "config": {
+      "pageSize": 20,
+      "searchPageSize": 10
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "kuroimanga.site",
+    "brand": "kuroi",
+    "name": "Kuroi Manga",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "kuroimanga.site",
+    "baseUrl": "https://kuroimanga.site",
+    "altDomains": [
+      "kuroimanga.com"
+    ],
+    "engine": "madara",
+    "config": {
+      "datePattern": "d MMMM yyyy"
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 5
+  },
+  {
+    "id": "adumanga",
+    "brand": "adumanga",
+    "name": "AduManga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "riddles-with-answers.com",
+    "baseUrl": "https://riddles-with-answers.com",
+    "altDomains": [
+      "adumanga.com"
+    ],
+    "engine": "mangareader",
+    "config": {
+      "pageSize": 20,
+      "searchPageSize": 10,
+      "locale": "en",
+      "capabilities": {
+        "tagsExclusion": false
+      }
+    },
+    "origins": [
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "holyscans.com.tr",
+    "brand": "holy",
+    "name": "Holy Scans",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "holyscans.com.tr",
+    "baseUrl": "https://holyscans.com.tr",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "3759878972130438558",
+    "brand": "kaira",
+    "name": "Kairatoon",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "kairatoon.net",
+    "baseUrl": "https://kairatoon.net",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "hoifansub.com",
+    "brand": "hoifansub",
+    "name": "HoiFansub",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "hoifansub.com",
+    "baseUrl": "https://hoifansub.com",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {},
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
     "id": "juratempe.st",
     "brand": "juratempe",
     "name": "juratempe",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "juratempe.st",
-    "baseUrl": "https://juratempe.st",
+    "domain": "youtube.com",
+    "baseUrl": "https://youtube.com",
+    "altDomains": [
+      "juratempe.st"
+    ],
+    "engine": "unknown",
+    "config": {},
+    "origins": [
+      "local_custom"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "mangaoku.org",
+    "brand": "atikrost",
+    "name": "Atikrost",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangaoku.com.tr",
+    "baseUrl": "https://mangaoku.com.tr",
+    "altDomains": [
+      "mangaoku.com.tr",
+      "mangaoku.org"
+    ],
+    "engine": "madara",
+    "config": {
+      "datePattern": "d MMMM yyyy"
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "6304497572870246566",
+    "brand": "hentaihand",
+    "name": "HentaiHand",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "hentaihand.com",
+    "baseUrl": "https://hentaihand.com",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "eleceedturkiye.com",
+    "brand": "eleceedtrkiye",
+    "name": "Eleceed Türkiye",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "nabicix.com",
+    "baseUrl": "https://nabicix.com",
+    "altDomains": [
+      "eleceedturkiye.com"
+    ],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "ghostoon.com",
+    "brand": "ghos",
+    "name": "GhosToon",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "ghostoon.com",
+    "baseUrl": "https://ghostoon.com",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "laviniafansub.site",
+    "brand": "lavinia",
+    "name": "LaviniaFansub",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "laviniafansub.site",
+    "baseUrl": "https://laviniafansub.site",
+    "altDomains": [
+      "laviniafansub.shop"
+    ],
+    "engine": "madara",
+    "config": {
+      "datePattern": "dd/MM/yyyy"
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 5
+  },
+  {
+    "id": "mangabahcesi.com",
+    "brand": "mangabahesi",
+    "name": "Manga Bahçesi",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangabahcesi.com",
+    "baseUrl": "https://mangabahcesi.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "gafeland.com",
+    "brand": "gafeland",
+    "name": "gafeland",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "gafeland.com",
+    "baseUrl": "https://gafeland.com",
+    "altDomains": [],
+    "engine": "mangareader",
+    "config": {
+      "pageSize": 20,
+      "searchPageSize": 10,
+      "capabilities": {
+        "tagsExclusion": false
+      }
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": true,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "8648105733020574748",
+    "brand": "mangaball",
+    "name": "Manga Ball",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangaball.com",
+    "baseUrl": "https://mangaball.com",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "siyahmelek.org",
+    "brand": "grimelek",
+    "name": "Grimelek",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "siyahmelek.fun",
+    "baseUrl": "https://siyahmelek.fun",
+    "altDomains": [
+      "siyahmelek.fun"
+    ],
+    "engine": "madara",
+    "config": {
+      "datePattern": "d MMMM yyyy",
+      "listUrl": "seri/"
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "manga.araznovel.com",
+    "brand": "manga",
+    "name": "manga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "manga.araznovel.com",
+    "baseUrl": "https://manga.araznovel.com",
+    "altDomains": [],
+    "engine": "unknown",
+    "config": {},
+    "origins": [
+      "local_custom"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "kazescans.com",
+    "brand": "kaze",
+    "name": "KazeScans",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "kazescans.com",
+    "baseUrl": "https://kazescans.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "mangakulesi.com",
+    "brand": "mangakulesi",
+    "name": "Manga Kulesi",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangakulesi.com",
+    "baseUrl": "https://mangakulesi.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "mangabahcesi.com",
+    "brand": "mangabahcesi",
+    "name": "mangabahcesi",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangabahcesi.com",
+    "baseUrl": "https://mangabahcesi.com",
     "altDomains": [],
     "engine": "unknown",
     "config": {},
@@ -1039,67 +1527,6 @@
     "merged_variant_count": 4
   },
   {
-    "id": "3881169888283649510",
-    "brand": "lunar",
-    "name": "Lunar Manga",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "lunarx.to",
-    "baseUrl": "https://lunarx.to",
-    "altDomains": [],
-    "engine": "keiyoushi",
-    "config": {
-      "searchUrl": "https://api.lunarx.to/api/manga/search?query={query}",
-      "searchJsonItems": "manga",
-      "searchJsonUrl": "slug",
-      "searchJsonTitle": "title",
-      "searchJsonPathPrefix": "/manga/",
-      "rscChapterUrl": "/manga/{slug}/{number}",
-      "pageApiUrl": "https://api.lunarx.to/api/manga/{1}/{2}",
-      "pageApiIdPattern": "^(?:https?://[^/]+)?/manga/([^/]+)/([0-9.]+)/?$",
-      "pageApiItems": "data.images"
-    },
-    "origins": [
-      "keiyoushi_index"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
-    "id": "2641311214423625823",
-    "brand": "globalcomix",
-    "name": "GlobalComix",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "globalcomix.com",
-    "baseUrl": "https://globalcomix.com",
-    "altDomains": [],
-    "engine": "keiyoushi",
-    "config": {},
-    "origins": [
-      "keiyoushi_index"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
-    "id": "3846770256925560569",
-    "brand": "mangadex",
-    "name": "MangaDex",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "mangadex.org",
-    "baseUrl": "https://mangadex.org",
-    "altDomains": [],
-    "engine": "keiyoushi",
-    "config": {},
-    "origins": [
-      "keiyoushi_index"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
     "id": "mangadiyari.com",
     "brand": "mangadiyari",
     "name": "mangadiyari",
@@ -1115,88 +1542,6 @@
     ],
     "verified_by_user": false,
     "merged_variant_count": 1
-  },
-  {
-    "id": "hoifansub.com",
-    "brand": "hoifansub",
-    "name": "HoiFansub",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "hoifansub.com",
-    "baseUrl": "https://hoifansub.com",
-    "altDomains": [],
-    "engine": "madara",
-    "config": {},
-    "origins": [
-      "local_tr",
-      "nyora_datadriven"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 2
-  },
-  {
-    "id": "mangadusleri.mom",
-    "brand": "mangadusleri",
-    "name": "Mangadusleri",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "mangadusleri.mom",
-    "baseUrl": "https://mangadusleri.mom",
-    "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_custom",
-      "local_tr"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 3
-  },
-  {
-    "id": "jiangzaitoon.icu",
-    "brand": "jiangzai",
-    "name": "jiangzaitoon",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "jiangzaitoon.icu",
-    "baseUrl": "https://jiangzaitoon.icu",
-    "altDomains": [
-      "jiangzaitoon.top"
-    ],
-    "engine": "madara",
-    "config": {
-      "datePattern": "d MMMM yyyy",
-      "postReq": true
-    },
-    "origins": [
-      "local_custom",
-      "local_tr",
-      "nyora_datadriven"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 4
-  },
-  {
-    "id": "mangakusu.com",
-    "brand": "mangakusu",
-    "name": "Manga Kusu",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "ragnarscans.net",
-    "baseUrl": "https://ragnarscans.net",
-    "altDomains": [
-      "mangakusu.com"
-    ],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_custom",
-      "local_tr"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 3
   },
   {
     "id": "5964430973280552505",
@@ -1234,6 +1579,71 @@
     "merged_variant_count": 2
   },
   {
+    "id": "mangadusleri.mom",
+    "brand": "mangadusleri",
+    "name": "Mangadusleri",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "mangadusleri.mom",
+    "baseUrl": "https://mangadusleri.mom",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "domalfansb.com.tr",
+    "brand": "domal",
+    "name": "DomalFansub",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "cerdma.com",
+    "baseUrl": "https://cerdma.com",
+    "altDomains": [
+      "dom4lfansub.online",
+      "domalfansb.com.tr"
+    ],
+    "engine": "madara",
+    "config": {
+      "datePattern": "d MMMM yyyy",
+      "tagPrefix": "manga-turleri/"
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "mangagezgini.site",
+    "brand": "glory",
+    "name": "GloryManga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "ww38.mangagezgini.site",
+    "baseUrl": "https://ww38.mangagezgini.site",
+    "altDomains": [
+      "mangagezgini.site"
+    ],
+    "engine": "madara",
+    "config": {
+      "datePattern": "dd/MM/yyyy"
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
     "id": "nemesisscans.com",
     "brand": "mangaokuwebtoonokumanhwa",
     "name": "Manga Oku, Webtoon Oku, Manhwa &",
@@ -1251,59 +1661,86 @@
     "merged_variant_count": 1
   },
   {
-    "id": "eleceedturkiye.com",
-    "brand": "eleceedtrkiye",
-    "name": "Eleceed Türkiye",
+    "id": "3846770256925560569",
+    "brand": "mangadex",
+    "name": "MangaDex",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "nabicix.com",
-    "baseUrl": "https://nabicix.com",
-    "altDomains": [
-      "eleceedturkiye.com"
-    ],
-    "engine": "custom",
+    "domain": "mangadex.org",
+    "baseUrl": "https://mangadex.org",
+    "altDomains": [],
+    "engine": "keiyoushi",
     "config": {},
     "origins": [
-      "local_tr"
+      "keiyoushi_index"
     ],
     "verified_by_user": false,
     "merged_variant_count": 1
   },
   {
-    "id": "mangagezginim.com",
-    "brand": "mangagezgini",
-    "name": "MangaGezgini",
+    "id": "mangamac.com",
+    "brand": "mangamac",
+    "name": "MangaMAC",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "mangagezgini.online",
-    "baseUrl": "https://mangagezgini.online",
-    "altDomains": [
-      "mangagezgini.online"
-    ],
-    "engine": "madara",
-    "config": {
-      "datePattern": "dd/MM/yyyy"
-    },
+    "domain": "mangamac.com",
+    "baseUrl": "https://mangamac.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
     "origins": [
-      "local_tr",
-      "nyora_datadriven"
+      "keiyoushi_index",
+      "local_tr"
     ],
     "verified_by_user": false,
-    "merged_variant_count": 3
+    "merged_variant_count": 2
   },
   {
-    "id": "mangasiginagi.com",
-    "brand": "mangasiginagi",
-    "name": "MangaSiginagi",
+    "id": "4285486314572394667",
+    "brand": "mangamulti",
+    "name": "Manga Multi",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "mangasiginagi.com",
-    "baseUrl": "https://mangasiginagi.com",
+    "domain": "mangamulti.com",
+    "baseUrl": "https://www.mangamulti.com",
     "altDomains": [],
-    "engine": "mangareader",
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "1538587979414015537",
+    "brand": "aero",
+    "name": "AeroToon",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "aerotoon.vercel.app",
+    "baseUrl": "https://aerotoon.vercel.app",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "mangaokusana.com",
+    "brand": "mangaokusana",
+    "name": "MangaOkusana",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangaokusana.com",
+    "baseUrl": "https://mangaokusana.com",
+    "altDomains": [],
+    "engine": "madara",
     "config": {
-      "pageSize": 20,
-      "searchPageSize": 10
+      "datePattern": "dd MMMM yyyy"
     },
     "origins": [
       "local_tr",
@@ -1335,16 +1772,36 @@
     "merged_variant_count": 2
   },
   {
-    "id": "mangaruhu.com",
-    "brand": "mangaruhu",
-    "name": "MangaRuhu",
+    "id": "millascan.com",
+    "brand": "millascan",
+    "name": "millascan",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "mangaruhu.com",
-    "baseUrl": "https://mangaruhu.com",
+    "domain": "millascan.com",
+    "baseUrl": "https://millascan.com",
     "altDomains": [],
     "engine": "madara",
     "config": {},
+    "origins": [
+      "local_custom"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "mangasiginagi.com",
+    "brand": "mangasiginagi",
+    "name": "MangaSiginagi",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangasiginagi.com",
+    "baseUrl": "https://mangasiginagi.com",
+    "altDomains": [],
+    "engine": "mangareader",
+    "config": {
+      "pageSize": 20,
+      "searchPageSize": 10
+    },
     "origins": [
       "local_tr",
       "nyora_datadriven"
@@ -1353,18 +1810,86 @@
     "merged_variant_count": 2
   },
   {
-    "id": "mangtto.com",
-    "brand": "mangtto",
-    "name": "mangtto",
+    "id": "millascan.com",
+    "brand": "milasub",
+    "name": "MilaSub",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "mangtto.com",
-    "baseUrl": "https://mangtto.com",
-    "altDomains": [],
-    "engine": "unknown",
+    "domain": "millascan.com",
+    "baseUrl": "https://millascan.com",
+    "altDomains": [
+      "milascans.tr"
+    ],
+    "engine": "madara",
+    "config": {
+      "datePattern": "d MMMM yyyy"
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 4
+  },
+  {
+    "id": "mangakusu.com",
+    "brand": "mangakusu",
+    "name": "Manga Kusu",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "ragnarscans2.com",
+    "baseUrl": "https://ragnarscans2.com",
+    "altDomains": [
+      "mangakusu.com"
+    ],
+    "engine": "custom",
     "config": {},
     "origins": [
-      "local_custom"
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "mangagezginim.com",
+    "brand": "mangagezgini",
+    "name": "MangaGezgini",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangagezgini.online",
+    "baseUrl": "https://mangagezgini.online",
+    "altDomains": [
+      "mangagezgini.online"
+    ],
+    "engine": "madara",
+    "config": {
+      "datePattern": "dd/MM/yyyy"
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "LICHSUBS",
+    "brand": "lichsubs",
+    "name": "LichSubs",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "kuroimanga.com",
+    "baseUrl": "https://www.kuroimanga.com",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {
+      "datePattern": "dd/MM/yyyy"
+    },
+    "origins": [
+      "nyora_datadriven"
     ],
     "verified_by_user": false,
     "merged_variant_count": 1
@@ -1391,21 +1916,53 @@
     "merged_variant_count": 1
   },
   {
-    "id": "mangaoku.info",
-    "brand": "mangaoku",
-    "name": "Mangaoku",
+    "id": "mangtto.com",
+    "brand": "mangtto",
+    "name": "mangtto",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "ww16.mangaoku.info",
-    "baseUrl": "https://ww16.mangaoku.info",
+    "domain": "mangtto.com",
+    "baseUrl": "https://mangtto.com",
+    "altDomains": [],
+    "engine": "unknown",
+    "config": {},
+    "origins": [
+      "local_custom"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "manga-ay.com",
+    "brand": "mangaay",
+    "name": "MangaAy",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "manga-ay.com",
+    "baseUrl": "https://manga-ay.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "guncelmanga.net",
+    "brand": "guncel",
+    "name": "GuncelManga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "sonew.mycloudstudio.co.in",
+    "baseUrl": "https://sonew.mycloudstudio.co.in",
     "altDomains": [
-      "mangaoku.info"
+      "guncelmanga.net"
     ],
     "engine": "madara",
     "config": {
-      "datePattern": "dd MMMM yyyy",
-      "listUrl": "seri/",
-      "tagPrefix": "tur/"
+      "datePattern": "d MMMM yyyy"
     },
     "origins": [
       "local_tr",
@@ -1415,13 +1972,13 @@
     "merged_variant_count": 2
   },
   {
-    "id": "8648105733020574748",
-    "brand": "mangaball",
-    "name": "Manga Ball",
+    "id": "164535712016830416",
+    "brand": "myreading",
+    "name": "MyReadingManga",
     "lang": "tr",
-    "nsfw": 0,
-    "domain": "mangaball.com",
-    "baseUrl": "https://mangaball.com",
+    "nsfw": 1,
+    "domain": "myreadingmanga.info",
+    "baseUrl": "https://myreadingmanga.info",
     "altDomains": [],
     "engine": "keiyoushi",
     "config": {},
@@ -1430,6 +1987,27 @@
     ],
     "verified_by_user": false,
     "merged_variant_count": 1
+  },
+  {
+    "id": "mangaruhu.com",
+    "brand": "mangaruhu",
+    "name": "MangaRuhu",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mangaruhu.net",
+    "baseUrl": "https://mangaruhu.net",
+    "altDomains": [
+      "mangaruhu.com"
+    ],
+    "engine": "madara",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
   },
   {
     "id": "mangaportali.com",
@@ -1449,41 +2027,23 @@
     "merged_variant_count": 1
   },
   {
-    "id": "mugimanga.com",
-    "brand": "mugi",
-    "name": "MugiManga",
+    "id": "okutoon.com",
+    "brand": "okutoon",
+    "name": "OkuToon",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "mugimanga.com",
-    "baseUrl": "https://mugimanga.com",
+    "domain": "okutoon.com",
+    "baseUrl": "https://okutoon.com",
     "altDomains": [],
-    "engine": "madara",
-    "config": {
-      "datePattern": "dd/MM/yyyy"
-    },
-    "origins": [
-      "local_tr",
-      "nyora_datadriven"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 2
-  },
-  {
-    "id": "nyxmanga.com",
-    "brand": "nyxmanga",
-    "name": "NyxManga",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "nyxmanga.com",
-    "baseUrl": "https://nyxmanga.com",
-    "altDomains": [],
-    "engine": "mangareader",
+    "engine": "custom",
     "config": {},
     "origins": [
+      "keiyoushi_index",
+      "local_custom",
       "local_tr"
     ],
     "verified_by_user": false,
-    "merged_variant_count": 1
+    "merged_variant_count": 3
   },
   {
     "id": "nyxscans.com",
@@ -1511,34 +2071,16 @@
     "merged_variant_count": 3
   },
   {
-    "id": "okutoon.com",
-    "brand": "okutoon",
-    "name": "OkuToon",
+    "id": "niverafansub.org",
+    "brand": "nivera",
+    "name": "NiveraFansub",
     "lang": "tr",
-    "nsfw": 0,
-    "domain": "okutoon.com",
-    "baseUrl": "https://okutoon.com",
-    "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_custom",
-      "local_tr"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 3
-  },
-  {
-    "id": "millascan.com",
-    "brand": "milasub",
-    "name": "MilaSub",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "millascan.com",
-    "baseUrl": "https://millascan.com",
+    "nsfw": 1,
+    "domain": "niverafansub.org",
+    "baseUrl": "https://niverafansub.org",
     "altDomains": [
-      "milascans.tr"
+      "niverafansub.dev",
+      "niverafansub.one"
     ],
     "engine": "madara",
     "config": {
@@ -1546,11 +2088,73 @@
     },
     "origins": [
       "keiyoushi_index",
+      "local_custom",
       "local_tr",
       "nyora_datadriven"
     ],
     "verified_by_user": false,
-    "merged_variant_count": 4
+    "merged_variant_count": 5
+  },
+  {
+    "id": "mangakoleji.com",
+    "brand": "mangakoleji",
+    "name": "MangaKoleji",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "dropcatch.com",
+    "baseUrl": "https://dropcatch.com",
+    "altDomains": [
+      "mangakoleji.com"
+    ],
+    "engine": "mangareader",
+    "config": {
+      "pageSize": 20,
+      "searchPageSize": 10,
+      "capabilities": {
+        "tagsExclusion": true
+      }
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "norascans.com",
+    "brand": "nora",
+    "name": "Nora Scans",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "norascans.com",
+    "baseUrl": "https://norascans.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "6423038744951581148",
+    "brand": "nhentaicomunoriginal",
+    "name": "nHentai.com (unoriginal)",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "nhentai.com",
+    "baseUrl": "https://nhentai.com",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
   },
   {
     "id": "noxscans.com",
@@ -1595,40 +2199,6 @@
     "merged_variant_count": 2
   },
   {
-    "id": "millascan.com",
-    "brand": "millascan",
-    "name": "millascan",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "millascan.com",
-    "baseUrl": "https://millascan.com",
-    "altDomains": [],
-    "engine": "madara",
-    "config": {},
-    "origins": [
-      "local_custom"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
-    "id": "6830559705127350757",
-    "brand": "pandachaika",
-    "name": "PandaChaika",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "panda.chaika.moe",
-    "baseUrl": "https://panda.chaika.moe",
-    "altDomains": [],
-    "engine": "keiyoushi",
-    "config": {},
-    "origins": [
-      "keiyoushi_index"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
     "id": "1404231504220588104",
     "brand": "namicomi",
     "name": "NamiComi",
@@ -1644,6 +2214,54 @@
     ],
     "verified_by_user": false,
     "merged_variant_count": 1
+  },
+  {
+    "id": "paradoxscans.com",
+    "brand": "paradox",
+    "name": "Paradox Scans",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "paradoxscans.com",
+    "baseUrl": "https://paradoxscans.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "moondaisyscans.biz",
+    "brand": "moondaisy",
+    "name": "MoonDaisyScans",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "expireddomains.com",
+    "baseUrl": "https://expireddomains.com",
+    "altDomains": [
+      "moondaisyscans.biz",
+      "moondaisyscans.pro"
+    ],
+    "engine": "mangareader",
+    "config": {
+      "pageSize": 20,
+      "searchPageSize": 10,
+      "capabilities": {
+        "tagsExclusion": false
+      }
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 5
   },
   {
     "id": "raindropteamfan.com",
@@ -1671,40 +2289,19 @@
     "merged_variant_count": 3
   },
   {
-    "id": "paradoxscans.com",
-    "brand": "paradox",
-    "name": "Paradox Scans",
+    "id": "ravenscans.org",
+    "brand": "raven",
+    "name": "RavenScans",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "paradoxscans.com",
-    "baseUrl": "https://paradoxscans.com",
+    "domain": "ravenscans.org",
+    "baseUrl": "https://ravenscans.org",
     "altDomains": [],
-    "engine": "custom",
+    "engine": "mangareader",
     "config": {},
     "origins": [
-      "keiyoushi_index",
       "local_custom",
       "local_tr"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 3
-  },
-  {
-    "id": "piedpiperfansubyy.me",
-    "brand": "piedpiperfansubyy",
-    "name": "PiedPiperFansubyy",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "piedpiperfansubyy.me",
-    "baseUrl": "https://piedpiperfansubyy.me",
-    "altDomains": [],
-    "engine": "madara",
-    "config": {
-      "datePattern": "d MMMM yyyy"
-    },
-    "origins": [
-      "local_tr",
-      "nyora_datadriven"
     ],
     "verified_by_user": false,
     "merged_variant_count": 2
@@ -1727,22 +2324,124 @@
     "merged_variant_count": 1
   },
   {
-    "id": "ravenscans.org",
-    "brand": "raven",
-    "name": "RavenScans",
+    "id": "mangaoku.info",
+    "brand": "mangaoku",
+    "name": "Mangaoku",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "ravenscans.org",
-    "baseUrl": "https://ravenscans.org",
+    "domain": "ww16.mangaoku.info",
+    "baseUrl": "https://ww16.mangaoku.info",
+    "altDomains": [
+      "mangaoku.info"
+    ],
+    "engine": "madara",
+    "config": {
+      "datePattern": "dd MMMM yyyy",
+      "listUrl": "seri/",
+      "tagPrefix": "tur/"
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "mugimanga.com",
+    "brand": "mugi",
+    "name": "MugiManga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "mugimanga.com",
+    "baseUrl": "https://mugimanga.com",
     "altDomains": [],
-    "engine": "mangareader",
+    "engine": "madara",
+    "config": {
+      "datePattern": "dd/MM/yyyy"
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "outcatscans.net",
+    "brand": "outcats",
+    "name": "Outcats Scans",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "outcatscans.net",
+    "baseUrl": "https://outcatscans.net",
+    "altDomains": [],
+    "engine": "custom",
     "config": {},
     "origins": [
-      "local_custom",
+      "keiyoushi_index",
       "local_tr"
     ],
     "verified_by_user": false,
     "merged_variant_count": 2
+  },
+  {
+    "id": "piedpiperfansubyy.me",
+    "brand": "piedpiperfansubyy",
+    "name": "PiedPiperFansubyy",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "piedpiperfansubyy.me",
+    "baseUrl": "https://piedpiperfansubyy.me",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {
+      "datePattern": "d MMMM yyyy"
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "2964530292665029215",
+    "brand": "otakuangel",
+    "name": "OtakuAngel",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "otakuangel.com",
+    "baseUrl": "https://otakuangel.com",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "siyahmelek.my",
+    "brand": "siyahmelek",
+    "name": "Siyah Melek",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "siyahmelek.my",
+    "baseUrl": "https://siyahmelek.my",
+    "altDomains": [
+      "siyahmelek.fun"
+    ],
+    "engine": "initmanga",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 4
   },
   {
     "id": "guildknives.com",
@@ -1769,6 +2468,42 @@
     "merged_variant_count": 2
   },
   {
+    "id": "monomanga.com.tr",
+    "brand": "mono",
+    "name": "Mono Manga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "monomanga.com.tr",
+    "baseUrl": "https://monomanga.com.tr",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "sadscans.com",
+    "brand": "sadscans",
+    "name": "SadScans",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "sadscans.com",
+    "baseUrl": "https://sadscans.com",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
     "id": "opiatoon.art",
     "brand": "opia",
     "name": "OpiaToon",
@@ -1793,18 +2528,22 @@
     "merged_variant_count": 5
   },
   {
-    "id": "manga.araznovel.com",
-    "brand": "manga",
-    "name": "manga",
+    "id": "shadowceviri",
+    "brand": "shadow",
+    "name": "ShadowCeviri",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "manga.araznovel.com",
-    "baseUrl": "https://manga.araznovel.com",
+    "domain": "shadowceviri.blogspot.com",
+    "baseUrl": "https://shadowceviri.blogspot.com",
     "altDomains": [],
-    "engine": "unknown",
-    "config": {},
+    "engine": "zeistmanga",
+    "config": {
+      "stateOngoing": "Devam Ediyor",
+      "stateFinished": "Tamamlandı",
+      "stateAbandoned": "Güncel"
+    },
     "origins": [
-      "local_custom"
+      "nyora_datadriven"
     ],
     "verified_by_user": false,
     "merged_variant_count": 1
@@ -1828,85 +2567,84 @@
     "merged_variant_count": 2
   },
   {
-    "id": "sadscans.com",
-    "brand": "sadscans",
-    "name": "SadScans",
+    "id": "8800126243432184157",
+    "brand": "swarm",
+    "name": "Swarm",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "sadscans.com",
-    "baseUrl": "https://sadscans.com",
+    "domain": "swarm.ws",
+    "baseUrl": "https://swarm.ws",
     "altDomains": [],
-    "engine": "custom",
+    "engine": "keiyoushi",
     "config": {},
     "origins": [
-      "local_tr"
+      "keiyoushi_index"
     ],
     "verified_by_user": false,
     "merged_variant_count": 1
   },
   {
-    "id": "summertoons.net",
-    "brand": "summer",
-    "name": "SummerToon",
+    "id": "252822661917673438",
+    "brand": "toonspace",
+    "name": "ToonSpace",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "toon.space",
+    "baseUrl": "https://toon.space",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "ragnarscans.com",
+    "brand": "ragnar",
+    "name": "Ragnarscans",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "summertoons.net",
-    "baseUrl": "https://summertoons.net",
+    "domain": "ragnarscans2.com",
+    "baseUrl": "https://ragnarscans2.com",
     "altDomains": [
-      "summertoon.co"
+      "ragnarscans.com",
+      "ragnarscans.net"
     ],
-    "engine": "mangathemesia",
-    "config": {
-      "pageSize": 10,
-      "searchPageSize": 10,
-      "capabilities": {
-        "tagsExclusion": false
-      }
-    },
+    "engine": "initmanga",
+    "config": {},
     "origins": [
       "keiyoushi_index",
+      "local_custom",
       "local_tr",
       "nyora_datadriven"
     ],
     "verified_by_user": false,
-    "merged_variant_count": 4
+    "merged_variant_count": 5
   },
   {
-    "id": "shadowceviri",
-    "brand": "shadow",
-    "name": "ShadowCeviri",
+    "id": "snscoeurturkey.blogspot.com",
+    "brand": "snscoeurturkey",
+    "name": "SnscoeurTurkey",
     "lang": "tr",
-    "nsfw": 0,
-    "domain": "shadowceviri.blogspot.com",
-    "baseUrl": "https://shadowceviri.blogspot.com",
+    "nsfw": 1,
+    "domain": "snscoeurturkey.blogspot.com",
+    "baseUrl": "https://snscoeurturkey.blogspot.com",
     "altDomains": [],
     "engine": "zeistmanga",
     "config": {
-      "stateOngoing": "Devam Ediyor",
-      "stateFinished": "Tamamlandı",
-      "stateAbandoned": "Güncel"
-    },
-    "origins": [
-      "nyora_datadriven"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
-    "id": "seraphmanga.com",
-    "brand": "seraph",
-    "name": "SeraphManga",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "seraphmanga.com",
-    "baseUrl": "https://seraphmanga.com",
-    "altDomains": [],
-    "engine": "mangareader",
-    "config": {
-      "pageSize": 20,
-      "searchPageSize": 10,
-      "capabilities": {
-        "tagsExclusion": false
+      "mangaCategory": "Seriler",
+      "stateOngoing": "Güncel",
+      "stateFinished": "Final",
+      "stateAbandoned": "Düzenleniyor",
+      "tagScrape": {
+        "path": "/p/gelismis-arama.html",
+        "rootSelector": "div.filter",
+        "item": "ul li",
+        "keyMode": "input",
+        "titleMode": "label",
+        "titleCase": false
       }
     },
     "origins": [
@@ -1915,61 +2653,6 @@
     ],
     "verified_by_user": false,
     "merged_variant_count": 2
-  },
-  {
-    "id": "webtoonoku.org",
-    "brand": "trkemangavewebtoonoku",
-    "name": "Türkçe Manga ve Webtoon Oku",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "webtoonoku.org",
-    "baseUrl": "https://webtoonoku.org",
-    "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "local_custom"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
-    "id": "timenaight.org",
-    "brand": "timenaight",
-    "name": "TimeNaight",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "timenaight.org",
-    "baseUrl": "https://timenaight.org",
-    "altDomains": [],
-    "engine": "madara",
-    "config": {
-      "postReq": true,
-      "datePattern": "dd/MM/yyyy"
-    },
-    "origins": [
-      "local_tr",
-      "nyora_datadriven"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 2
-  },
-  {
-    "id": "summertoons.net",
-    "brand": "webtoonokumanhwaokumangao",
-    "name": "Webtoon Oku, Manhwa Oku, Manga O",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "summertoons.net",
-    "baseUrl": "https://summertoons.net",
-    "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "local_custom"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
   },
   {
     "id": "TRMANGAOKU",
@@ -1986,6 +2669,23 @@
     },
     "origins": [
       "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "ruyamanga2.com",
+    "brand": "ruyamanga2",
+    "name": "ruyamanga2",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "ruyamanga2.com",
+    "baseUrl": "https://ruyamanga2.com",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {},
+    "origins": [
+      "local_custom"
     ],
     "verified_by_user": false,
     "merged_variant_count": 1
@@ -2009,132 +2709,20 @@
     "merged_variant_count": 2
   },
   {
-    "id": "tonizu.top",
-    "brand": "tonizu",
-    "name": "TonizuToon",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "tonizu.top",
-    "baseUrl": "https://tonizu.top",
-    "altDomains": [],
-    "engine": "madara",
-    "config": {
-      "datePattern": "dd/mm/yyyy"
-    },
-    "origins": [
-      "keiyoushi_index",
-      "local_tr",
-      "nyora_datadriven"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 3
-  },
-  {
-    "id": "sunsetmanga.com",
-    "brand": "sunset",
-    "name": "Sunset Manga",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "sunsetscans.com.tr",
-    "baseUrl": "https://sunsetscans.com.tr",
-    "altDomains": [
-      "sunsetmanga.com"
-    ],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index",
-      "local_custom",
-      "local_tr"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 3
-  },
-  {
-    "id": "ruyamanga2.com",
-    "brand": "ruyamanga2",
-    "name": "ruyamanga2",
+    "id": "ruyamanga.net",
+    "brand": "ruya",
+    "name": "RuyaManga",
     "lang": "tr",
     "nsfw": 0,
     "domain": "ruyamanga2.com",
     "baseUrl": "https://ruyamanga2.com",
-    "altDomains": [],
+    "altDomains": [
+      "ruyamanga2.com"
+    ],
     "engine": "madara",
-    "config": {},
-    "origins": [
-      "local_custom"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
-    "id": "toonhane.com",
-    "brand": "toonhane",
-    "name": "ToonHane",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "toonhane.com",
-    "baseUrl": "https://toonhane.com",
-    "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "local_custom",
-      "local_tr"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 2
-  },
-  {
-    "id": "6593451456647607548",
-    "brand": "xcomic",
-    "name": "XCOMIC",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "xcomic.me",
-    "baseUrl": "https://xcomic.me",
-    "altDomains": [],
-    "engine": "keiyoushi",
-    "config": {},
-    "origins": [
-      "keiyoushi_index"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
-    "id": "2519173041052749659",
-    "brand": "webtoonia",
-    "name": "Webtoonia",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "webtoonia.fun",
-    "baseUrl": "https://webtoonia.fun",
-    "altDomains": [],
-    "engine": "keiyoushi",
-    "config": {},
-    "origins": [
-      "keiyoushi_index"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
-    "id": "zenithscans.com",
-    "brand": "zenith",
-    "name": "ZenithScans",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "zenithscans.com",
-    "baseUrl": "https://zenithscans.com",
-    "altDomains": [],
-    "engine": "mangareader",
     "config": {
-      "pageSize": 20,
-      "searchPageSize": 10,
-      "capabilities": {
-        "tagsExclusion": false
-      }
+      "tagPrefix": "manga-kategori/",
+      "datePattern": "dd/MM/yyyy"
     },
     "origins": [
       "local_tr",
@@ -2169,6 +2757,309 @@
     "merged_variant_count": 3
   },
   {
+    "id": "webtoonhatti.me",
+    "brand": "clover",
+    "name": "CloverManga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "letzfetzofdb.top",
+    "baseUrl": "https://letzfetzofdb.top",
+    "altDomains": [
+      "webtoonhatti.me"
+    ],
+    "engine": "madara",
+    "config": {},
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "tonizu.top",
+    "brand": "tonizu",
+    "name": "TonizuToon",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "tonizu.top",
+    "baseUrl": "https://tonizu.top",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {
+      "datePattern": "dd/mm/yyyy"
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "seraphmanga.com",
+    "brand": "seraph",
+    "name": "SeraphManga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "heffalumpa.com",
+    "baseUrl": "https://heffalumpa.com",
+    "altDomains": [
+      "seraphmanga.com"
+    ],
+    "engine": "mangareader",
+    "config": {
+      "pageSize": 20,
+      "searchPageSize": 10,
+      "capabilities": {
+        "tagsExclusion": false
+      }
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "titanmanga.com",
+    "brand": "titan",
+    "name": "TitanManga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "titanmanga.com",
+    "baseUrl": "https://titanmanga.com",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {},
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "yaoimangaoku.net",
+    "brand": "yaoimangaoku",
+    "name": "Yaoi Manga Oku",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "yaoimangaoku.net",
+    "baseUrl": "https://yaoimangaoku.net",
+    "altDomains": [],
+    "engine": "madara",
+    "config": {
+      "datePattern": "d MMMM yyyy"
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "6593451456647607548",
+    "brand": "xcomic",
+    "name": "XCOMIC",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "xcomic.me",
+    "baseUrl": "https://xcomic.me",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "webtoonoku.org",
+    "brand": "trkemangavewebtoonoku",
+    "name": "Türkçe Manga ve Webtoon Oku",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "webtoonoku.org",
+    "baseUrl": "https://webtoonoku.org",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "local_custom"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "3151409498215291942",
+    "brand": "xiaoai",
+    "name": "Xiaoaitoon",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "xiaoaitoon.org.tr",
+    "baseUrl": "https://xiaoaitoon.org.tr",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "2452661550434610263",
+    "brand": "yaoime",
+    "name": "Yaoi.me",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "yaoi.me",
+    "baseUrl": "https://yaoi.me",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "trwebtoon.com",
+    "brand": "trweb",
+    "name": "TrWebtoon",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "trmanga.com",
+    "baseUrl": "https://trmanga.com",
+    "altDomains": [
+      "trwebtoon.com"
+    ],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
+    "id": "zenithscans.com",
+    "brand": "zenith",
+    "name": "ZenithScans",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "zenithscans.com",
+    "baseUrl": "https://zenithscans.com",
+    "altDomains": [],
+    "engine": "mangareader",
+    "config": {
+      "pageSize": 20,
+      "searchPageSize": 10,
+      "capabilities": {
+        "tagsExclusion": false
+      }
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "webtoonia.fun",
+    "brand": "webtoonia",
+    "name": "Webtoonia",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "webtoonia.fun",
+    "baseUrl": "https://webtoonia.fun",
+    "altDomains": [],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "adumanga.com",
+    "brand": "tempest",
+    "name": "TempestScans",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "riddles-with-answers.com",
+    "baseUrl": "https://riddles-with-answers.com",
+    "altDomains": [
+      "adumanga.com"
+    ],
+    "engine": "mangareader",
+    "config": {
+      "pageSize": 20,
+      "searchPageSize": 10,
+      "capabilities": {
+        "tagsExclusion": false
+      }
+    },
+    "origins": [
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 2
+  },
+  {
+    "id": "strayfansub.com",
+    "brand": "stray",
+    "name": "StrayFansub",
+    "lang": "tr",
+    "nsfw": 1,
+    "domain": "ww38.strayfansub.com",
+    "baseUrl": "https://ww38.strayfansub.com",
+    "altDomains": [
+      "strayfansub.buzz",
+      "strayfansub.com"
+    ],
+    "engine": "madara",
+    "config": {
+      "tagPrefix": "seri-turu/"
+    },
+    "origins": [
+      "keiyoushi_index",
+      "local_tr",
+      "nyora_datadriven"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "2895434874576908511",
+    "brand": "craizgiroman",
+    "name": "Ücra Çizgi Roman",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "ucracizgiroman.com",
+    "baseUrl": "https://www.ucracizgiroman.com",
+    "altDomains": [],
+    "engine": "keiyoushi",
+    "config": {},
+    "origins": [
+      "keiyoushi_index"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 1
+  },
+  {
     "id": "webtoontr.net",
     "brand": "webtoontr",
     "name": "WebtoonTr",
@@ -2191,21 +3082,41 @@
     "merged_variant_count": 2
   },
   {
-    "id": "manga.adonisfansub.com",
-    "brand": "adonis",
-    "name": "AdonisFansub",
+    "id": "sunsetmanga.com",
+    "brand": "sunset",
+    "name": "Sunset Manga",
     "lang": "tr",
     "nsfw": 0,
-    "domain": "manga.adonisfansub.com",
-    "baseUrl": "https://manga.adonisfansub.com",
-    "altDomains": [],
-    "engine": "mangareader",
+    "domain": "sunsetscans.com.tr",
+    "baseUrl": "https://sunsetscans.com.tr",
+    "altDomains": [
+      "sunsetmanga.com",
+      "sunsetscans.com.tr"
+    ],
+    "engine": "custom",
+    "config": {},
+    "origins": [
+      "keiyoushi_index",
+      "local_custom",
+      "local_tr"
+    ],
+    "verified_by_user": false,
+    "merged_variant_count": 3
+  },
+  {
+    "id": "zamanmanga.com",
+    "brand": "zaman",
+    "name": "ZamanManga",
+    "lang": "tr",
+    "nsfw": 0,
+    "domain": "ww38.zamanmanga.com",
+    "baseUrl": "https://ww38.zamanmanga.com",
+    "altDomains": [
+      "zamanmanga.com"
+    ],
+    "engine": "madara",
     "config": {
-      "pageSize": 20,
-      "searchPageSize": 20,
-      "capabilities": {
-        "tagsExclusion": false
-      }
+      "datePattern": "dd MMMM yyyy"
     },
     "origins": [
       "local_tr",
@@ -2235,75 +3146,5 @@
     ],
     "verified_by_user": false,
     "merged_variant_count": 2
-  },
-  {
-    "id": "niverafansub.org",
-    "brand": "niverafansub",
-    "name": "NiveraFansub",
-    "lang": "tr",
-    "nsfw": 1,
-    "domain": "niverafansub.org",
-    "baseUrl": "https://niverafansub.org",
-    "altDomains": [],
-    "engine": "madara",
-    "config": {},
-    "origins": [
-      "kotatsu"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
-    "id": "mangakulesi.com",
-    "brand": "mangakulesi",
-    "name": "Manga Kulesi",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "mangakulesi.com",
-    "baseUrl": "https://mangakulesi.com",
-    "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
-    "id": "mangamac.com",
-    "brand": "mangamac",
-    "name": "MangaMac",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "mangamac.com",
-    "baseUrl": "https://mangamac.com",
-    "altDomains": [],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
-  },
-  {
-    "id": "kencomics.com",
-    "brand": "kencomics",
-    "name": "KenComics",
-    "lang": "tr",
-    "nsfw": 0,
-    "domain": "kencomics.com",
-    "baseUrl": "https://kencomics.com",
-    "altDomains": [
-      "kenscans.com"
-    ],
-    "engine": "custom",
-    "config": {},
-    "origins": [
-      "keiyoushi_index"
-    ],
-    "verified_by_user": false,
-    "merged_variant_count": 1
   }
 ]

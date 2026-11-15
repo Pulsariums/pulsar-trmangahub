@@ -1,72 +1,40 @@
 {
-  "tested_at": "2026-10-16T10:45:30Z",
-  "total_tested": 181,
-  "alive_count": 109,
-  "repaired_count": 7,
-  "dead_count": 72,
+  "tested_at": "2026-11-15T15:56:09Z",
+  "total_tested": 197,
+  "alive_count": 154,
+  "repaired_count": 28,
+  "dead_count": 43,
   "breakdown": {
-    "CLOUDFLARE_KORUMALI": 6,
-    "CANLI_DOGRU": 96,
-    "YEREL_AG_ISP_ENGELI": 44,
-    "OLU_DNS_KAYDI_YOK": 23,
-    "OTOMATIK_TAMIR_YONLENDIRME": 5,
-    "OTOMATIK_TAMIR_ALTERNATIF": 2,
-    "OLU_SPAM_KUMAR_YONLENDIRME": 4,
+    "CLOUDFLARE_KORUMALI": 18,
+    "CANLI_DOGRU": 107,
+    "DOGRULANMIS_YEREL_ENGEL": 1,
+    "OTOMATIK_TAMIR_YONLENDIRME": 24,
+    "OLU_DNS_KAYDI_YOK": 25,
+    "YEREL_AG_ISP_ENGELI": 17,
+    "OTOMATIK_TAMIR_ALTERNATIF": 4,
     "OLU_HTTP_SUNUCU_KAPALI": 1
   },
   "results": [
     {
-      "domain": "kuroimanga.site",
+      "domain": "gaiatoon.com",
       "status": "CLOUDFLARE_KORUMALI",
       "alive": true,
       "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
-        "id": "kuroimanga.site",
-        "brand": "kuroi",
-        "name": "Kuroi Manga",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "kuroimanga.site",
-        "baseUrl": "https://kuroimanga.site",
-        "altDomains": [
-          "kuroimanga.com"
-        ],
-        "engine": "madara",
-        "config": {
-          "datePattern": "d MMMM yyyy"
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 5
-      }
-    },
-    {
-      "domain": "mangacix.net",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "mangacix.net",
-        "brand": "mangacix",
-        "name": "MangaciX",
+        "id": "gaiatoon.com",
+        "brand": "gaia",
+        "name": "Gaiatoon",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "mangacix.net",
-        "baseUrl": "https://mangacix.net",
-        "altDomains": [
-          "mangacix.com"
-        ],
+        "domain": "gaiatoon.com",
+        "baseUrl": "https://gaiatoon.com",
+        "altDomains": [],
         "engine": "mangareader",
         "config": {
-          "pageSize": 20,
+          "pageSize": 50,
           "searchPageSize": 10,
           "capabilities": {
-            "tagsExclusion": true
+            "multipleTags": false
           }
         },
         "origins": [
@@ -75,22 +43,51 @@
           "nyora_datadriven"
         ],
         "verified_by_user": true,
-        "merged_variant_count": 4
+        "merged_variant_count": 3
       }
     },
     {
-      "domain": "merlintoon.com",
+      "domain": "tilkiscans.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "merlintoon.com",
-        "brand": "merlin",
-        "name": "Merlin Scans",
+        "id": "tilkiscans.com",
+        "brand": "mangatilkisi",
+        "name": "MangaTilkisi",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "merlintoon.com",
-        "baseUrl": "https://merlintoon.com",
+        "domain": "tilkiscans.com",
+        "baseUrl": "https://www.tilkiscans.com",
+        "altDomains": [
+          "mangatilkisi.net"
+        ],
+        "engine": "madara",
+        "config": {
+          "datePattern": "dd/MM/yyyy"
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 5
+      }
+    },
+    {
+      "domain": "golgebahcesi.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "golgebahcesi.com",
+        "brand": "glgebahesi",
+        "name": "Gölge Bahçesi",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "golgebahcesi.com",
+        "baseUrl": "https://golgebahcesi.com",
         "altDomains": [],
         "engine": "mangareader",
         "config": {},
@@ -103,23 +100,24 @@
       }
     },
     {
-      "domain": "gafeland.com",
-      "status": "CANLI_DOGRU",
+      "domain": "arcurafansub.com",
+      "status": "CLOUDFLARE_KORUMALI",
       "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
-        "id": "gafeland.com",
-        "brand": "gafeland",
-        "name": "gafeland",
+        "id": "arcurafansub.com",
+        "brand": "arcura",
+        "name": "Arcura Fansub",
         "lang": "tr",
-        "nsfw": 0,
-        "domain": "gafeland.com",
-        "baseUrl": "https://gafeland.com",
+        "nsfw": 1,
+        "domain": "arcurafansub.com",
+        "baseUrl": "https://arcurafansub.com",
         "altDomains": [],
         "engine": "mangareader",
         "config": {
           "pageSize": 20,
           "searchPageSize": 10,
+          "listUrl": "/seri",
           "capabilities": {
             "tagsExclusion": false
           }
@@ -159,24 +157,47 @@
       }
     },
     {
-      "domain": "anikiga.com",
+      "domain": "mangtto.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "anikiga.com",
-        "brand": "anikiga",
-        "name": "Anikiga",
+        "id": "mangtto.com",
+        "brand": "mangitto",
+        "name": "Mangitto",
         "lang": "tr",
-        "nsfw": 0,
-        "domain": "anikiga.com",
-        "baseUrl": "https://anikiga.com",
+        "nsfw": 1,
+        "domain": "mangtto.com",
+        "baseUrl": "https://mangtto.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "tuhafscans.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "tuhafscans.com",
+        "brand": "luna",
+        "name": "Luna Scans",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "tuhafscans.com",
+        "baseUrl": "https://tuhafscans.com",
         "altDomains": [],
         "engine": "madara",
         "config": {
-          "tagPrefix": "manga-tur/",
-          "datePattern": "d MMMM yyyy",
-          "postReq": true
+          "postReq": true,
+          "datePattern": "dd MMMM yyyy"
         },
         "origins": [
           "keiyoushi_index",
@@ -188,20 +209,20 @@
       }
     },
     {
-      "domain": "orimanga.net",
+      "domain": "limonmanga.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "orimanga.net",
-        "brand": "orimanga",
-        "name": "Ori Manga",
+        "id": "limonmanga.com",
+        "brand": "limon",
+        "name": "Limon Manga",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "orimanga.net",
-        "baseUrl": "https://orimanga.net",
+        "domain": "limonmanga.com",
+        "baseUrl": "https://limonmanga.com",
         "altDomains": [],
-        "engine": "initmanga",
+        "engine": "custom",
         "config": {},
         "origins": [
           "keiyoushi_index",
@@ -213,20 +234,55 @@
       }
     },
     {
-      "domain": "golgebahcesi.com",
+      "domain": "mangacix.net",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "golgebahcesi.com",
-        "brand": "glgebahesi",
-        "name": "Gölge Bahçesi",
+        "id": "mangacix.net",
+        "brand": "mangacix",
+        "name": "MangaciX",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "golgebahcesi.com",
-        "baseUrl": "https://golgebahcesi.com",
-        "altDomains": [],
+        "domain": "mangacix.net",
+        "baseUrl": "https://mangacix.net",
+        "altDomains": [
+          "mangacix.com"
+        ],
         "engine": "mangareader",
+        "config": {
+          "pageSize": 20,
+          "searchPageSize": 10,
+          "capabilities": {
+            "tagsExclusion": true
+          }
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 4
+      }
+    },
+    {
+      "domain": "mikrokosmosfb.blogspot.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "mikrokosmosfb.blogspot.com",
+        "brand": "mikrokosmos",
+        "name": "Mikrokosmos Fansub",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "mikrokosmosfb.blogspot.com",
+        "baseUrl": "https://mikrokosmosfb.blogspot.com",
+        "altDomains": [
+          "mikrokosmos.fans"
+        ],
+        "engine": "zeistmanga",
         "config": {},
         "origins": [
           "keiyoushi_index",
@@ -234,6 +290,59 @@
         ],
         "verified_by_user": true,
         "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "mangadiyari.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "mangadiyari.com",
+        "brand": "mangadiyar",
+        "name": "Manga Diyarı",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangadiyari.com",
+        "baseUrl": "https://mangadiyari.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "mindafansub.dev",
+      "status": "DOGRULANMIS_YEREL_ENGEL",
+      "alive": true,
+      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "source": {
+        "id": "mindafansub.dev",
+        "brand": "minda",
+        "name": "Minda Fansub",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "mindafansub.dev",
+        "baseUrl": "https://mindafansub.dev",
+        "altDomains": [
+          "mindafansub.nl",
+          "mindafansub.online"
+        ],
+        "engine": "madara",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 5
       }
     },
     {
@@ -270,116 +379,20 @@
       }
     },
     {
-      "domain": "juratempe.st",
-      "status": "CANLI_DOGRU",
+      "domain": "orimanga.net",
+      "status": "CLOUDFLARE_KORUMALI",
       "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
-        "id": "juratempe.st",
-        "brand": "juratempest",
-        "name": "JuraTempest",
+        "id": "orimanga.net",
+        "brand": "orimanga",
+        "name": "Ori Manga",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "juratempe.st",
-        "baseUrl": "https://juratempe.st",
+        "domain": "orimanga.net",
+        "baseUrl": "https://orimanga.net",
         "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_tr"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "mikrokosmosfb.blogspot.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "mikrokosmosfb.blogspot.com",
-        "brand": "mikrokosmos",
-        "name": "Mikrokosmos Fansub",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "mikrokosmosfb.blogspot.com",
-        "baseUrl": "https://mikrokosmosfb.blogspot.com",
-        "altDomains": [],
-        "engine": "zeistmanga",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_tr"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "mangtto.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "mangtto.com",
-        "brand": "mangitto",
-        "name": "Mangitto",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "mangtto.com",
-        "baseUrl": "https://mangtto.com",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_tr"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "mangadiyari.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "mangadiyari.com",
-        "brand": "mangadiyar",
-        "name": "Manga Diyarı",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangadiyari.com",
-        "baseUrl": "https://mangadiyari.com",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_tr"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "limonmanga.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "limonmanga.com",
-        "brand": "limon",
-        "name": "Limon Manga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "limonmanga.com",
-        "baseUrl": "https://limonmanga.com",
-        "altDomains": [],
-        "engine": "custom",
+        "engine": "initmanga",
         "config": {},
         "origins": [
           "keiyoushi_index",
@@ -403,6 +416,176 @@
         "nsfw": 0,
         "domain": "eskimangalar.com",
         "baseUrl": "https://eskimangalar.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "mangadenizi.net",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "mangadenizi.net",
+        "brand": "mangadenizi",
+        "name": "MangaDenizi",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangadenizi.net",
+        "baseUrl": "https://mangadenizi.net",
+        "altDomains": [],
+        "engine": "mmrcms",
+        "config": {
+          "locale": "en",
+          "datePattern": "dd.MM.yyyy",
+          "selectors": {
+            "state": "dt:contains(Durum)",
+            "alt": "dt:contains(Diğer Adları)",
+            "author": "dt:contains(Yazar & Çizer)",
+            "tag": "dt:contains(Kategoriler)"
+          }
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "anikiga.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "anikiga.com",
+        "brand": "anikiga",
+        "name": "Anikiga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "anikiga.com",
+        "baseUrl": "https://anikiga.com",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "tagPrefix": "manga-tur/",
+          "datePattern": "d MMMM yyyy",
+          "postReq": true
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "diamondfansub.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "diamondfansub.com",
+        "brand": "diamond",
+        "name": "DiamondFansub",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "diamondfansub.com",
+        "baseUrl": "https://diamondfansub.com",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "datePattern": "d MMMM",
+          "listUrl": "seri/",
+          "tagPrefix": "seri-turu/"
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "eldermanga.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "eldermanga.com",
+        "brand": "elder",
+        "name": "Elder Manga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "eldermanga.com",
+        "baseUrl": "https://eldermanga.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "merlintoon.com",
+      "repaired_domain": "merlintoon.net",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site merlintoon.com adresinden merlintoon.net adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "merlintoon.com",
+        "brand": "merlin",
+        "name": "Merlin Scans",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "merlintoon.net",
+        "baseUrl": "https://merlintoon.net",
+        "altDomains": [
+          "merlinmanga.com",
+          "merlintoon.com",
+          "merlintoon.net"
+        ],
+        "engine": "mangareader",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 4
+      }
+    },
+    {
+      "domain": "sleptmanga.com.tr",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "sleptmanga.com.tr",
+        "brand": "slept",
+        "name": "Slept Manga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "sleptmanga.com.tr",
+        "baseUrl": "https://sleptmanga.com.tr",
         "altDomains": [],
         "engine": "custom",
         "config": {},
@@ -447,28 +630,25 @@
       }
     },
     {
-      "domain": "mangadenizi.net",
+      "domain": "patimanga.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "mangadenizi.net",
-        "brand": "mangadenizi",
-        "name": "MangaDenizi",
+        "id": "patimanga.com",
+        "brand": "pati",
+        "name": "Pati Manga",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "mangadenizi.net",
-        "baseUrl": "https://mangadenizi.net",
+        "domain": "patimanga.com",
+        "baseUrl": "https://www.patimanga.com",
         "altDomains": [],
-        "engine": "mmrcms",
+        "engine": "mangareader",
         "config": {
-          "locale": "en",
-          "datePattern": "dd.MM.yyyy",
-          "selectors": {
-            "state": "dt:contains(Durum)",
-            "alt": "dt:contains(Diğer Adları)",
-            "author": "dt:contains(Yazar & Çizer)",
-            "tag": "dt:contains(Kategoriler)"
+          "pageSize": 20,
+          "searchPageSize": 10,
+          "capabilities": {
+            "tagsExclusion": false
           }
         },
         "origins": [
@@ -481,48 +661,22 @@
       }
     },
     {
-      "domain": "tilkiscans.com",
-      "status": "CANLI_DOGRU",
+      "domain": "juratempe.st",
+      "repaired_domain": "youtube.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
       "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "reason": "Site juratempe.st adresinden youtube.com adresine taşınmış, otomatik onarıldı.",
       "source": {
-        "id": "tilkiscans.com",
-        "brand": "mangatilkisi",
-        "name": "MangaTilkisi",
+        "id": "juratempe.st",
+        "brand": "juratempest",
+        "name": "JuraTempest",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "tilkiscans.com",
-        "baseUrl": "https://www.tilkiscans.com",
+        "domain": "youtube.com",
+        "baseUrl": "https://youtube.com",
         "altDomains": [
-          "mangatilkisi.net"
+          "juratempe.st"
         ],
-        "engine": "madara",
-        "config": {
-          "datePattern": "dd/MM/yyyy"
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 5
-      }
-    },
-    {
-      "domain": "eldermanga.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "eldermanga.com",
-        "brand": "elder",
-        "name": "Elder Manga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "eldermanga.com",
-        "baseUrl": "https://eldermanga.com",
-        "altDomains": [],
         "engine": "custom",
         "config": {},
         "origins": [
@@ -531,57 +685,6 @@
         ],
         "verified_by_user": true,
         "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "3hentai.net",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "359674482170560410",
-        "brand": "3hentai",
-        "name": "3Hentai",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "3hentai.net",
-        "baseUrl": "https://3hentai.net",
-        "altDomains": [],
-        "engine": "keiyoushi",
-        "config": {},
-        "origins": [
-          "keiyoushi_index"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "mindafansub.dev",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "mindafansub.dev",
-        "brand": "minda",
-        "name": "Minda Fansub",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "mindafansub.dev",
-        "baseUrl": "https://mindafansub.dev",
-        "altDomains": [
-          "mindafansub.online"
-        ],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 5
       }
     },
     {
@@ -614,64 +717,34 @@
       }
     },
     {
-      "domain": "diamondfansub.com",
+      "domain": "trmangaoku.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "diamondfansub.com",
-        "brand": "diamond",
-        "name": "DiamondFansub",
+        "id": "trmangaoku.com",
+        "brand": "trkemangaoku",
+        "name": "Türkçe Manga Oku",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "diamondfansub.com",
-        "baseUrl": "https://diamondfansub.com",
+        "domain": "trmangaoku.com",
+        "baseUrl": "https://trmangaoku.com",
         "altDomains": [],
         "engine": "madara",
-        "config": {
-          "datePattern": "d MMMM",
-          "listUrl": "seri/",
-          "tagPrefix": "seri-turu/"
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "sleptmanga.com.tr",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "sleptmanga.com.tr",
-        "brand": "slept",
-        "name": "Slept Manga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "sleptmanga.com.tr",
-        "baseUrl": "https://sleptmanga.com.tr",
-        "altDomains": [],
-        "engine": "custom",
         "config": {},
         "origins": [
           "keiyoushi_index",
-          "local_custom",
           "local_tr"
         ],
         "verified_by_user": true,
-        "merged_variant_count": 3
+        "merged_variant_count": 2
       }
     },
     {
       "domain": "akuma.moe",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "status": "CLOUDFLARE_KORUMALI",
+      "alive": true,
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
         "id": "2760962895634785428",
         "brand": "akuma",
@@ -691,27 +764,50 @@
       }
     },
     {
-      "domain": "webtoonoku.org",
+      "domain": "3hentai.net",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "webtoonoku.org",
-        "brand": "webtoonoku",
-        "name": "WebtoonOku",
+        "id": "359674482170560410",
+        "brand": "3hentai",
+        "name": "3Hentai",
         "lang": "tr",
-        "nsfw": 0,
-        "domain": "webtoonoku.org",
-        "baseUrl": "https://webtoonoku.org",
-        "altDomains": [
-          "trmanga.com"
-        ],
-        "engine": "custom",
+        "nsfw": 1,
+        "domain": "3hentai.net",
+        "baseUrl": "https://3hentai.net",
+        "altDomains": [],
+        "engine": "keiyoushi",
         "config": {},
         "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "mangawow.org",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "mangawow.org",
+        "brand": "mangawow",
+        "name": "MangaWOW",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangawow.org",
+        "baseUrl": "https://mangawow.org",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "datePattern": "d MMMM yyyy"
+        },
+        "origins": [
           "keiyoushi_index",
-          "local_custom",
-          "local_tr"
+          "local_tr",
+          "nyora_datadriven"
         ],
         "verified_by_user": true,
         "merged_variant_count": 3
@@ -744,150 +840,6 @@
       }
     },
     {
-      "domain": "gaiatoon.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "gaiatoon.com",
-        "brand": "gaia",
-        "name": "Gaiatoon",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "gaiatoon.com",
-        "baseUrl": "https://gaiatoon.com",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 50,
-          "searchPageSize": 10,
-          "capabilities": {
-            "multipleTags": false
-          }
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "arcurafansub.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "arcurafansub.com",
-        "brand": "arcura",
-        "name": "Arcura Fansub",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "arcurafansub.com",
-        "baseUrl": "https://arcurafansub.com",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10,
-          "listUrl": "/seri",
-          "capabilities": {
-            "tagsExclusion": false
-          }
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "mangawow.org",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "mangawow.org",
-        "brand": "mangawow",
-        "name": "MangaWOW",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangawow.org",
-        "baseUrl": "https://mangawow.org",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {
-          "datePattern": "d MMMM yyyy"
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "tenshimanga.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "tenshimanga.com",
-        "brand": "tenshi",
-        "name": "Tenshi Manga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "tenshimanga.com",
-        "baseUrl": "https://tenshimanga.com",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_tr"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "culturesubs.com",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "culturesubs.com",
-        "brand": "culturesubs",
-        "name": "CultureSubs",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "culturesubs.com",
-        "baseUrl": "https://culturesubs.com",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10,
-          "capabilities": {
-            "multipleTags": false
-          }
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
       "domain": "ruyamanga2.com",
       "status": "CANLI_DOGRU",
       "alive": true,
@@ -900,30 +852,6 @@
         "nsfw": 0,
         "domain": "ruyamanga2.com",
         "baseUrl": "https://www.ruyamanga2.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_tr"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "trmangaoku.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "trmangaoku.com",
-        "brand": "trkemangaoku",
-        "name": "Türkçe Manga Oku",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "trmangaoku.com",
-        "baseUrl": "https://trmangaoku.com",
         "altDomains": [],
         "engine": "madara",
         "config": {},
@@ -991,174 +919,6 @@
       }
     },
     {
-      "domain": "webtoonhatti.me",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "webtoonhatti.me",
-        "brand": "clover",
-        "name": "CloverManga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "webtoonhatti.me",
-        "baseUrl": "https://webtoonhatti.me",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "amangaplanet.com.tr",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "amangaplanet.com.tr",
-        "brand": "amangapla",
-        "name": "Amanga Planet",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "amangaplanet.com.tr",
-        "baseUrl": "https://www.amangaplanet.com.tr",
-        "altDomains": [],
-        "engine": "mangathemesia",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "epikman.ga",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "epikman.ga",
-        "brand": "epikman",
-        "name": "EpikMan",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "epikman.ga",
-        "baseUrl": "https://epikman.ga",
-        "altDomains": [],
-        "engine": "zeistmanga",
-        "config": {
-          "mangaCategory": "Seri",
-          "stateOngoing": "Devam Ediyor",
-          "stateFinished": "Tamamlandı",
-          "tagScrape": {
-            "rootId": "LinkList1",
-            "item": "ul li a",
-            "keyMode": "hrefQuery",
-            "titleMode": "text",
-            "titleCase": false
-          }
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "ghostfansub.co",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "ghostfansub.co",
-        "brand": "ghost",
-        "name": "GhostFansub",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "ghostfansub.co",
-        "baseUrl": "https://ghostfansub.co",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "athenamanga.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "athenamanga.com",
-        "brand": "athena",
-        "name": "AthenaManga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "athenamanga.com",
-        "baseUrl": "https://athenamanga.com",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10,
-          "capabilities": {
-            "multipleTags": false
-          }
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "domalfansb.com.tr",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "domalfansb.com.tr",
-        "brand": "domal",
-        "name": "DomalFansub",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "domalfansb.com.tr",
-        "baseUrl": "https://domalfansb.com.tr",
-        "altDomains": [
-          "dom4lfansub.online"
-        ],
-        "engine": "madara",
-        "config": {
-          "datePattern": "d MMMM yyyy",
-          "tagPrefix": "manga-turleri/"
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 4
-      }
-    },
-    {
       "domain": "uzaymanga.com",
       "status": "CANLI_DOGRU",
       "alive": true,
@@ -1183,22 +943,26 @@
       }
     },
     {
-      "domain": "alliedfansub.net",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "domain": "culturesubs.com",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
       "source": {
-        "id": "alliedfansub.net",
-        "brand": "allied",
-        "name": "AlliedFansub",
+        "id": "culturesubs.com",
+        "brand": "culturesubs",
+        "name": "CultureSubs",
         "lang": "tr",
-        "nsfw": 1,
-        "domain": "alliedfansub.net",
-        "baseUrl": "https://alliedfansub.net",
+        "nsfw": 0,
+        "domain": "culturesubs.com",
+        "baseUrl": "https://culturesubs.com",
         "altDomains": [],
-        "engine": "madara",
+        "engine": "mangareader",
         "config": {
-          "datePattern": "dd/MM/yyyy"
+          "pageSize": 20,
+          "searchPageSize": 10,
+          "capabilities": {
+            "multipleTags": false
+          }
         },
         "origins": [
           "local_tr",
@@ -1209,60 +973,29 @@
       }
     },
     {
-      "domain": "tuhafscans.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "domain": "fuchscans.com",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
       "source": {
-        "id": "tuhafscans.com",
-        "brand": "luna",
-        "name": "Luna Scans",
+        "id": "fuchscans.com",
+        "brand": "deccal",
+        "name": "DeccalScans",
         "lang": "tr",
         "nsfw": 1,
-        "domain": "tuhafscans.com",
-        "baseUrl": "https://tuhafscans.com",
+        "domain": "fuchscans.com",
+        "baseUrl": "https://fuchscans.com",
         "altDomains": [],
         "engine": "madara",
         "config": {
-          "postReq": true,
-          "datePattern": "dd MMMM yyyy"
+          "tagPrefix": "turler/"
         },
         "origins": [
-          "keiyoushi_index",
           "local_tr",
           "nyora_datadriven"
         ],
-        "verified_by_user": true,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "shijiescans.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "shijiescans.com",
-        "brand": "shijie",
-        "name": "Shijie Scans",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "shijiescans.com",
-        "baseUrl": "https://shijiescans.com",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10,
-          "listUrl": "/seri"
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 3
+        "verified_by_user": false,
+        "merged_variant_count": 2
       }
     },
     {
@@ -1420,177 +1153,18 @@
       }
     },
     {
-      "domain": "hayalistic.com.tr",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "hayalistic.com.tr",
-        "brand": "hayalistic",
-        "name": "Hayalistic",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "hayalistic.com.tr",
-        "baseUrl": "https://hayalistic.com.tr",
-        "altDomains": [
-          "hayalistic.online"
-        ],
-        "engine": "madara",
-        "config": {
-          "datePattern": "dd/MM/yyyy"
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 5
-      }
-    },
-    {
-      "domain": "dragonball-multiverse.com",
+      "domain": "manga.adonisfansub.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "7492246554765916610",
-        "brand": "dragonballmultiverse",
-        "name": "Dragon Ball Multiverse",
+        "id": "manga.adonisfansub.com",
+        "brand": "adonis",
+        "name": "AdonisFansub",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "dragonball-multiverse.com",
-        "baseUrl": "https://www.dragonball-multiverse.com",
-        "altDomains": [],
-        "engine": "keiyoushi",
-        "config": {},
-        "origins": [
-          "keiyoushi_index"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "ghostoon.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "ghostoon.com",
-        "brand": "ghos",
-        "name": "GhosToon",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "ghostoon.com",
-        "baseUrl": "https://ghostoon.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "mangagezgini.site",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "mangagezgini.site",
-        "brand": "glory",
-        "name": "GloryManga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangagezgini.site",
-        "baseUrl": "https://mangagezgini.site",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {
-          "datePattern": "dd/MM/yyyy"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "mangaoku.org",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "mangaoku.org",
-        "brand": "atikrost",
-        "name": "Atikrost",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangaoku.org",
-        "baseUrl": "https://mangaoku.org",
-        "altDomains": [
-          "mangaoku.com.tr"
-        ],
-        "engine": "madara",
-        "config": {
-          "datePattern": "d MMMM yyyy"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "hattorimanga.net",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "hattorimanga.net",
-        "brand": "hattori",
-        "name": "Hattori Manga",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "hattorimanga.net",
-        "baseUrl": "https://hattorimanga.net",
-        "altDomains": [
-          "hattoriscans.com"
-        ],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 6
-      }
-    },
-    {
-      "domain": "ayatoon.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "ayatoon.com",
-        "brand": "ayatoon",
-        "name": "AyaToon",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "ayatoon.com",
-        "baseUrl": "https://ayatoon.com",
+        "domain": "manga.adonisfansub.com",
+        "baseUrl": "https://manga.adonisfansub.com",
         "altDomains": [],
         "engine": "mangareader",
         "config": {
@@ -1609,106 +1183,120 @@
       }
     },
     {
-      "domain": "jellyring.co",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "jellyring.co",
-        "brand": "jellyring",
-        "name": "Jellyring",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "jellyring.co",
-        "baseUrl": "https://jellyring.co",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "anisamanga.com",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "anisamanga.com",
-        "brand": "anisa",
-        "name": "AnisaManga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "anisamanga.com",
-        "baseUrl": "https://anisamanga.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "kedi.to",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "kedi.to",
-        "brand": "kedi",
-        "name": "Kedi",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "kedi.to",
-        "baseUrl": "https://kedi.to",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {
-          "datePattern": "d MMMM yyyy",
-          "tagPrefix": "tur/"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "sereinscan.com",
+      "domain": "webtoonoku.org",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "sereinscan.com",
-        "brand": "sereinscan",
-        "name": "Serein Scan",
+        "id": "webtoonoku.org",
+        "brand": "webtoonoku",
+        "name": "WebtoonOku",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "sereinscan.com",
-        "baseUrl": "https://sereinscan.com",
+        "domain": "webtoonoku.org",
+        "baseUrl": "https://webtoonoku.org",
+        "altDomains": [
+          "trmanga.com"
+        ],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "athenamanga.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "athenamanga.com",
+        "brand": "athena",
+        "name": "AthenaManga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "athenamanga.com",
+        "baseUrl": "https://athenamanga.com",
         "altDomains": [],
         "engine": "mangareader",
         "config": {
           "pageSize": 20,
-          "searchPageSize": 10
+          "searchPageSize": 10,
+          "capabilities": {
+            "multipleTags": false
+          }
         },
         "origins": [
-          "keiyoushi_index",
           "local_tr",
           "nyora_datadriven"
         ],
-        "verified_by_user": true,
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "amangaplanet.com.tr",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "amangaplanet.com.tr",
+        "brand": "amangapla",
+        "name": "Amanga Planet",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "amangaplanet.com.tr",
+        "baseUrl": "https://www.amangaplanet.com.tr",
+        "altDomains": [],
+        "engine": "mangathemesia",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr"
+        ],
+        "verified_by_user": false,
         "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "epikman.ga",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "source": {
+        "id": "epikman.ga",
+        "brand": "epikman",
+        "name": "EpikMan",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "epikman.ga",
+        "baseUrl": "https://epikman.ga",
+        "altDomains": [],
+        "engine": "zeistmanga",
+        "config": {
+          "mangaCategory": "Seri",
+          "stateOngoing": "Devam Ediyor",
+          "stateFinished": "Tamamlandı",
+          "tagScrape": {
+            "rootId": "LinkList1",
+            "item": "ul li a",
+            "keyMode": "hrefQuery",
+            "titleMode": "text",
+            "titleCase": false
+          }
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
       }
     },
     {
@@ -1737,44 +1325,47 @@
       }
     },
     {
-      "domain": "lilyumfansub.com.tr",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "domain": "shijiescans.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "lilyumfansub.com.tr",
-        "brand": "lilyum",
-        "name": "LilyumFansub",
+        "id": "shijiescans.com",
+        "brand": "shijie",
+        "name": "Shijie Scans",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "lilyumfansub.com.tr",
-        "baseUrl": "https://lilyumfansub.com.tr",
-        "altDomains": [
-          "lilyumfansub.pro"
-        ],
-        "engine": "madara",
-        "config": {},
+        "domain": "shijiescans.com",
+        "baseUrl": "https://shijiescans.com",
+        "altDomains": [],
+        "engine": "mangareader",
+        "config": {
+          "pageSize": 20,
+          "searchPageSize": 10,
+          "listUrl": "/seri"
+        },
         "origins": [
+          "keiyoushi_index",
           "local_tr",
           "nyora_datadriven"
         ],
-        "verified_by_user": false,
+        "verified_by_user": true,
         "merged_variant_count": 3
       }
     },
     {
-      "domain": "hentaihand.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "domain": "aesirscans.site",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "6304497572870246566",
-        "brand": "hentaihand",
-        "name": "HentaiHand",
+        "id": "4421049203208952015",
+        "brand": "aesir",
+        "name": "AesirScans",
         "lang": "tr",
-        "nsfw": 1,
-        "domain": "hentaihand.com",
-        "baseUrl": "https://hentaihand.com",
+        "nsfw": 0,
+        "domain": "aesirscans.site",
+        "baseUrl": "https://www.aesirscans.site",
         "altDomains": [],
         "engine": "keiyoushi",
         "config": {},
@@ -1786,18 +1377,18 @@
       }
     },
     {
-      "domain": "imparatormanga.com",
+      "domain": "ghostfansub.co",
       "status": "OLU_DNS_KAYDI_YOK",
       "alive": false,
       "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
       "source": {
-        "id": "imparatormanga.com",
-        "brand": "imparator",
-        "name": "ImparatorManga",
+        "id": "ghostfansub.co",
+        "brand": "ghost",
+        "name": "GhostFansub",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "imparatormanga.com",
-        "baseUrl": "https://imparatormanga.com",
+        "domain": "ghostfansub.co",
+        "baseUrl": "https://ghostfansub.co",
         "altDomains": [],
         "engine": "madara",
         "config": {},
@@ -1807,6 +1398,83 @@
         ],
         "verified_by_user": false,
         "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "alliedfansub.net",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "alliedfansub.net",
+        "brand": "allied",
+        "name": "AlliedFansub",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "alliedfansub.net",
+        "baseUrl": "https://alliedfansub.net",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "datePattern": "dd/MM/yyyy"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "averisfansub.site",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "3678110616121957660",
+        "brand": "averis",
+        "name": "Averis Fansub",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "averisfansub.site",
+        "baseUrl": "https://averisfansub.site",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "sereinscan.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "sereinscan.com",
+        "brand": "sereinscan",
+        "name": "Serein Scan",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "sereinscan.com",
+        "baseUrl": "https://sereinscan.com",
+        "altDomains": [],
+        "engine": "mangareader",
+        "config": {
+          "pageSize": 20,
+          "searchPageSize": 10
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 3
       }
     },
     {
@@ -1867,158 +1535,42 @@
       }
     },
     {
-      "domain": "holyscans.com.tr",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "domain": "tenshimanga.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "holyscans.com.tr",
-        "brand": "holy",
-        "name": "Holy Scans",
+        "id": "tenshimanga.com",
+        "brand": "tenshi",
+        "name": "Tenshi Manga",
         "lang": "tr",
-        "nsfw": 1,
-        "domain": "holyscans.com.tr",
-        "baseUrl": "https://holyscans.com.tr",
+        "nsfw": 0,
+        "domain": "tenshimanga.com",
+        "baseUrl": "https://tenshimanga.com",
         "altDomains": [],
         "engine": "custom",
         "config": {},
         "origins": [
           "keiyoushi_index",
-          "local_custom",
           "local_tr"
         ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
+        "verified_by_user": true,
+        "merged_variant_count": 2
       }
     },
     {
-      "domain": "siyahmelek.org",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "siyahmelek.org",
-        "brand": "grimelek",
-        "name": "Grimelek",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "siyahmelek.org",
-        "baseUrl": "https://siyahmelek.org",
-        "altDomains": [
-          "siyahmelek.fun"
-        ],
-        "engine": "madara",
-        "config": {
-          "datePattern": "d MMMM yyyy",
-          "listUrl": "seri/"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "patimanga.com",
+      "domain": "globalcomix.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "patimanga.com",
-        "brand": "pati",
-        "name": "Pati Manga",
+        "id": "2641311214423625823",
+        "brand": "globalcomix",
+        "name": "GlobalComix",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "patimanga.com",
-        "baseUrl": "https://www.patimanga.com",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10,
-          "capabilities": {
-            "tagsExclusion": false
-          }
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": true,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "laviniafansub.site",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "laviniafansub.site",
-        "brand": "lavinia",
-        "name": "LaviniaFansub",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "laviniafansub.site",
-        "baseUrl": "https://laviniafansub.site",
-        "altDomains": [
-          "laviniafansub.shop"
-        ],
-        "engine": "madara",
-        "config": {
-          "datePattern": "dd/MM/yyyy"
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 5
-      }
-    },
-    {
-      "domain": "kuroimanga.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "LICHSUBS",
-        "brand": "lichsubs",
-        "name": "LichSubs",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "kuroimanga.com",
-        "baseUrl": "https://www.kuroimanga.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {
-          "datePattern": "dd/MM/yyyy"
-        },
-        "origins": [
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "universe.leagueoflegends.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "4983763186502997670",
-        "brand": "leagueoflegends",
-        "name": "League of Legends",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "universe.leagueoflegends.com",
-        "baseUrl": "https://universe.leagueoflegends.com/tr_tr/comic",
+        "domain": "globalcomix.com",
+        "baseUrl": "https://globalcomix.com",
         "altDomains": [],
         "engine": "keiyoushi",
         "config": {},
@@ -2030,29 +1582,96 @@
       }
     },
     {
-      "domain": "fuchscans.com",
+      "domain": "dragonball-multiverse.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "fuchscans.com",
-        "brand": "deccal",
-        "name": "DeccalScans",
+        "id": "7492246554765916610",
+        "brand": "dragonballmultiverse",
+        "name": "Dragon Ball Multiverse",
         "lang": "tr",
-        "nsfw": 1,
-        "domain": "fuchscans.com",
-        "baseUrl": "https://fuchscans.com",
+        "nsfw": 0,
+        "domain": "dragonball-multiverse.com",
+        "baseUrl": "https://www.dragonball-multiverse.com",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "duckscans.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "4089747984244989816",
+        "brand": "duck",
+        "name": "Duck Scans",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "duckscans.com",
+        "baseUrl": "https://duckscans.com",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "imparatormanga.com",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "source": {
+        "id": "imparatormanga.com",
+        "brand": "imparator",
+        "name": "ImparatorManga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "imparatormanga.com",
+        "baseUrl": "https://imparatormanga.com",
         "altDomains": [],
         "engine": "madara",
-        "config": {
-          "tagPrefix": "turler/"
-        },
+        "config": {},
         "origins": [
           "local_tr",
           "nyora_datadriven"
         ],
         "verified_by_user": false,
         "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "faichisubs.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "8160196832207812846",
+        "brand": "faichisubs",
+        "name": "FaichiSubs",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "faichisubs.com",
+        "baseUrl": "https://faichisubs.com",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
       }
     },
     {
@@ -2084,6 +1703,649 @@
       }
     },
     {
+      "domain": "jellyring.co",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "source": {
+        "id": "jellyring.co",
+        "brand": "jellyring",
+        "name": "Jellyring",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "jellyring.co",
+        "baseUrl": "https://jellyring.co",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {},
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "hattorimanga.net",
+      "status": "CLOUDFLARE_KORUMALI",
+      "alive": true,
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
+      "source": {
+        "id": "hattorimanga.net",
+        "brand": "hattori",
+        "name": "Hattori Manga",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "hattorimanga.net",
+        "baseUrl": "https://hattorimanga.net",
+        "altDomains": [
+          "hattoriscans.com"
+        ],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 6
+      }
+    },
+    {
+      "domain": "asemifansub.com",
+      "repaired_domain": "quoterivers.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site asemifansub.com adresinden quoterivers.com adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "asemifansub.com",
+        "brand": "asemi",
+        "name": "AsemiFansub",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "quoterivers.com",
+        "baseUrl": "https://quoterivers.com",
+        "altDomains": [
+          "asemifansub.com"
+        ],
+        "engine": "mangareader",
+        "config": {
+          "pageSize": 20,
+          "searchPageSize": 10
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "kuroimanga.site",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "kuroimanga.site",
+        "brand": "kuroi",
+        "name": "Kuroi Manga",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "kuroimanga.site",
+        "baseUrl": "https://kuroimanga.site",
+        "altDomains": [
+          "kuroimanga.com"
+        ],
+        "engine": "madara",
+        "config": {
+          "datePattern": "d MMMM yyyy"
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 5
+      }
+    },
+    {
+      "domain": "adumanga.com",
+      "repaired_domain": "riddles-with-answers.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site adumanga.com adresinden riddles-with-answers.com adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "adumanga",
+        "brand": "adumanga",
+        "name": "AduManga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "riddles-with-answers.com",
+        "baseUrl": "https://riddles-with-answers.com",
+        "altDomains": [
+          "adumanga.com"
+        ],
+        "engine": "mangareader",
+        "config": {
+          "pageSize": 20,
+          "searchPageSize": 10,
+          "locale": "en",
+          "capabilities": {
+            "tagsExclusion": false
+          }
+        },
+        "origins": [
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "kedi.to",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "source": {
+        "id": "kedi.to",
+        "brand": "kedi",
+        "name": "Kedi",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "kedi.to",
+        "baseUrl": "https://kedi.to",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "datePattern": "d MMMM yyyy",
+          "tagPrefix": "tur/"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "hayalistic.com.tr",
+      "status": "YEREL_AG_ISP_ENGELI",
+      "alive": false,
+      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "source": {
+        "id": "hayalistic.com.tr",
+        "brand": "hayalistic",
+        "name": "Hayalistic",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "hayalistic.com.tr",
+        "baseUrl": "https://hayalistic.com.tr",
+        "altDomains": [
+          "hayalistic.online"
+        ],
+        "engine": "madara",
+        "config": {
+          "datePattern": "dd/MM/yyyy"
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 5
+      }
+    },
+    {
+      "domain": "holyscans.com.tr",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "holyscans.com.tr",
+        "brand": "holy",
+        "name": "Holy Scans",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "holyscans.com.tr",
+        "baseUrl": "https://holyscans.com.tr",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "universe.leagueoflegends.com",
+      "status": "YEREL_AG_ISP_ENGELI",
+      "alive": false,
+      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "source": {
+        "id": "4983763186502997670",
+        "brand": "leagueoflegends",
+        "name": "League of Legends",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "universe.leagueoflegends.com",
+        "baseUrl": "https://universe.leagueoflegends.com/tr_tr/comic",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "kairatoon.net",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "3759878972130438558",
+        "brand": "kaira",
+        "name": "Kairatoon",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "kairatoon.net",
+        "baseUrl": "https://kairatoon.net",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "lilyumfansub.com.tr",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "source": {
+        "id": "lilyumfansub.com.tr",
+        "brand": "lilyum",
+        "name": "LilyumFansub",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "lilyumfansub.com.tr",
+        "baseUrl": "https://lilyumfansub.com.tr",
+        "altDomains": [
+          "lilyumfansub.pro"
+        ],
+        "engine": "madara",
+        "config": {},
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "jiangzaitoon.icu",
+      "status": "YEREL_AG_ISP_ENGELI",
+      "alive": false,
+      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "source": {
+        "id": "jiangzaitoon.icu",
+        "brand": "jiangzai",
+        "name": "jiangzaitoon",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "jiangzaitoon.icu",
+        "baseUrl": "https://jiangzaitoon.icu",
+        "altDomains": [
+          "jiangzaitoon.top"
+        ],
+        "engine": "madara",
+        "config": {
+          "datePattern": "d MMMM yyyy",
+          "postReq": true
+        },
+        "origins": [
+          "local_custom",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 4
+      }
+    },
+    {
+      "domain": "hoifansub.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "hoifansub.com",
+        "brand": "hoifansub",
+        "name": "HoiFansub",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "hoifansub.com",
+        "baseUrl": "https://hoifansub.com",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {},
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "juratempe.st",
+      "repaired_domain": "youtube.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site juratempe.st adresinden youtube.com adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "juratempe.st",
+        "brand": "juratempe",
+        "name": "juratempe",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "youtube.com",
+        "baseUrl": "https://youtube.com",
+        "altDomains": [
+          "juratempe.st"
+        ],
+        "engine": "unknown",
+        "config": {},
+        "origins": [
+          "local_custom"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "mangaoku.org",
+      "repaired_domain": "mangaoku.com.tr",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site mangaoku.org adresinden mangaoku.com.tr adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "mangaoku.org",
+        "brand": "atikrost",
+        "name": "Atikrost",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangaoku.com.tr",
+        "baseUrl": "https://mangaoku.com.tr",
+        "altDomains": [
+          "mangaoku.com.tr",
+          "mangaoku.org"
+        ],
+        "engine": "madara",
+        "config": {
+          "datePattern": "d MMMM yyyy"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "hentaihand.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "6304497572870246566",
+        "brand": "hentaihand",
+        "name": "HentaiHand",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "hentaihand.com",
+        "baseUrl": "https://hentaihand.com",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "eleceedturkiye.com",
+      "repaired_domain": "nabicix.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site eleceedturkiye.com adresinden nabicix.com adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "eleceedturkiye.com",
+        "brand": "eleceedtrkiye",
+        "name": "Eleceed Türkiye",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "nabicix.com",
+        "baseUrl": "https://nabicix.com",
+        "altDomains": [
+          "eleceedturkiye.com"
+        ],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "ghostoon.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "ghostoon.com",
+        "brand": "ghos",
+        "name": "GhosToon",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "ghostoon.com",
+        "baseUrl": "https://ghostoon.com",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "laviniafansub.site",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "laviniafansub.site",
+        "brand": "lavinia",
+        "name": "LaviniaFansub",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "laviniafansub.site",
+        "baseUrl": "https://laviniafansub.site",
+        "altDomains": [
+          "laviniafansub.shop"
+        ],
+        "engine": "madara",
+        "config": {
+          "datePattern": "dd/MM/yyyy"
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 5
+      }
+    },
+    {
+      "domain": "mangabahcesi.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "mangabahcesi.com",
+        "brand": "mangabahesi",
+        "name": "Manga Bahçesi",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangabahcesi.com",
+        "baseUrl": "https://mangabahcesi.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "gafeland.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "gafeland.com",
+        "brand": "gafeland",
+        "name": "gafeland",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "gafeland.com",
+        "baseUrl": "https://gafeland.com",
+        "altDomains": [],
+        "engine": "mangareader",
+        "config": {
+          "pageSize": 20,
+          "searchPageSize": 10,
+          "capabilities": {
+            "tagsExclusion": false
+          }
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": true,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "mangaball.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "8648105733020574748",
+        "brand": "mangaball",
+        "name": "Manga Ball",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangaball.com",
+        "baseUrl": "https://mangaball.com",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "siyahmelek.org",
+      "repaired_domain": "siyahmelek.fun",
+      "status": "OTOMATIK_TAMIR_ALTERNATIF",
+      "alive": true,
+      "reason": "Eski domain (siyahmelek.org) DNS ölüydü, çalışan alternatif domain (siyahmelek.fun) ile otomatik onarıldı.",
+      "source": {
+        "id": "siyahmelek.org",
+        "brand": "grimelek",
+        "name": "Grimelek",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "siyahmelek.fun",
+        "baseUrl": "https://siyahmelek.fun",
+        "altDomains": [
+          "siyahmelek.fun"
+        ],
+        "engine": "madara",
+        "config": {
+          "datePattern": "d MMMM yyyy",
+          "listUrl": "seri/"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "mangamillion.shueisha.co.jp",
+      "status": "YEREL_AG_ISP_ENGELI",
+      "alive": false,
+      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "source": {
+        "id": "4359581031612948871",
+        "brand": "mangamillion",
+        "name": "Manga Million",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangamillion.shueisha.co.jp",
+        "baseUrl": "https://mangamillion.shueisha.co.jp",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
       "domain": "mangacim.com.tr",
       "status": "OLU_DNS_KAYDI_YOK",
       "alive": false,
@@ -2112,18 +2374,18 @@
       }
     },
     {
-      "domain": "juratempe.st",
+      "domain": "manga.araznovel.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "juratempe.st",
-        "brand": "juratempe",
-        "name": "juratempe",
+        "id": "manga.araznovel.com",
+        "brand": "manga",
+        "name": "manga",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "juratempe.st",
-        "baseUrl": "https://juratempe.st",
+        "domain": "manga.araznovel.com",
+        "baseUrl": "https://manga.araznovel.com",
         "altDomains": [],
         "engine": "unknown",
         "config": {},
@@ -2135,23 +2397,94 @@
       }
     },
     {
-      "domain": "mangamillion.shueisha.co.jp",
+      "domain": "manga-sehri.net",
       "status": "YEREL_AG_ISP_ENGELI",
       "alive": false,
       "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
       "source": {
-        "id": "4359581031612948871",
-        "brand": "mangamillion",
-        "name": "Manga Million",
+        "id": "manga-sehri.net",
+        "brand": "mangaehri",
+        "name": "Manga Şehri.net",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "mangamillion.shueisha.co.jp",
-        "baseUrl": "https://mangamillion.shueisha.co.jp",
+        "domain": "manga-sehri.net",
+        "baseUrl": "https://manga-sehri.net",
         "altDomains": [],
-        "engine": "keiyoushi",
+        "engine": "madara",
         "config": {},
         "origins": [
-          "keiyoushi_index"
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "kazescans.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "kazescans.com",
+        "brand": "kaze",
+        "name": "KazeScans",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "kazescans.com",
+        "baseUrl": "https://kazescans.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "mangakulesi.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "mangakulesi.com",
+        "brand": "mangakulesi",
+        "name": "Manga Kulesi",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangakulesi.com",
+        "baseUrl": "https://mangakulesi.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "mangabahcesi.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "mangabahcesi.com",
+        "brand": "mangabahcesi",
+        "name": "mangabahcesi",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangabahcesi.com",
+        "baseUrl": "https://mangabahcesi.com",
+        "altDomains": [],
+        "engine": "unknown",
+        "config": {},
+        "origins": [
+          "local_custom"
         ],
         "verified_by_user": false,
         "merged_variant_count": 1
@@ -2187,92 +2520,23 @@
       }
     },
     {
-      "domain": "lunarx.to",
+      "domain": "mangadiyari.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "3881169888283649510",
-        "brand": "lunar",
-        "name": "Lunar Manga",
+        "id": "mangadiyari.com",
+        "brand": "mangadiyari",
+        "name": "mangadiyari",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "lunarx.to",
-        "baseUrl": "https://lunarx.to",
+        "domain": "mangadiyari.com",
+        "baseUrl": "https://mangadiyari.com",
         "altDomains": [],
-        "engine": "keiyoushi",
+        "engine": "unknown",
         "config": {},
         "origins": [
-          "keiyoushi_index"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "globalcomix.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "2641311214423625823",
-        "brand": "globalcomix",
-        "name": "GlobalComix",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "globalcomix.com",
-        "baseUrl": "https://globalcomix.com",
-        "altDomains": [],
-        "engine": "keiyoushi",
-        "config": {},
-        "origins": [
-          "keiyoushi_index"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "mangadex.org",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "3846770256925560569",
-        "brand": "mangadex",
-        "name": "MangaDex",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangadex.org",
-        "baseUrl": "https://mangadex.org",
-        "altDomains": [],
-        "engine": "keiyoushi",
-        "config": {},
-        "origins": [
-          "keiyoushi_index"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "manga-ay.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "manga-ay.com",
-        "brand": "mangaay",
-        "name": "MangaAy",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "manga-ay.com",
-        "baseUrl": "https://manga-ay.com",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "local_tr"
+          "local_custom"
         ],
         "verified_by_user": false,
         "merged_variant_count": 1
@@ -2309,47 +2573,47 @@
       }
     },
     {
-      "domain": "mangadiyari.com",
-      "status": "CANLI_DOGRU",
+      "domain": "mangadot.net",
+      "status": "CLOUDFLARE_KORUMALI",
       "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
-        "id": "mangadiyari.com",
-        "brand": "mangadiyari",
-        "name": "mangadiyari",
+        "id": "5964430973280552505",
+        "brand": "mangadot",
+        "name": "MangaDot",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "mangadiyari.com",
-        "baseUrl": "https://mangadiyari.com",
+        "domain": "mangadot.net",
+        "baseUrl": "https://mangadot.net",
         "altDomains": [],
-        "engine": "unknown",
+        "engine": "keiyoushi",
         "config": {},
         "origins": [
-          "local_custom"
+          "keiyoushi_index"
         ],
         "verified_by_user": false,
         "merged_variant_count": 1
       }
     },
     {
-      "domain": "hoifansub.com",
+      "domain": "mangaportali.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "hoifansub.com",
-        "brand": "hoifansub",
-        "name": "HoiFansub",
+        "id": "mangaportali.com",
+        "brand": "mangaportal",
+        "name": "Manga Portalı",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "hoifansub.com",
-        "baseUrl": "https://hoifansub.com",
+        "domain": "mangaportali.com",
+        "baseUrl": "https://www.mangaportali.com",
         "altDomains": [],
-        "engine": "madara",
+        "engine": "custom",
         "config": {},
         "origins": [
-          "local_tr",
-          "nyora_datadriven"
+          "keiyoushi_index",
+          "local_tr"
         ],
         "verified_by_user": false,
         "merged_variant_count": 2
@@ -2375,6 +2639,37 @@
           "keiyoushi_index",
           "local_custom",
           "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "domalfansb.com.tr",
+      "repaired_domain": "cerdma.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site domalfansb.com.tr adresinden cerdma.com adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "domalfansb.com.tr",
+        "brand": "domal",
+        "name": "DomalFansub",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "cerdma.com",
+        "baseUrl": "https://cerdma.com",
+        "altDomains": [
+          "dom4lfansub.online",
+          "domalfansb.com.tr"
+        ],
+        "engine": "madara",
+        "config": {
+          "datePattern": "d MMMM yyyy",
+          "tagPrefix": "manga-turleri/"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
         ],
         "verified_by_user": false,
         "merged_variant_count": 3
@@ -2408,157 +2703,25 @@
       }
     },
     {
-      "domain": "jiangzaitoon.icu",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "jiangzaitoon.icu",
-        "brand": "jiangzai",
-        "name": "jiangzaitoon",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "jiangzaitoon.icu",
-        "baseUrl": "https://jiangzaitoon.icu",
-        "altDomains": [
-          "jiangzaitoon.top"
-        ],
-        "engine": "madara",
-        "config": {
-          "datePattern": "d MMMM yyyy",
-          "postReq": true
-        },
-        "origins": [
-          "local_custom",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 4
-      }
-    },
-    {
-      "domain": "mangakusu.com",
-      "repaired_domain": "ragnarscans.net",
+      "domain": "mangagezgini.site",
+      "repaired_domain": "ww38.mangagezgini.site",
       "status": "OTOMATIK_TAMIR_YONLENDIRME",
       "alive": true,
-      "reason": "Site mangakusu.com adresinden ragnarscans.net adresine taşınmış, otomatik onarıldı.",
+      "reason": "Site mangagezgini.site adresinden ww38.mangagezgini.site adresine taşınmış, otomatik onarıldı.",
       "source": {
-        "id": "mangakusu.com",
-        "brand": "mangakusu",
-        "name": "Manga Kusu",
+        "id": "mangagezgini.site",
+        "brand": "glory",
+        "name": "GloryManga",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "ragnarscans.net",
-        "baseUrl": "https://ragnarscans.net",
+        "domain": "ww38.mangagezgini.site",
+        "baseUrl": "https://ww38.mangagezgini.site",
         "altDomains": [
-          "mangakusu.com"
+          "mangagezgini.site"
         ],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "mangadot.net",
-      "status": "CLOUDFLARE_KORUMALI",
-      "alive": true,
-      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
-      "source": {
-        "id": "5964430973280552505",
-        "brand": "mangadot",
-        "name": "MangaDot",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangadot.net",
-        "baseUrl": "https://mangadot.net",
-        "altDomains": [],
-        "engine": "keiyoushi",
-        "config": {},
-        "origins": [
-          "keiyoushi_index"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "mangakoleji.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "mangakoleji.com",
-        "brand": "mangakoleji",
-        "name": "MangaKoleji",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangakoleji.com",
-        "baseUrl": "https://mangakoleji.com",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10,
-          "capabilities": {
-            "tagsExclusion": true
-          }
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "mangaportali.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "mangaportali.com",
-        "brand": "mangaportal",
-        "name": "Manga Portalı",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangaportali.com",
-        "baseUrl": "https://www.mangaportali.com",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "mangaokusana.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "mangaokusana.com",
-        "brand": "mangaokusana",
-        "name": "MangaOkusana",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangaokusana.com",
-        "baseUrl": "https://mangaokusana.com",
-        "altDomains": [],
         "engine": "madara",
         "config": {
-          "datePattern": "dd MMMM yyyy"
+          "datePattern": "dd/MM/yyyy"
         },
         "origins": [
           "local_tr",
@@ -2592,47 +2755,139 @@
       }
     },
     {
-      "domain": "eleceedturkiye.com",
-      "repaired_domain": "nabicix.com",
-      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "domain": "mangadex.org",
+      "status": "CANLI_DOGRU",
       "alive": true,
-      "reason": "Site eleceedturkiye.com adresinden nabicix.com adresine taşınmış, otomatik onarıldı.",
+      "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "eleceedturkiye.com",
-        "brand": "eleceedtrkiye",
-        "name": "Eleceed Türkiye",
+        "id": "3846770256925560569",
+        "brand": "mangadex",
+        "name": "MangaDex",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "nabicix.com",
-        "baseUrl": "https://nabicix.com",
-        "altDomains": [
-          "eleceedturkiye.com"
-        ],
-        "engine": "custom",
+        "domain": "mangadex.org",
+        "baseUrl": "https://mangadex.org",
+        "altDomains": [],
+        "engine": "keiyoushi",
         "config": {},
         "origins": [
-          "local_tr"
+          "keiyoushi_index"
         ],
         "verified_by_user": false,
         "merged_variant_count": 1
       }
     },
     {
-      "domain": "mangagezginim.com",
-      "repaired_domain": "mangagezgini.online",
-      "status": "OTOMATIK_TAMIR_ALTERNATIF",
+      "domain": "mangamac.com",
+      "status": "CANLI_DOGRU",
       "alive": true,
-      "reason": "Eski domain (mangagezginim.com) DNS ölüydü, çalışan alternatif domain (mangagezgini.online) ile otomatik onarıldı.",
+      "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "mangagezginim.com",
-        "brand": "mangagezgini",
-        "name": "MangaGezgini",
+        "id": "mangamac.com",
+        "brand": "mangamac",
+        "name": "MangaMAC",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "mangagezgini.online",
-        "baseUrl": "https://mangagezgini.online",
+        "domain": "mangamac.com",
+        "baseUrl": "https://mangamac.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "mangamulti.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "4285486314572394667",
+        "brand": "mangamulti",
+        "name": "Manga Multi",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangamulti.com",
+        "baseUrl": "https://www.mangamulti.com",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "aerotoon.vercel.app",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "1538587979414015537",
+        "brand": "aero",
+        "name": "AeroToon",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "aerotoon.vercel.app",
+        "baseUrl": "https://aerotoon.vercel.app",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "mangaokusana.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "mangaokusana.com",
+        "brand": "mangaokusana",
+        "name": "MangaOkusana",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangaokusana.com",
+        "baseUrl": "https://mangaokusana.com",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "datePattern": "dd MMMM yyyy"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "manga-sehri.com",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "source": {
+        "id": "manga-sehri.com",
+        "brand": "mangasehri",
+        "name": "MangaSehri.com",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "manga-sehri.com",
+        "baseUrl": "https://manga-sehri.com",
         "altDomains": [
-          "mangagezgini.online"
+          "manga-sehri.net"
         ],
         "engine": "madara",
         "config": {
@@ -2647,24 +2902,44 @@
       }
     },
     {
-      "domain": "mangasiginagi.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "domain": "mangazure.net",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
       "source": {
-        "id": "mangasiginagi.com",
-        "brand": "mangasiginagi",
-        "name": "MangaSiginagi",
+        "id": "mangazure.net",
+        "brand": "mangazure",
+        "name": "MangaZure",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "mangasiginagi.com",
-        "baseUrl": "https://mangasiginagi.com",
+        "domain": "mangazure.net",
+        "baseUrl": "https://mangazure.net",
         "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10
-        },
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "anisamanga.com",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "source": {
+        "id": "anisamanga.com",
+        "brand": "anisa",
+        "name": "AnisaManga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "anisamanga.com",
+        "baseUrl": "https://anisamanga.com",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {},
         "origins": [
           "local_tr",
           "nyora_datadriven"
@@ -2702,129 +2977,20 @@
       }
     },
     {
-      "domain": "mangaruhu.com",
-      "status": "CANLI_DOGRU",
+      "domain": "millascan.com",
+      "status": "CLOUDFLARE_KORUMALI",
       "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
-        "id": "mangaruhu.com",
-        "brand": "mangaruhu",
-        "name": "MangaRuhu",
+        "id": "millascan.com",
+        "brand": "millascan",
+        "name": "millascan",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "mangaruhu.com",
-        "baseUrl": "https://mangaruhu.com",
+        "domain": "millascan.com",
+        "baseUrl": "https://millascan.com",
         "altDomains": [],
         "engine": "madara",
-        "config": {},
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "moondaisyscans.biz",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "moondaisyscans.biz",
-        "brand": "moondaisy",
-        "name": "MoonDaisyScans",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "moondaisyscans.biz",
-        "baseUrl": "https://moondaisyscans.biz",
-        "altDomains": [
-          "moondaisyscans.pro"
-        ],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10,
-          "capabilities": {
-            "tagsExclusion": false
-          }
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 5
-      }
-    },
-    {
-      "domain": "monomanga.com.tr",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "monomanga.com.tr",
-        "brand": "mono",
-        "name": "Mono Manga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "monomanga.com.tr",
-        "baseUrl": "https://monomanga.com.tr",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "nabiscans.com",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "nabiscans.com",
-        "brand": "nabi",
-        "name": "NabiScans",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "nabiscans.com",
-        "baseUrl": "https://nabiscans.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {
-          "datePattern": "d MMMM yyyy"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "mangtto.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "mangtto.com",
-        "brand": "mangtto",
-        "name": "mangtto",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangtto.com",
-        "baseUrl": "https://mangtto.com",
-        "altDomains": [],
-        "engine": "unknown",
         "config": {},
         "origins": [
           "local_custom"
@@ -2834,53 +3000,87 @@
       }
     },
     {
-      "domain": "myreadingmanga.info",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "164535712016830416",
-        "brand": "myreading",
-        "name": "MyReadingManga",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "myreadingmanga.info",
-        "baseUrl": "https://myreadingmanga.info",
-        "altDomains": [],
-        "engine": "keiyoushi",
-        "config": {},
-        "origins": [
-          "keiyoushi_index"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "mikrokosmosfb.blogspot.com",
+      "domain": "mangasiginagi.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "mikrokosmosfb",
-        "brand": "mikrokosmosfb",
-        "name": "Mikrokosmosfb",
+        "id": "mangasiginagi.com",
+        "brand": "mangasiginagi",
+        "name": "MangaSiginagi",
         "lang": "tr",
-        "nsfw": 1,
-        "domain": "mikrokosmosfb.blogspot.com",
-        "baseUrl": "https://mikrokosmosfb.blogspot.com",
+        "nsfw": 0,
+        "domain": "mangasiginagi.com",
+        "baseUrl": "https://mangasiginagi.com",
         "altDomains": [],
-        "engine": "zeistmanga",
+        "engine": "mangareader",
         "config": {
-          "stateOngoing": "Devam Ediyor",
-          "stateFinished": "Tamamlandı",
-          "stateAbandoned": "Güncel"
+          "pageSize": 20,
+          "searchPageSize": 10
         },
         "origins": [
+          "local_tr",
           "nyora_datadriven"
         ],
         "verified_by_user": false,
-        "merged_variant_count": 1
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "millascan.com",
+      "status": "CLOUDFLARE_KORUMALI",
+      "alive": true,
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
+      "source": {
+        "id": "millascan.com",
+        "brand": "milasub",
+        "name": "MilaSub",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "millascan.com",
+        "baseUrl": "https://millascan.com",
+        "altDomains": [
+          "milascans.tr"
+        ],
+        "engine": "madara",
+        "config": {
+          "datePattern": "d MMMM yyyy"
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 4
+      }
+    },
+    {
+      "domain": "mangakusu.com",
+      "repaired_domain": "ragnarscans2.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site mangakusu.com adresinden ragnarscans2.com adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "mangakusu.com",
+        "brand": "mangakusu",
+        "name": "Manga Kusu",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "ragnarscans2.com",
+        "baseUrl": "https://ragnarscans2.com",
+        "altDomains": [
+          "mangakusu.com"
+        ],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
       }
     },
     {
@@ -2914,74 +3114,22 @@
       }
     },
     {
-      "domain": "nhentai.com",
-      "status": "YEREL_AG_ISP_ENGELI",
+      "domain": "nabiscans.com",
+      "status": "OLU_DNS_KAYDI_YOK",
       "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
       "source": {
-        "id": "6423038744951581148",
-        "brand": "nhentaicomunoriginal",
-        "name": "nHentai.com (unoriginal)",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "nhentai.com",
-        "baseUrl": "https://nhentai.com",
-        "altDomains": [],
-        "engine": "keiyoushi",
-        "config": {},
-        "origins": [
-          "keiyoushi_index"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "manwe.pro",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "manwe.pro",
-        "brand": "manwe",
-        "name": "Manwe",
+        "id": "nabiscans.com",
+        "brand": "nabi",
+        "name": "NabiScans",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "manwe.pro",
-        "baseUrl": "https://manwe.pro",
+        "domain": "nabiscans.com",
+        "baseUrl": "https://nabiscans.com",
         "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "mangaoku.info",
-      "repaired_domain": "ww16.mangaoku.info",
-      "status": "OTOMATIK_TAMIR_YONLENDIRME",
-      "alive": true,
-      "reason": "Site mangaoku.info adresinden ww16.mangaoku.info adresine taşınmış, otomatik onarıldı.",
-      "source": {
-        "id": "mangaoku.info",
-        "brand": "mangaoku",
-        "name": "Mangaoku",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "ww16.mangaoku.info",
-        "baseUrl": "https://ww16.mangaoku.info",
-        "altDomains": [
-          "mangaoku.info"
-        ],
         "engine": "madara",
         "config": {
-          "datePattern": "dd MMMM yyyy",
-          "listUrl": "seri/",
-          "tagPrefix": "tur/"
+          "datePattern": "d MMMM yyyy"
         },
         "origins": [
           "local_tr",
@@ -2992,48 +3140,174 @@
       }
     },
     {
-      "domain": "niverafansub.org",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "domain": "mangagezginim.com",
+      "repaired_domain": "mangagezgini.online",
+      "status": "OTOMATIK_TAMIR_ALTERNATIF",
+      "alive": true,
+      "reason": "Eski domain (mangagezginim.com) DNS ölüydü, çalışan alternatif domain (mangagezgini.online) ile otomatik onarıldı.",
       "source": {
-        "id": "niverafansub.org",
-        "brand": "nivera",
-        "name": "NiveraFansub",
+        "id": "mangagezginim.com",
+        "brand": "mangagezgini",
+        "name": "MangaGezgini",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangagezgini.online",
+        "baseUrl": "https://mangagezgini.online",
+        "altDomains": [
+          "mangagezgini.online"
+        ],
+        "engine": "madara",
+        "config": {
+          "datePattern": "dd/MM/yyyy"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "kuroimanga.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "LICHSUBS",
+        "brand": "lichsubs",
+        "name": "LichSubs",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "kuroimanga.com",
+        "baseUrl": "https://www.kuroimanga.com",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "datePattern": "dd/MM/yyyy"
+        },
+        "origins": [
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "mikrokosmosfb.blogspot.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "mikrokosmosfb",
+        "brand": "mikrokosmosfb",
+        "name": "Mikrokosmosfb",
         "lang": "tr",
         "nsfw": 1,
-        "domain": "niverafansub.org",
-        "baseUrl": "https://niverafansub.org",
+        "domain": "mikrokosmosfb.blogspot.com",
+        "baseUrl": "https://mikrokosmosfb.blogspot.com",
+        "altDomains": [],
+        "engine": "zeistmanga",
+        "config": {
+          "stateOngoing": "Devam Ediyor",
+          "stateFinished": "Tamamlandı",
+          "stateAbandoned": "Güncel"
+        },
+        "origins": [
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "mangtto.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "mangtto.com",
+        "brand": "mangtto",
+        "name": "mangtto",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangtto.com",
+        "baseUrl": "https://mangtto.com",
+        "altDomains": [],
+        "engine": "unknown",
+        "config": {},
+        "origins": [
+          "local_custom"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "manga-ay.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "manga-ay.com",
+        "brand": "mangaay",
+        "name": "MangaAy",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "manga-ay.com",
+        "baseUrl": "https://manga-ay.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "guncelmanga.net",
+      "repaired_domain": "sonew.mycloudstudio.co.in",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site guncelmanga.net adresinden sonew.mycloudstudio.co.in adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "guncelmanga.net",
+        "brand": "guncel",
+        "name": "GuncelManga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "sonew.mycloudstudio.co.in",
+        "baseUrl": "https://sonew.mycloudstudio.co.in",
         "altDomains": [
-          "niverafansub.one"
+          "guncelmanga.net"
         ],
         "engine": "madara",
         "config": {
           "datePattern": "d MMMM yyyy"
         },
         "origins": [
-          "keiyoushi_index",
-          "local_custom",
           "local_tr",
           "nyora_datadriven"
         ],
         "verified_by_user": false,
-        "merged_variant_count": 5
+        "merged_variant_count": 2
       }
     },
     {
-      "domain": "mangaball.com",
-      "status": "CANLI_DOGRU",
+      "domain": "myreadingmanga.info",
+      "status": "CLOUDFLARE_KORUMALI",
       "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
-        "id": "8648105733020574748",
-        "brand": "mangaball",
-        "name": "Manga Ball",
+        "id": "164535712016830416",
+        "brand": "myreading",
+        "name": "MyReadingManga",
         "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangaball.com",
-        "baseUrl": "https://mangaball.com",
+        "nsfw": 1,
+        "domain": "myreadingmanga.info",
+        "baseUrl": "https://myreadingmanga.info",
         "altDomains": [],
         "engine": "keiyoushi",
         "config": {},
@@ -3042,6 +3316,34 @@
         ],
         "verified_by_user": false,
         "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "mangaruhu.com",
+      "repaired_domain": "mangaruhu.net",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site mangaruhu.com adresinden mangaruhu.net adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "mangaruhu.com",
+        "brand": "mangaruhu",
+        "name": "MangaRuhu",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mangaruhu.net",
+        "baseUrl": "https://mangaruhu.net",
+        "altDomains": [
+          "mangaruhu.com"
+        ],
+        "engine": "madara",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
       }
     },
     {
@@ -3068,109 +3370,59 @@
       }
     },
     {
-      "domain": "adumanga.com",
-      "status": "OLU_SPAM_KUMAR_YONLENDIRME",
+      "domain": "nirvanamanga.com",
+      "status": "OLU_HTTP_SUNUCU_KAPALI",
       "alive": false,
-      "reason": "Domain süresi bitmiş, kumar/spam sitesine yönlendirilmiş (koplo77-irama.com).",
+      "reason": "Sunucu HTTP 521 dönüyor (Sayfa bulunamadı veya sunucu kapalı).",
       "source": {
-        "id": "adumanga",
-        "brand": "adumanga",
-        "name": "AduManga",
+        "id": "nirvanamanga.com",
+        "brand": "nirvana",
+        "name": "Nirvana Manga",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "adumanga.com",
-        "baseUrl": "https://adumanga.com",
+        "domain": "nirvanamanga.com",
+        "baseUrl": "https://nirvanamanga.com",
         "altDomains": [],
         "engine": "mangareader",
         "config": {
           "pageSize": 20,
           "searchPageSize": 10,
-          "locale": "en",
           "capabilities": {
             "tagsExclusion": false
           }
         },
         "origins": [
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "asemifansub.com",
-      "status": "OLU_SPAM_KUMAR_YONLENDIRME",
-      "alive": false,
-      "reason": "Domain süresi bitmiş, kumar/spam sitesine yönlendirilmiş (situsbet200resmi.org).",
-      "source": {
-        "id": "asemifansub.com",
-        "brand": "asemi",
-        "name": "AsemiFansub",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "asemifansub.com",
-        "baseUrl": "https://asemifansub.com",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10
-        },
-        "origins": [
+          "keiyoushi_index",
           "local_tr",
           "nyora_datadriven"
         ],
         "verified_by_user": false,
-        "merged_variant_count": 2
+        "merged_variant_count": 3
       }
     },
     {
-      "domain": "mugimanga.com",
+      "domain": "okutoon.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "mugimanga.com",
-        "brand": "mugi",
-        "name": "MugiManga",
+        "id": "okutoon.com",
+        "brand": "okutoon",
+        "name": "OkuToon",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "mugimanga.com",
-        "baseUrl": "https://mugimanga.com",
+        "domain": "okutoon.com",
+        "baseUrl": "https://okutoon.com",
         "altDomains": [],
-        "engine": "madara",
-        "config": {
-          "datePattern": "dd/MM/yyyy"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "nyxmanga.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "nyxmanga.com",
-        "brand": "nyxmanga",
-        "name": "NyxManga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "nyxmanga.com",
-        "baseUrl": "https://nyxmanga.com",
-        "altDomains": [],
-        "engine": "mangareader",
+        "engine": "custom",
         "config": {},
         "origins": [
+          "keiyoushi_index",
+          "local_custom",
           "local_tr"
         ],
         "verified_by_user": false,
-        "merged_variant_count": 1
+        "merged_variant_count": 3
       }
     },
     {
@@ -3205,6 +3457,29 @@
       }
     },
     {
+      "domain": "nyxmanga.com",
+      "status": "YEREL_AG_ISP_ENGELI",
+      "alive": false,
+      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "source": {
+        "id": "nyxmanga.com",
+        "brand": "nyxmanga",
+        "name": "NyxManga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "nyxmanga.com",
+        "baseUrl": "https://nyxmanga.com",
+        "altDomains": [],
+        "engine": "mangareader",
+        "config": {},
+        "origins": [
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
       "domain": "prunusscans.com",
       "status": "OLU_DNS_KAYDI_YOK",
       "alive": false,
@@ -3232,77 +3507,26 @@
       }
     },
     {
-      "domain": "okutoon.com",
+      "domain": "niverafansub.org",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "okutoon.com",
-        "brand": "okutoon",
-        "name": "OkuToon",
+        "id": "niverafansub.org",
+        "brand": "nivera",
+        "name": "NiveraFansub",
         "lang": "tr",
-        "nsfw": 0,
-        "domain": "okutoon.com",
-        "baseUrl": "https://okutoon.com",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "millascan.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "millascan.com",
-        "brand": "milasub",
-        "name": "MilaSub",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "millascan.com",
-        "baseUrl": "https://millascan.com",
+        "nsfw": 1,
+        "domain": "niverafansub.org",
+        "baseUrl": "https://niverafansub.org",
         "altDomains": [
-          "milascans.tr"
+          "niverafansub.dev",
+          "niverafansub.one"
         ],
         "engine": "madara",
         "config": {
           "datePattern": "d MMMM yyyy"
         },
-        "origins": [
-          "keiyoushi_index",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 4
-      }
-    },
-    {
-      "domain": "ragnarscans.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "ragnarscans.com",
-        "brand": "ragnar",
-        "name": "Ragnarscans",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "ragnarscans.com",
-        "baseUrl": "https://ragnarscans.com",
-        "altDomains": [
-          "ragnarscans.net"
-        ],
-        "engine": "initmanga",
-        "config": {},
         "origins": [
           "keiyoushi_index",
           "local_custom",
@@ -3311,6 +3535,86 @@
         ],
         "verified_by_user": false,
         "merged_variant_count": 5
+      }
+    },
+    {
+      "domain": "mangakoleji.com",
+      "repaired_domain": "dropcatch.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site mangakoleji.com adresinden dropcatch.com adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "mangakoleji.com",
+        "brand": "mangakoleji",
+        "name": "MangaKoleji",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "dropcatch.com",
+        "baseUrl": "https://dropcatch.com",
+        "altDomains": [
+          "mangakoleji.com"
+        ],
+        "engine": "mangareader",
+        "config": {
+          "pageSize": 20,
+          "searchPageSize": 10,
+          "capabilities": {
+            "tagsExclusion": true
+          }
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "norascans.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "norascans.com",
+        "brand": "nora",
+        "name": "Nora Scans",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "norascans.com",
+        "baseUrl": "https://norascans.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "nhentai.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "6423038744951581148",
+        "brand": "nhentaicomunoriginal",
+        "name": "nHentai.com (unoriginal)",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "nhentai.com",
+        "baseUrl": "https://nhentai.com",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
       }
     },
     {
@@ -3368,52 +3672,6 @@
       }
     },
     {
-      "domain": "millascan.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "millascan.com",
-        "brand": "millascan",
-        "name": "millascan",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "millascan.com",
-        "baseUrl": "https://millascan.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "local_custom"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "panda.chaika.moe",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "6830559705127350757",
-        "brand": "pandachaika",
-        "name": "PandaChaika",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "panda.chaika.moe",
-        "baseUrl": "https://panda.chaika.moe",
-        "altDomains": [],
-        "engine": "keiyoushi",
-        "config": {},
-        "origins": [
-          "keiyoushi_index"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
       "domain": "namicomi.com",
       "status": "CANLI_DOGRU",
       "alive": true,
@@ -3434,6 +3692,91 @@
         ],
         "verified_by_user": false,
         "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "paradoxscans.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "paradoxscans.com",
+        "brand": "paradox",
+        "name": "Paradox Scans",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "paradoxscans.com",
+        "baseUrl": "https://paradoxscans.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "moondaisyscans.biz",
+      "repaired_domain": "expireddomains.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site moondaisyscans.biz adresinden expireddomains.com adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "moondaisyscans.biz",
+        "brand": "moondaisy",
+        "name": "MoonDaisyScans",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "expireddomains.com",
+        "baseUrl": "https://expireddomains.com",
+        "altDomains": [
+          "moondaisyscans.biz",
+          "moondaisyscans.pro"
+        ],
+        "engine": "mangareader",
+        "config": {
+          "pageSize": 20,
+          "searchPageSize": 10,
+          "capabilities": {
+            "tagsExclusion": false
+          }
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 5
+      }
+    },
+    {
+      "domain": "sarcasmscans.com",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "source": {
+        "id": "sarcasmscans.com",
+        "brand": "sarcasm",
+        "name": "SarcasmScans",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "sarcasmscans.com",
+        "baseUrl": "https://sarcasmscans.com",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {},
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
       }
     },
     {
@@ -3468,101 +3811,24 @@
       }
     },
     {
-      "domain": "paradoxscans.com",
-      "status": "CANLI_DOGRU",
+      "domain": "ravenscans.org",
+      "status": "CLOUDFLARE_KORUMALI",
       "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
-        "id": "paradoxscans.com",
-        "brand": "paradox",
-        "name": "Paradox Scans",
+        "id": "ravenscans.org",
+        "brand": "raven",
+        "name": "RavenScans",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "paradoxscans.com",
-        "baseUrl": "https://paradoxscans.com",
+        "domain": "ravenscans.org",
+        "baseUrl": "https://ravenscans.org",
         "altDomains": [],
-        "engine": "custom",
+        "engine": "mangareader",
         "config": {},
         "origins": [
-          "keiyoushi_index",
           "local_custom",
           "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "piedpiperfansubyy.me",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "piedpiperfansubyy.me",
-        "brand": "piedpiperfansubyy",
-        "name": "PiedPiperFansubyy",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "piedpiperfansubyy.me",
-        "baseUrl": "https://piedpiperfansubyy.me",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {
-          "datePattern": "d MMMM yyyy"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "sarcasmscans.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "sarcasmscans.com",
-        "brand": "sarcasm",
-        "name": "SarcasmScans",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "sarcasmscans.com",
-        "baseUrl": "https://sarcasmscans.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "guncelmanga.net",
-      "status": "OLU_SPAM_KUMAR_YONLENDIRME",
-      "alive": false,
-      "reason": "Domain süresi bitmiş, kumar/spam sitesine yönlendirilmiş (789betwin.cc).",
-      "source": {
-        "id": "guncelmanga.net",
-        "brand": "guncel",
-        "name": "GuncelManga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "guncelmanga.net",
-        "baseUrl": "https://guncelmanga.net",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {
-          "datePattern": "d MMMM yyyy"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
         ],
         "verified_by_user": false,
         "merged_variant_count": 2
@@ -3592,57 +3858,27 @@
       }
     },
     {
-      "domain": "ravenscans.org",
-      "status": "CANLI_DOGRU",
+      "domain": "mangaoku.info",
+      "repaired_domain": "ww16.mangaoku.info",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
       "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "reason": "Site mangaoku.info adresinden ww16.mangaoku.info adresine taşınmış, otomatik onarıldı.",
       "source": {
-        "id": "ravenscans.org",
-        "brand": "raven",
-        "name": "RavenScans",
+        "id": "mangaoku.info",
+        "brand": "mangaoku",
+        "name": "Mangaoku",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "ravenscans.org",
-        "baseUrl": "https://ravenscans.org",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {},
-        "origins": [
-          "local_custom",
-          "local_tr"
+        "domain": "ww16.mangaoku.info",
+        "baseUrl": "https://ww16.mangaoku.info",
+        "altDomains": [
+          "mangaoku.info"
         ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "snscoeurturkey.blogspot.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "snscoeurturkey.blogspot.com",
-        "brand": "snscoeurturkey",
-        "name": "SnscoeurTurkey",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "snscoeurturkey.blogspot.com",
-        "baseUrl": "https://snscoeurturkey.blogspot.com",
-        "altDomains": [],
-        "engine": "zeistmanga",
+        "engine": "madara",
         "config": {
-          "mangaCategory": "Seriler",
-          "stateOngoing": "Güncel",
-          "stateFinished": "Final",
-          "stateAbandoned": "Düzenleniyor",
-          "tagScrape": {
-            "path": "/p/gelismis-arama.html",
-            "rootSelector": "div.filter",
-            "item": "ul li",
-            "keyMode": "input",
-            "titleMode": "label",
-            "titleCase": false
-          }
+          "datePattern": "dd MMMM yyyy",
+          "listUrl": "seri/",
+          "tagPrefix": "tur/"
         },
         "origins": [
           "local_tr",
@@ -3653,10 +3889,133 @@
       }
     },
     {
-      "domain": "siyahmelek.my",
+      "domain": "mugimanga.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "mugimanga.com",
+        "brand": "mugi",
+        "name": "MugiManga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "mugimanga.com",
+        "baseUrl": "https://mugimanga.com",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "datePattern": "dd/MM/yyyy"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "outcatscans.net",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "outcatscans.net",
+        "brand": "outcats",
+        "name": "Outcats Scans",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "outcatscans.net",
+        "baseUrl": "https://outcatscans.net",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "piedpiperfansubyy.me",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "piedpiperfansubyy.me",
+        "brand": "piedpiperfansubyy",
+        "name": "PiedPiperFansubyy",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "piedpiperfansubyy.me",
+        "baseUrl": "https://piedpiperfansubyy.me",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "datePattern": "d MMMM yyyy"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "otakuangel.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "2964530292665029215",
+        "brand": "otakuangel",
+        "name": "OtakuAngel",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "otakuangel.com",
+        "baseUrl": "https://otakuangel.com",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "manwe.pro",
       "status": "YEREL_AG_ISP_ENGELI",
       "alive": false,
       "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "source": {
+        "id": "manwe.pro",
+        "brand": "manwe",
+        "name": "Manwe",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "manwe.pro",
+        "baseUrl": "https://manwe.pro",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {},
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "siyahmelek.my",
+      "status": "CLOUDFLARE_KORUMALI",
+      "alive": true,
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
         "id": "siyahmelek.my",
         "brand": "siyahmelek",
@@ -3677,32 +4036,6 @@
         ],
         "verified_by_user": false,
         "merged_variant_count": 4
-      }
-    },
-    {
-      "domain": "strayfansub.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "strayfansub.com",
-        "brand": "stray",
-        "name": "StrayFansub",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "strayfansub.com",
-        "baseUrl": "https://strayfansub.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {
-          "tagPrefix": "seri-turu/"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
       }
     },
     {
@@ -3733,6 +4066,81 @@
         ],
         "verified_by_user": false,
         "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "tempestfansub.net",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "source": {
+        "id": "tempestfansub.net",
+        "brand": "tempestmangas",
+        "name": "tempestmangas.com",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "tempestfansub.net",
+        "baseUrl": "https://tempestfansub.net",
+        "altDomains": [],
+        "engine": "mangareader",
+        "config": {
+          "pageSize": 30,
+          "searchPageSize": 10
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "monomanga.com.tr",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "monomanga.com.tr",
+        "brand": "mono",
+        "name": "Mono Manga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "monomanga.com.tr",
+        "baseUrl": "https://monomanga.com.tr",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "sadscans.com",
+      "status": "CLOUDFLARE_KORUMALI",
+      "alive": true,
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
+      "source": {
+        "id": "sadscans.com",
+        "brand": "sadscans",
+        "name": "SadScans",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "sadscans.com",
+        "baseUrl": "https://sadscans.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
       }
     },
     {
@@ -3767,23 +4175,27 @@
       }
     },
     {
-      "domain": "manga.araznovel.com",
+      "domain": "shadowceviri.blogspot.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "manga.araznovel.com",
-        "brand": "manga",
-        "name": "manga",
+        "id": "shadowceviri",
+        "brand": "shadow",
+        "name": "ShadowCeviri",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "manga.araznovel.com",
-        "baseUrl": "https://manga.araznovel.com",
+        "domain": "shadowceviri.blogspot.com",
+        "baseUrl": "https://shadowceviri.blogspot.com",
         "altDomains": [],
-        "engine": "unknown",
-        "config": {},
+        "engine": "zeistmanga",
+        "config": {
+          "stateOngoing": "Devam Ediyor",
+          "stateFinished": "Tamamlandı",
+          "stateAbandoned": "Güncel"
+        },
         "origins": [
-          "local_custom"
+          "nyora_datadriven"
         ],
         "verified_by_user": false,
         "merged_variant_count": 1
@@ -3814,313 +4226,108 @@
       }
     },
     {
-      "domain": "sadscans.com",
-      "status": "CLOUDFLARE_KORUMALI",
+      "domain": "swarm.ws",
+      "status": "CANLI_DOGRU",
       "alive": true,
-      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
+      "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "sadscans.com",
-        "brand": "sadscans",
-        "name": "SadScans",
+        "id": "8800126243432184157",
+        "brand": "swarm",
+        "name": "Swarm",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "sadscans.com",
-        "baseUrl": "https://sadscans.com",
+        "domain": "swarm.ws",
+        "baseUrl": "https://swarm.ws",
         "altDomains": [],
-        "engine": "custom",
+        "engine": "keiyoushi",
         "config": {},
         "origins": [
-          "local_tr"
+          "keiyoushi_index"
         ],
         "verified_by_user": false,
         "merged_variant_count": 1
       }
     },
     {
-      "domain": "summertoons.net",
+      "domain": "toon.space",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "summertoons.net",
-        "brand": "summer",
-        "name": "SummerToon",
+        "id": "252822661917673438",
+        "brand": "toonspace",
+        "name": "ToonSpace",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "toon.space",
+        "baseUrl": "https://toon.space",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "ragnarscans.com",
+      "repaired_domain": "ragnarscans2.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site ragnarscans.com adresinden ragnarscans2.com adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "ragnarscans.com",
+        "brand": "ragnar",
+        "name": "Ragnarscans",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "summertoons.net",
-        "baseUrl": "https://summertoons.net",
+        "domain": "ragnarscans2.com",
+        "baseUrl": "https://ragnarscans2.com",
         "altDomains": [
-          "summertoon.co"
+          "ragnarscans.com",
+          "ragnarscans.net"
         ],
-        "engine": "mangathemesia",
-        "config": {
-          "pageSize": 10,
-          "searchPageSize": 10,
-          "capabilities": {
-            "tagsExclusion": false
-          }
-        },
+        "engine": "initmanga",
+        "config": {},
         "origins": [
           "keiyoushi_index",
+          "local_custom",
           "local_tr",
           "nyora_datadriven"
         ],
         "verified_by_user": false,
-        "merged_variant_count": 4
+        "merged_variant_count": 5
       }
     },
     {
-      "domain": "shadowceviri.blogspot.com",
+      "domain": "snscoeurturkey.blogspot.com",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "shadowceviri",
-        "brand": "shadow",
-        "name": "ShadowCeviri",
+        "id": "snscoeurturkey.blogspot.com",
+        "brand": "snscoeurturkey",
+        "name": "SnscoeurTurkey",
         "lang": "tr",
-        "nsfw": 0,
-        "domain": "shadowceviri.blogspot.com",
-        "baseUrl": "https://shadowceviri.blogspot.com",
+        "nsfw": 1,
+        "domain": "snscoeurturkey.blogspot.com",
+        "baseUrl": "https://snscoeurturkey.blogspot.com",
         "altDomains": [],
         "engine": "zeistmanga",
         "config": {
-          "stateOngoing": "Devam Ediyor",
-          "stateFinished": "Tamamlandı",
-          "stateAbandoned": "Güncel"
-        },
-        "origins": [
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "seraphmanga.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "seraphmanga.com",
-        "brand": "seraph",
-        "name": "SeraphManga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "seraphmanga.com",
-        "baseUrl": "https://seraphmanga.com",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10,
-          "capabilities": {
-            "tagsExclusion": false
-          }
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "nirvanamanga.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "nirvanamanga.com",
-        "brand": "nirvana",
-        "name": "Nirvana Manga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "nirvanamanga.com",
-        "baseUrl": "https://nirvanamanga.com",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10,
-          "capabilities": {
-            "tagsExclusion": false
-          }
-        },
-        "origins": [
-          "keiyoushi_index",
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "titanmanga.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "titanmanga.com",
-        "brand": "titan",
-        "name": "TitanManga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "titanmanga.com",
-        "baseUrl": "https://titanmanga.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "viyafansub.com",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "viyafansub.com",
-        "brand": "viya",
-        "name": "ViyaFansub",
-        "lang": "tr",
-        "nsfw": 1,
-        "domain": "viyafansub.com",
-        "baseUrl": "https://viyafansub.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "trwebtoon.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "trwebtoon.com",
-        "brand": "trweb",
-        "name": "TrWebtoon",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "trwebtoon.com",
-        "baseUrl": "https://trwebtoon.com",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "webtoonoku.org",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "webtoonoku.org",
-        "brand": "trkemangavewebtoonoku",
-        "name": "Türkçe Manga ve Webtoon Oku",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "webtoonoku.org",
-        "baseUrl": "https://webtoonoku.org",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "local_custom"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "timenaight.org",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "timenaight.org",
-        "brand": "timenaight",
-        "name": "TimeNaight",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "timenaight.org",
-        "baseUrl": "https://timenaight.org",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {
-          "postReq": true,
-          "datePattern": "dd/MM/yyyy"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "summertoons.net",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "summertoons.net",
-        "brand": "webtoonokumanhwaokumangao",
-        "name": "Webtoon Oku, Manhwa Oku, Manga O",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "summertoons.net",
-        "baseUrl": "https://summertoons.net",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "local_custom"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "tempestscans.net",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "tempestscans.net",
-        "brand": "tempestfansub",
-        "name": "TempestFansub.Com",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "tempestscans.net",
-        "baseUrl": "https://tempestscans.net",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 25,
-          "searchPageSize": 40,
-          "capabilities": {
-            "tagsExclusion": false
+          "mangaCategory": "Seriler",
+          "stateOngoing": "Güncel",
+          "stateFinished": "Final",
+          "stateAbandoned": "Düzenleniyor",
+          "tagScrape": {
+            "path": "/p/gelismis-arama.html",
+            "rootSelector": "div.filter",
+            "item": "ul li",
+            "keyMode": "input",
+            "titleMode": "label",
+            "titleCase": false
           }
         },
         "origins": [
@@ -4154,6 +4361,249 @@
         ],
         "verified_by_user": false,
         "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "ruyamanga2.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "ruyamanga2.com",
+        "brand": "ruyamanga2",
+        "name": "ruyamanga2",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "ruyamanga2.com",
+        "baseUrl": "https://ruyamanga2.com",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {},
+        "origins": [
+          "local_custom"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "viyafansub.com",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "source": {
+        "id": "viyafansub.com",
+        "brand": "viya",
+        "name": "ViyaFansub",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "viyafansub.com",
+        "baseUrl": "https://viyafansub.com",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {},
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "trmanga.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "trmanga.com",
+        "brand": "trmanga",
+        "name": "TrManga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "trmanga.com",
+        "baseUrl": "https://trmanga.com",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "ruyamanga.net",
+      "repaired_domain": "ruyamanga2.com",
+      "status": "OTOMATIK_TAMIR_ALTERNATIF",
+      "alive": true,
+      "reason": "Eski domain (ruyamanga.net) DNS ölüydü, çalışan alternatif domain (ruyamanga2.com) ile otomatik onarıldı.",
+      "source": {
+        "id": "ruyamanga.net",
+        "brand": "ruya",
+        "name": "RuyaManga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "ruyamanga2.com",
+        "baseUrl": "https://ruyamanga2.com",
+        "altDomains": [
+          "ruyamanga2.com"
+        ],
+        "engine": "madara",
+        "config": {
+          "tagPrefix": "manga-kategori/",
+          "datePattern": "dd/MM/yyyy"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "tarotscans.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "tarotscans.com",
+        "brand": "tarot",
+        "name": "Tarot Scans",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "tarotscans.com",
+        "baseUrl": "https://www.tarotscans.com",
+        "altDomains": [],
+        "engine": "mangareader",
+        "config": {
+          "pageSize": 20,
+          "searchPageSize": 10,
+          "capabilities": {
+            "tagsExclusion": false
+          }
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "timenaight.org",
+      "status": "YEREL_AG_ISP_ENGELI",
+      "alive": false,
+      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "source": {
+        "id": "timenaight.org",
+        "brand": "timenaight",
+        "name": "TimeNaight",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "timenaight.org",
+        "baseUrl": "https://timenaight.org",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "postReq": true,
+          "datePattern": "dd/MM/yyyy"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "webtoonhatti.me",
+      "repaired_domain": "letzfetzofdb.top",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site webtoonhatti.me adresinden letzfetzofdb.top adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "webtoonhatti.me",
+        "brand": "clover",
+        "name": "CloverManga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "letzfetzofdb.top",
+        "baseUrl": "https://letzfetzofdb.top",
+        "altDomains": [
+          "webtoonhatti.me"
+        ],
+        "engine": "madara",
+        "config": {},
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "tonizu.top",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "tonizu.top",
+        "brand": "tonizu",
+        "name": "TonizuToon",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "tonizu.top",
+        "baseUrl": "https://tonizu.top",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "datePattern": "dd/mm/yyyy"
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "tempestscans.net",
+      "status": "OLU_DNS_KAYDI_YOK",
+      "alive": false,
+      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
+      "source": {
+        "id": "tempestscans.net",
+        "brand": "tempestfansub",
+        "name": "TempestFansub.Com",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "tempestscans.net",
+        "baseUrl": "https://tempestscans.net",
+        "altDomains": [],
+        "engine": "mangareader",
+        "config": {
+          "pageSize": 25,
+          "searchPageSize": 40,
+          "capabilities": {
+            "tagsExclusion": false
+          }
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
       }
     },
     {
@@ -4211,61 +4661,67 @@
       }
     },
     {
-      "domain": "trmanga.com",
-      "status": "CANLI_DOGRU",
+      "domain": "seraphmanga.com",
+      "repaired_domain": "heffalumpa.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
       "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "reason": "Site seraphmanga.com adresinden heffalumpa.com adresine taşınmış, otomatik onarıldı.",
       "source": {
-        "id": "trmanga.com",
-        "brand": "trmanga",
-        "name": "TrManga",
+        "id": "seraphmanga.com",
+        "brand": "seraph",
+        "name": "SeraphManga",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "trmanga.com",
-        "baseUrl": "https://trmanga.com",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
+        "domain": "heffalumpa.com",
+        "baseUrl": "https://heffalumpa.com",
+        "altDomains": [
+          "seraphmanga.com"
+        ],
+        "engine": "mangareader",
+        "config": {
+          "pageSize": 20,
+          "searchPageSize": 10,
+          "capabilities": {
+            "tagsExclusion": false
+          }
+        },
         "origins": [
-          "keiyoushi_index",
-          "local_tr"
+          "local_tr",
+          "nyora_datadriven"
         ],
         "verified_by_user": false,
         "merged_variant_count": 2
       }
     },
     {
-      "domain": "tonizu.top",
-      "status": "CANLI_DOGRU",
+      "domain": "titanmanga.com",
+      "status": "CLOUDFLARE_KORUMALI",
       "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
-        "id": "tonizu.top",
-        "brand": "tonizu",
-        "name": "TonizuToon",
+        "id": "titanmanga.com",
+        "brand": "titan",
+        "name": "TitanManga",
         "lang": "tr",
-        "nsfw": 1,
-        "domain": "tonizu.top",
-        "baseUrl": "https://tonizu.top",
+        "nsfw": 0,
+        "domain": "titanmanga.com",
+        "baseUrl": "https://titanmanga.com",
         "altDomains": [],
         "engine": "madara",
-        "config": {
-          "datePattern": "dd/mm/yyyy"
-        },
+        "config": {},
         "origins": [
-          "keiyoushi_index",
           "local_tr",
           "nyora_datadriven"
         ],
         "verified_by_user": false,
-        "merged_variant_count": 3
+        "merged_variant_count": 2
       }
     },
     {
       "domain": "yaoimangaoku.net",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "status": "CLOUDFLARE_KORUMALI",
+      "alive": true,
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
         "id": "yaoimangaoku.net",
         "brand": "yaoimangaoku",
@@ -4286,162 +4742,6 @@
         ],
         "verified_by_user": false,
         "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "yaoibar.gay",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "yaoibar.gay",
-        "brand": "yaoibar",
-        "name": "YaoiBar",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "yaoibar.gay",
-        "baseUrl": "https://yaoibar.gay",
-        "altDomains": [
-          "yaoibar.lol"
-        ],
-        "engine": "madara",
-        "config": {
-          "datePattern": "dd/MM/yyyy"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "sunsetmanga.com",
-      "repaired_domain": "sunsetscans.com.tr",
-      "status": "OTOMATIK_TAMIR_YONLENDIRME",
-      "alive": true,
-      "reason": "Site sunsetmanga.com adresinden sunsetscans.com.tr adresine taşınmış, otomatik onarıldı.",
-      "source": {
-        "id": "sunsetmanga.com",
-        "brand": "sunset",
-        "name": "Sunset Manga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "sunsetscans.com.tr",
-        "baseUrl": "https://sunsetscans.com.tr",
-        "altDomains": [
-          "sunsetmanga.com"
-        ],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_custom",
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "zamanmanga.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "zamanmanga.com",
-        "brand": "zaman",
-        "name": "ZamanManga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "zamanmanga.com",
-        "baseUrl": "https://zamanmanga.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {
-          "datePattern": "dd MMMM yyyy"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "ruyamanga2.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "ruyamanga2.com",
-        "brand": "ruyamanga2",
-        "name": "ruyamanga2",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "ruyamanga2.com",
-        "baseUrl": "https://ruyamanga2.com",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "local_custom"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 1
-      }
-    },
-    {
-      "domain": "tempestfansub.net",
-      "status": "OLU_DNS_KAYDI_YOK",
-      "alive": false,
-      "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
-      "source": {
-        "id": "tempestfansub.net",
-        "brand": "tempestmangas",
-        "name": "tempestmangas.com",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "tempestfansub.net",
-        "baseUrl": "https://tempestfansub.net",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 30,
-          "searchPageSize": 10
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "toonhane.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "toonhane.com",
-        "brand": "toonhane",
-        "name": "ToonHane",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "toonhane.com",
-        "baseUrl": "https://toonhane.com",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "local_custom",
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
       }
     },
     {
@@ -4468,18 +4768,41 @@
       }
     },
     {
-      "domain": "webtoonia.fun",
+      "domain": "webtoonoku.org",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
       "source": {
-        "id": "2519173041052749659",
-        "brand": "webtoonia",
-        "name": "Webtoonia",
+        "id": "webtoonoku.org",
+        "brand": "trkemangavewebtoonoku",
+        "name": "Türkçe Manga ve Webtoon Oku",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "webtoonoku.org",
+        "baseUrl": "https://webtoonoku.org",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "local_custom"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "xiaoaitoon.org.tr",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "3151409498215291942",
+        "brand": "xiaoai",
+        "name": "Xiaoaitoon",
         "lang": "tr",
         "nsfw": 1,
-        "domain": "webtoonia.fun",
-        "baseUrl": "https://webtoonia.fun",
+        "domain": "xiaoaitoon.org.tr",
+        "baseUrl": "https://xiaoaitoon.org.tr",
         "altDomains": [],
         "engine": "keiyoushi",
         "config": {},
@@ -4491,10 +4814,59 @@
       }
     },
     {
-      "domain": "zenithscans.com",
+      "domain": "yaoi.me",
       "status": "CANLI_DOGRU",
       "alive": true,
       "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "2452661550434610263",
+        "brand": "yaoime",
+        "name": "Yaoi.me",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "yaoi.me",
+        "baseUrl": "https://yaoi.me",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "trwebtoon.com",
+      "repaired_domain": "trmanga.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site trwebtoon.com adresinden trmanga.com adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "trwebtoon.com",
+        "brand": "trweb",
+        "name": "TrWebtoon",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "trmanga.com",
+        "baseUrl": "https://trmanga.com",
+        "altDomains": [
+          "trwebtoon.com"
+        ],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
+      }
+    },
+    {
+      "domain": "zenithscans.com",
+      "status": "CLOUDFLARE_KORUMALI",
+      "alive": true,
+      "reason": "Cloudflare koruması aktif (Mihon dahili WebView çözücüsü ile aşılabilir).",
       "source": {
         "id": "zenithscans.com",
         "brand": "zenith",
@@ -4513,27 +4885,55 @@
           }
         },
         "origins": [
+          "keiyoushi_index",
           "local_tr",
           "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "webtoonia.fun",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "webtoonia.fun",
+        "brand": "webtoonia",
+        "name": "Webtoonia",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "webtoonia.fun",
+        "baseUrl": "https://webtoonia.fun",
+        "altDomains": [],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_tr"
         ],
         "verified_by_user": false,
         "merged_variant_count": 2
       }
     },
     {
-      "domain": "tarotscans.com",
-      "status": "CANLI_DOGRU",
+      "domain": "adumanga.com",
+      "repaired_domain": "riddles-with-answers.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
       "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
+      "reason": "Site adumanga.com adresinden riddles-with-answers.com adresine taşınmış, otomatik onarıldı.",
       "source": {
-        "id": "tarotscans.com",
-        "brand": "tarot",
-        "name": "Tarot Scans",
+        "id": "adumanga.com",
+        "brand": "tempest",
+        "name": "TempestScans",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "tarotscans.com",
-        "baseUrl": "https://www.tarotscans.com",
-        "altDomains": [],
+        "domain": "riddles-with-answers.com",
+        "baseUrl": "https://riddles-with-answers.com",
+        "altDomains": [
+          "adumanga.com"
+        ],
         "engine": "mangareader",
         "config": {
           "pageSize": 20,
@@ -4543,12 +4943,65 @@
           }
         },
         "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "strayfansub.com",
+      "repaired_domain": "ww38.strayfansub.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site strayfansub.com adresinden ww38.strayfansub.com adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "strayfansub.com",
+        "brand": "stray",
+        "name": "StrayFansub",
+        "lang": "tr",
+        "nsfw": 1,
+        "domain": "ww38.strayfansub.com",
+        "baseUrl": "https://ww38.strayfansub.com",
+        "altDomains": [
+          "strayfansub.buzz",
+          "strayfansub.com"
+        ],
+        "engine": "madara",
+        "config": {
+          "tagPrefix": "seri-turu/"
+        },
+        "origins": [
           "keiyoushi_index",
           "local_tr",
           "nyora_datadriven"
         ],
         "verified_by_user": false,
         "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "ucracizgiroman.com",
+      "status": "CANLI_DOGRU",
+      "alive": true,
+      "reason": "HTTP 200 doğrudan açık.",
+      "source": {
+        "id": "2895434874576908511",
+        "brand": "craizgiroman",
+        "name": "Ücra Çizgi Roman",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "ucracizgiroman.com",
+        "baseUrl": "https://www.ucracizgiroman.com",
+        "altDomains": [],
+        "engine": "keiyoushi",
+        "config": {},
+        "origins": [
+          "keiyoushi_index"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 1
       }
     },
     {
@@ -4580,48 +5033,18 @@
       }
     },
     {
-      "domain": "adumanga.com",
-      "status": "OLU_SPAM_KUMAR_YONLENDIRME",
+      "domain": "ayatoon.com",
+      "status": "YEREL_AG_ISP_ENGELI",
       "alive": false,
-      "reason": "Domain süresi bitmiş, kumar/spam sitesine yönlendirilmiş (koplo77-irama.com).",
+      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
       "source": {
-        "id": "adumanga.com",
-        "brand": "tempest",
-        "name": "TempestScans",
+        "id": "ayatoon.com",
+        "brand": "ayatoon",
+        "name": "AyaToon",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "adumanga.com",
-        "baseUrl": "https://adumanga.com",
-        "altDomains": [],
-        "engine": "mangareader",
-        "config": {
-          "pageSize": 20,
-          "searchPageSize": 10,
-          "capabilities": {
-            "tagsExclusion": false
-          }
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "manga.adonisfansub.com",
-      "status": "CANLI_DOGRU",
-      "alive": true,
-      "reason": "HTTP 200 doğrudan açık.",
-      "source": {
-        "id": "manga.adonisfansub.com",
-        "brand": "adonis",
-        "name": "AdonisFansub",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "manga.adonisfansub.com",
-        "baseUrl": "https://manga.adonisfansub.com",
+        "domain": "ayatoon.com",
+        "baseUrl": "https://ayatoon.com",
         "altDomains": [],
         "engine": "mangareader",
         "config": {
@@ -4663,6 +5086,61 @@
       }
     },
     {
+      "domain": "sunsetmanga.com",
+      "repaired_domain": "sunsetscans.com.tr",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site sunsetmanga.com adresinden sunsetscans.com.tr adresine taşınmış, otomatik onarıldı.",
+      "source": {
+        "id": "sunsetmanga.com",
+        "brand": "sunset",
+        "name": "Sunset Manga",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "sunsetscans.com.tr",
+        "baseUrl": "https://sunsetscans.com.tr",
+        "altDomains": [
+          "sunsetmanga.com",
+          "sunsetscans.com.tr"
+        ],
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "keiyoushi_index",
+          "local_custom",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 3
+      }
+    },
+    {
+      "domain": "armoniscans.net",
+      "status": "YEREL_AG_ISP_ENGELI",
+      "alive": false,
+      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "source": {
+        "id": "armoniscans.net",
+        "brand": "armoni",
+        "name": "ArmoniScans",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "armoniscans.net",
+        "baseUrl": "https://armoniscans.net",
+        "altDomains": [],
+        "engine": "madara",
+        "config": {
+          "tagPrefix": "tur/"
+        },
+        "origins": [
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
       "domain": "kabusmanga.com",
       "status": "YEREL_AG_ISP_ENGELI",
       "alive": false,
@@ -4689,70 +5167,25 @@
       }
     },
     {
-      "domain": "manga-sehri.net",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "domain": "zamanmanga.com",
+      "repaired_domain": "ww38.zamanmanga.com",
+      "status": "OTOMATIK_TAMIR_YONLENDIRME",
+      "alive": true,
+      "reason": "Site zamanmanga.com adresinden ww38.zamanmanga.com adresine taşınmış, otomatik onarıldı.",
       "source": {
-        "id": "manga-sehri.net",
-        "brand": "mangaehri",
-        "name": "Manga Şehri.net",
+        "id": "zamanmanga.com",
+        "brand": "zaman",
+        "name": "ZamanManga",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "manga-sehri.net",
-        "baseUrl": "https://manga-sehri.net",
-        "altDomains": [],
-        "engine": "madara",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_tr"
+        "domain": "ww38.zamanmanga.com",
+        "baseUrl": "https://ww38.zamanmanga.com",
+        "altDomains": [
+          "zamanmanga.com"
         ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "mangabahcesi.com",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "mangabahcesi.com",
-        "brand": "mangabahesi",
-        "name": "Manga Bahçesi",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangabahcesi.com",
-        "baseUrl": "https://mangabahcesi.com",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "armoniscans.net",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "armoniscans.net",
-        "brand": "armoni",
-        "name": "ArmoniScans",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "armoniscans.net",
-        "baseUrl": "https://armoniscans.net",
-        "altDomains": [],
         "engine": "madara",
         "config": {
-          "tagPrefix": "tur/"
+          "datePattern": "dd MMMM yyyy"
         },
         "origins": [
           "local_tr",
@@ -4792,20 +5225,77 @@
       }
     },
     {
-      "domain": "mangabahcesi.com",
+      "domain": "summertoons.net",
       "status": "YEREL_AG_ISP_ENGELI",
       "alive": false,
       "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
       "source": {
-        "id": "mangabahcesi.com",
-        "brand": "mangabahcesi",
-        "name": "mangabahcesi",
+        "id": "summertoons.net",
+        "brand": "summer",
+        "name": "SummerToon",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "mangabahcesi.com",
-        "baseUrl": "https://mangabahcesi.com",
+        "domain": "summertoons.net",
+        "baseUrl": "https://summertoons.net",
+        "altDomains": [
+          "summertoon.co"
+        ],
+        "engine": "mangathemesia",
+        "config": {
+          "pageSize": 10,
+          "searchPageSize": 10,
+          "capabilities": {
+            "tagsExclusion": false
+          }
+        },
+        "origins": [
+          "keiyoushi_index",
+          "local_tr",
+          "nyora_datadriven"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 4
+      }
+    },
+    {
+      "domain": "toonhane.com",
+      "status": "YEREL_AG_ISP_ENGELI",
+      "alive": false,
+      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "source": {
+        "id": "toonhane.com",
+        "brand": "toonhane",
+        "name": "ToonHane",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "toonhane.com",
+        "baseUrl": "https://toonhane.com",
         "altDomains": [],
-        "engine": "unknown",
+        "engine": "custom",
+        "config": {},
+        "origins": [
+          "local_custom",
+          "local_tr"
+        ],
+        "verified_by_user": false,
+        "merged_variant_count": 2
+      }
+    },
+    {
+      "domain": "summertoons.net",
+      "status": "YEREL_AG_ISP_ENGELI",
+      "alive": false,
+      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
+      "source": {
+        "id": "summertoons.net",
+        "brand": "webtoonokumanhwaokumangao",
+        "name": "Webtoon Oku, Manhwa Oku, Manga O",
+        "lang": "tr",
+        "nsfw": 0,
+        "domain": "summertoons.net",
+        "baseUrl": "https://summertoons.net",
+        "altDomains": [],
+        "engine": "custom",
         "config": {},
         "origins": [
           "local_custom"
@@ -4815,44 +5305,20 @@
       }
     },
     {
-      "domain": "mangazure.net",
-      "status": "OLU_HTTP_SUNUCU_KAPALI",
-      "alive": false,
-      "reason": "Sunucu HTTP 523 dönüyor (Sayfa bulunamadı veya sunucu kapalı).",
-      "source": {
-        "id": "mangazure.net",
-        "brand": "mangazure",
-        "name": "MangaZure",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "mangazure.net",
-        "baseUrl": "https://mangazure.net",
-        "altDomains": [],
-        "engine": "custom",
-        "config": {},
-        "origins": [
-          "keiyoushi_index",
-          "local_tr"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
-      }
-    },
-    {
-      "domain": "manga-sehri.com",
+      "domain": "yaoibar.gay",
       "status": "OLU_DNS_KAYDI_YOK",
       "alive": false,
       "reason": "DNS kaydı çözümlenemedi (NXDOMAIN / domain süresi bitmiş veya park edilmiş).",
       "source": {
-        "id": "manga-sehri.com",
-        "brand": "mangasehri",
-        "name": "MangaSehri.com",
+        "id": "yaoibar.gay",
+        "brand": "yaoibar",
+        "name": "YaoiBar",
         "lang": "tr",
         "nsfw": 0,
-        "domain": "manga-sehri.com",
-        "baseUrl": "https://manga-sehri.com",
+        "domain": "yaoibar.gay",
+        "baseUrl": "https://yaoibar.gay",
         "altDomains": [
-          "manga-sehri.net"
+          "yaoibar.lol"
         ],
         "engine": "madara",
         "config": {
@@ -4864,35 +5330,6 @@
         ],
         "verified_by_user": false,
         "merged_variant_count": 3
-      }
-    },
-    {
-      "domain": "ruyamanga.net",
-      "status": "YEREL_AG_ISP_ENGELI",
-      "alive": false,
-      "reason": "Yerel ağ/ISP bağlantı reddi (SSL/Reset). Farklı ağ veya CI üzerinde kontrol edilmeli.",
-      "source": {
-        "id": "ruyamanga.net",
-        "brand": "ruya",
-        "name": "RuyaManga",
-        "lang": "tr",
-        "nsfw": 0,
-        "domain": "ruyamanga.net",
-        "baseUrl": "https://ruyamanga.net",
-        "altDomains": [
-          "ruyamanga2.com"
-        ],
-        "engine": "madara",
-        "config": {
-          "tagPrefix": "manga-kategori/",
-          "datePattern": "dd/MM/yyyy"
-        },
-        "origins": [
-          "local_tr",
-          "nyora_datadriven"
-        ],
-        "verified_by_user": false,
-        "merged_variant_count": 2
       }
     },
     {
@@ -4912,11 +5349,10 @@
         "engine": "custom",
         "config": {},
         "origins": [
-          "keiyoushi_index",
           "local_tr"
         ],
         "verified_by_user": false,
-        "merged_variant_count": 2
+        "merged_variant_count": 1
       }
     }
   ]
