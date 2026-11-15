@@ -24,7 +24,7 @@
         "netshield": true,
         "engine": "mangareader",
         "listPath": "/manga",
-        "itemSelector": "div.bsx",
+        "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "div.eph-num a",
         "readerSelector": "div#readerarea img"
       },
@@ -173,7 +173,7 @@
         },
         "engine": "mangareader",
         "listPath": "/manga",
-        "itemSelector": "div.bsx",
+        "itemSelector": "div.ymk-card-main-area",
         "chapterSelector": "div.eph-num a",
         "readerSelector": "div#readerarea img"
       },
@@ -222,7 +222,7 @@
       "config": {
         "engine": "mangareader",
         "listPath": "/manga",
-        "itemSelector": "div.bsx",
+        "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "div.eph-num a",
         "readerSelector": "div#readerarea img"
       },
@@ -374,7 +374,12 @@
         "listJsonTitle": "title",
         "listJsonUrlField": "slug",
         "listJsonUrlTemplate": "/seri/{slug}",
-        "listJsonCover": "cover_url"
+        "listJsonCover": "cover_url",
+        "searchUrl": "https://mangadiyari.com/api/series?search={query}",
+        "searchJsonItems": "series",
+        "searchJsonUrl": "slug",
+        "searchJsonTitle": "title",
+        "searchJsonPathPrefix": "/seri"
       },
       "verified_by_user": true,
       "origins": [
@@ -428,7 +433,7 @@
         },
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "itemSelector": "article.manga-card",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
@@ -1284,7 +1289,7 @@
         "listPath": "/",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+        "readerSelector": "img[data-src], div.page-break img",
         "chapterApiUrl": "https://mangaball.com/api/v1/title/chapter-listing?title_id={id}&page={page}&limit=500&group_by=flat&sort_order=desc&language=all&search=&user_id=",
         "chapterApiIdPattern": "([0-9a-fA-F]{24})",
         "chapterApiItems": "data",

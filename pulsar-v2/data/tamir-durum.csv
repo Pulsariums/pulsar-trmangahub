@@ -1,0 +1,13 @@
+site,adim,degisiklik,durum,kanit,not
+mangadiyari.com,arama,searchUrl+searchJson* eklendi,duzeltildi,"API /api/series?search= calisiyor (906 bayt/1 kayit, ?search=a 24 bayt)",cihaz dogrulamasi bekliyor
+afroditscans.com,list,"itemSelector div.bsx -> a[href^=""/manga/""]",duzeltildi,"eski secici 0 eslesme, yeni 20 tekil link",katalog kaynagi tr paketinde zaten geciyor
+golgebahcesi.com,list,"itemSelector div.bsx -> a[href^=""/manga/""]",duzeltildi,"eski secici 0, yeni 20 tekil link",cihaz dogrulamasi bekliyor
+gafeland.com,list,itemSelector div.bsx -> div.ymk-card-main-area,duzeltildi,"eski 0, yeni 24 kart; kartta kapak img[data-src] + alt baslik",cihaz dogrulamasi bekliyor
+mangadenizi.net,list,itemSelector -> article.manga-card,duzeltildi,"eski secici 0, yeni 15 kart",cihaz dogrulamasi bekliyor
+mangaball.com,pages,"readerSelector -> img[data-src], div.page-break img",duzeltildi,"bolum sayfasi leercapitulo.co; 7 img[data-src], resim 200/424KB",bolumler 3. taraf siteye gidiyor
+globalcomix.com,details,yok,tamir edilemez,"bolumler ayri API; HTML chapters:[] bos, /chapters/ ayni SPA kabugu",-
+anikiga.com,details,yok,gerek yok,katalog kaynagi tr-1.6.61de details+chapters+pages dolu,-
+manga.araznovel.com,details,yok,tamir edilemez,"detay 5707 bayt JS kabugu, bolum isaretlemesi yok",-
+araznovel.com,list,yok,tamir edilemez,"kok 7798 bayt statik kabuk, 13 yolun 12si 404",-
+mangadex.org,list,yok,tamir edilemez,liste 6956 bayt SPA,-
+mangagezgini.online,list,yok,tamir edilemez,webtoonhatti.club/manga 403,-
