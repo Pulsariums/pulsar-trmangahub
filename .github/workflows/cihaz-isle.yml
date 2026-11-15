@@ -1,6 +1,6 @@
 name: '6) Cihaz sonucunu isle'
 
-# pulsar-v2/data/device-fails.tsv ("id durum adim" satirlari, tam test = yalniz dusenler)
+# pulsar-v2/data/device-fails.tsv ("id<TAB>durum<TAB>adim" satirlari, tam test = yalniz dusenler)
 # -> source-status.json: dusenler tamir paketine, gecenler ana pakete doner.
 on:
   workflow_dispatch:
@@ -24,7 +24,7 @@ jobs:
           TOPLAM: ${{ inputs.toplam }}
         run: |
           set -e
-          jq -R -s --argjson t "$TOPLAM" '{total:$t, sources:(split("\n")|map(select(length>0)|split(" ")|{name:("MIHON_"+.[0]),status:.[1],steps:{(.[2]):{status:.[1],message:""}}}))}' pulsar-v2/data/device-fails.tsv > /tmp/device.json
+          jq -R -s --argjson t "$TOPLAM" '{total:$t, sources:(split("\n")|map(select(length>0)|split("\t")|{name:("MIHON_"+.[0]),status:.[1],steps:{(.[2]):{status:.[1],message:""}}}))}' pulsar-v2/data/device-fails.tsv > /tmp/device.json
           jq '.sources|length' /tmp/device.json
           ./tools/pulsar/target/release/pulsar status --device /tmp/device.json
           jq -r '[.sources[]|.packages[0]//"-"]|group_by(.)|map("\(.[0]) \(length)")|.[]' pulsar-v2/data/source-status.json
