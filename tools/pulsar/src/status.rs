@@ -97,6 +97,10 @@ pub fn recompute_state(e: &mut StatusEntry) {
     let device = e.device.as_ref().map(|p| p.status.as_str()).unwrap_or("");
     let health = e.health.as_ref().map(|p| p.status.as_str()).unwrap_or("");
     let step = e.device_step.as_deref().unwrap_or("");
+    if device == "pass" {
+        e.state = "active".to_string();
+        return;
+    }
     // Cihazda liste adımı düşerse kaynak uygulamada hiç açılmıyor: tek kesin ölüm kanıtı.
     // Sonraki adımların (details/chapters/covers/pages/search) düşmesi kaynağın
     // listelendiğini ama bir alt adımının bozuk olduğunu gösterir; kaynak yayında kalır.
@@ -194,6 +198,9 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
             s.packages = vec!["tamir".to_string()];
         }
         recompute_state(s);
+        if !s.dead && sorun.is_empty() && s.state != "active" {
+            s.packages = vec!["tamir".to_string()];
+        }
     }
     // Katalogdan düşen id'ler yayın listesinde kalmasın.
     file.sources.retain(|k, _| seen.contains(k));
@@ -257,8 +264,12 @@ pub fn record_device(root: &Path, device_path: &Path) -> Result<usize, String> {
     let seen_ids: std::collections::HashSet<String> = list_ids.into_iter().collect();
     if full_run {
         for (k, v) in file.sources.iter_mut() {
-            if v.device.is_some() && !seen_ids.contains(k) {
-                v.device = None;
+            if !seen_ids.contains(k) && (v.device.is_some() || !v.packages.is_empty()) {
+                v.device = if v.packages.is_empty() {
+                    None
+                } else {
+                    Some(Probe { status: "pass".to_string(), http_code: String::new(), ms: 0, detail: String::new(), at: at.clone() })
+                };
                 v.device_step = None;
                 recompute_state(v);
             }
