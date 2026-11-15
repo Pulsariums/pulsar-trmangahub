@@ -1,0 +1,34 @@
+name: '5) Katalog duzelt (jq)'
+on:
+  workflow_dispatch:
+    inputs:
+      filtre:
+        description: 'catalogue.json uzerinde calisacak jq filtresi'
+        type: string
+        required: true
+      mesaj:
+        description: 'Commit mesaji'
+        type: string
+        required: true
+permissions:
+  contents: write
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Uygula
+        env:
+          F: ${{ inputs.filtre }}
+          M: ${{ inputs.mesaj }}
+        run: |
+          f=pulsar-v2/data/catalogue.json
+          jq "$F" "$f" > /tmp/n.json || exit 1
+          printf '%s' "$(cat /tmp/n.json)" > "$f"
+          jq -e '.sources|length>0' "$f" >/dev/null || exit 1
+          git config user.name pulsarium
+          git config user.email pulsariums@gmail.com
+          git diff --stat
+          git diff --quiet && { echo 'degisiklik yok'; exit 0; }
+          git commit -qam "$M"
+          git pull -q --rebase origin main && git push -q origin main
