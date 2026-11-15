@@ -119,17 +119,27 @@ done
 
 # 4) id->kaynak haritası: bakım bacası (07_maintain.py) MIHON_<id>'leri ancak
 #    bununla isimlendirebilir. Parsers deposu annotation taraması + katalog hash'i.
-# Kısa sha fetch edilmez; GitHub API ile tam sha'ya çözülür (çözülemezse klonun
-# varsayılan dalı kullanılır).
+# Kısa sha fetch edilmez; GitHub API ile tam sha'ya çözülür.
 FULL_REF="$(curl -sf "https://api.github.com/repos/Kotatsu-Redo/kotatsu-parsers-redo/commits/$PARSERS_REF" \
     | sed -n 's/.*"sha": "\([0-9a-f]\{40\}\)".*/\1/p' | head -1 || true)"
 FULL_REF="${FULL_REF:-$PARSERS_REF}"
-git clone --quiet --depth 1 https://github.com/Kotatsu-Redo/kotatsu-parsers-redo "$WORK/parsers"
-git -C "$WORK/parsers" fetch --quiet --depth 1 origin "$FULL_REF" 2>/dev/null || true
-git -C "$WORK/parsers" checkout --quiet "$FULL_REF" 2>/dev/null || \
-    echo "::warning::parsers revizyonu $FULL_REF alınamadı; klonun varsayılan dalı kullanılıyor"
-python3 "$SCRIPTS/emit_source_map.py" "$WORK/parsers" \
-    "$ROOT/extension/src/main/assets/catalogue.json" "$ROOT/repo-build/source_map.json"
+# `--depth 1` klonun İÇİNE ikinci sığ fetch atılamıyor (shallow repo başka
+# bir shallow uç kabul etmiyor) — sabitlenmiş eski ref bu yüzden hep düşüyordu.
+# Boş depoya doğrudan sha fetch'i ise çalışıyor (ölçüldü: 1389 .kt dosyası).
+if git init --quiet "$WORK/parsers" &&
+   git -C "$WORK/parsers" remote add origin \
+        https://github.com/Kotatsu-Redo/kotatsu-parsers-redo &&
+   git -C "$WORK/parsers" fetch --quiet --depth 1 origin "$FULL_REF" &&
+   git -C "$WORK/parsers" checkout --quiet FETCH_HEAD; then
+    python3 "$SCRIPTS/emit_source_map.py" "$WORK/parsers" \
+        "$ROOT/extension/src/main/assets/catalogue.json" "$ROOT/repo-build/source_map.json"
+else
+    # APK'lar sabitlenmiş ref'ten derlendi; varsayılan dalın haritasını
+    # yayınlamak paket üyeliğini sessizce değiştirir (test'e düşen/eklenen
+    # kaynaklar). Depodaki harita o ref'e aittir, o korunur.
+    echo "::warning::parsers revizyonu $FULL_REF alınamadı; depodaki source_map.json korunuyor"
+    cp "$ROOT/repo/source_map.json" "$ROOT/repo-build/source_map.json"
+fi
 
 # 5) İndeksi APK'lardan üret (Nyora generate-repo örüntüsü: sürüm/parmak izi
 #    APK'nın KENDİSİNDEN okunur, elle yazılamaz; kontrat bekçisi dahil).
