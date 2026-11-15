@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T20:30:29Z",
+ "generated": "2026-11-15T20:41:19Z",
  "note": "id = Kotlin PulsarKotatsuSource/PulsarSource hash'inin Python kopyası; bakım bacası (07_maintain.py) MIHON_<id> -> kaynak eşlemesini bundan yapar.",
  "engine": [
   {
@@ -14159,22 +14159,12 @@
   {
    "id": 3789389920063824891,
    "kind": "catalogue",
-   "name": "KenComics",
-   "title": "KenComics",
+   "name": "Kenscans",
+   "title": "Kenscans",
    "lang": "tr",
    "nsfw": 0,
    "domain": "kencomics.com",
    "engine": "custom"
-  },
-  {
-   "id": 4906103541379031343,
-   "kind": "catalogue",
-   "name": "Koreli Scans",
-   "title": "Koreli Scans",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "nabicix.com",
-   "engine": "madara"
   },
   {
    "id": 1254625717579109559,
@@ -14184,16 +14174,6 @@
    "lang": "tr",
    "nsfw": 1,
    "domain": "kuroimanga.site",
-   "engine": "madara"
-  },
-  {
-   "id": 40471796888478011,
-   "kind": "catalogue",
-   "name": "LichSubs",
-   "title": "LichSubs",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "kuroimanga.com",
    "engine": "madara"
   },
   {
@@ -14369,8 +14349,8 @@
   {
    "id": 661348012455677696,
    "kind": "catalogue",
-   "name": "Merlin Scans",
-   "title": "Merlin Scans",
+   "name": "MerlinToon",
+   "title": "MerlinToon",
    "lang": "tr",
    "nsfw": 0,
    "domain": "merlintoon.net",
@@ -14405,6 +14385,16 @@
    "nsfw": 0,
    "domain": "monomanga.com.tr",
    "engine": "custom"
+  },
+  {
+   "id": 4906103541379031343,
+   "kind": "catalogue",
+   "name": "Nabicix",
+   "title": "Nabicix",
+   "lang": "tr",
+   "nsfw": 0,
+   "domain": "nabicix.com",
+   "engine": "madara"
   },
   {
    "id": 4231843737385138446,
@@ -14549,8 +14539,8 @@
   {
    "id": 7276031357538379431,
    "kind": "catalogue",
-   "name": "Sunset Manga",
-   "title": "Sunset Manga",
+   "name": "Sunset Scans",
+   "title": "Sunset Scans",
    "lang": "tr",
    "nsfw": 0,
    "domain": "sunsetscans.com.tr",
