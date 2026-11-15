@@ -12,22 +12,16 @@ jobs:
         run: |
           set -e
           S=tools/pulsar/src/status.rs
-          E=tools/pulsar/src/embed.rs
-          B=pulsar-v2/scripts/pulsar_build.sh
-          G=pulsar-v2/scripts/generate_repo.py
-          perl -0pi -e 's/(        s\.packages = packages_for\(&e, pk_sorun, s\.dead\);\n)/$1        if dev_bad \&\& sorun.is_empty() \&\& !s.dead {\n            s.packages = vec!["tamir".to_string()];\n        }\n/' $S
-          perl -0pi -e 's/("global18_sorunlu",\n)(    \] \{\n        allowed)/$1        "tamir",\n$2/' $E
-          perl -0pi -e 's/            if !is_active && !marked_sorun \{/            let in_tamir = e\n                .get("packages")\n                .and_then(|v| v.as_array())\n                .map(|a| a.iter().any(|p| p.as_str() == Some("tamir")))\n                .unwrap_or(false);\n            if !is_active \&\& !marked_sorun \&\& !in_tamir {/' $E
-          perl -0pi -e 's/(    private val global18SorunluIds: Set<String> by lazy \{\{ GLOBAL18_SORUNLU_IDS\.toIdSet\(\) \}\}\n)/$1    private val tamirIds: Set<String> by lazy {{ TAMIR_IDS.toIdSet() }}\n/' $E
-          perl -0pi -e 's/(        "global18_sorunlu" -> global18SorunluIds\n)/$1        "tamir" -> tamirIds\n/' $E
-          perl -0pi -e 's/(        global18_sorunlu\) echo "\.global18_sorunlu\|all\|1" ;;\n)/$1        tamir)            echo ".tamir|all|0" ;;\n/' $B
-          perl -0pi -e 's/(        global18_sorunlu\) echo "Pulsar Global 18\+ Cloudflare" ;;\n)/$1        tamir) echo "Pulsar Tamir" ;;\n/' $B
-          perl -0pi -e 's/(FLAVORS="\$\{FLAVORS:-[^}"]*global18_sorunlu)\}"/$1,tamir}"/' $B
-          perl -0pi -e 's/(    "\.global18_sorunlu": \{[^\n]*\n)/$1    ".tamir": {"name": "Pulsar Tamir", "lang": "all", "nsfw": 0},\n/' $G
-          perl -0pi -e 's/global_sorunlu,global18_sorunlu"/global_sorunlu,global18_sorunlu,tamir"/g' $G
+          # A) cihaz "pass" -> aktif
+          perl -0pi -e 's/(    let step = e\.device_step\.as_deref\(\)\.unwrap_or\(""\);\n)/$1    if device == "pass" {\n        e.state = "active".to_string();\n        return;\n    }\n/' $S
+          # B) aktif olmayan her kaynak (olu degil) tamir paketinde test edilir
+          perl -0pi -e 's/(        recompute_state\(s\);\n)(    \}\n    \/\/ Katalogdan)/$1        if !s.dead \&\& sorun.is_empty() \&\& s.state != "active" {\n            s.packages = vec!["tamir".to_string()];\n        }\n$2/' $S
+          # C) tam testte raporda olmayan, yayinda olan kaynak = gecti
+          perl -0pi -e 's/            if v\.device\.is_some\(\) && !seen_ids\.contains\(k\) \{\n                v\.device = None;/            if !seen_ids.contains(k) \&\& (v.device.is_some() || !v.packages.is_empty()) {\n                v.device = if v.packages.is_empty() {\n                    None\n                } else {\n                    Some(Probe { status: "pass".to_string(), http_code: String::new(), ms: 0, detail: String::new(), at: at.clone() })\n                };/' $S
           git diff --stat
+          git diff | grep -E '^[+-]' | grep -v '^+++\|^---' | head -40
           git config user.name pulsarium
           git config user.email pulsariums@gmail.com
           git diff --quiet && { echo 'degisiklik yok'; exit 1; }
-          git commit -qam "feat(tamir): onarimdaki kaynaklar icin tek 'Pulsar Tamir' paketi"
+          git commit -qam "feat(durum): aktif olmayan her kaynak tamir paketinde cihazda test edilir; cihaz gecti = aktif"
           git pull -q --rebase origin main && git push -q origin main
