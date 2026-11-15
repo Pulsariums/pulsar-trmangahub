@@ -1,7 +1,7 @@
 {
  "schema_version": 2,
  "generated_at": "2026-10-16T10:45:41Z",
- "total_count": 106,
+ "total_count": 299,
  "languages": [
   "tr"
  ],
@@ -2580,6 +2580,3866 @@
    "verified_by_user": false,
    "origins": [
     "keiyoushi_index"
+   ]
+  },
+  {
+   "id": "anzmangashd.com",
+   "name": "AnzMangasHd",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "anzmangashd.com",
+   "baseUrl": "https://anzmangashd.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "apollcomics.es",
+   "name": "ApollComics",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "apollcomics.es",
+   "baseUrl": "https://apollcomics.es",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "arenascan.com",
+   "name": "Arenascans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "arenascan.com",
+   "baseUrl": "https://arenascan.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "asialotuss.com",
+   "name": "AsiaLotuss",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "asialotuss.com",
+   "baseUrl": "https://asialotuss.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "bananascans.com",
+   "name": "BananaScan.Com",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "bananascans.com",
+   "baseUrl": "https://bananascans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "beyondtheataraxia.com",
+   "name": "Beyond The Ataraxia",
+   "lang": "it",
+   "nsfw": 0,
+   "domain": "beyondtheataraxia.com",
+   "baseUrl": "https://beyondtheataraxia.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "leitor.borutoexplorer.com.br",
+   "name": "BorutoExplorer",
+   "lang": "pt",
+   "nsfw": 0,
+   "domain": "leitor.borutoexplorer.com.br",
+   "baseUrl": "https://leitor.borutoexplorer.com.br",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "danke.moe",
+   "name": "DankeFursLesen",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "danke.moe",
+   "baseUrl": "https://danke.moe",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "en-thunderscans.com",
+   "name": "EnThunderScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "en-thunderscans.com",
+   "baseUrl": "https://en-thunderscans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "gdscans.com",
+   "name": "GdScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "gdscans.com",
+   "baseUrl": "https://gdscans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "grabber.zone",
+   "name": "Grabber",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "grabber.zone",
+   "baseUrl": "https://grabber.zone",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "infrafandub.com",
+   "name": "InfraFandub",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "infrafandub.com",
+   "baseUrl": "https://infrafandub.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "inu-manga.com",
+   "name": "InuManga",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "inu-manga.com",
+   "baseUrl": "https://inu-manga.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "izanamiscans.my.id",
+   "name": "IzanamiScans",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "izanamiscans.my.id",
+   "baseUrl": "https://izanamiscans.my.id",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "kewnscans.org",
+   "name": "KewnScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "kewnscans.org",
+   "baseUrl": "https://kewnscans.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "isekaikomik.com",
+   "name": "ManhwaList.org",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "isekaikomik.com",
+   "baseUrl": "https://isekaikomik.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "ksgroupscans.com",
+   "name": "KsGroupScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "ksgroupscans.com",
+   "baseUrl": "https://ksgroupscans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "lagoonscans.com",
+   "name": "Lagoon Scans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "lagoonscans.com",
+   "baseUrl": "https://lagoonscans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangalami.com",
+   "name": "LamiManga",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "mangalami.com",
+   "baseUrl": "https://mangalami.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "lelmanga.com",
+   "name": "LelManga",
+   "lang": "fr",
+   "nsfw": 0,
+   "domain": "lelmanga.com",
+   "baseUrl": "https://lelmanga.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "lelscanfr.com",
+   "name": "LelScanFr",
+   "lang": "fr",
+   "nsfw": 0,
+   "domain": "lelscanfr.com",
+   "baseUrl": "https://lelscanfr.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "lhtranslation.net",
+   "name": "LhTranslation",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "lhtranslation.net",
+   "baseUrl": "https://lhtranslation.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "like-manga.net",
+   "name": "Like-Manga.net",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "like-manga.net",
+   "baseUrl": "https://like-manga.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mahoushoujobu.com",
+   "name": "MahouShoujobu",
+   "lang": "all",
+   "nsfw": 0,
+   "domain": "mahoushoujobu.com",
+   "baseUrl": "https://mahoushoujobu.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "makimaaaaa.com",
+   "name": "Makimaaaaa",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "makimaaaaa.com",
+   "baseUrl": "https://makimaaaaa.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manga-starz.net",
+   "name": "Manga-Starz",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "manga-starz.net",
+   "baseUrl": "https://manga-starz.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "lekmanga.net",
+   "name": "LekManga",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "lekmanga.net",
+   "baseUrl": "https://lekmanga.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangaeclipse.com",
+   "name": "MangaEclipse",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangaeclipse.com",
+   "baseUrl": "https://mangaeclipse.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangagg.com",
+   "name": "MangaGg",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangagg.com",
+   "baseUrl": "https://mangagg.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangakimi.com",
+   "name": "MangaKimi",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "mangakimi.com",
+   "baseUrl": "https://mangakimi.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manga-lc.net",
+   "name": "MangaLc",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "manga-lc.net",
+   "baseUrl": "https://manga-lc.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangaread.org",
+   "name": "MangaRead",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangaread.org",
+   "baseUrl": "https://mangaread.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangasushi.org",
+   "name": "MangaSushi",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangasushi.org",
+   "baseUrl": "https://mangasushi.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangazin.org",
+   "name": "MangaBee",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangazin.org",
+   "baseUrl": "https://mangazin.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manhuahot.com",
+   "name": "ManhuaHot",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "manhuahot.com",
+   "baseUrl": "https://manhuahot.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manhuaplus.com",
+   "name": "ManhuaPlus",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "manhuaplus.com",
+   "baseUrl": "https://manhuaplus.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manhuaplus.org",
+   "name": "ManhuaPlus.org",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "manhuaplus.org",
+   "baseUrl": "https://manhuaplus.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manhwabreakup.com",
+   "name": "ManhwaBreakup",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "manhwabreakup.com",
+   "baseUrl": "https://manhwabreakup.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "marmota.me",
+   "name": "Marmota",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "marmota.me",
+   "baseUrl": "https://marmota.me",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mundomanhwa.com",
+   "name": "MundoManhwa",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "mundomanhwa.com",
+   "baseUrl": "https://mundomanhwa.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "ninjacomics.xyz",
+   "name": "NinjaComics",
+   "lang": "pt",
+   "nsfw": 0,
+   "domain": "ninjacomics.xyz",
+   "baseUrl": "https://ninjacomics.xyz",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "noromax02.my.id",
+   "name": "Noromax",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "noromax02.my.id",
+   "baseUrl": "https://noromax02.my.id",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "onma.me",
+   "name": "Onma",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "onma.me",
+   "baseUrl": "https://onma.me",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "rackusreads.com",
+   "name": "RackusReads",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "rackusreads.com",
+   "baseUrl": "https://rackusreads.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "ragnarokscanlation.org",
+   "name": "RagnarokScanlation",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "ragnarokscanlation.org",
+   "baseUrl": "https://ragnarokscanlation.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "raw1001.net",
+   "name": "Raw1001",
+   "lang": "ja",
+   "nsfw": 0,
+   "domain": "raw1001.net",
+   "baseUrl": "https://raw1001.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "reapertrans.com",
+   "name": "ReaperTrans",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "reapertrans.com",
+   "baseUrl": "https://reapertrans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "r1.richtoon.top",
+   "name": "RichtoScan",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "r1.richtoon.top",
+   "baseUrl": "https://r1.richtoon.top",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "rizzfables.com",
+   "name": "RizzComic",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "rizzfables.com",
+   "baseUrl": "https://rizzfables.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "sasangeyou.net",
+   "name": "Sasangeyou",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "sasangeyou.net",
+   "baseUrl": "https://sasangeyou.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "scantrad-union.com",
+   "name": "ScantradUnion",
+   "lang": "fr",
+   "nsfw": 0,
+   "domain": "scantrad-union.com",
+   "baseUrl": "https://scantrad-union.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "violetscans.com",
+   "name": "ShojoScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "violetscans.com",
+   "baseUrl": "https://violetscans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "tanuki-manga.com",
+   "name": "TanukiManga",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "tanuki-manga.com",
+   "baseUrl": "https://tanuki-manga.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "olympustaff.com",
+   "name": "TeamXNovel",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "olympustaff.com",
+   "baseUrl": "https://olympustaff.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "thaimanga.net",
+   "name": "ThaiManga",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "thaimanga.net",
+   "baseUrl": "https://thaimanga.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "lavascans.com",
+   "name": "ThunderScans",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "lavascans.com",
+   "baseUrl": "https://lavascans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "toonhunter.com",
+   "name": "ToonHunter",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "toonhunter.com",
+   "baseUrl": "https://toonhunter.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "toonily.com",
+   "name": "Toonily",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "toonily.com",
+   "baseUrl": "https://toonily.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "tritinia.org",
+   "name": "Tritinia",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "tritinia.org",
+   "baseUrl": "https://tritinia.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "truyentranhdammyy.site",
+   "name": "Truyện Tranh Đam Mỹ",
+   "lang": "vi",
+   "nsfw": 0,
+   "domain": "truyentranhdammyy.site",
+   "baseUrl": "https://truyentranhdammyy.site",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "tsundoku.com.br",
+   "name": "Tsundoku",
+   "lang": "pt",
+   "nsfw": 0,
+   "domain": "tsundoku.com.br",
+   "baseUrl": "https://tsundoku.com.br",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "xoxocomic.com",
+   "name": "XoxoComics",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "xoxocomic.com",
+   "baseUrl": "https://xoxocomic.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "yakshacomics.com",
+   "name": "YakshaComics",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "yakshacomics.com",
+   "baseUrl": "https://yakshacomics.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "xn--l3c0azab5a2gta.com",
+   "name": "สดใสเมะ",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "xn--l3c0azab5a2gta.com",
+   "baseUrl": "https://xn--l3c0azab5a2gta.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "18porncomic.com",
+   "name": "18PornComic",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "18porncomic.com",
+   "baseUrl": "https://18porncomic.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "bymichiby.com",
+   "name": "Bymichiby",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "bymichiby.com",
+   "baseUrl": "https://bymichiby.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "cafecomyaoi.com.br",
+   "name": "CafecomYaoi",
+   "lang": "pt",
+   "nsfw": 0,
+   "domain": "cafecomyaoi.com.br",
+   "baseUrl": "https://cafecomyaoi.com.br",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "cocomic.co",
+   "name": "CoComic",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "cocomic.co",
+   "baseUrl": "https://cocomic.co",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "reader.decadencescans.com",
+   "name": "DecadenceScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "reader.decadencescans.com",
+   "baseUrl": "https://reader.decadencescans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "dojing.net",
+   "name": "Dojing",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "dojing.net",
+   "baseUrl": "https://dojing.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "euphoriascan.com",
+   "name": "EuphoriaScan",
+   "lang": "pt",
+   "nsfw": 0,
+   "domain": "euphoriascan.com",
+   "baseUrl": "https://euphoriascan.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hachirumi.com",
+   "name": "Hachirumi",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "hachirumi.com",
+   "baseUrl": "https://hachirumi.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hentaixdickgirl.com",
+   "name": "Hentai x Dickgirl",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "hentaixdickgirl.com",
+   "baseUrl": "https://hentaixdickgirl.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hentai20.io",
+   "name": "Hentai20",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "hentai20.io",
+   "baseUrl": "https://hentai20.io",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hentai3z.cc",
+   "name": "Hentai3z.cc",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "hentai3z.cc",
+   "baseUrl": "https://hentai3z.cc",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hentaislayer.net",
+   "name": "HentaiSlayer",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "hentaislayer.net",
+   "baseUrl": "https://hentaislayer.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "kanzenin.info",
+   "name": "Kanzenin",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "kanzenin.info",
+   "baseUrl": "https://kanzenin.info",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "kombatch.cc",
+   "name": "KomBatch",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "kombatch.cc",
+   "baseUrl": "https://kombatch.cc",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "komiktap.info",
+   "name": "KomikTap",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "komiktap.info",
+   "baseUrl": "https://komiktap.info",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "madaradex.org",
+   "name": "MadaraDex",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "madaradex.org",
+   "baseUrl": "https://madaradex.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manga18.club",
+   "name": "Manga18",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "manga18.club",
+   "baseUrl": "https://manga18.club",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangadna.com",
+   "name": "MangaDna",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangadna.com",
+   "baseUrl": "https://mangadna.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangaforfree.com",
+   "name": "MangaForFree",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangaforfree.com",
+   "baseUrl": "https://mangaforfree.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangamaniacs.org",
+   "name": "MangaManiacs",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangamaniacs.org",
+   "baseUrl": "https://mangamaniacs.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manhwaden.com",
+   "name": "XManhwa",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "manhwaden.com",
+   "baseUrl": "https://manhwaden.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mihentai.com",
+   "name": "MiHentai",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "mihentai.com",
+   "baseUrl": "https://mihentai.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "omegascans.org",
+   "name": "OmegaScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "omegascans.org",
+   "baseUrl": "https://omegascans.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "paritehaber.com",
+   "name": "Paritehaber",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "paritehaber.com",
+   "baseUrl": "https://paritehaber.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "petrotechsociety.org",
+   "name": "Petrotech Society",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "petrotechsociety.org",
+   "baseUrl": "https://petrotechsociety.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "lector.pzykosis666hfansub.com",
+   "name": "Pzykosis666h Fansub",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "lector.pzykosis666hfansub.com",
+   "baseUrl": "https://lector.pzykosis666hfansub.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "adulto.seinagi.org.es",
+   "name": "Seinagi Adulto",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "adulto.seinagi.org.es",
+   "baseUrl": "https://adulto.seinagi.org.es",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "sektedoujin.cc",
+   "name": "SekteDoujin",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "sektedoujin.cc",
+   "baseUrl": "https://sektedoujin.cc",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "tankouhentai.com",
+   "name": "TankouHentai",
+   "lang": "pt",
+   "nsfw": 0,
+   "domain": "tankouhentai.com",
+   "baseUrl": "https://tankouhentai.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "toomtam-manga.com",
+   "name": "ToomtamManga",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "toomtam-manga.com",
+   "baseUrl": "https://toomtam-manga.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "3asq.org",
+   "name": "3Asq",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "3asq.org",
+   "baseUrl": "https://3asq.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "allporncomic.com",
+   "name": "AllPornComic",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "allporncomic.com",
+   "baseUrl": "https://allporncomic.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "animexnovel.com",
+   "name": "AnimeXNovel",
+   "lang": "pt",
+   "nsfw": 0,
+   "domain": "animexnovel.com",
+   "baseUrl": "https://animexnovel.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "arabtoons.net",
+   "name": "ArabToons",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "arabtoons.net",
+   "baseUrl": "https://arabtoons.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "arthurscan.xyz",
+   "name": "ArthurScan",
+   "lang": "pt",
+   "nsfw": 0,
+   "domain": "arthurscan.xyz",
+   "baseUrl": "https://arthurscan.xyz",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "asurascans.com",
+   "name": "AsuraComic",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "asurascans.com",
+   "baseUrl": "https://asurascans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "asurascans.us",
+   "name": "AsuraScansGg",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "asurascans.us",
+   "baseUrl": "https://asurascans.us",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "azoramoon.com",
+   "name": "Azoramoon",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "azoramoon.com",
+   "baseUrl": "https://azoramoon.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "cat-300.com",
+   "name": "Cat300",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "cat-300.com",
+   "baseUrl": "https://cat-300.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "legionscans.com",
+   "name": "CerberusSeries",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "legionscans.com",
+   "baseUrl": "https://legionscans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "demonicscans.org",
+   "name": "DemonicScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "demonicscans.org",
+   "baseUrl": "https://demonicscans.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manga.io.vn",
+   "name": "DocTruyen5s",
+   "lang": "vi",
+   "nsfw": 0,
+   "domain": "manga.io.vn",
+   "baseUrl": "https://manga.io.vn",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "drakecomic.org",
+   "name": "DrakeComic",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "drakecomic.org",
+   "baseUrl": "https://drakecomic.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "eleceedturkiye.com",
+   "name": "Eleceed Türkiye",
+   "lang": "tr",
+   "nsfw": 0,
+   "domain": "eleceedturkiye.com",
+   "baseUrl": "https://eleceedturkiye.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "elftoon.com",
+   "name": "Elftoon",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "elftoon.com",
+   "baseUrl": "https://elftoon.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "ezmanga.org",
+   "name": "EzManga",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "ezmanga.org",
+   "baseUrl": "https://ezmanga.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "fl-ares.com",
+   "name": "Fl-Ares",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "fl-ares.com",
+   "baseUrl": "https://fl-ares.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "flamecomics.xyz",
+   "name": "FlameComics",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "flamecomics.xyz",
+   "baseUrl": "https://flamecomics.xyz",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "genzupdates.com",
+   "name": "GenzToon",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "genzupdates.com",
+   "baseUrl": "https://genzupdates.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hhentai.fr",
+   "name": "H-Hentai",
+   "lang": "fr",
+   "nsfw": 0,
+   "domain": "hhentai.fr",
+   "baseUrl": "https://hhentai.fr",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hanman18.com",
+   "name": "Hanman18",
+   "lang": "zh",
+   "nsfw": 0,
+   "domain": "hanman18.com",
+   "baseUrl": "https://hanman18.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hentaixcomic.com",
+   "name": "Hentai x Comic",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "hentaixcomic.com",
+   "baseUrl": "https://hentaixcomic.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hentaimanga.me",
+   "name": "HentaiManga",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "hentaimanga.me",
+   "baseUrl": "https://hentaimanga.me",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hentaireader.org",
+   "name": "HentaiReader",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "hentaireader.org",
+   "baseUrl": "https://hentaireader.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hentaiukr.com",
+   "name": "HentaiUkr",
+   "lang": "uk",
+   "nsfw": 0,
+   "domain": "hentaiukr.com",
+   "baseUrl": "https://hentaiukr.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hentaiwebtoon.com",
+   "name": "HentaiWebtoon",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "hentaiwebtoon.com",
+   "baseUrl": "https://hentaiwebtoon.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hentaixyuri.com",
+   "name": "HentaiXYuri",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "hentaixyuri.com",
+   "baseUrl": "https://hentaixyuri.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hivetoons.org",
+   "name": "HiveComic",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "hivetoons.org",
+   "baseUrl": "https://hivetoons.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "hivetoon.com",
+   "name": "HiveToon",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "hivetoon.com",
+   "baseUrl": "https://hivetoon.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "visormanga.com",
+   "name": "HouseMangas",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "visormanga.com",
+   "baseUrl": "https://visormanga.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "lectorhub.j5z.xyz",
+   "name": "Jeaz Scans",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "lectorhub.j5z.xyz",
+   "baseUrl": "https://lectorhub.j5z.xyz",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "kalango.org",
+   "name": "Kalango",
+   "lang": "pt",
+   "nsfw": 0,
+   "domain": "kalango.org",
+   "baseUrl": "https://kalango.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "silentquill.net",
+   "name": "KdtScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "silentquill.net",
+   "baseUrl": "https://silentquill.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "kenscans.com",
+   "name": "KenScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "kenscans.com",
+   "baseUrl": "https://kenscans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "v5.kiryuu.to",
+   "name": "Kiryuu",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "v5.kiryuu.to",
+   "baseUrl": "https://v5.kiryuu.to",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "klikmanga.com",
+   "name": "KlikManga",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "klikmanga.com",
+   "baseUrl": "https://klikmanga.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "komikav.net",
+   "name": "KomikAv",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "komikav.net",
+   "baseUrl": "https://komikav.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "komiku.org",
+   "name": "Komiku",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "komiku.org",
+   "baseUrl": "https://komiku.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "komikpoi.com",
+   "name": "KomikPoi",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "komikpoi.com",
+   "baseUrl": "https://komikpoi.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "komikrealm.org",
+   "name": "KomikRealm",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "komikrealm.org",
+   "baseUrl": "https://komikrealm.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "komikstation.org",
+   "name": "KomikStation",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "komikstation.org",
+   "baseUrl": "https://komikstation.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "lectorhentai.com",
+   "name": "LectorHentai",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "lectorhentai.com",
+   "baseUrl": "https://lectorhentai.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "leemiau.com",
+   "name": "LectorMiau",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "leemiau.com",
+   "baseUrl": "https://leemiau.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "lekmanga.com",
+   "name": "LekMangaCom",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "lekmanga.com",
+   "baseUrl": "https://lekmanga.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "luxmanga.net",
+   "name": "LuxManga",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "luxmanga.net",
+   "baseUrl": "https://luxmanga.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "madarascans.com",
+   "name": "Madara Scans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "madarascans.com",
+   "baseUrl": "https://madarascans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "maid.my.id",
+   "name": "MaidId",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "maid.my.id",
+   "baseUrl": "https://maid.my.id",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manga-spark.com",
+   "name": "Manga-Spark",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "manga-spark.com",
+   "baseUrl": "https://manga-spark.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manga168.net",
+   "name": "Manga168",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "manga168.net",
+   "baseUrl": "https://manga168.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manga18x.net",
+   "name": "Manga18x",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "manga18x.net",
+   "baseUrl": "https://manga18x.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manga1st.online",
+   "name": "Manga1st",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "manga1st.online",
+   "baseUrl": "https://manga1st.online",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangabats.com",
+   "name": "MangaBat",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangabats.com",
+   "baseUrl": "https://mangabats.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangabuff.ru",
+   "name": "MangaBuff",
+   "lang": "ru",
+   "nsfw": 0,
+   "domain": "mangabuff.ru",
+   "baseUrl": "https://mangabuff.ru",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangadass.com",
+   "name": "MangaDass",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangadass.com",
+   "baseUrl": "https://mangadass.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangadistrict.com",
+   "name": "MangaDistrict",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangadistrict.com",
+   "baseUrl": "https://mangadistrict.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "vortexscans.org",
+   "name": "VortexScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "vortexscans.org",
+   "baseUrl": "https://vortexscans.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mgeko.cc",
+   "name": "MangaGeko",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mgeko.cc",
+   "baseUrl": "https://mgeko.cc",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangahentai.me",
+   "name": "MangaHentai",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangahentai.me",
+   "baseUrl": "https://mangahentai.me",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangahub.io",
+   "name": "MangaHubIO",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangahub.io",
+   "baseUrl": "https://mangahub.io",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangakakalot.gg",
+   "name": "Mangakakalot.tv",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangakakalot.gg",
+   "baseUrl": "https://mangakakalot.gg",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangakoma01.com",
+   "name": "MangaKoma01",
+   "lang": "ja",
+   "nsfw": 0,
+   "domain": "mangakoma01.com",
+   "baseUrl": "https://mangakoma01.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangamukai.com",
+   "name": "MangaMukai.com",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "mangamukai.com",
+   "baseUrl": "https://mangamukai.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "natomanga.com",
+   "name": "Manganato",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "natomanga.com",
+   "baseUrl": "https://natomanga.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "nelomanga.com",
+   "name": "MangaNelo.com",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "nelomanga.com",
+   "baseUrl": "https://nelomanga.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangapill.com",
+   "name": "MangaPill",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangapill.com",
+   "baseUrl": "https://mangapill.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangatown.com",
+   "name": "MangaTown",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mangatown.com",
+   "baseUrl": "https://mangatown.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangatv.net",
+   "name": "MangaTv",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "mangatv.net",
+   "baseUrl": "https://mangatv.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manhatic.com",
+   "name": "Manhatic",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "manhatic.com",
+   "baseUrl": "https://manhatic.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manhuabug.com",
+   "name": "ManhuaBug",
+   "lang": "th",
+   "nsfw": 0,
+   "domain": "manhuabug.com",
+   "baseUrl": "https://manhuabug.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manhuagui.com",
+   "name": "Manhuagui",
+   "lang": "zh",
+   "nsfw": 0,
+   "domain": "manhuagui.com",
+   "baseUrl": "https://manhuagui.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manhwatoon.com",
+   "name": "ManhwaToon",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "manhwatoon.com",
+   "baseUrl": "https://manhwatoon.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "manhwatop.com",
+   "name": "ManhwaTop",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "manhwatop.com",
+   "baseUrl": "https://manhwatop.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "milftoon.xxx",
+   "name": "MilfToon",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "milftoon.xxx",
+   "baseUrl": "https://milftoon.xxx",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "multporn.net",
+   "name": "Multporn",
+   "lang": "all",
+   "nsfw": 0,
+   "domain": "multporn.net",
+   "baseUrl": "https://multporn.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mycomiclist.org",
+   "name": "MyComicList",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "mycomiclist.org",
+   "baseUrl": "https://mycomiclist.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "mangalivre.net",
+   "name": "NeoxScans",
+   "lang": "pt",
+   "nsfw": 0,
+   "domain": "mangalivre.net",
+   "baseUrl": "https://mangalivre.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "nightsup.net",
+   "name": "NightScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "nightsup.net",
+   "baseUrl": "https://nightsup.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "olympusbiblioteca.com",
+   "name": "OlimpoScans",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "olympusbiblioteca.com",
+   "baseUrl": "https://olympusbiblioteca.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "peach-bl.com",
+   "name": "PeachBl",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "peach-bl.com",
+   "baseUrl": "https://peach-bl.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "philiascans.org",
+   "name": "Philia Scans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "philiascans.org",
+   "baseUrl": "https://philiascans.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "pianmanga.me",
+   "name": "PianManga",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "pianmanga.me",
+   "baseUrl": "https://pianmanga.me",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "qimanhwa.com",
+   "name": "Qi Scans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "qimanhwa.com",
+   "baseUrl": "https://qimanhwa.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "rawdex.net",
+   "name": "RawDex",
+   "lang": "ko",
+   "nsfw": 0,
+   "domain": "rawdex.net",
+   "baseUrl": "https://rawdex.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "novelstreams.com",
+   "name": "ReadKomik",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "novelstreams.com",
+   "baseUrl": "https://novelstreams.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "ww11.readonepiece.com",
+   "name": "ReadOnePiece",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "ww11.readonepiece.com",
+   "baseUrl": "https://ww11.readonepiece.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "rinkocomics.com",
+   "name": "Rinko Comics",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "rinkocomics.com",
+   "baseUrl": "https://rinkocomics.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "rocksmanga.com",
+   "name": "RocksManga",
+   "lang": "ar",
+   "nsfw": 0,
+   "domain": "rocksmanga.com",
+   "baseUrl": "https://rocksmanga.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "shirodoujin.com",
+   "name": "ShiroDoujin",
+   "lang": "id",
+   "nsfw": 0,
+   "domain": "shirodoujin.com",
+   "baseUrl": "https://shirodoujin.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "sleepytranslations.com",
+   "name": "Sleepy Translations",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "sleepytranslations.com",
+   "baseUrl": "https://sleepytranslations.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "spiderscans.xyz",
+   "name": "SpiderScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "spiderscans.xyz",
+   "baseUrl": "https://spiderscans.xyz",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "falcoscan.net",
+   "name": "TenkaiScan",
+   "lang": "es",
+   "nsfw": 0,
+   "domain": "falcoscan.net",
+   "baseUrl": "https://falcoscan.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "toonizy.com",
+   "name": "Toonizy",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "toonizy.com",
+   "baseUrl": "https://toonizy.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "trwebtoon.com",
+   "name": "TrWebtoon",
+   "lang": "tr",
+   "nsfw": 0,
+   "domain": "trwebtoon.com",
+   "baseUrl": "https://trwebtoon.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "violetscans.org",
+   "name": "VioletScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "violetscans.org",
+   "baseUrl": "https://violetscans.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "webdexscans.com",
+   "name": "WebDexScans",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "webdexscans.com",
+   "baseUrl": "https://webdexscans.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "weebcentral.com",
+   "name": "Weeb Central",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "weebcentral.com",
+   "baseUrl": "https://weebcentral.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "woopread.com",
+   "name": "Woopread",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "woopread.com",
+   "baseUrl": "https://woopread.com",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "zinmanga.net",
+   "name": "ZinManga.net",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "zinmanga.net",
+   "baseUrl": "https://zinmanga.net",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
+   ]
+  },
+  {
+   "id": "remanga.org",
+   "name": "Реманга",
+   "lang": "ru",
+   "nsfw": 0,
+   "domain": "remanga.org",
+   "baseUrl": "https://remanga.org",
+   "engine": "custom",
+   "config": {
+    "engine": "custom",
+    "listPath": "/",
+    "itemSelector": ".__yok__",
+    "chapterSelector": ".__yok__",
+    "readerSelector": ".__yok__"
+   },
+   "selector_verified": true,
+   "origins": [
+    "auto_scan_2026"
    ]
   }
  ]
