@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T16:25:56Z",
+  "generated": "2026-11-16T16:49:30Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -119,10 +119,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "pages"
+      "device_step": "list"
     },
     "1079335891060482737": {
       "id": 1079335891060482737,
@@ -204,7 +204,15 @@
         "ms": 777,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "1141920126157789855": {
       "id": 1141920126157789855,
@@ -275,7 +283,15 @@
         "ms": 430,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "1158981255736960832": {
       "id": 1158981255736960832,
@@ -709,8 +725,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -748,10 +764,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "details"
+      "device_step": "list"
     },
     "1376570003715008387": {
       "id": 1376570003715008387,
@@ -878,10 +894,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "covers"
+      "device_step": "list"
     },
     "1376621809967140958": {
       "id": 1376621809967140958,
@@ -1061,8 +1077,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -1107,10 +1123,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "search: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "search"
+      "device_step": "list"
     },
     "1376703950234547432": {
       "id": 1376703950234547432,
@@ -1324,8 +1340,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -1378,8 +1394,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -1424,8 +1440,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -1551,8 +1567,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -1646,7 +1662,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "1376874560903382020": {
       "id": 1376874560903382020,
@@ -1862,10 +1886,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "covers"
+      "device_step": "list"
     },
     "1376874560920958363": {
       "id": 1376874560920958363,
@@ -1911,7 +1935,15 @@
         "ms": 1673,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "1376874562419981901": {
       "id": 1376874562419981901,
@@ -2265,8 +2297,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -2304,7 +2336,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "1377006986598329139": {
       "id": 1377006986598329139,
@@ -2361,7 +2401,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "1377020372809438008": {
       "id": 1377020372809438008,
@@ -2608,10 +2656,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "details"
+      "device_step": "list"
     },
     "1377114256810592249": {
       "id": 1377114256810592249,
@@ -2678,10 +2726,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "pages"
+      "device_step": "list"
     },
     "1377191865684637297": {
       "id": 1377191865684637297,
@@ -2859,8 +2907,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -3246,7 +3294,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "1608873353115070792": {
       "id": 1608873353115070792,
@@ -3315,10 +3371,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "details"
+      "device_step": "list"
     },
     "1608875891802860974": {
       "id": 1608875891802860974,
@@ -3342,8 +3398,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -3366,11 +3422,11 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -3472,8 +3528,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -3575,8 +3631,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -3659,7 +3715,15 @@
         "ms": 1674,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "1608891509777540327": {
       "id": 1608891509777540327,
@@ -4192,7 +4256,15 @@
         "ms": 1294,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "1793420480712657216": {
       "id": 1793420480712657216,
@@ -4204,7 +4276,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "1800873507328534306": {
       "id": 1800873507328534306,
@@ -4507,10 +4587,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "details"
+      "device_step": "list"
     },
     "1923350458611978292": {
       "id": 1923350458611978292,
@@ -4786,7 +4866,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "2041373731372917921": {
       "id": 2041373731372917921,
@@ -4864,8 +4952,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -5054,10 +5142,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "search: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "search"
+      "device_step": "list"
     },
     "2121025303286850185": {
       "id": 2121025303286850185,
@@ -5761,8 +5849,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -6315,8 +6403,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -6855,10 +6943,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "search: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "search"
+      "device_step": "list"
     },
     "2359120158125930842": {
       "id": 2359120158125930842,
@@ -6942,7 +7030,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "237533157448430333": {
       "id": 237533157448430333,
@@ -7064,8 +7160,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -7186,8 +7282,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -7346,7 +7442,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "2424639028756876462": {
       "id": 2424639028756876462,
@@ -7382,8 +7486,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -7545,8 +7649,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -7844,10 +7948,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "covers"
+      "device_step": "list"
     },
     "2462254973344388239": {
       "id": 2462254973344388239,
@@ -8076,8 +8180,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -8130,10 +8234,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "details"
+      "device_step": "list"
     },
     "2603934391614044375": {
       "id": 2603934391614044375,
@@ -8285,6 +8389,18 @@
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
       }
+    },
+    "2681047300985850594": {
+      "id": 2681047300985850594,
+      "kind": "catalogue",
+      "title": "lermangaonline.com.br",
+      "lang": "all",
+      "nsfw": 0,
+      "domain": "lermangaonline.com.br",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "2683798939323503291": {
       "id": 2683798939323503291,
@@ -8697,7 +8813,15 @@
         "ms": 492,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "2919132306397933009": {
       "id": 2919132306397933009,
@@ -8915,8 +9039,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -9002,8 +9126,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -9126,7 +9250,15 @@
         "ms": 1106,
         "detail": "",
         "at": "2026-11-14T19:17:31Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "3080414706188145613": {
       "id": 3080414706188145613,
@@ -9329,8 +9461,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -10326,6 +10458,18 @@
       },
       "device_step": "covers"
     },
+    "3625557734934755312": {
+      "id": 3625557734934755312,
+      "kind": "catalogue",
+      "title": "lekmanga.net",
+      "lang": "all",
+      "nsfw": 0,
+      "domain": "lekmanga.net",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "3626292428546573843": {
       "id": 3626292428546573843,
       "kind": "engine",
@@ -10385,7 +10529,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "3668404409500823599": {
       "id": 3668404409500823599,
@@ -11313,7 +11465,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "3758401624049605436": {
       "id": 3758401624049605436,
@@ -11526,7 +11686,15 @@
         "ms": 3851,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "3758907033275771070": {
       "id": 3758907033275771070,
@@ -12270,8 +12438,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -12285,7 +12453,7 @@
       "packages": [
         "test"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12294,12 +12462,13 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
+      "device_step": "list",
       "sorun": "cloudflare"
     },
     "3943041137748889772": {
@@ -12377,7 +12546,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "3954462845410125041": {
       "id": 3954462845410125041,
@@ -13702,7 +13879,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4110592311627303703": {
       "id": 4110592311627303703,
@@ -13753,8 +13938,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -13818,10 +14003,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "covers"
+      "device_step": "list"
     },
     "4114056360088724654": {
       "id": 4114056360088724654,
@@ -13855,7 +14040,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4118551129163381075": {
       "id": 4118551129163381075,
@@ -14101,8 +14294,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -14529,7 +14722,15 @@
         "ms": 1196,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4226106584062559336": {
       "id": 4226106584062559336,
@@ -14686,8 +14887,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -14732,7 +14933,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4234251762292700524": {
       "id": 4234251762292700524,
@@ -14987,7 +15196,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4234251768509813985": {
       "id": 4234251768509813985,
@@ -15035,7 +15252,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4234251770454362048": {
       "id": 4234251770454362048,
@@ -15383,7 +15608,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4234251777202023553": {
       "id": 4234251777202023553,
@@ -15510,8 +15743,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -15525,7 +15758,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4234253159915360602": {
       "id": 4234253159915360602,
@@ -15703,10 +15944,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "details"
+      "device_step": "list"
     },
     "4234253215589794301": {
       "id": 4234253215589794301,
@@ -15897,7 +16138,15 @@
         "ms": 1214,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4250602956249399538": {
       "id": 4250602956249399538,
@@ -15909,7 +16158,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4250752132752556322": {
       "id": 4250752132752556322,
@@ -16212,8 +16469,9 @@
         "http_code": "",
         "ms": 0,
         "detail": "list",
-        "at": "2026-11-16T00:00:00Z"
-      }
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4313861447404019709": {
       "id": 4313861447404019709,
@@ -16255,8 +16513,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -16400,8 +16658,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -16477,6 +16735,18 @@
       },
       "device_step": "list"
     },
+    "4362348705043430779": {
+      "id": 4362348705043430779,
+      "kind": "catalogue",
+      "title": "tritinia.org",
+      "lang": "all",
+      "nsfw": 0,
+      "domain": "tritinia.org",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "4364226505740763203": {
       "id": 4364226505740763203,
       "kind": "engine",
@@ -16518,8 +16788,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -17406,7 +17676,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4428472468111092856": {
       "id": 4428472468111092856,
@@ -17596,8 +17874,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -17728,8 +18006,9 @@
         "http_code": "",
         "ms": 0,
         "detail": "list",
-        "at": "2026-11-16T00:00:00Z"
-      }
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4491758654893492698": {
       "id": 4491758654893492698,
@@ -18218,8 +18497,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -18326,8 +18605,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -18479,10 +18758,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "pages"
+      "device_step": "list"
     },
     "4767926519332995781": {
       "id": 4767926519332995781,
@@ -18643,7 +18922,15 @@
         "ms": 487,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "4850244828520154280": {
       "id": 4850244828520154280,
@@ -19406,7 +19693,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "5332408265489266018": {
       "id": 5332408265489266018,
@@ -19582,8 +19877,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -19693,7 +19988,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "5453758092271858575": {
       "id": 5453758092271858575,
@@ -20449,7 +20752,15 @@
         "ms": 2603,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "5784701058565822220": {
       "id": 5784701058565822220,
@@ -20468,7 +20779,15 @@
         "ms": 713,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "5785150848886155708": {
       "id": 5785150848886155708,
@@ -20529,10 +20848,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "pages"
+      "device_step": "list"
     },
     "5785631191583536485": {
       "id": 5785631191583536485,
@@ -20828,7 +21147,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "5788199800528750443": {
       "id": 5788199800528750443,
@@ -20989,10 +21316,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "pages"
+      "device_step": "list"
     },
     "5788353350203111296": {
       "id": 5788353350203111296,
@@ -21225,8 +21552,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -21264,8 +21591,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -21310,8 +21637,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -21337,8 +21664,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -21848,8 +22175,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -22051,8 +22378,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -22131,8 +22458,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -22339,10 +22666,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: NotFoundException: . Status=404, URL=[https://api.nyxscans.com/api/chapters?postId=-861424999&skip=0&take=900&order=desc&userid=]",
-        "at": "2026-11-16T00:09:31Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "details"
+      "device_step": "list"
     },
     "5791654679194078693": {
       "id": 5791654679194078693,
@@ -22459,8 +22786,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -22547,7 +22874,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown",
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list",
       "sorun": "cloudflare"
     },
     "5794583010975319217": {
@@ -22896,8 +23231,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -22923,8 +23258,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -23109,10 +23444,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "covers"
+      "device_step": "list"
     },
     "5809110992011423948": {
       "id": 5809110992011423948,
@@ -23182,6 +23517,18 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "yugenmangasbr.voblog.xyz",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
+    "5822573945527353017": {
+      "id": 5822573945527353017,
+      "kind": "catalogue",
+      "title": "covendasbruxonas.com",
+      "lang": "all",
+      "nsfw": 0,
+      "domain": "covendasbruxonas.com",
       "packages": [
         "test"
       ],
@@ -23262,7 +23609,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "5831741679683196228": {
       "id": 5831741679683196228,
@@ -23648,8 +24003,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -24285,7 +24640,15 @@
         "ms": 417,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "6079771261904476856": {
       "id": 6079771261904476856,
@@ -24454,6 +24817,18 @@
         "detail": "curl: (28) Connection timed out after 15016 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       }
+    },
+    "6092332465391866560": {
+      "id": 6092332465391866560,
+      "kind": "catalogue",
+      "title": "mangazin.org",
+      "lang": "all",
+      "nsfw": 0,
+      "domain": "mangazin.org",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "6111110345453636155": {
       "id": 6111110345453636155,
@@ -24992,7 +25367,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "6359063432093703606": {
       "id": 6359063432093703606,
@@ -25011,7 +25394,15 @@
         "ms": 434,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "6359822944885655295": {
       "id": 6359822944885655295,
@@ -25175,10 +25566,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "covers"
+      "device_step": "list"
     },
     "6387964605119291472": {
       "id": 6387964605119291472,
@@ -25266,10 +25657,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "details"
+      "device_step": "list"
     },
     "6387974376496686455": {
       "id": 6387974376496686455,
@@ -25382,10 +25773,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "pages"
+      "device_step": "list"
     },
     "6427620697796849177": {
       "id": 6427620697796849177,
@@ -25404,7 +25795,15 @@
         "ms": 761,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "6429679440215957503": {
       "id": 6429679440215957503,
@@ -25498,8 +25897,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -25719,10 +26118,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "pages"
+      "device_step": "list"
     },
     "6552627474297646427": {
       "id": 6552627474297646427,
@@ -27969,10 +28368,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "search: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "search"
+      "device_step": "list"
     },
     "7407258471214415340": {
       "id": 7407258471214415340,
@@ -28588,7 +28987,15 @@
         "ms": 1975,
         "detail": "",
         "at": "2026-11-14T21:07:01Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "7663701235462277388": {
       "id": 7663701235462277388,
@@ -28880,8 +29287,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -29010,7 +29417,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "7836252405314353558": {
       "id": 7836252405314353558,
@@ -29034,8 +29449,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -29069,13 +29484,13 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
-      "device_step": "covers"
+      "device_step": "list"
     },
     "7850418808484344907": {
       "id": 7850418808484344907,
@@ -29272,8 +29687,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -29501,7 +29916,15 @@
         "ms": 1887,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "8004965338622879732": {
       "id": 8004965338622879732,
@@ -29632,8 +30055,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -29696,7 +30119,15 @@
         "ms": 15042,
         "detail": "curl: (28) Operation timed out after 15016 milliseconds with 223875 bytes received",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "8072775914527805808": {
       "id": 8072775914527805808,
@@ -30073,7 +30504,15 @@
         "ms": 582,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "8225768823080191385": {
       "id": 8225768823080191385,
@@ -30092,7 +30531,15 @@
         "ms": 1008,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "8226934736647195750": {
       "id": 8226934736647195750,
@@ -30430,7 +30877,15 @@
         "ms": 642,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "8383972804019895112": {
       "id": 8383972804019895112,
@@ -30549,6 +31004,18 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "laviniafansub.site",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
+    "845640352969867542": {
+      "id": 845640352969867542,
+      "kind": "catalogue",
+      "title": "cococomic.co",
+      "lang": "all",
+      "nsfw": 0,
+      "domain": "cococomic.co",
       "packages": [
         "test"
       ],
@@ -30996,7 +31463,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "8587838737476438198": {
       "id": 8587838737476438198,
@@ -31045,7 +31520,15 @@
         "ms": 472,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
-      }
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "8599633753611393348": {
       "id": 8599633753611393348,
@@ -31464,7 +31947,15 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
+      },
+      "device_step": "list"
     },
     "8748681326320541466": {
       "id": 8748681326320541466,
@@ -31608,8 +32099,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -31813,8 +32304,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -32400,8 +32891,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-15T11:49:53Z"
+        "detail": "list",
+        "at": "2026-11-16T17:00:00Z"
       },
       "device_step": "list"
     },
@@ -32488,6 +32979,18 @@
         "detail": "",
         "at": "2026-11-16T00:09:31Z"
       }
+    },
+    "936026425526885605": {
+      "id": 936026425526885605,
+      "kind": "catalogue",
+      "title": "xoxocomic.com",
+      "lang": "all",
+      "nsfw": 0,
+      "domain": "xoxocomic.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "938978555414998994": {
       "id": 938978555414998994,
