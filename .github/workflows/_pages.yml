@@ -2,6 +2,8 @@ name: 'iç: pano (Pages)'
 
 on:
   workflow_call:
+  # Sayfayı elle yeniden yayınlamak için; derleme akışı bunu kendisi çağırmıyor.
+  workflow_dispatch:
 
 permissions:
   contents: read

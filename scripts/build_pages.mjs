@@ -1,6 +1,5 @@
-// Pulsar-V2 GitHub Pages Web Panosu ve Depo Sunucusu Uretici: site/index.html
+// Pulsar-V2 GitHub Pages Durum Panosu ve Kurulum Sayfasi Uretici: site/index.html
 import fs from 'node:fs';
-import path from 'node:path';
 
 const readJson = (p, d) => {
   try {
@@ -10,48 +9,63 @@ const readJson = (p, d) => {
   }
 };
 
-const catalogue = readJson('pulsar-v2/data/catalogue.json', { sources: [] });
-const liveness = readJson('pulsar-v2/data/liveness.json', { results: [] });
 const repoIndex = readJson('pulsar-v2/repo/index.min.json', []);
 const repoMeta = readJson('pulsar-v2/repo/repo.json', {});
 
-// Liveness detay haritasi
-const livenessMap = new Map();
-for (const r of liveness.results || []) {
-  livenessMap.set(r.domain, r);
-}
+// index.min.json: paket kayitlari dizisi
+const packages = Array.isArray(repoIndex) ? repoIndex : (repoIndex.packages || []);
 
-const sources = (catalogue.sources || []).map((s) => {
-  const live = livenessMap.get(s.domain) || {};
-  return {
-    id: s.id,
-    name: s.name,
-    domain: s.domain,
-    baseUrl: s.baseUrl,
-    lang: s.lang || 'tr',
-    nsfw: s.nsfw === 1,
-    engine: s.engine || 'custom',
-    verified: Boolean(s.verified_by_user),
-    status: live.status || 'CANLI_DOGRU',
-    reason: live.reason || 'Canli ve aktif',
-    repairedDomain: live.repaired_domain || null,
-  };
-});
+const sourceCountOf = (p) => (Array.isArray(p && p.sources) ? p.sources.length : 0);
 
-// Paket bilgileri
-const trNormalCount = sources.filter((s) => s.lang === 'tr' && !s.nsfw).length;
-const trNsfwCount = sources.filter((s) => s.lang === 'tr' && s.nsfw).length;
+// Sayi kartlari - hepsi index.min.json'dan okunur
+const totalSources = packages.reduce((sum, p) => sum + sourceCountOf(p), 0);
+const packageCount = Array.isArray(repoMeta.packages) ? repoMeta.packages.length : packages.length;
+const widest = packages.reduce((best, p) => (sourceCountOf(p) > sourceCountOf(best) ? p : best), null);
+const widestName = widest && widest.name ? widest.name : 'BULUNAMADI';
+const nsfwPackages = packages.filter((p) => Number(p.nsfw || 0) !== 0).length;
+const versionLabel = packages[0] && packages[0].version ? String(packages[0].version) : 'BULUNAMADI';
 
-const REPO_RAW_URL = 'https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/pulsar-v2/repo/index.min.json';
-const DEEP_LINK = `tachiyomi://add-repo?url=${encodeURIComponent(REPO_RAW_URL)}`;
+// Depo adresi: GITHUB_REPOSITORY > repo.json meta.website > sabit
+const repoSlug = (() => {
+  if (process.env.GITHUB_REPOSITORY) return process.env.GITHUB_REPOSITORY;
+  const website = (repoMeta.meta && repoMeta.meta.website) || '';
+  const match = website.match(/github\.com\/([^/]+)\/([^/?#]+)/i);
+  if (match) return `${match[1]}/${match[2]}`;
+  return 'pulsariums/pulsar-trmangahub';
+})();
+const REPO_RAW_URL = `https://raw.githubusercontent.com/${repoSlug}/main/pulsar-v2/repo/index.min.json`;
+
+const esc = (v) => String(v == null ? '' : v).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+const packageCards = packages.map((p) => {
+  const nsfw = Number(p.nsfw || 0) !== 0;
+  const apk = p.apk ? String(p.apk) : '';
+  const badges = [
+    `<span class="badge">${sourceCountOf(p)} kaynak</span>`,
+    p.lang ? `<span class="badge">${esc(String(p.lang).toUpperCase())}</span>` : '',
+    nsfw ? '<span class="badge badge-nsfw">18+</span>' : '',
+  ].filter(Boolean).join('\n            ');
+
+  return `
+        <div class="source-card">
+          <div class="source-title-row">
+            <span class="source-name">${esc(p.name || 'BULUNAMADI')}</span>
+          </div>
+          <div class="source-domain">${esc(apk || p.version || 'BULUNAMADI')}</div>
+          <div class="badges">
+            ${badges}
+          </div>
+          ${apk ? `<a href="apk/${esc(apk)}" class="btn btn-primary" style="margin-top:10px">APK indir</a>` : ''}
+        </div>`;
+}).join('');
 
 const html = `<!doctype html>
 <html lang="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pulsar Manga Hub (V2) - Mihon Eklenti Deposu</title>
-  <meta name="description" content="Nyora mimarisiyle guclendirilmis, tum Turkce manga kaynaklarini tek APK'da toplayan Mihon deposu.">
+  <title>Pulsar Manga Hub - Mihon / Kototoro Eklenti Deposu</title>
+  <meta name="description" content="Mihon ve Kototoro icin cok kaynakli Turkce manga eklentisi. Depo adresi, paket listesi ve APK indirme baglantilari.">
   <style>
     :root {
       --bg: #0d1117;
@@ -230,121 +244,58 @@ const html = `<!doctype html>
 
 <header>
   <div class="container">
-    <h1>Pulsar Manga Hub <span class="badge-v2">V2 Nyora</span></h1>
-    <p class="subtitle">Artık onlarca APK indirmeye son! Tüm çalışan Türkçe ve küresel manga kaynakları tek bir birleşik eklenti paketi içinde.</p>
-
-    <div class="action-box">
-      <div class="btn-group">
-        <a href="${DEEP_LINK}" class="btn btn-primary">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-          Mihon'a Tek Tıkla Ekle
-        </a>
-        <button id="copyBtn" class="btn btn-secondary">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-          Depo Adresini Kopyala
-        </button>
-      </div>
-      <div class="repo-url-bar">${REPO_RAW_URL}</div>
-    </div>
+    <h1>Pulsar Manga Hub</h1>
+    <p><span class="badge-v2">${esc(versionLabel)}</span></p>
+    <p>Mihon / Kototoro için çok kaynaklı Türkçe manga eklentisi.</p>
   </div>
 </header>
 
 <main class="container">
   <div class="stats-row">
     <div class="stat-card">
-      <div class="stat-num">${trNormalCount}</div>
-      <div class="stat-desc">Pulsar TR (Normal Kaynaklar)</div>
+      <div class="stat-num">${totalSources}</div>
+      <div class="stat-desc">yayındaki kaynak</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num">${trNsfwCount}</div>
-      <div class="stat-desc">Pulsar TR 18+ (Yetişkin Kaynaklar)</div>
+      <div class="stat-num">${packageCount}</div>
+      <div class="stat-desc">paket</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num">39 / 39</div>
-      <div class="stat-desc">Kototoro Zemin Gerçeği Koruması</div>
+      <div class="stat-num">${esc(widestName)}</div>
+      <div class="stat-desc">en geniş paket</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num">100%</div>
-      <div class="stat-desc">Cihaz Üzerinde (On-Device) Çalışma</div>
+      <div class="stat-num">${nsfwPackages}</div>
+      <div class="stat-desc">18+ paket</div>
     </div>
   </div>
 
-  <div class="search-filter-bar">
-    <input type="text" id="searchInput" class="search-input" placeholder="Manga sitesi veya alan adı ara (örn: ragnar, tortuga, ruya)...">
-    <button class="filter-btn active" data-filter="all">Tümü (<span id="countAll">${sources.length}</span>)</button>
-    <button class="filter-btn" data-filter="normal">Normal SFW (${trNormalCount})</button>
-    <button class="filter-btn" data-filter="nsfw">Yetişkin 18+ (${trNsfwCount})</button>
-    <button class="filter-btn" data-filter="repaired">Otomatik Onarılanlar</button>
+  <h2>Kurulum</h2>
+  <div class="action-box">
+    <p>1. Mihon veya Kototoro'yu aç → Ayarlar → Eklentiler → Depolar.</p>
+    <p>2. Depo ekle → aşağıdaki adresi yapıştır.</p>
+    <p>3. Listeden paketini seç ve kur. Güncellemeler otomatik gelir.</p>
+    <div class="repo-url-bar">${esc(REPO_RAW_URL)}</div>
+    <button id="copyBtn" class="btn btn-secondary" style="margin-top:12px">
+      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+      Depo Adresini Kopyala
+    </button>
   </div>
 
-  <div class="source-grid" id="sourceGrid"></div>
+  <h2>Paketler</h2>
+  <div class="source-grid">${packageCards}
+  </div>
+
+  <p class="source-domain">Kaynaklar üçüncü taraf sitelerden okur; içerik Pulsar'a ait değildir.</p>
 </main>
 
 <div id="toast" class="toast">Depo bağlantısı panoya kopyalandı!</div>
 
 <script>
-  const SOURCES = ${JSON.stringify(sources)};
   const REPO_URL = ${JSON.stringify(REPO_RAW_URL)};
 
-  const grid = document.getElementById('sourceGrid');
-  const searchInput = document.getElementById('searchInput');
-  const filterBtns = document.querySelectorAll('.filter-btn');
   const copyBtn = document.getElementById('copyBtn');
   const toast = document.getElementById('toast');
-
-  let currentFilter = 'all';
-  let searchQuery = '';
-
-  function render() {
-    const q = searchQuery.toLowerCase().trim();
-    const filtered = SOURCES.filter(s => {
-      // Metin araması
-      const matchText = !q || s.name.toLowerCase().includes(q) || s.domain.toLowerCase().includes(q);
-      if (!matchText) return false;
-
-      // Filtre
-      if (currentFilter === 'normal') return !s.nsfw;
-      if (currentFilter === 'nsfw') return s.nsfw;
-      if (currentFilter === 'repaired') return s.status.startsWith('OTOMATIK_TAMIR');
-      return true;
-    });
-
-    grid.innerHTML = filtered.map(s => {
-      const isRepaired = s.status.startsWith('OTOMATIK_TAMIR');
-      return \`
-        <div class="source-card">
-          <div>
-            <div class="source-title-row">
-              <span class="source-name">\${s.name}</span>
-              \${s.nsfw ? '<span class="badge badge-nsfw">18+</span>' : ''}
-            </div>
-            <div class="source-domain">
-              <a href="\${s.baseUrl}" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">\${s.domain} ↗</a>
-            </div>
-          </div>
-          <div class="badges">
-            <span class="badge badge-ok">\${s.engine}</span>
-            \${isRepaired ? '<span class="badge badge-warn">Otomatik Onarıldı</span>' : ''}
-            \${s.verified ? '<span class="badge badge-ver">Doğrulandı</span>' : ''}
-          </div>
-        </div>
-      \`;
-    }).join('');
-  }
-
-  searchInput.addEventListener('input', (e) => {
-    searchQuery = e.target.value;
-    render();
-  });
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentFilter = btn.dataset.filter;
-      render();
-    });
-  });
 
   copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(REPO_URL).then(() => {
@@ -352,8 +303,6 @@ const html = `<!doctype html>
       setTimeout(() => toast.classList.remove('show'), 2500);
     });
   });
-
-  render();
 </script>
 
 </body>
@@ -372,7 +321,7 @@ if (fs.existsSync('pulsar-v2/repo/repo.json')) {
   fs.copyFileSync('pulsar-v2/repo/repo.json', 'site/repo.json');
 }
 
-console.log('GitHub Pages sitesi ve repo dosyalari site/ klasorune basariyla derlendi:');
+console.log('GitHub Pages durum panosu site/ klasorune derlendi:');
 console.log('  - site/index.html');
 console.log('  - site/index.min.json (GitHub Pages Depo Aynasi)');
 console.log('  - site/repo.json');
