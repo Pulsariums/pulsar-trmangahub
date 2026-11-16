@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T14:30:38Z",
+  "generated": "2026-11-16T14:35:53Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -17746,9 +17746,16 @@
       "nsfw": 0,
       "domain": "asuracomic.net",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-16T14:35:53Z"
+      }
     },
     "4562585639543784604": {
       "id": 4562585639543784604,
@@ -30464,9 +30471,16 @@
       "nsfw": 0,
       "domain": "manhwaclub.net",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-16T14:35:53Z"
+      }
     },
     "8610543852193021651": {
       "id": 8610543852193021651,
