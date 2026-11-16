@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T22:05:36Z",
+  "generated": "2026-11-16T22:15:06Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -119,8 +119,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown",
-      "dead": true
+      "state": "unknown"
     },
     "1085305392848287310": {
       "id": 1085305392848287310,
@@ -129,10 +128,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "toon.space",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Sayfa 22KB SPA kabugu (/assets/axios, auth-vendor, growthbook); 167 bos li ve 1 data-prerender-seo isareti var, hic seri linki ve img yok. Icerik istemcide uret",
+        "at": "2026-11-16T22:14:59.157499Z"
+      }
     },
     "109266153397226665": {
       "id": 109266153397226665,
@@ -9531,8 +9535,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Bolum HTML'inde ve RSC payload'inda sayfa gorseli yok. /api/series/{slug} 200 ama chapters/pages alani dondurmuyor; denenen /api/chapters/..., /api/chapter/...,",
-        "at": "2026-11-16T21:15:51.067Z"
+        "detail": "Sayfa URL'leri GET /api/chapters?series={slug}&chapter={n}&includepages=true&limit=1 JSON'unda data[0].pages (imzali /uploads/seri/<slug>/bolum%20N/00X.webp?...",
+        "at": "2026-11-16T22:14:59.157499Z"
       }
     },
     "2874683368787930309": {
@@ -10226,19 +10230,12 @@
       "domain": "millascan.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "blocked",
-        "http_code": "403",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CF",
-        "at": "2026-11-16T22:05:11.851283Z"
+        "detail": "Cloudflare managed challenge. Secici ile cozulmez.",
+        "at": "2026-11-16T22:14:59.157499Z"
       },
       "sorun": "cloudflare"
     },
@@ -10652,11 +10649,11 @@
       "packages": [],
       "state": "failed",
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CF",
-        "at": "2026-11-16T22:05:11.851283Z"
+        "detail": "Cloudflare managed challenge (Just a moment). Secici duzeltmesi ise yaramaz; cozum proxy/FlareSolverr ya da sitenin JSON ucu. Mobil UA ile de 403.",
+        "at": "2026-11-16T22:14:59.157499Z"
       }
     },
     "3201609293231115184": {
@@ -11443,10 +11440,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "raindropteamfan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Ana sayfa, /manga/ ve www varyanti ayni 1686 baytlik Bot Verification sayfasini donuyor (Google reCAPTCHA sitekey 6Leio6YU..., url sonuna /n ekleniyor). curl il",
+        "at": "2026-11-16T22:14:59.157499Z"
+      }
     },
     "3581135968918069737": {
       "id": 3581135968918069737,
@@ -14990,16 +14992,14 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "manga-tr.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "blocked",
-        "http_code": "403",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
         "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "403 govdesi DDoS-Guard JS challenge (.well-known/ddos-guard/js-challenge). Cloudflare degil; JS challenge cozulmeden HTML alinamaz.",
+        "at": "2026-11-16T22:14:59.157499Z"
       },
       "sorun": "cloudflare"
     },
@@ -15108,19 +15108,12 @@
       "domain": "mangadot.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "blocked",
-        "http_code": "403",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CF",
-        "at": "2026-11-16T22:05:11.851283Z"
+        "detail": "Cloudflare managed challenge. Secici ile cozulmez.",
+        "at": "2026-11-16T22:14:59.157499Z"
       },
       "sorun": "cloudflare"
     },
@@ -22482,11 +22475,11 @@
       "packages": [],
       "state": "failed",
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CF",
-        "at": "2026-11-16T22:05:11.851283Z"
+        "detail": "Cloudflare managed challenge. Secici ile cozulmez; proxy/FlareSolverr veya JSON ucu gerekir.",
+        "at": "2026-11-16T22:14:59.157499Z"
       }
     },
     "5450546641896784725": {
@@ -23503,8 +23496,7 @@
         "detail": "pages: IllegalArgumentException: Illegal base64 character 20",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "pages",
-      "dead": true
+      "device_step": "pages"
     },
     "5785631191583536485": {
       "id": 5785631191583536485,
@@ -26763,10 +26755,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "athenamanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Govde duz metin: Too many requests. Iki ayri denemede de 429; Cloudflare/DDoS-Guard sayfasi degil, uygulama seviyesinde hiz siniri.",
+        "at": "2026-11-16T22:14:59.157499Z"
+      }
     },
     "5929466406882050558": {
       "id": 5929466406882050558,
@@ -28205,8 +28202,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Bolum sayfasinda 'Devam etmek icin giris yapmaniz ya da uye olmaniz gerekmektedir' + $.post('/PartialView/SifreCoz', {id:'...'}) sifreli sayfa listesi. Cerezsiz",
-        "at": "2026-11-16T21:15:51.068Z"
+        "detail": "Bolum HTML'inde 121 img var ama hepsi JS sablonu: src=/Content/img/manga-read/<w>x<h>.png placeholder, gercek gorsel background-image:url(objectURL) ile blob. S",
+        "at": "2026-11-16T22:14:59.157499Z"
       }
     },
     "6252364042350398531": {
@@ -28379,19 +28376,12 @@
       "domain": "ravenscans.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "blocked",
-        "http_code": "403",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CF",
-        "at": "2026-11-16T22:05:11.851283Z"
+        "detail": "Cloudflare managed challenge. Secici ile cozulmez.",
+        "at": "2026-11-16T22:14:59.157499Z"
       },
       "sorun": "cloudflare"
     },
@@ -28612,10 +28602,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mugimanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Ana sayfa ve /manga/ (200/1.469/68449) title=Giris Gerekli; sadece auth-card var, anonim seri karti yok. /wp-json/wp/v2/posts bos dizi, /wp-json/wp/v2/manga 404",
+        "at": "2026-11-16T22:14:59.157499Z"
+      }
     },
     "6377507938794774820": {
       "id": 6377507938794774820,
@@ -29365,8 +29360,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Bolum sayfasi uyelik duvari: div.auth-page + canonical register.php; HTML'de tek img arama sablonu (item.img). Sayfa gorseli yok.",
-        "at": "2026-11-16T21:15:51.069Z"
+        "detail": "GET https://mangadusleri.mom/oku/after-a-meal/bolum-3 -> 302, Location: https://mangadusleri.mom/register.php?info=okumak&redirect=https%3A%2F%2Fmangadusleri.mo",
+        "at": "2026-11-16T22:14:59.157499Z"
       }
     },
     "6581990139232227222": {
@@ -29918,11 +29913,11 @@
       "packages": [],
       "state": "failed",
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CF",
-        "at": "2026-11-16T22:05:11.851283Z"
+        "detail": "Cloudflare managed challenge. Secici ile cozulmez.",
+        "at": "2026-11-16T22:14:59.157499Z"
       }
     },
     "673270202559723773": {
@@ -32342,16 +32337,14 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "mindafansub.dev",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "http",
-        "http_code": "502",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
         "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "Govde: error code: 502. Sunucu tarafi gateway hatasi, HTML hic gelmiyor.",
+        "at": "2026-11-16T22:14:59.157499Z"
       }
     },
     "7579185230972233743": {
@@ -32606,10 +32599,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "seraphmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "athenamanga.com ile ayni 17 baytlik Too many requests govdesi; iki denemede de 429. Uygulama seviyesinde hiz siniri, WAF sayfasi degil.",
+        "at": "2026-11-16T22:14:59.157499Z"
+      }
     },
     "7664165123676750379": {
       "id": 7664165123676750379,
@@ -33518,23 +33516,9 @@
       "nsfw": 0,
       "domain": "tenshimanga.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 20 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+      "state": "unknown"
     },
     "797020067001965834": {
       "id": 797020067001965834,
@@ -33743,8 +33727,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": ".chapter-content-area bos; sayfalar holy-canvas-reader.js ile canvas'a ciziliyor. Bolum HTML'inde sayfa URL'si yok, base64 yok. admin-ajax nonce'lari var ama go",
-        "at": "2026-11-16T21:15:51.068Z"
+        "detail": "Bolum HTML'inde 16 img var, hepsi logo/locked-cover/oneri; sayfa gorseli yok. holy-canvas-reader.js (6461 bayt): POST admin-ajax action=holy_get_chapter_images,",
+        "at": "2026-11-16T22:14:59.157499Z"
       }
     },
     "8039923198961795071": {
@@ -33978,10 +33962,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangadenizi.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Bolum HTML'inde 4 img (logo/kapak/organizasyon); sayfa gorseli yok. script#__NUXT_DATA__ icinde 14 sayfa nesnesi var: image_url = img.mangadenizi.net/reader-ima",
+        "at": "2026-11-16T22:14:59.157499Z"
+      }
     },
     "8132273477468721739": {
       "id": 8132273477468721739,
@@ -35891,10 +35880,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "3hentai.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Liste 200 donuyor ama seri karti ve seri linki yok; 250 span.filter-elem, 250 span.name, 250 data-qty sadece JS ile dolan filtre bloklari. Sunucu HTMLinde liste",
+        "at": "2026-11-16T22:14:59.157499Z"
+      }
     },
     "8714264625714073827": {
       "id": 8714264625714073827,
@@ -35964,15 +35958,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "golgebahcesi.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Next.js App Router. reader-stage konteyneri var ama sayfa <img>'leri sunucu HTML'inde ve RSC payload'inda yok, /api yolu gorunmuyor. Sayfa URL'si gorulmedigi ic",
-        "at": "2026-11-16T21:15:51.068Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "874345810698457818": {
       "id": 874345810698457818,
@@ -36768,8 +36757,7 @@
         "ms": 0,
         "detail": "TLS hostname dogrulama",
         "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "dead": true
+      }
     },
     "8967568472237641111": {
       "id": 8967568472237641111,
@@ -37283,8 +37271,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown",
-      "dead": true
+      "state": "unknown"
     },
     "955191849114859000": {
       "id": 955191849114859000,

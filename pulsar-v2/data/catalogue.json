@@ -92,7 +92,8 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "failed"
     },
     {
       "id": "diamondfansub.com",
@@ -221,7 +222,8 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "failed"
     },
     {
       "id": "golgebahcesi.com",
@@ -236,7 +238,11 @@
         "listPath": "/manga",
         "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "div.eph-num a",
-        "readerSelector": "div#readerarea img"
+        "readerSelector": "div#readerarea img",
+        "pageApiUrl": "https://api.golgebahcesi.com/api/chapters/{1}/chapter-{2}/manifest",
+        "pageApiIdPattern": "/manga/([^/]+)/bolum/chapter-([^/?#]+)",
+        "pageApiItems": "pages",
+        "pageApiFieldUrl": "url"
       },
       "verified_by_user": true,
       "origins": [
@@ -267,7 +273,7 @@
         "local_tr"
       ],
       "status": "dead",
-      "reason": "Kok istek https://m.youtube.com/watch?v=GBIIQ0kP15E adresine yonlendiriyor (url_effective YouTube, title YouTube). Manga kaynagi kalmamis. - olcum 2026-11-17"
+      "reason": "Istek https://m.youtube.com/watch?v=GBIIQ0kP15E adresine yonleniyor, title=YouTube. Alan adi artik yayin yapmiyor. - olcum 2026-11-17"
     },
     {
       "id": "nabicix.com",
@@ -450,7 +456,8 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "failed"
     },
     {
       "id": "tilkiscans.com",
@@ -598,7 +605,8 @@
         "local_custom",
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "status": "failed"
     },
     {
       "id": "orimanga.net",
@@ -620,7 +628,9 @@
         "keiyoushi_index",
         "local_custom",
         "local_tr"
-      ]
+      ],
+      "status": "dead",
+      "reason": "Cloudflare one cikiyor (503 degil, CF saglam); origin maintenance 503 sayfasi donuyor. Secici duzeltmesi ise yaramaz, kaynak tarafinda bakim var. - olcum 2026-11-17"
     },
     {
       "id": "patimanga.com",
@@ -766,7 +776,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "a[href*=\"-bolum-oku\"]",
         "readerSelector": "div.manga-reader-container .ep-item img"
       },
@@ -981,7 +991,9 @@
       "origins": [
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "status": "dead",
+      "reason": "Ana sayfa 27 KB ama manga sayfasi degil: assets.abovedomains.com/javascript/forsale.min.js yukleniyor, alan adi satilik (forsale). Site kapanmis. - olcum 2026-11-17"
     },
     {
       "id": "amangaplanet.com.tr",
@@ -1063,7 +1075,8 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "failed"
     },
     {
       "id": "fuchscans.com",
@@ -1086,7 +1099,9 @@
       "origins": [
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "status": "dead",
+      "reason": "Alan adi DNSte yok. Eski adres notu: fuchscans.com. Yeni adres olcülmedi. - olcum 2026-11-17"
     },
     {
       "id": "7492246554765916610",
@@ -1131,7 +1146,9 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "dead",
+      "reason": "Ana sayfa /cgi-sys/suspendedpage.cgi adresine dusuyor, title=Account Suspended. Hosting askiya alinmis. - olcum 2026-11-17"
     },
     {
       "id": "2641311214423625823",
@@ -1175,15 +1192,17 @@
         "nyora_datadriven"
       ],
       "selector_verified": true,
-      "dead": true
+      "dead": true,
+      "status": "dead",
+      "reason": "Ana sayfa park/lander sayfasi: metinde domain is for sale, 83 kez lander gecisi. Yayinda manga yok. - olcum 2026-11-17"
     },
     {
       "id": "jiangzaitoon.icu",
       "name": "jiangzaitoon",
       "lang": "tr",
       "nsfw": 1,
-      "domain": "jiangzaitoon.icu",
-      "baseUrl": "https://jiangzaitoon.icu",
+      "domain": "jiangzaitoon.nl",
+      "baseUrl": "https://jiangzaitoon.nl",
       "engine": "madara",
       "config": {
         "datePattern": "d MMMM yyyy",
@@ -1200,7 +1219,8 @@
         "local_custom",
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "3881169888283649510",
@@ -1357,7 +1377,8 @@
         "keiyoushi_index",
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "status": "failed"
     },
     {
       "id": "5964430973280552505",
@@ -1379,7 +1400,8 @@
       "origins": [
         "keiyoushi_index"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "failed"
     },
     {
       "id": "mangadusleri.mom",
@@ -1401,7 +1423,8 @@
         "keiyoushi_index",
         "local_custom",
         "local_tr"
-      ]
+      ],
+      "status": "failed"
     },
     {
       "id": "mangagezginim.com",
@@ -1449,7 +1472,9 @@
       "origins": [
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "status": "dead",
+      "reason": "Parklogic park sayfasi. Harness SunCertPathBuilder hatasi park hostunun zincirinden; site OLU. - olcum 2026-11-17"
     },
     {
       "id": "mangaoku.info",
@@ -1474,7 +1499,9 @@
       "origins": [
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "status": "dead",
+      "reason": "Title: mangaoku.info - Bu web sitesi satiliktir! Sayfada sedo izi var. Park edilmis alan adi. - olcum 2026-11-17"
     },
     {
       "id": "millascan.com",
@@ -1498,7 +1525,8 @@
         "keiyoushi_index",
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "status": "failed"
     },
     {
       "id": "mugimanga.com",
@@ -1521,7 +1549,8 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "failed"
     },
     {
       "id": "noxscans.com",
@@ -1548,7 +1577,9 @@
       "origins": [
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "status": "dead",
+      "reason": "Parklogic park sayfasi. Harness TLS hatasi park hostundan; site OLU. - olcum 2026-11-17"
     },
     {
       "id": "niverafansub.org",
@@ -1722,7 +1753,9 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "dead",
+      "reason": "Istek 814292.toplakehorizon.com park adresine yonleniyor, title=..Loading.., sayfada sedo izi. Alan adi park edilmis. - olcum 2026-11-17"
     },
     {
       "id": "raindropteamfan.com",
@@ -1750,7 +1783,8 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "failed"
     },
     {
       "id": "ravenscans.org",
@@ -1773,7 +1807,8 @@
         "local_custom",
         "local_tr"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "failed"
     },
     {
       "id": "guildknives.com",
@@ -1800,7 +1835,9 @@
       "origins": [
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "status": "dead",
+      "reason": "Ana sayfa 114 bayt, sadece window.location.href=/lander yonlendirmesi. Park edilmis alan adi. - olcum 2026-11-17"
     },
     {
       "id": "sadscans.com",
@@ -1849,7 +1886,8 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "failed"
     },
     {
       "id": "shadowceviri.blogspot.com",
@@ -1861,8 +1899,8 @@
       "engine": "zeistmanga",
       "config": {
         "engine": "zeistmanga",
-        "listPath": "/p/manga-list.html",
-        "itemSelector": "div.grid-item, div.animepost",
+        "listPath": "/",
+        "itemSelector": "div.poster_item",
         "chapterSelector": "ul.clstyle li, div.chapter-list li",
         "readerSelector": "div#readerarea img, div.separator img"
       },
@@ -1950,7 +1988,9 @@
         "nyora_datadriven"
       ],
       "selector_verified": true,
-      "dead": true
+      "dead": true,
+      "status": "dead",
+      "reason": "Park/trafik yonlendirme sayfasi (pltraffic). Harness TLS hatasi park hostundan; site OLU. - olcum 2026-11-17"
     },
     {
       "id": "tonizu.top",
@@ -2098,7 +2138,9 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "dead",
+      "reason": "Cloudflare ayakta, origin Apache 503 donuyor. Secici duzeltmesi ise yaramaz. - olcum 2026-11-17"
     },
     {
       "id": "mangakulesi.com",
@@ -2208,7 +2250,8 @@
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index"
-      ]
+      ],
+      "status": "failed"
     },
     {
       "id": "3678110616121957660",
@@ -2262,7 +2305,8 @@
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index"
-      ]
+      ],
+      "status": "failed"
     },
     {
       "id": "ghostoon.com",
@@ -2314,7 +2358,8 @@
         "keiyoushi_index",
         "local_custom",
         "local_tr"
-      ]
+      ],
+      "status": "failed"
     },
     {
       "id": "3759878972130438558",
@@ -2366,7 +2411,7 @@
       ],
       "selector_verified": true,
       "status": "dead",
-      "reason": "park (router.parklogic.com) - 2026-11-16 olcumu"
+      "reason": "Harness TLS hatasi park sayfasindan geliyor: site parklogic parkinda, gercek icerik yok. TLS onarilamaz cunku arkasinda kaynak yok. - olcum 2026-11-17"
     },
     {
       "id": "mangabahcesi.com",
@@ -2388,7 +2433,8 @@
       "origins": [
         "keiyoushi_index",
         "local_tr"
-      ]
+      ],
+      "status": "failed"
     },
     {
       "id": "mangakusu.com",
@@ -2438,7 +2484,7 @@
       ],
       "selector_verified": true,
       "status": "dead",
-      "reason": "LiteSpeed autoindex (Index of /); manga katalogu yok, /bolum/ bos (0 satir) - olcum"
+      "reason": "Ana sayfa title=Index of /, dizin listesi. Site kaldirilmis. - olcum 2026-11-17"
     },
     {
       "id": "mangaruhu.com",
@@ -2503,7 +2549,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "a[href*=\"/bolum-\"]",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
         "chapterScriptSelector": "script",
@@ -2577,7 +2623,9 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "dead",
+      "reason": "Domain satilik (HugeDomains). 403 Cloudflare degil, park saglayicinin sayfasi. - olcum 2026-11-17"
     },
     {
       "id": "252822661917673438",
@@ -2598,7 +2646,8 @@
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index"
-      ]
+      ],
+      "status": "failed"
     },
     {
       "id": "3151409498215291942",
@@ -2644,7 +2693,8 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "failed"
     },
     {
       "id": "2452661550434610263",
