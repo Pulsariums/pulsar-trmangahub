@@ -4699,7 +4699,13 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": ".__yok__",
+    "searchUrl": "https://mangaforfree.net/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+    "searchMethod": "POST",
+    "searchBody": "title={query}",
+    "searchJsonItems": "data",
+    "searchJsonUrl": "url",
+    "searchJsonTitle": "title"
    },
    "selector_verified": true,
    "origins": [
@@ -4759,7 +4765,13 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": ".__yok__",
+    "searchUrl": "https://manhwaclub.net/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+    "searchMethod": "POST",
+    "searchBody": "title={query}",
+    "searchJsonItems": "data",
+    "searchJsonUrl": "url",
+    "searchJsonTitle": "title"
    },
    "selector_verified": true,
    "origins": [
@@ -4776,7 +4788,7 @@
    "engine": "custom",
    "config": {
     "engine": "custom",
-    "listPath": "/",
+    "listPath": "/en/discover",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
     "readerSelector": ".__yok__"
@@ -4797,7 +4809,7 @@
    "config": {
     "engine": "custom",
     "listPath": "/",
-    "itemSelector": ".__yok__",
+    "itemSelector": "div.rec-item.rec-manga",
     "chapterSelector": ".__yok__",
     "readerSelector": ".__yok__"
    },
@@ -4939,7 +4951,7 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": "img.wp-manga-chapter-img"
    },
    "selector_verified": true,
    "origins": [
@@ -5039,7 +5051,13 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": ".__yok__",
+    "searchUrl": "https://mangaxhentai.com/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+    "searchMethod": "POST",
+    "searchBody": "title={query}",
+    "searchJsonItems": "data",
+    "searchJsonUrl": "url",
+    "searchJsonTitle": "title"
    },
    "selector_verified": true,
    "origins": [
@@ -5196,7 +5214,7 @@
    "engine": "custom",
    "config": {
     "engine": "custom",
-    "listPath": "/",
+    "listPath": "/comics",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
     "readerSelector": ".__yok__"
@@ -5277,7 +5295,7 @@
    "config": {
     "engine": "custom",
     "listPath": "/",
-    "itemSelector": ".__yok__",
+    "itemSelector": "article.comic",
     "chapterSelector": ".__yok__",
     "readerSelector": ".__yok__"
    },
@@ -5298,7 +5316,7 @@
     "engine": "custom",
     "listPath": "/",
     "itemSelector": ".__yok__",
-    "chapterSelector": ".__yok__",
+    "chapterSelector": "div.episode-list a[href*=\"issue-\"]",
     "readerSelector": ".__yok__"
    },
    "selector_verified": true,
@@ -5316,7 +5334,7 @@
    "engine": "custom",
    "config": {
     "engine": "custom",
-    "listPath": "/",
+    "listPath": "/series/comic",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
     "readerSelector": ".__yok__"
@@ -5336,7 +5354,7 @@
    "engine": "custom",
    "config": {
     "engine": "custom",
-    "listPath": "/",
+    "listPath": "/series",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
     "readerSelector": ".__yok__"
@@ -5357,7 +5375,7 @@
    "config": {
     "engine": "custom",
     "listPath": "/",
-    "itemSelector": ".__yok__",
+    "itemSelector": "div.latest-poster",
     "chapterSelector": ".__yok__",
     "readerSelector": ".__yok__"
    },
@@ -5476,7 +5494,7 @@
    "engine": "custom",
    "config": {
     "engine": "custom",
-    "listPath": "/",
+    "listPath": "/series",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
     "readerSelector": ".__yok__"
@@ -5539,7 +5557,13 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": ".__yok__",
+    "searchUrl": "https://manga18free.com/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+    "searchMethod": "POST",
+    "searchBody": "title={query}",
+    "searchJsonItems": "data",
+    "searchJsonUrl": "url",
+    "searchJsonTitle": "title"
    },
    "selector_verified": true,
    "origins": [
@@ -5578,7 +5602,7 @@
     "engine": "custom",
     "listPath": "/",
     "itemSelector": ".__yok__",
-    "chapterSelector": ".__yok__",
+    "chapterSelector": "a[href*=\"/c\"]",
     "readerSelector": ".__yok__"
    },
    "selector_verified": true,
@@ -5638,7 +5662,7 @@
     "engine": "custom",
     "listPath": "/",
     "itemSelector": ".__yok__",
-    "chapterSelector": ".__yok__",
+    "chapterSelector": "ul.detail-main-list li a",
     "readerSelector": ".__yok__"
    },
    "selector_verified": true,
@@ -5698,7 +5722,7 @@
     "engine": "custom",
     "listPath": "/",
     "itemSelector": ".__yok__",
-    "chapterSelector": ".__yok__",
+    "chapterSelector": "div.chapter a",
     "readerSelector": ".__yok__"
    },
    "selector_verified": true,
@@ -5898,7 +5922,7 @@
     "engine": "custom",
     "listPath": "/",
     "itemSelector": ".__yok__",
-    "chapterSelector": ".__yok__",
+    "chapterSelector": ".chapter-item a",
     "readerSelector": ".__yok__"
    },
    "selector_verified": true,
@@ -6779,7 +6803,7 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": "img.img-responsive"
    },
    "selector_verified": true,
    "origins": [
@@ -6999,7 +7023,7 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": "div.bg-reader img.imgku"
    },
    "selector_verified": true,
    "origins": [
@@ -7479,7 +7503,13 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": ".__yok__",
+    "searchUrl": "https://montetaiscanlator.xyz/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+    "searchMethod": "POST",
+    "searchBody": "title={query}",
+    "searchJsonItems": "data",
+    "searchJsonUrl": "url",
+    "searchJsonTitle": "title"
    },
    "selector_verified": true,
    "origins": [
@@ -7519,7 +7549,13 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": ".__yok__",
+    "searchUrl": "https://hanamiheaven.org/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+    "searchMethod": "POST",
+    "searchBody": "title={query}",
+    "searchJsonItems": "data",
+    "searchJsonUrl": "url",
+    "searchJsonTitle": "title"
    },
    "selector_verified": true,
    "origins": [
@@ -7619,7 +7655,7 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": "img.page-image"
    },
    "selector_verified": true,
    "origins": [
