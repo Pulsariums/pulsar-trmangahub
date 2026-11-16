@@ -43,7 +43,7 @@
    "kind": "other"
   },
   {
-   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
+   "url": "https://api.golgebahcesi.com/api/games/quests",
    "method": "GET",
    "kind": "other"
   },
@@ -53,27 +53,7 @@
    "kind": "other"
   },
   {
-   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
-   "method": "GET",
-   "kind": "other"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/auth/me",
-   "method": "GET",
-   "kind": "other"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/games/quests",
-   "method": "GET",
-   "kind": "other"
-  },
-  {
    "url": "https://api.golgebahcesi.com/api/recommendations/series?limit=12",
-   "method": "GET",
-   "kind": "list"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=modal",
    "method": "GET",
    "kind": "list"
   },
@@ -88,6 +68,26 @@
    "kind": "other"
   },
   {
+   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/auth/me",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_hero",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
    "url": "https://api.golgebahcesi.com/api/devid/nonce",
    "method": "GET",
    "kind": "other"
@@ -98,13 +98,13 @@
    "kind": "other"
   },
   {
-   "url": "https://api.golgebahcesi.com/api/settings/chat",
-   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/analytics/events",
+   "method": "POST",
    "kind": "other"
   },
   {
-   "url": "https://api.golgebahcesi.com/api/analytics/events",
-   "method": "POST",
+   "url": "https://api.golgebahcesi.com/api/settings/chat",
+   "method": "GET",
    "kind": "other"
   },
   {
@@ -113,14 +113,14 @@
    "kind": "detail"
   },
   {
-   "url": "https://api.golgebahcesi.com/api/bookmarks/check/6af9a6bad8bd0bf8a6286361",
-   "method": "GET",
-   "kind": "other"
-  },
-  {
    "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/my-rating",
    "method": "GET",
    "kind": "detail"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/bookmarks/check/6af9a6bad8bd0bf8a6286361",
+   "method": "GET",
+   "kind": "other"
   },
   {
    "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/view",
@@ -138,14 +138,14 @@
    "kind": "other"
   },
   {
-   "url": "https://api.golgebahcesi.com/api/comments?targetId=6af9a6bad8bd0bf8a6286361&targetType=SERIES&page=1&sort=newest",
-   "method": "GET",
-   "kind": "list"
-  },
-  {
    "url": "https://api.golgebahcesi.com/api/settings/comment-rules",
    "method": "GET",
    "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/comments?targetId=6af9a6bad8bd0bf8a6286361&targetType=SERIES&page=1&sort=newest",
+   "method": "GET",
+   "kind": "list"
   }
  ],
  "confidence": {

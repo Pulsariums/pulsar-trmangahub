@@ -28,22 +28,27 @@
  },
  "api": [
   {
+   "url": "https://duckscans.com/api/telemetry/web-vitals",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
    "url": "https://duckscans.com/api/custom-scripts",
    "method": "GET",
    "kind": "other"
   },
   {
-   "url": "https://duckscans.com/api/series?isSlider=true&limit=22&sort=rating&t=1794810393696",
+   "url": "https://duckscans.com/api/slider-bottom?t=1794813334835",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://duckscans.com/api/series?limit=20&sort=createdAt",
    "method": "GET",
    "kind": "list"
   },
   {
    "url": "https://duckscans.com/api/ads?position=home-left",
-   "method": "GET",
-   "kind": "other"
-  },
-  {
-   "url": "https://duckscans.com/api/slider-bottom?t=1794810394173",
    "method": "GET",
    "kind": "other"
   },
