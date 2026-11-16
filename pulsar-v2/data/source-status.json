@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T21:15:55Z",
+  "generated": "2026-11-16T21:44:38Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -128,18 +128,6 @@
       "lang": "zh",
       "nsfw": 0,
       "domain": "hanman18.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "1084418383174697768": {
-      "id": 1084418383174697768,
-      "kind": "catalogue",
-      "title": "TonizuToon",
-      "lang": "tr",
-      "nsfw": 1,
-      "domain": "tonizu.top",
       "packages": [
         "test"
       ],
@@ -409,23 +397,14 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "kuroimanga.site",
-      "packages": [
-        "tr18"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness: list=12 chapters=51 pages=1",
-        "at": "2026-11-16T21:08:33.899Z"
-      },
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "pass",
-        "http_code": "200",
+        "status": "fail",
+        "http_code": "",
         "ms": 0,
-        "detail": "yerel harness: list=12 chapters=51 pages=1",
-        "at": "2026-11-16T21:08:33.899Z"
+        "detail": "pages: unexpected end of stream (www.kuroimanga.top) - cihaz 2026-11-16T21:42Z",
+        "at": "2026-11-16T21:42:28Z"
       }
     },
     "1255008208586588111": {
@@ -5225,23 +5204,14 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "amangaplanet.com.tr",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness: list=18 chapters=49 pages=13",
-        "at": "2026-11-16T21:08:33.899Z"
-      },
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "pass",
-        "http_code": "200",
+        "status": "fail",
+        "http_code": "",
         "ms": 0,
-        "detail": "yerel harness: list=18 chapters=49 pages=13",
-        "at": "2026-11-16T21:08:33.899Z"
+        "detail": "pages: HTTP 403 - cihaz 2026-11-16T21:42Z",
+        "at": "2026-11-16T21:42:28Z"
       }
     },
     "209650416390992343": {
@@ -28477,18 +28447,6 @@
       "device_step": "list",
       "unreachable": true
     },
-    "681306618208001196": {
-      "id": 681306618208001196,
-      "kind": "catalogue",
-      "title": "MangaTilkisi",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "tilkiscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "6815867355346244959": {
       "id": 6815867355346244959,
       "kind": "engine",
@@ -29581,23 +29539,14 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "sunsetscans.com.tr",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 21 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
+        "detail": "covers 1/3 + pages 521 - cihaz 2026-11-16T21:42Z",
+        "at": "2026-11-16T21:42:28Z"
       }
     },
     "7293740138855045512": {
@@ -31091,23 +31040,14 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.tilkiscans.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness: list=24 chapters=2 pages=2",
-        "at": "2026-11-16T21:08:33.899Z"
-      },
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "pass",
-        "http_code": "200",
+        "status": "cloudflare",
+        "http_code": "",
         "ms": 0,
-        "detail": "yerel harness: list=24 chapters=2 pages=2",
-        "at": "2026-11-16T21:08:33.899Z"
+        "detail": "covers+pages Cloudflare - cihaz 2026-11-16T21:42Z",
+        "at": "2026-11-16T21:42:28Z"
       }
     },
     "7850418808484344907": {
@@ -32004,23 +31944,14 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "lunarx.to",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness: list=30 chapters=9 pages=19",
-        "at": "2026-11-16T21:08:33.899Z"
-      },
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "pass",
-        "http_code": "200",
+        "status": "fail",
+        "http_code": "",
         "ms": 0,
-        "detail": "yerel harness: list=30 chapters=9 pages=19",
-        "at": "2026-11-16T21:08:33.899Z"
+        "detail": "pages: HTTP 404 - cihaz 2026-11-16T21:42Z",
+        "at": "2026-11-16T21:42:28Z"
       }
     },
     "8170497644902480619": {
