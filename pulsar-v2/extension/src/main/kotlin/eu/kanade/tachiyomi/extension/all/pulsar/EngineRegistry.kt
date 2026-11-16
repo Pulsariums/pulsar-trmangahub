@@ -26,6 +26,10 @@ object EngineRegistry {
     private val SLUG_SEGMENTS =
         setOf("manga", "seri", "series", "serie", "comic", "manhwa", "title", "title-detail", "webtoon")
 
+    // /series/comic/<slug> gibi tip parçalı yollar (kaynscan).
+    private val TYPE_SEGMENTS =
+        setOf("comic", "novel", "manga", "manhwa", "webtoon", "book")
+
     private fun genericList(doc: Document, baseUrl: String): List<ParsedManga> {
         val seen = LinkedHashMap<String, ParsedManga>()
         for (a in doc.select("a[href]")) {
@@ -36,10 +40,18 @@ object EngineRegistry {
             val path = afterScheme.substringAfter('/', "")
                 .substringBefore('?').substringBefore('#').trim('/')
             val parts = path.split('/')
-            if (parts.size != 2) continue
-            if (parts[0].lowercase() !in SLUG_SEGMENTS) continue
-            if (parts[1].length < 3) continue
-            if (parts[1].lowercase() in JUNK_SLUGS) continue
+            val slugIdx: Int
+            if (parts.size == 2 && parts[0].lowercase() in SLUG_SEGMENTS) {
+                slugIdx = 1
+            } else if (parts.size == 3 && parts[0].lowercase() in SLUG_SEGMENTS &&
+                parts[1].lowercase() in TYPE_SEGMENTS
+            ) {
+                slugIdx = 2
+            } else {
+                continue
+            }
+            if (parts[slugIdx].length < 3) continue
+            if (parts[slugIdx].lowercase() in JUNK_SLUGS) continue
             val key = full.substringBefore('?').trimEnd('/')
             if (seen.containsKey(key)) continue
             val title = a.text().trim()
