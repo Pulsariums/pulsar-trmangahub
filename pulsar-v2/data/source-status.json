@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T21:10:53Z",
+  "generated": "2026-11-16T21:15:55Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -387,23 +387,9 @@
       "nsfw": 0,
       "domain": "eldermanga.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 25 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+      "state": "unknown"
     },
     "1247569578643189917": {
       "id": 1247569578643189917,
@@ -603,10 +589,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "kairatoon.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Sayfa URL'leri cdn.kairatoon.net/{slug}-bolum-{n}-sayfa-{3hane}-{hash}.webp biciminde; HTML'de sadece ilk 3 sayfa rel=preload as=image olarak var, gerisi istemc",
+        "at": "2026-11-16T21:15:51.068Z"
+      }
     },
     "1338439945941688878": {
       "id": 1338439945941688878,
@@ -3095,23 +3086,9 @@
       "nsfw": 0,
       "domain": "limonmanga.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 22 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+      "state": "unknown"
     },
     "1506088426955252886": {
       "id": 1506088426955252886,
@@ -7019,23 +6996,9 @@
       "nsfw": 0,
       "domain": "anikiga.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 13 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+      "state": "unknown"
     },
     "2273313023247309827": {
       "id": 2273313023247309827,
@@ -9153,10 +9116,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "duckscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Bolum HTML'inde ve RSC payload'inda sayfa gorseli yok. /api/series/{slug} 200 ama chapters/pages alani dondurmuyor; denenen /api/chapters/..., /api/chapter/...,",
+        "at": "2026-11-16T21:15:51.067Z"
+      }
     },
     "2874683368787930309": {
       "id": 2874683368787930309,
@@ -9689,23 +9657,9 @@
       "nsfw": 0,
       "domain": "diamondfansub.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1395,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+      "state": "unknown"
     },
     "3076140639542878834": {
       "id": 3076140639542878834,
@@ -9811,23 +9765,9 @@
       "nsfw": 0,
       "domain": "eskimangalar.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 21 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+      "state": "unknown"
     },
     "3112899286608319204": {
       "id": 3112899286608319204,
@@ -10169,16 +10109,9 @@
       "nsfw": 0,
       "domain": "gafeland.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+      "state": "unknown"
     },
     "3194760788292645390": {
       "id": 3194760788292645390,
@@ -10187,10 +10120,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "arcurafansub.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Gorev metninde Cloudflare olarak bildirildi; bu oturumda istek atilmadi.",
+        "at": "2026-11-16T21:15:51.063Z"
+      }
     },
     "3201609293231115184": {
       "id": 3201609293231115184,
@@ -10343,14 +10281,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 8 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
+      "state": "unknown",
       "sorun": "cloudflare"
     },
     "324065352936051183": {
@@ -10799,10 +10730,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tuhafscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "reading-content icinde .tuhaf-lock kilit blogu (blur'lu kart, 'giris yap / uye ol') duruyor; abonelik kilidi cerezsiz asilamiyor.",
+        "at": "2026-11-16T21:15:51.070Z"
+      }
     },
     "3488647577143589694": {
       "id": 3488647577143589694,
@@ -13101,23 +13037,9 @@
       "nsfw": 0,
       "domain": "afroditscans.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 20 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+      "state": "unknown"
     },
     "38985315279348378": {
       "id": 38985315279348378,
@@ -20336,23 +20258,9 @@
       "nsfw": 0,
       "domain": "nabicix.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 26 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+      "state": "unknown"
     },
     "4913495778819209502": {
       "id": 4913495778819209502,
@@ -21229,10 +21137,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "gaiatoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Gorev metninde Cloudflare olarak bildirildi; bu oturumda istek atilmadi.",
+        "at": "2026-11-16T21:15:51.066Z"
+      }
     },
     "5450546641896784725": {
       "id": 5450546641896784725,
@@ -26624,10 +26537,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangabahcesi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Bolum sayfasinda 'Devam etmek icin giris yapmaniz ya da uye olmaniz gerekmektedir' + $.post('/PartialView/SifreCoz', {id:'...'}) sifreli sayfa listesi. Cerezsiz",
+        "at": "2026-11-16T21:15:51.068Z"
+      }
     },
     "6252364042350398531": {
       "id": 6252364042350398531,
@@ -27716,16 +27634,14 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "mangadusleri.mom",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "http404",
-        "http_code": "404",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
         "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "Bolum sayfasi uyelik duvari: div.auth-page + canonical register.php; HTML'de tek img arama sablonu (item.img). Sayfa gorseli yok.",
+        "at": "2026-11-16T21:15:51.069Z"
       }
     },
     "6581990139232227222": {
@@ -30169,10 +30085,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "xiaoaitoon.org.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "main.login-wall: 'Bu bolumu okumak icin giris yap — Bolumleri sadece kayitli kullanicilarimiz okuyabilir.' Bolum HTML'inde tek bir gorsel URL'si bile yok.",
+        "at": "2026-11-16T21:15:51.070Z"
+      }
     },
     "7463464127094088901": {
       "id": 7463464127094088901,
@@ -31019,10 +30940,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "yaoi.me",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "55 adet data-page div'i bos (aspect-ratio disinda icerik yok); HTML/RSC'de sayfa gorseli yok, yalniz 7 adet /i/c/... thumbnail var. Gorsel ureten uc gorulmedi.",
+        "at": "2026-11-16T21:15:51.070Z"
+      }
     },
     "7793182120198515414": {
       "id": 7793182120198515414,
@@ -31743,10 +31669,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "holyscans.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": ".chapter-content-area bos; sayfalar holy-canvas-reader.js ile canvas'a ciziliyor. Bolum HTML'inde sayfa URL'si yok, base64 yok. admin-ajax nonce'lari var ama go",
+        "at": "2026-11-16T21:15:51.068Z"
+      }
     },
     "8039923198961795071": {
       "id": 8039923198961795071,
@@ -32282,23 +32213,14 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangadiyari.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "http404",
-        "http_code": "404",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
+        "detail": "Next.js App Router (self.__next_f 17 adet). Ana sayfa ve /seri HTML'inde tek bir /seri/<slug> baglantisi yok; /seri yanitindaki tek eslesme 'ri/page-e4608475b61",
+        "at": "2026-11-16T21:15:51.066Z"
       }
     },
     "8244651774479139223": {
@@ -33702,10 +33624,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "golgebahcesi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Next.js App Router. reader-stage konteyneri var ama sayfa <img>'leri sunucu HTML'inde ve RSC payload'inda yok, /api yolu gorunmuyor. Sayfa URL'si gorulmedigi ic",
+        "at": "2026-11-16T21:15:51.068Z"
+      }
     },
     "874345810698457818": {
       "id": 874345810698457818,

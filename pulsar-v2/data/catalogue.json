@@ -24,9 +24,9 @@
         "netshield": true,
         "engine": "mangareader",
         "listPath": "/manga",
-        "itemSelector": "a[href^=\"/manga/\"]",
+        "itemSelector": "a.group[href^=\"/manga/\"]",
         "chapterSelector": "div.eph-num a",
-        "readerSelector": "div#readerarea img"
+        "readerSelector": ".manga-reader-container img"
       },
       "verified_by_user": true,
       "origins": [
@@ -50,10 +50,12 @@
         "postReq": true,
         "chapterAjax": true,
         "engine": "madara",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
+        "listPath": "/manga/",
+        "itemSelector": ".page-item-detail.manga",
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
+        "readerSelector": ".reading-content img",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "searchUrl": "https://anikiga.com/?s={query}&post_type=wp-manga"
       },
       "verified_by_user": true,
       "origins": [
@@ -105,17 +107,20 @@
         "listUrl": "seri/",
         "tagPrefix": "seri-turu/",
         "engine": "madara",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
+        "listPath": "/seriler",
+        "itemSelector": ".page-item-detail.manga",
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
+        "readerSelector": ".reading-content img",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "searchUrl": "https://diamondfansub.com/?s={query}&post_type=wp-manga"
       },
       "verified_by_user": true,
       "origins": [
         "keiyoushi_index",
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "eldermanga.com",
@@ -128,7 +133,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "itemSelector": "a.group[href^=\"/manga/\"]",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.manga-reader-container .ep-item img"
       },
@@ -150,7 +155,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "itemSelector": "a.group[href^=\"/manga/\"]",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
@@ -159,7 +164,8 @@
         "keiyoushi_index",
         "local_custom",
         "local_tr"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "gafeland.com",
@@ -176,8 +182,8 @@
           "tagsExclusion": false
         },
         "engine": "mangareader",
-        "listPath": "/manga",
-        "itemSelector": "div.ymk-card-main-area",
+        "listPath": "/manga/",
+        "itemSelector": ".ymk-card-view",
         "chapterSelector": "div.eph-num a",
         "readerSelector": "div#readerarea img"
       },
@@ -259,7 +265,9 @@
       "origins": [
         "keiyoushi_index",
         "local_tr"
-      ]
+      ],
+      "status": "dead",
+      "reason": "Kok istek https://m.youtube.com/watch?v=GBIIQ0kP15E adresine yonlendiriyor (url_effective YouTube, title YouTube). Manga kaynagi kalmamis. - olcum 2026-11-17"
     },
     {
       "id": "nabicix.com",
@@ -272,10 +280,11 @@
       "config": {
         "datePattern": "d MMMM",
         "engine": "madara",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
+        "listPath": "/manga/",
+        "itemSelector": ".bs",
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
+        "readerSelector": "div.page-break img, div.reading-content img",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
       },
       "verified_by_user": true,
       "origins": [
@@ -283,7 +292,8 @@
         "local_custom",
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "kuroimanga.site",
@@ -330,16 +340,17 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "itemSelector": "a.group[href^=\"/manga/\"]",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "readerSelector": ".manga-reader-container img"
       },
       "verified_by_user": true,
       "origins": [
         "keiyoushi_index",
         "local_custom",
         "local_tr"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "tuhafscans.com",
@@ -428,7 +439,9 @@
         "listPath": "/manga",
         "itemSelector": "article.manga-card",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "reader-images"
       },
       "verified_by_user": true,
       "origins": [
@@ -727,7 +740,9 @@
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
         "rscChapterUrl": "/manga/{slug}/{number}",
-        "pageApiUrl": "https://sleptmanga.com.tr/api/chapters/{slug}/{chapter}/images"
+        "pageApiUrl": "https://sleptmanga.com.tr/api/chapters/{slug}/{chapter}/images",
+        "pageApiItems": "images",
+        "pageApiFieldUrl": "url"
       },
       "verified_by_user": true,
       "origins": [
@@ -2457,7 +2472,10 @@
         "listPath": "/manga",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": ".manga-page-img"
+        "readerSelector": ".manga-page-img",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "__next_f",
+        "pageJsonArray": "content"
       },
       "altDomains": [],
       "verified_by_user": false,
