@@ -1,0 +1,163 @@
+{
+ "domain": "golgebahcesi.com",
+ "title": "Gölge Bahçesi - Manga Oku, Türkçe Manhwa ve Webtoon Oku",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.w-full.py-4.border-b",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 40
+ },
+ "detail": {
+  "title": "h1.text-xl.font-semibold.leading-tight",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "meta[name=\"description\"]@content",
+  "genres": "",
+  "status": "",
+  "chapterItem": "a.group.flex.items-center",
+  "chapterLink": "@href",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://golgebahcesi.com/cdn-cgi/speculation",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/pages/nav",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/games/policy",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/settings/general",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/auth/me",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/games/quests",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/recommendations/series?limit=12",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=modal",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/series/trending?period=weekly&limit=10",
+   "method": "GET",
+   "kind": "detail"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/suggestions/top?limit=3",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/devid/nonce",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/devid/identify",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/settings/chat",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/analytics/events",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/recommendations/series/duk-hanesinin-savas-kurdu/similar?limit=6",
+   "method": "GET",
+   "kind": "detail"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/bookmarks/check/6af9a6bad8bd0bf8a6286361",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/my-rating",
+   "method": "GET",
+   "kind": "detail"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/view",
+   "method": "POST",
+   "kind": "detail"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/series/duk-hanesinin-savas-kurdu/blessings/leaderboard",
+   "method": "GET",
+   "kind": "detail"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/reactions/summary?targetId=6af9a6bad8bd0bf8a6286361",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/comments?targetId=6af9a6bad8bd0bf8a6286361&targetType=SERIES&page=1&sort=newest",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/settings/comment-rules",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0.63,
+  "reader": 0
+ },
+ "notes": [
+  "list: 40 items at /",
+  "list link prefix: manga",
+  "pagination: not detected",
+  "chapterLink \"@href\": item is the link itself",
+  "reader: no chapter image >=300px found"
+ ]
+}

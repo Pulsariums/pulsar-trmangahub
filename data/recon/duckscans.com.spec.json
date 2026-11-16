@@ -1,0 +1,73 @@
+{
+ "domain": "duckscans.com",
+ "title": "DuckScans - Webtoon & Manga Oku",
+ "mode": "html",
+ "list": {
+  "path": "/",
+  "pageParam": "",
+  "item": "div.hw-new-series__card.flex-shrink-0.relative",
+  "link": "a",
+  "title": "img|attr:alt",
+  "cover": "img@src",
+  "itemCount": 60
+ },
+ "detail": {
+  "title": "",
+  "cover": "",
+  "description": "",
+  "genres": "",
+  "status": "",
+  "chapterItem": "",
+  "chapterLink": "",
+  "chapterTitle": ""
+ },
+ "reader": {
+  "images": "",
+  "attr": "",
+  "count": 0
+ },
+ "api": [
+  {
+   "url": "https://duckscans.com/api/custom-scripts",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://duckscans.com/api/series?isSlider=true&limit=22&sort=rating&t=1794810393696",
+   "method": "GET",
+   "kind": "list"
+  },
+  {
+   "url": "https://duckscans.com/api/ads?position=home-left",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://duckscans.com/api/slider-bottom?t=1794810394173",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://duckscans.com/api/ads",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://duckscans.com/api/admin/categories?names=true&active=true",
+   "method": "GET",
+   "kind": "other"
+  }
+ ],
+ "confidence": {
+  "list": 1,
+  "detail": 0,
+  "reader": 0
+ },
+ "notes": [
+  "list: 60 items at /",
+  "list link prefix: seri",
+  "pagination: not detected",
+  "detail: series page not found",
+  "reader: no chapter image >=300px found"
+ ]
+}

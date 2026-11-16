@@ -1,0 +1,597 @@
+{
+ "site": "https://kairatoon.net",
+ "calls": [
+  {
+   "tag": "home",
+   "image": "https://kairatoon.net/logo.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.kairatoon.net/f3cc911c-4fdf-4f14-b201-f037bb96643a.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.kairatoon.net/53716bc7-6d18-471e-95e4-98c606060cce.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.kairatoon.net/2efb3609-7900-4ed2-a557-9b44afafc1aa.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.kairatoon.net/1facbed7-6e8a-442f-a8d8-06fa9b2c3c7d.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.kairatoon.net/7bd0bd8f-c3bf-46f0-9fe9-3d730179ebd9.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://kairatoon.net/partners/aftertoon.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://cdn.kairatoon.net/26755a7f-2617-40db-9192-2328827d683c.webp"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/auth/bootstrap",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"authenticated\":false}"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/public-settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"premium_enabled\":true,\"donation_enabled\":true,\"reactions\":[{\"key\":\"like\",\"emoji\":\"👍\",\"label\":\"Beğen\",\"image_path\":\"/api/files/eee7aad6-629e-4236-a976-405622fa5ba2.gif\"},{\"key\":\"love\",\"emoji\":\"❤️\",\"label\":\"Sevdim\",\"image_path\":\"/api/files/8decc45c-9832-4494-b025-c852d7fef578.gif\"},{\"key\":\"laugh\",\"emoji\":\"😆\",\"label\":\"Güldüm\",\"image_path\":\"/api/files/151e3678-64d1-42a1-859d-f943b02c3fcc.gif\"},{\"key\":\"wow\",\"emoji\":\"😮\",\"label\":\"Şaşırdım\",\"image_path\":\"/api/files/6b1cef53-dbd6-4038-ad87-ff4cbc3cd9fd.gif\"},{\"key\":\"sad\",\"emoji\":\"😢\",\"label\":\"Üzüldüm\",\"image_path\":\"/api/files/56f15dbb-15e2-4d45-a9d9-94d77445ea7b.gif\"},{\"key\":\"angry\",\"emoji\":\"😠\",\"label\":\"Kızdım\",\"image_path\":\"/api/files/7c1fac67"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/giveaway/yearly-premium",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"id\":\"yearly-premium-2026-11-19\",\"title\":\"2 kişiye 1 yıllık premium!\",\"starts_at\":\"2026-11-12T14:30:00+00:00\",\"ends_at\":\"2026-11-19T14:30:00+00:00\",\"ended\":false,\"announced\":false,\"joined\":false,\"winners\":[],\"entry_count\":null}"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/battle-pass",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"season\":{\"id\":\"bp-winter-2026\",\"name\":\"Kış & Efsaneler Sezonu\",\"subtitle\":\"50 Seviye · Sitede Olmayan 8 Efsanevi Pet, Discord Mağaza Kart Çerçeveleri, İsim Fontları ve Profil Efektleri!\",\"max_level\":50,\"xp_per_level\":300,\"pass_price_try\":69},\"config\":{\"enabled\":true,\"active\":true,\"end_at\":\"2027-03-01T00:00:00+00:00\",\"days_left\":104,\"season_id\":\"bp-winter-2026\",\"pass_price_try\":69},\"levels\":[{\"level\":1,\"free\":{\"key\":\"bundle\",\"title\":\"Başlangıç Seti\",\"icon\":\"🎁\",\"rarity\":\"common\",\"subtitle\":\"2x Çark · +250 XP · +150 Pet XP\",\"parts\":[{\"key\":\"spin\",\"amount\":2},{\"key\":\"xp\",\"amount\":250},{\"key\":\"pet_xp\",\"amount\":150}],\"exclusive\":false},\"premium\":{\"key\":\"bundle\",\"title\":\"Deadpool & Buz Sarkıtı\","
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/frost-kingdom/status",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"enabled\":false,\"active\":false,\"start_at\":null,\"end_at\":null,\"community_goal_step\":50,\"season_id\":\"winter-2026\"}"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/events",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"events\":[{\"key\":\"dna\",\"title\":\"KairaToon Okur DNA'sı\",\"description\":\"Soruları cevapla, okur sınıfını öğren ve etkinlik puanı topla.\",\"active\":false,\"event_id\":\"dd2ae309-2d4a-47d2-8f85-220ef2847d15\",\"started_at\":\"2026-10-16T12:15:34.580160+00:00\",\"ended_at\":\"2026-10-18T10:07:38.805883+00:00\",\"awarded\":true,\"court_prompt\":\"\",\"leaderboard\":[{\"rank\":1,\"score\":8,\"reader_class\":\"🌸 Romantik Kaos\",\"user\":{\"id\":\"8a802d7b-1dfc-487c-bae7-02268f287ec8\",\"username\":\"Anonim\",\"avatar_path\":\"avatar-8a802d7b-da963b.jpg\"}},{\"rank\":2,\"score\":8,\"reader_class\":\"🌙 Gece Okuru\",\"user\":{\"id\":\"8b869f85-74b7-42ba-9980-43b6f9352eb0\",\"username\":\"NİSAN\",\"avatar_path\":\"avatar-8b869f85-3fb231.gif\"}},{\"rank\":3,\"score\":8,"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/genres",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "[{\"id\":\"da4dbecd-a205-4d89-a8b8-63467710c626\",\"name\":\"Aksiyon\",\"description\":\"Türkçe Aksiyon manhwa, manga ve webtoon serilerini Kairatoon'da ücretsiz oku. En popüler Aksiyon türü yapımlar, günlük yeni bölümler ve geniş arşiv.\"},{\"id\":\"b84d15bf-1c91-4f9f-9461-9a3246c4ad3a\",\"name\":\"Macera\",\"description\":\"Türkçe Macera manhwa, manga ve webtoon serilerini Kairatoon'da ücretsiz oku. En popüler Macera türü yapımlar, günlük yeni bölümler ve geniş arşiv.\"},{\"id\":\"7a622815-67a1-40cf-bc18-0609ee1cc0fd\",\"name\":\"Komedi\",\"description\":\"Türkçe Komedi manhwa, manga ve webtoon serilerini Kairatoon'da ücretsiz oku. En popüler Komedi türü yapımlar, günlük yeni bölümler ve geniş arşiv.\"},{\"id\":\"899c4044-4d73-"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://kairatoon.net/logo.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://kairatoon.net/partners/aftertoon.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://kairatoon.net/partners/japan-fans.webp"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/auth/bootstrap",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"authenticated\":false}"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/public-settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"premium_enabled\":true,\"donation_enabled\":true,\"reactions\":[{\"key\":\"like\",\"emoji\":\"👍\",\"label\":\"Beğen\",\"image_path\":\"/api/files/eee7aad6-629e-4236-a976-405622fa5ba2.gif\"},{\"key\":\"love\",\"emoji\":\"❤️\",\"label\":\"Sevdim\",\"image_path\":\"/api/files/8decc45c-9832-4494-b025-c852d7fef578.gif\"},{\"key\":\"laugh\",\"emoji\":\"😆\",\"label\":\"Güldüm\",\"image_path\":\"/api/files/151e3678-64d1-42a1-859d-f943b02c3fcc.gif\"},{\"key\":\"wow\",\"emoji\":\"😮\",\"label\":\"Şaşırdım\",\"image_path\":\"/api/files/6b1cef53-dbd6-4038-ad87-ff4cbc3cd9fd.gif\"},{\"key\":\"sad\",\"emoji\":\"😢\",\"label\":\"Üzüldüm\",\"image_path\":\"/api/files/56f15dbb-15e2-4d45-a9d9-94d77445ea7b.gif\"},{\"key\":\"angry\",\"emoji\":\"😠\",\"label\":\"Kızdım\",\"image_path\":\"/api/files/7c1fac67"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://kairatoon.net/logo.webp"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/genres",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://kairatoon.net/partners/japan-fans.webp"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://kairatoon.net/partners/aftertoon.webp"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/auth/bootstrap",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"authenticated\":false}"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/public-settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"premium_enabled\":true,\"donation_enabled\":true,\"reactions\":[{\"key\":\"like\",\"emoji\":\"👍\",\"label\":\"Beğen\",\"image_path\":\"/api/files/eee7aad6-629e-4236-a976-405622fa5ba2.gif\"},{\"key\":\"love\",\"emoji\":\"❤️\",\"label\":\"Sevdim\",\"image_path\":\"/api/files/8decc45c-9832-4494-b025-c852d7fef578.gif\"},{\"key\":\"laugh\",\"emoji\":\"😆\",\"label\":\"Güldüm\",\"image_path\":\"/api/files/151e3678-64d1-42a1-859d-f943b02c3fcc.gif\"},{\"key\":\"wow\",\"emoji\":\"😮\",\"label\":\"Şaşırdım\",\"image_path\":\"/api/files/6b1cef53-dbd6-4038-ad87-ff4cbc3cd9fd.gif\"},{\"key\":\"sad\",\"emoji\":\"😢\",\"label\":\"Üzüldüm\",\"image_path\":\"/api/files/56f15dbb-15e2-4d45-a9d9-94d77445ea7b.gif\"},{\"key\":\"angry\",\"emoji\":\"😠\",\"label\":\"Kızdım\",\"image_path\":\"/api/files/7c1fac67"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://kairatoon.net/logo.webp"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://kairatoon.net/partners/japan-fans.webp"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://kairatoon.net/partners/aftertoon.webp"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/genres",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/auth/bootstrap",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"authenticated\":false}"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/public-settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"premium_enabled\":true,\"donation_enabled\":true,\"reactions\":[{\"key\":\"like\",\"emoji\":\"👍\",\"label\":\"Beğen\",\"image_path\":\"/api/files/eee7aad6-629e-4236-a976-405622fa5ba2.gif\"},{\"key\":\"love\",\"emoji\":\"❤️\",\"label\":\"Sevdim\",\"image_path\":\"/api/files/8decc45c-9832-4494-b025-c852d7fef578.gif\"},{\"key\":\"laugh\",\"emoji\":\"😆\",\"label\":\"Güldüm\",\"image_path\":\"/api/files/151e3678-64d1-42a1-859d-f943b02c3fcc.gif\"},{\"key\":\"wow\",\"emoji\":\"😮\",\"label\":\"Şaşırdım\",\"image_path\":\"/api/files/6b1cef53-dbd6-4038-ad87-ff4cbc3cd9fd.gif\"},{\"key\":\"sad\",\"emoji\":\"😢\",\"label\":\"Üzüldüm\",\"image_path\":\"/api/files/56f15dbb-15e2-4d45-a9d9-94d77445ea7b.gif\"},{\"key\":\"angry\",\"emoji\":\"😠\",\"label\":\"Kızdım\",\"image_path\":\"/api/files/7c1fac67"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://kairatoon.net/logo.webp"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/genres",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://kairatoon.net/partners/japan-fans.webp"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://kairatoon.net/partners/aftertoon.webp"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/auth/bootstrap",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"authenticated\":false}"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/public-settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"premium_enabled\":true,\"donation_enabled\":true,\"reactions\":[{\"key\":\"like\",\"emoji\":\"👍\",\"label\":\"Beğen\",\"image_path\":\"/api/files/eee7aad6-629e-4236-a976-405622fa5ba2.gif\"},{\"key\":\"love\",\"emoji\":\"❤️\",\"label\":\"Sevdim\",\"image_path\":\"/api/files/8decc45c-9832-4494-b025-c852d7fef578.gif\"},{\"key\":\"laugh\",\"emoji\":\"😆\",\"label\":\"Güldüm\",\"image_path\":\"/api/files/151e3678-64d1-42a1-859d-f943b02c3fcc.gif\"},{\"key\":\"wow\",\"emoji\":\"😮\",\"label\":\"Şaşırdım\",\"image_path\":\"/api/files/6b1cef53-dbd6-4038-ad87-ff4cbc3cd9fd.gif\"},{\"key\":\"sad\",\"emoji\":\"😢\",\"label\":\"Üzüldüm\",\"image_path\":\"/api/files/56f15dbb-15e2-4d45-a9d9-94d77445ea7b.gif\"},{\"key\":\"angry\",\"emoji\":\"😠\",\"label\":\"Kızdım\",\"image_path\":\"/api/files/7c1fac67"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://kairatoon.net/logo.webp"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/genres",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://kairatoon.net/partners/japan-fans.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://kairatoon.net/partners/aftertoon.webp"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/auth/bootstrap",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"authenticated\":false}"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/public-settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"premium_enabled\":true,\"donation_enabled\":true,\"reactions\":[{\"key\":\"like\",\"emoji\":\"👍\",\"label\":\"Beğen\",\"image_path\":\"/api/files/eee7aad6-629e-4236-a976-405622fa5ba2.gif\"},{\"key\":\"love\",\"emoji\":\"❤️\",\"label\":\"Sevdim\",\"image_path\":\"/api/files/8decc45c-9832-4494-b025-c852d7fef578.gif\"},{\"key\":\"laugh\",\"emoji\":\"😆\",\"label\":\"Güldüm\",\"image_path\":\"/api/files/151e3678-64d1-42a1-859d-f943b02c3fcc.gif\"},{\"key\":\"wow\",\"emoji\":\"😮\",\"label\":\"Şaşırdım\",\"image_path\":\"/api/files/6b1cef53-dbd6-4038-ad87-ff4cbc3cd9fd.gif\"},{\"key\":\"sad\",\"emoji\":\"😢\",\"label\":\"Üzüldüm\",\"image_path\":\"/api/files/56f15dbb-15e2-4d45-a9d9-94d77445ea7b.gif\"},{\"key\":\"angry\",\"emoji\":\"😠\",\"label\":\"Kızdım\",\"image_path\":\"/api/files/7c1fac67"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://kairatoon.net/logo.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/genres",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://kairatoon.net/partners/japan-fans.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://kairatoon.net/partners/aftertoon.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/auth/bootstrap",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"authenticated\":false}"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/public-settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"premium_enabled\":true,\"donation_enabled\":true,\"reactions\":[{\"key\":\"like\",\"emoji\":\"👍\",\"label\":\"Beğen\",\"image_path\":\"/api/files/eee7aad6-629e-4236-a976-405622fa5ba2.gif\"},{\"key\":\"love\",\"emoji\":\"❤️\",\"label\":\"Sevdim\",\"image_path\":\"/api/files/8decc45c-9832-4494-b025-c852d7fef578.gif\"},{\"key\":\"laugh\",\"emoji\":\"😆\",\"label\":\"Güldüm\",\"image_path\":\"/api/files/151e3678-64d1-42a1-859d-f943b02c3fcc.gif\"},{\"key\":\"wow\",\"emoji\":\"😮\",\"label\":\"Şaşırdım\",\"image_path\":\"/api/files/6b1cef53-dbd6-4038-ad87-ff4cbc3cd9fd.gif\"},{\"key\":\"sad\",\"emoji\":\"😢\",\"label\":\"Üzüldüm\",\"image_path\":\"/api/files/56f15dbb-15e2-4d45-a9d9-94d77445ea7b.gif\"},{\"key\":\"angry\",\"emoji\":\"😠\",\"label\":\"Kızdım\",\"image_path\":\"/api/files/7c1fac67"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/series",
+   "status": 404,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"detail\":\"Not Found\"}"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/manga",
+   "status": 404,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"detail\":\"Not Found\"}"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.kairatoon.net/53716bc7-6d18-471e-95e4-98c606060cce.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://kairatoon.net/logo.webp"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/public-settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "detail",
+   "image": "https://kairatoon.net/partners/aftertoon.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://flagcdn.com/32x24/kr.png"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/auth/bootstrap",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"authenticated\":false}"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.kairatoon.net/322c566b-c6c4-4ce1-bd60-5e28a8605268.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.kairatoon.net/e554e671-73d1-42c1-8f19-0a18120feb26.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.kairatoon.net/ffb0a26b-4a0e-4126-a5bc-44fadf4b8bec.webp"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.kairatoon.net/5e87ce70-99e7-4013-b4cc-4567269d71af.webp"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/webtoons/0211d440-77b2-4645-b173-3b983da4f467/boost-status",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"series_boosts_today\":51,\"user_boosts_today\":0,\"user_boosts_remaining\":3,\"user_boosted_this_series\":false,\"daily_cap\":3}"
+  },
+  {
+   "tag": "detail",
+   "image": "https://cdn.kairatoon.net/98eaba05-4953-4c6f-b15b-5eb2f1176e22.webp"
+  },
+  {
+   "tag": "detail",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/public-settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"premium_enabled\":true,\"donation_enabled\":true,\"reactions\":[{\"key\":\"like\",\"emoji\":\"👍\",\"label\":\"Beğen\",\"image_path\":\"/api/files/eee7aad6-629e-4236-a976-405622fa5ba2.gif\"},{\"key\":\"love\",\"emoji\":\"❤️\",\"label\":\"Sevdim\",\"image_path\":\"/api/files/8decc45c-9832-4494-b025-c852d7fef578.gif\"},{\"key\":\"laugh\",\"emoji\":\"😆\",\"label\":\"Güldüm\",\"image_path\":\"/api/files/151e3678-64d1-42a1-859d-f943b02c3fcc.gif\"},{\"key\":\"wow\",\"emoji\":\"😮\",\"label\":\"Şaşırdım\",\"image_path\":\"/api/files/6b1cef53-dbd6-4038-ad87-ff4cbc3cd9fd.gif\"},{\"key\":\"sad\",\"emoji\":\"😢\",\"label\":\"Üzüldüm\",\"image_path\":\"/api/files/56f15dbb-15e2-4d45-a9d9-94d77445ea7b.gif\"},{\"key\":\"angry\",\"emoji\":\"😠\",\"label\":\"Kızdım\",\"image_path\":\"/api/files/7c1fac67"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/genres",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/idol-oyunda-bolum-1-sayfa-001-49ab7.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/idol-oyunda-bolum-1-sayfa-003-b17ae.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/53716bc7-6d18-471e-95e4-98c606060cce.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/ffb0a26b-4a0e-4126-a5bc-44fadf4b8bec.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/98eaba05-4953-4c6f-b15b-5eb2f1176e22.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/5e87ce70-99e7-4013-b4cc-4567269d71af.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/322c566b-c6c4-4ce1-bd60-5e28a8605268.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/e554e671-73d1-42c1-8f19-0a18120feb26.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://kairatoon.net/partners/aftertoon.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/idol-oyunda-bolum-1-sayfa-002-f5f87.webp"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/auth/bootstrap",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"authenticated\":false}"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/idol-oyunda-bolum-1-sayfa-001-49ab7.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/idol-oyunda-bolum-1-sayfa-002-f5f87.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/idol-oyunda-bolum-1-sayfa-003-b17ae.webp"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/chapters/f877621a-28df-4374-b68c-1ca995a2de77/reactions",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "reader",
+   "method": "POST",
+   "url": "https://kairatoon.net/api/chapters/f877621a-28df-4374-b68c-1ca995a2de77/view",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/53716bc7-6d18-471e-95e4-98c606060cce.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/ffb0a26b-4a0e-4126-a5bc-44fadf4b8bec.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/98eaba05-4953-4c6f-b15b-5eb2f1176e22.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/5e87ce70-99e7-4013-b4cc-4567269d71af.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/322c566b-c6c4-4ce1-bd60-5e28a8605268.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://cdn.kairatoon.net/e554e671-73d1-42c1-8f19-0a18120feb26.webp"
+  },
+  {
+   "tag": "reader",
+   "image": "https://kairatoon.net/partners/aftertoon.webp"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/auth/bootstrap",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"authenticated\":false}"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/chapters/f877621a-28df-4374-b68c-1ca995a2de77/reactions",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"counts\":{\"like\":14,\"love\":30,\"laugh\":0,\"wow\":3,\"sad\":0,\"angry\":2},\"mine\":null,\"total\":49}"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/public-settings",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"premium_enabled\":true,\"donation_enabled\":true,\"reactions\":[{\"key\":\"like\",\"emoji\":\"👍\",\"label\":\"Beğen\",\"image_path\":\"/api/files/eee7aad6-629e-4236-a976-405622fa5ba2.gif\"},{\"key\":\"love\",\"emoji\":\"❤️\",\"label\":\"Sevdim\",\"image_path\":\"/api/files/8decc45c-9832-4494-b025-c852d7fef578.gif\"},{\"key\":\"laugh\",\"emoji\":\"😆\",\"label\":\"Güldüm\",\"image_path\":\"/api/files/151e3678-64d1-42a1-859d-f943b02c3fcc.gif\"},{\"key\":\"wow\",\"emoji\":\"😮\",\"label\":\"Şaşırdım\",\"image_path\":\"/api/files/6b1cef53-dbd6-4038-ad87-ff4cbc3cd9fd.gif\"},{\"key\":\"sad\",\"emoji\":\"😢\",\"label\":\"Üzüldüm\",\"image_path\":\"/api/files/56f15dbb-15e2-4d45-a9d9-94d77445ea7b.gif\"},{\"key\":\"angry\",\"emoji\":\"😠\",\"label\":\"Kızdım\",\"image_path\":\"/api/files/7c1fac67"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/ads?slot=reader_top&max=1",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "[]"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/ads?slot=reader_bottom&max=1",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "[]"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://kairatoon.net/api/events",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"events\":[{\"key\":\"dna\",\"title\":\"KairaToon Okur DNA'sı\",\"description\":\"Soruları cevapla, okur sınıfını öğren ve etkinlik puanı topla.\",\"active\":false,\"event_id\":\"dd2ae309-2d4a-47d2-8f85-220ef2847d15\",\"started_at\":\"2026-10-16T12:15:34.580160+00:00\",\"ended_at\":\"2026-10-18T10:07:38.805883+00:00\",\"awarded\":true,\"court_prompt\":\"\",\"leaderboard\":[{\"rank\":1,\"score\":8,\"reader_class\":\"🌸 Romantik Kaos\",\"user\":{\"id\":\"8a802d7b-1dfc-487c-bae7-02268f287ec8\",\"username\":\"Anonim\",\"avatar_path\":\"avatar-8a802d7b-da963b.jpg\"}},{\"rank\":2,\"score\":8,\"reader_class\":\"🌙 Gece Okuru\",\"user\":{\"id\":\"8b869f85-74b7-42ba-9980-43b6f9352eb0\",\"username\":\"NİSAN\",\"avatar_path\":\"avatar-8b869f85-3fb231.gif\"}},{\"rank\":3,\"score\":8,"
+  }
+ ],
+ "errors": [
+  "reader: TimeoutError: page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://kairatoon.net/webtoon/idol-oyund"
+ ],
+ "frameworks": [
+  "next"
+ ],
+ "links": {
+  "series": "https://kairatoon.net/webtoon/idol-oyunda",
+  "chapter": "https://kairatoon.net/webtoon/idol-oyunda/bolum-1"
+ },
+ "homeStatus": 200,
+ "title": "Manga Oku & Webtoon Oku — Türkçe Ücretsiz Seriler | Kairatoon"
+}

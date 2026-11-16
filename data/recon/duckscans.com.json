@@ -1,0 +1,769 @@
+{
+ "site": "https://duckscans.com",
+ "calls": [
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/icon-192.png?v=1776946102950"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/logo.webp?v=1793485155988"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-2-1787164143274-03519334.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-3-1787164187647-433a06c1.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/main-1786049070993-c3a49c89.webp"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://duckscans.com/api/custom-scripts",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[]}"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-1-1786049107403-87680a4d.webp"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://duckscans.com/api/series?isSlider=true&limit=22&sort=rating&t=1794810393696",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"_id\":\"6ae8a7c9b26c772111283990\",\"id\":62,\"title\":\"Zanaatkarlar Bölgesi\",\"slug\":\"zanaatkarlar-bolgesi\",\"alternativeNames\":[\"Artisans’ Street\"],\"image\":\"/uploads/seri-kapak/zanaatkarlar-bolgesi.webp?v=1793632201410\",\"banner\":\"/uploads/seri-banner/zanaatkarlar-bolgesi.webp?v=1793632201410\",\"hoverImage\":\"\",\"chapter\":\"Bölüm 7\",\"rating\":0,\"likes\":0,\"views\":450,\"isNew\":true,\"isEditorPick\":true,\"isSlider\":true,\"genre\":[\"Aksiyon\",\"Fantastik\"],\"type\":\"Manhua\",\"status\":\"Devam Ediyor\",\"lastUpdated\":\"2026-11-04T08:27:20.237Z\",\"about\":\"Yuta, küçük yaşta anne babasını kaybettikten sonra yalnız kalır ve Şeytan Kral'ın ordusunda köleliğe zorlanır. Bir kahraman tarafından kurtarıldıkt"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/yeonwoonun-masumiyeti.webp?v=1788263945877&dpl=ef74d73"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://duckscans.com/api/series?limit=20&sort=createdAt",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"_id\":\"6ae8a7c9b26c772111283990\",\"id\":62,\"title\":\"Zanaatkarlar Bölgesi\",\"slug\":\"zanaatkarlar-bolgesi\",\"alternativeNames\":[\"Artisans’ Street\"],\"image\":\"/uploads/seri-kapak/zanaatkarlar-bolgesi.webp?v=1793632201410\",\"banner\":\"/uploads/seri-banner/zanaatkarlar-bolgesi.webp?v=1793632201410\",\"hoverImage\":\"\",\"chapter\":\"Bölüm 7\",\"rating\":0,\"likes\":0,\"views\":450,\"isNew\":true,\"isEditorPick\":true,\"isSlider\":true,\"genre\":[\"Aksiyon\",\"Fantastik\"],\"type\":\"Manhua\",\"status\":\"Devam Ediyor\",\"lastUpdated\":\"2026-11-04T08:27:20.237Z\",\"about\":\"Yuta, küçük yaşta anne babasını kaybettikten sonra yalnız kalır ve Şeytan Kral'ın ordusunda köleliğe zorlanır. Bir kahraman tarafından kurtarıldıkt"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/diz-cokun-majesteleri.webp?v=1788469380986"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://duckscans.com/api/ads?position=home-left",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"_id\":\"69ea0c93b5e97991418044c2\",\"title\":\"Editör / Çevirmen\",\"imageUrl\":\"/uploads/ads/home-left_1788299157298.webp\",\"clickUrl\":\"https://discord.gg/duckscans\",\"position\":\"home-left\"}]}"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://duckscans.com/api/slider-bottom?t=1794810394173",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":{\"title\":\"\",\"content\":\"\",\"linkUrl\":\"\",\"isActive\":false}}"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://duckscans.com/api/series?limit=10&sort=views",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"_id\":\"6a402018a41d811c93b7cdd6\",\"id\":52,\"title\":\"Olgami\",\"slug\":\"olgami\",\"alternativeNames\":[\"Olgami\",\"Trapped\"],\"image\":\"/uploads/seri-kapak/olgami.webp?v=1794139278076\",\"banner\":\"/uploads/seri-banner/olgami.webp?v=1794139278076\",\"hoverImage\":\"/uploads/seri-hover/olgami.webp?v=1794139278076\",\"chapter\":\"Bölüm 203\",\"rating\":0,\"likes\":0,\"views\":120110,\"isNew\":true,\"isEditorPick\":false,\"isSlider\":true,\"genre\":[\"Drama\",\"Romantik\",\"Psikolojik\",\"Gizem\"],\"type\":\"Manhwa\",\"status\":\"Tamamlandı\",\"lastUpdated\":\"2026-11-08T12:01:18.078Z\",\"about\":\"Taksi sürücüsü Chaeah kiliseden tanıdığı Park Yoonsoo’yu bir kızla caddede yürürken görür bunun cinayet ve işkence delillerinin gömülm"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://duckscans.com/api/series?page=1&limit=9&sort=updated",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"_id\":\"6a4827891c4f34bd6a5ed256\",\"id\":54,\"title\":\"Kılıç İmparatoru Namgung'un Yükselişi\",\"slug\":\"kilic-imparatoru-namgungun-yukselisi\",\"alternativeNames\":[\"The Sword Emperor’s Rise of Namgung\"],\"image\":\"/uploads/seri-kapak/kilic-imparatoru-namgungun-yukselisi.webp?v=1787593621925\",\"banner\":\"/uploads/seri-banner/kilic-imparatoru-namgungun-yukselisi.webp?v=1787593621925\",\"hoverImage\":\"/uploads/seri-hover/kilic-imparatoru-namgungun-yukselisi.webp?v=1787593621925\",\"chapter\":\"Bölüm 23\",\"rating\":0,\"likes\":0,\"views\":69795,\"isNew\":true,\"isEditorPick\":false,\"isSlider\":true,\"genre\":[\"Webtoon\",\"Doğaüstü\",\"Shounen\",\"Macera\",\"Aksiyon\",\"Murim\"],\"type\":\"Manhwa\",\"status\":\"Devam Ediy"
+  },
+  {
+   "tag": "home",
+   "method": "POST",
+   "url": "https://duckscans.com/api/ads",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"adId\":\"69ea0c93b5e97991418044c2\",\"type\":\"impression\"}",
+   "body": "{\"success\":true,\"message\":\"Gösterim sayısı güncellendi\"}"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/zanaatkarlar-bolgesi.webp?v=1793632201410&dpl=ef74d73"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/reverse-villain.webp?v=1785094091759&dpl=ef74d73"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/hua-dagi-mezhebinin-donusu.webp?v=1775401071008&dpl=ef74d73"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/rakipsiz-mizrak-sovalyesi.webp?v=1786127507350&dpl=ef74d73"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/kilic-imparatoru-namgungun-yukselisi.webp?v=1787593621925"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/rakipsiz-mizrak-sovalyesi.webp?v=1786127507350"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/heavenly-demon-instructor.webp?v=1785006973718"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/regresorun-kullanim-kilavuzu.webp?v=1794662972349"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/8-sinif-buyucunun-donusu.webp?v=1785940747904"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/misiri-gecmek-firavunun-gelini-olmak.webp?v=1777502665883"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/deli-muhendis.webp?v=1784818581315"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/yuz-kilicin-hukumdari-en-guclu-tarzin-varisi.webp?v=1782756151980"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/zanaatkarlar-bolgesi.webp?v=1793632201410"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-hover/kilic-imparatoru-namgungun-yukselisi.webp?v=1787593621925"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/ekip-seruvenleri.webp?v=1783857081884"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/sizi-daha-iyi-hale-getirelim.webp?v=1784782842673"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/katil-esmer-kadinlari-hedef-aliyor.webp?v=1792515058164"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/uzayli-joan.webp?v=1783861231698"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/yeonwoonun-masumiyeti.webp?v=1788263945877"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-hover/semalarin-kilici.webp?v=1785707104242"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-hover/diz-cokun-majesteleri.webp?v=1788469380986"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/reverse-villain.webp?v=1785094091759"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/semalarin-kilici.webp?v=1785707104242"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/heavenly-demon-instructor.webp?v=1785006973718&dpl=ef74d73"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/yeni-bolum.webp?v=1785189867247"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/ads/home-left_1788299157298.webp"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kilic-imparatoru-namgungun-yukselisi.webp?v=1787593621925"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/olgami.webp?v=1794139278076"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/regresorun-kullanim-kilavuzu.webp?v=1794662972349"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/prestijli-bir-ailenin-dahi-cocugu-olarak-yeniden-dogus.webp?v=1782737234003"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/diz-cokun-majesteleri.webp?v=1788469380986"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/yeonwoonun-masumiyeti.webp?v=1788263945877"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/yeniden-yukselen-c-seviye-tank-artik-olumsuz.webp?v=1785242746883"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/seytanin-oglu.webp?v=1788276375865"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/ki-kiz-kardesler.webp?v=1786051152848"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/zanaatkarlar-bolgesi.webp?v=1793632201410"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/astral-evcil-hayvan-magazasi.webp?v=1788289605036"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/katil-esmer-kadinlari-hedef-aliyor.webp?v=1792515058164"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/rakipsiz-mizrak-sovalyesi.webp?v=1786127507350"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-hover/olgami.webp?v=1794139278076"
+  },
+  {
+   "tag": "home",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart/olgami.webp?v=1794139278076"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/logo.webp?v=1793485155988"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/icon-192.png?v=1776946102950"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-1-1786049107403-87680a4d.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-2-1787164143274-03519334.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-3-1787164187647-433a06c1.webp"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/main-1786049070993-c3a49c89.webp"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://duckscans.com/api/admin/categories?names=true&active=true",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[\"Murim\",\"Webtoon\",\"Doğaüstü\",\"Komedi\",\"Okul\",\"Bilim Kurgu\",\"Psikolojik\",\"Gizem\",\"Shoujo\",\"Shounen\",\"Romantik\",\"Korku\",\"Fantastik\",\"Drama\",\"Macera\",\"Aksiyon\"]}"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/yeonwoonun-masumiyeti.webp?v=1788263945877&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/hua-dagi-mezhebinin-donusu.webp?v=1775401071008&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/rakipsiz-mizrak-sovalyesi.webp?v=1786127507350&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/heavenly-demon-instructor.webp?v=1785006973718&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/reverse-villain.webp?v=1785094091759&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/zanaatkarlar-bolgesi.webp?v=1793632201410&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://duckscans.com/api/series?limit=1000",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"_id\":\"6a402018a41d811c93b7cdd6\",\"id\":52,\"title\":\"Olgami\",\"slug\":\"olgami\",\"alternativeNames\":[\"Olgami\",\"Trapped\"],\"image\":\"/uploads/seri-kapak/olgami.webp?v=1794139278076\",\"banner\":\"/uploads/seri-banner/olgami.webp?v=1794139278076\",\"hoverImage\":\"/uploads/seri-hover/olgami.webp?v=1794139278076\",\"chapter\":\"Bölüm 203\",\"rating\":0,\"likes\":0,\"views\":120110,\"isNew\":true,\"isEditorPick\":false,\"isSlider\":true,\"genre\":[\"Drama\",\"Romantik\",\"Psikolojik\",\"Gizem\"],\"type\":\"Manhwa\",\"status\":\"Tamamlandı\",\"lastUpdated\":\"2026-11-08T12:01:18.078Z\",\"about\":\"Taksi sürücüsü Chaeah kiliseden tanıdığı Park Yoonsoo’yu bir kızla caddede yürürken görür bunun cinayet ve işkence delillerinin gömülm"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://duckscans.com/api/custom-scripts",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[]}"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/kilic-imparatoru-namgungun-yukselisi.webp?v=1787593621925&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/diz-cokun-majesteleri.webp?v=1788469380986&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/prestijli-bir-ailenin-dahi-cocugu-olarak-yeniden-dogus.webp?v=1782737234003&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/astral-evcil-hayvan-magazasi.webp?v=1788289605036&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/crowning-a-spoiled-prince.webp?v=1788878200671&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/yeniden-yukselen-c-seviye-tank-artik-olumsuz.webp?v=1785242746883&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/olgami.webp?v=1794139278076&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/regresorun-kullanim-kilavuzu.webp?v=1794662972349&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/semalarin-kilici.webp?v=1785707104242&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/8-sinif-buyucunun-donusu.webp?v=1785940747904&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/seytanin-oglu.webp?v=1788276375865&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/misiri-gecmek-firavunun-gelini-olmak.webp?v=1777502665883&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/askinlik-akademisi.webp?v=1785190863852&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/ilah-yazar.webp?v=1775482258797&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/yeni-bolum.webp?v=1785189867247&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/deli-muhendis.webp?v=1784818581315&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/sword-demon-island.webp?v=1785205010199&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/reenkarne-olmus-kisiyle-birlikte-en-guclu-en-kotu-yikimdan-kacinmayi-hedefleyin.webp?v=1785157030858&dpl=ef74d73"
+  },
+  {
+   "tag": "list:series",
+   "image": "https://duckscans.com/uploads/seri-kapak/ki-kiz-kardesler.webp?v=1786051152848&dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/logo.webp?v=1793485155988"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/icon-192.png?v=1776946102950"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/crowning-a-spoiled-prince.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/ki-kiz-kardesler.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/kotuluk-okulu.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/canavarsal-isler.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/askinlik-akademisi.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/son-kan-bagi.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/yeni-bolum.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/kiz-arkadasim-baska-bir-dunyadan-gelen-bir-kahraman.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/ekip-seruvenleri.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/kedi-tata.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/hazbin-otelde-cinayet.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/sizi-daha-iyi-hale-getirelim.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/light-of-arad-forerunner.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/misiri-gecmek-firavunun-gelini-olmak.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/deli-muhendis.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/reenkarne-olmus-kisiyle-birlikte-en-guclu-en-kotu-yikimdan-kacinmayi-hedefleyin.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/kuklanin-kuklasi.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-1-1786049107403-87680a4d.webp"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-2-1787164143274-03519334.webp"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-3-1787164187647-433a06c1.webp"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/main-1786049070993-c3a49c89.webp"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/kart-oyunlari-nedeniyle-dunyanin-yok-oldugu-bir-dunyaya-reenkarne-olup-etraftaki-bir-kart-dukkani-actigimda-onceki-serinin-ana-karakteri-oldugum-saniliyor.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://duckscans.com/api/custom-scripts",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[]}"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/diz-cokun-majesteleri.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/bu-bir-kus-seyi.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/uzayli-joan.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/astral-evcil-hayvan-magazasi.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/yeniden-yukselen-c-seviye-tank-artik-olumsuz.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://duckscans.com/uploads/seri-kapak/sword-demon-island.webp?dpl=ef74d73"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://duckscans.com/uploads/logo.webp?v=1793485155988"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://duckscans.com/icon-192.png?v=1776946102950"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-1-1786049107403-87680a4d.webp"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-2-1787164143274-03519334.webp"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-3-1787164187647-433a06c1.webp"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/main-1786049070993-c3a49c89.webp"
+  },
+  {
+   "tag": "list:webtoon",
+   "method": "GET",
+   "url": "https://duckscans.com/api/custom-scripts",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[]}"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://duckscans.com/uploads/logo.webp?v=1793485155988"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://duckscans.com/icon-192.png?v=1776946102950"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-1-1786049107403-87680a4d.webp"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-2-1787164143274-03519334.webp"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-3-1787164187647-433a06c1.webp"
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/main-1786049070993-c3a49c89.webp"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://duckscans.com/api/custom-scripts",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[]}"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://duckscans.com/uploads/logo.webp?v=1793485155988"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://duckscans.com/icon-192.png?v=1776946102950"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-1-1786049107403-87680a4d.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-2-1787164143274-03519334.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-3-1787164187647-433a06c1.webp"
+  },
+  {
+   "tag": "list:browse",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/main-1786049070993-c3a49c89.webp"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://duckscans.com/api/custom-scripts",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[]}"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/uploads/logo.webp?v=1793485155988"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/icon-192.png?v=1776946102950"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-1-1786049107403-87680a4d.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-2-1787164143274-03519334.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-3-1787164187647-433a06c1.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/main-1786049070993-c3a49c89.webp"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://duckscans.com/api/series?limit=1000",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"_id\":\"6a402018a41d811c93b7cdd6\",\"id\":52,\"title\":\"Olgami\",\"slug\":\"olgami\",\"alternativeNames\":[\"Olgami\",\"Trapped\"],\"image\":\"/uploads/seri-kapak/olgami.webp?v=1794139278076\",\"banner\":\"/uploads/seri-banner/olgami.webp?v=1794139278076\",\"hoverImage\":\"/uploads/seri-hover/olgami.webp?v=1794139278076\",\"chapter\":\"Bölüm 203\",\"rating\":0,\"likes\":0,\"views\":120110,\"isNew\":true,\"isEditorPick\":false,\"isSlider\":true,\"genre\":[\"Drama\",\"Romantik\",\"Psikolojik\",\"Gizem\"],\"type\":\"Manhwa\",\"status\":\"Tamamlandı\",\"lastUpdated\":\"2026-11-08T12:01:18.078Z\",\"about\":\"Taksi sürücüsü Chaeah kiliseden tanıdığı Park Yoonsoo’yu bir kızla caddede yürürken görür bunun cinayet ve işkence delillerinin gömülm"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://duckscans.com/api/custom-scripts",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[]}"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/uploads/seri-kapak/olgami.webp?v=1794139278076"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/uploads/seri-kapak/kilic-imparatoru-namgungun-yukselisi.webp?v=1787593621925"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/uploads/seri-kapak/diz-cokun-majesteleri.webp?v=1788469380986"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/uploads/seri-kapak/regresorun-kullanim-kilavuzu.webp?v=1794662972349"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/uploads/seri-kapak/yeonwoonun-masumiyeti.webp?v=1788263945877"
+  },
+  {
+   "tag": "list:searchqa",
+   "image": "https://duckscans.com/uploads/seri-kapak/hazbin-otelde-cinayet.webp?v=1784916585650"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://duckscans.com/api/series",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[{\"_id\":\"6a402018a41d811c93b7cdd6\",\"id\":52,\"title\":\"Olgami\",\"slug\":\"olgami\",\"alternativeNames\":[\"Olgami\",\"Trapped\"],\"image\":\"/uploads/seri-kapak/olgami.webp?v=1794139278076\",\"banner\":\"/uploads/seri-banner/olgami.webp?v=1794139278076\",\"hoverImage\":\"/uploads/seri-hover/olgami.webp?v=1794139278076\",\"chapter\":\"Bölüm 203\",\"rating\":0,\"likes\":0,\"views\":120110,\"isNew\":true,\"isEditorPick\":false,\"isSlider\":true,\"genre\":[\"Drama\",\"Romantik\",\"Psikolojik\",\"Gizem\"],\"type\":\"Manhwa\",\"status\":\"Tamamlandı\",\"lastUpdated\":\"2026-11-08T12:01:18.078Z\",\"about\":\"Taksi sürücüsü Chaeah kiliseden tanıdığı Park Yoonsoo’yu bir kızla caddede yürürken görür bunun cinayet ve işkence delillerinin gömülm"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://duckscans.com/uploads/logo.webp?v=1793485155988"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://duckscans.com/icon-192.png?v=1776946102950"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-1-1786049107403-87680a4d.webp"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-2-1787164143274-03519334.webp"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/action-3-1787164187647-433a06c1.webp"
+  },
+  {
+   "tag": "list:apimanga",
+   "image": "https://duckscans.com/uploads/site-design/floating-widget/main-1786049070993-c3a49c89.webp"
+  },
+  {
+   "tag": "list:apimanga",
+   "method": "GET",
+   "url": "https://duckscans.com/api/custom-scripts",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"success\":true,\"data\":[]}"
+  }
+ ],
+ "errors": [],
+ "frameworks": [
+  "next"
+ ],
+ "links": {
+  "series": null
+ },
+ "homeStatus": 200,
+ "title": "DuckScans - Webtoon & Manga Oku"
+}
