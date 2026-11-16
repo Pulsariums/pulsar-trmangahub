@@ -1,5 +1,5 @@
 {
-  "catalogue_after": 435,
+  "catalogue_after": 433,
   "catalogue_before": 544,
   "dropped": [
     {
@@ -7,6 +7,13 @@
       "kept": "DiamondFansub",
       "lang": "tr",
       "name": "DiamondFansub",
+      "nsfw": 0
+    },
+    {
+      "domain": "tilkiscans.com",
+      "kept": "TilkiScans",
+      "lang": "tr",
+      "name": "MangaTilkisi",
       "nsfw": 0
     },
     {
@@ -78,6 +85,13 @@
       "lang": "tr",
       "name": "SadScans",
       "nsfw": 0
+    },
+    {
+      "domain": "tonizu.top",
+      "kept": "ToniZu.com",
+      "lang": "tr",
+      "name": "TonizuToon",
+      "nsfw": 1
     },
     {
       "domain": "01.hwago.xyz",
@@ -768,6 +782,7 @@
   ],
   "dropped_ids": [
     5335900657314089990,
+    681306618208001196,
     4064318592690171903,
     6174331399853269477,
     7170599070299314950,
@@ -778,6 +793,7 @@
     7652509331851274426,
     6946651026380347829,
     258218291388547981,
+    1084418383174697768,
     6983378665536208517,
     5558312473456395594,
     5558312473516245713,
@@ -878,7 +894,7 @@
     4871458201540002697
   ],
   "engine_keys": 860,
-  "generated": "2026-11-16T20:41:09Z",
-  "mirrors": 10,
+  "generated": "2026-11-16T21:10:53Z",
+  "mirrors": 9,
   "note": "Ayni host+dil+nsfw motor kaynagi katalogdan dusuruldu; tasinmis alan adlari mirrors'a yazildi."
 }

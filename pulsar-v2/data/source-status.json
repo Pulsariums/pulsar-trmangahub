@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T20:41:12Z",
+  "generated": "2026-11-16T21:10:53Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -424,15 +424,22 @@
       "nsfw": 1,
       "domain": "kuroimanga.site",
       "packages": [
-        "test"
+        "tr18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
-        "detail": "liste: 17 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "yerel harness: list=12 chapters=51 pages=1",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=12 chapters=51 pages=1",
+        "at": "2026-11-16T21:08:33.899Z"
       }
     },
     "1255008208586588111": {
@@ -3350,6 +3357,18 @@
         "at": "2026-11-16T13:50:37Z"
       }
     },
+    "1606567655751730923": {
+      "id": 1606567655751730923,
+      "kind": "catalogue",
+      "title": "Read Attack on Titan Shingeki no Kyojin Manga",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "ww12.readsnk.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "1608869871563550339": {
       "id": 1608869871563550339,
       "kind": "engine",
@@ -4549,6 +4568,18 @@
       ],
       "state": "unknown"
     },
+    "1847284941352855352": {
+      "id": 1847284941352855352,
+      "kind": "catalogue",
+      "title": "Read Fairy Tail & Edens Zero Manga Online",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "ww9.readfairytail.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "1848540025471539039": {
       "id": 1848540025471539039,
       "kind": "engine",
@@ -4695,9 +4726,23 @@
       "nsfw": 0,
       "domain": "nabimanga.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=22 chapters=157 pages=1",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=22 chapters=157 pages=1",
+        "at": "2026-11-16T21:08:33.899Z"
+      }
     },
     "1876673957840508721": {
       "id": 1876673957840508721,
@@ -4837,6 +4882,18 @@
       "device_step": "list",
       "unreachable": true
     },
+    "1929051402711187591": {
+      "id": 1929051402711187591,
+      "kind": "catalogue",
+      "title": "Kayn Scans",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "kaynscans.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "1935733695647168437": {
       "id": 1935733695647168437,
       "kind": "catalogue",
@@ -4881,18 +4938,6 @@
       "lang": "pt-br",
       "nsfw": 0,
       "domain": "mangaflix.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "1955944853442332646": {
-      "id": 1955944853442332646,
-      "kind": "catalogue",
-      "title": "ReadOnePiece",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww11.readonepiece.com",
       "packages": [
         "test"
       ],
@@ -5204,15 +5249,22 @@
       "nsfw": 0,
       "domain": "amangaplanet.com.tr",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
-        "detail": "liste: 20 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "yerel harness: list=18 chapters=49 pages=13",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=18 chapters=49 pages=13",
+        "at": "2026-11-16T21:08:33.899Z"
       }
     },
     "209650416390992343": {
@@ -6914,18 +6966,6 @@
       },
       "dead": true
     },
-    "2237522402027529394": {
-      "id": 2237522402027529394,
-      "kind": "catalogue",
-      "title": "Read Tokyo Ghoul Re & Tokyo Ghoul Manga Online",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww11.tokyoghoulre.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "2244960048938891485": {
       "id": 2244960048938891485,
       "kind": "catalogue",
@@ -6934,9 +6974,23 @@
       "nsfw": 1,
       "domain": "outcatscans.net",
       "packages": [
-        "test"
+        "tr18"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=14 chapters=43 pages=1",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=14 chapters=43 pages=1",
+        "at": "2026-11-16T21:08:33.899Z"
+      }
     },
     "2264580951411441594": {
       "id": 2264580951411441594,
@@ -8256,18 +8310,6 @@
       },
       "device_step": "list"
     },
-    "2442452446663116880": {
-      "id": 2442452446663116880,
-      "kind": "catalogue",
-      "title": "Kayn Scans",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "kaynscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "2442598512658975318": {
       "id": 2442598512658975318,
       "kind": "catalogue",
@@ -8515,6 +8557,18 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list"
+    },
+    "2559889350030726587": {
+      "id": 2559889350030726587,
+      "kind": "catalogue",
+      "title": "Read Nanatsu no Taizai 7 Deadly Sins Manga Online",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "ww8.read7deadlysins.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "2571777675483697949": {
       "id": 2571777675483697949,
@@ -8895,30 +8949,6 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "woopread.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "2725990991852469607": {
-      "id": 2725990991852469607,
-      "kind": "catalogue",
-      "title": "Read One Piece Manga Online",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww12.readonepiece.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "2729600175770973479": {
-      "id": 2729600175770973479,
-      "kind": "catalogue",
-      "title": "Read Solo Leveling Manga Manhwa Online",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww3.readsololeveling.org",
       "packages": [
         "test"
       ],
@@ -9483,6 +9513,18 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "dead": true
+    },
+    "3007568540437666355": {
+      "id": 3007568540437666355,
+      "kind": "catalogue",
+      "title": "Read Tokyo Ghoul Re & Tokyo Ghoul Manga Online",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "ww12.tokyoghoulre.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "3014905157548567667": {
       "id": 3014905157548567667,
@@ -10417,6 +10459,18 @@
         "at": "2026-11-16T00:09:31Z"
       }
     },
+    "3308884854990212375": {
+      "id": 3308884854990212375,
+      "kind": "catalogue",
+      "title": "Read Jujutsu Kaisen Manga Online",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "ww6.readjujutsukaisen.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "3317141599925034536": {
       "id": 3317141599925034536,
       "kind": "engine",
@@ -10591,18 +10645,6 @@
       ],
       "state": "unknown"
     },
-    "3394071994842237698": {
-      "id": 3394071994842237698,
-      "kind": "catalogue",
-      "title": "MyComicList",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "mycomiclist.org",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "3400478864029140695": {
       "id": 3400478864029140695,
       "kind": "engine",
@@ -10770,9 +10812,23 @@
       "nsfw": 1,
       "domain": "averisfansub.site",
       "packages": [
-        "test"
+        "tr18"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=16 chapters=22 pages=18",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=16 chapters=22 pages=18",
+        "at": "2026-11-16T21:08:33.899Z"
+      }
     },
     "3495313140920905784": {
       "id": 3495313140920905784,
@@ -10784,6 +10840,18 @@
       "packages": [],
       "state": "unknown",
       "dead": true
+    },
+    "3496037130262606568": {
+      "id": 3496037130262606568,
+      "kind": "catalogue",
+      "title": "ReadOnePiece",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "ww13.readonepiece.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "3517094690583648677": {
       "id": 3517094690583648677,
@@ -13709,6 +13777,18 @@
       "packages": [],
       "state": "unknown",
       "dead": true
+    },
+    "3990362785301222581": {
+      "id": 3990362785301222581,
+      "kind": "catalogue",
+      "title": "Read Kingdom Manga Online",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "ww6.readkingdom.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "3991617090094006131": {
       "id": 3991617090094006131,
@@ -19274,18 +19354,6 @@
       },
       "dead": true
     },
-    "4541468687122774520": {
-      "id": 4541468687122774520,
-      "kind": "catalogue",
-      "title": "Read Jujutsu Kaisen Manga Online",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww5.readjujutsukaisen.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "4543072178093183112": {
       "id": 4543072178093183112,
       "kind": "catalogue",
@@ -20975,7 +21043,7 @@
     "5370165366451663570": {
       "id": 5370165366451663570,
       "kind": "catalogue",
-      "title": "ComicHubFree",
+      "title": "MyComicList",
       "lang": "en",
       "nsfw": 0,
       "domain": "comichubfree.com",
@@ -21411,18 +21479,6 @@
       "device_step": "list",
       "unreachable": true
     },
-    "5645970761202936985": {
-      "id": 5645970761202936985,
-      "kind": "catalogue",
-      "title": "Read Fairy Tail & Edens Zero Manga Online",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww8.readfairytail.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "5667891904770127402": {
       "id": 5667891904770127402,
       "kind": "engine",
@@ -21570,18 +21626,6 @@
       "packages": [],
       "state": "unknown",
       "dead": true
-    },
-    "5750691368614723158": {
-      "id": 5750691368614723158,
-      "kind": "catalogue",
-      "title": "Read Kingdom Manga Online",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww5.readkingdom.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "5755636531598069462": {
       "id": 5755636531598069462,
@@ -25877,18 +25921,6 @@
       ],
       "state": "unknown"
     },
-    "603037569615456524": {
-      "id": 603037569615456524,
-      "kind": "catalogue",
-      "title": "Read Attack on Titan Shingeki no Kyojin Manga",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww11.readsnk.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "6031107101421507140": {
       "id": 6031107101421507140,
       "kind": "catalogue",
@@ -26801,9 +26833,23 @@
       "nsfw": 0,
       "domain": "ghostoon.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=20 chapters=84 pages=16",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=20 chapters=84 pages=16",
+        "at": "2026-11-16T21:08:33.899Z"
+      }
     },
     "6311269189769404898": {
       "id": 6311269189769404898,
@@ -27225,18 +27271,6 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "hyakuro.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "641635631467955932": {
-      "id": 641635631467955932,
-      "kind": "catalogue",
-      "title": "Read Nanatsu no Taizai 7 Deadly Sins Manga Online",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww7.read7deadlysins.com",
       "packages": [
         "test"
       ],
@@ -27982,13 +28016,20 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
-        "status": "empty",
+        "status": "ok",
         "http_code": "200",
         "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "yerel harness: list=144 chapters=5 pages=1",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=144 chapters=5 pages=1",
+        "at": "2026-11-16T21:08:33.899Z"
       },
       "sorun": "oturum"
     },
@@ -28099,9 +28140,23 @@
       "nsfw": 0,
       "domain": "patimanga.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=52 chapters=15 pages=12",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=52 chapters=15 pages=12",
+        "at": "2026-11-16T21:08:33.899Z"
+      }
     },
     "671042189166553819": {
       "id": 671042189166553819,
@@ -28560,6 +28615,18 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "dead": true
+    },
+    "6855233230088208936": {
+      "id": 6855233230088208936,
+      "kind": "catalogue",
+      "title": "Read Solo Leveling Manga Manhwa Online",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "ww4.readsololeveling.org",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "6864523400679060774": {
       "id": 6864523400679060774,
@@ -29616,30 +29683,6 @@
         "detail": "",
         "at": "2026-11-16T00:09:31Z"
       }
-    },
-    "7283669095693568648": {
-      "id": 7283669095693568648,
-      "kind": "catalogue",
-      "title": "Read Hunter x Hunter Manga Online",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww6.readhxh.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "7283847487483464372": {
-      "id": 7283847487483464372,
-      "kind": "catalogue",
-      "title": "Read One-Punch Man Manga Online",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww6.readopm.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "7293740138855045512": {
       "id": 7293740138855045512,
@@ -31122,23 +31165,24 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.tilkiscans.com",
-      "packages": [],
-      "state": "failed",
+      "packages": [
+        "tr"
+      ],
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
-        "ms": 866,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
+        "ms": 0,
+        "detail": "yerel harness: list=24 chapters=2 pages=2",
+        "at": "2026-11-16T21:08:33.899Z"
       },
       "device": {
-        "status": "cloudflare",
-        "http_code": "",
+        "status": "pass",
+        "http_code": "200",
         "ms": 0,
-        "detail": "covers: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "covers"
+        "detail": "yerel harness: list=24 chapters=2 pages=2",
+        "at": "2026-11-16T21:08:33.899Z"
+      }
     },
     "7850418808484344907": {
       "id": 7850418808484344907,
@@ -31410,15 +31454,22 @@
       "nsfw": 0,
       "domain": "toontaku.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
-        "detail": "liste: 24 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "yerel harness: list=24 chapters=81 pages=121",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=24 chapters=81 pages=121",
+        "at": "2026-11-16T21:08:33.899Z"
       }
     },
     "794837132000445568": {
@@ -31572,23 +31623,24 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tonizu.top",
-      "packages": [],
-      "state": "failed",
+      "packages": [
+        "tr18"
+      ],
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
-        "ms": 1887,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
+        "ms": 0,
+        "detail": "yerel harness: list=11 chapters=8 pages=1",
+        "at": "2026-11-16T21:08:33.899Z"
       },
       "device": {
-        "status": "fail",
-        "http_code": "",
+        "status": "pass",
+        "http_code": "200",
         "ms": 0,
-        "detail": "pages: AuthRequiredException: Authorization required",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "pages"
+        "detail": "yerel harness: list=11 chapters=8 pages=1",
+        "at": "2026-11-16T21:08:33.899Z"
+      }
     },
     "8004965338622879732": {
       "id": 8004965338622879732,
@@ -31989,18 +32041,6 @@
       ],
       "state": "unknown"
     },
-    "8150747362346480111": {
-      "id": 8150747362346480111,
-      "kind": "catalogue",
-      "title": "Read Chainsaw Man Manga Online",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "ww5.readchainsawman.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "8164858143571411658": {
       "id": 8164858143571411658,
       "kind": "engine",
@@ -32034,15 +32074,22 @@
       "nsfw": 0,
       "domain": "lunarx.to",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
-        "detail": "liste: 2 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "yerel harness: list=30 chapters=9 pages=19",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=30 chapters=9 pages=19",
+        "at": "2026-11-16T21:08:33.899Z"
       }
     },
     "8170497644902480619": {
@@ -32339,16 +32386,40 @@
         "status": "ok",
         "http_code": "200",
         "ms": 0,
-        "detail": "liste: 65 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "yerel harness: list=70 chapters=24 pages=34",
+        "at": "2026-11-16T21:08:33.899Z"
       },
       "device": {
         "status": "pass",
-        "http_code": "",
+        "http_code": "200",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
+        "detail": "yerel harness: list=70 chapters=24 pages=34",
+        "at": "2026-11-16T21:08:33.899Z"
       }
+    },
+    "8287199181829843047": {
+      "id": 8287199181829843047,
+      "kind": "catalogue",
+      "title": "Read Hunter x Hunter Manga Online",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "ww7.readhxh.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
+    "8287377573619738771": {
+      "id": 8287377573619738771,
+      "kind": "catalogue",
+      "title": "Read One-Punch Man Manga Online",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "ww7.readopm.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "8329652869642848348": {
       "id": 8329652869642848348,
@@ -32689,6 +32760,18 @@
       ],
       "state": "unknown"
     },
+    "845629044054474958": {
+      "id": 845629044054474958,
+      "kind": "catalogue",
+      "title": "Read Chainsaw Man Manga Online",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "ww6.readchainsawman.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "845640352969867542": {
       "id": 845640352969867542,
       "kind": "catalogue",
@@ -32850,15 +32933,22 @@
       "nsfw": 1,
       "domain": "mangtto.com",
       "packages": [
-        "test"
+        "tr18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
-        "status": "http404",
-        "http_code": "404",
+        "status": "ok",
+        "http_code": "200",
         "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "yerel harness: list=99 chapters=13 pages=30",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=99 chapters=13 pages=30",
+        "at": "2026-11-16T21:08:33.899Z"
       }
     },
     "8463142241276011825": {
@@ -34273,15 +34363,22 @@
       "nsfw": 0,
       "domain": "mangaportali.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 0,
-        "detail": "liste: 20 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "yerel harness: list=20 chapters=1 pages=2",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=20 chapters=1 pages=2",
+        "at": "2026-11-16T21:08:33.899Z"
       }
     },
     "891763215572096733": {
@@ -34715,15 +34812,22 @@
       "nsfw": 0,
       "domain": "nemesisscans.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
-        "status": "http404",
-        "http_code": "404",
+        "status": "ok",
+        "http_code": "200",
         "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
+        "detail": "yerel harness: list=105 chapters=235 pages=29",
+        "at": "2026-11-16T21:08:33.899Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness: list=105 chapters=235 pages=29",
+        "at": "2026-11-16T21:08:33.899Z"
       }
     },
     "9206637984064086149": {
