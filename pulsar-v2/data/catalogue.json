@@ -2305,10 +2305,10 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/seriler",
-        "itemSelector": "article.latest-release-card",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "listPath": "/manga-oku",
+        "itemSelector": "a.portrait-card-link",
+        "chapterSelector": "a[href*=\"/bolum-\"]",
+        "readerSelector": "img[src*=\"sayfa-\"]"
       },
       "altDomains": [],
       "verified_by_user": false,
@@ -3591,9 +3591,9 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
+        "listPath": "/discover",
+        "itemSelector": "a[href^=\"/series/\"]",
+        "chapterSelector": "a[href*=\"chapter-\"]",
         "readerSelector": ""
       },
       "selector_verified": true,
@@ -3711,9 +3711,9 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
+        "listPath": "/manga/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": ".wp-manga-chapter",
         "readerSelector": ""
       },
       "selector_verified": true,
@@ -3752,9 +3752,9 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ".reader__item img"
+        "itemSelector": "a.cards__item",
+        "chapterSelector": "a.chapters__item",
+        "readerSelector": "img[src*=\"c3.mangabuff.ru/chapters\"]"
       },
       "selector_verified": true,
       "origins": [
@@ -4196,15 +4196,15 @@
       "name": "MyComicList",
       "lang": "en",
       "nsfw": 0,
-      "domain": "mycomiclist.org",
-      "baseUrl": "https://mycomiclist.org",
+      "domain": "comichubfree.com",
+      "baseUrl": "https://comichubfree.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": ".episode",
+        "chapterSelector": "a[href*=\"/issue-\"]",
+        "readerSelector": ".chapter_img"
       },
       "selector_verified": true,
       "origins": [
@@ -4398,15 +4398,15 @@
       "name": "ReadOnePiece",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww11.readonepiece.com",
-      "baseUrl": "https://ww11.readonepiece.com",
+      "domain": "ww13.readonepiece.com",
+      "baseUrl": "https://ww13.readonepiece.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "readerSelector": "img.js-page"
       },
       "selector_verified": true,
       "origins": [
@@ -4955,8 +4955,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
+        "itemSelector": ".rec-item.rec-manga",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
         "readerSelector": ""
       },
       "selector_verified": true,
@@ -5135,9 +5135,9 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
+        "listPath": "/en",
+        "itemSelector": "a[href^=\"/en/comic/\"]",
+        "chapterSelector": "a[href^=\"/en/chapter/\"]",
         "readerSelector": ""
       },
       "selector_verified": true,
@@ -5244,8 +5244,8 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": "img[src*=\"/axis/pages/\"]"
       },
       "selector_verified": true,
       "origins": [
@@ -5263,9 +5263,10 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
+        "itemSelector": ".item-thumb.hover-details.c-image-hover",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "img.wp-manga-chapter-img",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
       },
       "selector_verified": true,
       "origins": [
@@ -6195,15 +6196,15 @@
       "name": "Read Attack on Titan Shingeki no Kyojin Manga",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww11.readsnk.com",
-      "baseUrl": "https://ww11.readsnk.com",
+      "domain": "ww12.readsnk.com",
+      "baseUrl": "https://ww12.readsnk.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "a[href^=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "readerSelector": "img.js-page"
       },
       "selector_verified": true,
       "origins": [
@@ -6255,15 +6256,15 @@
       "name": "Read Chainsaw Man Manga Online",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww5.readchainsawman.com",
-      "baseUrl": "https://ww5.readchainsawman.com",
+      "domain": "ww6.readchainsawman.com",
+      "baseUrl": "https://ww6.readchainsawman.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "a[href^=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "readerSelector": "img.js-page"
       },
       "selector_verified": true,
       "origins": [
@@ -6315,15 +6316,15 @@
       "name": "Read Fairy Tail & Edens Zero Manga Online",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww8.readfairytail.com",
-      "baseUrl": "https://ww8.readfairytail.com",
+      "domain": "ww9.readfairytail.com",
+      "baseUrl": "https://ww9.readfairytail.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "readerSelector": "img.js-page"
       },
       "selector_verified": true,
       "origins": [
@@ -6355,15 +6356,15 @@
       "name": "Read Hunter x Hunter Manga Online",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww6.readhxh.com",
-      "baseUrl": "https://ww6.readhxh.com",
+      "domain": "ww7.readhxh.com",
+      "baseUrl": "https://ww7.readhxh.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "readerSelector": "img.js-page"
       },
       "selector_verified": true,
       "origins": [
@@ -6375,15 +6376,15 @@
       "name": "Read Jujutsu Kaisen Manga Online",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww5.readjujutsukaisen.com",
-      "baseUrl": "https://ww5.readjujutsukaisen.com",
+      "domain": "ww6.readjujutsukaisen.com",
+      "baseUrl": "https://ww6.readjujutsukaisen.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "readerSelector": "img.js-page"
       },
       "selector_verified": true,
       "origins": [
@@ -6415,15 +6416,15 @@
       "name": "Read Kingdom Manga Online",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww5.readkingdom.com",
-      "baseUrl": "https://ww5.readkingdom.com",
+      "domain": "ww6.readkingdom.com",
+      "baseUrl": "https://ww6.readkingdom.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "readerSelector": "img.js-page"
       },
       "selector_verified": true,
       "origins": [
@@ -6435,15 +6436,15 @@
       "name": "Read Nanatsu no Taizai 7 Deadly Sins Manga Online",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww7.read7deadlysins.com",
-      "baseUrl": "https://ww7.read7deadlysins.com",
+      "domain": "ww8.read7deadlysins.com",
+      "baseUrl": "https://ww8.read7deadlysins.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "readerSelector": "img.js-page"
       },
       "selector_verified": true,
       "origins": [
@@ -6475,15 +6476,15 @@
       "name": "Read One Piece Manga Online",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww12.readonepiece.com",
-      "baseUrl": "https://ww12.readonepiece.com",
+      "domain": "ww13.readonepiece.com",
+      "baseUrl": "https://ww13.readonepiece.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "readerSelector": "img.js-page"
       },
       "selector_verified": true,
       "origins": [
@@ -6515,15 +6516,15 @@
       "name": "Read Solo Leveling Manga Manhwa Online",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww3.readsololeveling.org",
-      "baseUrl": "https://ww3.readsololeveling.org",
+      "domain": "ww4.readsololeveling.org",
+      "baseUrl": "https://ww4.readsololeveling.org",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "readerSelector": "img.js-page"
       },
       "selector_verified": true,
       "origins": [
@@ -6555,15 +6556,15 @@
       "name": "Read Tokyo Ghoul Re & Tokyo Ghoul Manga Online",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww11.tokyoghoulre.com",
-      "baseUrl": "https://ww11.tokyoghoulre.com",
+      "domain": "ww12.tokyoghoulre.com",
+      "baseUrl": "https://ww12.tokyoghoulre.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "readerSelector": "img.js-page"
       },
       "selector_verified": true,
       "origins": [
@@ -6789,9 +6790,9 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "div.series-paper-card",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
+        "readerSelector": "img.chapter-img"
       },
       "selector_verified": true,
       "origins": [
@@ -7075,10 +7076,11 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "listPath": "/daftar-komik/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": ".wp-manga-chapter",
+        "readerSelector": "div.reading-content img",
+        "chapterAjaxUrl": "{url}ajax/chapters/"
       },
       "selector_verified": true,
       "origins": [
@@ -7357,7 +7359,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
+        "itemSelector": "a[href*=\"/book/detail/\"]",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -7457,10 +7459,10 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "listPath": "/comics/",
+        "itemSelector": "div.work-nav__image a",
+        "chapterSelector": "a[href*=\"/works/comics/\"]",
+        "readerSelector": "img[id^=\"p\"]"
       },
       "selector_verified": true,
       "origins": [
@@ -7477,9 +7479,9 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/comics",
-        "itemSelector": "",
-        "chapterSelector": "",
+        "listPath": "/comics/series",
+        "itemSelector": "a.banner-link[href^=\"/comics/\"]",
+        "chapterSelector": "a.ga-episode-link",
         "readerSelector": ""
       },
       "selector_verified": true,
@@ -7578,9 +7580,9 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
+        "listPath": "/manga",
+        "itemSelector": "a[class*=\"group/mature-cover\"][title]",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
         "readerSelector": ""
       },
       "selector_verified": true,
