@@ -287,6 +287,7 @@ object EngineRegistry {
         val items = doc.select(sel).mapNotNull { el ->
             val src = el.attr("data-src").ifBlank { null }
                 ?: el.attr("data-lazy-src").ifBlank { null }
+                ?: el.attr("data-original").ifBlank { null }
                 ?: el.attr("src").ifBlank { null }
                 ?: return@mapNotNull null
 
