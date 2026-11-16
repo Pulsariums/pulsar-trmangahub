@@ -75,21 +75,24 @@ pub struct StatusFile {
 }
 
 /// Paket kuralı: ana gruba (tr/tr18/global/global18) YALNIZ cihaz testinde geçen
-/// (state active) ve "sorun" etiketi olmayan kaynak girer. Kesin ölü ve cihazda
-/// düşen (hasarlı) kaynak hiçbir pakete girmez; geri kalan (pending, unknown,
-/// sorun etiketli) "test" paketindedir. Test = henüz cihazda doğrulanmamış,
-/// çalışma ihtimali olan kaynakların havuzu. 18+ kaynaklar ayrı paket taşımaz;
-/// "test" paketinde yayınlanır ve görünen adlarına " [18+]" etiketi eklenir.
+/// (state active) ve "sorun" etiketi olmayan kaynak girer. Kesin ölü ve
+/// ulaşılamayan (ağ/TLS/DNS) kaynak hiçbir pakete girmez. Cihazda düşen ama
+/// ulaşılabilir kaynak (hasarlı) "test" paketindedir; geri kalan (pending,
+/// unknown, sorun etiketli) de "test" paketindedir. Test = henüz cihazda
+/// doğrulanmamış, çalışma ihtimali olan kaynakların havuzu. 18+ kaynaklar ayrı
+/// paket taşımaz; "test" paketinde yayınlanır ve görünen adlarına " [18+]"
+/// etiketi eklenir.
 pub fn packages_for(e: &StatusEntry) -> Vec<String> {
     if e.dead {
         return Vec::new();
     }
-    // Ulasilamayan (ag/TLS/DNS) kaynak ayri tutulur: test havuzuna da girmez.
+    // Ulaşılamayan kaynak (DNS/TLS/timeout/bağlantı hatası) ayrı tutulur:
+    // test havuzuna da girmez, çünkü sorun kaynakta değil erişimdedir.
     if e.unreachable {
         return Vec::new();
     }
-    // Cihaz testinde dusen kaynak hasarli sayilir; ancak ulasilabilir oldugu
-    // icin test havuzunda kalir ki duzeltilince yeniden dogrulanabilsin.
+    // Cihaz testinde düşen kaynak hasarlı sayılır; ulaşılabilir olduğu için
+    // test havuzunda kalır (düzeltilince yeniden doğrulanabilsin).
     let device_fail = e.device.as_ref().map(|p| p.status == "fail").unwrap_or(false);
     if device_fail {
         return vec!["test".to_string()];
@@ -114,8 +117,14 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
 pub fn recompute_state(e: &mut StatusEntry) {
     let device = e.device.as_ref().map(|p| p.status.as_str()).unwrap_or("");
     let health = e.health.as_ref().map(|p| p.status.as_str()).unwrap_or("");
-    e.unreachable = if device == "fail" {
-        const NEEDLES: [&str; 13] = [
+    // Cihaz hatasının nedeni ağ/TLS/DNS ise kaynak "ulaşılamaz" sayılır.
+    e.unreachable = device == "fail" && {
+        let detail = e
+            .device
+            .as_ref()
+            .map(|p| p.detail.to_lowercase())
+            .unwrap_or_default();
+        [
             "unknownhost",
             "unable to resolve",
             "sslhandshake",
@@ -129,16 +138,10 @@ pub fn recompute_state(e: &mut StatusEntry) {
             "status=50",
             "status=52",
             "connection closed",
-        ];
-        let detail = e
-            .device
-            .as_ref()
-            .map(|p| p.detail.to_lowercase())
-            .unwrap_or_default();
-        NEEDLES.iter().any(|n| detail.contains(n))
-            || detail.contains("connection reset")
-    } else {
-        false
+            "connection reset",
+        ]
+        .iter()
+        .any(|needle| detail.contains(needle))
     };
     e.state = if e.dead {
         "dead"
