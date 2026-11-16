@@ -14,8 +14,8 @@ eşit değilse build PATLAR — Mihon'un "kalıcı güncelleme rozeti" tuzağı 
 ExtensionManager.updateExists: repo libVersion = version.substringBeforeLast('.')).
 
 Kullanım:
-    generate_repo.py <repo-build-dir> [pulsar_build.sh ile aynı FLAVORS listesi]
-    aapt/apksigner yoksa (yerel geliştirmede) hata verir — CI'da SDK hazırdır.
+  generate_repo.py <repo-build-dir> [pulsar_build.sh ile aynı FLAVORS listesi]
+  aapt/apksigner yoksa (yerel geliştirmede) hata verir — CI'da SDK hazırdır.
 """
 
 import glob
@@ -31,11 +31,11 @@ WEBSITE = "https://github.com/Pulsariums/pulsar-trmangahub"
 
 # pulsar_build.sh ile AYNI eşleme (tek kaynak doğruluk: flavor -> ad/nsfw)
 FLAVOR_DEFS = {
-    ".tr":      {"name": "Pulsar TR",        "lang": "tr",  "nsfw": 0},
-    ".tr18":    {"name": "Pulsar TR 18+",    "lang": "tr",  "nsfw": 1},
-    ".global":  {"name": "Pulsar Global",    "lang": "all", "nsfw": 0},
+    ".tr": {"name": "Pulsar TR", "lang": "tr", "nsfw": 0},
+    ".tr18": {"name": "Pulsar TR 18+", "lang": "tr", "nsfw": 1},
+    ".global": {"name": "Pulsar Global", "lang": "all", "nsfw": 0},
     ".global18": {"name": "Pulsar Global 18+", "lang": "all", "nsfw": 1},
-    ".test":    {"name": "Pulsar Test",      "lang": "all", "nsfw": 0},
+    ".test": {"name": "Pulsar Test", "lang": "all", "nsfw": 0},
 }
 
 
@@ -121,10 +121,7 @@ def package_sources(status, suffix, dropped=(), filters=None):
             continue
         if runtime_filtered(entry, filters):
             continue
-        # 18+ kaynaklar ayri paket tasimaz; gorunen adlarinda " [18+]" etiketi olur.
         name = entry.get("title") or ""
-        if entry.get("nsfw") == 1 and not name.endswith(" [18+]"):
-            name += " [18+]"
         rows.append({
             "name": name,
             "id": str(entry.get("id", "")),
@@ -291,7 +288,7 @@ def main(repo_dir, flavors="tr,tr18,global,global18,test"):
 
 
 if __name__ == "__main__":
-    # Paket listesi tek yerden gelsin: CI'da FLAVORS, yoksa bes paketin tamami.
+    # Paket listesi tek yerden gelsin: CI'da FLAVORS, yoksa beş paketin tamamı.
     main(sys.argv[1] if len(sys.argv) > 1 else "repo-build",
          sys.argv[2] if len(sys.argv) > 2
          else os.environ.get("FLAVORS", "tr,tr18,global,global18,test"))
