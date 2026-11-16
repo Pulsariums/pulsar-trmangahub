@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T21:44:38Z",
+  "generated": "2026-11-16T21:53:43Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -66,16 +66,9 @@
       "nsfw": 0,
       "domain": "v5.kiryuu.to",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+      "state": "unknown"
     },
     "1070937091469606342": {
       "id": 1070937091469606342,
@@ -397,15 +390,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "kuroimanga.site",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: unexpected end of stream (www.kuroimanga.top) - cihaz 2026-11-16T21:42Z",
-        "at": "2026-11-16T21:42:28Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "1255008208586588111": {
       "id": 1255008208586588111,
@@ -5210,8 +5198,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: HTTP 403 - cihaz 2026-11-16T21:42Z",
-        "at": "2026-11-16T21:42:28Z"
+        "detail": "gorsel CDN token/JS istiyor, UA/Referer/cerez ile 403 - motor basligi yetersiz",
+        "at": "2026-11-16T21:52:16.718Z"
       }
     },
     "209650416390992343": {
@@ -29545,8 +29533,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "covers 1/3 + pages 521 - cihaz 2026-11-16T21:42Z",
-        "at": "2026-11-16T21:42:28Z"
+        "detail": "okuyucu JS decrypt + kapak JS template - seciciyle cozulmez",
+        "at": "2026-11-16T21:52:16.723Z"
       }
     },
     "7293740138855045512": {

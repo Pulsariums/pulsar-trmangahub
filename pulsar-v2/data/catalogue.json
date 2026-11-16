@@ -301,15 +301,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "kuroimanga.site",
-      "baseUrl": "https://kuroimanga.site",
+      "baseUrl": "https://www.kuroimanga.site",
       "engine": "madara",
       "config": {
         "datePattern": "d MMMM yyyy",
         "http1": true,
         "engine": "madara",
         "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
-        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter",
         "readerSelector": "div.page-break img, div.reading-content img",
         "searchUrl": "https://www.kuroimanga.site/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
         "searchMethod": "POST",
@@ -327,7 +327,8 @@
       ],
       "altDomains": [
         "kuroimanga.com"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "limonmanga.com",
@@ -463,15 +464,16 @@
         "datePattern": "dd/MM/yyyy",
         "engine": "madara",
         "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
-        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img",
+        "itemSelector": "article.mgcr-archive-card",
+        "chapterSelector": "li.wp-manga-chapter",
+        "readerSelector": "div.page-break img",
         "searchUrl": "https://www.tilkiscans.com/wp-admin/admin-ajax.php",
         "searchMethod": "POST",
         "searchBody": "action=wp-manga-search-manga&title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
       },
       "verified_by_user": true,
       "origins": [
@@ -1006,7 +1008,9 @@
         "keiyoushi_index",
         "local_custom",
         "local_tr"
-      ]
+      ],
+      "status": "failed",
+      "reason": "gorsel CDN token/JS istiyor, UA/Referer/cerez ile 403 - motor basligi yetersiz"
     },
     {
       "id": "araznovel.com",
@@ -1890,7 +1894,9 @@
         "local_custom",
         "local_tr"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "failed",
+      "reason": "okuyucu JS decrypt + kapak JS template - seciciyle cozulmez"
     },
     {
       "id": "tarotscans.com",
@@ -3401,8 +3407,8 @@
       "name": "Kiryuu",
       "lang": "id",
       "nsfw": 0,
-      "domain": "v5.kiryuu.to",
-      "baseUrl": "https://v5.kiryuu.to",
+      "domain": "v7.kiryuu.to",
+      "baseUrl": "https://v7.kiryuu.to",
       "engine": "custom",
       "config": {
         "engine": "custom",
