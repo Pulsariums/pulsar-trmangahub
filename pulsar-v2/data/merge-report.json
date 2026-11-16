@@ -1,5 +1,5 @@
 {
-  "catalogue_after": 439,
+  "catalogue_after": 438,
   "catalogue_before": 547,
   "dropped": [
     {
@@ -49,6 +49,13 @@
       "kept": "TrMangaOku",
       "lang": "tr",
       "name": "Türkçe Manga Oku",
+      "nsfw": 0
+    },
+    {
+      "domain": "webtoonhatti.club",
+      "kept": "WebtoonHatti",
+      "lang": "tr",
+      "name": "Webtoon Hatti",
       "nsfw": 0
     },
     {
@@ -767,6 +774,7 @@
     7485371025792316291,
     6742627070718581513,
     381484129732438666,
+    4061344289012005112,
     7652509331851274426,
     6946651026380347829,
     258218291388547981,
@@ -870,7 +878,7 @@
     4871458201540002697
   ],
   "engine_keys": 860,
-  "generated": "2026-11-16T19:27:27Z",
+  "generated": "2026-11-16T19:43:21Z",
   "mirrors": 10,
   "note": "Ayni host+dil+nsfw motor kaynagi katalogdan dusuruldu; tasinmis alan adlari mirrors'a yazildi."
 }

@@ -203,8 +203,14 @@ internal object PulsarData {{
 
     private fun join(vararg parts: String): String = parts.joinToString("")
 
-    private fun decode(data: String): String =
-        String(Base64.decode(data, Base64.NO_WRAP), Charsets.UTF_8)
+    // Gömülü veri satır sonlarıyla bölünmüş base64 taşır. Cihazda android.util.Base64
+    // NO_WRAP bunu kabul eder; masaüstü harness'ında aynı çağrı "bad base-64" atar ve
+    // kaynak listesi boş kalır. Boşluklar temizlenir, olmazsa MIME çözücüsüne düşülür.
+    private fun decode(data: String): String {{
+        val temiz = data.filterNot {{ it.isWhitespace() }}
+        runCatching {{ return String(android.util.Base64.decode(temiz, android.util.Base64.NO_WRAP)) }}
+        return String(java.util.Base64.getMimeDecoder().decode(temiz))
+    }}
 
     private val patches: String by lazy {{ decode(PATCHES_B64) }}
     private val catalogue: String by lazy {{ decode(CATALOGUE_B64) }}
