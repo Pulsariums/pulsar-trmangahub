@@ -232,15 +232,16 @@ object EngineRegistry {
                 // Karttaki ilk <img> çoğu temada "manhwa.png" tür rozeti veya
                 // data: yer tutucusudur. Rozeti ve data: URL'yi atla; kapağı
                 // gerçek adresten al ve göreliyse mutlaklaştır.
-                val cover = el.select("img").asSequence()
-                    .filterNot { it.className().contains("badge", ignoreCase = true) }
-                    .mapNotNull { img ->
-                        sequenceOf("data-src", "data-lazy-src", "src")
-                            .map { img.attr(it).trim() }
-                            .firstOrNull { it.isNotEmpty() && !it.startsWith("data:") }
+                // Kapak çıkarımı tek yerde: coverOf data-original/data-bg/srcset/
+                // background-image zincirini de geziyor ve 4 üst öğeye kadar iniyor.
+                val cover = coverOf(el)?.let { raw ->
+                    val u = raw.trim()
+                    when {
+                        u.startsWith("http") -> u
+                        u.startsWith("//") -> "https:$u"
+                        else -> "$baseUrl/${u.trimStart('/')}"
                     }
-                    .firstOrNull { !looksLikeBadge(it) }
-                    ?.let { raw -> if (raw.startsWith("http")) raw else "$baseUrl/${raw.trimStart('/')}" }
+                }
 
                 ParsedManga(title = title.trim(), url = fullUrl, coverUrl = cover)
             }.getOrNull()
