@@ -259,3 +259,10 @@ Aynı görsel adresi 10 GET'in ~4'ünde 200, ~6'sında 403 dönüyor. User-Agent
 - 478 > 437 çünkü paketler motor kaynaklarını da taşır; fark arıza değildir.
 - `pulsar embed` sayısı ile yayın indeksi ayrı şeylerdir: indeks `deadSources`/`deadHosts` ve `generate_repo.py` kapılarından geçer. Fark çıkınca `patches.json` içindeki listelere bakılır.
 - Elle `assets/patches.json` düzeltmesi kalıcı değildir; `06_prepare_assets.py` onu yeniden üretir.
+
+## 23. `source-status.json` kimlik kuralı (2026-11-17)
+
+- Anahtarlar **sayısaldır**: `pulsar_id("pulsar/<domain>/<lang>")` hash'i (`tools/pulsar/src/merge.rs:145`, Kotlin `PulsarSource.kt:78`). String anahtar (`"tilkiscans.com"`) yazmak hiçbir kaynağı açmaz; fabrika beyaz listesi `it.id.toString() in allowed` ile karşılaştırır (`PulsarSourceFactory.kt:101`).
+- `pulsar status` çalışınca `source_map.json` id'lerini `retain` eder; haritada olmayan yeni bir giriş bir sonraki koşuda düşer. Kalıcı çözüm `emit_source_map.py` ile haritayı yenilemektir (CI yapar).
+- **Node tuzağı:** id'ler 2^53'ü aşan i64. `JSON.parse` + `JSON.stringify` bu değerleri yuvarlar (`7849977061084682679 → ...680`), yani dosyanın tamamı bozulur. Bu dosyayı düzenleyen araç int'i koruyan bir okuyucu kullanmalı (Rust `i64` veya Python `int`).
+- Aynı domainde hem eski `kind:"engine"` hem yeni `kind:"catalogue"` kaydı varsa, domain üzerinden eşleştirme yapan her işlem **yanlış kayda** gider. Bitişik kayıtlar için önce `kind` filtresi uygulanır.
