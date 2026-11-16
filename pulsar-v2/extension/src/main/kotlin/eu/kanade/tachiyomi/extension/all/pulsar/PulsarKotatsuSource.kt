@@ -8,7 +8,6 @@ import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.source.model.SMangaUpdate
 import eu.kanade.tachiyomi.source.online.HttpSource
 import okhttp3.Request
-import org.koitharu.kotatsu.parsers.model.ContentType
 import org.koitharu.kotatsu.parsers.model.MangaParserSource
 import org.koitharu.kotatsu.parsers.model.MangaState
 import org.koitharu.kotatsu.parsers.model.SortOrder
@@ -36,16 +35,8 @@ class PulsarKotatsuSource(
     override val lang: String,
 ) : HttpSource() {
 
-    override val name: String = run {
-        val base = PulsarPatches.TITLE_OVERRIDES[parserSource.name]
-            ?: parserSource.title.ifBlank { parserSource.name }
-        // 18+ kaynak ayri paket tasimaz: gorunen adina " [18+]" etiketi eklenir.
-        if (parserSource.contentType == ContentType.HENTAI && !base.endsWith(" [18+]")) {
-            "$base [18+]"
-        } else {
-            base
-        }
-    }
+    override val name: String =
+        PulsarPatches.TITLE_OVERRIDES[parserSource.name] ?: parserSource.title.ifBlank { parserSource.name }
     override val supportsLatest = true
 
     private val context by lazy { PulsarContext(network.client) }
