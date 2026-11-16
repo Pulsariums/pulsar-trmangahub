@@ -1222,7 +1222,9 @@
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index"
-      ]
+      ],
+      "status": "dead",
+      "reason": "site manga degil (Lunar Realms tanitim sayfasi, /mangas/ 404) - 2026-11-16 olcumu"
     },
     {
       "id": "manga.araznovel.com",
@@ -1597,14 +1599,19 @@
         "listPath": "/",
         "itemSelector": "a.update-card-cover",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+        "pageApiUrl": "https://okutoon.com/api/v1/series/{1}/chapters/{2}",
+        "pageApiIdPattern": "okutoon.com/([^/]+)/(bolum-[0-9]+)",
+        "pageApiItems": "data.pages",
+        "pageApiFieldUrl": "image_url"
       },
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index",
         "local_custom",
         "local_tr"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "opiatoon.art",
@@ -3319,7 +3326,9 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "status": "dead",
+      "reason": "yalniz ana sayfa servis ediliyor; /manga/ ve /manga/<slug>/ Apache 404 - 2026-11-16 olcumu"
     },
     {
       "id": "silentquill.net",
@@ -8033,7 +8042,9 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "status": "dead",
+      "reason": "site el degistirmis (Tayca bahis/manga, TR icerik yok) - 2026-11-16 olcumu"
     },
     {
       "id": "nabimanga.com",
