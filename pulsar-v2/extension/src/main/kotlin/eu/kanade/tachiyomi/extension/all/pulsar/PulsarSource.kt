@@ -414,7 +414,7 @@ class PulsarSource(
             for (i in 0 until node.length()) {
                 val v = node.opt(i)
                 val resolved: Any? = if (v is String) qwikResolve(v, objs) else qwikValue(v, objs)
-                if (resolved == null) out.put(JSONObject.NULL as Any) else out.put(resolved)
+                out.put(resolved ?: JSONObject.NULL)
             }
             out
         }
@@ -453,9 +453,9 @@ class PulsarSource(
         }
         val chapters = data?.optJSONArray("chapters") ?: return emptyList()
         val images = chapters.optJSONObject(0)?.optJSONObject("images") ?: return emptyList()
-        val out = ArrayList<String>(images.length())
         val order = images.keys().asSequence().toList()
             .sortedBy { it.toIntOrNull() ?: Int.MAX_VALUE }
+        val out = ArrayList<String>(images.length())
         for (key in order) {
             val src = when (val v = images.opt(key)) {
                 is JSONObject -> v.optString("src").trim()
