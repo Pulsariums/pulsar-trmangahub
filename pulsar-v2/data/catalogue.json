@@ -1939,13 +1939,14 @@
     "listPath": "/webtoon-listesi",
     "itemSelector": "div.manga-card, div.bsx, div.page-item-detail, a[href*=\"/webtoon/\"]",
     "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-    "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+    "readerSelector": "div#images img"
    },
    "verified_by_user": false,
    "origins": [
     "keiyoushi_index",
     "local_tr"
-   ]
+   ],
+   "selector_verified": true
   },
   {
    "id": "2519173041052749659",
