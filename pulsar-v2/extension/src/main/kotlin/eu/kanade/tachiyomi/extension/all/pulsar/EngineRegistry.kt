@@ -45,10 +45,17 @@ object EngineRegistry {
             val title = a.text().trim()
                 .ifBlank { a.selectFirst("img[alt]")?.attr("alt")?.trim().orEmpty() }
             if (title.length < 2) continue
-            val cover = coverOf(a)
+            val cover = absoluteUrl(coverOf(a), baseUrl)
             seen[key] = ParsedManga(title = title, url = full, coverUrl = cover)
         }
         return seen.values.toList()
+    }
+
+    private fun absoluteUrl(u: String?, baseUrl: String): String {
+        if (u.isNullOrBlank()) return ""
+        if (u.startsWith("http")) return u
+        if (u.startsWith("//")) return "https:$u"
+        return baseUrl.trimEnd('/') + "/" + u.trimStart('/')
     }
 
     // Kart linkinin kendi içinde <img> yoksa en yakın 4 üst öğeye kadar bak.
@@ -59,15 +66,28 @@ object EngineRegistry {
         while (cur != null && depth < 4) {
             val img = cur.selectFirst("img")
             if (img != null) {
-                val cand = sequenceOf("data-src", "data-lazy-src", "src")
+                val cand = sequenceOf("data-src", "data-lazy-src", "data-original", "src")
                     .map { img.attr(it).trim() }
                     .firstOrNull { it.isNotEmpty() && !it.startsWith("data:") }
+                    ?: img.attr("srcset").substringBefore(' ').trim().ifEmpty { null }
                 if (cand != null && !looksLikeBadge(cand)) return cand
+            }
+            // Bazi temalar kapagi <img> yerine CSS background-image ile verir.
+            backgroundImage(cur)?.let { if (!looksLikeBadge(it)) return it }
+            cur.selectFirst("[style*=background-image]")?.let { node ->
+                backgroundImage(node)?.let { if (!looksLikeBadge(it)) return it }
             }
             cur = cur.parent()
             depth++
         }
         return null
+    }
+
+    private fun backgroundImage(el: Element): String? {
+        val style = el.attr("style")
+        if (!style.contains("background-image", ignoreCase = true)) return null
+        val m = Regex("""url\(\s*['"]?([^'")]+)['"]?\s*\)""").find(style) ?: return null
+        return m.groupValues[1].trim().ifEmpty { null }
     }
 
     private fun looksLikeBadge(url: String): Boolean {
