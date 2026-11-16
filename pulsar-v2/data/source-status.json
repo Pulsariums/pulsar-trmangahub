@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T15:18:26Z",
+  "generated": "2026-11-16T16:20:15Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -506,16 +506,17 @@
       "nsfw": 0,
       "domain": "one-manga.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T13:50:37Z"
-      }
+        "detail": "covers: 2/3 kapak: HTTP 404",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "covers"
     },
     "1295018527397714241": {
       "id": 1295018527397714241,
@@ -655,16 +656,17 @@
       "nsfw": 0,
       "domain": "fl-ares.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "covers: 2/3 kapak: HTTP 404",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "covers"
     },
     "1348804626010052830": {
       "id": 1348804626010052830,
@@ -2804,16 +2806,17 @@
       "nsfw": 0,
       "domain": "kumapoi.info",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T13:50:37Z"
-      }
+        "detail": "pages: HttpException: HTTP error 404",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "pages"
     },
     "1414899155488272818": {
       "id": 1414899155488272818,
@@ -3863,16 +3866,17 @@
       "nsfw": 0,
       "domain": "topmanhua.net",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T13:50:37Z"
-      }
+        "detail": "pages: HttpException: HTTP error 526",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "pages"
     },
     "1670524346204645872": {
       "id": 1670524346204645872,
@@ -3964,16 +3968,17 @@
       "nsfw": 0,
       "domain": "niji-translations.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T13:50:37Z"
-      }
+        "detail": "covers: 1/3 kapak: Kapak URL yok",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "covers"
     },
     "1697806527554460533": {
       "id": 1697806527554460533,
@@ -4037,16 +4042,17 @@
       "nsfw": 0,
       "domain": "akaya.io",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T14:30:38Z"
-      }
+        "detail": "covers: 2/3 kapak: Kapak URL yok",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "covers"
     },
     "1742228070086391051": {
       "id": 1742228070086391051,
@@ -6415,17 +6421,17 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "trwebtoon.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "2181344765336138057": {
       "id": 2181344765336138057,
@@ -6808,10 +6814,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikindo.ch",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6820,12 +6824,14 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "pages: Zaman aşımı (20s)",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "pages",
+      "unreachable": true
     },
     "2355972589464153772": {
       "id": 2355972589464153772,
@@ -7139,10 +7145,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "dojing.net",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7151,12 +7155,14 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "2424634671368246918": {
       "id": 2424634671368246918,
@@ -8830,10 +8836,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "18porncomic.com",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8842,12 +8846,14 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "299562798421296729": {
       "id": 299562798421296729,
@@ -10488,17 +10494,17 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manga18free.com",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T14:30:38Z"
-      }
+        "detail": "list: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "3705166607977328849": {
       "id": 3705166607977328849,
@@ -11232,10 +11238,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangaforfree.com",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -11244,12 +11248,14 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "3758248374558119257": {
       "id": 3758248374558119257,
@@ -11918,17 +11924,17 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentaimanga.me",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "3845434200471616927": {
       "id": 3845434200471616927,
@@ -11949,17 +11955,17 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "apcomics.org",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T13:50:37Z"
-      }
+        "detail": "list: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "386746428516970468": {
       "id": 386746428516970468,
@@ -12726,10 +12732,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "omegascans.org",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12738,12 +12742,14 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "4008834734900539866": {
       "id": 4008834734900539866,
@@ -13100,16 +13106,17 @@
       "nsfw": 0,
       "domain": "manga168.net",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T14:30:38Z"
-      }
+        "detail": "covers: 1/3 kapak: HTTP 403",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "covers"
     },
     "4062420937604231679": {
       "id": 4062420937604231679,
@@ -13284,16 +13291,17 @@
       "nsfw": 0,
       "domain": "mangatuk.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T13:50:37Z"
-      }
+        "detail": "covers: 1/3 kapak: Kapak URL yok",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "covers"
     },
     "4065291127491532948": {
       "id": 4065291127491532948,
@@ -13406,10 +13414,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "gedecomix.com",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13418,12 +13424,14 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "4087575506275568444": {
       "id": 4087575506275568444,
@@ -13479,17 +13487,17 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "manhatic.com",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "4093299744819596787": {
       "id": 4093299744819596787,
@@ -20560,10 +20568,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentai20.io",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20572,12 +20578,14 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "5785631215476454609": {
       "id": 5785631215476454609,
@@ -22055,10 +22063,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "mihentai.com",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22067,12 +22073,14 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "5789832434445171566": {
       "id": 5789832434445171566,
@@ -24052,16 +24060,17 @@
       "nsfw": 0,
       "domain": "manga1688.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T14:30:38Z"
-      }
+        "detail": "covers: 1/3 kapak: HTTP 403",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "covers"
     },
     "6031199213653550309": {
       "id": 6031199213653550309,
@@ -24070,17 +24079,17 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manga18fx.com",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T13:50:37Z"
-      }
+        "detail": "list: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "6050296713552241791": {
       "id": 6050296713552241791,
@@ -24415,17 +24424,17 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentaiwebtoon.com",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "6090117639599749850": {
       "id": 6090117639599749850,
@@ -24930,17 +24939,17 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "ghostoon.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "6311269189769404898": {
       "id": 6311269189769404898,
@@ -25197,10 +25206,8 @@
       "lang": "ar",
       "nsfw": 1,
       "domain": "hentaislayer.net",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25209,12 +25216,14 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "6387967424523772208": {
       "id": 6387967424523772208,
@@ -27573,16 +27582,17 @@
       "nsfw": 0,
       "domain": "erisscans.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T14:30:38Z"
-      }
+        "detail": "covers: 0/3 kapak: Kapak URL yok",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "covers"
     },
     "7265829715436203228": {
       "id": 7265829715436203228,
@@ -28214,10 +28224,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentai3z.cc",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -28226,12 +28234,14 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "7521631900297857558": {
       "id": 7521631900297857558,
@@ -28599,17 +28609,17 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "mangacrazy.net",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T13:50:37Z"
-      }
+        "detail": "pages: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "pages",
+      "unreachable": true
     },
     "767198593501925111": {
       "id": 767198593501925111,
@@ -29321,9 +29331,9 @@
       "nsfw": 0,
       "domain": "toontaku.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29332,12 +29342,13 @@
         "at": "2026-11-13T19:01:05Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "covers: 0/3 kapak: HTTP 404",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "covers"
     },
     "794837132000445568": {
       "id": 794837132000445568,
@@ -30336,17 +30347,17 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "spiderscans.xyz",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "covers: SocketException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "covers",
+      "unreachable": true
     },
     "837385888220200875": {
       "id": 837385888220200875,
@@ -30588,17 +30599,17 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "manga18.me",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T13:50:37Z"
-      }
+        "detail": "list: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "8461882050635375826": {
       "id": 8461882050635375826,
@@ -30744,17 +30755,17 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhwa18.cc",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T13:50:37Z"
-      }
+        "detail": "list: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "8465684427768516806": {
       "id": 8465684427768516806,
@@ -31069,17 +31080,17 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhwaclub.net",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T14:35:53Z"
-      }
+        "detail": "list: IOException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "8610543852193021651": {
       "id": 8610543852193021651,
@@ -31273,16 +31284,17 @@
       "nsfw": 0,
       "domain": "hentaixyuri.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T14:30:38Z"
-      }
+        "detail": "pages: HttpException: HTTP error 404",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "pages"
     },
     "8670809408652362719": {
       "id": 8670809408652362719,
@@ -31987,9 +31999,9 @@
       "nsfw": 0,
       "domain": "mangaportali.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -31998,12 +32010,13 @@
         "at": "2026-11-13T19:01:05Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "covers: 0/3 kapak: HTTP 404",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "covers"
     },
     "891763215572096733": {
       "id": 891763215572096733,
@@ -32273,10 +32286,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "euphoriascan.com",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32285,12 +32296,14 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-16T00:09:31Z"
-      }
+        "detail": "list: SocketException: Connection reset",
+        "at": "2026-11-16T16:20:15Z"
+      },
+      "device_step": "list",
+      "unreachable": true
     },
     "908743684209593145": {
       "id": 908743684209593145,
