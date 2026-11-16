@@ -36,6 +36,7 @@ FLAVOR_DEFS = {
     ".global":  {"name": "Pulsar Global",    "lang": "all", "nsfw": 0},
     ".global18": {"name": "Pulsar Global 18+", "lang": "all", "nsfw": 1},
     ".test":    {"name": "Pulsar Test",      "lang": "all", "nsfw": 0},
+    ".test18":  {"name": "Pulsar Test 18+",  "lang": "all", "nsfw": 1},
 }
 
 

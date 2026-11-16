@@ -114,6 +114,7 @@ fn embed(o: &Opts) -> Result<(), String> {
         "global",
         "global18",
         "test",
+        "test18",
     ] {
         allowed.entry(pkg.to_string()).or_default();
     }
@@ -183,6 +184,7 @@ internal object PulsarData {{
     private val globalIds: Set<String> by lazy {{ GLOBAL_IDS.toIdSet() }}
     private val global18Ids: Set<String> by lazy {{ GLOBAL18_IDS.toIdSet() }}
     private val testIds: Set<String> by lazy {{ TEST_IDS.toIdSet() }}
+    private val test18Ids: Set<String> by lazy {{ TEST18_IDS.toIdSet() }}
 
     /** Paket soneki için izinli id kümesi; bilinmeyen pakette null (fabrika patlar). */
     fun allowed(suffix: String): Set<String>? = when (suffix) {{
@@ -191,6 +193,7 @@ internal object PulsarData {{
         "global" -> globalIds
         "global18" -> global18Ids
         "test" -> testIds
+        "test18" -> test18Ids
         else -> null
     }}
 
@@ -238,6 +241,7 @@ internal object PulsarData {{
         "global",
         "global18",
         "test",
+        "test18",
     ]
         .iter()
         .map(|p| {

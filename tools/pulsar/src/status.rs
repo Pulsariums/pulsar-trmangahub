@@ -82,7 +82,9 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
         return Vec::new();
     }
     if e.state != "active" || !e.sorun.is_empty() {
-        return vec!["test".to_string()];
+        // 18+ kaynak nsfw=0 test paketinde yayinlanamaz (istemci suzer);
+        // ayri test18 paketine duser.
+        return vec![if e.nsfw == 1 { "test18" } else { "test" }.to_string()];
     }
     let base = match (e.lang == "tr", e.nsfw == 1) {
         (true, false) => "tr",
