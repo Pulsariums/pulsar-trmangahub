@@ -75,27 +75,22 @@ pub struct StatusFile {
 }
 
 /// Paket kuralı: ana gruba (tr/tr18/global/global18) YALNIZ cihaz testinde geçen
-/// (state active) ve "sorun" etiketi olmayan kaynak girer. Kesin ölü ve
-/// ulaşılamayan (ağ/TLS/DNS) kaynak hiçbir pakete girmez. Cihazda düşen ama
-/// ulaşılabilir kaynak (hasarlı) "test" paketindedir; geri kalan (pending,
-/// unknown, sorun etiketli) de "test" paketindedir. Test = henüz cihazda
-/// doğrulanmamış, çalışma ihtimali olan kaynakların havuzu. 18+ kaynaklar ayrı
+/// ya da sağlık sonucu "ok" olan (state active) ve "sorun" etiketi olmayan
+/// kaynak girer. Kesin ölü, ulaşılamayan (ağ/TLS/DNS) ve cihazda düşen
+/// (state failed) kaynak hiçbir pakete girmez. Geri kalan (pending, unknown,
+/// sorun etiketli) "test" paketindedir. Test = yalnız henüz cihazda test
+/// edilmemiş, çalışma ihtimali olan kaynakların havuzu. 18+ kaynaklar ayrı
 /// paket taşımaz; "test" paketinde yayınlanır ve görünen adlarına " [18+]"
 /// etiketi eklenir.
 pub fn packages_for(e: &StatusEntry) -> Vec<String> {
-    if e.dead {
+    // Cihazda düşen kaynağın sonucu biliniyor; test havuzuna da girmez.
+    if e.dead || e.state == "failed" {
         return Vec::new();
     }
     // Ulaşılamayan kaynak (DNS/TLS/timeout/bağlantı hatası) ayrı tutulur:
     // test havuzuna da girmez, çünkü sorun kaynakta değil erişimdedir.
     if e.unreachable {
         return Vec::new();
-    }
-    // Cihaz testinde düşen kaynak hasarlı sayılır; ulaşılabilir olduğu için
-    // test havuzunda kalır (düzeltilince yeniden doğrulanabilsin).
-    let device_fail = e.device.as_ref().map(|p| p.status == "fail").unwrap_or(false);
-    if device_fail {
-        return vec!["test".to_string()];
     }
     if e.state != "active" || !e.sorun.is_empty() {
         // Ayri test18 paketi yok: 18+ kaynak da test havuzuna duser, gorunen
@@ -111,9 +106,13 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
     vec![base.to_string()]
 }
 
-/// Durumu yeniden hesaplar ve paketi buna göre atar. "active" yalnız cihaz "pass"
-/// ile olur; sağlık sonucu (GitHub sunucusundan, canlı siteleri yanlışlıkla
-/// "empty" sayabilir) durumu yalnız pending/unknown arasında ayırır.
+/// Durumu yeniden hesaplar ve paketi buna göre atar. Cihazda geçen ("pass")
+/// kaynak "active" olur; cihaz sonucu olmayan kaynak cihaz testinden geçmediği
+/// için sağlık sonucu "ok" olsa bile "active" sayılmaz (unknown/pending kalır).
+/// Cihazda düşen ("fail"/"cloudflare") kaynak "failed" olur ve hiçbir pakete
+/// girmez: sonucu bilindiği için test havuzunda da durmaz. Sağlık sonucu
+/// (GitHub sunucusundan, canlı siteleri yanlışlıkla "empty" sayabilir) durumu
+/// yalnız pending/unknown arasında ayırır.
 pub fn recompute_state(e: &mut StatusEntry) {
     let device = e.device.as_ref().map(|p| p.status.as_str()).unwrap_or("");
     let health = e.health.as_ref().map(|p| p.status.as_str()).unwrap_or("");
@@ -143,16 +142,23 @@ pub fn recompute_state(e: &mut StatusEntry) {
         .iter()
         .any(|needle| detail.contains(needle))
     };
-    e.state = if e.dead {
-        "dead"
-    } else if device == "pass" {
-        "active"
-    } else if device.is_empty() && health.is_empty() {
-        "unknown"
+    let step = e.device_step.as_deref().unwrap_or("");
+    // Cihazda liste adiminda dusen kaynak uygulamada hic acilmiyor.
+    let list_dead = (device == "fail" || device == "cloudflare") && (step == "list" || step.is_empty());
+    e.state = if device == "pass" {
+        "active".to_string()
+    } else if device == "fail" || device == "cloudflare" {
+        // Test edildi, sonucu biliniyor: ne yayina ne test havuzuna girer.
+        "failed".to_string()
+    } else if list_dead {
+        "pending".to_string()
+    } else if health == "ok" && !device.is_empty() {
+        "active".to_string()
+    } else if health.is_empty() {
+        "unknown".to_string()
     } else {
-        "pending"
-    }
-    .to_string();
+        "pending".to_string()
+    };
     e.packages = packages_for(e);
 }
 

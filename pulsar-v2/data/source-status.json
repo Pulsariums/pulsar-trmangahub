@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T16:49:30Z",
+  "generated": "2026-11-16T17:42:21Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -27,10 +27,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "peach-bl.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -104,10 +102,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "sleepytranslations.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -167,10 +163,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "sapphirescan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -194,10 +188,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "athenamanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "http",
         "http_code": "429",
@@ -273,10 +265,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "piedpiperfansubyy.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -319,10 +309,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "creepyscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -373,7 +361,7 @@
       "nsfw": 0,
       "domain": "catharsisfantasy.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -417,7 +405,7 @@
       "nsfw": 0,
       "domain": "ragnarokscan.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "1254625717579109559": {
@@ -427,10 +415,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "kuroimanga.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -455,7 +441,7 @@
       "nsfw": 0,
       "domain": "msypublisher.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "1256178622669487949": {
@@ -492,7 +478,7 @@
       "nsfw": 0,
       "domain": "rogmangas.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "1269241608370959777": {
@@ -521,10 +507,8 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "one-manga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -573,7 +557,7 @@
       "nsfw": 0,
       "domain": "burningscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "1336513517169247551": {
@@ -671,10 +655,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "fl-ares.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -710,10 +692,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "madarascans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -749,10 +729,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "anikiga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -827,7 +805,7 @@
       "nsfw": 0,
       "domain": "bakaman.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -869,7 +847,7 @@
       "nsfw": 0,
       "domain": "bidmanga.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "1376610350639104046": {
@@ -879,10 +857,8 @@
       "lang": "th",
       "nsfw": 1,
       "domain": "cat-300.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -906,10 +882,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "cocomic.co",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -953,7 +927,7 @@
       "nsfw": 0,
       "domain": "comic21.me",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -970,10 +944,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "covendasbruxonas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1035,10 +1007,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "ehentaimanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1062,10 +1032,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "elftoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1108,10 +1076,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "ezmanga.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1256,10 +1222,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "indo18h.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1296,7 +1260,7 @@
       "nsfw": 0,
       "domain": "s2manga.io",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -1325,10 +1289,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "kalango.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1352,10 +1314,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "18.kiara.cool",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1379,10 +1339,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikav.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1425,10 +1383,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komiku.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1471,10 +1427,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "leryaoi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1498,10 +1452,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "loner-tl.blogspot.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1525,10 +1477,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "www.magerin.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1552,10 +1502,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "www.maid.my.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1580,7 +1528,7 @@
       "nsfw": 1,
       "domain": "manga18.club",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1605,10 +1553,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manga1k.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1632,10 +1578,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manga68.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1659,10 +1603,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "manga-ay.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -1698,10 +1640,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "www.mangafr.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1764,7 +1704,7 @@
       "nsfw": 0,
       "domain": "mangaid.click",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -1782,7 +1722,7 @@
       "nsfw": 0,
       "domain": "mangajp.top",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "refused",
         "http_code": "000",
@@ -1825,10 +1765,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "www.mangasy.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1871,10 +1809,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "www.mangatv.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1898,10 +1834,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaus.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1925,10 +1859,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangawt.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1952,10 +1884,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manhwax.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2081,10 +2011,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mm-scans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2108,10 +2036,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "mrbenne.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2135,10 +2061,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "myshojo.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2163,7 +2087,7 @@
       "nsfw": 0,
       "domain": "neroxus.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -2226,7 +2150,7 @@
       "nsfw": 0,
       "domain": "1manhwa.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -2255,10 +2179,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "papscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2282,10 +2204,8 @@
       "lang": "ar",
       "nsfw": 1,
       "domain": "peach-bl.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2333,10 +2253,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "qimanhwa.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -2398,10 +2316,8 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "remanga.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -2418,10 +2334,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "s2manga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2445,10 +2359,8 @@
       "lang": "it",
       "nsfw": 0,
       "domain": "scanita.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2472,10 +2384,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "4uscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2556,10 +2466,8 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "so-manga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2614,10 +2522,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "toonily.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2641,10 +2547,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "toonizy.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2711,10 +2615,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "www.manhwaden.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2788,10 +2690,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "yonabar.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2853,10 +2753,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "kumapoi.info",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -2892,10 +2790,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "visormanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2964,10 +2860,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "freemangatop.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3029,10 +2923,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "lichmangas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3057,7 +2949,7 @@
       "nsfw": 0,
       "domain": "zinmanga.cc",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "154815361965219974": {
@@ -3068,7 +2960,7 @@
       "nsfw": 0,
       "domain": "zinmanga.ms",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "1559926148650693672": {
@@ -3079,7 +2971,7 @@
       "nsfw": 0,
       "domain": "ragnarokscan.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -3191,10 +3083,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaaction.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3218,10 +3108,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "manga-ai-land.blogspot.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3245,10 +3133,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "mangaatrend.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3291,10 +3177,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangadot.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -3356,10 +3240,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "vortexscans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3383,10 +3265,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangahentai.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3410,10 +3290,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangahub.io",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3437,10 +3315,8 @@
       "lang": "it",
       "nsfw": 0,
       "domain": "mangaita.io",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3477,7 +3353,7 @@
       "nsfw": 0,
       "domain": "mangakazani.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3513,10 +3389,8 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "mangakoma01.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3616,10 +3490,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "mangamukai.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3644,7 +3516,7 @@
       "nsfw": 0,
       "domain": "mangas-scans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -3688,7 +3560,7 @@
       "nsfw": 0,
       "domain": "mangatyrant.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -3705,10 +3577,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangawt.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3732,10 +3602,8 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "mangazodiac.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3816,10 +3684,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "www.manhwalover.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3863,7 +3729,7 @@
       "nsfw": 0,
       "domain": "mantrazscan.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -3919,7 +3785,7 @@
       "nsfw": 0,
       "domain": "rawmanga.su",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "1665276189507377415": {
@@ -3929,10 +3795,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "topmanhua.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -4004,10 +3868,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "tecnoprojects.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4031,10 +3893,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "niji-translations.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -4095,7 +3955,7 @@
       "nsfw": 0,
       "domain": "alceacomic.my.id",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "1741814796015341403": {
@@ -4105,10 +3965,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "akaya.io",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -4157,7 +4015,7 @@
       "nsfw": 0,
       "domain": "tenshi01.id",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -4194,7 +4052,7 @@
       "nsfw": 0,
       "domain": "irisscanlator.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ssl_trust",
         "http_code": "000",
@@ -4212,7 +4070,7 @@
       "nsfw": 0,
       "domain": "mangasonline.cc",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "1754559666946848503": {
@@ -4246,10 +4104,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "afroditscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4273,10 +4129,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mycomiclist.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -4293,10 +4147,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "reaper-scans.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4344,10 +4196,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "luffymanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4371,10 +4221,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "opiatoon.shop",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4399,10 +4247,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "lumos01.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4427,7 +4273,7 @@
       "nsfw": 0,
       "domain": "lunarscans.fr",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -4444,10 +4290,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "lunarscan.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4471,10 +4315,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "likemanga.in",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4572,10 +4414,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "vortexscans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4599,10 +4439,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lectorknight.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4626,10 +4464,8 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "doujinhentai.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4665,10 +4501,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "xoxocomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4863,10 +4697,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "ww11.readonepiece.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -4884,7 +4716,7 @@
       "nsfw": 0,
       "domain": "edscanlation.fr",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -4937,10 +4769,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "asurascans.us",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4990,10 +4820,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "kakuseiproject.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5017,10 +4845,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "amangaplanet.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5083,7 +4909,7 @@
       "nsfw": 0,
       "domain": "lkscanlation.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5100,10 +4926,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "mundohentaioficial.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5127,10 +4951,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "shadowceviri.blogspot.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5154,10 +4976,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "shadowmangas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5220,7 +5040,7 @@
       "nsfw": 0,
       "domain": "ladyestelarscan.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5238,7 +5058,7 @@
       "nsfw": 0,
       "domain": "starboundscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5293,10 +5113,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "maidsecret.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5366,7 +5184,7 @@
       "nsfw": 0,
       "domain": "manga4life.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5383,10 +5201,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangabuddy.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5411,7 +5227,7 @@
       "nsfw": 0,
       "domain": "toonclash.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5440,10 +5256,8 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "mangafenxi.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5467,10 +5281,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "mangaflame.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5544,10 +5356,8 @@
       "lang": "de",
       "nsfw": 0,
       "domain": "mangalesen.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5609,10 +5419,8 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "mangamammy.ru",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5648,10 +5456,8 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "manga-moons.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5725,10 +5531,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangarolls.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5752,10 +5556,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "toon69.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5780,7 +5582,7 @@
       "nsfw": 0,
       "domain": "mangaschan.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5817,7 +5619,7 @@
       "nsfw": 0,
       "domain": "mangashiro.me",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -5834,10 +5636,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "manga-spark.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5888,7 +5688,7 @@
       "nsfw": 0,
       "domain": "mangastorm.org",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "2134596450835166565": {
@@ -5925,7 +5725,7 @@
       "nsfw": 0,
       "domain": "manga-terra.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5943,7 +5743,7 @@
       "nsfw": 0,
       "domain": "mangatx.cc",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5961,7 +5761,7 @@
       "nsfw": 0,
       "domain": "mangatx.gg",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5978,10 +5778,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaweebs.in",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6050,10 +5848,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangakomi.io",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6078,7 +5874,7 @@
       "nsfw": 0,
       "domain": "mangascan-fr.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6160,7 +5956,7 @@
       "nsfw": 0,
       "domain": "kaliscan.io",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6177,10 +5973,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhuazone.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6223,10 +6017,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "manhwadesu.asia",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6269,10 +6061,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "manhwaindo.one",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6296,10 +6086,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "www.manhwaland.baby",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6361,10 +6149,8 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "manhwas.es",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6388,10 +6174,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "www.manhwatoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6415,10 +6199,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manytoon.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6462,7 +6244,7 @@
       "nsfw": 0,
       "domain": "lc5.cosmicscans.asia",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6492,7 +6274,7 @@
       "nsfw": 0,
       "domain": "gloryscans.fr",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6510,7 +6292,7 @@
       "nsfw": 0,
       "domain": "trwebtoon.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -6565,7 +6347,7 @@
       "nsfw": 0,
       "domain": "altayscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -6626,7 +6408,7 @@
       "nsfw": 0,
       "domain": "anisascans.in",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6732,7 +6514,7 @@
       "nsfw": 0,
       "domain": "skanlacje-feniksy.pl",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6749,10 +6531,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "mi2manga.lat",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6795,10 +6575,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "arc-relight.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6822,10 +6600,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "arcticscan.top",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6875,10 +6651,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "arvencomics.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6903,7 +6677,7 @@
       "nsfw": 0,
       "domain": "komikindo.ch",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6928,10 +6702,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikstation.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -6981,10 +6753,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "trisalyanp.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7027,10 +6797,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "asurascans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -7093,7 +6861,7 @@
       "nsfw": 0,
       "domain": "msypublisher.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -7111,7 +6879,7 @@
       "nsfw": 0,
       "domain": "goctruyentranh.net",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "2392133878554443860": {
@@ -7145,10 +6913,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "3asq.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7203,10 +6969,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "daprob.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7231,7 +6995,7 @@
       "nsfw": 0,
       "domain": "x.desu.city",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "2424633055861839570": {
@@ -7242,7 +7006,7 @@
       "nsfw": 1,
       "domain": "dojing.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7267,10 +7031,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "fl-ares.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7339,10 +7101,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "futari.info",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7366,10 +7126,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "gmanga.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7412,10 +7170,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "01.holotoon.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7439,10 +7195,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "v5.kiryuu.to",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -7471,10 +7225,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komiku.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7562,10 +7314,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "mmdaos.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7589,10 +7339,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "ngomik.mom",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7617,7 +7365,7 @@
       "nsfw": 0,
       "domain": "oioivn.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -7634,10 +7382,8 @@
       "lang": "ko",
       "nsfw": 1,
       "domain": "rawdex.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7661,10 +7407,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "www.re-yume.my.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7752,10 +7496,8 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "weloma.art",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7779,10 +7521,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "xsscan.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7882,10 +7622,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "wonderlandscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7933,10 +7671,8 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "lectorhentai.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7992,7 +7728,7 @@
       "nsfw": 1,
       "domain": "fuchscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "http",
         "http_code": "000",
@@ -8010,7 +7746,7 @@
       "nsfw": 0,
       "domain": "ancientcomics.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -8028,7 +7764,7 @@
       "nsfw": 0,
       "domain": "zinmanga.cc",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -8046,7 +7782,7 @@
       "nsfw": 0,
       "domain": "zinmanga.ms",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -8165,10 +7901,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentaimanga.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8192,10 +7926,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "hentaitokyo.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8219,10 +7951,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentaixyuri.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8259,7 +7989,7 @@
       "nsfw": 0,
       "domain": "manga4life.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "2620204204814440175": {
@@ -8269,10 +7999,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mortalsgroove.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8308,10 +8036,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "ascalonscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8409,10 +8135,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "babelwuxia.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8455,10 +8179,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "banana-scan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8531,7 +8253,7 @@
       "nsfw": 0,
       "domain": "inmoralnofansub.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "2756643525011277180": {
@@ -8646,10 +8368,8 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "bestmanga.club",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8673,10 +8393,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "freecomiconline.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8725,7 +8443,7 @@
       "nsfw": 0,
       "domain": "yurigarden.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "http404",
         "http_code": "404",
@@ -8781,7 +8499,7 @@
       "nsfw": 0,
       "domain": "cartelmanhwas.net",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "2903349764043054566": {
@@ -8803,10 +8521,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "yaoimangaoku.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "cloudflare",
         "http_code": "403",
@@ -8874,7 +8590,7 @@
       "nsfw": 0,
       "domain": "dragontranslation.net",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "2950297680644095236": {
@@ -8897,7 +8613,7 @@
       "nsfw": 0,
       "domain": "lermanga.org",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "295804037218286158": {
@@ -8908,7 +8624,7 @@
       "nsfw": 0,
       "domain": "laidbackscans.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -8938,7 +8654,7 @@
       "nsfw": 0,
       "domain": "blogtruyenmoi.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "2974188549939557938": {
@@ -8961,7 +8677,7 @@
       "nsfw": 1,
       "domain": "18porncomic.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9024,10 +8740,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "spiderscans.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9052,7 +8766,7 @@
       "nsfw": 0,
       "domain": "rsdleft.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -9094,7 +8808,7 @@
       "nsfw": 0,
       "domain": "necroscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -9111,10 +8825,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "mangalivre.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9138,10 +8850,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "potatomanga.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9204,7 +8914,7 @@
       "nsfw": 0,
       "domain": "radiantscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "3067383443860379137": {
@@ -9240,10 +8950,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "niverafansub.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9267,10 +8975,8 @@
       "lang": "fr",
       "nsfw": 1,
       "domain": "hentai.scantrad-vf.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9294,10 +9000,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "www.revolutionscantrad.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9419,10 +9123,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "www.nightcomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9446,10 +9148,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "nightsup.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9620,7 +9320,7 @@
       "nsfw": 0,
       "domain": "guildknives.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -9700,7 +9400,7 @@
       "nsfw": 0,
       "domain": "mundomanhwa.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9835,10 +9535,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "hni-scantrad.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9862,10 +9560,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "xcalibrscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9890,7 +9586,7 @@
       "nsfw": 0,
       "domain": "novelstown.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -9945,10 +9641,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "www.darknebulus.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9973,7 +9667,7 @@
       "nsfw": 0,
       "domain": "foxwhite.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "332285895094324893": {
@@ -10002,10 +9696,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "pornhwascans.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -10080,7 +9772,7 @@
       "nsfw": 0,
       "domain": "rainbowfairyscan.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -10122,7 +9814,7 @@
       "nsfw": 0,
       "domain": "copypastescan.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -10140,7 +9832,7 @@
       "nsfw": 0,
       "domain": "monzee01.my.id",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -10158,7 +9850,7 @@
       "nsfw": 0,
       "domain": "mangananquim.site",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "3430942165888452983": {
@@ -10169,7 +9861,7 @@
       "nsfw": 0,
       "domain": "birdmanga.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "3431498174555067516": {
@@ -10179,10 +9871,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "temakimangas.blogspot.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -10269,7 +9959,7 @@
       "nsfw": 0,
       "domain": "newmanhua.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "3517094690583648677": {
@@ -10438,10 +10128,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "sektedoujin.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -10516,7 +10204,7 @@
       "nsfw": 0,
       "domain": "cabaredowatame.site",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "3646305211930278364": {
@@ -10526,10 +10214,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "olympusbiblioteca.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -10647,7 +10333,7 @@
       "nsfw": 0,
       "domain": "manga18free.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -10692,7 +10378,7 @@
       "nsfw": 0,
       "domain": "ancientcomics.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "3731345054251723521": {
@@ -10721,10 +10407,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "tukangkomik.co",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -11391,7 +11075,7 @@
       "nsfw": 1,
       "domain": "mangaforfree.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -11416,10 +11100,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangafoxfull.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -11462,10 +11144,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "www.mangakakalot.gg",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -11528,7 +11208,7 @@
       "nsfw": 0,
       "domain": "mangananquim.site",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -11584,7 +11264,7 @@
       "nsfw": 0,
       "domain": "mangaowlnet.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -11621,7 +11301,7 @@
       "nsfw": 0,
       "domain": "mangasonline.cc",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -11676,10 +11356,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.mangadenizi.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -11703,10 +11381,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaonlineteam.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -11743,7 +11419,7 @@
       "nsfw": 0,
       "domain": "gloryscans.fr",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "3769975289076265806": {
@@ -11754,7 +11430,7 @@
       "nsfw": 0,
       "domain": "ruahapchanhday.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -11809,10 +11485,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhuamanhwa.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -11875,7 +11549,7 @@
       "nsfw": 0,
       "domain": "manhwafreake.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -11892,10 +11566,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manhwahentai.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -11977,7 +11649,7 @@
       "nsfw": 0,
       "domain": "manhwafreak.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -12014,7 +11686,7 @@
       "nsfw": 0,
       "domain": "yubikiri.my.id",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "3817617414691183727": {
@@ -12063,7 +11735,7 @@
       "nsfw": 0,
       "domain": "noonscan.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -12093,7 +11765,7 @@
       "nsfw": 1,
       "domain": "hentaimanga.me",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -12124,7 +11796,7 @@
       "nsfw": 0,
       "domain": "apcomics.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -12168,10 +11840,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "noindexscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12208,7 +11878,7 @@
       "nsfw": 0,
       "domain": "infamous-scans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -12225,10 +11895,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "platinumscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12283,10 +11951,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "agrcomics.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12330,7 +11996,7 @@
       "nsfw": 0,
       "domain": "alceacomic.my.id",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -12348,7 +12014,7 @@
       "nsfw": 0,
       "domain": "anime-sama.eu",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "3940138749548478169": {
@@ -12358,10 +12024,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "anshscans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12423,10 +12087,8 @@
       "lang": "ar",
       "nsfw": 1,
       "domain": "arabtoons.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12450,10 +12112,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "araznovel.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12516,10 +12176,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "atemporal.cloud",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12543,10 +12201,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "azoramoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -12601,10 +12257,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "beehentai.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12654,10 +12308,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "bibimanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12682,7 +12334,7 @@
       "nsfw": 0,
       "domain": "birdmanga.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -12718,10 +12370,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "bookmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12791,7 +12441,7 @@
       "nsfw": 0,
       "domain": "inkstory.me",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "3991617090094006131": {
@@ -12801,10 +12451,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "comic1000.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12829,7 +12477,7 @@
       "nsfw": 0,
       "domain": "comicarab.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -12846,10 +12494,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "comicazen.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12910,7 +12556,7 @@
       "nsfw": 1,
       "domain": "omegascans.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -12936,7 +12582,7 @@
       "nsfw": 0,
       "domain": "seitacelestial.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4009119348883261931": {
@@ -12946,10 +12592,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "dexhentai.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13017,7 +12661,7 @@
       "nsfw": 0,
       "domain": "fairydream.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -13035,7 +12679,7 @@
       "nsfw": 0,
       "domain": "ww16.mangaoku.info",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -13052,10 +12696,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "duckmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13080,7 +12722,7 @@
       "nsfw": 0,
       "domain": "origami-orpheans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -13109,10 +12751,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "onlymanhwa.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13149,7 +12789,7 @@
       "nsfw": 0,
       "domain": "elarctoon.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "http",
         "http_code": "429",
@@ -13166,10 +12806,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "erosxscans.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13282,10 +12920,8 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "manga168.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -13302,10 +12938,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manga18x.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -13342,7 +12976,7 @@
       "nsfw": 0,
       "domain": "firescans.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -13467,10 +13101,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "mangatuk.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -13488,7 +13120,7 @@
       "nsfw": 0,
       "domain": "flixscans.net",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4070086767309549861": {
@@ -13498,10 +13130,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "freemanga.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13525,10 +13155,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "myshojo.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13564,10 +13192,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "gatemanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13592,7 +13218,7 @@
       "nsfw": 1,
       "domain": "gedecomix.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13618,7 +13244,7 @@
       "nsfw": 0,
       "domain": "ghostscan.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -13636,7 +13262,7 @@
       "nsfw": 0,
       "domain": "lkscanlation.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4089261932879757723": {
@@ -13647,7 +13273,7 @@
       "nsfw": 0,
       "domain": "radiantscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -13665,7 +13291,7 @@
       "nsfw": 0,
       "domain": "manhatic.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -13702,10 +13328,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "mangasusuku.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13787,7 +13411,7 @@
       "nsfw": 0,
       "domain": "hamtruyen1.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -13804,10 +13428,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "harimanga.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13876,10 +13498,8 @@
       "lang": "uk",
       "nsfw": 1,
       "domain": "hentaiukr.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -13896,10 +13516,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "herenscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13923,10 +13541,8 @@
       "lang": "fr",
       "nsfw": 1,
       "domain": "hhentai.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13988,10 +13604,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "hivetoons.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14016,7 +13630,7 @@
       "nsfw": 0,
       "domain": "lunarscans.fr",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4115781025364170103": {
@@ -14027,7 +13641,7 @@
       "nsfw": 0,
       "domain": "clubinari.org",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4116707331773940228": {
@@ -14037,10 +13651,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangabats.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -14058,7 +13670,7 @@
       "nsfw": 0,
       "domain": "hoifansub.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14167,7 +13779,7 @@
       "nsfw": 0,
       "domain": "catharsisfantasy.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4177200439259800459": {
@@ -14279,10 +13891,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "klikmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14306,10 +13916,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "isekaikomik.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14334,7 +13942,7 @@
       "nsfw": 0,
       "domain": "be.komikcast.fit",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4194885150730244972": {
@@ -14345,7 +13953,7 @@
       "nsfw": 0,
       "domain": "komikmama.lat",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -14393,10 +14001,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "retsu.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14421,7 +14027,7 @@
       "nsfw": 0,
       "domain": "visormonarca.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -14451,7 +14057,7 @@
       "nsfw": 0,
       "domain": "mangalami.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14476,10 +14082,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lectorunm.life",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14504,7 +14108,7 @@
       "nsfw": 0,
       "domain": "mangaschan.net",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4212079203674738000": {
@@ -14540,10 +14144,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "lerhentai.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14631,10 +14233,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "lilymanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14658,10 +14258,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "limboscan.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14685,10 +14283,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "lunarrscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14712,10 +14308,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tuhafscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14740,7 +14334,7 @@
       "nsfw": 0,
       "domain": "mangastorm.org",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4231843737385138446": {
@@ -14751,7 +14345,7 @@
       "nsfw": 0,
       "domain": "noxscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -14768,10 +14362,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "madaradex.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14795,10 +14387,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manga-1001.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14835,7 +14425,7 @@
       "nsfw": 0,
       "domain": "manga-chan.me",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4234251758923398006": {
@@ -14845,10 +14435,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangacute.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14872,10 +14460,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangadass.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -14930,10 +14516,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "www.mgeko.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -14951,7 +14535,7 @@
       "nsfw": 0,
       "domain": "mangagojo.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -14968,10 +14552,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangaholic.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15015,7 +14597,7 @@
       "nsfw": 0,
       "domain": "mangahona.pl",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15045,7 +14627,7 @@
       "nsfw": 0,
       "domain": "mgjinx.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15108,7 +14690,7 @@
       "nsfw": 0,
       "domain": "mangakita.id",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -15176,7 +14758,7 @@
       "nsfw": 0,
       "domain": "manga-mate.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15193,10 +14775,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "natomanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -15214,7 +14794,7 @@
       "nsfw": 0,
       "domain": "vrnoin.site",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15232,7 +14812,7 @@
       "nsfw": 0,
       "domain": "mangapeak.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15249,10 +14829,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangapill.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -15269,10 +14847,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangapuma.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15296,10 +14872,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangapure.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15323,10 +14897,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "lekmanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15376,10 +14948,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangarockteam.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15403,10 +14973,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "mangarose.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15431,7 +14999,7 @@
       "nsfw": 0,
       "domain": "mangaruby.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15493,10 +15061,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "www.manga-soul.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15539,10 +15105,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "ikiru.one",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15578,10 +15142,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "mangatime.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15605,10 +15167,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "www.mangatown.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -15625,10 +15185,8 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "mangagojo18.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15691,7 +15249,7 @@
       "nsfw": 0,
       "domain": "manga.wtf",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4234252625984316407": {
@@ -15701,10 +15259,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "manhastro.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15728,10 +15284,8 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "www.manhuabug.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15755,10 +15309,8 @@
       "lang": "zh",
       "nsfw": 0,
       "domain": "www.manhuagui.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -15801,10 +15353,8 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "www.manhuakey.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15893,7 +15443,7 @@
       "nsfw": 0,
       "domain": "manhwanew.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15929,10 +15479,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhwatop.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -15976,7 +15524,7 @@
       "nsfw": 0,
       "domain": "vrnoin.site",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15993,10 +15541,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manycomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16070,10 +15616,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "zinchangmanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16128,10 +15672,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mugimanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16155,10 +15697,8 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "multporn.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -16214,7 +15754,7 @@
       "nsfw": 0,
       "domain": "neatmangas.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ssl_trust",
         "http_code": "000",
@@ -16270,7 +15810,7 @@
       "nsfw": 0,
       "domain": "newmanhua.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -16332,10 +15872,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "nocfsb.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16360,7 +15898,7 @@
       "nsfw": 0,
       "domain": "norterose.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -16453,10 +15991,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.patimanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16481,7 +16017,7 @@
       "nsfw": 0,
       "domain": "perf-scan.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -16498,10 +16034,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "pianmanga.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16569,7 +16103,7 @@
       "nsfw": 0,
       "domain": "popsmanga.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -16598,10 +16132,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "psunicorn.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16626,7 +16158,7 @@
       "nsfw": 0,
       "domain": "mangakazani.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -16643,10 +16175,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentaiwebtoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16671,7 +16201,7 @@
       "nsfw": 0,
       "domain": "truyentranhfull.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -16688,10 +16218,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "ragnascan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16715,10 +16243,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "raikiscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16773,10 +16299,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "novelstreams.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16801,7 +16325,7 @@
       "nsfw": 0,
       "domain": "rezoscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -16818,10 +16342,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "rimuscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16872,7 +16394,7 @@
       "nsfw": 0,
       "domain": "rogmangas.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -16945,7 +16467,7 @@
       "nsfw": 0,
       "domain": "scan-manga.me",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -16962,10 +16484,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "scanvf.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16989,10 +16509,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "scarmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17044,7 +16562,7 @@
       "nsfw": 0,
       "domain": "sectscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -17062,7 +16580,7 @@
       "nsfw": 0,
       "domain": "sheakomik.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -17118,7 +16636,7 @@
       "nsfw": 0,
       "domain": "sitemanga.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -17135,10 +16653,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "skymangas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17163,7 +16679,7 @@
       "nsfw": 0,
       "domain": "skymanga.work",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -17181,7 +16697,7 @@
       "nsfw": 0,
       "domain": "flixscans.net",
       "packages": [],
-      "state": "dead",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17206,10 +16722,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "solooscan.blogspot.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17233,10 +16747,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "soulscans.my.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17261,7 +16773,7 @@
       "nsfw": 0,
       "domain": "ssreading.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -17278,10 +16790,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "sushiscan.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17318,7 +16828,7 @@
       "nsfw": 0,
       "domain": "franxxmangas.net",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4404345813067789386": {
@@ -17329,7 +16839,7 @@
       "nsfw": 0,
       "domain": "sheakomik.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4404495316641007547": {
@@ -17339,10 +16849,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "sweetscan.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17366,10 +16874,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "gistamishousefansub.blogspot.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17546,10 +17052,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "www.tooncubus.top",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17573,10 +17077,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "toonitube.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17600,10 +17102,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhuatop.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17646,10 +17146,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangamonk.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17673,10 +17171,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "trwebtoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -17713,7 +17209,7 @@
       "nsfw": 0,
       "domain": "maid.my.id",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -17743,10 +17239,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "nakamatoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17770,10 +17264,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "www.ulascomic00.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17859,10 +17351,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "hivetoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17886,10 +17376,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "diskusscan.online",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17913,10 +17401,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "vyvymanga.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17990,10 +17476,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18030,7 +17514,7 @@
       "nsfw": 0,
       "domain": "scan-manga.me",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4495049174044908885": {
@@ -18059,10 +17543,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "artessupremas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18086,10 +17568,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "medusascans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18126,7 +17606,7 @@
       "nsfw": 0,
       "domain": "yaoimanga.es",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -18167,10 +17647,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "yokai-team.blogspot.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18194,10 +17672,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "hadesnofansub.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18233,10 +17709,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "yumekomik.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18389,10 +17863,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "brmangas.top",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18416,10 +17888,8 @@
       "lang": "th",
       "nsfw": 1,
       "domain": "toomtam-manga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18455,10 +17925,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "anigliscans.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18482,10 +17950,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "www.animexnovel.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18529,7 +17995,7 @@
       "nsfw": 0,
       "domain": "rainbowfairyscan.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4667097719857917273": {
@@ -18551,10 +18017,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "worldmanhwas.zone",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18590,10 +18054,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "drakecomic.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18656,7 +18118,7 @@
       "nsfw": 0,
       "domain": "juratempe.st",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -18673,10 +18135,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "readfreecomics.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18743,10 +18203,8 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "manga.io.vn",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18771,7 +18229,7 @@
       "nsfw": 0,
       "domain": "visormonarca.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "4771541692129045910": {
@@ -18781,10 +18239,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "nirvanascan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18808,10 +18264,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "duniakomik.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18835,10 +18289,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "assortedscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18912,10 +18364,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoonhatti.club",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "cloudflare",
         "http_code": "403",
@@ -18940,7 +18390,7 @@
       "nsfw": 0,
       "domain": "pojokmanga.info",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19000,10 +18450,8 @@
       "lang": "it",
       "nsfw": 0,
       "domain": "reader.powermanga.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19134,10 +18582,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "anteikuscan.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19217,7 +18663,7 @@
       "nsfw": 0,
       "domain": "novelstown.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5017455864591765198": {
@@ -19347,7 +18793,7 @@
       "nsfw": 0,
       "domain": "swatscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5117503242233509669": {
@@ -19370,7 +18816,7 @@
       "nsfw": 0,
       "domain": "inmoralnofansub.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -19387,10 +18833,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "scaninmortal.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19469,10 +18913,8 @@
       "lang": "th",
       "nsfw": 1,
       "domain": "www.superdoujin.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19497,7 +18939,7 @@
       "nsfw": 0,
       "domain": "otakusan.me",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19515,7 +18957,7 @@
       "nsfw": 0,
       "domain": "otakusan.me",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19587,10 +19029,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "en.huntersscan.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19633,10 +19073,8 @@
       "lang": "fr",
       "nsfw": 1,
       "domain": "hentai-origines.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19673,7 +19111,7 @@
       "nsfw": 0,
       "domain": "moonwitchscan.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19690,10 +19128,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "eldermanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -19765,10 +19201,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "enryumanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19823,10 +19257,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "constellarcomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19862,10 +19294,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "allporncomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19908,10 +19338,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "topreadmanhwa.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19985,10 +19413,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "www.mangakakalot.gg",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -20017,10 +19443,8 @@
       "lang": "vi",
       "nsfw": 1,
       "domain": "qadcuteo.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20088,7 +19512,7 @@
       "nsfw": 0,
       "domain": "cabaredowatame.site",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -20167,10 +19591,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "galinhasamurai.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20194,10 +19616,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "mangas-origines.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20284,7 +19704,7 @@
       "nsfw": 0,
       "domain": "po2scans.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "572555918466438883": {
@@ -20295,7 +19715,7 @@
       "nsfw": 0,
       "domain": "hunlight.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5750691368614723158": {
@@ -20317,10 +19737,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "gekkou.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20345,7 +19763,7 @@
       "nsfw": 0,
       "domain": "skymanga.work",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5779873155655263510": {
@@ -20419,10 +19837,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "barmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20465,10 +19881,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "www1.bluesolo.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20492,10 +19906,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "brakeout.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20550,10 +19962,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "dark-scan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20660,10 +20070,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "fayscans.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20707,7 +20115,7 @@
       "nsfw": 0,
       "domain": "mangasup.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -20725,7 +20133,7 @@
       "nsfw": 0,
       "domain": "foxwhite.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -20742,10 +20150,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.gafeland.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20769,10 +20175,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "gaiatoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "cloudflare",
         "http_code": "403",
@@ -20797,7 +20201,7 @@
       "nsfw": 0,
       "domain": "siyahmelek.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -20833,10 +20237,8 @@
       "lang": "zh",
       "nsfw": 1,
       "domain": "hanman18.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20860,10 +20262,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "hensekai.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20888,7 +20288,7 @@
       "nsfw": 1,
       "domain": "hentai20.io",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20944,10 +20344,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hiperdex.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20972,7 +20370,7 @@
       "nsfw": 0,
       "domain": "hunlight.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -21016,7 +20414,7 @@
       "nsfw": 0,
       "domain": "jpmangas.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -21064,10 +20462,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "kaijuno8.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21091,10 +20487,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "luascans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21144,10 +20538,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "www.silentquill.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -21247,10 +20639,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "komiklab.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21274,10 +20664,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "komikpix.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21301,10 +20689,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "komikpoi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21329,7 +20715,7 @@
       "nsfw": 0,
       "domain": "komiksan.link",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -21346,10 +20732,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komiksay.info",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21469,7 +20853,7 @@
       "nsfw": 0,
       "domain": "lermanga.org",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5789005791492500131": {
@@ -21510,10 +20894,8 @@
       "lang": "it",
       "nsfw": 0,
       "domain": "lupiteam.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21537,10 +20919,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "luxmanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21576,10 +20956,8 @@
       "lang": "th",
       "nsfw": 1,
       "domain": "manga168.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21622,10 +21000,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manga18x.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21649,10 +21025,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manga1st.online",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21695,10 +21069,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangazin.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21722,10 +21094,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangabob.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21813,10 +21183,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "mangadop.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21840,10 +21208,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "mangaesp.topmanhuas.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21898,10 +21264,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "mangakyo.vip",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -21925,10 +21289,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "lekmanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22007,10 +21369,8 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "mangaraw.best",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22034,10 +21394,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangaryu.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22061,10 +21419,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangasee123.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22133,10 +21489,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangazin.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22160,10 +21514,8 @@
       "lang": "ar",
       "nsfw": 1,
       "domain": "manhatic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22187,10 +21539,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "manhatok.blogspot.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22214,10 +21564,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhuaes.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22241,10 +21589,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhuaga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22363,10 +21709,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "leemiau.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22391,7 +21735,7 @@
       "nsfw": 1,
       "domain": "mihentai.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22416,10 +21760,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "www.mikoroku.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22443,10 +21785,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "milftoon.xxx",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22470,10 +21810,8 @@
       "lang": "th",
       "nsfw": 1,
       "domain": "www.superdoujin.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22497,10 +21835,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "neumanga.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22525,7 +21861,7 @@
       "nsfw": 0,
       "domain": "noonscan.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -22543,7 +21879,7 @@
       "nsfw": 0,
       "domain": "swatscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -22560,10 +21896,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "novelmic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22651,10 +21985,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "nyxscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22679,7 +22011,7 @@
       "nsfw": 0,
       "domain": "opiatoon.art",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -22716,7 +22048,7 @@
       "nsfw": 0,
       "domain": "otsugami.id",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -22733,10 +22065,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "pawmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22761,7 +22091,7 @@
       "nsfw": 0,
       "domain": "po2scans.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5793717449460519303": {
@@ -22771,10 +22101,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "kenscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22799,7 +22127,7 @@
       "nsfw": 0,
       "domain": "rawmanga.su",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -22817,7 +22145,7 @@
       "nsfw": 0,
       "domain": "raysscan.blogspot.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "http404",
         "http_code": "404",
@@ -22854,7 +22182,7 @@
       "nsfw": 0,
       "domain": "roseveil.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -22871,10 +22199,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "sadscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -22893,7 +22219,7 @@
       "nsfw": 0,
       "domain": "aquascans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -22910,10 +22236,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "scan-trad.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -22950,7 +22274,7 @@
       "nsfw": 0,
       "domain": "siikomik.fun",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -22993,10 +22317,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "summanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23039,10 +22361,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "tmomanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23066,10 +22386,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "threedaos.zdrz.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23093,10 +22411,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "tritinia.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23189,10 +22505,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "www.umimanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23216,10 +22530,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "vortexscans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23243,10 +22555,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "woopread.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23352,7 +22662,7 @@
       "nsfw": 0,
       "domain": "yd-comics.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -23370,7 +22680,7 @@
       "nsfw": 0,
       "domain": "yubikiri.my.id",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -23419,7 +22729,7 @@
       "nsfw": 0,
       "domain": "inkstory.me",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5800490090703324334": {
@@ -23429,10 +22739,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "zinmanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23457,7 +22765,7 @@
       "nsfw": 0,
       "domain": "zonatmo.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5811112400216208071": {
@@ -23468,7 +22776,7 @@
       "nsfw": 0,
       "domain": "truyentranh3qc.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5814331492366162545": {
@@ -23478,10 +22786,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "senpaiediciones.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23560,10 +22866,8 @@
       "lang": "ar",
       "nsfw": 1,
       "domain": "www.mangahub.link",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23606,10 +22910,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "nelomanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -23638,10 +22940,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangarockteam.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23754,7 +23054,7 @@
       "nsfw": 0,
       "domain": "timenaight.org",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5874491653243184507": {
@@ -23834,7 +23134,7 @@
       "nsfw": 0,
       "domain": "mediocretoons.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5913531196666726580": {
@@ -23902,7 +23202,7 @@
       "nsfw": 0,
       "domain": "bananamanga.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -23938,10 +23238,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "scyllacomics.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23978,7 +23276,7 @@
       "nsfw": 0,
       "domain": "imperioscans.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5964032022384100874": {
@@ -23988,10 +23286,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangadistrict.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -24015,10 +23311,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "readhunters.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -24043,7 +23337,7 @@
       "nsfw": 0,
       "domain": "com-x.life",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "5972281004858783833": {
@@ -24124,10 +23418,8 @@
       "lang": "zh",
       "nsfw": 0,
       "domain": "www.ykmh.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -24182,10 +23474,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "pantheon-scan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -24210,7 +23500,7 @@
       "nsfw": 0,
       "domain": "voidscans.co",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24228,7 +23518,7 @@
       "nsfw": 0,
       "domain": "br.ninemanga.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24246,7 +23536,7 @@
       "nsfw": 0,
       "domain": "de.ninemanga.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24283,7 +23573,7 @@
       "nsfw": 0,
       "domain": "es.ninemanga.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24301,7 +23591,7 @@
       "nsfw": 0,
       "domain": "fr.ninemanga.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24319,7 +23609,7 @@
       "nsfw": 0,
       "domain": "it.ninemanga.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24337,7 +23627,7 @@
       "nsfw": 0,
       "domain": "ru.ninemanga.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24414,10 +23704,8 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "manga1688.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -24435,7 +23723,7 @@
       "nsfw": 0,
       "domain": "manga18fx.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -24492,7 +23780,7 @@
       "nsfw": 0,
       "domain": "1manhwa.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6061006270135958233": {
@@ -24620,7 +23908,7 @@
       "nsfw": 0,
       "domain": "mangaid.click",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6079425587928375229": {
@@ -24630,10 +23918,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "ravenscans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "cloudflare",
         "http_code": "403",
@@ -24658,7 +23944,7 @@
       "nsfw": 1,
       "domain": "fuchscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24700,7 +23986,7 @@
       "nsfw": 0,
       "domain": "mangapeak.org",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6084136124414068965": {
@@ -24723,7 +24009,7 @@
       "nsfw": 0,
       "domain": "mangaruby.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6086089492809230311": {
@@ -24753,7 +24039,7 @@
       "nsfw": 0,
       "domain": "mangashiro.me",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6086879984931973565": {
@@ -24788,7 +24074,7 @@
       "nsfw": 1,
       "domain": "hentaiwebtoon.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -24857,7 +24143,7 @@
       "nsfw": 0,
       "domain": "traduccionesamistosas.topmanhuas.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "http404",
         "http_code": "404",
@@ -24875,7 +24161,7 @@
       "nsfw": 0,
       "domain": "rsdleft.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6136639672694483708": {
@@ -24885,10 +24171,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "cerise.leitorweb.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -24913,7 +24197,7 @@
       "nsfw": 0,
       "domain": "comic21.me",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6141892580213926042": {
@@ -24954,10 +24238,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "readmanhua.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -24994,7 +24276,7 @@
       "nsfw": 0,
       "domain": "reset-scans.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -25012,7 +24294,7 @@
       "nsfw": 0,
       "domain": "elarctoon.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6201733055569750935": {
@@ -25042,7 +24324,7 @@
       "nsfw": 0,
       "domain": "flixscans.org",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6217773539534809892": {
@@ -25079,7 +24361,7 @@
       "nsfw": 0,
       "domain": "oioivn.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6231234991403533934": {
@@ -25114,7 +24396,7 @@
       "nsfw": 0,
       "domain": "noonscan.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6252364042656292639": {
@@ -25125,7 +24407,7 @@
       "nsfw": 0,
       "domain": "noonscan.net",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6254854953373229299": {
@@ -25185,10 +24467,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "r1.richtoon.top",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25212,10 +24492,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "freakcomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25286,7 +24564,7 @@
       "nsfw": 0,
       "domain": "frscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -25304,7 +24582,7 @@
       "nsfw": 0,
       "domain": "voidscans.co",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6309802498252370062": {
@@ -25315,7 +24593,7 @@
       "nsfw": 0,
       "domain": "ghostoon.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -25364,10 +24642,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "violetscans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -25384,10 +24660,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoonhatti.club",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "cloudflare",
         "http_code": "403",
@@ -25464,7 +24738,7 @@
       "nsfw": 0,
       "domain": "phenix-scans.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6375261139970147741": {
@@ -25524,10 +24798,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "scanmanga-vf.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25551,10 +24823,8 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "hentaireader.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25598,7 +24868,7 @@
       "nsfw": 1,
       "domain": "hentaislayer.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25642,10 +24912,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentaixcomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25669,10 +24937,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentai4free.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25758,10 +25024,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "rocksmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25785,10 +25049,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "arcurafansub.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "cloudflare",
         "http_code": "403",
@@ -25812,10 +25074,8 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "traduccionesmoonlight.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25882,10 +25142,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "philiascans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25909,10 +25167,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangacultivator.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25956,7 +25212,7 @@
       "nsfw": 0,
       "domain": "imperioscans.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -25973,10 +25229,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "scansatlanticos.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26000,10 +25254,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaonlineteam.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26103,10 +25355,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "www.manhwaden.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26142,10 +25392,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "comicsvalley.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26189,7 +25437,7 @@
       "nsfw": 0,
       "domain": "snowmachinetranslation.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -26225,10 +25473,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "passamaoscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26328,10 +25574,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "lolicon.mobi",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26393,10 +25637,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "galaxscanlator.blogspot.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26564,10 +25806,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "taurus.topmanhuas.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26603,10 +25843,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "patimanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -26623,10 +25861,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "komikremaja.icu",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26670,7 +25906,7 @@
       "nsfw": 0,
       "domain": "komiksin.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -26757,7 +25993,7 @@
       "nsfw": 0,
       "domain": "01.hwago.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -26787,7 +26023,7 @@
       "nsfw": 0,
       "domain": "lmtos.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -26824,7 +26060,7 @@
       "nsfw": 0,
       "domain": "natsu.tv",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "673270529710007227": {
@@ -26834,10 +26070,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "olaoe.cyou",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26861,10 +26095,8 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "rawxz.ac",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26900,10 +26132,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "utoon.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -26928,7 +26158,7 @@
       "nsfw": 0,
       "domain": "zevep.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -26958,7 +26188,7 @@
       "nsfw": 0,
       "domain": "cartelmanhwas.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -27006,10 +26236,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "territorioleal.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27034,7 +26262,7 @@
       "nsfw": 0,
       "domain": "ichiromanga.my.id",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -27090,7 +26318,7 @@
       "nsfw": 0,
       "domain": "hoifansub.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6900920757230238366": {
@@ -27138,10 +26366,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "scantrad-vf.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27185,7 +26411,7 @@
       "nsfw": 0,
       "domain": "starboundscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "6958297225666389056": {
@@ -27214,10 +26440,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "sekaikomik.mom",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27317,10 +26541,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "cypheroscans.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27363,10 +26585,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "plumacomics.cloud",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27390,10 +26610,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "gooffansub.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27448,10 +26666,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "shibamanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27601,10 +26817,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "visorkoi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27647,10 +26861,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "sirenkomik.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27700,10 +26912,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "crunchyscan.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27727,10 +26937,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "immortalupdates.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27856,10 +27064,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manhwaraw.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27883,10 +27089,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "projetoscanlator.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27922,10 +27126,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "sushiscan.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -27980,10 +27182,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "erisscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -28001,7 +27201,7 @@
       "nsfw": 0,
       "domain": "bakaman.net",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "7267491895505856696": {
@@ -28012,7 +27212,7 @@
       "nsfw": 0,
       "domain": "yd-comics.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "7276031357538379431": {
@@ -28110,10 +27310,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "tatakaescan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -28138,7 +27336,7 @@
       "nsfw": 0,
       "domain": "phetruyen.vip",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -28156,7 +27354,7 @@
       "nsfw": 0,
       "domain": "scansmangas.me",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "7317326350988863047": {
@@ -28186,7 +27384,7 @@
       "nsfw": 0,
       "domain": "phetruyen.vip",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "7328594960091535432": {
@@ -28353,10 +27551,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "genzupdates.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -28399,10 +27595,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "manhwaden.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -28420,7 +27614,7 @@
       "nsfw": 0,
       "domain": "manhwanew.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "7418784480186149141": {
@@ -28466,10 +27660,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "haremscann.es",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -28543,10 +27735,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "porncomix.online",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -28624,7 +27814,7 @@
       "nsfw": 1,
       "domain": "hentai3z.cc",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -28718,10 +27908,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikav.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -28739,7 +27927,7 @@
       "nsfw": 0,
       "domain": "ladyestelarscan.com.br",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "7533210681705529466": {
@@ -28868,10 +28056,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lectorunitoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -28941,7 +28127,7 @@
       "nsfw": 0,
       "domain": "hikariscan.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -28977,10 +28163,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.tarotscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29017,7 +28201,7 @@
       "nsfw": 0,
       "domain": "mangacrazy.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -29066,10 +28250,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "alterkaiscans.my.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29094,7 +28276,7 @@
       "nsfw": 0,
       "domain": "mangascan-fr.net",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "7713332514084384978": {
@@ -29155,7 +28337,7 @@
       "nsfw": 0,
       "domain": "olyteconscans.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -29172,10 +28354,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "argoscomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29199,10 +28379,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "teenmanhua.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29245,10 +28423,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "templetoons.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29272,10 +28448,8 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "falcoscan.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29367,7 +28541,7 @@
       "nsfw": 0,
       "domain": "jpmangas.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "7817108636375764582": {
@@ -29378,7 +28552,7 @@
       "nsfw": 0,
       "domain": "franxxmangas.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -29414,10 +28588,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lectorhub.j5z.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -29434,10 +28606,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "legionscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29462,7 +28632,7 @@
       "nsfw": 0,
       "domain": "otsugami.id",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "7849977061084682679": {
@@ -29472,10 +28642,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.tilkiscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29500,7 +28668,7 @@
       "nsfw": 0,
       "domain": "frscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "7850641826358118318": {
@@ -29511,7 +28679,7 @@
       "nsfw": 0,
       "domain": "timenaight.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29579,7 +28747,7 @@
       "nsfw": 0,
       "domain": "zandynofansub.aishiteru.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -29672,10 +28840,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "lekmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29718,10 +28884,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "gremorymangas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29745,10 +28909,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "toontaku.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29803,10 +28965,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "valkyriescan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29906,10 +29066,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tonizu.top",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -29959,10 +29117,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "toonily.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30018,7 +29174,7 @@
       "nsfw": 0,
       "domain": "mangaowlnet.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "8036167423689503081": {
@@ -30040,10 +29196,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "asurascans.us",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30087,7 +29241,7 @@
       "nsfw": 0,
       "domain": "copypastescan.xyz",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "8062705055979744270": {
@@ -30109,10 +29263,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "arthurscan.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "200",
@@ -30136,10 +29288,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "treemanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30263,10 +29413,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "limitedtimeproject.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30290,10 +29438,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "scambertraslator.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30360,10 +29506,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "lunarx.to",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30387,10 +29531,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "tumanhwas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30415,7 +29557,7 @@
       "nsfw": 0,
       "domain": "scansmangas.me",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "8182348442430934537": {
@@ -30437,10 +29579,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "pointzerotoons.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30465,7 +29605,7 @@
       "nsfw": 0,
       "domain": "elevenscanlator.blogspot.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "http404",
         "http_code": "404",
@@ -30494,10 +29634,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.seraphmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30521,10 +29659,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "golgebahcesi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30549,7 +29685,7 @@
       "nsfw": 0,
       "domain": "ghostfansub.co",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -30642,10 +29778,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "zinchangmanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30777,7 +29911,7 @@
       "nsfw": 0,
       "domain": "mangaonline.blog",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "reset",
         "http_code": "000",
@@ -30795,7 +29929,7 @@
       "nsfw": 0,
       "domain": "spiderscans.xyz",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -30813,10 +29947,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "manhwaland.asia",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30840,10 +29972,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "isekaikomik.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30867,10 +29997,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "laviniafansub.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30926,7 +30054,7 @@
       "nsfw": 0,
       "domain": "flixscans.net",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "8390623784793102030": {
@@ -30937,7 +30065,7 @@
       "nsfw": 0,
       "domain": "flixscans.org",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "8400532630224716727": {
@@ -30947,10 +30075,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "cosmic-scans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -30975,7 +30101,7 @@
       "nsfw": 0,
       "domain": "laidbackscans.org",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "8430776217561870927": {
@@ -31067,7 +30193,7 @@
       "nsfw": 0,
       "domain": "manga18.me",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -31195,10 +30321,8 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "adulto.seinagi.org.es",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -31223,7 +30347,7 @@
       "nsfw": 0,
       "domain": "manhwa18.cc",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -31241,10 +30365,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "komikmu.icu",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -31300,7 +30422,7 @@
       "nsfw": 0,
       "domain": "zevep.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "8527269860460256743": {
@@ -31311,7 +30433,7 @@
       "nsfw": 0,
       "domain": "clubinari.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -31329,7 +30451,7 @@
       "nsfw": 0,
       "domain": "clubinari.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -31460,10 +30582,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "eleceedturkiye.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -31500,7 +30620,7 @@
       "nsfw": 0,
       "domain": "infamous-scans.com",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "8595121624957657926": {
@@ -31510,10 +30630,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "zenithscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "http5xx",
         "http_code": "503",
@@ -31564,7 +30682,7 @@
       "nsfw": 0,
       "domain": "manhwaclub.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -31644,10 +30762,8 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "prismahentai.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -31766,10 +30882,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "hentaixyuri.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -31867,10 +30981,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "leitor.kamisama.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -31895,7 +31007,7 @@
       "nsfw": 0,
       "domain": "komiksan.link",
       "packages": [],
-      "state": "dead",
+      "state": "unknown",
       "dead": true
     },
     "8722072517629445249": {
@@ -31905,10 +31017,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "www.yaoifanclub.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -31944,10 +31054,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "rinkocomics.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -31990,10 +31098,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "harmony-scan.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32018,7 +31124,7 @@
       "nsfw": 0,
       "domain": "1stkissmanga.org",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -32036,7 +31142,7 @@
       "nsfw": 0,
       "domain": "1stkissmanga.mom",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -32084,10 +31190,8 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "shirodoujin.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32142,10 +31246,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "zinchanmanga.mobi",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32289,10 +31391,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "webdexscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32410,7 +31510,7 @@
       "nsfw": 1,
       "domain": "alliedfansub.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -32489,10 +31589,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangaportali.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32517,7 +31615,7 @@
       "nsfw": 1,
       "domain": "alliedfansub.net",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -32535,7 +31633,7 @@
       "nsfw": 0,
       "domain": "burningscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -32572,7 +31670,7 @@
       "nsfw": 1,
       "domain": "jiangzaitoon.icu",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "http",
         "http_code": "502",
@@ -32620,10 +31718,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "reaper-scans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32647,10 +31743,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "japscans.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32750,10 +31844,8 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "welovemanga.one",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32778,7 +31870,7 @@
       "nsfw": 1,
       "domain": "euphoriascan.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32822,10 +31914,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "site.modescanlator.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32849,10 +31939,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikmu.top",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32876,10 +31964,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikrealm.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -32922,10 +32008,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "nemesisscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "http404",
         "http_code": "404",
@@ -33030,10 +32114,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "whalemanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -33084,7 +32166,7 @@
       "nsfw": 0,
       "domain": "winterscan.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -33102,7 +32184,7 @@
       "nsfw": 0,
       "domain": "altayscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "pending",
       "health": {
         "status": "ssl",
         "http_code": "000",
