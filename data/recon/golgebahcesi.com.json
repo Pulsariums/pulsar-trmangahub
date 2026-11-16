@@ -1,5 +1,5 @@
 {
- "site": "https://golgebahcesi.com",
+ "site": "https://golgebahcesi.com/manga/duk-hanesinin-savas-kurdu/bolum/chapter-57",
  "calls": [
   {
    "tag": "home",
@@ -12,14 +12,6 @@
   },
   {
    "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794696415_7131d126bbb8665f954b8e0fe1f526dd.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794668160_e1ef79bb2e6978fc8b0e204bf2e474f1.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
    "image": "https://c3.skycdn.online/golge/general/1788809914_4dcf9653e8dadcbed584dfed23a0d9b9.png?w=1280&q=75"
   },
   {
@@ -28,11 +20,12 @@
   },
   {
    "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794747237_b1369c168c11b645a6e1943b08935729.webp?w=480&q=50"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794747237_b1369c168c11b645a6e1943b08935729.webp?w=192&q=75"
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/devid/nonce",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"b\":14,\"n\":\"tol361.yUYU77Gnb3zk4Hvj.14._l5Ryq--U1dTLu9E\"}"
   },
   {
    "tag": "home",
@@ -45,113 +38,12 @@
   },
   {
    "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794655259_08dd9a9acaa7fad3c712cb62383edeaf.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1787185398_9c06e0d978f42896b3f8b915fa8e283f.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series/webtoon-karakteri-na-kang-lim/cover.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794658147_fb0b85c742ae26da07c80cdffd6be287.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1791180865_e4b91f6c849529f49e51635576833cae.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series/akademide-hayatta-kalma-yollari/cover.jpg?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series/kotulerin-efendisi/cover.jpg?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1791622506_e86677b2ae07441d039c80188ac22190.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/games/policy",
+   "url": "https://api.golgebahcesi.com/api/comments?targetId=6afa1b9a82d804a50a8aaa5f&targetType=CHAPTER&page=1&sort=newest",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"enabled\":true,\"privateAllowed\":true,\"minLevel\":0,\"minCoins\":0,\"minAccountAgeHours\":0,\"paid\":true,\"dailyFeeLimit\":10000,\"commissionPercent\":15,\"payoutSplit\":[100],\"official\":[{\"id\":\"serbest\",\"name\":\"Serbest\",\"fee\":0,\"min\":2,\"max\":8,\"score\":5},{\"id\":\"bronz\",\"name\":\"Bronz\",\"fee\":100,\"min\":2,\"max\":4,\"score\":5},{\"id\":\"gumus\",\"name\":\"Gümüş\",\"fee\":500,\"min\":2,\"max\":4,\"score\":5},{\"id\":\"altin\",\"name\":\"Altın\",\"fee\":1000,\"min\":2,\"max\":4,\"score\":7}],\"user\":{\"feeOptions\":[50,100,250,500],\"commissionPercent\":15,\"payoutSplit\":[100],\"minLevel\":0,\"minAccountAgeHours\":168,\"maxPaidPerDay\":5,\"privatePaid\":true}}"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1788537032_6a4c3eb9f634d34be23af32219df30f2.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/uploads/items/shadow_essence_128x128.png"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794519866_d4a0e20e2ff6d8b342a9e8d8825dc41d.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1789155940_a5c71874827680fbd1ff12cbc69b9b7a.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1788646553_8721509a4d972424b0cb7936cc703e13.webp?w=192&q=75"
-  },
-  {
-   "tag": "home",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/games/quests",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"enabled\":true,\"dailyRewardCap\":4150,\"loggedIn\":false,\"eligible\":false,\"todayEarned\":0,\"quests\":[{\"id\":\"gunluk-isinma\",\"title\":\"Isınma turu\",\"metric\":\"matches\",\"target\":1,\"period\":\"daily\",\"reward\":350,\"xp\":30,\"progress\":0,\"claimed\":false,\"resetsAt\":\"2026-11-16T21:00:00Z\"},{\"id\":\"gunluk-uc-mac\",\"title\":\"Günün üç maçı\",\"metric\":\"matches\",\"target\":3,\"period\":\"daily\",\"reward\":300,\"xp\":50,\"progress\":0,\"claimed\":false,\"resetsAt\":\"2026-11-16T21:00:00Z\"},{\"id\":\"gunluk-zafer\",\"title\":\"Günün zaferi\",\"metric\":\"wins\",\"target\":1,\"period\":\"daily\",\"reward\":350,\"xp\":50,\"progress\":0,\"claimed\":false,\"resetsAt\":\"2026-11-16T21:00:00Z\"},{\"id\":\"gunluk-avci\",\"title\":\"Avcı\",\"metric\":\"kills\",\"target\":8,\"period\":\"da"
-  },
-  {
-   "tag": "home",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/general",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
-  },
-  {
-   "tag": "home",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/recommendations/series?limit=12",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"recommendations\":[{\"series_id\":\"6a4b7c8c7ea7633cec0465b6\",\"slug\":\"son-seviye-caylak\",\"title\":\"Son Seviye Çaylak\",\"cover\":\"https://c3.skycdn.online/golge/series/son-seviye-caylak/cover.webp\",\"genres\":[\"Aksiyon\",\"Komedi\",\"Fantastik\",\"Macera\"],\"rating\":9.6,\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"score\":0.24668331084393727,\"reason\":\"content\",\"reason_txt\":\"Beğenebileceğini düşündük\"},{\"series_id\":\"6a4b7c8c7ea7633cec0465b5\",\"slug\":\"gel-beni-al\",\"title\":\"Gel Beni Al\",\"cover\":\"https://c3.skycdn.online/golge/series/gel-beni-al/cover.webp\",\"genres\":[\"Aksiyon\",\"Komedi\",\"Fantastik\",\"Macera\",\"Sistem\"],\"rating\":9.6,\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"score\":0.24665544374878262,\"reason\":\"content\",\"reason_txt"
-  },
-  {
-   "tag": "home",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/series/trending?period=weekly&limit=10",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"count\":10,\"period\":\"weekly\",\"series\":[{\"id\":\"6aaec3ea934ea95ffe199f30\",\"title\":\"Tamteçhizat\",\"slug\":\"tamtechizat\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1789852672_5e75ee481d2d3f2ee7bbe48bdd247095.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.3,\"genres\":[\"Aksiyon\",\"Macera\",\"Komedi\",\"Fantastik\",\"Oyun\"],\"chapterCount\":0,\"viewCount\":70494,\"latestChapters\":[{\"number\":348}],\"trendScore\":505317,\"readCount\":167247},{\"id\":\"6af75d7af2cab2bd998b4e08\",\"title\":\"Düşmüş Hanenin İblisi\",\"slug\":\"dusmus-hanenin-iblisi\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.2,\""
-  },
-  {
-   "tag": "home",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/suggestions/top?limit=3",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"data\":[{\"id\":\"6a84c2245ac85daa53c9ede9\",\"title\":\"Yetenek Yutan Sihirbaz\",\"alternativeTitles\":[\"talent swallowing magician\"],\"description\":\"hiçbir site güncele gelmemiş ama okunur\",\"userId\":\"6a21cf0674c7670767c56c3f\",\"userSnapshot\":{\"username\":\"alucart\",\"displayName\":\"alucart alucart\",\"avatar\":\"\",\"role\":\"user\",\"level\":1},\"upvotes\":251,\"downvotes\":43,\"score\":208,\"status\":\"pending\",\"createdAt\":\"2026-08-18T20:35:48.952Z\",\"updatedAt\":\"2026-11-15T22:33:53.192Z\"},{\"id\":\"6a93134b2d66921397cc2bd8\",\"title\":\"Ultra-Alternate Character\",\"alternativeTitles\":[\"Ultra Alter\"],\"description\":\"Asura Scansın kapanma dönemine denk geldiği devam ettirmeyen bir seri. VRMMORP oyunundaki bir sistem hatası yüzünden "
+   "body": "{\"data\":[{\"id\":\"6afaa42e654c0737d93dfe62\",\"targetId\":\"6afa1b9a82d804a50a8aaa5f\",\"targetType\":\"CHAPTER\",\"userId\":\"6ad33d0148dd0045042f8c67\",\"userSnapshot\":{\"username\":\"Tryigidi\",\"displayName\":\"Tryigidi\",\"avatar\":\"https://c3.skycdn.online/golge/uploads/image/golge.webp\",\"role\":\"tester\",\"level\":6,\"badges\":[{\"type\":\"ROLE\",\"label\":\"Tester\",\"color\":\"#3b82f6\"}]},\"content\":\"Elinize sağlık\",\"contentType\":\"text\",\"spoiler\":false,\"isDeleted\":false,\"replyCount\":0,\"reactionCounts\":{\"like\":0,\"dislike\":0},\"createdAt\":\"2026-11-16T06:35:26.603Z\",\"updatedAt\":\"2026-11-16T06:35:26.603Z\",\"isLiked\":false,\"isDisliked\":false}],\"meta\":{\"hasMore\":false,\"page\":1,\"total\":1}}"
   },
   {
    "tag": "home",
@@ -165,6 +57,51 @@
   {
    "tag": "home",
    "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"active\":false,\"items\":[]}"
+  },
+  {
+   "tag": "home",
+   "method": "POST",
+   "url": "https://api.golgebahcesi.com/api/devid/identify",
+   "status": 200,
+   "ct": "application/json",
+   "post": "{\"n\":\"tol361.yUYU77Gnb3zk4Hvj.14._l5Ryq--U1dTLu9E\",\"c\":\"1623\",\"p\":\"rYnZk7rLlOWu_fsLTNlka3x8t1zjC-_XrmpUBwEJsJdH72sS8n7V4pEDQzkBEwdTYhIO-LY9hgdscfpms177oasr4nD8NaKqQoSmFpOegC49XRc43nM2NLICt39QtzFq_99X4",
+   "body": "{\"s\":\"new\",\"t\":\"YbeZf5CJWTkQfLmiTJMyww.tol32p.CPm2gOdcH2q-UsZmGv0YGA\"}"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/settings/general",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/reactions/summary?targetId=6afa1b9a82d804a50a8aaa5f",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"summary\":{\"ANGRY\":0,\"FUNNY\":0,\"LOVE\":0,\"SAD\":0,\"SURPRISED\":0,\"UPVOTE\":1},\"userReaction\":\"\"}"
+  },
+  {
+   "tag": "home",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/settings/comment-rules",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"accent\":\"#dc2626\",\"enabled\":true,\"icon\":\"rules\",\"intro\":\"Yazılmayan Kurallarada Dikkat Edin.\",\"items\":[{\"text\":\"1. Saygılı Olun\\nKüfür, aşağılama, kişisel saldırı ve taciz yasaktır.\\nFarklı görüşlere karşı saygılı olun.\",\"italic\":false,\"underline\":false,\"motion\":\"none\"},{\"text\":\"2. Spam Yapmayın\\nAynı yorumu tekrar tekrar göndermeyin.\\nGereksiz şekilde emoji, harf veya sembol doldurmayın.\\nReklam, tanıtım ve başka sitelere yönlendiren spam yorumlar yasaktır.\",\"italic\":false,\"underline\":false,\"motion\":\"none\"},{\"text\":\"3. Spoiler Kuralları\\nHenüz ilgili bölümde gerçekleşmemiş olayları spoiler olarak paylaşmayın.\\nSpoiler içeren yorumlarınızı SPOILER işareti atın gözükmesin.\",\"italic\":false,\""
+  },
+  {
+   "tag": "home",
+   "method": "GET",
    "url": "https://api.golgebahcesi.com/api/auth/me",
    "status": 401,
    "ct": "application/json",
@@ -174,109 +111,80 @@
   {
    "tag": "home",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
+   "url": "https://api.golgebahcesi.com/api/ads?page=chapter&type=modal",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"active\":false,\"items\":[]}"
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"chapter\",\"slot\":\"\",\"type\":\"modal\"}"
   },
   {
    "tag": "home",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_hero",
+   "url": "https://api.golgebahcesi.com/api/ads?page=chapter&type=banner",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"home\",\"slot\":\"home_after_hero\",\"type\":\"slot\"}"
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"chapter\",\"slot\":\"\",\"type\":\"banner\"}"
   },
   {
    "tag": "home",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_suggestions",
+   "url": "https://api.golgebahcesi.com/api/ads?page=chapter&type=slot&slot=chapter_end",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"home\",\"slot\":\"home_after_suggestions\",\"type\":\"slot\"}"
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"chapter\",\"slot\":\"chapter_end\",\"type\":\"slot\"}"
   },
   {
    "tag": "home",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_latest",
+   "url": "https://api.golgebahcesi.com/api/ads?page=chapter&type=slot&slot=chapter_start",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"home\",\"slot\":\"home_after_latest\",\"type\":\"slot\"}"
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"chapter\",\"slot\":\"chapter_start\",\"type\":\"slot\"}"
   },
   {
    "tag": "home",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=modal",
+   "url": "https://api.golgebahcesi.com/api/settings/chat",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"home\",\"slot\":\"\",\"type\":\"modal\"}"
+   "body": "{\"boxBgMode\":\"transparent\",\"enabled\":true,\"maxMessageLength\":200,\"pinned\":{\"text\":\"Bazı mangalar puf oldu geri gelcek ama başka bi şekilde.\",\"messageId\":\"6af778b805a14244aec2936c\",\"pinnedBy\":\"6a21cefa74c7670767c55399\",\"pinnedAt\":\"2026-11-13T20:53:15.895Z\"},\"voice\":{\"enabled\":true,\"maxSeconds\":60}}"
   },
   {
    "tag": "home",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_popular",
-   "status": 200,
+   "url": "https://api.golgebahcesi.com/api/chapters/duk-hanesinin-savas-kurdu/chapter-57/manifest",
+   "status": 403,
    "ct": "application/json",
    "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"home\",\"slot\":\"home_after_popular\",\"type\":\"slot\"}"
+   "body": "{\"code\":\"CHAPTER_LOCKED\",\"error\":\"Bu bölüm kilitli\",\"lock\":{\"type\":\"coin\",\"coinCost\":3000,\"source\":\"rolling\",\"freeAfter\":4}}"
   },
   {
    "tag": "home",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=banner",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"home\",\"slot\":\"\",\"type\":\"banner\"}"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1787185398_9c06e0d978f42896b3f8b915fa8e283f.webp?w=256&q=75"
   },
   {
    "tag": "home",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/devid/nonce",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"b\":14,\"n\":\"tol2yh.5T_3IIRhVYN6fKZJ.14.1xT7wWHOkYNuwv4t\"}"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794519866_d4a0e20e2ff6d8b342a9e8d8825dc41d.webp?w=256&q=75"
   },
   {
    "tag": "home",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_chat",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"home\",\"slot\":\"home_after_chat\",\"type\":\"slot\"}"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1789155940_a5c71874827680fbd1ff12cbc69b9b7a.webp?w=256&q=75"
   },
   {
    "tag": "home",
-   "method": "POST",
-   "url": "https://api.golgebahcesi.com/api/devid/identify",
-   "status": 200,
-   "ct": "application/json",
-   "post": "{\"n\":\"tol2yh.5T_3IIRhVYN6fKZJ.14.1xT7wWHOkYNuwv4t\",\"c\":\"33203\",\"p\":\"yDUosmRYmLR8MmkoPNS8uQ2cWsqg26NxngoR0BgM947a0-yTctZDP_Qqc-sPacCn20cO2_bFNRfuBy-W8_esShhuN1QSO5Ji450jrFvu0NwxQKK0OYKTeB_-CQYTKtXJ-qYK",
-   "body": "{\"s\":\"new\",\"t\":\"U246aq9flsB7uxjNK3S6IQ.tol2v5.I3zefguQB0NWrbvqn85e8w\"}"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1788537032_6a4c3eb9f634d34be23af32219df30f2.webp?w=256&q=75"
   },
   {
    "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793637906_ff9dbac0d78e0042261376f4e4b14e3b.webp?w=192&q=75"
+   "image": "https://c3.skycdn.online/golge/uploads/image/golge.webp"
   },
   {
    "tag": "home",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794696415_7131d126bbb8665f954b8e0fe1f526dd.webp?w=480&q=50"
-  },
-  {
-   "tag": "list:series",
-   "method": "POST",
-   "url": "https://api.golgebahcesi.com/api/analytics/events",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": ""
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1788646553_8721509a4d972424b0cb7936cc703e13.webp?w=256&q=75"
   },
   {
    "tag": "list:series",
@@ -307,11 +215,11 @@
   {
    "tag": "list:series",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
-   "status": 200,
+   "url": "https://api.golgebahcesi.com/api/auth/me",
+   "status": 401,
    "ct": "application/json",
    "post": "",
-   "body": "{\"active\":false,\"items\":[]}"
+   "body": "{\"error\":\"Unauthorized access\"}"
   },
   {
    "tag": "list:series",
@@ -325,29 +233,11 @@
   {
    "tag": "list:series",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/auth/me",
-   "status": 401,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"error\":\"Unauthorized access\"}"
-  },
-  {
-   "tag": "list:series",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/general",
+   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
-  },
-  {
-   "tag": "list:series",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=banner",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
+   "body": "{\"active\":false,\"items\":[]}"
   },
   {
    "tag": "list:series",
@@ -361,11 +251,20 @@
   {
    "tag": "list:series",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/chat",
+   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=banner",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"boxBgMode\":\"transparent\",\"enabled\":true,\"maxMessageLength\":200,\"pinned\":{\"text\":\"Bazı mangalar puf oldu geri gelcek ama başka bi şekilde.\",\"messageId\":\"6af778b805a14244aec2936c\",\"pinnedBy\":\"6a21cefa74c7670767c55399\",\"pinnedAt\":\"2026-11-13T20:53:15.895Z\"},\"voice\":{\"enabled\":true,\"maxSeconds\":60}}"
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
+  },
+  {
+   "tag": "list:series",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/settings/general",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
   },
   {
    "tag": "list:manga",
@@ -382,39 +281,11 @@
   },
   {
    "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794747237_b1369c168c11b645a6e1943b08935729.webp?w=192&q=75"
-  },
-  {
-   "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794696415_7131d126bbb8665f954b8e0fe1f526dd.webp?w=192&q=75"
-  },
-  {
-   "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794668160_e1ef79bb2e6978fc8b0e204bf2e474f1.webp?w=192&q=75"
-  },
-  {
-   "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794658147_fb0b85c742ae26da07c80cdffd6be287.webp?w=192&q=75"
-  },
-  {
-   "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794655259_08dd9a9acaa7fad3c712cb62383edeaf.webp?w=192&q=75"
-  },
-  {
-   "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp?w=192&q=75"
-  },
-  {
-   "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794519866_d4a0e20e2ff6d8b342a9e8d8825dc41d.webp?w=192&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794519866_d4a0e20e2ff6d8b342a9e8d8825dc41d.webp?w=256&q=75"
   },
   {
    "tag": "list:manga",
    "image": "https://c3.skycdn.online/golge/general/1788809914_4dcf9653e8dadcbed584dfed23a0d9b9.png?w=1280&q=75"
-  },
-  {
-   "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793891383_d5211d35e9c94b2a7720e8a36e7b7010.png?w=160&q=75"
   },
   {
    "tag": "list:manga",
@@ -427,7 +298,15 @@
   },
   {
    "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794515983_ffde6e19e5e7c7290f2f39b197c48262.webp?w=160&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793878933_3ab692ad9afa6f9026eff9a1619f258f.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793630452_7eb67fe0d1f1e73b0b67797c8e7062f9.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793899142_3eb6ef68d7819b7dc545357292750e26.webp?w=160&q=75"
   },
   {
    "tag": "list:manga",
@@ -435,27 +314,23 @@
   },
   {
    "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793565029_69c4f9c76d06c709b7d7a5db0e7d6b1a.png?w=160&q=75"
-  },
-  {
-   "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793897195_586892967d5ccb9dab09193fd6442c10.webp?w=160&q=75"
-  },
-  {
-   "tag": "list:manga",
    "image": "https://c3.skycdn.online/golge/series-thumbnail/1793643229_3c3b02a2f5e5c4774fec43a47c8a6865.webp?w=160&q=75"
   },
   {
    "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793878933_3ab692ad9afa6f9026eff9a1619f258f.webp?w=160&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794449892_f51cfff193c08a5f50c2220143b9f39c.webp?w=160&q=75"
   },
   {
    "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794350014_5b740182681a65903c9e74fe0411029c.webp?w=160&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793891383_d5211d35e9c94b2a7720e8a36e7b7010.png?w=160&q=75"
   },
   {
    "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793899142_3eb6ef68d7819b7dc545357292750e26.webp?w=160&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794515983_ffde6e19e5e7c7290f2f39b197c48262.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793897195_586892967d5ccb9dab09193fd6442c10.webp?w=160&q=75"
   },
   {
    "tag": "list:manga",
@@ -467,11 +342,35 @@
   },
   {
    "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793630452_7eb67fe0d1f1e73b0b67797c8e7062f9.webp?w=160&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794350014_5b740182681a65903c9e74fe0411029c.webp?w=160&q=75"
   },
   {
    "tag": "list:manga",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794449892_f51cfff193c08a5f50c2220143b9f39c.webp?w=160&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794655259_08dd9a9acaa7fad3c712cb62383edeaf.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793565029_69c4f9c76d06c709b7d7a5db0e7d6b1a.png?w=160&q=75"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794747237_b1369c168c11b645a6e1943b08935729.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794658147_fb0b85c742ae26da07c80cdffd6be287.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794668160_e1ef79bb2e6978fc8b0e204bf2e474f1.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:manga",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794696415_7131d126bbb8665f954b8e0fe1f526dd.webp?w=160&q=75"
   },
   {
    "tag": "list:manga",
@@ -485,20 +384,47 @@
   {
    "tag": "list:manga",
    "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"active\":false,\"items\":[]}"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/settings/general",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/series/trending?period=weekly&limit=10",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"count\":10,\"period\":\"weekly\",\"series\":[{\"id\":\"6aaec3ea934ea95ffe199f30\",\"title\":\"Tamteçhizat\",\"slug\":\"tamtechizat\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1789852672_5e75ee481d2d3f2ee7bbe48bdd247095.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.3,\"genres\":[\"Aksiyon\",\"Macera\",\"Komedi\",\"Fantastik\",\"Oyun\"],\"chapterCount\":0,\"viewCount\":70494,\"latestChapters\":[{\"number\":348}],\"trendScore\":505317,\"readCount\":167247},{\"id\":\"6af75d7af2cab2bd998b4e08\",\"title\":\"Düşmüş Hanenin İblisi\",\"slug\":\"dusmus-hanenin-iblisi\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.2,\""
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"canAccessNovels\":false,\"crates\":true,\"games\":true,\"id\":\"feature_flags\",\"luckyWheel\":false,\"novels\":true,\"novelsAccess\":\"vip\",\"novelsVipTiers\":[],\"shop\":true,\"vipMembership\":true}"
+  },
+  {
+   "tag": "list:manga",
+   "method": "GET",
    "url": "https://api.golgebahcesi.com/api/auth/me",
    "status": 401,
    "ct": "application/json",
    "post": "",
    "body": "{\"error\":\"Unauthorized access\"}"
-  },
-  {
-   "tag": "list:manga",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=series_list&type=modal",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"series_list\",\"slot\":\"\",\"type\":\"modal\"}"
   },
   {
    "tag": "list:manga",
@@ -512,38 +438,20 @@
   {
    "tag": "list:manga",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/general",
+   "url": "https://api.golgebahcesi.com/api/ads?page=series_list&type=modal",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"series_list\",\"slot\":\"\",\"type\":\"modal\"}"
   },
   {
-   "tag": "list:manga",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
+   "tag": "list:webtoon",
+   "method": "POST",
+   "url": "https://api.golgebahcesi.com/api/analytics/events",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"active\":false,\"items\":[]}"
-  },
-  {
-   "tag": "list:manga",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"canAccessNovels\":false,\"crates\":true,\"games\":true,\"id\":\"feature_flags\",\"luckyWheel\":false,\"novels\":true,\"novelsAccess\":\"vip\",\"novelsVipTiers\":[],\"shop\":true,\"vipMembership\":true}"
-  },
-  {
-   "tag": "list:manga",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/series/trending?period=weekly&limit=10",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"count\":10,\"period\":\"weekly\",\"series\":[{\"id\":\"6aaec3ea934ea95ffe199f30\",\"title\":\"Tamteçhizat\",\"slug\":\"tamtechizat\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1789852672_5e75ee481d2d3f2ee7bbe48bdd247095.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.3,\"genres\":[\"Aksiyon\",\"Macera\",\"Komedi\",\"Fantastik\",\"Oyun\"],\"chapterCount\":0,\"viewCount\":70494,\"latestChapters\":[{\"number\":348}],\"trendScore\":505317,\"readCount\":167247},{\"id\":\"6af75d7af2cab2bd998b4e08\",\"title\":\"Düşmüş Hanenin İblisi\",\"slug\":\"dusmus-hanenin-iblisi\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.2,\""
+   "body": ""
   },
   {
    "tag": "list:webtoon",
@@ -551,27 +459,27 @@
   },
   {
    "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794747237_b1369c168c11b645a6e1943b08935729.webp?w=192&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794747237_b1369c168c11b645a6e1943b08935729.webp?w=160&q=75"
   },
   {
    "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp?w=192&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp?w=160&q=75"
   },
   {
    "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794696415_7131d126bbb8665f954b8e0fe1f526dd.webp?w=192&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794696415_7131d126bbb8665f954b8e0fe1f526dd.webp?w=160&q=75"
   },
   {
    "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794668160_e1ef79bb2e6978fc8b0e204bf2e474f1.webp?w=192&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794668160_e1ef79bb2e6978fc8b0e204bf2e474f1.webp?w=160&q=75"
   },
   {
    "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794658147_fb0b85c742ae26da07c80cdffd6be287.webp?w=192&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794658147_fb0b85c742ae26da07c80cdffd6be287.webp?w=160&q=75"
   },
   {
    "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794655259_08dd9a9acaa7fad3c712cb62383edeaf.webp?w=192&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794655259_08dd9a9acaa7fad3c712cb62383edeaf.webp?w=160&q=75"
   },
   {
    "tag": "list:webtoon",
@@ -600,7 +508,7 @@
   },
   {
    "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1791314705_1962c4defacb46ba9d39d311d0af3ca3.webp?w=160&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1787010015_52b3e5aef47da7528c1060bc5b9acfc1.webp?w=160&q=75"
   },
   {
    "tag": "list:webtoon",
@@ -608,31 +516,15 @@
   },
   {
    "tag": "list:webtoon",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1790740291_7e5b5413f36ce0d54e8018f03980c951.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:webtoon",
    "image": "https://c3.skycdn.online/golge/series-thumbnail/1788103688_c865bdcd2e933e40a0147c6f2c7853b9.webp?w=160&q=75"
   },
   {
    "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1792186215_fd96bf82b86e99a067c200216d117241.webp?w=160&q=75"
-  },
-  {
-   "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1787825473_47878a398089a2b2e598b280d3b6f23a.webp?w=160&q=75"
-  },
-  {
-   "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1785749197_2321c5e2b86e0ea9b7f51285b76f9745.webp?w=160&q=75"
-  },
-  {
-   "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1791320894_0167cd18b8e5490012505da55c1bf3a7.webp?w=160&q=75"
-  },
-  {
-   "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1787010015_52b3e5aef47da7528c1060bc5b9acfc1.webp?w=160&q=75"
-  },
-  {
-   "tag": "list:webtoon",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1790740291_7e5b5413f36ce0d54e8018f03980c951.webp?w=160&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1791314705_1962c4defacb46ba9d39d311d0af3ca3.webp?w=160&q=75"
   },
   {
    "tag": "list:webtoon",
@@ -640,7 +532,23 @@
   },
   {
    "tag": "list:webtoon",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1785749197_2321c5e2b86e0ea9b7f51285b76f9745.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1792186215_fd96bf82b86e99a067c200216d117241.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:webtoon",
    "image": "https://c3.skycdn.online/golge/series-thumbnail/1791980970_81c93af8bed4a56399db93b0138bd85e.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1791320894_0167cd18b8e5490012505da55c1bf3a7.webp?w=160&q=75"
+  },
+  {
+   "tag": "list:webtoon",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1787825473_47878a398089a2b2e598b280d3b6f23a.webp?w=160&q=75"
   },
   {
    "tag": "list:webtoon",
@@ -663,11 +571,11 @@
   {
    "tag": "list:webtoon",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
-   "status": 200,
+   "url": "https://api.golgebahcesi.com/api/auth/me",
+   "status": 401,
    "ct": "application/json",
    "post": "",
-   "body": "{\"active\":false,\"items\":[]}"
+   "body": "{\"error\":\"Unauthorized access\"}"
   },
   {
    "tag": "list:webtoon",
@@ -690,11 +598,11 @@
   {
    "tag": "list:webtoon",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/auth/me",
-   "status": 401,
+   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
+   "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"error\":\"Unauthorized access\"}"
+   "body": "{\"active\":false,\"items\":[]}"
   },
   {
    "tag": "list:webtoon",
@@ -716,16 +624,25 @@
   },
   {
    "tag": "list:webtoons",
+   "method": "POST",
+   "url": "https://api.golgebahcesi.com/api/analytics/events",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": ""
+  },
+  {
+   "tag": "list:webtoons",
+   "image": "https://c3.skycdn.online/golge/general/1783459515_6f9ab57eedea77c5c4aea227785b7348.webp?w=96&q=85"
+  },
+  {
+   "tag": "list:webtoons",
    "method": "GET",
    "url": "https://golgebahcesi.com/cdn-cgi/speculation",
    "status": 200,
    "ct": "application/speculationrules+json",
    "post": "",
    "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
-  },
-  {
-   "tag": "list:webtoons",
-   "image": "https://c3.skycdn.online/golge/general/1783459515_6f9ab57eedea77c5c4aea227785b7348.webp?w=96&q=85"
   },
   {
    "tag": "list:webtoons",
@@ -743,11 +660,47 @@
   {
    "tag": "list:webtoons",
    "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/settings/general",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"active\":false,\"items\":[]}"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"canAccessNovels\":false,\"crates\":true,\"games\":true,\"id\":\"feature_flags\",\"luckyWheel\":false,\"novels\":true,\"novelsAccess\":\"vip\",\"novelsVipTiers\":[],\"shop\":true,\"vipMembership\":true}"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
    "url": "https://api.golgebahcesi.com/api/auth/me",
    "status": 401,
    "ct": "application/json",
    "post": "",
    "body": "{\"error\":\"Unauthorized access\"}"
+  },
+  {
+   "tag": "list:webtoons",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=banner",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
   },
   {
    "tag": "list:webtoons",
@@ -759,42 +712,6 @@
    "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"modal\"}"
   },
   {
-   "tag": "list:webtoons",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=banner",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
-  },
-  {
-   "tag": "list:webtoons",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"canAccessNovels\":false,\"crates\":true,\"games\":true,\"id\":\"feature_flags\",\"luckyWheel\":false,\"novels\":true,\"novelsAccess\":\"vip\",\"novelsVipTiers\":[],\"shop\":true,\"vipMembership\":true}"
-  },
-  {
-   "tag": "list:webtoons",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/general",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
-  },
-  {
-   "tag": "list:webtoons",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"active\":false,\"items\":[]}"
-  },
-  {
    "tag": "list:browse",
    "image": "https://c3.skycdn.online/golge/general/1783459515_6f9ab57eedea77c5c4aea227785b7348.webp?w=96&q=85"
   },
@@ -823,20 +740,11 @@
   {
    "tag": "list:browse",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/general",
-   "status": 200,
+   "url": "https://api.golgebahcesi.com/api/auth/me",
+   "status": 401,
    "ct": "application/json",
    "post": "",
-   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
-  },
-  {
-   "tag": "list:browse",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"canAccessNovels\":false,\"crates\":true,\"games\":true,\"id\":\"feature_flags\",\"luckyWheel\":false,\"novels\":true,\"novelsAccess\":\"vip\",\"novelsVipTiers\":[],\"shop\":true,\"vipMembership\":true}"
+   "body": "{\"error\":\"Unauthorized access\"}"
   },
   {
    "tag": "list:browse",
@@ -850,11 +758,11 @@
   {
    "tag": "list:browse",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/auth/me",
-   "status": 401,
+   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
+   "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"error\":\"Unauthorized access\"}"
+   "body": "{\"canAccessNovels\":false,\"crates\":true,\"games\":true,\"id\":\"feature_flags\",\"luckyWheel\":false,\"novels\":true,\"novelsAccess\":\"vip\",\"novelsVipTiers\":[],\"shop\":true,\"vipMembership\":true}"
   },
   {
    "tag": "list:browse",
@@ -864,6 +772,15 @@
    "ct": "application/json",
    "post": "",
    "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
+  },
+  {
+   "tag": "list:browse",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/settings/general",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
   },
   {
    "tag": "list:browse",
@@ -885,16 +802,16 @@
   },
   {
    "tag": "list:searchqa",
+   "image": "https://c3.skycdn.online/golge/general/1783459515_6f9ab57eedea77c5c4aea227785b7348.webp?w=96&q=85"
+  },
+  {
+   "tag": "list:searchqa",
    "method": "GET",
    "url": "https://golgebahcesi.com/cdn-cgi/speculation",
    "status": 200,
    "ct": "application/speculationrules+json",
    "post": "",
    "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
-  },
-  {
-   "tag": "list:searchqa",
-   "image": "https://c3.skycdn.online/golge/general/1783459515_6f9ab57eedea77c5c4aea227785b7348.webp?w=96&q=85"
   },
   {
    "tag": "list:searchqa",
@@ -908,6 +825,33 @@
    "ct": "application/json",
    "post": "",
    "body": "[{\"id\":\"6aa07d1a7231bdf21e48c46e\",\"title\":\"Kod\",\"slug\":\"redeem\",\"content\":\"\",\"description\":\"\",\"kind\":\"\",\"active\":false,\"showInNav\":false,\"navOrder\":2,\"createdAt\":\"0001-01-01T00:00:00Z\",\"updatedAt\":\"0001-01-01T00:00:00Z\"},{\"id\":\"6a2db64f2c94594ece75f38a\",\"title\":\"Güncellemeler\",\"slug\":\"guncellemeler\",\"content\":\"\",\"description\":\"\",\"kind\":\"\",\"active\":false,\"showInNav\":false,\"navOrder\":4,\"createdAt\":\"0001-01-01T00:00:00Z\",\"updatedAt\":\"0001-01-01T00:00:00Z\"}]"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/settings/general",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"canAccessNovels\":false,\"crates\":true,\"games\":true,\"id\":\"feature_flags\",\"luckyWheel\":false,\"novels\":true,\"novelsAccess\":\"vip\",\"novelsVipTiers\":[],\"shop\":true,\"vipMembership\":true}"
+  },
+  {
+   "tag": "list:searchqa",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"active\":false,\"items\":[]}"
   },
   {
    "tag": "list:searchqa",
@@ -926,33 +870,6 @@
    "ct": "application/json",
    "post": "",
    "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"modal\"}"
-  },
-  {
-   "tag": "list:searchqa",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/general",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
-  },
-  {
-   "tag": "list:searchqa",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"active\":false,\"items\":[]}"
-  },
-  {
-   "tag": "list:searchqa",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"canAccessNovels\":false,\"crates\":true,\"games\":true,\"id\":\"feature_flags\",\"luckyWheel\":false,\"novels\":true,\"novelsAccess\":\"vip\",\"novelsVipTiers\":[],\"shop\":true,\"vipMembership\":true}"
   },
   {
    "tag": "list:searchqa",
@@ -992,20 +909,20 @@
   {
    "tag": "list:apiseries",
    "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/auth/me",
+   "status": 401,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"error\":\"Unauthorized access\"}"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
    "url": "https://api.golgebahcesi.com/api/settings/general",
    "status": 200,
    "ct": "application/json",
    "post": "",
    "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
-  },
-  {
-   "tag": "list:apiseries",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"active\":false,\"items\":[]}"
   },
   {
    "tag": "list:apiseries",
@@ -1019,20 +936,11 @@
   {
    "tag": "list:apiseries",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/auth/me",
-   "status": 401,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"error\":\"Unauthorized access\"}"
-  },
-  {
-   "tag": "list:apiseries",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=banner",
+   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
+   "body": "{\"active\":false,\"items\":[]}"
   },
   {
    "tag": "list:apiseries",
@@ -1042,6 +950,15 @@
    "ct": "application/json",
    "post": "",
    "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"modal\"}"
+  },
+  {
+   "tag": "list:apiseries",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=banner",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
   },
   {
    "tag": "list:apimanga",
@@ -1081,20 +998,11 @@
   {
    "tag": "list:apimanga",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/auth/me",
-   "status": 401,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"error\":\"Unauthorized access\"}"
-  },
-  {
-   "tag": "list:apimanga",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/general",
+   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
+   "body": "{\"canAccessNovels\":false,\"crates\":true,\"games\":true,\"id\":\"feature_flags\",\"luckyWheel\":false,\"novels\":true,\"novelsAccess\":\"vip\",\"novelsVipTiers\":[],\"shop\":true,\"vipMembership\":true}"
   },
   {
    "tag": "list:apimanga",
@@ -1108,20 +1016,20 @@
   {
    "tag": "list:apimanga",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
+   "url": "https://api.golgebahcesi.com/api/settings/general",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"canAccessNovels\":false,\"crates\":true,\"games\":true,\"id\":\"feature_flags\",\"luckyWheel\":false,\"novels\":true,\"novelsAccess\":\"vip\",\"novelsVipTiers\":[],\"shop\":true,\"vipMembership\":true}"
+   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
   },
   {
    "tag": "list:apimanga",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=banner",
-   "status": 200,
+   "url": "https://api.golgebahcesi.com/api/auth/me",
+   "status": 401,
    "ct": "application/json",
    "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
+   "body": "{\"error\":\"Unauthorized access\"}"
   },
   {
    "tag": "list:apimanga",
@@ -1133,62 +1041,18 @@
    "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"modal\"}"
   },
   {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/uploads/items/shadow_essence_128x128.png"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794747237_b1369c168c11b645a6e1943b08935729.webp?w=160&q=50"
+   "tag": "list:apimanga",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=banner",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
   },
   {
    "tag": "detail",
    "method": "GET",
    "url": "https://api.golgebahcesi.com/api/pages/nav",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": ""
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/games/quests",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": ""
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/recommendations/series?limit=12",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": ""
-  },
-  {
-   "tag": "detail",
-   "method": "POST",
-   "url": "https://api.golgebahcesi.com/api/analytics/events",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": ""
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": ""
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
    "status": 200,
    "ct": "application/json",
    "post": "",
@@ -1205,75 +1069,136 @@
   },
   {
    "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=banner",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": ""
+   "image": "https://c3.skycdn.online/golge/general/1783459515_6f9ab57eedea77c5c4aea227785b7348.webp?w=96&q=85"
   },
   {
    "tag": "detail",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_latest",
+   "url": "https://golgebahcesi.com/cdn-cgi/speculation",
    "status": 200,
-   "ct": "application/json",
+   "ct": "application/speculationrules+json",
    "post": "",
-   "body": ""
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/general/1788809914_4dcf9653e8dadcbed584dfed23a0d9b9.png?w=1280&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794747237_b1369c168c11b645a6e1943b08935729.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794668160_e1ef79bb2e6978fc8b0e204bf2e474f1.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794658147_fb0b85c742ae26da07c80cdffd6be287.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794655259_08dd9a9acaa7fad3c712cb62383edeaf.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794584870_fa41493345648c85e14173a227e7ee5a.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794515983_ffde6e19e5e7c7290f2f39b197c48262.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794449892_f51cfff193c08a5f50c2220143b9f39c.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794417328_2e0eae2d699ae57b36796df693a8c0b8.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794410461_2c698eeb64da7a2c8b662e78ae08d3d8.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794350014_5b740182681a65903c9e74fe0411029c.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793899142_3eb6ef68d7819b7dc545357292750e26.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793878933_3ab692ad9afa6f9026eff9a1619f258f.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793643229_3c3b02a2f5e5c4774fec43a47c8a6865.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793630452_7eb67fe0d1f1e73b0b67797c8e7062f9.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793565029_69c4f9c76d06c709b7d7a5db0e7d6b1a.png?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794519866_d4a0e20e2ff6d8b342a9e8d8825dc41d.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793304683_da5aa599dd88602fb101d990f4dbe9ec.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793387136_f29eb35f397b02316a464452b2dfd56b.webp?w=160&q=75"
+  },
+  {
+   "tag": "detail",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793443964_41bf5a08e75f00730c47e0a6b7ac7cb3.webp?w=160&q=75"
   },
   {
    "tag": "detail",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/games/policy",
+   "url": "https://api.golgebahcesi.com/api/pages/nav",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": ""
+   "body": "[{\"id\":\"6aa07d1a7231bdf21e48c46e\",\"title\":\"Kod\",\"slug\":\"redeem\",\"content\":\"\",\"description\":\"\",\"kind\":\"\",\"active\":false,\"showInNav\":false,\"navOrder\":2,\"createdAt\":\"0001-01-01T00:00:00Z\",\"updatedAt\":\"0001-01-01T00:00:00Z\"},{\"id\":\"6a2db64f2c94594ece75f38a\",\"title\":\"Güncellemeler\",\"slug\":\"guncellemeler\",\"content\":\"\",\"description\":\"\",\"kind\":\"\",\"active\":false,\"showInNav\":false,\"navOrder\":4,\"createdAt\":\"0001-01-01T00:00:00Z\",\"updatedAt\":\"0001-01-01T00:00:00Z\"}]"
   },
   {
    "tag": "detail",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=modal",
-   "status": 200,
+   "url": "https://api.golgebahcesi.com/api/auth/me",
+   "status": 401,
    "ct": "application/json",
    "post": "",
-   "body": ""
+   "body": "{\"error\":\"Unauthorized access\"}"
   },
   {
    "tag": "detail",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_hero",
+   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": ""
+   "body": "{\"active\":false,\"items\":[]}"
   },
   {
    "tag": "detail",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_suggestions",
+   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=banner",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": ""
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_chat",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": ""
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_popular",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": ""
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
   },
   {
    "tag": "detail",
@@ -1282,16 +1207,7 @@
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": ""
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/suggestions/top?limit=3",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": ""
+   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
   },
   {
    "tag": "detail",
@@ -1300,79 +1216,16 @@
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": ""
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/general/1783459515_6f9ab57eedea77c5c4aea227785b7348.webp?w=96&q=85"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/general/1788809914_4dcf9653e8dadcbed584dfed23a0d9b9.png?w=1280&q=75"
+   "body": "{\"count\":10,\"period\":\"weekly\",\"series\":[{\"id\":\"6aaec3ea934ea95ffe199f30\",\"title\":\"Tamteçhizat\",\"slug\":\"tamtechizat\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1789852672_5e75ee481d2d3f2ee7bbe48bdd247095.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.3,\"genres\":[\"Aksiyon\",\"Macera\",\"Komedi\",\"Fantastik\",\"Oyun\"],\"chapterCount\":0,\"viewCount\":70494,\"latestChapters\":[{\"number\":348}],\"trendScore\":506038,\"readCount\":167350},{\"id\":\"6af75d7af2cab2bd998b4e08\",\"title\":\"Düşmüş Hanenin İblisi\",\"slug\":\"dusmus-hanenin-iblisi\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.2,\""
   },
   {
    "tag": "detail",
    "method": "GET",
-   "url": "https://golgebahcesi.com/cdn-cgi/speculation",
-   "status": 200,
-   "ct": "application/speculationrules+json",
-   "post": "",
-   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794519866_d4a0e20e2ff6d8b342a9e8d8825dc41d.webp?w=256&q=75"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794747237_b1369c168c11b645a6e1943b08935729.webp?w=192&q=85"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1789155940_a5c71874827680fbd1ff12cbc69b9b7a.webp?w=256&q=75"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1787185398_9c06e0d978f42896b3f8b915fa8e283f.webp?w=256&q=75"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1788537032_6a4c3eb9f634d34be23af32219df30f2.webp?w=256&q=75"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/pages/nav",
+   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=modal",
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "[{\"id\":\"6aa07d1a7231bdf21e48c46e\",\"title\":\"Kod\",\"slug\":\"redeem\",\"content\":\"\",\"description\":\"\",\"kind\":\"\",\"active\":false,\"showInNav\":false,\"navOrder\":2,\"createdAt\":\"0001-01-01T00:00:00Z\",\"updatedAt\":\"0001-01-01T00:00:00Z\"},{\"id\":\"6a2db64f2c94594ece75f38a\",\"title\":\"Güncellemeler\",\"slug\":\"guncellemeler\",\"content\":\"\",\"description\":\"\",\"kind\":\"\",\"active\":false,\"showInNav\":false,\"navOrder\":4,\"createdAt\":\"0001-01-01T00:00:00Z\",\"updatedAt\":\"0001-01-01T00:00:00Z\"}]"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/auth/me",
-   "status": 401,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"error\":\"Unauthorized access\"}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/recommendations/series/duk-hanesinin-savas-kurdu/similar?limit=6",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"recommendations\":[{\"series_id\":\"6af8736fd8bd0bf8a6f9cd05\",\"slug\":\"cikisin-bedeli\",\"title\":\"Çıkışın Bedeli\",\"cover\":\"https://c3.skycdn.online/golge/series-thumbnail/1794668160_e1ef79bb2e6978fc8b0e204bf2e474f1.webp\",\"genres\":[\"Aksiyon\",\"Macera\",\"Fantastik\",\"Gizem\"],\"rating\":9.7,\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"score\":0.4995793016711725,\"reason\":\"content\",\"reason_txt\":\"Beğenebileceğini düşündük\"},{\"series_id\":\"6aa42c5f60efaf82159f5924\",\"slug\":\"entrikaci-iblisin-fisiltilari\",\"title\":\"Entrikacı İblisin Fısıltıları\",\"cover\":\"https://c3.skycdn.online/golge/series-thumbnail/1789147272_8dd181139fabd67ac225dcb6c5c52859.webp\",\"genres\":[\"Reenkarnasyon\",\"Fantastik\",\"Aksiyon\",\"Büyü\",\"Orta Çağ\"],\"rati"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1791230302_d2edbdaeb858cf2c431ea0cc447ab1ec.jpg?w=256&q=75"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794668160_e1ef79bb2e6978fc8b0e204bf2e474f1.webp?w=256&q=75"
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"modal\"}"
   },
   {
    "tag": "detail",
@@ -1382,202 +1235,6 @@
    "ct": "application/json",
    "post": "",
    "body": "{\"canAccessNovels\":false,\"crates\":true,\"games\":true,\"id\":\"feature_flags\",\"luckyWheel\":false,\"novels\":true,\"novelsAccess\":\"vip\",\"novelsVipTiers\":[],\"shop\":true,\"vipMembership\":true}"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1792792014_1ac9c6e3575b5c26b58b678f693bc114.webp?w=256&q=75"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/general",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"adBodyScript\":\"\",\"adHeadScript\":\"\\u003cscript type=\\\"text/javascript\\\"\\u003e\\n(function(d, w, u){\\nconst webId = 21558;\\nconst interval = 250;\\nconst waitTime = 10;\\nvar n = d.getElementsByTagName(\\\"script\\\")[0],\\ns = d.createElement(\\\"script\\\");\\ns.type = \\\"text/javascript\\\";\\ns.async = true;\\ns.src = u;\\ns.onload = function(){\\nif(waitTime \\u003e 0){\\nsetTimeout(function(){\\nconst pc = new PC(webId, interval);\\n}, (waitTime \\u003e 10 ? 10 : waitTime) * 1000)\\n}else{\\nconst pc = new PC(webId, interval);\\n}\\n};\\nif(w.opera == \\\"[object Opera]\\\"){\\nd.addEventListener(\\\"DOMContentLoaded\\\", function(){\\nn.parentNode.insertBefore(s, n);\\n}, false);\\n}else{\\nn.parentNode.insertBefore(s, n);\\n}\\"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793643229_3c3b02a2f5e5c4774fec43a47c8a6865.webp?w=256&q=75"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=series&type=modal",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"series\",\"slot\":\"\",\"type\":\"modal\"}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/my-rating",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"rating\":0}"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1790269546_647ca49accbb9729770cf9d5e1a8ea3c.webp?w=256&q=75"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=series&type=banner",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"series\",\"slot\":\"\",\"type\":\"banner\"}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/bookmarks/check/6af9a6bad8bd0bf8a6286361",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"isBookmarked\":false}"
-  },
-  {
-   "tag": "detail",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1789147272_8dd181139fabd67ac225dcb6c5c52859.webp?w=256&q=75"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/broadcasts/active",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"active\":false,\"items\":[]}"
-  },
-  {
-   "tag": "detail",
-   "method": "POST",
-   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/view",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"message\":\"View count incremented\"}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/my-rating",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"rating\":0}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/series/duk-hanesinin-savas-kurdu/blessings/leaderboard",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"data\":{\"seriesRank\":0,\"totalPoints\":0,\"totalCount\":0,\"topFans\":[],\"recentItems\":[]},\"status\":\"success\"}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/bookmarks/check/6af9a6bad8bd0bf8a6286361",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"isBookmarked\":false}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/my-rating",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"rating\":0}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/bookmarks/check/6af9a6bad8bd0bf8a6286361",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"isBookmarked\":false}"
-  },
-  {
-   "tag": "detail",
-   "method": "POST",
-   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/view",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"message\":\"View count incremented\"}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/bookmarks/check/6af9a6bad8bd0bf8a6286361",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"isBookmarked\":false}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/reactions/summary?targetId=6af9a6bad8bd0bf8a6286361",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"summary\":{\"ANGRY\":2,\"FUNNY\":0,\"LOVE\":0,\"SAD\":0,\"SURPRISED\":0,\"UPVOTE\":1},\"userReaction\":\"\"}"
-  },
-  {
-   "tag": "detail",
-   "method": "POST",
-   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/view",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"message\":\"View count incremented\"}"
-  },
-  {
-   "tag": "detail",
-   "method": "POST",
-   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/view",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"message\":\"View count incremented\"}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/settings/comment-rules",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"accent\":\"#dc2626\",\"enabled\":true,\"icon\":\"rules\",\"intro\":\"Yazılmayan Kurallarada Dikkat Edin.\",\"items\":[{\"text\":\"1. Saygılı Olun\\nKüfür, aşağılama, kişisel saldırı ve taciz yasaktır.\\nFarklı görüşlere karşı saygılı olun.\",\"italic\":false,\"underline\":false,\"motion\":\"none\"},{\"text\":\"2. Spam Yapmayın\\nAynı yorumu tekrar tekrar göndermeyin.\\nGereksiz şekilde emoji, harf veya sembol doldurmayın.\\nReklam, tanıtım ve başka sitelere yönlendiren spam yorumlar yasaktır.\",\"italic\":false,\"underline\":false,\"motion\":\"none\"},{\"text\":\"3. Spoiler Kuralları\\nHenüz ilgili bölümde gerçekleşmemiş olayları spoiler olarak paylaşmayın.\\nSpoiler içeren yorumlarınızı SPOILER işareti atın gözükmesin.\",\"italic\":false,\""
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/comments?targetId=6af9a6bad8bd0bf8a6286361&targetType=SERIES&page=1&sort=newest",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"data\":null,\"meta\":{\"hasMore\":false,\"page\":1,\"total\":0}}"
-  },
-  {
-   "tag": "detail",
-   "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/my-rating",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"rating\":0}"
   },
   {
    "tag": "reader",
@@ -1598,36 +1255,7 @@
   },
   {
    "tag": "reader",
-   "method": "GET",
-   "url": "https://golgebahcesi.com/cdn-cgi/speculation",
-   "status": 200,
-   "ct": "application/speculationrules+json",
-   "post": "",
-   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
-  },
-  {
-   "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1785749197_2321c5e2b86e0ea9b7f51285b76f9745.webp?w=96&q=60"
-  },
-  {
-   "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793630452_7eb67fe0d1f1e73b0b67797c8e7062f9.webp?w=96&q=60"
-  },
-  {
-   "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1791320894_0167cd18b8e5490012505da55c1bf3a7.webp?w=96&q=60"
-  },
-  {
-   "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1791314705_1962c4defacb46ba9d39d311d0af3ca3.webp?w=96&q=60"
-  },
-  {
-   "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794747237_b1369c168c11b645a6e1943b08935729.webp?w=96&q=60"
-  },
-  {
-   "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1792186215_fd96bf82b86e99a067c200216d117241.webp?w=96&q=60"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793012622_0f5bc861039b75449d899403a0fb1c0c.webp?w=96&q=60"
   },
   {
    "tag": "reader",
@@ -1635,15 +1263,23 @@
   },
   {
    "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794410461_2c698eeb64da7a2c8b662e78ae08d3d8.webp?w=96&q=60"
-  },
-  {
-   "tag": "reader",
    "image": "https://c3.skycdn.online/golge/series-thumbnail/1788103688_c865bdcd2e933e40a0147c6f2c7853b9.webp?w=96&q=60"
   },
   {
    "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp?w=96&q=60"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1791320894_0167cd18b8e5490012505da55c1bf3a7.webp?w=96&q=60"
+  },
+  {
+   "tag": "reader",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1792186215_fd96bf82b86e99a067c200216d117241.webp?w=96&q=60"
+  },
+  {
+   "tag": "reader",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1785749197_2321c5e2b86e0ea9b7f51285b76f9745.webp?w=96&q=60"
+  },
+  {
+   "tag": "reader",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794747237_b1369c168c11b645a6e1943b08935729.webp?w=96&q=60"
   },
   {
    "tag": "reader",
@@ -1651,15 +1287,27 @@
   },
   {
    "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793012622_0f5bc861039b75449d899403a0fb1c0c.webp?w=96&q=60"
-  },
-  {
-   "tag": "reader",
    "image": "https://c3.skycdn.online/golge/series-thumbnail/1791980970_81c93af8bed4a56399db93b0138bd85e.webp?w=96&q=60"
   },
   {
    "tag": "reader",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1793630452_7eb67fe0d1f1e73b0b67797c8e7062f9.webp?w=96&q=60"
+  },
+  {
+   "tag": "reader",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp?w=96&q=60"
+  },
+  {
+   "tag": "reader",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794410461_2c698eeb64da7a2c8b662e78ae08d3d8.webp?w=96&q=60"
+  },
+  {
+   "tag": "reader",
    "image": "https://c3.skycdn.online/golge/series-thumbnail/1789172869_9a030012c49b5950e7ac397b493ea165.webp?w=96&q=60"
+  },
+  {
+   "tag": "reader",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1791314705_1962c4defacb46ba9d39d311d0af3ca3.webp?w=96&q=60"
   },
   {
    "tag": "reader",
@@ -1672,6 +1320,19 @@
   {
    "tag": "reader",
    "method": "GET",
+   "url": "https://golgebahcesi.com/cdn-cgi/speculation",
+   "status": 200,
+   "ct": "application/speculationrules+json",
+   "post": "",
+   "body": "{\"tag\":\"cf-speed-brain\",\"prefetch\":[{\"eagerness\":\"conservative\",\"source\":\"document\",\"where\":{\"and\":[{\"href_matches\":\"/*\",\"relative_to\":\"document\"}]}}]}"
+  },
+  {
+   "tag": "reader",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794668160_e1ef79bb2e6978fc8b0e204bf2e474f1.webp?w=96&q=60"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
    "url": "https://api.golgebahcesi.com/api/pages/nav",
    "status": 200,
    "ct": "application/json",
@@ -1680,19 +1341,27 @@
   },
   {
    "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp?w=192&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp?w=160&q=75"
   },
   {
    "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794658147_fb0b85c742ae26da07c80cdffd6be287.webp?w=192&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794410461_2c698eeb64da7a2c8b662e78ae08d3d8.webp?w=160&q=75"
   },
   {
    "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794655259_08dd9a9acaa7fad3c712cb62383edeaf.webp?w=192&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794584870_fa41493345648c85e14173a227e7ee5a.webp?w=160&q=75"
   },
   {
    "tag": "reader",
-   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794668160_e1ef79bb2e6978fc8b0e204bf2e474f1.webp?w=256&q=75"
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794658147_fb0b85c742ae26da07c80cdffd6be287.webp?w=160&q=75"
+  },
+  {
+   "tag": "reader",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794655259_08dd9a9acaa7fad3c712cb62383edeaf.webp?w=160&q=75"
+  },
+  {
+   "tag": "reader",
+   "image": "https://c3.skycdn.online/golge/series-thumbnail/1794668160_e1ef79bb2e6978fc8b0e204bf2e474f1.webp?w=160&q=75"
   },
   {
    "tag": "reader",
@@ -1701,7 +1370,7 @@
    "status": 200,
    "ct": "application/json",
    "post": "",
-   "body": "{\"count\":10,\"period\":\"weekly\",\"series\":[{\"id\":\"6aaec3ea934ea95ffe199f30\",\"title\":\"Tamteçhizat\",\"slug\":\"tamtechizat\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1789852672_5e75ee481d2d3f2ee7bbe48bdd247095.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.3,\"genres\":[\"Aksiyon\",\"Macera\",\"Komedi\",\"Fantastik\",\"Oyun\"],\"chapterCount\":0,\"viewCount\":70494,\"latestChapters\":[{\"number\":348}],\"trendScore\":505317,\"readCount\":167247},{\"id\":\"6af75d7af2cab2bd998b4e08\",\"title\":\"Düşmüş Hanenin İblisi\",\"slug\":\"dusmus-hanenin-iblisi\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.2,\""
+   "body": "{\"count\":10,\"period\":\"weekly\",\"series\":[{\"id\":\"6aaec3ea934ea95ffe199f30\",\"title\":\"Tamteçhizat\",\"slug\":\"tamtechizat\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1789852672_5e75ee481d2d3f2ee7bbe48bdd247095.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.3,\"genres\":[\"Aksiyon\",\"Macera\",\"Komedi\",\"Fantastik\",\"Oyun\"],\"chapterCount\":0,\"viewCount\":70494,\"latestChapters\":[{\"number\":348}],\"trendScore\":506038,\"readCount\":167350},{\"id\":\"6af75d7af2cab2bd998b4e08\",\"title\":\"Düşmüş Hanenin İblisi\",\"slug\":\"dusmus-hanenin-iblisi\",\"coverImage\":\"https://c3.skycdn.online/golge/series-thumbnail/1794596216_82c275ede530ff6b43369cee0e3dd5a1.webp\",\"type\":\"MANHWA\",\"status\":\"ONGOING\",\"rating\":9.2,\""
   },
   {
    "tag": "reader",
@@ -1742,20 +1411,20 @@
   {
    "tag": "reader",
    "method": "GET",
-   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=banner",
-   "status": 200,
-   "ct": "application/json",
-   "post": "",
-   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
-  },
-  {
-   "tag": "reader",
-   "method": "GET",
    "url": "https://api.golgebahcesi.com/api/ads?page=all&type=modal",
    "status": 200,
    "ct": "application/json",
    "post": "",
    "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"modal\"}"
+  },
+  {
+   "tag": "reader",
+   "method": "GET",
+   "url": "https://api.golgebahcesi.com/api/ads?page=all&type=banner",
+   "status": 200,
+   "ct": "application/json",
+   "post": "",
+   "body": "{\"ads\":[],\"id\":\"ads\",\"page\":\"all\",\"slot\":\"\",\"type\":\"banner\"}"
   }
  ],
  "errors": [],
@@ -1764,9 +1433,9 @@
   "cloudflare"
  ],
  "links": {
-  "series": "https://golgebahcesi.com/manga/duk-hanesinin-savas-kurdu",
+  "series": "https://golgebahcesi.com/tur/aksiyon",
   "chapter": "https://golgebahcesi.com/son-eklenen-bolumler"
  },
  "homeStatus": 200,
- "title": "Gölge Bahçesi - Manga Oku, Türkçe Manhwa ve Webtoon Oku"
+ "title": "Dük Hanesinin Savaş Kurdu (Reincarnated as the Grand Duke's Third Son) 57. Bölüm Oku | Gölge Bahçesi"
 }

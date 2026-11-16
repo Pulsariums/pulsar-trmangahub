@@ -1,20 +1,20 @@
 {
  "domain": "duckscans.com",
- "title": "DuckScans - Webtoon & Manga Oku",
+ "title": "Olgami Türkçe Oku – Tüm Bölümler | Duck Scans",
  "mode": "html",
  "list": {
-  "path": "/",
+  "path": "/series",
   "pageParam": "",
-  "item": "div.hw-new-series__card.flex-shrink-0.relative",
+  "item": "div.hw-charmed-card",
   "link": "a",
   "title": "img|attr:alt",
   "cover": "img@src",
-  "itemCount": 60
+  "itemCount": 42
  },
  "detail": {
-  "title": "",
-  "cover": "",
-  "description": "",
+  "title": "h1.font-bold",
+  "cover": "meta[property=\"og:image\"]@content",
+  "description": "meta[name=\"description\"]@content",
   "genres": "",
   "status": "",
   "chapterItem": "",
@@ -28,9 +28,9 @@
  },
  "api": [
   {
-   "url": "https://duckscans.com/api/telemetry/web-vitals",
-   "method": "POST",
-   "kind": "other"
+   "url": "https://duckscans.com/api/series/olgami",
+   "method": "GET",
+   "kind": "detail"
   },
   {
    "url": "https://duckscans.com/api/custom-scripts",
@@ -38,41 +38,56 @@
    "kind": "other"
   },
   {
-   "url": "https://duckscans.com/api/slider-bottom?t=1794813334835",
+   "url": "https://duckscans.com/api/chapters?series=olgami&limit=9999",
+   "method": "GET",
+   "kind": "detail"
+  },
+  {
+   "url": "https://duckscans.com/api/telemetry/web-vitals",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://duckscans.com/api/reactions/config",
    "method": "GET",
    "kind": "other"
   },
   {
-   "url": "https://duckscans.com/api/series?limit=20&sort=createdAt",
+   "url": "https://duckscans.com/api/reactions?seriesId=olgami",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://duckscans.com/api/comments?sortBy=newest&page=1&limit=10&seriesId=olgami",
    "method": "GET",
    "kind": "list"
   },
   {
-   "url": "https://duckscans.com/api/ads?position=home-left",
+   "url": "https://duckscans.com/api/favorites?seriesId=6a402018a41d811c93b7cdd6&count=true",
    "method": "GET",
-   "kind": "other"
-  },
-  {
-   "url": "https://duckscans.com/api/ads",
-   "method": "POST",
    "kind": "other"
   },
   {
    "url": "https://duckscans.com/api/admin/categories?names=true&active=true",
    "method": "GET",
    "kind": "other"
+  },
+  {
+   "url": "https://duckscans.com/api/series?limit=1000",
+   "method": "GET",
+   "kind": "list"
   }
  ],
  "confidence": {
   "list": 1,
-  "detail": 0,
+  "detail": 0.38,
   "reader": 0
  },
  "notes": [
-  "list: 60 items at /",
+  "list: 42 items at /series",
   "list link prefix: seri",
   "pagination: not detected",
-  "detail: series page not found",
+  "detail: no chapter group (>=3) found",
   "reader: no chapter image >=300px found"
  ]
 }

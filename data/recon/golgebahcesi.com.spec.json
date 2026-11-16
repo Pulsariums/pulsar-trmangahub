@@ -1,24 +1,24 @@
 {
  "domain": "golgebahcesi.com",
- "title": "Gölge Bahçesi - Manga Oku, Türkçe Manhwa ve Webtoon Oku",
+ "title": "Dük Hanesinin Savaş Kurdu (Reincarnated as the Grand Duke's Third Son) 57. Bölüm Oku | Gölge Bahçesi",
  "mode": "html",
  "list": {
-  "path": "/",
+  "path": "",
   "pageParam": "",
-  "item": "div.w-full.py-4.border-b",
-  "link": "a",
-  "title": "img|attr:alt",
-  "cover": "img@src",
-  "itemCount": 40
+  "item": "",
+  "link": "",
+  "title": "",
+  "cover": "",
+  "itemCount": 0
  },
  "detail": {
-  "title": "h1.text-xl.font-semibold.leading-tight",
+  "title": "h1.font-bold.text-white.leading-snug",
   "cover": "meta[property=\"og:image\"]@content",
   "description": "meta[name=\"description\"]@content",
   "genres": "",
   "status": "",
-  "chapterItem": "a.group.flex.items-center",
-  "chapterLink": "@href",
+  "chapterItem": "",
+  "chapterLink": "",
   "chapterTitle": ""
  },
  "reader": {
@@ -33,47 +33,22 @@
    "kind": "other"
   },
   {
+   "url": "https://api.golgebahcesi.com/api/devid/nonce",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
    "url": "https://api.golgebahcesi.com/api/pages/nav",
    "method": "GET",
    "kind": "other"
   },
   {
-   "url": "https://api.golgebahcesi.com/api/games/policy",
+   "url": "https://api.golgebahcesi.com/api/comments?targetId=6afa1b9a82d804a50a8aaa5f&targetType=CHAPTER&page=1&sort=newest",
    "method": "GET",
-   "kind": "other"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/games/quests",
-   "method": "GET",
-   "kind": "other"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/settings/general",
-   "method": "GET",
-   "kind": "other"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/recommendations/series?limit=12",
-   "method": "GET",
-   "kind": "list"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/series/trending?period=weekly&limit=10",
-   "method": "GET",
-   "kind": "detail"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/suggestions/top?limit=3",
-   "method": "GET",
-   "kind": "other"
+   "kind": "reader"
   },
   {
    "url": "https://api.golgebahcesi.com/api/settings/feature-flags",
-   "method": "GET",
-   "kind": "other"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/auth/me",
    "method": "GET",
    "kind": "other"
   },
@@ -83,57 +58,17 @@
    "kind": "other"
   },
   {
-   "url": "https://api.golgebahcesi.com/api/ads?page=home&type=slot&slot=home_after_hero",
-   "method": "GET",
-   "kind": "list"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/devid/nonce",
-   "method": "GET",
-   "kind": "other"
-  },
-  {
    "url": "https://api.golgebahcesi.com/api/devid/identify",
    "method": "POST",
    "kind": "other"
   },
   {
-   "url": "https://api.golgebahcesi.com/api/analytics/events",
-   "method": "POST",
-   "kind": "other"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/settings/chat",
+   "url": "https://api.golgebahcesi.com/api/settings/general",
    "method": "GET",
    "kind": "other"
   },
   {
-   "url": "https://api.golgebahcesi.com/api/recommendations/series/duk-hanesinin-savas-kurdu/similar?limit=6",
-   "method": "GET",
-   "kind": "detail"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/my-rating",
-   "method": "GET",
-   "kind": "detail"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/bookmarks/check/6af9a6bad8bd0bf8a6286361",
-   "method": "GET",
-   "kind": "other"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/series/6af9a6bad8bd0bf8a6286361/view",
-   "method": "POST",
-   "kind": "detail"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/series/duk-hanesinin-savas-kurdu/blessings/leaderboard",
-   "method": "GET",
-   "kind": "detail"
-  },
-  {
-   "url": "https://api.golgebahcesi.com/api/reactions/summary?targetId=6af9a6bad8bd0bf8a6286361",
+   "url": "https://api.golgebahcesi.com/api/reactions/summary?targetId=6afa1b9a82d804a50a8aaa5f",
    "method": "GET",
    "kind": "other"
   },
@@ -143,21 +78,44 @@
    "kind": "other"
   },
   {
-   "url": "https://api.golgebahcesi.com/api/comments?targetId=6af9a6bad8bd0bf8a6286361&targetType=SERIES&page=1&sort=newest",
+   "url": "https://api.golgebahcesi.com/api/auth/me",
    "method": "GET",
-   "kind": "list"
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/ads?page=chapter&type=modal",
+   "method": "GET",
+   "kind": "reader"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/settings/chat",
+   "method": "GET",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/chapters/duk-hanesinin-savas-kurdu/chapter-57/manifest",
+   "method": "GET",
+   "kind": "reader"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/analytics/events",
+   "method": "POST",
+   "kind": "other"
+  },
+  {
+   "url": "https://api.golgebahcesi.com/api/series/trending?period=weekly&limit=10",
+   "method": "GET",
+   "kind": "detail"
   }
  ],
  "confidence": {
-  "list": 1,
-  "detail": 0.63,
+  "list": 0,
+  "detail": 0.38,
   "reader": 0
  },
  "notes": [
-  "list: 40 items at /",
-  "list link prefix: manga",
-  "pagination: not detected",
-  "chapterLink \"@href\": item is the link itself",
+  "list: no repeated card group (>=6) found",
+  "detail: no chapter group (>=3) found",
   "reader: no chapter image >=300px found"
  ]
 }

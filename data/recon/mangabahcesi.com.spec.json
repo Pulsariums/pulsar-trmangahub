@@ -1,15 +1,15 @@
 {
  "domain": "mangabahcesi.com",
- "title": "Manga Oku – Türkçe Manga ve Webtoon | Manga Bahçesi",
+ "title": "Annemin Yanına Giderken Türkçe Manga Oku",
  "mode": "html",
  "list": {
-  "path": "/",
-  "pageParam": "",
-  "item": "div.owl-item",
+  "path": "/Tr/Manga/annemin-yanina-giderken/",
+  "pageParam": "page",
+  "item": "div.col-lg-4.col-md-4.col-sm-6",
   "link": "a",
   "title": "img|attr:alt",
   "cover": "img@src",
-  "itemCount": 12
+  "itemCount": 6
  },
  "detail": {
   "title": "h1",
@@ -44,9 +44,9 @@
   "reader": 0
  },
  "notes": [
-  "list: 12 items at /",
+  "list: 6 items at /Tr/Manga/annemin-yanina-giderken/",
   "list link prefix: Tr",
-  "pagination: not detected",
+  "pagination: ?page=N",
   "detail: no chapter group (>=3) found",
   "reader: no chapter image >=300px found"
  ]
