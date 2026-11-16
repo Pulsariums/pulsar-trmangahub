@@ -87,17 +87,23 @@ object EngineRegistry {
         while (cur != null && depth < 4) {
             val img = cur.selectFirst("img")
             if (img != null) {
-                val cand = sequenceOf("data-src", "data-lazy-src", "data-original", "src")
+                val cand = sequenceOf(
+                    "data-src", "data-lazy-src", "data-original", "data-lzl-src",
+                    "data-cc-src", "data-default-src", "data-nimg", "src",
+                )
                     .map { img.attr(it).trim() }
                     .firstOrNull { it.isNotEmpty() && !it.startsWith("data:") }
                     ?: img.attr("srcset").substringBefore(' ').trim().ifEmpty { null }
                 if (cand != null && !looksLikeBadge(cand)) return cand
             }
+            // Bazi temalar gorseli data-bg attribute'unda tutar (manhwa18).
+            cur.attr("data-bg").trim().takeIf { it.isNotEmpty() }?.let { return it }
             // Bazi temalar kapagi <img> yerine CSS background-image ile verir.
             backgroundImage(cur)?.let { if (!looksLikeBadge(it)) return it }
             cur.selectFirst("[style*=background-image]")?.let { node ->
                 backgroundImage(node)?.let { if (!looksLikeBadge(it)) return it }
             }
+            cur.selectFirst("[data-bg]")?.attr("data-bg")?.trim()?.takeIf { it.isNotEmpty() }?.let { return it }
             cur = cur.parent()
             depth++
         }
