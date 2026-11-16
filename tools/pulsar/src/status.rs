@@ -84,12 +84,15 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
     if e.dead {
         return Vec::new();
     }
-    // Cihaz testinde dusen kaynak hasarli sayilir: test havuzuna da girmez.
-    // Test havuzu yalnizca "henuz cihazda dogrulanmamis, calisma ihtimali olan"
-    // kaynaklari tasir; bilerek/kanitla bozuk olanlar hicbir pakete girmez.
+    // Ulasilamayan (ag/TLS/DNS) kaynak ayri tutulur: test havuzuna da girmez.
+    if e.unreachable {
+        return Vec::new();
+    }
+    // Cihaz testinde dusen kaynak hasarli sayilir; ancak ulasilabilir oldugu
+    // icin test havuzunda kalir ki duzeltilince yeniden dogrulanabilsin.
     let device_fail = e.device.as_ref().map(|p| p.status == "fail").unwrap_or(false);
     if device_fail {
-        return Vec::new();
+        return vec!["test".to_string()];
     }
     if e.state != "active" || !e.sorun.is_empty() {
         // Ayri test18 paketi yok: 18+ kaynak da test havuzuna duser, gorunen
@@ -111,6 +114,32 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
 pub fn recompute_state(e: &mut StatusEntry) {
     let device = e.device.as_ref().map(|p| p.status.as_str()).unwrap_or("");
     let health = e.health.as_ref().map(|p| p.status.as_str()).unwrap_or("");
+    e.unreachable = if device == "fail" {
+        const NEEDLES: [&str; 13] = [
+            "unknownhost",
+            "unable to resolve",
+            "sslhandshake",
+            "certpath",
+            "trust anchor",
+            "zaman aşımı",
+            "zaman asimi",
+            "timeout",
+            "connectexception",
+            "failed to connect",
+            "status=50",
+            "status=52",
+            "connection closed",
+        ];
+        let detail = e
+            .device
+            .as_ref()
+            .map(|p| p.detail.to_lowercase())
+            .unwrap_or_default();
+        NEEDLES.iter().any(|n| detail.contains(n))
+            || detail.contains("connection reset")
+    } else {
+        false
+    };
     e.state = if e.dead {
         "dead"
     } else if device == "pass" {
