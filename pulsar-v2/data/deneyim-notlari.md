@@ -210,3 +210,50 @@ Aynı görsel adresi 10 GET'in ~4'ünde 200, ~6'sında 403 dönüyor. User-Agent
 - **Cozulemeyenler**: Amanga `amip-proxy` referer/cerez/UA ile de 403; OpiaToon uye girisi istiyor; Kuroi sayfa isteginde stream reset; Anikiga engine parser admin-ajax 400; ShadowCeviri engine aramayi desteklemiyor; TilkiScans Cloudflare.
 - **Global/Turkce denetimi**: global paketlerde `lang=tr` kayit 0. Tek domain ortusmesi Nyx Scans: globalde Ingilizce engine parser, TR'de Turkce katalog kaydi; TR tarafinda eksik yok.
 - **Dogrulanmadi**: bu uc config degisikligi APK'da derlenmedi, cihazda test edilmedi. Telefona adb ile erisim yok; rapor dosyasi analiz edildi.
+
+## 19. Desen kataloğu: belirti → tamir (2026-11-16)
+
+240 cihaz hatasının tek tek `curl` ile ölçülmesinden çıkan tekrar eden desenler. Yeni bir kaynak düşünce önce buradaki belirtiye bakılır; her satır en az bir kez canlı ölçümle doğrulandı.
+
+| Belirti (cihaz/rapor) | Gerçek sebep | Tamir |
+|---|---|---|
+| `TANI ... sel=0 gen=0` (detayda 0 eşleşme) | `config` içinde `.__yok__` yer tutucusu, ya da ayarlar üst düzeyde | Yer tutucuyu sil (boş = motorun genel seçicisi); alanları `config` altına taşı |
+| `Kapak URL yok` | `parseList` dar zincir kullanıyordu (`data-src`/`src`) | Artık `coverOf`: `data-original`, `data-lzl-src`, `data-cc-src`, `data-default-src`, `srcset`, `data-bg`, `background-image`, 4 üst öğe |
+| `Sayfa listesi boş`, HTML'de `<img>` yok | Madara bölümleri `POST {detay}ajax/chapters/?t=1` HTML parçası | `chapterAjaxUrl: "{url}ajax/chapters/?t=1"` (motor desteği 1.6.119+) |
+| Bölüm sayfası 403 `Cf-Mitigated: challenge` | Cloudflare HTML'i kapatıyor, API açık | HTML'i bırak, JSON API'ye geç (§20) |
+| `?s=` arama 0 sonuç | WordPress araması `post_type` istiyor | `searchUrl: "https://site/?s={query}&post_type=wp-manga"` (mangazin) |
+| Arama sayfası SPA kabuğu (258 KB, 2 link) | Next.js/Vue; HTML'de sonuç yok | `searchUrl: ".../api/search?q={query}"` + `searchJsonItems/Url/Title/PathPrefix` (elftoon) |
+| POST arama gerekiyor | Madara `admin-ajax.php` | `searchMethod: "POST"`, `searchBody: "action=wp-manga-search-manga&title={query}"`, `searchJsonItems: "data"` (tilkiscans) |
+| `HTTP 404` ama site 200 | Eski URL kalıbı / yanlış slug | Gerçek detay linkini ana sayfadan al; `listPath` + `itemSelector` düzelt (7/11 vaka) |
+| `Connection reset` | Site ölü değil (34/41 PC'den 200) | Domain taşınması ve CDN/IPv6 ara; UA zaten Chrome/124 gönderiliyor |
+| `Zaman aşımı (20s)` | Çoğunlukla CF challenge veya 301 zinciri | CF ise `failed` bırak; 301 ise `baseUrl` güncelle |
+| Ana sayfa 200, `/manga/` 404 | Site yalnız ana sayfayı servis ediyor | Ölü işaretle (kalango.org) |
+| Domain park sayfası | `parklogic`, `sedo`, `bodis`, "Buy this domain", "Account Suspended" | `status: "dead"` + gerekçe (laviniafansub, cococomic) |
+| Site el değiştirmiş (başka dil/tür) | Domain satılmış | Ölü işaretle (speed-manga.com, lunarx.to) |
+| Vue/Next SPA, `/api/...` var | HTML'de liste yok, JSON var | `listJsonUrl` + `listJsonItems` + `listJsonUrlTemplate` + `listJsonCover` (stonescape) |
+
+**Ayrım kuralı**: "liste boş" üç ayrı hastalıktır ve tedavisi farklıdır — (a) `listPath` yanlış, (b) kart seçicisi 0 eşleşiyor, (c) sayfa JS ile doluyor. Üçünü ayırmadan config yazmak boşa gider; önce `grep -c` ile kart sayısı ölçülür.
+
+## 20. OkuToon vakası: CF'li HTML'i bırak, JSON'u al (2026-11-16)
+
+- **Belirti**: cihazda `pages` adımı 20 sn timeout; bölüm sayfası 403 `Cf-Mitigated: challenge` + `<title>Just a moment...</title>`. Liste ve detay 1 sn altında.
+- **Yanlış yol**: UA, Referer, HTTP/1.1 denemeleri — hepsi 403. Bu Cloudflare aşılabilir değil.
+- **Doğru yol**: site kendi okuyucusunu besleyen JSON ucunu açık bırakıyor:
+  `GET https://okutoon.com/api/v1/series/{slug}/chapters/{bolum}` → 200, `data.pages[].image_url`; görseller `cdn.okutoon.com` üzerinde ve başlık istemiyor.
+- **Config**: `pageApiUrl` (`{1}`,`{2}` yakalama grupları) + `pageApiIdPattern` + `pageApiItems: "data.pages"` (noktalı yol) + `pageApiFieldUrl: "image_url"`.
+- **Genel ders**: HTML 403 alan her sitede önce `grep -oE '"/api/[^"]*"'` ile uç aranır. Okuyucu görselleri çoğu sitede ayrı CDN'de ve CF koruması yok.
+
+## 21. Yerel test hattının gerçekleri (2026-11-16)
+
+- `pulsar sweep --apk ... --engine` **yalnız motor parser'larını** test eder (test APK'sında 9 kaynak); katalog (custom) kaynaklar listeye hiç girmez. CSV'deki `id` alanı her zaman sayısal hash'tir; metin id beklemek yanıltır.
+- `PulsarData.kt` **üretilen** dosyadır: `tools/pulsar/src/embed.rs` şablonundan yazılır. Kalıcı düzeltme şablona yapılır, yoksa bir sonraki `embed` ezer.
+- Masaüstünde `android.util.Base64` "bad base-64" atıyordu; `decode` artık boşluk temizleyip `java.util.Base64.getMimeDecoder()`'a düşüyor. Harness'ın katalog kaynaklarını görebilmesi için gerekliydi.
+- Kototoro masaüstü jar'larında `SourceFactory`/`MihonSourceRuntime` var; `javac` PrismLauncher runtime'ında. Yerel Mihon harness'ı bu ikisiyle kurulur (`tools/harness/`).
+- Test edilemeyen kaynak "temiz" sayılmaz: `pulsar status` içinde `unknown`/`pending` kalan her kayıt açık iştir.
+
+## 22. Yayın sayıları nasıl okunur (2026-11-16)
+
+- `catalogue.json` = bizim kayıtlarımız (553). `assets/catalogue.json` = `merge` sonrası yayına giren küme (437). `index.min.json` = paketlerdeki gerçek kaynak toplamı (478).
+- 478 > 437 çünkü paketler motor kaynaklarını da taşır; fark arıza değildir.
+- `pulsar embed` sayısı ile yayın indeksi ayrı şeylerdir: indeks `deadSources`/`deadHosts` ve `generate_repo.py` kapılarından geçer. Fark çıkınca `patches.json` içindeki listelere bakılır.
+- Elle `assets/patches.json` düzeltmesi kalıcı değildir; `06_prepare_assets.py` onu yeniden üretir.
