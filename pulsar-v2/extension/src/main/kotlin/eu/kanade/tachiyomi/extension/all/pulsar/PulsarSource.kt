@@ -13,6 +13,7 @@ import okhttp3.Protocol
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.Response
+import org.json.JSONArray
 import org.json.JSONObject
 import org.jsoup.Jsoup
 import java.util.concurrent.TimeUnit
@@ -384,7 +385,108 @@ class PulsarSource(
         return out
     }
 
+    // ---- Qwik düz (flat) durum çözümü ------------------------------------
+    // komikrealm.org Qwik ile yazılmış: bölüm sayfasında <img> yok, görseller
+    // <bölüm-url>/q-data.json yanıtında duruyor. Biçim:
+    //   {"_entry":"<b36>","_objs":[ ... ]}
+    // Kök: resolve(_entry). Nesne değerleri, dizi elemanları ve metinler base-36
+    // indekslerle _objs'e işaret eder; metin öneki kontrol karakteri ise atılır.
+    private fun qwikResolve(token: String, objs: JSONArray): Any? {
+        val idx = token.trim().toIntOrNull(36) ?: return null
+        if (idx < 0 || idx >= objs.length()) return null
+        return qwikValue(objs.opt(idx), objs)
+    }
+
+    private fun qwikValue(node: Any?, objs: JSONArray): Any? = when (node) {
+        is JSONObject -> {
+            val out = JSONObject()
+            val keys = node.keys()
+            while (keys.hasNext()) {
+                val k = keys.next()
+                val v = node.opt(k)
+                out.put(k, if (v is String) qwikResolve(v, objs) else qwikValue(v, objs))
+            }
+            out
+        }
+        is JSONArray -> {
+            val out = JSONArray()
+            for (i in 0 until node.length()) {
+                val v = node.opt(i)
+                out.put(if (v is String) qwikResolve(v, objs) else qwikValue(v, objs))
+            }
+            out
+        }
+        is String -> when {
+            node.isEmpty() -> node
+            node[0] == '\u0001' -> null
+            node[0] >= ' ' -> node
+            else -> node.substring(1)
+        }
+        else -> node
+    }
+
+    private fun qwikImageUrl(raw: String): String {
+        val u = if (raw.startsWith("http://")) "https://" + raw.removePrefix("http://") else raw
+        if (!u.startsWith("https://")) return u
+        val host = hostOf(u)
+        val direct = config.optString("pageQwikDirectHosts", "")
+            .split(',').map { it.trim().lowercase() }.filter { it.isNotEmpty() }
+        if (direct.any { host.contains(it) }) return u
+        val proxy = config.optString("pageQwikProxy", "")
+        if (proxy.isEmpty()) return u
+        return proxy + u.removePrefix("https://")
+    }
+
+    private fun qwikImages(text: String): List<String> {
+        val root = runCatching { JSONObject(text) }.getOrNull() ?: return emptyList()
+        val objs = root.optJSONArray("_objs") ?: return emptyList()
+        val entry = root.optString("_entry", "")
+        val state = qwikResolve(entry, objs) as? JSONObject ?: return emptyList()
+        val loaders = state.optJSONObject("loaders") ?: return emptyList()
+        var data: JSONObject? = null
+        val keys = loaders.keys()
+        while (keys.hasNext() && data == null) {
+            val loader = loaders.optJSONObject(keys.next()) ?: continue
+            if (loader.has("data")) data = loader.optJSONObject("data")
+        }
+        val chapters = data?.optJSONArray("chapters") ?: return emptyList()
+        val images = chapters.optJSONObject(0)?.optJSONObject("images") ?: return emptyList()
+        val out = ArrayList<String>(images.length())
+        val order = images.keys().asSequence().toList()
+            .sortedBy { it.toIntOrNull() ?: Int.MAX_VALUE }
+        for (key in order) {
+            val src = when (val v = images.opt(key)) {
+                is JSONObject -> v.optString("src").trim()
+                is String -> v.trim()
+                else -> ""
+            }
+            if (src.isEmpty()) continue
+            out.add(qwikImageUrl(src))
+        }
+        return out
+    }
+
+    private fun qwikPages(response: Response): List<Page> {
+        val text = response.body?.string().orEmpty()
+        val imageUrls = qwikImages(text)
+        if (imageUrls.isEmpty()) {
+            throw IllegalStateException("TANI-QWIK len=${text.length} ilk=${text.take(160)}")
+        }
+        // Referer bölüm sayfası olmalı: q-data.json değil.
+        val chapterUrl = response.request.url.toString().removeSuffix("/q-data.json")
+        return imageUrls.mapIndexed { index, imgUrl -> Page(index, chapterUrl, imgUrl) }
+    }
+
     override fun pageListRequest(chapter: SChapter): Request {
+        // Qwik siteleri bölüm verisini yan yanıtta veriyor: <sayfa>/q-data.json
+        if (config.optBoolean("pageQwik", false)) {
+            val pageUrl = absolute(chapter.url)
+            val target = pageUrl.trimEnd('/') + "/q-data.json"
+            return Request.Builder()
+                .url(target)
+                .headers(headers.newBuilder().set("Referer", pageUrl).build())
+                .build()
+        }
         val api = apiPageUrl(chapter)
         if (api != null) return Request.Builder().url(api).headers(headers).build()
         return Request.Builder().url(absolute(chapter.url)).headers(headers).build()
@@ -479,6 +581,9 @@ class PulsarSource(
 
     // Pages
     override fun pageListParse(response: Response): List<Page> {
+        if (config.optBoolean("pageQwik", false)) {
+            return qwikPages(response)
+        }
         // API yanıtı HTML değil JSON'dur; gövdeyi tüketmeden ilk bayta bakılır.
         if (config.optString("pageApiUrl", "").isNotBlank() &&
             response.peekBody(1).string().trimStart().startsWith("{")
