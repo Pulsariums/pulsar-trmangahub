@@ -23,11 +23,7 @@ class PulsarSource(
     override val lang: String
 ) : HttpSource() {
 
-    // 18+ kaynak ayri paket tasimaz: gorunen adina " [18+]" etiketi eklenir.
-    // Kaynak id'si degismez (kimlik domain+lang'den turer).
-    override val name: String = rawConfig.optString("name", "Unknown Source").let { base ->
-        if (rawConfig.optInt("nsfw", 0) == 1 && !base.endsWith(" [18+]")) "$base [18+]" else base
-    }
+    override val name: String = rawConfig.optString("name", "Unknown Source")
     override val baseUrl: String = rawConfig.optString("baseUrl", "").trimEnd('/')
     val domain: String = rawConfig.optString("domain", "")
     val engine: String = rawConfig.optString("engine", "custom")
@@ -392,7 +388,7 @@ class PulsarSource(
     // ---- Qwik düz (flat) durum çözümü ------------------------------------
     // komikrealm.org Qwik ile yazılmış: bölüm sayfasında <img> yok, görseller
     // <bölüm-url>/q-data.json yanıtında duruyor. Biçim:
-    //   {"_entry":"<b36>","_objs":[ ... ]}
+    // {"_entry":"<b36>","_objs":[ ... ]}
     // Kök: resolve(_entry). Nesne değerleri, dizi elemanları ve metinler base-36
     // indekslerle _objs'e işaret eder; metin öneki kontrol karakteri ise atılır.
     private fun qwikResolve(token: String, objs: JSONArray): Any? {
