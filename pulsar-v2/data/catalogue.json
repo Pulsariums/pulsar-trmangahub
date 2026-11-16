@@ -1958,9 +1958,9 @@
    "config": {
     "engine": "custom",
     "listPath": "/webtoon-listesi",
-    "itemSelector": "div.manga-card, div.bsx, div.page-item-detail, a[href*=\"/webtoon/\"]",
-    "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-    "readerSelector": "div#images img"
+    "itemSelector": "a[href^=\"/webtoon/\"]",
+    "chapterSelector": "ol#chapters li.wt-ch a",
+    "readerSelector": "div#images img.reader-img"
    },
    "verified_by_user": false,
    "origins": [
