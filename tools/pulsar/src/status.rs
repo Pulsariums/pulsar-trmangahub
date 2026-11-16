@@ -65,6 +65,7 @@ pub struct StatusEntry {
     #[serde(default, skip_serializing_if = "String::is_empty")] pub sorun: String,
     /// Kesin ölü (park sayfası, NXDOMAIN, satılık). Hiçbir pakete girmez.
     #[serde(default, skip_serializing_if = "std::ops::Not::not")] pub dead: bool,
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")] pub unreachable: bool,
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, Default)]
@@ -179,6 +180,7 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
             note: String::new(),
             sorun: String::new(),
             dead: false,
+            unreachable: false,
         });
         // Katalogda dil/domain/nsfw değişince kimlik alanları güncellenmeli; eskiden
         // `or_insert_with` yüzünden eski id olduğu gibi kalıyor ve yayında bayat
