@@ -2589,14 +2589,14 @@
    "lang": "id",
    "nsfw": 0,
    "domain": "manhwaden.com",
-   "baseUrl": "https://manhwaden.com",
+   "baseUrl": "https://www.manhwaden.com",
    "engine": "custom",
    "config": {
     "engine": "custom",
     "listPath": "/",
     "itemSelector": ".__yok__",
-    "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "chapterSelector": "a[href*=\"/chapter-\"]",
+    "readerSelector": ".reading-content img"
    },
    "selector_verified": true,
    "origins": [
