@@ -234,6 +234,8 @@ Aynı görsel adresi 10 GET'in ~4'ünde 200, ~6'sında 403 dönüyor. User-Agent
 
 **Ayrım kuralı**: "liste boş" üç ayrı hastalıktır ve tedavisi farklıdır — (a) `listPath` yanlış, (b) kart seçicisi 0 eşleşiyor, (c) sayfa JS ile doluyor. Üçünü ayırmadan config yazmak boşa gider; önce `grep -c` ile kart sayısı ölçülür.
 
+**Ölçüm tuzağı**: HTML tek satırsa `grep -c` her zaman `1` döner. Kapak grubunde 52 kaynağın 29'u "kart 0 eşleşiyor" sanıldı; doğrusu `grep -o ... | wc -l`. "Kapak URL yok" hatası da çoğu zaman kapak değil **liste seçicisinin hiç eşleşmemesi**dir: kartı bulunan 23 kaynağın 21'inde kapak düzeltmesi çalıştı (%91).
+
 ## 20. OkuToon vakası: CF'li HTML'i bırak, JSON'u al (2026-11-16)
 
 - **Belirti**: cihazda `pages` adımı 20 sn timeout; bölüm sayfası 403 `Cf-Mitigated: challenge` + `<title>Just a moment...</title>`. Liste ve detay 1 sn altında.
