@@ -726,7 +726,8 @@
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
-        "rscChapterUrl": "/manga/{slug}/{number}"
+        "rscChapterUrl": "/manga/{slug}/{number}",
+        "pageApiUrl": "https://sleptmanga.com.tr/api/chapters/{slug}/{chapter}/images"
       },
       "verified_by_user": true,
       "origins": [
@@ -734,7 +735,8 @@
         "local_custom",
         "local_tr"
       ],
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "selector_verified": true
     },
     {
       "id": "tenshimanga.com",
@@ -4043,7 +4045,7 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": ".wp-manga-chapter a",
-        "readerSelector": ""
+        "readerSelector": ".reading-content img"
       },
       "selector_verified": true,
       "origins": [
@@ -4249,7 +4251,9 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "pageJsonArray": "urls",
+        "pageApiUrl": "https://peach-bl.com/wp-admin/admin-ajax.php"
       },
       "selector_verified": true,
       "origins": [
@@ -4389,7 +4393,10 @@
         "listPath": "/comic",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "pageScriptSelector": "script#cwPages",
+        "pageScriptContains": "cwPages",
+        "pageScriptFirst": "1"
       },
       "selector_verified": true,
       "origins": [
@@ -4495,7 +4502,7 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "a.chapter-card",
-        "readerSelector": ""
+        "readerSelector": "div.cap-canvas"
       },
       "selector_verified": true,
       "origins": [
@@ -5053,7 +5060,7 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "a[href*=\"/capitulo-\"]",
-        "readerSelector": ""
+        "readerSelector": "img.wp-manga-chapter-img"
       },
       "selector_verified": true,
       "origins": [
@@ -6825,13 +6832,13 @@
       "name": "LeerCapitulo",
       "lang": "es",
       "nsfw": 0,
-      "domain": "leercapitulo.re",
-      "baseUrl": "https://leercapitulo.re",
+      "domain": "leercapitulo.co",
+      "baseUrl": "https://www.leercapitulo.co",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/manga/",
-        "itemSelector": "",
+        "itemSelector": "div.lc-card",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -7273,7 +7280,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": ".chapter_box li a.chapter_num",
-        "readerSelector": ""
+        "readerSelector": "",
+        "pageApiUrl": "https://mangakuro.net/ajax/image/list/chap/{chapterId}"
       },
       "selector_verified": true,
       "origins": [
@@ -7705,7 +7713,7 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ".reader-viewer-img"
+        "readerSelector": "img.reader-viewer-img"
       },
       "selector_verified": true,
       "origins": [
@@ -7905,7 +7913,7 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "div.chapter-item a",
-        "readerSelector": ""
+        "readerSelector": ".reading-content img"
       },
       "selector_verified": true,
       "origins": [
