@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       flavors:
-        description: 'Flavors (virgülle): tr,tr18,global,global18,test,test18'
+        description: 'Flavors (virgülle): tr,tr18,global,global18,test'
         required: false
-        default: 'tr,tr18,global,global18,test,test18'
+        default: 'tr,tr18,global,global18,test'
       parsers_ref:
         description: 'kotatsu-parsers-redo revresi'
         required: false

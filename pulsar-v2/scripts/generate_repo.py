@@ -36,7 +36,6 @@ FLAVOR_DEFS = {
     ".global":  {"name": "Pulsar Global",    "lang": "all", "nsfw": 0},
     ".global18": {"name": "Pulsar Global 18+", "lang": "all", "nsfw": 1},
     ".test":    {"name": "Pulsar Test",      "lang": "all", "nsfw": 0},
-    ".test18":  {"name": "Pulsar Test 18+",  "lang": "all", "nsfw": 1},
 }
 
 
@@ -113,8 +112,8 @@ def package_sources(status, suffix, dropped=(), filters=None):
     filters = filters or {"dead_hosts": set(), "dead_sources": set(), "engine_name": {}}
     rows = []
     for entry in status.values():
-        # test/test18 tamir havuzudur: durumdan bagimsiz her kaynak listelenir.
-        if pkg not in ("test", "test18") and entry.get("state") != "active" and not (entry.get("sorun") or "").strip():
+        # test tamir havuzudur: durumdan bagimsiz her kaynak listelenir.
+        if pkg != "test" and entry.get("state") != "active" and not (entry.get("sorun") or "").strip():
             continue
         if pkg not in (entry.get("packages") or []):
             continue
@@ -122,8 +121,12 @@ def package_sources(status, suffix, dropped=(), filters=None):
             continue
         if runtime_filtered(entry, filters):
             continue
+        # 18+ kaynaklar ayri paket tasimaz; gorunen adlarinda " [18+]" etiketi olur.
+        name = entry.get("title") or ""
+        if entry.get("nsfw") == 1 and not name.endswith(" [18+]"):
+            name += " [18+]"
         rows.append({
-            "name": entry.get("title") or "",
+            "name": name,
             "id": str(entry.get("id", "")),
             "lang": entry.get("lang") or "all",
             "baseUrl": f"https://{entry.get('domain')}" if entry.get("domain") else "",
@@ -204,7 +207,7 @@ def apk_extension_lib(apk):
     return struct.unpack(">f", struct.pack(">I", int(m.group(1), 16)))[0]
 
 
-def main(repo_dir, flavors="tr,tr18,global,global18,test,test18"):
+def main(repo_dir, flavors="tr,tr18,global,global18,test"):
     suffixes = ["." + f.strip().removeprefix(".") for f in flavors.split(",")]
 
     status = load_status(repo_dir)
@@ -272,7 +275,7 @@ def main(repo_dir, flavors="tr,tr18,global,global18,test,test18"):
 
 
 if __name__ == "__main__":
-    # Paket listesi tek yerden gelsin: CI'da FLAVORS, yoksa alti paketin tamami.
+    # Paket listesi tek yerden gelsin: CI'da FLAVORS, yoksa bes paketin tamami.
     main(sys.argv[1] if len(sys.argv) > 1 else "repo-build",
          sys.argv[2] if len(sys.argv) > 2
-         else os.environ.get("FLAVORS", "tr,tr18,global,global18,test,test18"))
+         else os.environ.get("FLAVORS", "tr,tr18,global,global18,test"))

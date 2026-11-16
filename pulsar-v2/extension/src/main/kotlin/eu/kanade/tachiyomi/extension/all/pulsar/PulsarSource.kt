@@ -23,7 +23,11 @@ class PulsarSource(
     override val lang: String
 ) : HttpSource() {
 
-    override val name: String = rawConfig.optString("name", "Unknown Source")
+    // 18+ kaynak ayri paket tasimaz: gorunen adina " [18+]" etiketi eklenir.
+    // Kaynak id'si degismez (kimlik domain+lang'den turer).
+    override val name: String = rawConfig.optString("name", "Unknown Source").let { base ->
+        if (rawConfig.optInt("nsfw", 0) == 1 && !base.endsWith(" [18+]")) "$base [18+]" else base
+    }
     override val baseUrl: String = rawConfig.optString("baseUrl", "").trimEnd('/')
     val domain: String = rawConfig.optString("domain", "")
     val engine: String = rawConfig.optString("engine", "custom")

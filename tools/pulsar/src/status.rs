@@ -77,7 +77,8 @@ pub struct StatusFile {
 /// (state active) ve "sorun" etiketi olmayan kaynak girer. Kesin ölü ve cihazda
 /// düşen (hasarlı) kaynak hiçbir pakete girmez; geri kalan (pending, unknown,
 /// sorun etiketli) "test" paketindedir. Test = henüz cihazda doğrulanmamış,
-/// çalışma ihtimali olan kaynakların havuzu.
+/// çalışma ihtimali olan kaynakların havuzu. 18+ kaynaklar ayrı paket taşımaz;
+/// "test" paketinde yayınlanır ve görünen adlarına " [18+]" etiketi eklenir.
 pub fn packages_for(e: &StatusEntry) -> Vec<String> {
     if e.dead {
         return Vec::new();
@@ -90,9 +91,9 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
         return Vec::new();
     }
     if e.state != "active" || !e.sorun.is_empty() {
-        // 18+ kaynak nsfw=0 test paketinde yayinlanamaz (istemci suzer);
-        // ayri test18 paketine duser.
-        return vec![if e.nsfw == 1 { "test18" } else { "test" }.to_string()];
+        // Ayri test18 paketi yok: 18+ kaynak da test havuzuna duser, gorunen
+        // adinda " [18+]" etiketi tasir (istemci suzgeci icin).
+        return vec!["test".to_string()];
     }
     let base = match (e.lang == "tr", e.nsfw == 1) {
         (true, false) => "tr",

@@ -34,6 +34,9 @@ class PulsarSourceFactory : SourceFactory {
     override fun createSources(): List<Source> {
         val targetLang = BuildConfig.PULSAR_LANG
         val wantAdult = BuildConfig.PULSAR_NSFW
+        // "test" paketi hem SFW hem 18+ kaynak taşır (ayrı test18 paketi yok);
+        // 18+ kaynaklar görünen adlarında " [18+]" etiketiyle ayrılır.
+        val isTest = BuildConfig.APPLICATION_ID.substringAfterLast('.') == "test"
 
         val app: Application = runCatching { Injekt.get<Application>() }.getOrNull()
             ?: return emptyList()
@@ -47,12 +50,13 @@ class PulsarSourceFactory : SourceFactory {
                     val name = entry.name
                     when {
                         name in PulsarPatches.DEAD_SOURCES -> null
-                        (entry.contentType == ContentType.HENTAI) != wantAdult -> null
+                        !isTest && (entry.contentType == ContentType.HENTAI) != wantAdult -> null
                         // DİL SAFİĞİ (kullanıcı kuralı): "multi"/boş locale Türkçe
                         // DEĞİLDİR. Dil-paketleri yalnız kendi locale'ini alır;
                         // boş ve "all" locale sadece Global paketlere girer.
                         // NSFW saflığı da aynı sıkılıkla: wantAdult HENTAI
                         // olmayanı 18+'a, HENTAI olanı SFW paketle asla almaz.
+                        // test paketi bu süzgecin dışındadır (isTest).
                         targetLang != "all" && entry.locale != targetLang -> null
                         else -> PulsarKotatsuSource(entry, entry.locale.ifBlank { "all" })
                     }
@@ -73,7 +77,7 @@ class PulsarSourceFactory : SourceFactory {
                 val itemLang = item.optString("lang", "all").lowercase()
                 if (targetLang != "all" && itemLang != targetLang) continue
                 val isNsfw = item.optInt("nsfw", 0) == 1
-                if (isNsfw != wantAdult) continue
+                if (!isTest && isNsfw != wantAdult) continue
 
                 val domain = item.optString("domain", "").lowercase().removePrefix("www.")
                 val alt = item.optJSONArray("altDomains").orEmptyStrings().map {
