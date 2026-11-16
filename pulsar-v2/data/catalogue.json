@@ -1385,9 +1385,9 @@
       "name": "MangaGezgini",
       "lang": "tr",
       "nsfw": 0,
-      "domain": "mangagezgini.online",
+      "domain": "webtoonhatti.club",
       "sorun": "cloudflare",
-      "baseUrl": "https://mangagezgini.online",
+      "baseUrl": "https://webtoonhatti.club",
       "engine": "madara",
       "config": {
         "datePattern": "dd/MM/yyyy",
@@ -2333,7 +2333,9 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "status": "dead",
+      "reason": "park (router.parklogic.com) - 2026-11-16 olcumu"
     },
     {
       "id": "mangabahcesi.com",
@@ -3537,8 +3539,8 @@
       "name": "LekMangaCom",
       "lang": "ar",
       "nsfw": 0,
-      "domain": "lekmanga.com",
-      "baseUrl": "https://lekmanga.com",
+      "domain": "lekmanga.site",
+      "baseUrl": "https://lekmanga.site",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -3617,8 +3619,8 @@
       "name": "Manga-Spark",
       "lang": "ar",
       "nsfw": 0,
-      "domain": "manga-spark.com",
-      "baseUrl": "https://manga-spark.com",
+      "domain": "sparkmanga.net",
+      "baseUrl": "https://sparkmanga.net",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -3637,8 +3639,8 @@
       "name": "Manga168",
       "lang": "th",
       "nsfw": 0,
-      "domain": "manga168.net",
-      "baseUrl": "https://manga168.net",
+      "domain": "manga168x.com",
+      "baseUrl": "https://manga168x.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -5112,8 +5114,8 @@
       "name": "Empire Webtoon",
       "lang": "ar",
       "nsfw": 0,
-      "domain": "webtoonempire-ron.com",
-      "baseUrl": "https://webtoonempire-ron.com",
+      "domain": "webtoonempire-bl.com",
+      "baseUrl": "https://webtoonempire-bl.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -5178,8 +5180,8 @@
       "name": "MangaSpark",
       "lang": "ar",
       "nsfw": 0,
-      "domain": "manga-spark.net",
-      "baseUrl": "https://manga-spark.net",
+      "domain": "sparkmanga.net",
+      "baseUrl": "https://sparkmanga.net",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -5724,8 +5726,8 @@
       "name": "MangaHen",
       "lang": "en",
       "nsfw": 0,
-      "domain": "manga-hen.com",
-      "baseUrl": "https://manga-hen.com",
+      "domain": "gensura.net",
+      "baseUrl": "https://gensura.net",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -7885,8 +7887,8 @@
       "name": "Manga168",
       "lang": "th",
       "nsfw": 0,
-      "domain": "manga1688.com",
-      "baseUrl": "https://manga1688.com",
+      "domain": "manga168x.com",
+      "baseUrl": "https://manga168x.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -8025,8 +8027,8 @@
       "name": "Manga Kusu",
       "lang": "tr",
       "nsfw": 0,
-      "domain": "mangakusu.com",
-      "baseUrl": "https://mangakusu.com",
+      "domain": "ragnarscans2.com",
+      "baseUrl": "https://ragnarscans2.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -8045,8 +8047,8 @@
       "name": "Merlin Scans",
       "lang": "tr",
       "nsfw": 0,
-      "domain": "merlintoon.com",
-      "baseUrl": "https://merlintoon.com",
+      "domain": "merlintoon.net",
+      "baseUrl": "https://merlintoon.net",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -8065,8 +8067,8 @@
       "name": "Ragnar Scans",
       "lang": "tr",
       "nsfw": 0,
-      "domain": "ragnarscans.com",
-      "baseUrl": "https://ragnarscans.com",
+      "domain": "ragnarscans2.com",
+      "baseUrl": "https://ragnarscans2.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
