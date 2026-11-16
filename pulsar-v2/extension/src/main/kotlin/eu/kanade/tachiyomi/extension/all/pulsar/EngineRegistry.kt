@@ -24,7 +24,10 @@ object EngineRegistry {
     // class'ı yok, linkler /manga/slug, /seri/slug, /series/slug, /manhwa/slug
     // biçiminde. Cihaz raporu "Liste boş" diyordu; sayfada 20-25 böyle link var.
     private val SLUG_SEGMENTS =
-        setOf("manga", "seri", "series", "serie", "comic", "manhwa", "title", "title-detail", "webtoon")
+        setOf("manga", "seri", "series", "serie", "comic", "comics", "manhwa", "title", "title-detail", "webtoon")
+
+    // /en/manga/<slug>, /tr/seri/<slug> gibi dil onekli yollar.
+    private val LOCALE_SEGMENT = Regex("""^[a-z]{2}(-[a-z]{2,4})?$""")
 
     // /series/comic/<slug> gibi tip parçalı yollar (kaynscan).
     private val TYPE_SEGMENTS =
@@ -40,18 +43,24 @@ object EngineRegistry {
             val path = afterScheme.substringAfter('/', "")
                 .substringBefore('?').substringBefore('#').trim('/')
             val parts = path.split('/')
+            // Bazi siteler dili yol oneki olarak verir (/en/comic/<slug>).
+            val trimmed = if (parts.size > 2 && LOCALE_SEGMENT.matches(parts[0].lowercase())) {
+                parts.drop(1)
+            } else {
+                parts
+            }
             val slugIdx: Int
-            if (parts.size == 2 && parts[0].lowercase() in SLUG_SEGMENTS) {
+            if (trimmed.size == 2 && trimmed[0].lowercase() in SLUG_SEGMENTS) {
                 slugIdx = 1
-            } else if (parts.size == 3 && parts[0].lowercase() in SLUG_SEGMENTS &&
-                parts[1].lowercase() in TYPE_SEGMENTS
+            } else if (trimmed.size == 3 && trimmed[0].lowercase() in SLUG_SEGMENTS &&
+                trimmed[1].lowercase() in TYPE_SEGMENTS
             ) {
                 slugIdx = 2
             } else {
                 continue
             }
-            if (parts[slugIdx].length < 3) continue
-            if (parts[slugIdx].lowercase() in JUNK_SLUGS) continue
+            if (trimmed[slugIdx].length < 3) continue
+            if (trimmed[slugIdx].lowercase() in JUNK_SLUGS) continue
             val key = full.substringBefore('?').trimEnd('/')
             if (seen.containsKey(key)) continue
             val title = a.text().trim()
