@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T21:53:43Z",
+  "generated": "2026-11-16T21:57:14Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -20906,6 +20906,18 @@
       },
       "device_step": "list"
     },
+    "5335900657314089990": {
+      "id": 5335900657314089990,
+      "kind": "catalogue",
+      "title": "DiamondFansub",
+      "lang": "tr",
+      "nsfw": 0,
+      "domain": "diamondfansub.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "5370165366451663570": {
       "id": 5370165366451663570,
       "kind": "catalogue",
@@ -28435,6 +28447,18 @@
       "device_step": "list",
       "unreachable": true
     },
+    "681306618208001196": {
+      "id": 681306618208001196,
+      "kind": "catalogue",
+      "title": "MangaTilkisi",
+      "lang": "tr",
+      "nsfw": 0,
+      "domain": "tilkiscans.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "6815867355346244959": {
       "id": 6815867355346244959,
       "kind": "engine",
@@ -34882,6 +34906,18 @@
         "detail": "",
         "at": "2026-11-16T00:09:31Z"
       }
+    },
+    "3783033271837288806": {
+      "id": 3783033271837288806,
+      "kind": "catalogue",
+      "title": "Kiryuu",
+      "lang": "id",
+      "nsfw": 0,
+      "domain": "v7.kiryuu.to",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     }
   }
 }
