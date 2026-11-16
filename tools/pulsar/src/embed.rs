@@ -269,8 +269,11 @@ internal object PulsarData {{
 
 /// Base64 metnini Kotlin'de `join(...)` ile birleştirilen parçalara böler.
 fn b64_chunks(s: &str) -> String {
-    // 65535 B sınırının altında kalacak güvenli parça boyu.
-    const LIMIT: usize = 40_000;
+    // Kotlin/JVM derleyicisi 32767 karakterden uzun string sabitlerini kendi
+    // içinde bölüyor; bölünen parçalardan biri çalışma anında düşünce gömülü
+    // base64 32767 karakter eksik kalıyor (uzunluk %4 == 1 -> bozuk veri).
+    // Parçayı bu eşiğin altında ve 4'ün katında tut: derleyici bölmesin.
+    const LIMIT: usize = 32_760;
     let parts: Vec<String> = s
         .as_bytes()
         .chunks(LIMIT)

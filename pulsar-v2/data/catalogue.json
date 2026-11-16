@@ -5243,7 +5243,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
+        "itemSelector": "a[href^=\"/series/\"]:not([href*=\"/chapter-\"])",
         "chapterSelector": "a[href*=\"/chapter-\"]",
         "readerSelector": "img[src*=\"/axis/pages/\"]"
       },
@@ -5625,15 +5625,16 @@
       "name": "Kayn Scans",
       "lang": "en",
       "nsfw": 0,
-      "domain": "kaynscan.com",
-      "baseUrl": "https://kaynscan.com",
+      "domain": "kaynscans.com",
+      "baseUrl": "https://kaynscans.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/series",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "div[role=\"gridcell\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
+        "readerSelector": "img[src*=\"/uploads/series/\"]",
+        "baseUrl": "https://kaynscans.com"
       },
       "selector_verified": true,
       "origins": [
@@ -6496,8 +6497,8 @@
       "name": "Read One-Punch Man Manga Online",
       "lang": "en",
       "nsfw": 0,
-      "domain": "ww6.readopm.com",
-      "baseUrl": "https://ww6.readopm.com",
+      "domain": "ww7.readopm.com",
+      "baseUrl": "https://ww7.readopm.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
