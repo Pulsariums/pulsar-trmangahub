@@ -3160,7 +3160,7 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": "div.reading-content img.wp-manga-chapter-img"
    },
    "selector_verified": true,
    "origins": [
@@ -3976,7 +3976,7 @@
    "lang": "ar",
    "nsfw": 0,
    "domain": "manhatic.com",
-   "baseUrl": "https://manhatic.com",
+   "baseUrl": "https://hentailek.com",
    "engine": "custom",
    "config": {
     "engine": "custom",
@@ -4494,7 +4494,7 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "trwebtoon.com",
-   "baseUrl": "https://trwebtoon.com",
+   "baseUrl": "https://trmanga.com",
    "engine": "custom",
    "config": {
     "engine": "custom",
@@ -4721,7 +4721,7 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": "div.reading-content img.wp-manga-chapter-img"
    },
    "selector_verified": true,
    "origins": [
@@ -6587,7 +6587,7 @@
     "listPath": "/",
     "itemSelector": ".__yok__",
     "chapterSelector": ".__yok__",
-    "readerSelector": ".__yok__"
+    "readerSelector": "div.reading-content img.wp-manga-chapter-img"
    },
    "selector_verified": true,
    "origins": [

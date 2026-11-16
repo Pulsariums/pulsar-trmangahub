@@ -89,12 +89,12 @@ object EngineRegistry {
             if (img != null) {
                 val cand = sequenceOf(
                     "data-src", "data-lazy-src", "data-original", "data-lzl-src",
-                    "data-cc-src", "data-default-src", "data-nimg", "src",
+                    "data-cc-src", "data-default-src", "src",
                 )
                     .map { img.attr(it).trim() }
                     .firstOrNull { it.isNotEmpty() && !it.startsWith("data:") }
                     ?: img.attr("srcset").substringBefore(' ').trim().ifEmpty { null }
-                if (cand != null && !looksLikeBadge(cand)) return cand
+                if (cand != null && looksLikeUrl(cand) && !looksLikeBadge(cand)) return cand
             }
             // Bazi temalar gorseli data-bg attribute'unda tutar (manhwa18).
             cur.attr("data-bg").trim().takeIf { it.isNotEmpty() }?.let { return it }
@@ -115,6 +115,15 @@ object EngineRegistry {
         if (!style.contains("background-image", ignoreCase = true)) return null
         val m = Regex("""url\(\s*['"]?([^'")]+)['"]?\s*\)""").find(style) ?: return null
         return m.groupValues[1].trim().ifEmpty { null }
+    }
+
+    // data-* alanlari bazen URL degil bayrak olur (Next.js data-nimg="1").
+    private fun looksLikeUrl(value: String): Boolean {
+        val v = value.trim()
+        if (v.length < 8) return false
+        if (v.startsWith("http") || v.startsWith("//") || v.startsWith("/")) return true
+        return v.contains('/') && (v.contains(".jpg") || v.contains(".jpeg") || v.contains(".png") ||
+            v.contains(".webp") || v.contains(".avif") || v.contains(".gif"))
     }
 
     private fun looksLikeBadge(url: String): Boolean {
