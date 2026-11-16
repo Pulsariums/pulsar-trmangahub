@@ -523,6 +523,40 @@ class PulsarSource(
 
     // Chapters
     override fun chapterListParse(response: Response): List<SChapter> {
+        // Bazi Madara temalarinda bolum listesi statik HTML'de yok; detay URL'inin
+        // yanindaki ajax ucundan HTML parcasi olarak geliyor (or. arthurscan:
+        // POST {url}ajax/chapters/). chapterAjaxUrl "{url}" yer tutucusunu tasir.
+        val chapterAjax = config.optString("chapterAjaxUrl", "")
+        if (chapterAjax.isNotBlank()) {
+            val target = chapterAjax.replace("{url}", response.request.url.toString())
+            val isPost = config.optString("chapterAjaxMethod", "POST").equals("POST", ignoreCase = true)
+            val body = config.optString("chapterAjaxBody", "")
+            val req = Request.Builder().url(target).headers(headers)
+            val ajaxRes = client.newCall(
+                if (isPost) req.post(body.toRequestBody("application/x-www-form-urlencoded; charset=UTF-8".toMediaType())).build()
+                else if (body.isNotBlank()) req.post(body.toRequestBody("application/x-www-form-urlencoded; charset=UTF-8".toMediaType())).build()
+                else req.build()
+            ).execute()
+            ajaxRes.use { r ->
+                val ajaxHtml = r.body?.string().orEmpty()
+                val frag = Jsoup.parse(ajaxHtml, baseUrl)
+                val ajaxChapters = EngineRegistry.parseChapters(
+                    frag,
+                    config.optString("chapterSelector", ""),
+                    baseUrl,
+                )
+                if (ajaxChapters.isNotEmpty()) {
+                    return ajaxChapters.map { ch ->
+                        SChapter.create().apply {
+                            url = relativize(ch.url)
+                            name = ch.name
+                            chapter_number = ch.chapterNumber
+                            date_upload = ch.dateUpload
+                        }
+                    }
+                }
+            }
+        }
         // JSON API yolu gövdeyi apiChapters içinde tüketir; gövdeyi burada
         // okumadan önce ayrılmalı (OkHttp gövdesi tek okumalıktır).
         if (config.optString("chapterApiUrl", "").isNotBlank()) {

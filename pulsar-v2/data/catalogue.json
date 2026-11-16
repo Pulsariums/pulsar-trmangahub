@@ -1236,8 +1236,10 @@
         "engine": "custom",
         "listPath": "/manga",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "chapterSelector": "YOK",
+        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
+        "chapterAjaxUrl": "YOK",
+        "titleSelector": "YOK"
       },
       "verified_by_user": false,
       "origins": [
@@ -2480,7 +2482,9 @@
         "pageScriptContains": "imageUrls",
         "pageJsonArray": "imageUrls",
         "pageUrlBase": "https://angel.cdnotakuangel.com/",
-        "pageScriptFirst": "1"
+        "pageScriptFirst": "1",
+        "chapterAjaxUrl": "https://otakuangel.com/manga/{slug}/__data.json",
+        "titleSelector": "h1.text-theme"
       },
       "altDomains": [],
       "verified_by_user": false,
@@ -2708,7 +2712,9 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "chapterAjaxUrl": "https://www.animexnovel.com/wp-json/axn/v1/chapters/{category_id}",
+        "titleSelector": "h1.entry-title"
       },
       "selector_verified": true,
       "origins": [
@@ -2747,8 +2753,10 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": ".manga__item",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "chapterSelector": ".wp-manga-chapter a",
+        "readerSelector": "",
+        "chapterAjaxUrl": "https://arthurscan.xyz/manga/i-randomly-have-a-new-career-every-week-1/ajax/chapters/?t=1",
+        "titleSelector": ".post-title h1"
       },
       "selector_verified": true,
       "origins": [
@@ -3203,8 +3211,10 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": "div.reading-content img.wp-manga-chapter-img"
+        "chapterSelector": ".wp-manga-chapter a",
+        "readerSelector": "div.reading-content img.wp-manga-chapter-img",
+        "chapterAjaxUrl": "https://hentaixyuri.com/manga/osananajimi-to-koisuru-tamago/ajax/chapters/?t=1",
+        "titleSelector": ".post-title h1"
       },
       "selector_verified": true,
       "origins": [
@@ -3907,7 +3917,9 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "chapterAjaxUrl": "https://mangamukai.com/wp-json/mangamukai/v1/series/{id}/chapters",
+        "titleSelector": "h1"
       },
       "selector_verified": true,
       "origins": [
@@ -4079,15 +4091,17 @@
       "name": "ManhwaToon",
       "lang": "en",
       "nsfw": 0,
-      "domain": "manhwatoon.com",
-      "baseUrl": "https://manhwatoon.com",
+      "domain": "www.manhwatoon.me",
+      "baseUrl": "https://www.manhwatoon.me",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "chapterSelector": "#manga-chapters-holder li.wp-manga-chapter a",
+        "readerSelector": "",
+        "chapterAjaxUrl": "https://www.manhwatoon.me/manhwa/one-piece/ajax/chapters/",
+        "titleSelector": "h1"
       },
       "selector_verified": true,
       "origins": [
@@ -4523,14 +4537,16 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "",
-        "chapterSelector": "",
+        "chapterSelector": "#manga-chapters-holder li.wp-manga-chapter a",
         "readerSelector": "",
         "searchUrl": "https://toonizy.com/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
         "searchMethod": "POST",
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "chapterAjaxUrl": "https://toonizy.com/webtoon/swole-joseon/ajax/chapters/",
+        "titleSelector": ".summary_content .post-content h3"
       },
       "selector_verified": true,
       "origins": [
@@ -4796,7 +4812,9 @@
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "chapterAjaxUrl": "https://mangaforfree.net/wp-admin/admin-ajax.php",
+        "titleSelector": "h1"
       },
       "selector_verified": true,
       "origins": [
@@ -5528,7 +5546,9 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "chapterAjaxUrl": "https://manhuascans.org/manga/get?mid=<mid>&mode=all",
+        "titleSelector": "h1"
       },
       "selector_verified": true,
       "origins": [
@@ -5835,8 +5855,9 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "chapterSelector": "YOK",
+        "readerSelector": "",
+        "titleSelector": "h1.heading-style-h5"
       },
       "selector_verified": true,
       "origins": [
@@ -6015,8 +6036,10 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "",
-        "chapterSelector": ".chapter-item a",
-        "readerSelector": ""
+        "chapterSelector": "#manga-chapters-holder li.wp-manga-chapter a",
+        "readerSelector": "",
+        "chapterAjaxUrl": "https://www.manhwatoon.me/manhwa/one-piece/ajax/chapters/",
+        "titleSelector": "h1"
       },
       "selector_verified": true,
       "origins": [
@@ -6595,8 +6618,9 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "chapterSelector": ".episode-list__item a.episode-item",
+        "readerSelector": "",
+        "titleSelector": "p.title"
       },
       "selector_verified": true,
       "origins": [
@@ -6782,7 +6806,9 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "chapterAjaxUrl": "https://heavenmanga.com/manga/one-piece?draw=1&start=0&length=<n>&columns[0][data]=number&columns[1][data]=created_at",
+        "titleSelector": ".manga-title"
       },
       "selector_verified": true,
       "origins": [
@@ -6821,8 +6847,10 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "chapterSelector": ".wp-manga-chapter a",
+        "readerSelector": "",
+        "chapterAjaxUrl": "https://inventariooculto.com/manga/kagurabachi/ajax/chapters/?t=1",
+        "titleSelector": ".post-title h1"
       },
       "selector_verified": true,
       "origins": [
@@ -6921,8 +6949,10 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "chapterSelector": "#manga-chapters-holder li.wp-manga-chapter a",
+        "readerSelector": "",
+        "chapterAjaxUrl": "https://topcomicporno.com/manga/que-puedo-hacer-si-estoy-en-un-isla-al-juego-del-fap/ajax/chapters/",
+        "titleSelector": ".post-title h1"
       },
       "selector_verified": true,
       "origins": [
@@ -7382,8 +7412,9 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "chapterSelector": "ul.episode-list li.episode-wrapper a.episode-content",
+        "readerSelector": "",
+        "titleSelector": "h1.series-title"
       },
       "selector_verified": true,
       "origins": [
@@ -7628,8 +7659,10 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "chapterSelector": ".wp-manga-chapter a",
+        "readerSelector": "",
+        "chapterAjaxUrl": "https://mrtenzus.com/manga/roses-and-champagne-novel/ajax/chapters/?t=1",
+        "titleSelector": "h1"
       },
       "selector_verified": true,
       "origins": [
@@ -11576,8 +11609,9 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "article.mlo-card",
-        "chapterSelector": "li[data-chapter-number] a[href*=\"/capitulo/\"]",
-        "readerSelector": "#mlo-reader-pages img[data-mlo-page-index]"
+        "chapterSelector": "ul.mlo-chapter-list li a[href*=\"/capitulo/\"]",
+        "readerSelector": "#mlo-reader-pages img[data-mlo-page-index]",
+        "titleSelector": "h1"
       },
       "selector_verified": true,
       "origins": [
@@ -11596,8 +11630,9 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "div.item a[href*=\"/comic/\"]",
-        "chapterSelector": "div.chapter a",
-        "readerSelector": "div.reading-detail img[data-original]"
+        "chapterSelector": "#nt_listchapter .chapter a[href*=\"/issue-\"]",
+        "readerSelector": "div.reading-detail img[data-original]",
+        "titleSelector": "h1.title-detail"
       },
       "selector_verified": true,
       "origins": [
@@ -11616,8 +11651,10 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "div.page-item-detail, div.manga",
-        "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": "div.reading-content img, div.page-break img"
+        "chapterSelector": "#manga-chapters-holder li.wp-manga-chapter a",
+        "readerSelector": "div.reading-content img, div.page-break img",
+        "chapterAjaxUrl": "https://tritinia.org/manga/kekkon-shiyou-rikon-zentei-de/ajax/chapters/",
+        "titleSelector": ".post-title h1"
       },
       "selector_verified": true,
       "origins": [

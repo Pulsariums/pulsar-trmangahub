@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T19:43:21Z",
+  "generated": "2026-11-16T20:04:20Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -5115,30 +5115,6 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "ww9.readhaikyuu.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "2060900508333152438": {
-      "id": 2060900508333152438,
-      "kind": "catalogue",
-      "title": "Manga-Spark",
-      "lang": "ar",
-      "nsfw": 0,
-      "domain": "manga-spark.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "2060900508639046426": {
-      "id": 2060900508639046426,
-      "kind": "catalogue",
-      "title": "MangaSpark",
-      "lang": "ar",
-      "nsfw": 0,
-      "domain": "manga-spark.net",
       "packages": [
         "test"
       ],
@@ -10762,6 +10738,18 @@
       "device_step": "list",
       "unreachable": true
     },
+    "3468208220164560789": {
+      "id": 3468208220164560789,
+      "kind": "catalogue",
+      "title": "MangaHen",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "gensura.net",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "3483176489432573539": {
       "id": 3483176489432573539,
       "kind": "catalogue",
@@ -11013,6 +11001,18 @@
       ],
       "state": "unknown"
     },
+    "3625557739488350650": {
+      "id": 3625557739488350650,
+      "kind": "catalogue",
+      "title": "LekMangaCom",
+      "lang": "ar",
+      "nsfw": 0,
+      "domain": "lekmanga.site",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "3626292428546573843": {
       "id": 3626292428546573843,
       "kind": "engine",
@@ -11137,6 +11137,18 @@
         "at": "2026-11-13T17:07:52Z"
       }
     },
+    "3688690594033706893": {
+      "id": 3688690594033706893,
+      "kind": "catalogue",
+      "title": "Manga-Spark",
+      "lang": "ar",
+      "nsfw": 0,
+      "domain": "sparkmanga.net",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
+    },
     "3691027854447844931": {
       "id": 3691027854447844931,
       "kind": "catalogue",
@@ -11170,18 +11182,6 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "3701917002057715636": {
-      "id": 3701917002057715636,
-      "kind": "catalogue",
-      "title": "Empire Webtoon",
-      "lang": "ar",
-      "nsfw": 0,
-      "domain": "webtoonempire-ron.com",
       "packages": [
         "test"
       ],
@@ -14181,19 +14181,6 @@
       },
       "device_step": "list"
     },
-    "4061344289012005112": {
-      "id": 4061344289012005112,
-      "kind": "catalogue",
-      "title": "Webtoon Hatti",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "webtoonhatti.club",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
-      "sorun": "cloudflare"
-    },
     "4062350174854844668": {
       "id": 4062350174854844668,
       "kind": "catalogue",
@@ -14225,18 +14212,6 @@
         "at": "2026-11-13T19:01:05Z"
       },
       "sorun": "cloudflare"
-    },
-    "4062417471014854152": {
-      "id": 4062417471014854152,
-      "kind": "catalogue",
-      "title": "Manga168",
-      "lang": "th",
-      "nsfw": 0,
-      "domain": "manga168.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "4062420937604231679": {
       "id": 4062420937604231679,
@@ -18106,25 +18081,6 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list"
-    },
-    "4388386137621868382": {
-      "id": 4388386137621868382,
-      "kind": "catalogue",
-      "title": "MangaGezgini",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangagezgini.online",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "health": {
-        "status": "blocked",
-        "http_code": "403",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      }
     },
     "4389701879838816474": {
       "id": 4389701879838816474,
@@ -22416,18 +22372,6 @@
       "device_step": "list",
       "unreachable": true
     },
-    "5787889444004967480": {
-      "id": 5787889444004967480,
-      "kind": "catalogue",
-      "title": "Ragnar Scans",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "ragnarscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "5787979820185491117": {
       "id": 5787979820185491117,
       "kind": "engine",
@@ -25921,18 +25865,6 @@
       ],
       "state": "unknown"
     },
-    "6029188674352160762": {
-      "id": 6029188674352160762,
-      "kind": "catalogue",
-      "title": "MangaHen",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "manga-hen.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "6029481931652111950": {
       "id": 6029481931652111950,
       "kind": "catalogue",
@@ -25957,13 +25889,13 @@
       ],
       "state": "unknown"
     },
-    "6031105340614204036": {
-      "id": 6031105340614204036,
+    "6031107101421507140": {
+      "id": 6031107101421507140,
       "kind": "catalogue",
       "title": "Manga168",
       "lang": "th",
       "nsfw": 0,
-      "domain": "manga1688.com",
+      "domain": "manga168x.com",
       "packages": [
         "test"
       ],
@@ -26223,18 +26155,6 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "mangakuro.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "6080361476295882567": {
-      "id": 6080361476295882567,
-      "kind": "catalogue",
-      "title": "Manga Kusu",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangakusu.com",
       "packages": [
         "test"
       ],
@@ -27869,18 +27789,6 @@
         "at": "2026-11-16T00:09:31Z"
       }
     },
-    "661348012149783708": {
-      "id": 661348012149783708,
-      "kind": "catalogue",
-      "title": "Merlin Scans",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "merlintoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "661348012455677696": {
       "id": 661348012455677696,
       "kind": "catalogue",
@@ -28117,18 +28025,6 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "1manga.co",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
-    "6662572339879261598": {
-      "id": 6662572339879261598,
-      "kind": "catalogue",
-      "title": "LekMangaCom",
-      "lang": "ar",
-      "nsfw": 0,
-      "domain": "lekmanga.com",
       "packages": [
         "test"
       ],
@@ -32768,6 +32664,18 @@
       },
       "device_step": "list",
       "unreachable": true
+    },
+    "8450190539610775851": {
+      "id": 8450190539610775851,
+      "kind": "catalogue",
+      "title": "Empire Webtoon",
+      "lang": "ar",
+      "nsfw": 0,
+      "domain": "webtoonempire-bl.com",
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "845371345206609558": {
       "id": 845371345206609558,
