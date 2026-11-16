@@ -407,11 +407,12 @@ class PulsarSource(
             url = relativize(response.request.url.toString())
             title = doc.selectFirst("h1, .entry-title")?.text()?.trim() ?: "Manga"
             description = doc.selectFirst("div.description, div.manga-description, div.summary__content, div.entry-content")?.text()?.trim()
-            thumbnail_url = realImageUrl(
-                doc.selectFirst("div.thumb img, div.manga-poster img, div.summary_image img, img[data-nimg]")?.let { img ->
-                    img.attr("data-src").ifBlank { null as String? } ?: img.attr("src").ifBlank { null as String? }
-                },
-            )
+            // Görsel etiketi olmayan sitelerde (ör. nemesisscans) kapak og:image'de durur.
+            val coverFromImg = doc.selectFirst("div.thumb img, div.manga-poster img, div.summary_image img, img[data-nimg]")?.let { img ->
+                img.attr("data-src").ifBlank { null as String? } ?: img.attr("src").ifBlank { null as String? }
+            }
+            val coverFromMeta = doc.selectFirst("meta[property=og:image]")?.attr("content")?.ifBlank { null }
+            thumbnail_url = realImageUrl(coverFromImg ?: coverFromMeta)
             status = SManga.UNKNOWN
         }
     }

@@ -1196,14 +1196,15 @@
     "searchJsonTitle": "title",
     "searchJsonPathPrefix": "/manga/",
     "pageApiUrl": "https://api.lunarx.to/api/manga/{1}/{2}?lang=tr",
-    "pageApiIdPattern": "^(?:https?://[^/]+)?/manga/([^/]+)/([0-9.]+)/?$",
+    "pageApiIdPattern": "manga/([^/]+)/([\\d.]+)",
     "pageApiItems": "data.images",
     "chapterApiUrl": "https://api.lunarx.to/api/manga/{id}",
-    "chapterApiIdPattern": "^(?:https?://[^/]+)?/manga/([^/]+)/?$",
+    "chapterApiIdPattern": "manga/([^/]+)$",
     "chapterApiItems": "data",
     "chapterApiFieldNumber": "chapter",
     "chapterApiUrlTemplate": "/manga/{id}/{value}",
-    "chapterApiPreferLang": "tr"
+    "chapterApiPreferLang": "tr",
+    "chapterApiFieldName": "chapter_title"
    },
    "verified_by_user": false,
    "origins": [
