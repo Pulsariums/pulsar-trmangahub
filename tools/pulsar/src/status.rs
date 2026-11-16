@@ -74,11 +74,19 @@ pub struct StatusFile {
 }
 
 /// Paket kuralı: ana gruba (tr/tr18/global/global18) YALNIZ cihaz testinde geçen
-/// (state active) ve "sorun" etiketi olmayan kaynak girer. Kesin ölü hiçbir pakete
-/// girmez; geri kalan her şey (pending, unknown, cihazda düşen, sorun etiketli)
-/// "test" paketindedir. Sağlık taraması tek başına ne ana gruba sokar ne dışlar.
+/// (state active) ve "sorun" etiketi olmayan kaynak girer. Kesin ölü ve cihazda
+/// düşen (hasarlı) kaynak hiçbir pakete girmez; geri kalan (pending, unknown,
+/// sorun etiketli) "test" paketindedir. Test = henüz cihazda doğrulanmamış,
+/// çalışma ihtimali olan kaynakların havuzu.
 pub fn packages_for(e: &StatusEntry) -> Vec<String> {
     if e.dead {
+        return Vec::new();
+    }
+    // Cihaz testinde dusen kaynak hasarli sayilir: test havuzuna da girmez.
+    // Test havuzu yalnizca "henuz cihazda dogrulanmamis, calisma ihtimali olan"
+    // kaynaklari tasir; bilerek/kanitla bozuk olanlar hicbir pakete girmez.
+    let device_fail = e.device.as_ref().map(|p| p.status == "fail").unwrap_or(false);
+    if device_fail {
         return Vec::new();
     }
     if e.state != "active" || !e.sorun.is_empty() {
