@@ -404,7 +404,8 @@ class PulsarSource(
             while (keys.hasNext()) {
                 val k = keys.next()
                 val v = node.opt(k)
-                out.put(k, if (v is String) qwikResolve(v, objs) else qwikValue(v, objs))
+                val resolved: Any? = if (v is String) qwikResolve(v, objs) else qwikValue(v, objs)
+                out.put(k, resolved ?: JSONObject.NULL)
             }
             out
         }
@@ -412,7 +413,8 @@ class PulsarSource(
             val out = JSONArray()
             for (i in 0 until node.length()) {
                 val v = node.opt(i)
-                out.put(if (v is String) qwikResolve(v, objs) else qwikValue(v, objs))
+                val resolved: Any? = if (v is String) qwikResolve(v, objs) else qwikValue(v, objs)
+                if (resolved == null) out.put(JSONObject.NULL as Any) else out.put(resolved)
             }
             out
         }
