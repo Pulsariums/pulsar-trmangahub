@@ -157,9 +157,25 @@ def write_pending_report(repo_dir, status):
             f"| {','.join(e.get('packages') or [])} | {e.get('title','')} | "
             f"{e.get('lang','')} | {e.get('domain','')} | {reason} {detail} |"
         )
+    unreachable = [e for e in status.values() if e.get("unreachable") is True]
+    unreachable.sort(key=lambda e: (e.get("title") or "").lower())
+    lines += [
+        "",
+        "## Ulasilamayanlar (sonra bakilacak)",
+        "",
+        "| Kaynak | Dil | Domain | Cihaz detayı |",
+        "|---|---|---|---|",
+    ]
+    for e in unreachable:
+        device = e.get("device") or {}
+        detail = (device.get("detail") or "").replace("|", "/")[:120]
+        lines.append(
+            f"| {e.get('title','')} | {e.get('lang','')} | "
+            f"{e.get('domain','')} | {detail} |"
+        )
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
-    print(f"  beklemede: {len(rows)} kaynak -> {path}")
+    print(f"  beklemede: {len(rows)} kaynak, ulasilamayan: {len(unreachable)} -> {path}")
 
 
 _SDK_ROOTS = [
