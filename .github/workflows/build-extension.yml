@@ -123,6 +123,7 @@ jobs:
           git config user.email "noreply@pulsariums.dev"
           git add -A apk index.min.json repo.json pulsar-v2/repo pulsar-v2/extension/src/main/assets
           git commit -m "build(pulsar): kendi eklenti APK'lari derlendi ve yayinlandi" || echo "degisiklik yok"
+          git pull --rebase origin main
           git push origin HEAD:main
 
       - name: Verify live index
