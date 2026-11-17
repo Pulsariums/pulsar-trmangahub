@@ -92,7 +92,7 @@ pub struct StatusFile {
 pub fn packages_for(e: &StatusEntry) -> Vec<String> {
     // Cihazda düşen kaynağın sonucu biliniyor; test havuzuna da girmez.
     // Kesin ölü kayıt da hiçbir pakete girmez.
-    if e.dead || e.state == "failed" {
+    if e.dead || e.state == "failed" || e.state == "engelli" {
         return Vec::new();
     }
     // Eklenti çalışma anında oluşturulmayan (patches deadSources/deadHosts)
@@ -136,6 +136,14 @@ pub fn recompute_state(e: &mut StatusEntry) {
     // her status koşusunda pending'e düşürülmemeli.
     if e.dead {
         e.state = "dead".to_string();
+        e.packages = Vec::new();
+        return;
+    }
+    // Cloudflare duvarı: site ayakta ama istek çerez olmadan geçmiyor.
+    // Ne yayınlanır ne test edilir; çerez girilince `sorun` temizlenip teste alınır.
+    let engelli = e.sorun.eq_ignore_ascii_case("cloudflare") || e.reason.starts_with("CF:");
+    if engelli {
+        e.state = "engelli".to_string();
         e.packages = Vec::new();
         return;
     }
