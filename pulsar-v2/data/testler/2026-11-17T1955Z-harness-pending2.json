@@ -1,0 +1,464 @@
+{
+  "generated": "2026-11-17T19:55:13Z",
+  "kaynak": "yerel harness",
+  "total": 65,
+  "passed": 32,
+  "failed": 33,
+  "sources": [
+    {
+      "domain": "peach-bl.com",
+      "list": 24,
+      "chapters": 33,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "kuroimanga.site",
+      "list": 12,
+      "chapters": 79,
+      "pages": 1,
+      "hata": ""
+    },
+    {
+      "domain": "qimanga.com",
+      "list": 40,
+      "chapters": 13,
+      "pages": 16,
+      "hata": ""
+    },
+    {
+      "domain": "luxmanga.net",
+      "list": 0,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "popüler liste boş"
+    },
+    {
+      "domain": "tapas.io",
+      "list": 10,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "bölüm listesi boş"
+    },
+    {
+      "domain": "leituramanga.net",
+      "list": 60,
+      "chapters": 3,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "mangaflix.net",
+      "list": 750,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "bölüm listesi boş"
+    },
+    {
+      "domain": "outcatscans.net",
+      "list": 0,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
+    },
+    {
+      "domain": "ru.niadd.com",
+      "list": 60,
+      "chapters": 204,
+      "pages": 3,
+      "hata": ""
+    },
+    {
+      "domain": "komikpoi.com",
+      "list": 60,
+      "chapters": 1,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "falcoscan.net",
+      "list": 88,
+      "chapters": 24,
+      "pages": 16,
+      "hata": ""
+    },
+    {
+      "domain": "pocket.shonenmagazine.com",
+      "list": 0,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "popüler liste boş"
+    },
+    {
+      "domain": "m.g-mh.org",
+      "list": 66,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "bölüm listesi boş"
+    },
+    {
+      "domain": "ww13.readonepiece.com",
+      "list": 17,
+      "chapters": 2152,
+      "pages": 45,
+      "hata": ""
+    },
+    {
+      "domain": "webtoontr.net",
+      "list": 16,
+      "chapters": 130,
+      "pages": 60,
+      "hata": ""
+    },
+    {
+      "domain": "hentaimanga.me",
+      "list": 26,
+      "chapters": 17,
+      "pages": 10,
+      "hata": ""
+    },
+    {
+      "domain": "mangahentai.me",
+      "list": 34,
+      "chapters": 2,
+      "pages": 26,
+      "hata": ""
+    },
+    {
+      "domain": "namicomi.com",
+      "list": 166,
+      "chapters": 4,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "br.comikey.com",
+      "list": 0,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: java.lang.NullPointerException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
+    },
+    {
+      "domain": "manga18x.net",
+      "list": 24,
+      "chapters": 5,
+      "pages": 17,
+      "hata": ""
+    },
+    {
+      "domain": "mangapark.tv",
+      "list": 10,
+      "chapters": 20,
+      "pages": 5,
+      "hata": ""
+    },
+    {
+      "domain": "mangamukai.com",
+      "list": 30,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "bölüm listesi boş"
+    },
+    {
+      "domain": "comic-days.com",
+      "list": 372,
+      "chapters": 1,
+      "pages": 2,
+      "hata": ""
+    },
+    {
+      "domain": "petrotechsociety.org",
+      "list": 0,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "UnsupportedOperationException"
+    },
+    {
+      "domain": "arc-relight.com",
+      "list": 10,
+      "chapters": 8,
+      "pages": 1,
+      "hata": ""
+    },
+    {
+      "domain": "mangaz.com",
+      "list": 0,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "popüler liste boş"
+    },
+    {
+      "domain": "mangaforfree.net",
+      "list": 20,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "bölüm listesi boş"
+    },
+    {
+      "domain": "remanga.org",
+      "list": 0,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "popüler liste boş"
+    },
+    {
+      "domain": "piccoma.com",
+      "list": 10,
+      "chapters": 6,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "fr.niadd.com",
+      "list": 24,
+      "chapters": 1,
+      "pages": 3,
+      "hata": ""
+    },
+    {
+      "domain": "lectorhub.j5z.xyz",
+      "list": 25,
+      "chapters": 20,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "manga1st.online",
+      "list": 12,
+      "chapters": 125,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "lector.lolivault.net",
+      "list": 25,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "bölüm listesi boş"
+    },
+    {
+      "domain": "comichubfree.com",
+      "list": 20,
+      "chapters": 1,
+      "pages": 1,
+      "hata": ""
+    },
+    {
+      "domain": "arthurscan.xyz",
+      "list": 21,
+      "chapters": 296,
+      "pages": 15,
+      "hata": ""
+    },
+    {
+      "domain": "covendasbruxonas.com",
+      "list": 28,
+      "chapters": 3,
+      "pages": 4,
+      "hata": ""
+    },
+    {
+      "domain": "heavenmanga.com",
+      "list": 74,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "bölüm listesi boş"
+    },
+    {
+      "domain": "toonily.com",
+      "list": 24,
+      "chapters": 276,
+      "pages": 101,
+      "hata": ""
+    },
+    {
+      "domain": "elftoon.com",
+      "list": 24,
+      "chapters": 87,
+      "pages": 3,
+      "hata": ""
+    },
+    {
+      "domain": "cocomic.co",
+      "list": 24,
+      "chapters": 315,
+      "pages": 1,
+      "hata": ""
+    },
+    {
+      "domain": "hyakuro.net",
+      "list": 0,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "popüler liste boş"
+    },
+    {
+      "domain": "en.xchina.co",
+      "list": 31,
+      "chapters": 23,
+      "pages": 36,
+      "hata": ""
+    },
+    {
+      "domain": "mangadusleri.mom",
+      "list": 24,
+      "chapters": 22,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "arabtoons.net",
+      "list": 24,
+      "chapters": 2,
+      "pages": 1,
+      "hata": ""
+    },
+    {
+      "domain": "hivetoons.org",
+      "list": 109,
+      "chapters": 1,
+      "pages": 37,
+      "hata": ""
+    },
+    {
+      "domain": "lectorhentai.com",
+      "list": 25,
+      "chapters": 22,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "sunsetscans.com.tr",
+      "list": 20,
+      "chapters": 10,
+      "pages": 1,
+      "hata": ""
+    },
+    {
+      "domain": "vortexscans.org",
+      "list": 177,
+      "chapters": 2,
+      "pages": 30,
+      "hata": ""
+    },
+    {
+      "domain": "manhwatoon.me",
+      "list": 0,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "KAPSAM_DISI"
+    },
+    {
+      "domain": "erofus.com",
+      "list": 82,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "bölüm listesi boş"
+    },
+    {
+      "domain": "comizy.io",
+      "list": 24,
+      "chapters": 8,
+      "pages": 3,
+      "hata": ""
+    },
+    {
+      "domain": "okutoon.com",
+      "list": 24,
+      "chapters": 27,
+      "pages": 11,
+      "hata": ""
+    },
+    {
+      "domain": "ezmanga.org",
+      "list": 24,
+      "chapters": 31,
+      "pages": 19,
+      "hata": ""
+    },
+    {
+      "domain": "holyscans.com.tr",
+      "list": 20,
+      "chapters": 23,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "multporn.net",
+      "list": 18,
+      "chapters": 10,
+      "pages": 5,
+      "hata": ""
+    },
+    {
+      "domain": "mangadenizi.net",
+      "list": 15,
+      "chapters": 43,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "trmanga.com",
+      "list": 24,
+      "chapters": 3,
+      "pages": 58,
+      "hata": ""
+    },
+    {
+      "domain": "razure.org",
+      "list": 101,
+      "chapters": 11,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "manga.io.vn",
+      "list": 49,
+      "chapters": 1,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "mangahub.io",
+      "list": 30,
+      "chapters": 8216,
+      "pages": 6,
+      "hata": ""
+    },
+    {
+      "domain": "mangaowl.io",
+      "list": 10,
+      "chapters": 43,
+      "pages": 6,
+      "hata": ""
+    },
+    {
+      "domain": "mangawt.com",
+      "list": 12,
+      "chapters": 494,
+      "pages": 7,
+      "hata": ""
+    },
+    {
+      "domain": "montetaiscanlator.xyz",
+      "list": 0,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "SocketTimeoutException: timeout"
+    },
+    {
+      "domain": "golgebahcesi.com",
+      "list": 20,
+      "chapters": 131,
+      "pages": 0,
+      "hata": ""
+    },
+    {
+      "domain": "8comic.com",
+      "list": 30,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "bölüm listesi boş"
+    }
+  ]
+}
