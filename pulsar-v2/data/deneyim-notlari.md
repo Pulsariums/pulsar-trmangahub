@@ -297,3 +297,12 @@ Kural: bir kaynak için "JS" teşhisi konduğunda **önce API ucu aranır** (en 
 - İkinci yanlış: "JS_RENDER" etiketi. JS, "veri HTML'de yok" demektir; "veri yok" demek değildir. JS etiketli 45 kaynağın bir kısmı (MangaKatana `thzq=[...]`, Tapas `img.content__img`, Nikkangecchan `img.episode-page`) tek bir uç/attribute bulunduğunda açıldı.
 - Kural: `Cloudflare` ve `JS_RENDER` **ara karardır**. `failed` yazmadan önce (a) JSON ucu, (b) script içi JSON, (c) bilinen CMS uçları denenir; sonuç yoksa karar nedeni yazılır (`IMZA_GEREKLI`, `CSRF_GEREKLI`, `GEO_BLOK`).
 - Doğrulanmış imkânsızlar: `pocket.shonenmagazine` (imza), `lectorhentai` (AES-GCM + CSRF), `piccoma` (Japonya IP bloğu).
+
+## 27. Cloudflare ve çerez yolu (2026-11-18)
+
+- Motor artık kaynak `config` içinde iki alan okuyor: `cookie` (ham çerez dizesi) ve `userAgent`. `cookie` doluysa `headersBuilder()` sonunda `Cookie` başlığı yazılır; `headers` nesnesinde `Cookie` varsa o kazanır ve `config.cookie` uygulanmaz.
+- Çerez tarayıcıdan alınır: siteyi aç, DevTools → Application → Cookies → site adı; `cf_clearance` ve `__cf_bm` satırlarındaki değerleri kopyala. `cookie` alanına `cf_clearance=...; __cf_bm=...` biçiminde tek satır yazılır (JSON içinde normal string; kaçış gerekmez, `;` ve boşluklar korunur).
+- `cf_clearance` tarayıcının **User-Agent**'ına bağlıdır: `userAgent` alanı çerezi aldığın tarayıcının UA'sıyla birebir aynı olmalı, yoksa 403 sürer. `userAgent` boşsa motorun varsayılan masaüstü UA'sı kullanılır.
+- Çerez **IP'ye bağlıdır**: wifi → mobil veri gibi ağ değişiminde geçersizleşir; çerez, tarayıcının o anki IP'siyle alınmalı.
+- Ömür kısadır: `__cf_bm` yaklaşık 30 dakika, `cf_clearance` birkaç saat — **siteye göre değişir**. 403 geri dönerse ilk iş çerezi tarayıcıdan yeniden almaktır.
+- Çerez çözüm değil köprüdür: kalıcı çözüm hâlâ JSON ucu/API aramaktır (§20, §26). Çerezli kayıt cihaz testinde `pass` alsa da çerez bayatlayınca düşer; bu yüzden çerezle açılan kaynakta `sorun` alanına `cloudflare:cerez` notu düşülür.

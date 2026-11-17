@@ -31,8 +31,16 @@ class PulsarSource(
 
     // Kototoro'nun varsayılan (mobil WebView) UA'sını kaldırıp tek masaüstü UA bırakıyoruz;
     // iki User-Agent başlığı bazı CDN'lerde 403'e yol açıyor.
-    private val desktopUserAgent: String =
+    private val defaultUserAgent: String =
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+
+    // Kaynak ayarinda "userAgent" verilmisse onu kullaniyoruz: Cloudflare cerezi
+    // (cf_clearance) tarayicinin kendi UA'si ile eslesmedigi surece gecerli olmuyor.
+    private val desktopUserAgent: String =
+        config.optString("userAgent", "").trim().ifBlank { defaultUserAgent }
+
+    // Tarayicidan alinan ham cerez dizesi ("cf_clearance=...; __cf_bm=...").
+    private val cookieHeader: String = config.optString("cookie", "").trim()
 
     override val supportsLatest: Boolean = true
 
@@ -77,12 +85,17 @@ class PulsarSource(
             .removeAll("User-Agent")
             .add("Referer", "$baseUrl/")
             .add("User-Agent", desktopUserAgent)
+        var cookieFromHeaders = false
         config.optJSONObject("headers")?.let { o ->
             for (k in o.keys()) {
                 val v = o.optString(k)
-                if (v.isNotBlank()) b.set(k, v)
+                if (v.isBlank()) continue
+                b.set(k, v)
+                if (k.equals("Cookie", ignoreCase = true)) cookieFromHeaders = true
             }
         }
+        // headers nesnesindeki Cookie oncelikli; yoksa config.cookie uygulanir.
+        if (!cookieFromHeaders && cookieHeader.isNotBlank()) b.set("Cookie", cookieHeader)
         return b
     }
 
