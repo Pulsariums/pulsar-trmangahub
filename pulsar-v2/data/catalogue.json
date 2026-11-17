@@ -624,7 +624,7 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "a.max-w-44",
-        "chapterSelector": "a[href^=\"/manga/\"]",
+        "chapterSelector": "a.relative.h-14[href^=\"/manga/\"]",
         "readerSelector": "img[src*=\"cdn.zukrein.com\"]"
       },
       "verified_by_user": true,
@@ -1026,7 +1026,9 @@
         "local_custom",
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     {
       "id": "manga.adonisfansub.com",
@@ -1260,7 +1262,8 @@
         "keiyoushi_index"
       ],
       "sorun": "oturum",
-      "selector_verified": true
+      "selector_verified": true,
+      "reason": "Sayfa listesi APIde: /v1/readV2/by-order 400 CLIENT_HEADER_MISSING donuyor; zorunlu istemci basliginin adi olculemedi. Release HTMLinde yalniz 1 preload gorseli var; thumbnail CDN (digitaloceanspaces) Refererli/Referersiz 200."
     },
     {
       "id": "hoifansub.com",
@@ -1772,7 +1775,8 @@
         "pageApiUrl": "https://okutoon.net/api/v1/series/{1}/chapters/{2}",
         "pageApiIdPattern": "/([^/]+)/(bolum-[0-9]+)",
         "pageApiItems": "data.pages",
-        "pageApiFieldUrl": "image_url"
+        "pageApiFieldUrl": "image_url",
+        "baseUrl": "https://okutoon.net"
       },
       "verified_by_user": false,
       "origins": [
@@ -2225,7 +2229,7 @@
         "engine": "madara",
         "listPath": "manga",
         "itemSelector": ".post-title a",
-        "chapterSelector": "a[href*='/bolum-']",
+        "chapterSelector": "a[href*=\"/bolum-\"]",
         "readerSelector": ".reading-content img",
         "searchUrl": "https://webtoontr.net/?s={query}&post_type=wp-manga"
       },
@@ -2478,7 +2482,7 @@
       "config": {
         "engine": "madara",
         "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
+        "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
         "readerSelector": "div.page-break img, div.reading-content img",
         "searchUrl": "https://ghostoon.com/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
@@ -2494,7 +2498,8 @@
         "keiyoushi_index",
         "local_custom",
         "local_tr"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "holyscans.com.tr",
@@ -2654,15 +2659,16 @@
       "name": "MangaRuhu",
       "lang": "tr",
       "nsfw": 0,
-      "domain": "mangaruhu.net",
-      "baseUrl": "https://mangaruhu.net",
+      "domain": "ruhmanga.com",
+      "baseUrl": "https://ruhmanga.com",
       "engine": "madara",
       "config": {
         "engine": "madara",
         "listPath": "/manga",
         "itemSelector": "div.page-item-detail, div.manga",
         "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
+        "readerSelector": "div.page-break img, div.reading-content img",
+        "baseUrl": "https://ruhmanga.com"
       },
       "altDomains": [
         "mangaruhu.com"
@@ -3446,8 +3452,8 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "article.manga-card",
-        "chapterSelector": "a[href*='/chapter-']",
-        "readerSelector": "img[src*='/assets/images/chapters/']"
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": "img[src*=\"/assets/images/chapters/\"]"
       },
       "selector_verified": true,
       "origins": [
@@ -3511,9 +3517,9 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "article.webtoon-card",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": "img[src*=\"/assets/images/chapters/\"]"
       },
       "selector_verified": true,
       "origins": [
@@ -4051,7 +4057,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "div.page-item-detail .item-summary .post-title a",
+        "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "div.reading-content img.wp-manga-chapter-img",
         "searchUrl": "https://manga18x.net/?s={query}&post_type=wp-manga",
