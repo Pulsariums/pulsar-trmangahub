@@ -171,7 +171,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "covers: ",
+        "detail": "JS_RENDER - SPA: /assets/index-CR_afPIp.js (482.399 bayt). API tabani app.js icinde birebir olculdu: url(e){return\"\".concat(\"https://master.toonspace.io/api\").concat(e)} ve const t=\"https://master.toonspace.io/api\". Endpoint yollari calisma zamaninda sinif metodlariyla kuruluyor; chunk'ta gorunen tek /v1/ yolu dis servis (ip-intelligence.abstractapi.com). Bolum/sayfa gorseli ucu bulunamadi. Ana sa",
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "covers"
@@ -453,20 +453,6 @@
       "domain": "kuroimanga.site",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: IOException: unexpected end of stream on https://www.kuroimanga.top/...",
-        "at": "2026-11-17T11:20:09Z"
-      },
       "device_step": "pages"
     },
     "1255008208586588111": {
@@ -678,21 +664,7 @@
       "packages": [
         "tr"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "active"
     },
     "1338439945941688878": {
       "id": 1338439945941688878,
@@ -2575,7 +2547,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: Liste boş",
+        "detail": "IMZA_GEREKLI - WordPress + galsa teması. Bolum URL'si /chapter/<slug>-الفصل-<N>/. Bolum sayfasinda #ch-pages-track BOS; inline scriptte korumali okuyucu: const RAWI_IMG = {\"ajax\":\"https://peach-bl.com/wp-admin/admin-ajax.php\",\"cid\":3906,\"exp\":1794558569,\"t\":\"MVxXLaH_4gKV1TndIMKNtuGg9cy1jf-5\",\"compat\":true,\"rlck\":\"rawi_rl\"} ve /* القارئ المحمي: لا روابط صور في الصفحة */ yorumu; yani sayfa listesi s",
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list"
@@ -3540,10 +3512,10 @@
         "at": "2026-11-13T19:01:05Z"
       },
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CF",
+        "detail": "BULUNAMADI - Ana sayfa ve /manga ikisi de 503, 6144 bayt; gercek site title'i (OriManga | Webtoon Oku...) geliyor ama govdede 'maintenance' 2 kez geciyor, tek kart sinifi yok (bsx/manga-card/chapter-item = 0). Site bakimda; liste/detay olculemedi.",
         "at": "2026-11-16T22:05:11.851283Z"
       }
     },
@@ -5064,13 +5036,6 @@
       "domain": "opiatoon.shop",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Icerik login duvari arkasinda",
-        "at": "2026-11-17T14:31:41.061125Z"
-      },
       "device_step": "details",
       "sorun": "login"
     },
@@ -5258,7 +5223,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Next App Router flight metni: tırnaklar kaçışlı (ters bölü + tırnak), URL ler göreli (https://cdn.leituramanga.net/ öneki gerekli). scriptJsonPages kaçışı çözmü",
+        "detail": "JS_RENDER - Next.js App Router (self.__next_f x53). Bolum HTML'inde sayfa gorseli YOK: tum .webp/.jpg adresleri kapak (cdn.leituramanga.net/<slug>/cover-md.webp, cover-og.jpg) ve site URL'si. HTML'de api/graphql hostu, apiUrl alani, u002F kacisi yok; sayfa listesi tamamen istemci tarafinda cekiliyor. Tahmin edilen CDN kalibi denendi ve 404: cdn.leituramanga.net/<slug>/6/1.webp, .../chapter-6/1.web",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
@@ -5449,7 +5414,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Next.js; bölümler istemci tarafinda yukleniyor",
+        "detail": "JS_RENDER - Bölümler Next.js self.__next_f RSC yükünde kaçışlı JSON olarak duruyor; ayrı JSON ucu yok, pageJsonArray düz yol ile okunamaz. Tek harici host static.mangaflix.net.",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
@@ -5776,20 +5741,6 @@
       "domain": "amangaplanet.com.tr",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "pages"
     },
     "209650416390992343": {
@@ -7604,7 +7555,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "sayfa boş (harness)",
+        "detail": "JS_RENDER - Nuxt SPA; bolum URL kalibi /en/<kategori>/<slug>/<no>/<bookId>. Bolum HTML'inde 36 adet .reader-image-list__item var; hepsi data-image-state=\"loading\"; yalnizca ilk sayfanin gercek src'si basili (https://imgg.mangaina.com/U01XRnduc2xNOTYzeTBBUDRvcWxzdz09_ed090bfcd449885e9e28c164fc6f8f95_cpImg.webp), kalan 35 sayfa istemcide cekiliyor. Adresler opak hash oldugu icin kurulamaz. API izi: ",
         "at": "2026-11-17T15:42:59.035062Z"
       },
       "device_step": "list"
@@ -7648,7 +7599,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
+        "detail": "BULUNAMADI - Denenen uçlar hepsi 404: /api/series/<id>, /api/series/<id>/episodes, /api/episodes?series_id=<id>, /episode/<id>. Bölüm listesi ucu doğrulanamadı.",
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "details"
@@ -10105,14 +10056,7 @@
       "nsfw": 0,
       "domain": "duckscans.com",
       "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Sayfa URL'leri GET /api/chapters?series={slug}&chapter={n}&includepages=true&limit=1 JSON'unda data[0].pages (imzali /uploads/seri/<slug>/bolum%20N/00X.webp?...",
-        "at": "2026-11-16T22:14:59.157499Z"
-      }
+      "state": "failed"
     },
     "2874683368787930309": {
       "id": 2874683368787930309,
@@ -10902,7 +10846,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Cloudflare managed challenge. Secici ile cozulmez.",
+        "detail": "CLOUDFLARE - 403 'Just a moment...' + challenge-platform; Cloudflare managed challenge. Govdede kart yok.",
         "at": "2026-11-16T22:14:59.157499Z"
       },
       "sorun": "cloudflare"
@@ -11217,7 +11161,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Cihaz URL'i 404 (slug eskimiş); /manga listesindeki canli detayda h1+og:image var, bölüm listesi istemci tarafinda doluyor",
+        "detail": "CHAPTER_AJAX - JSON: data.chapters[] {id, attributes:{title, slug, order}}; bölüm adresi /manga/<seri-slug>/<attributes.slug>. <mid> sayfadaki data-mid'den. Bölüm sayfasında sayfa görseli yok (19 img reklam/logo), #chapcontent boş; ChapLayout yalnız zoom.",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
@@ -11488,20 +11432,6 @@
         "tr"
       ],
       "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T15:30:53.604236Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness L8/C1/P5",
-        "at": "2026-11-17T15:30:53.604236Z"
-      },
       "device_step": "pages"
     },
     "324065352936051183": {
@@ -12184,7 +12114,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Ana sayfa, /manga/ ve www varyanti ayni 1686 baytlik Bot Verification sayfasini donuyor (Google reCAPTCHA sitekey 6Leio6YU..., url sonuna /n ekleniyor). curl il",
+        "detail": "CLOUDFLARE - 1686 baytlik Bot Verification sayfasi (bot korumasi). HTML icerik yok.",
         "at": "2026-11-16T22:14:59.157499Z"
       }
     },
@@ -15845,7 +15775,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "NeoxScans kaydi. Kartlar br.comikey.com/comics/<slug>/<id>/ adresine gidiyor; comikey detayi JS uygulamasi (window.__FINIT__), HTML icinde bolum linki yok.",
+        "detail": "IMZA_GEREKLI - comikey uygulaması Firebase App Check istiyor (bundle'da content-firebaseappcheck + media.comikey.com); HTML'de /api/ yolu yok. NeoxScans kartları br.comikey.com/comics/<slug>/<id>/ adresine gidiyor.",
         "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "list"
@@ -15983,7 +15913,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "403 govdesi DDoS-Guard JS challenge (.well-known/ddos-guard/js-challenge). Cloudflare degil; JS challenge cozulmeden HTML alinamaz.",
+        "detail": "CLOUDFLARE - 403 DDoS-Guard ara sayfasi: title 'DDoS-Guard', govdede 'Checking your browser'. Kuyruktaki '.well-known/ddos-guard' JS challenge ile ayni. Secici ile cozulmez, istek govdesinde kart yok.",
         "at": "2026-11-16T22:14:59.157499Z"
       },
       "sorun": "cloudflare"
@@ -16071,7 +16001,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Cloudflare managed challenge. Secici ile cozulmez.",
+        "detail": "CLOUDFLARE - 403 'Just a moment...' + challenge-platform isareti; Cloudflare managed challenge. Govdede kart yok.",
         "at": "2026-11-16T22:14:59.157499Z"
       },
       "sorun": "cloudflare"
@@ -16276,13 +16206,6 @@
       "domain": "mangamukai.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Bölüm listesi SPA tarafinda; HTML'de bölüm linki yok",
-        "at": "2026-11-17T14:31:41.061125Z"
-      },
       "device_step": "details"
     },
     "4081958157659691020": {
@@ -16979,13 +16902,6 @@
       "domain": "global.manga-up.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Sayfa 4.6 KB Next.js kabuğu; reader tamamen istemcide kuruluyor. Resmî SQEX uygulaması; üyelik/kota gerekebilir.",
-        "at": "2026-11-17T14:31:41.061125Z"
-      },
       "device_step": "pages"
     },
     "4161256899859235572": {
@@ -17390,7 +17306,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Sayfa listesi #page-viewer div inin attribute değerinde pageStructure.pages[].src; HTML entity kaçışlı (&quot;) ve URL ler uzantısız (/public/original/<id>-<has",
+        "detail": "JS_RENDER - Next.js App Router. Bolum sayfasi /episode/<buyuk sayi>. Sayfa listesi HTML'de VAR ama <img> olarak degil: 46 adet <link rel=\"preload\" href=\"https://cdn-img.comic-days.com/public/original/<id>-<hash>\" as=\"fetch\" crossorigin=\"anonymous\" class=\"test-fetch-pageimage\">. Uzantisi yok (id-hash bicimi). Motorun sayfa ayiklayicisi yalnizca <img> okuyor (data-src/data-lazy-src/data-original/src",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
@@ -21176,7 +21092,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Okuyucu harici vw.mangaz.com viewer ında (JS/DRM). HTML de sayfa görseli yok; data-src ler yalnız benzer kitap kapakları.",
+        "detail": "JS_RENDER - Manga Library Z. Detay /book/detail/<id>. Detay HTML'inde okuyucu baglantisi yok; yalnizca oneri kapaklari (lazysizes data-src, https://mangaz-books.j-comi.jp/Books/<xx>/<id>/thumb240_*.webp). Okuyucu /js/open-viewer.js (1648 bayt) sadece .open-viewer/.close-viewer siniflarini degistiriyor, sayfa verisi uretmiyor; /js/app.js ayri. Denenen ve 404 donen yollar: /book/viewer/41061, /book/",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
@@ -21467,20 +21383,6 @@
       "domain": "webtoontr.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1394,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: NotFoundException: . Status=404, URL=[https://webtoontr.net/wp-admin/admin-ajax.php]",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list"
     },
     "4491758654893492698": {
@@ -22131,7 +22033,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Sayfa listesi viewer API sinden (bibGetCntntInfo) oturuma özel random_identification ile geliyor. HTML de görsel yok; attribute değeri motor tarafından okunamıy",
+        "detail": "IMZA_GEREKLI - Görsel listesi viewer API'sinden geliyor; random_identification sayfayı açan oturuma bağlı. Aynı token başka oturumdan çağrılınca result:-100. Taze /comics/<slug>/1 sayfası 200/57212 ama data-ptbinb içermiyor.",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
@@ -24870,10 +24772,10 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CF",
+        "detail": "CLOUDFLARE - Cloudflare managed challenge: title Just a moment..., govdede 5 kez cloudflare gecer.",
         "at": "2026-11-16T22:05:11.851283Z"
       },
       "device_step": "list"
@@ -27619,7 +27521,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: NotFoundException: . Status=404, URL=[https://woopread.com/wp-admin/admin-ajax.php]",
+        "detail": "BULUNAMADI - Web novel: bölüm gövdesi metin paragraflarından oluşuyor, sayfa görseli yok.",
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list"
@@ -27985,13 +27887,6 @@
       "domain": "covendasbruxonas.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "popüler liste boş",
-        "at": "2026-11-17T15:42:59.035062Z"
-      },
       "device_step": "list"
     },
     "5824161584162899529": {
@@ -28241,13 +28136,6 @@
       "domain": "otakuangel.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Bölüm listesi istemci tarafinda; HTML'de bölüm linki yok",
-        "at": "2026-11-17T14:31:41.061125Z"
-      },
       "device_step": "details"
     },
     "5863442274693704416": {
@@ -28526,7 +28414,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Bölüm listesi JS ile doluyor; ayrica age-gate overlay ve login linkleri var",
+        "detail": "JS_RENDER - 'LISTA DE CAPITULOS ESPAÑOL' h4'ünden sonraki kapsayıcı boş; tema app.js'inde chapter/admin-ajax izi yok.",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
@@ -29343,13 +29231,6 @@
       "domain": "monomanga.com.tr",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "IOException: Connection reset",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
       "device_step": "pages",
       "unreachable": true
     },
@@ -29462,7 +29343,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "AJAX ucu sayfa dizisi değil HTML gövdesi döndürüyor (html alanı). pageApiItems bir JSONArray beklediği için kullanılamıyor.",
+        "detail": "JS_RENDER - Sunucu tarafinda render edilen eski tema (/themes/hachi, mangabuddy zing-92 klonu, jquery.lazyload). Bolum sayfasi /manga/<slug>/di<N>hua. HTML'de MANGA_ID=43 ve CHAPTER_ID=6444 sabitleri var ama sayfa gorseli yok: 10 img'nin hepsi logo/banner (rawjp.xyz temas gorselleri). Bolum HTML'inde sayfa listesi ureten fetch/ajax yok; gorulen tek ajax /ajax/reading-list/add. Dis host yok (mangak",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
@@ -30054,14 +29935,7 @@
       "nsfw": 0,
       "domain": "mangabahcesi.com",
       "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Bolum HTML'inde 121 img var ama hepsi JS sablonu: src=/Content/img/manga-read/<w>x<h>.png placeholder, gercek gorsel background-image:url(objectURL) ile blob. S",
-        "at": "2026-11-16T22:14:59.157499Z"
-      }
+      "state": "failed"
     },
     "6252364042350398531": {
       "id": 6252364042350398531,
@@ -30114,7 +29988,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "detayda class=chapterlists animate-pulse; /chapterlist/timid-palette sayfasinda da bölüm linki yok (yalniz navigasyon)",
+        "detail": "CLOUDFLARE - Bölüm listesi ucu Cloudflare JS challenge arkasında; Referer + X-Requested-With ile de 403.",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
@@ -30259,7 +30133,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Cloudflare managed challenge. Secici ile cozulmez.",
+        "detail": "CLOUDFLARE - 403 'Just a moment...' + challenge-platform; Cloudflare managed challenge. Govdede kart yok.",
         "at": "2026-11-16T22:14:59.157499Z"
       },
       "sorun": "cloudflare"
@@ -30374,7 +30248,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Next.js App Router iskeleti. Sayfa görselleri istemci tarafı API den geliyor; HTML/RSC metninde CDN veya görsel yolu yok.",
+        "detail": "JS_RENDER - Next.js app router. Liste ve detay verisi self.__next_f RSC payload'inda (63 push, cozulmus 156.024 bayt; ornek item: slot,id,title,slug,chapters_count,latest_chapters_badges). Detay /series/where-is-the-elf-teachers-toilet -> 200, 22 bolum linki (/series/{slug}/{slug}-chapter-{n}/). Okuyucu /series/you-are-my-servant/you-are-my-servant-chapter-13/ -> 200/49.521 bayt, 0 img, HTML'de /a",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
@@ -30515,7 +30389,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Ana sayfa ve /manga/ (200/1.469/68449) title=Giris Gerekli; sadece auth-card var, anonim seri karti yok. /wp-json/wp/v2/posts bos dizi, /wp-json/wp/v2/manga 404",
+        "detail": "BULUNAMADI - Tum yanitlar login duvari: title Giris Gerekli, 1 img, manga linki 0. Secici olculemedi.",
         "at": "2026-11-16T22:14:59.157499Z"
       }
     },
@@ -30861,7 +30735,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
+        "detail": "CLOUDFLARE - Kuyrukta 'liste zaman asimi' yaziyor; canli olcumde ana sayfa 403 'Just a moment...' Cloudflare managed challenge donduruyor. Govdede kart yok.",
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
@@ -31280,13 +31154,6 @@
       "domain": "mangadusleri.mom",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "covers"
     },
     "6581990139232227222": {
@@ -31478,13 +31345,6 @@
       "domain": "shadowceviri.blogspot.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "sayfa boş (harness)",
-        "at": "2026-11-17T15:42:59.035062Z"
-      },
       "device_step": "pages"
     },
     "6620603193106345631": {
@@ -31577,7 +31437,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Nuxt 3. __NUXT_DATA__ 83 eleman; images dizisi yalnız dosya adı (6afb3b64c56f9.webp). Tam yol mangaDir+chapterDir ile istemcide kuruluyor; pageJsonArray images ",
+        "detail": "JS_RENDER - Nuxt 3. Bolum HTML'inde sayfa gorselleri yok (14 img = kapak/ikon). Payload script#__NUXT_DATA__ icinde data[\"chapter-<slug>-<no>\"]: id=5, chapterDir=2897586c86c2, imagesCount=13, images=[{name:\"6afb3b64c56f9.webp\",width,height} x13] var; yani dosya adlari geliyor ama TABAN YOL payload'da yok. Nuxt config apiBase=\"/api\". Denenen uclar: /api/chapters/5/images, /api/chapter/5/images, /ap",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
@@ -31610,20 +31470,6 @@
       "domain": "globalcomix.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "pages",
       "sorun": "oturum"
     },
@@ -31875,7 +31721,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
+        "detail": "CLOUDFLARE - 403 'Just a moment...' (5460 bayt) Cloudflare managed challenge. Kuyrukta liste zaman asimi yaziyor; canli olcumde dogrudan 403 donuyor. Govdede kart yok.",
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
@@ -33492,7 +33338,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Gerçek adres https://cdn.meowing.org/uploads/{uid}. uid-URL eşlemesi istemcide; HTML de dizi yok, cdn.meowing yalnız meta og:image ve ld+json içinde. readerSele",
+        "detail": "JS_RENDER - Bolum HTML'i: #pages icine <img src=\"/assets/images/placeholder.svg?clear=3\" count=N uid=\"<11 karakter>\" class=\"lazy myImage\"> konuyor; gercek adres inline scriptteki loadImage() icinde kuruluyor: `https://cdn.meowing.org/uploads/${uid}` (uid <img> niteliginden). LazyLoad (#pages) sadece src'yi bu adrese ceviriyor. Bu bolumde uid'li 2 img var (uid=\"gpqyTC8Yb2F\" vb.); JSON-LD'de ilk say",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
@@ -33544,13 +33390,6 @@
       "domain": "sunsetscans.com.tr",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Seri kartlari HTML de yok: kapak markup u JS template string icinde (getAdultHtml, manga.thumbnail) ve liste fetch ile doluyor. Sunucu render kart yok -> KAPAK_",
-        "at": "2026-11-17T15:18:20.071105Z"
-      },
       "device_step": "covers"
     },
     "7293740138855045512": {
@@ -34150,13 +33989,6 @@
       "domain": "xiaoaitoon.org.tr",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "pages"
     },
     "7463464127094088901": {
@@ -34194,20 +34026,6 @@
       "domain": "manga.araznovel.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 19 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "details",
       "sorun": "cloudflare"
     },
@@ -35108,13 +34926,6 @@
       "domain": "yaoi.me",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "covers"
     },
     "7793182120198515414": {
@@ -35394,7 +35205,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Yalniz JS challenge: window.location.replace(/manga?ch=1&js=<JWT>); HTML icinde seri yok.",
+        "detail": "CSRF_GEREKLI - window.location.replace('https://piedpiperfansubyy.me/?ch=1&js=<JWT>&sid=<uuid>'); challenge adresi 302 ile reklam tıklamasına atıyor ve çerez set etmiyor, curl ile geçilemedi. Katalogdaki Madara seçicileri bu yüzden doğrulanamıyor.",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "list"
@@ -35812,20 +35623,6 @@
       "domain": "tonizu.top",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness: list=11 chapters=8 pages=1",
-        "at": "2026-11-16T21:08:33.899Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "pages"
     },
     "8004965338622879732": {
@@ -35946,13 +35743,6 @@
       "domain": "holyscans.com.tr",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "pages"
     },
     "8039923198961795071": {
@@ -36204,14 +35994,7 @@
       "nsfw": 0,
       "domain": "mangadenizi.net",
       "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Bolum HTML'inde 4 img (logo/kapak/organizasyon); sayfa gorseli yok. script#__NUXT_DATA__ icinde 14 sayfa nesnesi var: image_url = img.mangadenizi.net/reader-ima",
-        "at": "2026-11-16T22:14:59.157499Z"
-      }
+      "state": "failed"
     },
     "8132273477468721739": {
       "id": 8132273477468721739,
@@ -36345,7 +36128,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Next.js; HTML de seri linki ve slug alani 0. /api/proxy/m/ yalniz varlik proxy oneki, seri JSON ucu gorulmedi.",
+        "detail": "JS_RENDER - Ana sayfa Next.js RSC; HTML'de seri linki yok. api.lunarx.to/api/manga/{1}/{2}?lang=tr yolu bu ölçümde doğrulanmadı (katalogda 11 kayıtta geçiyor).",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
@@ -36403,13 +36186,6 @@
       "domain": "mhua5.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "popüler liste boş",
-        "at": "2026-11-17T15:42:59.035062Z"
-      },
       "device_step": "list"
     },
     "819133826546505053": {
@@ -36576,10 +36352,10 @@
         "at": "2026-11-16T22:05:11.851283Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
+        "detail": "PAGE_API - Next.js SPA + JSON API. Olculen uclar: GET /api/series?page=1 -> 200/35.857 {series:[{id,title,slug,description,...}]}; GET /api/series/{slug} -> 200/475.583, {series:{...}, chapters:[2922 adet]}, chapter alanlari: id,series_id,chapter_number,title,created_at,publish_at,chapter_views,read_count; GET /api/chapters/{id} (3496) -> 200/5.625, {chapter:{id,...,content:null,thumbnail_url:null",
         "at": "2026-11-17T10:02:04Z"
       }
     },
@@ -36664,20 +36440,6 @@
         "tr"
       ],
       "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "cihaz testi",
-        "at": "2026-11-17T15:07:28.720418Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "cihaz testi 2026-11-17T15:03Z",
-        "at": "2026-11-17T15:07:28.720418Z"
-      },
       "device_step": "pages"
     },
     "8287199181829843047": {
@@ -36814,20 +36576,6 @@
       "domain": "panda.chaika.moe",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "http404",
-        "http_code": "404",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "covers"
     },
     "8366111277663094500": {
@@ -36996,7 +36744,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Razure webnovel: bölüm 141 p metninden oluşuyor, sayfa görseli yok. Görsel okuyucu olarak okunamaz.",
+        "detail": "BULUNAMADI - Site bir WEB NOVEL arsivi (tema: webnovel-theme, okuyucu cr-reader-*). Bolum sayfasinda #cr-reader-page data-chapter-id=\"17658\" data-novel-id=\"39571\" data-format=\"novel\" data-is-comic=\"0\"; bolum icerigi metin, sayfa gorseli yok. Bolum HTML'indeki 2 img seri kapagi ve site logosu. Seri sayfasinda 235 bolum linki var ama 'comic' isaretli icerik gormedim. Bu yuzden aranacak bir gorsel uc",
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
@@ -37215,13 +36963,6 @@
       "domain": "manga.io.vn",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "DocTruyen5s: gerçek sayfa URL leri JS ile atanıyor. HTML de uploads/chapters yolu hiç yok (grep=0); 8 data-src yalnız kapak görselleri.",
-        "at": "2026-11-17T14:31:41.061125Z"
-      },
       "device_step": "pages"
     },
     "8461833419006748458": {
@@ -37375,13 +37116,6 @@
       "domain": "mangawt.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Sayfa tamamen istemci tarafinda render; HTML iskelet",
-        "at": "2026-11-17T14:31:41.061125Z"
-      },
       "device_step": "details"
     },
     "8462394428445828805": {
@@ -37395,20 +37129,6 @@
         "tr18"
       ],
       "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T15:30:53.604236Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness L92/C1/P19",
-        "at": "2026-11-17T15:30:53.604236Z"
-      },
       "device_step": "covers"
     },
     "8463142241276011825": {
@@ -37837,10 +37557,10 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CF",
+        "detail": "BULUNAMADI - 299 baytlik Apache '503 Service Unavailable / The server is temporarily unable to service your request due to maintenance downtime'. Icerik, kart veya cozulebilir bir engel yok; olcum yapilamadi.",
         "at": "2026-11-16T22:05:11.851283Z"
       },
       "device_step": "list"
@@ -37856,20 +37576,6 @@
         "tr"
       ],
       "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "cihaz testi",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "cihaz testi 2026-11-17T15:03Z",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
       "device_step": "pages"
     },
     "8607382649550260430": {
@@ -38060,13 +37766,6 @@
       "domain": "dragonball-multiverse.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T15:42:59.035062Z"
-      },
       "device_step": "details"
     },
     "8657398763211315182": {
@@ -38246,14 +37945,7 @@
       "packages": [
         "tr18"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "active"
     },
     "8714264625714073827": {
       "id": 8714264625714073827,
@@ -38333,13 +38025,6 @@
       "domain": "golgebahcesi.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "pages"
     },
     "874345810698457818": {
@@ -38355,7 +38040,7 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: Sayfa listesi boş",
+        "detail": "JS_RENDER - WordPress + ComicWorld temasi (main.js?ver=7.1.4, ComicWorld-Coins/chapter-modal.js). Bolum URL'si /chapter/<slug>-chapter-<N>/. Bolum HTML'inde 42 img var ama hepsi tema/logo ve plupload handlebars sablonlari (src=\"{{ attachment.url }}\", \"{{ data.image.src }}\"); sayfa gorseli yok. Sayfa icinde images/pages/chapter_images anahtari yok, harici gorsel hostu yok (yalnizca rinkocomics.com)",
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "pages"
@@ -39565,20 +39250,6 @@
       "domain": "nemesisscans.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: Detay: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "details",
       "unreachable": true
     },

@@ -237,7 +237,7 @@
         "engine": "mangareader",
         "listPath": "/manga",
         "itemSelector": "a[href^=\"/manga/\"]",
-        "chapterSelector": "div.eph-num a",
+        "chapterSelector": "a[href*=\"/bolum/\"]",
         "readerSelector": "div#readerarea img",
         "pageApiUrl": "https://api.golgebahcesi.com/api/chapters/{1}/chapter-{2}/manifest",
         "pageApiIdPattern": "/manga/([^/]+)/bolum/chapter-([^/?#]+)",
@@ -273,7 +273,7 @@
         "local_tr"
       ],
       "status": "dead",
-      "reason": "Istek https://m.youtube.com/watch?v=GBIIQ0kP15E adresine yonleniyor, title=YouTube. Alan adi artik yayin yapmiyor. - olcum 2026-11-17"
+      "reason": "Kok adres YouTube \"Rickroll (Meme Template)\" videosuna yonlendiriyor; site icerigi kalmamis."
     },
     {
       "id": "nabicix.com",
@@ -313,9 +313,9 @@
         "datePattern": "d MMMM yyyy",
         "http1": true,
         "engine": "madara",
-        "listPath": "/manga/?m_orderby=latest",
+        "listPath": "manga",
         "itemSelector": ".page-item-detail",
-        "chapterSelector": "li.wp-manga-chapter a",
+        "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": ".reading-content img",
         "searchUrl": "https://www.kuroimanga.site/?s={query}&post_type=wp-manga",
         "searchMethod": "POST",
@@ -543,7 +543,19 @@
         "listJsonTitle": "title",
         "listJsonUrlField": "slug",
         "listJsonUrlTemplate": "/manga/{slug}",
-        "listJsonCover": "coverUrl"
+        "listJsonCover": "coverUrl",
+        "pageApiUrl": "https://mangawt.com/api/mangas/{1}/chapters/{2}/pages",
+        "pageApiIdPattern": "manga/([a-f0-9]{24})/(\\d+)",
+        "pageApiItems": "pages",
+        "pageApiFieldUrl": "url",
+        "searchUrl": "https://mangawt.com/api/mangas?q={query}",
+        "searchJsonItems": "mangas",
+        "searchJsonUrl": "_id",
+        "searchJsonTitle": "title",
+        "searchJsonPathPrefix": "/manga",
+        "chapterApiUrl": "https://mangawt.com/api/mangas/{id}",
+        "chapterApiItems": "chapters",
+        "chapterApiIdPattern": "([a-f0-9]{24})"
       },
       "verified_by_user": true,
       "origins": [
@@ -564,9 +576,9 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "a.group[href*=\"/manga/\"]",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "itemSelector": "a.max-w-44",
+        "chapterSelector": "a[href^=\"/manga/\"]",
+        "readerSelector": "img[src*=\"cdn.zukrein.com\"]"
       },
       "verified_by_user": true,
       "origins": [
@@ -618,7 +630,9 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "status": "failed"
+      "status": "dead",
+      "dead": true,
+      "reason": "502 gateway, 16 bayt bos govde. Site ayakta degil."
     },
     {
       "id": "orimanga.net",
@@ -760,7 +774,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
         "rscChapterUrl": "/manga/{slug}/{number}",
@@ -1005,7 +1019,7 @@
         "nyora_datadriven"
       ],
       "status": "dead",
-      "reason": "Ana sayfa 27 KB ama manga sayfasi degil: assets.abovedomains.com/javascript/forsale.min.js yukleniyor, alan adi satilik (forsale). Site kapanmis. - olcum 2026-11-17"
+      "reason": "Sayfa assets.abovedomains.com/javascript/forsale.min.js yukluyor, govde metni \"Do Not Sell or Share My Personal Information\". Domain satis sayfasi."
     },
     {
       "id": "amangaplanet.com.tr",
@@ -1019,7 +1033,7 @@
         "engine": "mangathemesia",
         "listPath": "/manga",
         "itemSelector": "div.bsx",
-        "chapterSelector": "div.eph-num, li.wp-manga-chapter",
+        "chapterSelector": "div.eph-num",
         "readerSelector": "div#readerarea img",
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader",
@@ -1034,7 +1048,8 @@
         "local_tr"
       ],
       "status": "failed",
-      "reason": "gorsel CDN token/JS istiyor, UA/Referer/cerez ile 403 - motor basligi yetersiz"
+      "reason": "gorsel CDN token/JS istiyor, UA/Referer/cerez ile 403 - motor basligi yetersiz",
+      "selector_verified": true
     },
     {
       "id": "araznovel.com",
@@ -1088,7 +1103,9 @@
         "nyora_datadriven"
       ],
       "selector_verified": true,
-      "status": "failed"
+      "status": "dead",
+      "dead": true,
+      "reason": "Ana sayfa 814292.toplakehorizon.com adresine mlk parametresiyle yonlendiriyor, title ..Loading.. Domain reklam yonlendirmesine dusmus."
     },
     {
       "id": "fuchscans.com",
@@ -1125,10 +1142,10 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "en/read.html",
-        "itemSelector": "a[href*=\"comic=\"]",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "listPath": "read.html",
+        "itemSelector": "a[href^=\"chapters.html?comic=\"]",
+        "chapterSelector": "div.chapter-block p a",
+        "readerSelector": "img[alt=\"[DBM PAGE IMAGE]\"]"
       },
       "verified_by_user": false,
       "origins": [
@@ -1161,7 +1178,8 @@
       ],
       "selector_verified": true,
       "status": "dead",
-      "reason": "Ana sayfa /cgi-sys/suspendedpage.cgi adresine dusuyor, title=Account Suspended. Hosting askiya alinmis. - olcum 2026-11-17"
+      "reason": "cgi-sys/suspendedpage.cgi adresine dusuyor, title Account Suspended.",
+      "dead": true
     },
     {
       "id": "2641311214423625823",
@@ -1182,7 +1200,8 @@
       "origins": [
         "keiyoushi_index"
       ],
-      "sorun": "oturum"
+      "sorun": "oturum",
+      "selector_verified": true
     },
     {
       "id": "hoifansub.com",
@@ -1207,7 +1226,7 @@
       "selector_verified": true,
       "dead": true,
       "status": "dead",
-      "reason": "Ana sayfa park/lander sayfasi: metinde domain is for sale, 83 kez lander gecisi. Yayinda manga yok. - olcum 2026-11-17"
+      "reason": "Icerik yok: baslik \"hoifansub.com\", meta description \"Find the best information and most relevant links...\". Yalniz /privacy linki ve spinner. Domain monetizasyon/park ara sayfasi."
     },
     {
       "id": "jiangzaitoon.icu",
@@ -1288,8 +1307,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "listPath": "/series/",
+        "itemSelector": "div.ao-manga-card",
         "chapterSelector": "YOK",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
         "chapterAjaxUrl": "YOK",
@@ -1299,7 +1318,8 @@
       "origins": [
         "local_custom"
       ],
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "selector_verified": true
     },
     {
       "id": "8648105733020574748",
@@ -1338,14 +1358,15 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "a[href*=\"/series/\"]",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "itemSelector": "a.card-cover",
+        "chapterSelector": "a.chapter-item",
+        "readerSelector": "img.manga-page"
       },
       "verified_by_user": false,
       "origins": [
         "local_custom"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "mangaportali.com",
@@ -1428,7 +1449,7 @@
         "engine": "custom",
         "listPath": "/latest.php",
         "itemSelector": ".recent-card",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
+        "chapterSelector": "a.chapter-grid-item-new",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
       "verified_by_user": false,
@@ -1437,7 +1458,8 @@
         "local_custom",
         "local_tr"
       ],
-      "status": "failed"
+      "status": "failed",
+      "selector_verified": true
     },
     {
       "id": "mangagezginim.com",
@@ -1514,7 +1536,7 @@
         "nyora_datadriven"
       ],
       "status": "dead",
-      "reason": "Title: mangaoku.info - Bu web sitesi satiliktir! Sayfada sedo izi var. Park edilmis alan adi. - olcum 2026-11-17"
+      "reason": "Baslik: \"mangaoku.info - Bu web sitesi satiliktir!\" - domain satilik ilan sayfasi."
     },
     {
       "id": "millascan.com",
@@ -1692,7 +1714,7 @@
         "datePattern": "d MMMM",
         "engine": "madara",
         "listPath": "/manga/?m_orderby=latest",
-        "itemSelector": ".page-item-detail",
+        "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": ".reading-content img",
         "searchUrl": "https://opiatoon.shop/?s={query}&post_type=wp-manga",
@@ -1722,13 +1744,14 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "tr.result-list",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
+        "chapterSelector": "a[href^=\"/gallery/\"]",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "paradoxscans.com",
@@ -1858,7 +1881,7 @@
         "nyora_datadriven"
       ],
       "status": "dead",
-      "reason": "Ana sayfa 114 bayt, sadece window.location.href=/lander yonlendirmesi. Park edilmis alan adi. - olcum 2026-11-17"
+      "reason": "Govde 114 bayt: <script>window.location.href=\"/lander\"</script>. Domain satis/park lander sayfasi."
     },
     {
       "id": "sadscans.com",
@@ -1908,7 +1931,9 @@
         "nyora_datadriven"
       ],
       "selector_verified": true,
-      "status": "failed"
+      "status": "dead",
+      "dead": true,
+      "reason": "click-v4.explclk.com adresine yonlendiriyor, 0 bayt. Domain reklam tiklama agina dusmus."
     },
     {
       "id": "shadowceviri.blogspot.com",
@@ -1921,7 +1946,7 @@
       "config": {
         "engine": "zeistmanga",
         "listPath": "/",
-        "itemSelector": "div.poster_item",
+        "itemSelector": ".poster_item",
         "chapterSelector": "ul.clstyle li, div.chapter-list li",
         "readerSelector": "div.separator img"
       },
@@ -1942,8 +1967,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga/",
-        "itemSelector": "a[href*=\"/manga/\"]",
+        "listPath": "/manga",
+        "itemSelector": ".adult-cover-wrapper",
         "chapterSelector": "a[href*=\"-bolum/\"]",
         "readerSelector": ".protected-image-container img"
       },
@@ -2027,7 +2052,7 @@
         "listPath": "/",
         "itemSelector": ".page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": ".reading-content img.wp-manga-chapter-img",
+        "readerSelector": "img.wp-manga-chapter-img",
         "searchUrl": "https://tonizu.top/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
         "searchMethod": "POST",
         "searchBody": "title={query}",
@@ -2265,7 +2290,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/series",
+        "listPath": "/",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
@@ -2275,7 +2300,8 @@
       "origins": [
         "keiyoushi_index"
       ],
-      "status": "failed"
+      "status": "failed",
+      "selector_verified": true
     },
     {
       "id": "3678110616121957660",
@@ -2318,7 +2344,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
+        "listPath": "/series",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
@@ -2333,7 +2359,8 @@
       "origins": [
         "keiyoushi_index"
       ],
-      "status": "failed"
+      "status": "failed",
+      "selector_verified": true
     },
     {
       "id": "ghostoon.com",
@@ -2375,8 +2402,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
+        "itemSelector": ".manga-card-v2",
+        "chapterSelector": "a[href*=\"/bolum-\"]",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
       "altDomains": [],
@@ -2386,7 +2413,8 @@
         "local_custom",
         "local_tr"
       ],
-      "status": "failed"
+      "status": "failed",
+      "selector_verified": true
     },
     {
       "id": "3759878972130438558",
@@ -2398,7 +2426,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga-oku",
+        "listPath": "/webtoon",
         "itemSelector": "a.portrait-card-link",
         "chapterSelector": "a[href*=\"/bolum-\"]",
         "readerSelector": "img[src*=\"sayfa-\"]"
@@ -2438,7 +2466,8 @@
       ],
       "selector_verified": true,
       "status": "dead",
-      "reason": "Harness TLS hatasi park sayfasindan geliyor: site parklogic parkinda, gercek icerik yok. TLS onarilamaz cunku arkasinda kaynak yok. - olcum 2026-11-17"
+      "reason": "Ana sayfa ve /manga 5564/5577 baytlik 'Redirecting...' sayfasi; govdedeki tek harici adres https://router.parklogic.com/ (parklogic). Site park edilmis, manga icerigi yok.",
+      "dead": true
     },
     {
       "id": "mangabahcesi.com",
@@ -2452,7 +2481,7 @@
         "engine": "custom",
         "listPath": "/Tr/Mangalar",
         "itemSelector": "article.series-card",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
+        "chapterSelector": "#chapterSearchDiv a",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
       "altDomains": [],
@@ -2461,7 +2490,8 @@
         "keiyoushi_index",
         "local_tr"
       ],
-      "status": "failed"
+      "status": "failed",
+      "selector_verified": true
     },
     {
       "id": "mangakusu.com",
@@ -2511,7 +2541,8 @@
       ],
       "selector_verified": true,
       "status": "dead",
-      "reason": "Ana sayfa title=Index of /, dizin listesi. Site kaldirilmis. - olcum 2026-11-17"
+      "reason": "Ana sayfa Apache autoindex: <title>Index of /</title> (4160 bayt). /manga istegi 200 ile https://manga-ay.com/grup/1/manga-ay adresine gidiyor ve title 'BMW777 : Akses Portal Slot Provider Pragmatic Perkalian 10 Ribu'. Domain slot/kumar portalina yonlendirilmis, manga icerigi yok.",
+      "dead": true
     },
     {
       "id": "mangaruhu.com",
@@ -2549,7 +2580,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
+        "itemSelector": "div.manga-card",
         "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
         "readerSelector": "img.manga-page-img",
         "pageScriptSelector": "script",
@@ -2655,7 +2686,8 @@
       ],
       "selector_verified": true,
       "status": "dead",
-      "reason": "Domain satilik (HugeDomains). 403 Cloudflare degil, park saglayicinin sayfasi. - olcum 2026-11-17"
+      "reason": "titanmanga.com istegi https://www.hugedomains.com/domain_profile.cfm?d=titanmanga.com adresine gidiyor (HugeDomains domain satis sayfasi, CF arkasinda). Site el degistirmis.",
+      "dead": true
     },
     {
       "id": "252822661917673438",
@@ -2689,16 +2721,17 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
+        "listPath": "/manga/",
+        "itemSelector": "a.release-card",
+        "chapterSelector": "ul.chapter-list li a",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
       "altDomains": [],
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "yaoimangaoku.net",
@@ -2736,16 +2769,17 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/browse",
-        "itemSelector": "a.card-title",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
+        "listPath": "/",
+        "itemSelector": "a[href^=\"/series/\"]",
+        "chapterSelector": "a[href^=\"/chapter/\"]",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
       "altDomains": [],
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "manhwaden.com",
@@ -3023,7 +3057,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
+        "listPath": "/all-manga",
         "itemSelector": "",
         "chapterSelector": "",
         "readerSelector": ""
@@ -4051,7 +4085,10 @@
         "chapterSelector": "",
         "readerSelector": "",
         "chapterAjaxUrl": "https://mangamukai.com/wp-json/mangamukai/v1/series/{id}/chapters",
-        "titleSelector": "h1"
+        "titleSelector": "h1",
+        "pageApiUrl": "https://mangamukai.com/wp-json/mangamukai/v1/chapters/content?id={1}",
+        "pageApiIdPattern": "^https?://[^/]+/read/(d+)/?$",
+        "pageApiItems": "images"
       },
       "selector_verified": true,
       "origins": [
@@ -4966,7 +5003,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
+        "listPath": "/manga",
         "itemSelector": "div[class*=AppTitleRankingCard_tb_container] img",
         "chapterSelector": "",
         "readerSelector": ""
@@ -8340,7 +8377,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "li.comic-item-jp",
+        "itemSelector": ".comic-item-jp",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -8867,7 +8904,9 @@
       "dead": true,
       "origins": [
         "dead_stub"
-      ]
+      ],
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
+      "status": "dead"
     },
     {
       "id": "de.ninemanga.com",
@@ -9307,7 +9346,9 @@
       "dead": true,
       "origins": [
         "dead_stub"
-      ]
+      ],
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
+      "status": "dead"
     },
     {
       "id": "ichiromanga.my.id",
@@ -9367,7 +9408,9 @@
       "dead": true,
       "origins": [
         "dead_stub"
-      ]
+      ],
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
+      "status": "dead"
     },
     {
       "id": "inkstory.me",
@@ -9407,7 +9450,9 @@
       "dead": true,
       "origins": [
         "dead_stub"
-      ]
+      ],
+      "reason": "ww38.* park alanina yonlendiriyor, sayfada 2 kez \"Buy this domain\" gecti; manga listesi/karti yok. Park edilmis.",
+      "status": "dead"
     },
     {
       "id": "irisscanlator.com.br",
@@ -9467,7 +9512,9 @@
       "dead": true,
       "origins": [
         "dead_stub"
-      ]
+      ],
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
+      "status": "dead"
     },
     {
       "id": "kaliscan.io",
@@ -10827,7 +10874,9 @@
       "dead": true,
       "origins": [
         "dead_stub"
-      ]
+      ],
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
+      "status": "dead"
     },
     {
       "id": "ragnarokscan.com",
@@ -11167,7 +11216,9 @@
       "dead": true,
       "origins": [
         "dead_stub"
-      ]
+      ],
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
+      "status": "dead"
     },
     {
       "id": "siikomik.fun",
@@ -11347,7 +11398,9 @@
       "dead": true,
       "origins": [
         "dead_stub"
-      ]
+      ],
+      "reason": "Sayfa metni: \"Domain registration has expired\" (Namecheap yenileme sayfasi). Süresi dolmus.",
+      "status": "dead"
     },
     {
       "id": "tenshi01.id",
@@ -11851,8 +11904,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "div.manga-card",
+        "listPath": "/bruxonas/",
+        "itemSelector": "a[href*=\"/bruxonas/manga/\"]",
         "chapterSelector": "a[href*=\"/capitulo-\"]",
         "readerSelector": ".reading-content img.wp-manga-chapter-img",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1"

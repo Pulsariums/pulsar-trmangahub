@@ -287,17 +287,34 @@ object EngineRegistry {
         return if (items.isNotEmpty()) items else genericChapters(doc, baseUrl)
     }
 
-    fun parsePages(doc: Document, selector: String, baseUrl: String): List<String> {
-        val sel = selector.ifBlank { "div.page-break img, div#readerarea img, #init-manga-single-chapter img, div.reading-content img, img[data-reader-page-image]" }
+    fun parsePages(
+        doc: Document,
+        selector: String,
+        baseUrl: String,
+        pageUrlTemplate: String = "",
+    ): List<String> {
+        val sel = selector.ifBlank { "div.page-break img, div#readerarea img, #init-manga-single-chapter img, div.reading-content img, img[data-reader-page-image], link[rel=\"preload\"][as=\"fetch\"]" }
         val items = doc.select(sel).mapNotNull { el ->
-            val src = el.attr("data-src").ifBlank { null }
+            val uid = el.attr("uid").trim().ifBlank { null }
+            val raw = el.attr("data-src").ifBlank { null }
                 ?: el.attr("data-lazy-src").ifBlank { null }
                 ?: el.attr("data-original").ifBlank { null }
                 ?: el.attr("src").ifBlank { null }
-                ?: return@mapNotNull null
+                ?: el.attr("href").ifBlank { null }
+            val src = raw?.trim()
 
-            val trimmed = src.trim()
-            if (trimmed.startsWith("http")) trimmed else "$baseUrl/${trimmed.trimStart('/')}"
+            // comic-days: sayfa adresi <link rel="preload" as="fetch" href="...">.
+            // erisscans: <img src=placeholder uid="...">; gercek adres nitelikte yok.
+            if (src == null || src.startsWith("data:") || src == "#" ||
+                src.contains("placeholder", ignoreCase = true)
+            ) {
+                // uid'den URL UYDURMA: yalniz sunucu sablonu varsa {uid} doldur,
+                // yoksa sayfayi atla (yanlis sayfa uretmekten iyidir).
+                if (uid == null || pageUrlTemplate.isBlank()) return@mapNotNull null
+                return@mapNotNull pageUrlTemplate.replace("{uid}", uid)
+            }
+
+            if (src.startsWith("http")) src else "$baseUrl/${src.trimStart('/')}"
         }
         return if (items.isNotEmpty()) items else genericPages(doc, baseUrl)
     }
