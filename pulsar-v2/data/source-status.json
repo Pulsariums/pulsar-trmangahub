@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T20:13:23Z",
+  "generated": "2026-11-17T20:37:43Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -175,6 +175,18 @@
         "detail": "JS_RENDER: Vite SPA (index-CR_afPIp.js, /assets/* chunk'lari). Ana sayfa 22743 bayt, seri bagi/kart yok. API avi: bundle'da base bulundu https://master.toonspace.io/api (Pd.request url + params service); denenen uclar hepsi 404 NotFoundError: /api/v1, /api/v1/series?page=1&per_page=20, /api/series?page=1, /api/v1/titles?page=1, /api/v1/titles/by-slug/homeless-hottie, /api/v1/title/<slug>, /api/v1/titles/slug/<slug>, /api/v1/home. Sitemap.xml 280 URL: seri /t/<slug>, sayfa /p/<id>; /t/<slug> sunucu HTML'ind",
         "at": "2026-11-17T18:15:56Z"
       }
+    },
+    "1085364983716203602": {
+      "id": 1085364983716203602,
+      "kind": "catalogue",
+      "title": "ToonTop",
+      "lang": "en",
+      "nsfw": 1,
+      "domain": "toontop.io",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "109266153397226665": {
       "id": 109266153397226665,
@@ -2801,23 +2813,10 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "www.manhwaden.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "pages"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1377191865684637297": {
       "id": 1377191865684637297,
@@ -3627,7 +3626,8 @@
         "detail": "list: HttpStatusException: . Status=410, URL=[https://www.mangakawaii.io/]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: http 410 gone"
     },
     "1608878350543613398": {
       "id": 1608878350543613398,
@@ -4604,6 +4604,18 @@
       },
       "device_step": "list",
       "kapali": true
+    },
+    "178171581382307178": {
+      "id": 178171581382307178,
+      "kind": "catalogue",
+      "title": "Kakamanga",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "kakamanga.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1793420480712657216": {
       "id": 1793420480712657216,
@@ -8874,7 +8886,8 @@
         "detail": "list: NotFoundException: . Status=404, URL=[https://mortalsgroove.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "2661509985880858827": {
       "id": 2661509985880858827,
@@ -8918,7 +8931,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "2665357482734864984": {
       "id": 2665357482734864984,
@@ -9064,7 +9078,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "2692570791189988183": {
       "id": 2692570791189988183,
@@ -9355,7 +9370,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "2816787532528650352": {
       "id": 2816787532528650352,
@@ -10268,7 +10284,8 @@
         "detail": "list: NotFoundException: Not Found. Status=404, URL=[https://www.nightcomic.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3119832279853409477": {
       "id": 3119832279853409477,
@@ -10462,7 +10479,8 @@
         "detail": "list: NotFoundException: Not Found. Status=404, URL=[https://nitroscans.net/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3135264714516692056": {
       "id": 3135264714516692056,
@@ -10820,7 +10838,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CF: Cloudflare challenge (canlilik olcumu)"
     },
     "3284491439038302242": {
       "id": 3284491439038302242,
@@ -12931,7 +12950,8 @@
         "detail": "list: NotFoundException: . Status=404, URL=[https://mangafoxfull.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CF: Cloudflare challenge (canlilik olcumu)"
     },
     "3758266340840845747": {
       "id": 3758266340840845747,
@@ -13122,7 +13142,8 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "3758591819503177996": {
       "id": 3758591819503177996,
@@ -13216,7 +13237,8 @@
         "detail": "list: HttpStatusException: Method Not Allowed. Status=405, URL=[https://mangaonlineteam.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3761841829901087276": {
       "id": 3761841829901087276,
@@ -13392,7 +13414,8 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "3799926359966540318": {
       "id": 3799926359966540318,
@@ -13417,7 +13440,8 @@
         "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3801548633101057961": {
       "id": 3801548633101057961,
@@ -13444,10 +13468,9 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manhwahentai.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "pending",
+      "kapali": true
     },
     "3801553296277499621": {
       "id": 3801553296277499621,
@@ -13501,7 +13524,8 @@
       },
       "device_step": "list",
       "reason": "origin kapalı: https 000; http 503; www 000",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "3801556205514268029": {
       "id": 3801556205514268029,
@@ -13678,7 +13702,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3840272925958832334": {
       "id": 3840272925958832334,
@@ -13878,7 +13903,8 @@
         "detail": "list: NotFoundException: . Status=404, URL=[https://tarunabola168super.com/casino]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3909162262287109262": {
       "id": 3909162262287109262,
@@ -14086,7 +14112,8 @@
         "detail": "list: HttpStatusException: . Status=403, URL=[https://aquareader.net/?s=&post_type=wp-manga&m_orderby=views]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3942936270714750926": {
       "id": 3942936270714750926,
@@ -14351,7 +14378,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3961419067338154610": {
       "id": 3961419067338154610,
@@ -14421,7 +14449,8 @@
         "detail": "list: NotFoundException: . Status=404, URL=[https://bookmanga.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3966535212812921347": {
       "id": 3966535212812921347,
@@ -14446,7 +14475,8 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3974404917213567562": {
       "id": 3974404917213567562,
@@ -14542,7 +14572,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3991617105283692136": {
       "id": 3991617105283692136,
@@ -14699,7 +14730,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4012074979346433913": {
       "id": 4012074979346433913,
@@ -14818,7 +14850,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4028864660291197104": {
       "id": 4028864660291197104,
@@ -14879,7 +14912,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4039416191844901343": {
       "id": 4039416191844901343,
@@ -14943,7 +14977,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4048068532286972948": {
       "id": 4048068532286972948,
@@ -14995,7 +15030,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4062350174854844668": {
       "id": 4062350174854844668,
@@ -15321,7 +15357,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4072906425079329807": {
       "id": 4072906425079329807,
@@ -15655,7 +15692,8 @@
         "detail": "list: NotFoundException: . Status=404, URL=[https://harimanga.me/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4107352674747851659": {
       "id": 4107352674747851659,
@@ -15867,23 +15905,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangabats.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "covers: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "covers"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4118551129163381075": {
       "id": 4118551129163381075,
@@ -16343,7 +16368,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4200522428039626095": {
       "id": 4200522428039626095,
@@ -16571,7 +16597,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: https 301/167; http 301/167; www 000; redirect hedefi bos"
     },
     "4215363109281025155": {
       "id": 4215363109281025155,
@@ -16729,23 +16756,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "madaradex.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1931,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "pages"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4234251741855210585": {
       "id": 4234251741855210585,
@@ -16770,7 +16784,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4234251758022995232": {
       "id": 4234251758022995232,
@@ -16840,7 +16855,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: https 200/475; http 200/474; www 200/479; JS yonlendirme kabugu"
     },
     "4234251759237812220": {
       "id": 4234251759237812220,
@@ -16849,24 +16865,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangadass.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: HttpStatusException: . Status=500, URL=[https://manga",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4234251759355922218": {
       "id": 4234251759355922218,
@@ -16918,23 +16920,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "www.mgeko.cc",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4234251762292700524": {
       "id": 4234251762292700524,
@@ -16977,7 +16966,8 @@
         "detail": "list: HttpStatusException: . Status=403, URL=[https://www.mangaholic.org/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: https 307->www; http 308; www 200/1808; 5KB alti kabuk sayfa"
     },
     "4234251762789673946": {
       "id": 4234251762789673946,
@@ -17237,7 +17227,8 @@
         "detail": "CF",
         "at": "2026-11-16T22:05:11.851283Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: https 301->https://www.natomanga.com/; http 301/167; www 301/167; redirect dongusu"
     },
     "4234251768509813985": {
       "id": 4234251768509813985,
@@ -17282,16 +17273,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangapill.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "covers: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "covers"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4234251770454362048": {
       "id": 4234251770454362048,
@@ -17316,7 +17301,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4234251770459098817": {
       "id": 4234251770459098817,
@@ -17341,7 +17327,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "RATE: https 429/17; http 429/17; www 200/479 JS yonlendirme kapisi"
     },
     "4234251771681780919": {
       "id": 4234251771681780919,
@@ -17417,7 +17404,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4234251772063254674": {
       "id": 4234251772063254674,
@@ -17591,16 +17579,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangataro.org",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: Sayfa listesi boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "pages"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4234251773660946004": {
       "id": 4234251773660946004,
@@ -17858,7 +17840,8 @@
         "detail": "list: HttpStatusException: . Status=403, URL=[https://manhuauss.com/?s=&post_type=wp-manga&m_orderby=views]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: https/http/www hepsi 403/548; challenge metni yok"
     },
     "4234253214816658264": {
       "id": 4234253214816658264,
@@ -17868,23 +17851,9 @@
       "nsfw": 1,
       "domain": "www.manhwaden.com",
       "packages": [
-        "global18"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "4234253214945593826": {
       "id": 4234253214945593826,
@@ -17963,23 +17932,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhwatop.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "details"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4234253215589794301": {
       "id": 4234253215589794301,
@@ -18033,23 +17989,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manycomic.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 3142,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4234516664039514459": {
       "id": 4234516664039514459,
@@ -18239,7 +18182,8 @@
         "detail": "list: NotFoundException: . Status=404, URL=[https://inkreads.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4259345160785297062": {
       "id": 4259345160785297062,
@@ -18472,7 +18416,8 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CF: https 403/5950; govde challenge-platform (Cloudflare challenge)"
     },
     "4272413275476131702": {
       "id": 4272413275476131702,
@@ -18595,23 +18540,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "pianmanga.me",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1378,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: NotFoundException: . Status=404, URL=[https://pianmanga.me/wp-admin/admin-ajax.php]",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4317299584788043221": {
       "id": 4317299584788043221,
@@ -18668,7 +18600,8 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "4322015427730947782": {
       "id": 4322015427730947782,
@@ -18774,23 +18707,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentaiwebtoon.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4338934327639157846": {
       "id": 4338934327639157846,
@@ -18965,23 +18885,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "novelstreams.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4364897249796919871": {
       "id": 4364897249796919871,
@@ -19077,16 +18984,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "roliascan.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: Sayfa listesi boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "pages"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4377972755806414361": {
       "id": 4377972755806414361,
@@ -19828,7 +19729,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: https 301->https://toontop.io/; baska siteye redirect; govde 5KB alti"
     },
     "4423643899197674910": {
       "id": 4423643899197674910,
@@ -19837,23 +19739,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhuatop.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1462,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpStatusException: . Status=405, URL=[https://manhuatop.org/wp-admin/admin-ajax.php]",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4423650343834209687": {
       "id": 4423650343834209687,
@@ -19888,23 +19777,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangamonk.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2004,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4426281071318329362": {
       "id": 4426281071318329362,
@@ -20119,23 +19995,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "hivetoon.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4476492204269139558": {
       "id": 4476492204269139558,
@@ -20169,23 +20032,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "vyvymanga.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 3394,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpStatusException: . Status=400, URL=[https://mangaowl.io/wp-admin/admin-ajax.php]",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "448304086918442949": {
       "id": 448304086918442949,
@@ -20802,7 +20652,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "RATE: 429 www"
     },
     "4640464692758722000": {
       "id": 4640464692758722000,
@@ -20928,23 +20779,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "drakecomic.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 3316,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: NotFoundException: . Status=404, URL=[https://drakecomic.net/series/comic?order=popular&page=1]",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4690519039882039315": {
       "id": 4690519039882039315,
@@ -21010,23 +20848,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "readfreecomics.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2953,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4720786131215367529": {
       "id": 4720786131215367529,
@@ -21177,23 +21002,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "assortedscans.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1440,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: ClassCastException: org.json.JSONArray cannot be cast to java.lang.Iterable",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "details"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4826777915948697530": {
       "id": 4826777915948697530,
@@ -21601,7 +21413,8 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "5010216331383385879": {
       "id": 5010216331383385879,
@@ -22091,23 +21904,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "en.huntersscan.xyz",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1560,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "526711023258927537": {
       "id": 526711023258927537,
@@ -22246,7 +22046,8 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "5333144548929050512": {
       "id": 5333144548929050512,
@@ -22333,7 +22134,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5401049635474866948": {
       "id": 5401049635474866948,
@@ -22410,7 +22212,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5420850623413657493": {
       "id": 5420850623413657493,
@@ -22419,23 +22222,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "allporncomic.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5425569062261084453": {
       "id": 5425569062261084453,
@@ -22472,7 +22262,8 @@
         "detail": "list: TooManyRequestExceptions: Too man requests",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "RATE: 429 www"
     },
     "5447717829511226753": {
       "id": 5447717829511226753,
@@ -22560,7 +22351,8 @@
         "detail": "list: HttpStatusException: . Status=410, URL=[https://www.mangakawaii.io/]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: http 410 gone"
     },
     "5465525885533297013": {
       "id": 5465525885533297013,
@@ -23190,7 +22982,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5782622800926449958": {
       "id": 5782622800926449958,
@@ -23746,7 +23539,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5787984510637559557": {
       "id": 5787984510637559557,
@@ -24056,7 +23850,8 @@
         "detail": "BULUNAMADI: Domain canli ama Cloudflare challenge ile 403. Adres degismedi; yeni adres yok. Cozum domain degil, CF asimi.",
         "at": "2026-11-17T17:40:26Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CF: cf-block"
     },
     "5788803617698434203": {
       "id": 5788803617698434203,
@@ -24337,23 +24132,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangazin.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "pages"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5789623240583472034": {
       "id": 5789623240583472034,
@@ -24378,7 +24160,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "RATE: 429 www"
     },
     "5789623240606888229": {
       "id": 5789623240606888229,
@@ -24524,7 +24307,8 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "5789623240850757000": {
       "id": 5789623240850757000,
@@ -24655,7 +24439,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5789623241029234909": {
       "id": 5789623241029234909,
@@ -24705,7 +24490,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5789623241061021764": {
       "id": 5789623241061021764,
@@ -24730,7 +24516,8 @@
         "detail": "list: ParseException: Cannot find \"script:containsData(MainFunction)\" at https://mangasee123.com/search/",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5789623241185310285": {
       "id": 5789623241185310285,
@@ -24781,7 +24568,8 @@
         "detail": "list: NotFoundException: Not Found. Status=404, URL=[https://mangaxyz.com/search/?page=1&sort=views]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5789623241265388024": {
       "id": 5789623241265388024,
@@ -24790,23 +24578,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangazin.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "pages"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5789623268605899408": {
       "id": 5789623268605899408,
@@ -24881,7 +24656,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5789623285810112655": {
       "id": 5789623285810112655,
@@ -24906,7 +24682,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5789623285821909891": {
       "id": 5789623285821909891,
@@ -24932,7 +24709,8 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "5789623285823578187": {
       "id": 5789623285823578187,
@@ -24984,7 +24762,8 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: sunucu hatasi 503"
     },
     "5789623287589410035": {
       "id": 5789623287589410035,
@@ -25110,23 +24889,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "milftoon.xxx",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5790546302475861043": {
       "id": 5790546302475861043,
@@ -25238,7 +25004,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5790821884388407577": {
       "id": 5790821884388407577,
@@ -25310,23 +25077,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "nyxscans.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "details"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5791654679194078693": {
       "id": 5791654679194078693,
@@ -25413,7 +25167,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "RATE: 3 denemede de 429"
     },
     "5792428731102945952": {
       "id": 5792428731102945952,
@@ -25441,23 +25196,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "kenscans.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5793729223449529669": {
       "id": 5793729223449529669,
@@ -25695,7 +25437,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5795537912098310752": {
       "id": 5795537912098310752,
@@ -25782,23 +25525,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "tritinia.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "search: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "search"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5795816581519710978": {
       "id": 5795816581519710978,
@@ -26021,7 +25751,8 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "5799459703934630916": {
       "id": 5799459703934630916,
@@ -26325,7 +26056,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "DIGER: ilk deneme 200/27521; sonraki 3 deneme 000"
     },
     "5831517820660691357": {
       "id": 5831517820660691357,
@@ -26334,16 +26066,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "nelomanga.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CF",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5831741679683196228": {
       "id": 5831741679683196228,
@@ -26386,7 +26112,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5835612613850101406": {
       "id": 5835612613850101406,
@@ -26608,6 +26335,18 @@
       "state": "dead",
       "dead": true
     },
+    "5903025710939388769": {
+      "id": 5903025710939388769,
+      "kind": "catalogue",
+      "title": "GedeComix",
+      "lang": "en",
+      "nsfw": 1,
+      "domain": "gedecomix.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "5913531196666726580": {
       "id": 5913531196666726580,
       "kind": "catalogue",
@@ -26732,7 +26471,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: zigzagslotvip.org kumar sitesine yonlendiriyor"
     },
     "5951740280004233374": {
       "id": 5951740280004233374,
@@ -27100,7 +26840,8 @@
         "detail": "list: HttpStatusException: . Status=530, URL=[https://www.ninemanga.com/category/index_1]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5994119241650068349": {
       "id": 5994119241650068349,
@@ -27593,7 +27334,8 @@
         "detail": "CF",
         "at": "2026-11-16T22:05:11.851283Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CF: Just a moment"
     },
     "6079771261904476856": {
       "id": 6079771261904476856,
@@ -27887,7 +27629,8 @@
         "detail": "list: NotFoundException: . Status=404, URL=[https://evilflowers.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: sunucu hatasi 500"
     },
     "6122984313370351456": {
       "id": 6122984313370351456,
@@ -28072,7 +27815,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: onw2026.gercekgiris.it.com adresine yonlendiriyor"
     },
     "6175751919463125781": {
       "id": 6175751919463125781,
@@ -28154,6 +27898,7 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
+      "reason": "CF: CF 525 SSL handshake",
       "unreachable": true
     },
     "6213135197952742240": {
@@ -28393,7 +28138,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "6268746328519007408": {
       "id": 6268746328519007408,
@@ -28418,7 +28164,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "RATE: 3 denemede de 429"
     },
     "6279075557994312388": {
       "id": 6279075557994312388,
@@ -28551,23 +28298,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "violetscans.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6359063432093703606": {
       "id": 6359063432093703606,
@@ -28678,23 +28412,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "gourmetsupremacy.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "timeout",
-        "http_code": "000",
-        "ms": 15034,
-        "detail": "curl: (28) Operation timed out after 15010 milliseconds with 0 bytes received",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6379770814877065740": {
       "id": 6379770814877065740,
@@ -28843,23 +28564,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentaixcomic.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "details"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6387974376496686455": {
       "id": 6387974376496686455,
@@ -29090,23 +28798,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "philiascans.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6467530274650613980": {
       "id": 6467530274650613980,
@@ -29131,7 +28826,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "6477744033200560193": {
       "id": 6477744033200560193,
@@ -29225,7 +28921,8 @@
         "detail": "list: HttpStatusException: Method Not Allowed. Status=405, URL=[https://mangaonlineteam.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "6522743564059463318": {
       "id": 6522743564059463318,
@@ -29303,23 +29000,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "www.manhwaden.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "pages"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6552627474297646427": {
       "id": 6552627474297646427,
@@ -29549,7 +29233,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "6620039325110469985": {
       "id": 6620039325110469985,
@@ -29976,16 +29661,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "comix.to",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: NotFoundException: . Status=404, URL=[https://comix.to/api/v2/manga?order[views_30d]=desc&genres[]=-87264&genres[]=-87266&genres[]=-87268&genres[]=-87265&limit=28&page=1]",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "673270202559783355": {
       "id": 673270202559783355,
@@ -30011,7 +29690,8 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "673270217677196514": {
       "id": 673270217677196514,
@@ -30200,23 +29880,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "utoon.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1405,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: NotFoundException: . Status=404, URL=[https://utoon.net/wp-admin/admin-ajax.php]",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "673270826728541468": {
       "id": 673270826728541468,
@@ -30752,23 +30419,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "cypheroscans.xyz",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1108,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6980975435194571714": {
       "id": 6980975435194571714,
@@ -30909,7 +30563,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: 301 -> pgslotfish.org (alakasiz site)"
     },
     "7034827276175145460": {
       "id": 7034827276175145460,
@@ -31074,25 +30729,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "greedscans.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "timeout",
-        "http_code": "301",
-        "ms": 15323,
-        "detail": "curl: (28) Operation timed out after 15297 milliseconds with 0 bytes received",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "DIGER: 301 -> https://greedscans.org/",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "7060977346741045579": {
       "id": 7060977346741045579,
@@ -31244,7 +30884,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: 301 -> www.cantinadelriomexri.com (alakasiz)"
     },
     "7146663019478362832": {
       "id": 7146663019478362832,
@@ -31322,6 +30963,7 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
+      "reason": "KAPALI: https 526; http 200 ama govde: website has been stopped",
       "unreachable": true
     },
     "7167437425402552246": {
@@ -31400,7 +31042,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: 301 -> go.mayzaent.com/smartpop (reklam gecidi)"
     },
     "7186759213619575356": {
       "id": 7186759213619575356,
@@ -31946,23 +31589,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "genzupdates.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "search: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "search"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "7407258471214415340": {
       "id": 7407258471214415340,
@@ -32242,6 +31872,18 @@
         "at": "2026-11-17T10:02:04Z"
       }
     },
+    "7521499901022487047": {
+      "id": 7521499901022487047,
+      "kind": "catalogue",
+      "title": "MangaManiacs",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "mangamaniacs.org",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "7521631886315243057": {
       "id": 7521631886315243057,
       "kind": "engine",
@@ -32249,25 +31891,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentai3z.cc",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1952,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: SocketException: Connection reset",
-        "at": "2026-11-16T16:20:15Z"
-      },
-      "device_step": "list",
-      "reason": "DIGER: 301 yonlendirme; www 000",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "7521631900297857558": {
       "id": 7521631900297857558,
@@ -32947,7 +32574,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "7743637653964158859": {
       "id": 7743637653964158859,
@@ -32983,23 +32611,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "templetoons.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 977,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: NotFoundException: . Status=404, URL=[https://templetoons.com/api/query?query_string=&series_type=Comic&perPage=20&orderBy=total_views&order=desc&tags_ids=%5B%5D&page=1]",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "7749975326063746325": {
       "id": 7749975326063746325,
@@ -33719,23 +33334,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "bestmanhua.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "http",
-        "http_code": "429",
-        "ms": 1521,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "798888619164960500": {
       "id": 798888619164960500,
@@ -33827,25 +33429,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "toonily.me",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2266,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: SocketException: Connection reset",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "DIGER: 301 -> https://toontop.io/",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "8022742468678056385": {
       "id": 8022742468678056385,
@@ -34040,7 +33627,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "8079212518144607893": {
       "id": 8079212518144607893,
@@ -34727,7 +34315,8 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "8342174046005946437": {
       "id": 8342174046005946437,
@@ -34817,23 +34406,9 @@
       "nsfw": 0,
       "domain": "spiderscans.xyz",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "837385888220200875": {
       "id": 837385888220200875,
@@ -35016,7 +34591,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "RATE: 429 (http/www da 429)"
     },
     "8418134861996884752": {
       "id": 8418134861996884752,
@@ -35776,7 +35352,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "8593579552383536367": {
       "id": 8593579552383536367,
@@ -36020,7 +35597,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "DIGER: 302 bos govde; http/www 000; hedef alinamadi"
     },
     "8652051024894671152": {
       "id": 8652051024894671152,
@@ -36127,23 +35705,9 @@
       "nsfw": 0,
       "domain": "hentaixyuri.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "8670809408652362719": {
       "id": 8670809408652362719,
@@ -36790,23 +36354,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "webdexscans.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1030,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CF",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "8822476144695710531": {
       "id": 8822476144695710531,
@@ -36878,7 +36429,8 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "8842581693807969518": {
       "id": 8842581693807969518,
@@ -37148,6 +36700,7 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
+      "reason": "DIGER: 302 bos govde; http/www 000; hedef alinamadi",
       "unreachable": true,
       "kapali": true
     },
@@ -37223,23 +36776,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "reaper-scans.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 782,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: TooManyRequestExceptions: Too man requests",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "8996937872705098973": {
       "id": 8996937872705098973,
@@ -37666,7 +37206,8 @@
         "detail": "list: NotFoundException: . Status=404, URL=[https://whalemanga.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "KAPALI: 200 ama govde: Account Suspended"
     },
     "964775890265681474": {
       "id": 964775890265681474,

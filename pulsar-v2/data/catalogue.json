@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "generated_at": "2026-11-17T17:51:06Z",
-  "total_count": 559,
+  "total_count": 563,
   "languages": [
     "tr"
   ],
@@ -1932,7 +1932,8 @@
         "local_tr"
       ],
       "selector_verified": true,
-      "status": "failed"
+      "status": "failed",
+      "reason": "CF: Just a moment"
     },
     {
       "id": "guildknives.com",
@@ -2923,7 +2924,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "3asq.org",
@@ -2970,7 +2972,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "animexnovel.com",
@@ -3410,7 +3413,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "hentaimanga.me",
@@ -3495,28 +3499,30 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "hentaixyuri.com",
       "name": "HentaiXYuri",
       "lang": "en",
-      "nsfw": 0,
+      "nsfw": 1,
       "domain": "hentaixyuri.com",
       "baseUrl": "https://hentaixyuri.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": ".wp-manga-chapter a",
-        "readerSelector": "div.reading-content img.wp-manga-chapter-img",
+        "itemSelector": ".page-item-detail .item-thumb a, .c-tabs-item__content .post-title a",
+        "chapterSelector": "li.wp-manga-chapter",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "titleSelector": ".post-title h1"
+        "readerSelector": "div.reading-content img.wp-manga-chapter-img",
+        "searchUrl": "https://hentaixyuri.com/?s={query}&post_type=wp-manga"
       },
       "selector_verified": true,
       "origins": [
-        "auto_scan_2026"
+        "auto_scan_2026",
+        "pulsar_olcum"
       ]
     },
     {
@@ -3562,7 +3568,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "visormanga.com",
@@ -3672,7 +3679,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "v5.kiryuu.to",
@@ -4070,7 +4078,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "mangabuff.ru",
@@ -4110,7 +4119,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "mangadistrict.com",
@@ -4179,7 +4189,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "mangahentai.me",
@@ -4306,7 +4317,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "reason": "DIGER: https 301->https://www.natomanga.com/; http 301/167; www 301/167; redirect dongusu"
     },
     {
       "id": "nelomanga.com",
@@ -4326,7 +4338,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "mangapill.com",
@@ -4346,7 +4359,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "mangatown.com",
@@ -4501,7 +4515,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "milftoon.xxx",
@@ -4521,7 +4536,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "multporn.net",
@@ -4695,8 +4711,7 @@
       "origins": [
         "auto_scan_2026"
       ],
-      "dead": false,
-      "reason": "OLU: Ana sayfa ve /manga/ listesi 200 donuyor ama butun /manga/<slug>/ detaylari 404 veya 403 (denenen: sunshine-shower, the-tosas-master, alpha-no-chouinshiki, run-away-if-you-can). 403 govdesi nginx + 'ely-exclusive-pa"
+      "dead": false
     },
     {
       "id": "qimanhwa.com",
@@ -4758,7 +4773,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "ww11.readonepiece.com",
@@ -4885,14 +4901,19 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "article.lc-card",
-        "chapterSelector": "div.chapter-item a",
-        "readerSelector": "img.reader-page-img"
+        "listPath": "/manga/",
+        "itemSelector": ".manga-card > a",
+        "chapterSelector": "a.chapter-item",
+        "readerSelector": "img.reader-page-img",
+        "searchUrl": "https://spiderscans.xyz/wp-json/spiderscans/v1/search?q={query}",
+        "searchJsonItems": "data",
+        "searchJsonUrl": "url",
+        "searchJsonTitle": "title"
       },
       "selector_verified": true,
       "origins": [
-        "auto_scan_2026"
+        "auto_scan_2026",
+        "pulsar_olcum"
       ],
       "dead": false
     },
@@ -5011,7 +5032,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "weebcentral.com",
@@ -12243,7 +12265,8 @@
       "selector_verified": true,
       "origins": [
         "device_fix_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "covendasbruxonas.com",
@@ -12416,6 +12439,106 @@
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "readerSelector": "img.wp-manga-chapter-img",
         "engine": "custom"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "gedecomix.com",
+      "name": "GedeComix",
+      "lang": "en",
+      "nsfw": 1,
+      "domain": "gedecomix.com",
+      "baseUrl": "https://gedecomix.com",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "/porn-comics/",
+        "itemSelector": ".page-item-detail",
+        "chapterSelector": ".wp-manga-chapter a",
+        "readerSelector": ".reading-content .wp-manga-chapter-img",
+        "searchUrl": "/?s={query}&post_type=wp-manga"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "www.kakamanga.com",
+      "name": "Kakamanga",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "www.kakamanga.com",
+      "baseUrl": "https://www.kakamanga.com",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "/manga-list/latest-manga",
+        "itemSelector": "a.list-story-item",
+        "chapterSelector": ".title-list-chapter a",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "chapterImages"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "mangamaniacs.org",
+      "name": "MangaManiacs",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "mangamaniacs.org",
+      "baseUrl": "https://mangamaniacs.org",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "/manga/page/{page}/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": "img.wp-manga-chapter-img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "toontop.io",
+      "name": "ToonTop",
+      "lang": "en",
+      "nsfw": 1,
+      "domain": "toontop.io",
+      "baseUrl": "https://toontop.io",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "/home",
+        "itemSelector": "a[class*=\"group/cover\"]",
+        "chapterScriptSelector": "script",
+        "chapterScriptContains": "\"chapters\":[",
+        "chapterJsonArray": "chapters",
+        "chapterUrlTemplate": "/{series}/{slug}",
+        "chapterJsonSlugField": "slug",
+        "chapterJsonNumberField": "number",
+        "readerSelector": "img[data-reader-page]",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "\"images\":[",
+        "pageJsonArray": "images",
+        "pageUrlAllow": "rx\\.toontop\\.io",
+        "pageScriptFirst": "1"
       },
       "verified_by_user": false,
       "origins": [
