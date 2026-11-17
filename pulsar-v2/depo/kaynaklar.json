@@ -1,6 +1,6 @@
 {
   "surum": 1,
-  "uretildi": "2026-11-17T11:20:11Z",
+  "uretildi": "2026-11-17T11:25:14Z",
   "toplam": 1702,
   "kayitlar": [
     {
@@ -52335,11 +52335,11 @@
       "dil": "tr",
       "nsfw": 0,
       "alan_adi": "okutoon.com",
-      "durum": "failed",
-      "grup": "yok",
-      "yayinda": false,
+      "durum": "pending",
+      "grup": "test",
+      "yayinda": true,
       "eklentide_kapali": false,
-      "evre": "tamir-kuyrugunda",
+      "evre": "testte",
       "motor": "custom",
       "kokenler": [
         "keiyoushi_index",
@@ -52354,19 +52354,19 @@
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "fail",
-      "hata_adimi": "pages",
-      "hata_mesaji": "pages: Zaman aşımı (20s)",
+      "cihaz": "r",
+      "hata_adimi": null,
+      "hata_mesaji": "",
       "saglik": null,
       "olu": false,
-      "ulasilamaz": true,
+      "ulasilamaz": false,
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
       "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
-      "tamir_edildi": false,
-      "etiket": "tamir-edilebilir"
+      "tamir_edildi": true,
+      "etiket": "yeniden-test"
     },
     {
       "id": "7998688569255459784",
