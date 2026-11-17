@@ -644,8 +644,10 @@ class PulsarSource(
                 "TANI2 gen=${chapters.size} html=${htmlChapters.size} rsc=${rscChapters.size} $diag",
             )
         }
+        // Bölümü olmayan seri (ör. yeni eklenmiş, "0 bölüm") kaynağı kırmamalı:
+        // Mihon sözleşmesi boş liste döndürmektir. TANI2 kipi ölçüm için atmayı sürdürür.
         if (chapters.isEmpty()) {
-            throw IllegalStateException(diag)
+            return emptyList()
         }
 
         return chapters.map { ch ->
