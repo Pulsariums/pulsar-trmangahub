@@ -1653,22 +1653,22 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "a.update-card-cover",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
-        "pageApiUrl": "https://okutoon.com/api/v1/series/{1}/chapters/{2}",
-        "pageApiIdPattern": "okutoon.com/([^/]+)/(bolum-[0-9]+)",
-        "pageApiItems": "data.pages",
-        "pageApiFieldUrl": "image_url"
+        "listPath": "/tur?sira=updated",
+        "itemSelector": ".series-grid .series-card",
+        "chapterSelector": ".chapter-item a.chapter-item-link",
+        "readerSelector": "#readerPages img.reader-page",
+        "titleSelector": ".series-card-title",
+        "searchUrl": "https://okutoon.com/tur?q={query}&sira=updated"
       },
       "verified_by_user": false,
       "origins": [
+        "keiyoushi-kaynak-kodu",
         "keiyoushi_index",
         "local_custom",
         "local_tr"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "opiatoon.art",
