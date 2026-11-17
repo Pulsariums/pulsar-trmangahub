@@ -1,5 +1,5 @@
 {
-  "catalogue_after": 431,
+  "catalogue_after": 430,
   "catalogue_before": 544,
   "dropped": [
     {
@@ -105,6 +105,13 @@
       "kept": "MangaBuff",
       "lang": "ru",
       "name": "MangaBuff",
+      "nsfw": 0
+    },
+    {
+      "domain": "weebcentral.com",
+      "kept": "Weeb Central",
+      "lang": "en",
+      "name": "Weeb Central",
       "nsfw": 0
     },
     {
@@ -810,6 +817,7 @@
     5452887278882590031,
     4434136942147328383,
     4063768058096310907,
+    513391446834079432,
     6983378665536208517,
     5558312473456395594,
     5558312473516245713,
@@ -910,7 +918,7 @@
     4871458201540002697
   ],
   "engine_keys": 860,
-  "generated": "2026-11-17T14:36:29Z",
+  "generated": "2026-11-17T15:07:29Z",
   "mirrors": 9,
   "note": "Ayni host+dil+nsfw motor kaynagi katalogdan dusuruldu; tasinmis alan adlari mirrors'a yazildi."
 }

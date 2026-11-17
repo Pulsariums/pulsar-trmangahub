@@ -2021,7 +2021,7 @@
       "config": {
         "datePattern": "dd/mm/yyyy",
         "engine": "madara",
-        "listPath": "https://tonizu.top/",
+        "listPath": "/",
         "itemSelector": ".page-item-detail.manga",
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": ".reading-content img.wp-manga-chapter-img",
@@ -4693,7 +4693,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "https://trmanga.com/webtoon-listesi",
+        "listPath": "/webtoon-listesi",
         "itemSelector": "a[href^=\"/webtoon/\"]",
         "chapterSelector": "select[data-rd-chapter-select] option",
         "readerSelector": "#images img.reader-img"
@@ -7073,7 +7073,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "https://spicyseries.com/",
+        "listPath": "/",
         "itemSelector": "a[href*=\"/comic/\"]",
         "chapterSelector": "a[href*=\"/capitulo-\"]",
         "readerSelector": ""
@@ -7093,7 +7093,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "https://submanhwa.com/",
+        "listPath": "/",
         "itemSelector": ".up-card",
         "chapterSelector": ".lc-row a",
         "readerSelector": "#all img.lazy-smart"
@@ -7135,7 +7135,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "https://uchuujinmangas.com/",
+        "listPath": "/",
         "itemSelector": "a.series",
         "chapterSelector": "#chapterlist .eph-num a",
         "readerSelector": "#readerarea img"
