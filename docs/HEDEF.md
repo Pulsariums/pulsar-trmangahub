@@ -16,17 +16,23 @@ Bu dosya "iş bitti" tanımını ve çalışma döngüsünü sabitler. Her tur b
 
 | Katman | Toplam | active | failed | pending | dead | unknown |
 |---|---|---|---|---|---|---|
-| Katalog (bizim) | 429 | 156 | 63 | 108 | 102 | 0 |
-| Motor (JitPack parser) | 1272 | 126 | 905 | 53 | 188 | 0 |
-| **Toplam** | **1701** | **282** | **968** | **161** | **290** | **0** |
+| Katalog (bizim) | 439 | 233 | 102 | 0 | 104 | 0 |
+| Motor (JitPack parser) | 1272 | 123 | 404 | 218 | 527 | 0 |
+| **Toplam** | **1711** | **356** | **506** | **218** | **631** | **0** |
 
-Yayın (embed): tr 38 · tr18 5 · global 214 · global18 25 · test 161. Kaynak: commit `819fe73` (dalga 6), build `44148308861`.
+Yayın (embed): tr 50 · tr18 8 · global 269 · global18 29 · test 218. Kaynak: commit `e79c88d` (kopya motor temizliği), build `44174345687`.
 
-**Kalan iş iki ayrı kovada:**
-- **108 katalog kaydı** → yerel harness ile test edilebilir (`tools/harness/run.sh`, koşu: `.work/harness-2026-11-17-p161.log`).
-- **53 motor kaynağı** → yerel test imkânsız (ABI), yalnız cihaz testiyle kapanır.
+**Kalan iş tek kovada:**
+- **218 motor kaynağı** yalnız cihaz testiyle kapanır (yerel test imkânsız: Mihon ABI). Katalog tarafında bekleyen kayıt **0**.
 
-**Bu oturumda kapananlar:** katalog ölçüm kuyruğunun tamamı (199 dilim) ölçüldü; dalga 4-5-6'da toplam 197 kayıt ölçülmüş seçicilerle düzeltildi, 23 kayıt ölü işaretlendi. Düzeltilen her kayıt test havuzuna döndü; `pending` sayısının 161'e çıkması bunun sonucudur, gerileme değil.
+**Bu oturumda kapananlar (özet):**
+- Katalog ölçüm kuyruğunun tamamı (199 dilim) ve 197 "geçici görünümlü" hata tarandı.
+- Dalga 4-7 + canlılık dalgaları: 228 config düzeltmesi, 409 kayıt ölü işaretlendi.
+- 197 geçici hata + 430 EN dışı + 139 EN motor kaynağı canlılık taraması: toplam **157 kaynak teste geri alındı**.
+- 12 motor kaynağı kendi katalog kaydına çevrildi (qimanga, toonily, comichubfree, mangapark, manhwatoon, mangahub, mangahentai, mangaowl, comizy, kakamanga, toontop, spiderscans, hentaiango…), bunların 9'u harness ile doğrulanıp yayına alındı.
+- 73 kopya motor kaydı kapatıldı (aynı domainde çalışan katalog kaydı varken).
+
+**Bu oturumda düzeltilen motor kusurları:** boş bölüm listesinde istisna (`chapterListParse`), `pageApiIdPattern` içinde host, `www.` id uyuşmazlığı, `kapali` kaynakların paket listesine sızması, `dead`/`reason` alanlarının `pulsar status` koşusunda silinmesi, harness'ın listenin ilk serisine takılması.
 
 ## 3. Döngü
 
