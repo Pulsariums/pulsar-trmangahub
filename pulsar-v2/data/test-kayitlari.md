@@ -9,3 +9,4 @@ Her satir bir Kototoro kaynak testi raporudur. Ham dosyalar `pulsar-v2/data/test
 | 2026-11-17T15:03:39.287944Z | 74 | 19 | 55 | 0 | `kototoro-source-test-1794927819.json` |
 | 2026-11-17T15:11:40.544982Z | 63 | 51 | 12 | 0 | `2026-11-17T151140Z-ucpaket.json` |
 | 2026-11-17T15:44:26Z | 85 | 1 | 81 | 0 | harness-belirsiz |
+| 2026-11-17T17:03:19Z | 36 | 11 | 25 | 0 | harness-test-grubu |

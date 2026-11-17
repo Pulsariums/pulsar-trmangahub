@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T16:38:18Z",
+  "generated": "2026-11-17T17:03:14Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -148,10 +148,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tonizu.top",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "1085305392848287310": {
       "id": 1085305392848287310,
@@ -447,10 +452,16 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "kuroimanga.site",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "SocketTimeoutException: Read timed out",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "unreachable": true
     },
     "1255008208586588111": {
       "id": 1255008208586588111,
@@ -658,10 +669,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "kairatoon.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "1338439945941688878": {
       "id": 1338439945941688878,
@@ -5032,10 +5048,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "opiatoon.shop",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T17:02:29Z"
+      },
       "sorun": "login"
     },
     "1854510220106965266": {
@@ -5739,9 +5760,23 @@
       "nsfw": 0,
       "domain": "amangaplanet.com.tr",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "209650416390992343": {
       "id": 209650416390992343,
@@ -10049,10 +10084,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "duckscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "2874683368787930309": {
       "id": 2874683368787930309,
@@ -11404,9 +11444,23 @@
       "nsfw": 0,
       "domain": "sleptmanga.com.tr",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "324065352936051183": {
       "id": 324065352936051183,
@@ -12500,8 +12554,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T15:42:59.035062Z"
+        "detail": "UnsupportedOperationException",
+        "at": "2026-11-17T17:02:29Z"
       },
       "device_step": "pages"
     },
@@ -16157,10 +16211,15 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "mangamukai.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "4081958157659691020": {
       "id": 4081958157659691020,
@@ -16854,10 +16913,15 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "global.manga-up.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "4161256899859235572": {
       "id": 4161256899859235572,
@@ -16955,9 +17019,23 @@
       "nsfw": 0,
       "domain": "ragnarscans2.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "4183588611054499927": {
       "id": 4183588611054499927,
@@ -27782,9 +27860,23 @@
       "nsfw": 0,
       "domain": "covendasbruxonas.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "5824161584162899529": {
       "id": 5824161584162899529,
@@ -28031,10 +28123,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "otakuangel.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T17:02:29Z"
+      },
       "device_step": "details"
     },
     "5863442274693704416": {
@@ -29122,10 +29219,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "monomanga.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "6077478264730102242": {
       "id": 6077478264730102242,
@@ -29827,10 +29929,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangabahcesi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "6252364042350398531": {
       "id": 6252364042350398531,
@@ -31047,10 +31154,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "mangadusleri.mom",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "6581990139232227222": {
       "id": 6581990139232227222,
@@ -31163,9 +31275,23 @@
       "nsfw": 0,
       "domain": "merlintoon.net",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "6615204516823623477": {
       "id": 6615204516823623477,
@@ -31225,10 +31351,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "shadowceviri.blogspot.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "6620603193106345631": {
       "id": 6620603193106345631,
@@ -31352,10 +31483,23 @@
       "nsfw": 0,
       "domain": "globalcomix.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown",
-      "sorun": "oturum"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "6654923665789802916": {
       "id": 6654923665789802916,
@@ -33266,9 +33410,23 @@
       "nsfw": 0,
       "domain": "sunsetscans.com.tr",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "7293740138855045512": {
       "id": 7293740138855045512,
@@ -33865,10 +34023,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "xiaoaitoon.org.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "7463464127094088901": {
       "id": 7463464127094088901,
@@ -33903,10 +34066,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "manga.araznovel.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T17:02:29Z"
+      },
       "sorun": "cloudflare"
     },
     "751725947791672488": {
@@ -34792,10 +34960,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "yaoi.me",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "7793182120198515414": {
       "id": 7793182120198515414,
@@ -35606,10 +35779,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "holyscans.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "8039923198961795071": {
       "id": 8039923198961795071,
@@ -35852,10 +36030,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangadenizi.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "8132273477468721739": {
       "id": 8132273477468721739,
@@ -36045,10 +36228,15 @@
       "lang": "zh",
       "nsfw": 0,
       "domain": "mhua5.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "819133826546505053": {
       "id": 819133826546505053,
@@ -36296,10 +36484,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "trmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      },
       "device_step": "pages"
     },
     "8287199181829843047": {
@@ -36434,10 +36627,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "panda.chaika.moe",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "8366111277663094500": {
       "id": 8366111277663094500,
@@ -36816,10 +37014,15 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "manga.io.vn",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "8461833419006748458": {
       "id": 8461833419006748458,
@@ -36970,10 +37173,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangawt.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "8462394428445828805": {
       "id": 8462394428445828805,
@@ -36983,9 +37191,23 @@
       "nsfw": 1,
       "domain": "mangtto.com",
       "packages": [
-        "test"
+        "tr18"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "8463142241276011825": {
       "id": 8463142241276011825,
@@ -37422,9 +37644,23 @@
       "nsfw": 0,
       "domain": "nyxscans.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-17T17:02:29Z"
+      },
       "device_step": "pages"
     },
     "8607382649550260430": {
@@ -37613,10 +37849,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "dragonball-multiverse.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "8657398763211315182": {
       "id": 8657398763211315182,
@@ -37792,10 +38033,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "3hentai.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "8714264625714073827": {
       "id": 8714264625714073827,
@@ -37874,9 +38120,23 @@
       "nsfw": 0,
       "domain": "golgebahcesi.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "874345810698457818": {
       "id": 874345810698457818,
@@ -39086,9 +39346,23 @@
       "nsfw": 0,
       "domain": "nemesisscans.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T17:02:29Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-17T17:02:29Z"
+      }
     },
     "9206637984064086149": {
       "id": 9206637984064086149,
