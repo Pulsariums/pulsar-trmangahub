@@ -50,20 +50,22 @@
         "postReq": true,
         "chapterAjax": true,
         "engine": "madara",
-        "listPath": "/manga/",
-        "itemSelector": ".page-item-detail.manga",
-        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
+        "listPath": "/manga/?m_orderby=latest",
+        "itemSelector": ".page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": ".reading-content img",
-        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "chapterAjaxUrl": "{url}ajax/chapters/",
         "searchUrl": "https://anikiga.com/?s={query}&post_type=wp-manga"
       },
       "verified_by_user": true,
       "origins": [
         "keiyoushi_index",
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "arcurafansub.com",
@@ -2260,26 +2262,29 @@
       "nsfw": 1,
       "domain": "averisfansub.site",
       "baseUrl": "https://averisfansub.site",
-      "engine": "custom",
+      "engine": "madara",
       "config": {
-        "engine": "custom",
-        "listPath": "/manga/",
+        "engine": "madara",
+        "listPath": "/manga/?m_orderby=latest",
         "itemSelector": ".page-item-detail",
-        "chapterSelector": ".wp-manga-chapter a",
-        "readerSelector": "img.wp-manga-chapter-img",
-        "searchUrl": "https://averisfansub.site/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": ".reading-content img",
+        "searchUrl": "https://averisfansub.site/?s={query}&post_type=wp-manga",
         "searchMethod": "POST",
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "chapterAjaxUrl": "{url}ajax/chapters/"
       },
       "altDomains": [],
       "verified_by_user": false,
       "origins": [
-        "keiyoushi_index"
+        "keiyoushi_index",
+        "pulsar-oto-tamir"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "4089747984244989816",
@@ -3029,19 +3034,22 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "eleceedturkiye.com",
-      "baseUrl": "https://eleceedturkiye.com",
-      "engine": "custom",
+      "baseUrl": "https://www.nabicix.com",
+      "engine": "mangareader",
       "config": {
-        "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "engine": "mangareader",
+        "listPath": "/manga/?order=update",
+        "itemSelector": "div.bsx",
+        "chapterSelector": "#chapterlist li a, div.eph-num a",
+        "readerSelector": "div#readerarea img",
+        "searchUrl": "https://www.nabicix.com/?s={query}"
       },
       "selector_verified": true,
       "origins": [
-        "auto_scan_2026"
-      ]
+        "auto_scan_2026",
+        "pulsar-oto-tamir"
+      ],
+      "dead": false
     },
     {
       "id": "elftoon.com",

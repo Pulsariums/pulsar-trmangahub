@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T10:02:04Z",
+  "generated": "2026-11-17T10:23:03Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -11408,8 +11408,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "averisfansub.site",
-      "packages": [],
-      "state": "failed",
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -11418,13 +11420,12 @@
         "at": "2026-11-16T22:05:11.851283Z"
       },
       "device": {
-        "status": "fail",
+        "status": "r",
         "http_code": "",
         "ms": 0,
-        "detail": "search: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "search"
+        "detail": "",
+        "at": "2026-11-17T10:23:03Z"
+      }
     },
     "3495313140920905784": {
       "id": 3495313140920905784,
