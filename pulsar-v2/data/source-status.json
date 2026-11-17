@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T19:26:17Z",
+  "generated": "2026-11-17T19:32:09Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -8905,16 +8905,24 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "ru.niadd.com",
-      "packages": [],
-      "state": "failed",
+      "packages": [
+        "global"
+      ],
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T19:30:39Z"
+      },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketTimeoutException: timeout",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "unreachable": true
+        "detail": "yerel harness yeniden koşu (sunsetscans/niadd)",
+        "at": "2026-11-17T19:30:39Z"
+      }
     },
     "2618646420420740860": {
       "id": 2618646420420740860,
@@ -11443,23 +11451,9 @@
       "nsfw": 0,
       "domain": "ww13.readonepiece.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness (list/chapters/pages>0)",
-        "at": "2026-11-17T18:44:56Z"
-      }
+      "state": "pending"
     },
     "3517094690583648677": {
       "id": 3517094690583648677,
@@ -13787,16 +13781,9 @@
       "nsfw": 1,
       "domain": "hentaimanga.me",
       "packages": [
-        "global18"
+        "test"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "3845434200471616927": {
       "id": 3845434200471616927,
@@ -14006,23 +13993,9 @@
       "nsfw": 0,
       "domain": "mangahentai.me",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "3934396986127880200": {
       "id": 3934396986127880200,
@@ -15427,15 +15400,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "mangamukai.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T17:02:29Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4081958157659691020": {
       "id": 4081958157659691020,
@@ -21308,17 +21276,24 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "fr.niadd.com",
-      "packages": [],
-      "state": "failed",
+      "packages": [
+        "global"
+      ],
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T19:30:39Z"
+      },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketTimeoutException: timeout",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "device_step": "covers",
-      "unreachable": true
+        "detail": "yerel harness yeniden koşu (sunsetscans/niadd)",
+        "at": "2026-11-17T19:30:39Z"
+      }
     },
     "48344863515944583": {
       "id": 48344863515944583,
@@ -22349,24 +22324,9 @@
       "nsfw": 0,
       "domain": "comichubfree.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness (list/chapters/pages>0)",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "device_step": "pages"
+      "state": "pending"
     },
     "5390747718232305300": {
       "id": 5390747718232305300,
@@ -31610,16 +31570,24 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "sunsetscans.com.tr",
-      "packages": [],
-      "state": "failed",
+      "packages": [
+        "tr"
+      ],
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T19:30:39Z"
+      },
       "device": {
-        "status": "fail",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "SocketTimeoutException: timeout",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "unreachable": true
+        "detail": "yerel harness yeniden koşu (sunsetscans/niadd)",
+        "at": "2026-11-17T19:30:39Z"
+      }
     },
     "7293740138855045512": {
       "id": 7293740138855045512,
@@ -31735,16 +31703,9 @@
       "nsfw": 0,
       "domain": "vortexscans.org",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "7319067464761477608": {
       "id": 7319067464761477608,
@@ -35151,16 +35112,9 @@
       "nsfw": 0,
       "domain": "mangahub.io",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "8461882050643866671": {
       "id": 8461882050643866671,
@@ -35272,15 +35226,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangawt.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T17:02:29Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "8462394428445828805": {
       "id": 8462394428445828805,

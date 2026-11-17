@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "generated_at": "2026-11-17T17:51:06Z",
-  "total_count": 554,
+  "total_count": 559,
   "languages": [
     "tr"
   ],
@@ -581,7 +581,7 @@
         "listJsonUrlTemplate": "/manga/{slug}",
         "listJsonCover": "coverUrl",
         "pageApiUrl": "https://mangawt.com/api/mangas/{1}/chapters/{2}/pages",
-        "pageApiIdPattern": "manga/([a-f0-9]{24})/(\\d+)",
+        "pageApiIdPattern": "/manga/([^/]+)/chapter/([0-9]+)",
         "pageApiItems": "pages",
         "pageApiFieldUrl": "url",
         "searchUrl": "https://mangawt.com/api/mangas?q={query}",
@@ -3063,16 +3063,16 @@
       "id": "asurascans.us",
       "name": "AsuraScansGg",
       "lang": "en",
-      "nsfw": 0,
-      "domain": "asurascans.us",
-      "baseUrl": "https://asurascans.us",
+      "nsfw": 1,
+      "domain": "mangapark.tv",
+      "baseUrl": "https://mangapark.tv",
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "div.page-item-detail",
-        "chapterSelector": "",
-        "readerSelector": "",
+        "listPath": "/manga/",
+        "itemSelector": ".page-item-detail",
+        "chapterSelector": ".chapter-item",
+        "readerSelector": ".wp-manga-chapter-img",
         "searchUrl": "https://mangapark.tv/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
         "searchMethod": "POST",
         "searchBody": "title={query}",
@@ -3083,7 +3083,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "azoramoon.com",
@@ -3419,14 +3420,15 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "article.manga-card",
+        "chapterSelector": "a[href*='/chapter-']",
+        "readerSelector": "img[src*='/assets/images/chapters/']"
       },
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "hentaireader.org",
@@ -4145,10 +4147,10 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "a[href^='/series/'][title]",
-        "chapterSelector": "a[href*='/chapter-']",
-        "readerSelector": ".comic-images-wrapper img"
+        "listPath": "/series",
+        "itemSelector": "a[href^=\"/series/\"]",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": ".image-container img"
       },
       "selector_verified": true,
       "origins": [
@@ -4180,21 +4182,22 @@
       "id": "mangahentai.me",
       "name": "MangaHentai",
       "lang": "en",
-      "nsfw": 0,
+      "nsfw": 1,
       "domain": "mangahentai.me",
       "baseUrl": "https://mangahentai.me",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ".reader img"
+        "itemSelector": "div.card",
+        "chapterSelector": "a[href^=\"/read/\"]",
+        "readerSelector": ".pages img"
       },
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "mangahub.io",
@@ -4206,15 +4209,16 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "listPath": "/manga",
+        "itemSelector": ".media-left a[href*=\"/manga/\"]",
+        "chapterSelector": "ul.list-group a[href*=\"/chapter/\"]",
+        "readerSelector": "img[src*=\"mghcdn.com\"]"
       },
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "mangakakalot.gg",
@@ -4273,7 +4277,7 @@
         "chapterAjaxUrl": "https://mangamukai.com/wp-json/mangamukai/v1/series/{id}/chapters",
         "titleSelector": "h1",
         "pageApiUrl": "https://mangamukai.com/wp-json/mangamukai/v1/chapters/content?id={1}",
-        "pageApiIdPattern": "^https?://[^/]+/read/(d+)/?$",
+        "pageApiIdPattern": "/read/([0-9]+)",
         "pageApiItems": "images"
       },
       "selector_verified": true,
@@ -4448,23 +4452,25 @@
       "id": "manhwatoon.com",
       "name": "ManhwaToon",
       "lang": "en",
-      "nsfw": 0,
+      "nsfw": 1,
       "domain": "www.manhwatoon.me",
       "baseUrl": "https://www.manhwatoon.me",
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
+        "listPath": "/manhwa/",
+        "itemSelector": "article.mt-card",
         "chapterSelector": "#manga-chapters-holder li.wp-manga-chapter a",
-        "readerSelector": "",
+        "readerSelector": ".reading-content img",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "titleSelector": "h1"
+        "titleSelector": "h1",
+        "searchUrl": "/?s={query}&post_type=wp-manga"
       },
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "manhwatop.com",
@@ -4544,15 +4550,17 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": ".episode",
-        "chapterSelector": "a[href*=\"/issue-\"]",
-        "readerSelector": ".chapter_img"
+        "listPath": "/new-comic",
+        "itemSelector": ".cartoon-box",
+        "chapterSelector": "#list a[href*=\"/issue-\"]",
+        "readerSelector": "img.chapter_img",
+        "searchUrl": "/search-comic?key={query}"
       },
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "mangalivre.net",
@@ -4690,20 +4698,21 @@
       "name": "Qi Scans",
       "lang": "en",
       "nsfw": 0,
-      "domain": "qimanhwa.com",
-      "baseUrl": "https://qimanhwa.com",
+      "domain": "qimanga.com",
+      "baseUrl": "https://qimanga.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": ".item-card",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": ".r-page-img"
       },
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "rawdex.net",
@@ -4757,8 +4766,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "a.block[href^=\"/manga/\"]",
-        "chapterSelector": "div.grid.grid-cols-4.items-center",
+        "itemSelector": "a[href^=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
         "readerSelector": "img.js-page"
       },
       "selector_verified": true,
@@ -12288,6 +12297,120 @@
         "itemSelector": "a.swimlane-poster-wrap",
         "chapterSelector": ".asura-chapters-stream a",
         "readerSelector": ".asura-stream-images img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "arc-relight.com",
+      "name": "Arc-Relight",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "arc-relight.com",
+      "baseUrl": "https://arc-relight.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "section.release .release-title a",
+        "chapterSelector": "#series-chapters .chapter a",
+        "readerSelector": "#page-image",
+        "engine": "custom"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "toonily.com",
+      "name": "Toonily",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "toonily.com",
+      "baseUrl": "https://toonily.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": ".page-item-detail",
+        "chapterSelector": ".wp-manga-chapter",
+        "readerSelector": "img.wp-manga-chapter-img",
+        "searchUrl": "https://toonily.com/?s={query}&post_type=wp-manga",
+        "engine": "custom"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "www.petrotechsociety.org",
+      "name": "Petro Tech Society",
+      "lang": "en",
+      "nsfw": 1,
+      "domain": "www.petrotechsociety.org",
+      "baseUrl": "https://www.petrotechsociety.org",
+      "engine": "custom",
+      "config": {
+        "listPath": "/manga/",
+        "itemSelector": ".page-item-detail",
+        "chapterSelector": ".wp-manga-chapter",
+        "readerSelector": ".wp-manga-chapter-img",
+        "engine": "custom"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "comizy.io",
+      "name": "Comizy",
+      "lang": "en",
+      "nsfw": 1,
+      "domain": "comizy.io",
+      "baseUrl": "https://comizy.io",
+      "engine": "custom",
+      "config": {
+        "listPath": "/home",
+        "itemSelector": "a[data-cid]",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "pageScriptSelector": "script#__NEXT_DATA__",
+        "pageScriptContains": "initialChapter",
+        "pageJsonArray": "images",
+        "searchUrl": "/search?q={query}",
+        "engine": "custom"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "mangaowl.io",
+      "name": "MangaOwl",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "mangaowl.io",
+      "baseUrl": "https://mangaowl.io",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "readerSelector": "img.wp-manga-chapter-img",
+        "engine": "custom"
       },
       "verified_by_user": false,
       "origins": [
