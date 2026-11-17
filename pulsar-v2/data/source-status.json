@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T19:56:55Z",
+  "generated": "2026-11-17T20:07:24Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -44,7 +44,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 24 / bölüm 33 / sayfa 0"
+      "reason": "okuyucu POST admin-ajax rawi_ch_images; cid/exp/t bölüm HTML'inde, motor gövdeye koyamıyor"
     },
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -4934,7 +4934,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 60 / bölüm 3 / sayfa 0"
+      "reason": "sayfalar RSC'de kaçışlı ve göreli; motor kaçışlı diziyi okuyamıyor"
     },
     "1909318976133429781": {
       "id": 1909318976133429781,
@@ -8893,7 +8893,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 60 / bölüm 1 / sayfa 0"
+      "reason": "bölüm sayfası 3 denemede zaman aşımı; ts_reader doğrulanamadı"
     },
     "2662341039809361960": {
       "id": 2662341039809361960,
@@ -14273,7 +14273,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 166 / bölüm 4 / sayfa 0"
+      "reason": "Nuxt devalue; API sayfa listesi vermiyor (pages=sayı)"
     },
     "3957800042269399520": {
       "id": 3957800042269399520,
@@ -21062,7 +21062,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 10 / bölüm 6 / sayfa 0"
+      "reason": "JS SPA + coğrafi blok; ürün sayfası kabuk"
     },
     "4747418060607817046": {
       "id": 4747418060607817046,
@@ -21312,17 +21312,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lectorhub.j5z.xyz",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: liste 25 / bölüm 20 / sayfa 0",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "pages",
-      "reason": "harness: liste 25 / bölüm 20 / sayfa 0"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4856925517439351632": {
       "id": 4856925517439351632,
@@ -22071,7 +22064,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 12 / bölüm 125 / sayfa 0"
+      "reason": "bölüm HTML'inde görsel yok, okuyucu sunucuda kapalı"
     },
     "5224800957334324062": {
       "id": 5224800957334324062,
@@ -29383,7 +29376,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 24 / bölüm 22 / sayfa 0"
+      "reason": "giriş duvarı (register.php), sayfa görseli yok"
     },
     "6581990139232227222": {
       "id": 6581990139232227222,
@@ -31504,7 +31497,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 25 / bölüm 22 / sayfa 0"
+      "reason": "reader-blob.js obfuscated, HTML'de sayfa adresi yok"
     },
     "7206313674903334634": {
       "id": 7206313674903334634,
@@ -33935,7 +33928,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 20 / bölüm 23 / sayfa 0"
+      "reason": "canvas okuyucu; POST nonce+page_token+chapter_id gerekiyor"
     },
     "8039923198961795071": {
       "id": 8039923198961795071,
@@ -34159,17 +34152,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangadenizi.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: liste 15 / bölüm 43 / sayfa 0",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "pages",
-      "reason": "harness: liste 15 / bölüm 43 / sayfa 0"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "8132273477468721739": {
       "id": 8132273477468721739,
@@ -34955,7 +34941,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 101 / bölüm 11 / sayfa 0"
+      "reason": "roman formatı (data-is-comic=0), sayfa görseli yok"
     },
     "8390623784752854269": {
       "id": 8390623784752854269,
@@ -35182,7 +35168,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 49 / bölüm 1 / sayfa 0"
+      "reason": "ajax yanıtı HTML-içinde-JSON; motor ayrıştıramıyor"
     },
     "8461833419006748458": {
       "id": 8461833419006748458,
@@ -36337,7 +36323,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "harness: liste 20 / bölüm 131 / sayfa 0"
+      "reason": "manifest şifreli, READER_ID_REQUIRED, imza istemcide"
     },
     "874345810698457818": {
       "id": 874345810698457818,

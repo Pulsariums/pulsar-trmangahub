@@ -489,7 +489,8 @@
         "pageApiUrl": "https://mangadenizi.net/api/v1/reader/{1}/{2}",
         "pageApiItems": "pages",
         "pageApiFieldUrl": "image_url",
-        "searchUrl": "https://mangadenizi.net/manga?search={query}"
+        "searchUrl": "https://mangadenizi.net/manga?search={query}",
+        "pageApiIdPattern": "/read/([^/]+)/([^/?#]+)"
       },
       "verified_by_user": true,
       "origins": [
