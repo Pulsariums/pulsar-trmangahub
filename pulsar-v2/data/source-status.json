@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T17:54:56Z",
+  "generated": "2026-11-17T18:04:34Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -37,7 +37,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -162,7 +162,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "109266153397226665": {
       "id": 109266153397226665,
@@ -672,9 +672,23 @@
       "nsfw": 0,
       "domain": "pornhwa18.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "1344025467833272995": {
       "id": 1344025467833272995,
@@ -728,16 +742,21 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "sarcasmscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 139,
         "detail": "curl: (6) Could not resolve host: sarcasmscans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "1350317231338804055": {
@@ -859,16 +878,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "ayatoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ssl",
         "http_code": "000",
         "ms": 721,
         "detail": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_ILLEGAL_MESSAGE (0x80090326) - This error usually occurs when a fatal SSL/TLS alert is received (e.g. handshake fa",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "1376583637539257459": {
@@ -1062,10 +1086,15 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "doujins.lat",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "1376651252963693657": {
       "id": 1376651252963693657,
@@ -1150,16 +1179,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.epikman.ga",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 233,
         "detail": "curl: (6) Could not resolve host: www.epikman.ga",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "1376684333740686254": {
@@ -1324,10 +1358,15 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "heytoon.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "1376779621504514638": {
       "id": 1376779621504514638,
@@ -1469,7 +1508,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "1376833596686797612": {
       "id": 1376833596686797612,
@@ -1507,7 +1546,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "1376851595674172806": {
       "id": 1376851595674172806,
@@ -2382,7 +2421,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "1376968403079460822": {
       "id": 1376968403079460822,
@@ -2507,7 +2546,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "1377020372809438008": {
       "id": 1377020372809438008,
@@ -2870,16 +2909,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "yaoibar.gay",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 201,
         "detail": "curl: (6) Could not resolve host: yaoibar.gay",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "1377191865874405498": {
@@ -3011,9 +3055,23 @@
       "nsfw": 0,
       "domain": "kumapoi.info",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "1414899155488272818": {
       "id": 1414899155488272818,
@@ -3399,7 +3457,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "1608869871563550339": {
       "id": 1608869871563550339,
@@ -4211,7 +4269,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "1670524346204645872": {
       "id": 1670524346204645872,
@@ -4489,9 +4547,23 @@
       "nsfw": 0,
       "domain": "ganma.jp",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "1746687897184884790": {
       "id": 1746687897184884790,
@@ -4577,7 +4649,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "1757135486284259116": {
       "id": 1757135486284259116,
@@ -4691,10 +4763,15 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "animexnovel.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "1847284941352855352": {
       "id": 1847284941352855352,
@@ -4706,7 +4783,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "1848540025471539039": {
       "id": 1848540025471539039,
@@ -4922,10 +4999,15 @@
       "lang": "pt-br",
       "nsfw": 0,
       "domain": "leituramanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "1909318976133429781": {
       "id": 1909318976133429781,
@@ -5085,7 +5167,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "1944203743121263189": {
       "id": 1944203743121263189,
@@ -5615,16 +5697,21 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "viyafansub.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 154,
         "detail": "curl: (6) Could not resolve host: viyafansub.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "2125177024463197399": {
@@ -5946,16 +6033,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangakings.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 138,
         "detail": "curl: (6) Could not resolve host: mangakings.com.tr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "2134596225128838841": {
@@ -6162,16 +6254,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangaokutr.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 208,
         "detail": "curl: (6) Could not resolve host: mangaokutr.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "2134596350520665723": {
@@ -6268,16 +6365,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "manga-sehri.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 210,
         "detail": "curl: (6) Could not resolve host: manga-sehri.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "2134596439020741272": {
@@ -7096,10 +7198,15 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "webcomicsapp.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "2190287912977065806": {
       "id": 2190287912977065806,
@@ -7231,16 +7338,21 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "moondaisyscans.biz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15038,
         "detail": "curl: (28) Connection timed out after 15014 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "2268549974061786227": {
@@ -7500,7 +7612,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "2359120158125930842": {
       "id": 2359120158125930842,
@@ -8082,7 +8194,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "2424639311097801421": {
       "id": 2424639311097801421,
@@ -8415,16 +8527,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "yaoitr.fun",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 230,
         "detail": "curl: (6) Could not resolve host: yaoitr.fun",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "2424650585843186305": {
@@ -8539,7 +8656,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "245090160632924176": {
       "id": 245090160632924176,
@@ -8551,7 +8668,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "2462254973344388239": {
       "id": 2462254973344388239,
@@ -8706,7 +8823,7 @@
     "2544801090729548498": {
       "id": 2544801090729548498,
       "kind": "catalogue",
-      "title": "GenzToon",
+      "title": "Genz Toon",
       "lang": "en",
       "nsfw": 0,
       "domain": "genzupdates.com",
@@ -8782,7 +8899,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "2571777675483697949": {
       "id": 2571777675483697949,
@@ -8895,7 +9012,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "2618646420420740860": {
       "id": 2618646420420740860,
@@ -8948,10 +9065,16 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikpoi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "SocketTimeoutException: timeout",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "unreachable": true
     },
     "2662341039809361960": {
       "id": 2662341039809361960,
@@ -9201,7 +9324,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "2749533608105807003": {
       "id": 2749533608105807003,
@@ -9269,7 +9392,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "2771923609751875169": {
       "id": 2771923609751875169,
@@ -9279,9 +9402,23 @@
       "nsfw": 0,
       "domain": "falcoscan.net",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "2776111846383631153": {
       "id": 2776111846383631153,
@@ -9399,7 +9536,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "2859476016271759146": {
       "id": 2859476016271759146,
@@ -9621,6 +9758,18 @@
       "dead": true,
       "kapali": true
     },
+    "2948301250697045057": {
+      "id": 2948301250697045057,
+      "kind": "catalogue",
+      "title": "OlimpoScans",
+      "lang": "es",
+      "nsfw": 0,
+      "domain": "olympusxyz.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "2950297680644095236": {
       "id": 2950297680644095236,
       "kind": "catalogue",
@@ -9687,7 +9836,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "2974006917749580032": {
       "id": 2974006917749580032,
@@ -9793,10 +9942,15 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "pocket.shonenmagazine.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "3002384199708631612": {
       "id": 3002384199708631612,
@@ -9851,7 +10005,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "3014905157548567667": {
       "id": 3014905157548567667,
@@ -9889,7 +10043,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "3015179990886286454": {
       "id": 3015179990886286454,
@@ -10428,7 +10582,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "3149873241825014135": {
       "id": 3149873241825014135,
@@ -10470,7 +10624,7 @@
     "3170876120391462040": {
       "id": 3170876120391462040,
       "kind": "catalogue",
-      "title": "VioletScans",
+      "title": "Violet Scans",
       "lang": "en",
       "nsfw": 0,
       "domain": "violetscans.org",
@@ -10489,7 +10643,7 @@
     "3179435076707922441": {
       "id": 3179435076707922441,
       "kind": "catalogue",
-      "title": "gafeland",
+      "title": "Gafeland",
       "lang": "tr",
       "nsfw": 0,
       "domain": "gafeland.com",
@@ -10636,7 +10790,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "3226537239648532225": {
       "id": 3226537239648532225,
@@ -10811,7 +10965,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "3317141599925034536": {
       "id": 3317141599925034536,
@@ -11200,14 +11354,19 @@
     "3483176489432573539": {
       "id": 3483176489432573539,
       "kind": "catalogue",
-      "title": "Luna Scans",
+      "title": "Tuhaf Scans",
       "lang": "tr",
       "nsfw": 1,
       "domain": "tuhafscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "3488647577143589694": {
       "id": 3488647577143589694,
@@ -11254,7 +11413,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "3517094690583648677": {
       "id": 3517094690583648677,
@@ -11411,7 +11570,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "3623239322859855998": {
       "id": 3623239322859855998,
@@ -11653,16 +11812,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "lilyumfansub.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 162,
         "detail": "curl: (6) Could not resolve host: lilyumfansub.com.tr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "3688690594033706893": {
@@ -11715,10 +11879,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnsupportedOperationException",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "3704693444647218571": {
       "id": 3704693444647218571,
@@ -11798,16 +11967,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "culturesubs.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 227,
         "detail": "curl: (6) Could not resolve host: culturesubs.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "3736714740149822308": {
@@ -12825,16 +12999,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangagezginim.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 155,
         "detail": "curl: (6) Could not resolve host: mangagezginim.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "3758368269838243122": {
@@ -13078,16 +13257,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.mangatilkisi.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 141,
         "detail": "curl: (6) Could not resolve host: www.mangatilkisi.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "3758899467340376098": {
@@ -13203,9 +13387,23 @@
       "nsfw": 0,
       "domain": "v7.kiryuu.to",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "3789389920063824891": {
       "id": 3789389920063824891,
@@ -13679,9 +13877,23 @@
       "nsfw": 0,
       "domain": "afroditscans.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "38985315279348378": {
       "id": 38985315279348378,
@@ -14171,10 +14383,15 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "namicomi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "3957800042269399520": {
       "id": 3957800042269399520,
@@ -14402,7 +14619,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "3991617090094006131": {
       "id": 3991617090094006131,
@@ -14927,9 +15144,23 @@
       "nsfw": 1,
       "domain": "manga18x.net",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "4063053647762505851": {
       "id": 4063053647762505851,
@@ -15035,9 +15266,23 @@
       "nsfw": 0,
       "domain": "mangahere.cc",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "4064041705395617170": {
       "id": 4064041705395617170,
@@ -15447,7 +15692,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "4107194506193138488": {
       "id": 4107194506193138488,
@@ -15553,7 +15798,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "4110592311627303703": {
       "id": 4110592311627303703,
@@ -15639,10 +15884,15 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "hiper.cool",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "4113976277368451618": {
       "id": 4113976277368451618,
@@ -15861,16 +16111,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "jellyring.co",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 140,
         "detail": "curl: (6) Could not resolve host: jellyring.co",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "4168662132362877672": {
@@ -16221,9 +16476,23 @@
       "nsfw": 0,
       "domain": "comic-days.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "4208818876350740821": {
       "id": 4208818876350740821,
@@ -17479,7 +17748,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "4234251777202023553": {
       "id": 4234251777202023553,
@@ -18075,7 +18344,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "4250752132752556322": {
       "id": 4250752132752556322,
@@ -18913,16 +19182,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "ruyamanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 341,
         "detail": "curl: (6) Could not resolve host: ruyamanga.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "4381294723770585814": {
@@ -20101,10 +20375,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnsupportedOperationException",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "4491758654893492698": {
       "id": 4491758654893492698,
@@ -20231,7 +20510,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "4539181955248324512": {
       "id": 4539181955248324512,
@@ -20261,7 +20540,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "4550544076198380891": {
       "id": 4550544076198380891,
@@ -20483,7 +20762,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "4621767986997099328": {
       "id": 4621767986997099328,
@@ -20678,16 +20957,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "anisamanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 933,
         "detail": "curl: (6) Could not resolve host: anisamanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "4648495069634047799": {
@@ -20719,7 +21003,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "4670366393428216076": {
       "id": 4670366393428216076,
@@ -20895,10 +21179,15 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "piccoma.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "4747418060607817046": {
       "id": 4747418060607817046,
@@ -21053,9 +21342,23 @@
       "nsfw": 0,
       "domain": "zinmanga.net",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "4826777915948697530": {
       "id": 4826777915948697530,
@@ -21163,9 +21466,23 @@
       "nsfw": 0,
       "domain": "crotpedia.net",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "4851494886996968982": {
       "id": 4851494886996968982,
@@ -21174,10 +21491,15 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lectorhub.j5z.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "4856925517439351632": {
       "id": 4856925517439351632,
@@ -21265,7 +21587,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "4872650919616038499": {
       "id": 4872650919616038499,
@@ -21411,10 +21733,15 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "ohjoysextoy.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "4974835479241504833": {
       "id": 4974835479241504833,
@@ -21583,16 +21910,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "tempestfansub.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 1322,
         "detail": "curl: (6) Could not resolve host: tempestfansub.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "507162270957965065": {
@@ -21909,14 +22241,19 @@
     "5213479314965651874": {
       "id": 5213479314965651874,
       "kind": "catalogue",
-      "title": "Manga1st",
+      "title": "Manga1ST",
       "lang": "en",
       "nsfw": 0,
       "domain": "manga1st.online",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "5224800957334324062": {
       "id": 5224800957334324062,
@@ -22021,7 +22358,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "5314545691510821070": {
       "id": 5314545691510821070,
@@ -22257,18 +22594,6 @@
       },
       "device_step": "list"
     },
-    "5418177941820983643": {
-      "id": 5418177941820983643,
-      "kind": "catalogue",
-      "title": "LectorMiau",
-      "lang": "es",
-      "nsfw": 0,
-      "domain": "leemiau.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "5420850623413657493": {
       "id": 5420850623413657493,
       "kind": "engine",
@@ -22301,16 +22626,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "prunusscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 141,
         "detail": "curl: (6) Could not resolve host: prunusscans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "5443582880216157130": {
@@ -22458,9 +22788,23 @@
       "nsfw": 0,
       "domain": "arthurscan.xyz",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "549820667593155342": {
       "id": 549820667593155342,
@@ -22917,10 +23261,15 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "birdtoon.shop",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "5780904096827346445": {
       "id": 5780904096827346445,
@@ -23652,7 +24001,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "5788199800528750443": {
       "id": 5788199800528750443,
@@ -24074,7 +24423,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "5789618909581566450": {
       "id": 5789618909581566450,
@@ -24279,16 +24628,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangacim.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 268,
         "detail": "curl: (6) Could not resolve host: mangacim.com.tr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "5789623240607215930": {
@@ -24298,16 +24652,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangacix.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "301",
         "ms": 1971,
         "detail": "curl: (6) Could not resolve host: mangaoku.org.tr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "5789623240639777024": {
@@ -25875,7 +26234,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "5798654863193396278": {
       "id": 5798654863193396278,
@@ -26090,9 +26449,23 @@
       "nsfw": 0,
       "domain": "zinmanga.net",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "5809110992011423948": {
       "id": 5809110992011423948,
@@ -26211,16 +26584,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangaefendisi.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 2563,
         "detail": "curl: (6) Could not resolve host: mangaefendisi.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "5827014979493050397": {
@@ -26342,16 +26720,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "manga-sehri.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ssl_trust",
         "http_code": "000",
         "ms": 357,
         "detail": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - Hedef as�l ad� yanl��.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncurl fai",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "5835717275901038433": {
@@ -26699,7 +27082,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "5955495849228102124": {
       "id": 5955495849228102124,
@@ -26730,7 +27113,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "5965634366863290136": {
       "id": 5965634366863290136,
@@ -26783,16 +27166,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "kedi.to",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 534,
         "detail": "curl: (6) Could not resolve host: kedi.to",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "5972281005079028369": {
@@ -27366,10 +27754,15 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaball.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "6072456827135650688": {
       "id": 6072456827135650688,
@@ -27527,10 +27920,15 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "mangakuro.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "6084020956957541828": {
       "id": 6084020956957541828,
@@ -27678,7 +28076,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "6088612262114850543": {
       "id": 6088612262114850543,
@@ -27733,9 +28131,23 @@
       "nsfw": 0,
       "domain": "mangazin.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "6111110345453636155": {
       "id": 6111110345453636155,
@@ -28383,7 +28795,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "6336788940996830678": {
       "id": 6336788940996830678,
@@ -28788,7 +29200,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "6418857290741556046": {
       "id": 6418857290741556046,
@@ -28919,7 +29331,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "646189134545719402": {
       "id": 646189134545719402,
@@ -29142,18 +29554,6 @@
       },
       "device_step": "list"
     },
-    "6535151987581154260": {
-      "id": 6535151987581154260,
-      "kind": "catalogue",
-      "title": "OlimpoScans",
-      "lang": "es",
-      "nsfw": 0,
-      "domain": "olympusbiblioteca.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
-    },
     "6537085686219641703": {
       "id": 6537085686219641703,
       "kind": "engine",
@@ -29207,7 +29607,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "6553363709144475916": {
       "id": 6553363709144475916,
@@ -29431,10 +29831,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "shadowceviri.blogspot.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "6620603193106345631": {
       "id": 6620603193106345631,
@@ -29520,15 +29925,20 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "arabtoons.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "6642245290597469030": {
       "id": 6642245290597469030,
       "kind": "catalogue",
-      "title": "HiveComic",
+      "title": "HiveToons",
       "lang": "en",
       "nsfw": 0,
       "domain": "hivetoons.org",
@@ -29621,9 +30031,23 @@
       "nsfw": 0,
       "domain": "hentailib.me",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "6696108672721987561": {
       "id": 6696108672721987561,
@@ -30156,7 +30580,7 @@
     "681306618208001196": {
       "id": 681306618208001196,
       "kind": "catalogue",
-      "title": "MangaTilkisi",
+      "title": "Tilki Scans",
       "lang": "tr",
       "nsfw": 0,
       "domain": "tilkiscans.com",
@@ -30225,7 +30649,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "6864523400679060774": {
       "id": 6864523400679060774,
@@ -30676,10 +31100,15 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "lectorikigai.acamu.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "7032361130743410061": {
       "id": 7032361130743410061,
@@ -31308,7 +31737,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "7206313674903334634": {
       "id": 7206313674903334634,
@@ -31344,9 +31773,23 @@
       "nsfw": 0,
       "domain": "erisscans.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "7265829715436203228": {
       "id": 7265829715436203228,
@@ -31521,7 +31964,7 @@
     "7317326350988863047": {
       "id": 7317326350988863047,
       "kind": "catalogue",
-      "title": "VortexScans",
+      "title": "Vortex Scans",
       "lang": "en",
       "nsfw": 0,
       "domain": "vortexscans.org",
@@ -31651,16 +32094,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "tempestscans.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 739,
         "detail": "curl: (6) Could not resolve host: tempestscans.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "7367496482927145507": {
@@ -31941,16 +32389,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "hayalistic.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "301",
         "ms": 615,
         "detail": "curl: (6) Could not resolve host: hayalistic.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "7437503977254350462": {
@@ -32196,7 +32649,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "7527354308421653932": {
       "id": 7527354308421653932,
@@ -32553,16 +33006,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.imparatormanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 213,
         "detail": "curl: (6) Could not resolve host: www.imparatormanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "7697591737694502654": {
@@ -32646,7 +33104,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "7739392788631822474": {
       "id": 7739392788631822474,
@@ -32902,7 +33360,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "7799671096902519693": {
       "id": 7799671096902519693,
@@ -33136,6 +33594,18 @@
       "dead": true,
       "kapali": true
     },
+    "7879483250760763388": {
+      "id": 7879483250760763388,
+      "kind": "catalogue",
+      "title": "LectorMiau",
+      "lang": "es",
+      "nsfw": 0,
+      "domain": "leer.lectovela.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "7893052437992694291": {
       "id": 7893052437992694291,
       "kind": "catalogue",
@@ -33225,16 +33695,21 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "mindafansub.online",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15035,
         "detail": "curl: (28) Connection timed out after 15009 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "7912332843948948278": {
@@ -33544,10 +34019,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tonizu.top",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KAPSAM_DISI",
+        "at": "2026-11-17T18:04:21Z"
+      },
       "device_step": "pages"
     },
     "8004965338622879732": {
@@ -33708,16 +34188,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "asurascans.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 164,
         "detail": "curl: (6) Could not resolve host: asurascans.com.tr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "8047257152713495236": {
@@ -33844,7 +34329,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "8123620034208406844": {
       "id": 8123620034208406844,
@@ -33904,10 +34389,15 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangadenizi.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "8132273477468721739": {
       "id": 8132273477468721739,
@@ -33916,10 +34406,15 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "kirapo.jp",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "8132452139723567734": {
       "id": 8132452139723567734,
@@ -34032,7 +34527,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "8170497644902480619": {
       "id": 8170497644902480619,
@@ -34240,9 +34735,23 @@
       "nsfw": 0,
       "domain": "mangadiyari.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "8244651774479139223": {
       "id": 8244651774479139223,
@@ -34317,7 +34826,7 @@
     "8277548740759618769": {
       "id": 8277548740759618769,
       "kind": "catalogue",
-      "title": "TrManga",
+      "title": "TRManga",
       "lang": "tr",
       "nsfw": 0,
       "domain": "trmanga.com",
@@ -34342,7 +34851,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "8287377573619738771": {
       "id": 8287377573619738771,
@@ -34354,7 +34863,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "8329652869642848348": {
       "id": 8329652869642848348,
@@ -34626,7 +35135,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "8390623784752854269": {
       "id": 8390623784752854269,
@@ -34772,7 +35281,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "845640352969867542": {
       "id": 845640352969867542,
@@ -34889,10 +35398,15 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "mangahub.ru",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "8461885132051552842": {
       "id": 8461885132051552842,
@@ -34930,7 +35444,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "8461886736658207680": {
       "id": 8461886736658207680,
@@ -34957,9 +35471,23 @@
       "nsfw": 0,
       "domain": "mangatv.net",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "8461894771860958934": {
       "id": 8461894771860958934,
@@ -35221,9 +35749,23 @@
       "nsfw": 0,
       "domain": "philiascans.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "8551885360868824886": {
       "id": 8551885360868824886,
@@ -35408,32 +35950,17 @@
       },
       "device_step": "list"
     },
-    "8599633753611393348": {
-      "id": 8599633753611393348,
+    "8599633753611392879": {
+      "id": 8599633753611392879,
       "kind": "catalogue",
       "title": "Nyx Scans",
-      "lang": "tr",
+      "lang": "en",
       "nsfw": 0,
       "domain": "nyxscans.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T17:02:29Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T17:02:29Z"
-      },
-      "device_step": "pages"
+      "state": "pending"
     },
     "8607382649550260430": {
       "id": 8607382649550260430,
@@ -35691,9 +36218,23 @@
       "nsfw": 0,
       "domain": "divascans.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness-test-buyuk",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "8667355266196673138": {
       "id": 8667355266196673138,
@@ -35728,10 +36269,15 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "rinkocomics.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "868444501946732027": {
       "id": 868444501946732027,
@@ -35923,10 +36469,15 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "rinkocomics.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "8748681326320541466": {
       "id": 8748681326320541466,
@@ -35961,10 +36512,15 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "harmony-scan.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "8756179784818649526": {
       "id": 8756179784818649526,
@@ -36020,7 +36576,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "8765752838049320565": {
       "id": 8765752838049320565,
@@ -36072,17 +36628,17 @@
       },
       "device_step": "list"
     },
-    "8798867856205443111": {
-      "id": 8798867856205443111,
+    "8798867856165195470": {
+      "id": 8798867856165195470,
       "kind": "catalogue",
-      "title": "DrakeComic",
+      "title": "Drake Comic",
       "lang": "en",
       "nsfw": 0,
-      "domain": "drakecomic.org",
+      "domain": "drakecomic.net",
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "880006159466720824": {
       "id": 880006159466720824,
@@ -36451,7 +37007,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "8862253965650556151": {
       "id": 8862253965650556151,
@@ -36538,10 +37094,15 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "unicomics.ru",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "liste/sayfa bos (harness)",
+        "at": "2026-11-17T18:04:21Z"
+      }
     },
     "889450546053005384": {
       "id": 889450546053005384,
@@ -36677,6 +37238,18 @@
       "device_step": "list",
       "unreachable": true
     },
+    "8956038307457102053": {
+      "id": 8956038307457102053,
+      "kind": "catalogue",
+      "title": "XoxoComic",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "xoxocomic.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "8967568472237641111": {
       "id": 8967568472237641111,
       "kind": "catalogue",
@@ -36711,16 +37284,21 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.yetiskinruyamanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 139,
         "detail": "curl: (6) Could not resolve host: www.yetiskinruyamanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "KATALOG_DISI",
+        "at": "2026-11-17T18:04:21Z"
       }
     },
     "8986677657343345148": {
@@ -36861,7 +37439,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "9083609997475506503": {
       "id": 9083609997475506503,
@@ -37137,24 +37715,6 @@
         "at": "2026-11-17T10:02:04Z"
       }
     },
-    "936026425526885605": {
-      "id": 936026425526885605,
-      "kind": "catalogue",
-      "title": "xoxocomic.com",
-      "lang": "all",
-      "nsfw": 0,
-      "domain": "xoxocomic.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Resim hata: Content-Type: text/html; charset=UTF-8",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
-      "device_step": "pages"
-    },
     "938978555414998994": {
       "id": 938978555414998994,
       "kind": "engine",
@@ -37191,7 +37751,7 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "pending"
     },
     "955191849114859000": {
       "id": 955191849114859000,
