@@ -291,7 +291,18 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
         // etiket temizlenir (Slept Manga: dört adımı da geçtiği halde
         // sorun:"cloudflare" yüzünden test paketinde kalıyordu).
         let device_pass = s.device.as_ref().map(|p| p.status.as_str()) == Some("pass");
-        s.sorun = if device_pass { String::new() } else { sorun };
+        // Cloudflare engeli kalıcıdır: katalogda `sorun` alanı olmayan 100+ kaydın
+        // etiketi her status koşusunda siliniyor, engel yalnız `reason` ("CF: ...")
+        // üzerinden ayakta kalıyordu. Gerekçe bir gün temizlenirse kayıt
+        // failed'e düşerdi. Etiket ya da CF gerekçesi duruyorsa korunur.
+        let engelli_koru = s.sorun.eq_ignore_ascii_case("cloudflare") || s.reason.starts_with("CF:");
+        s.sorun = if engelli_koru {
+            s.sorun.clone()
+        } else if device_pass {
+            String::new()
+        } else {
+            sorun
+        };
         // Katalogda ölçülmüş gerekçe deftere taşınır; cihaz/harness gerekçesi (dolu ise) önceliklidir.
         if s.reason.is_empty() {
             if let Some(r) = reasons.get(&(e.domain.to_lowercase(), e.lang.to_lowercase())) {

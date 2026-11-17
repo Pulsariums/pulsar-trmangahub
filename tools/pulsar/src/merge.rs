@@ -97,9 +97,14 @@ fn published_ids(path: &Path) -> Option<BTreeSet<i64>> {
     let mut out = BTreeSet::new();
     if let Some(sources) = v.get("sources").and_then(|s| s.as_object()) {
         for (id, e) in sources {
-            let active = e.get("state").and_then(|s| s.as_str()) == Some("active");
+            let state = e.get("state").and_then(|s| s.as_str()).unwrap_or("");
+            let active = state == "active";
             let sorun = e.get("sorun").and_then(|s| s.as_str()).map(|s| !s.trim().is_empty()).unwrap_or(false);
-            if active || sorun {
+            // Engelli (Cloudflare duvarı) motor yayında değil: klonu düşürmemeli.
+            // Aksi hâlde motorda `sorun` etiketi varken katalog klonu da eleniyor
+            // ve site asset'ten tamamen kayboluyordu (zenithscans.com).
+            let engelli = state == "engelli";
+            if (active || sorun) && !engelli {
                 if let Ok(n) = id.parse::<i64>() { out.insert(n); }
             }
         }
