@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T19:32:09Z",
+  "generated": "2026-11-17T19:34:23Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -4450,6 +4450,18 @@
       "reason": "Domain canli ama icerik yok: /manga/99-in-love-2/ 673 bayt donuyor ve govde DEMO version only includes 4 pages diyor; yayinda gercek seri/bolum yok.",
       "dead": true,
       "kapali": true
+    },
+    "1722921089165749142": {
+      "id": 1722921089165749142,
+      "kind": "catalogue",
+      "title": "Qi Scans",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "qimanga.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1726052376523340103": {
       "id": 1726052376523340103,
@@ -13990,7 +14002,7 @@
       "kind": "catalogue",
       "title": "MangaHentai",
       "lang": "en",
-      "nsfw": 0,
+      "nsfw": 1,
       "domain": "mangahentai.me",
       "packages": [
         "test"
@@ -15271,6 +15283,18 @@
         "detail": "",
         "at": "2026-11-17T10:02:04Z"
       }
+    },
+    "4064121489576575641": {
+      "id": 4064121489576575641,
+      "kind": "catalogue",
+      "title": "AsuraScansGg",
+      "lang": "en",
+      "nsfw": 1,
+      "domain": "mangapark.tv",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4064239081235390644": {
       "id": 4064239081235390644,
@@ -18877,6 +18901,30 @@
       },
       "dead": true
     },
+    "4345487257700612863": {
+      "id": 4345487257700612863,
+      "kind": "catalogue",
+      "title": "Petro Tech Society",
+      "lang": "en",
+      "nsfw": 1,
+      "domain": "petrotechsociety.org",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
+    "4354551168694971882": {
+      "id": 4354551168694971882,
+      "kind": "catalogue",
+      "title": "Arc-Relight",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "arc-relight.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "4361115049955014954": {
       "id": 4361115049955014954,
       "kind": "engine",
@@ -20620,25 +20668,6 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list"
-    },
-    "457447614235202301": {
-      "id": 457447614235202301,
-      "kind": "catalogue",
-      "title": "AsuraScansGg",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "asurascans.us",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
     },
     "4578866209888606642": {
       "id": 4578866209888606642,
@@ -26968,6 +26997,18 @@
       "device_step": "list",
       "unreachable": true
     },
+    "5975905237564651606": {
+      "id": 5975905237564651606,
+      "kind": "catalogue",
+      "title": "Toonily",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "toonily.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "5975917178039175780": {
       "id": 5975917178039175780,
       "kind": "catalogue",
@@ -31589,25 +31630,6 @@
         "at": "2026-11-17T19:30:39Z"
       }
     },
-    "7293740138855045512": {
-      "id": 7293740138855045512,
-      "kind": "catalogue",
-      "title": "Qi Scans",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "qimanhwa.com",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
-    },
     "7294049394344984284": {
       "id": 7294049394344984284,
       "kind": "engine",
@@ -32033,26 +32055,12 @@
       "kind": "catalogue",
       "title": "ManhwaToon",
       "lang": "en",
-      "nsfw": 0,
+      "nsfw": 1,
       "domain": "manhwatoon.me",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "7419670746333444656": {
       "id": 7419670746333444656,
@@ -33491,6 +33499,18 @@
         "at": "2026-11-17T15:05:59.415241Z"
       },
       "device_step": "covers"
+    },
+    "7933798341037088536": {
+      "id": 7933798341037088536,
+      "kind": "catalogue",
+      "title": "Comizy",
+      "lang": "en",
+      "nsfw": 1,
+      "domain": "comizy.io",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "7940794339469272950": {
       "id": 7940794339469272950,
@@ -35192,6 +35212,18 @@
         "detail": "CF",
         "at": "2026-11-16T22:05:11.851283Z"
       }
+    },
+    "8461888084772902945": {
+      "id": 8461888084772902945,
+      "kind": "catalogue",
+      "title": "MangaOwl",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "mangaowl.io",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "8461892268518968357": {
       "id": 8461892268518968357,
