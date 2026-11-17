@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T20:45:32Z",
+  "generated": "2026-11-17T20:49:45Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -185,9 +185,23 @@
       "nsfw": 1,
       "domain": "toontop.io",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T20:49:42.366Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T20:49:42.366Z"
+      }
     },
     "109266153397226665": {
       "id": 109266153397226665,
@@ -4492,9 +4506,23 @@
       "nsfw": 0,
       "domain": "kakamanga.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T20:49:42.366Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T20:49:42.366Z"
+      }
     },
     "1793420480712657216": {
       "id": 1793420480712657216,
@@ -20454,10 +20482,16 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lectorhub.j5z.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: list=25 chapters=20 pages=0",
+        "at": "2026-11-17T20:49:42.366Z"
+      },
+      "reason": "harness: list=25 chapters=20 pages=0"
     },
     "4856925517439351632": {
       "id": 4856925517439351632,
@@ -25538,9 +25572,23 @@
       "nsfw": 1,
       "domain": "gedecomix.com",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T20:49:42.366Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T20:49:42.366Z"
+      }
     },
     "5913531196666726580": {
       "id": 5913531196666726580,
@@ -30998,10 +31046,16 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangamaniacs.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
+        "at": "2026-11-17T20:49:42.366Z"
+      },
+      "reason": "harness: OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
     },
     "7521631886315243057": {
       "id": 7521631886315243057,
@@ -33486,9 +33540,23 @@
       "nsfw": 0,
       "domain": "spiderscans.xyz",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T20:49:42.366Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T20:49:42.366Z"
+      }
     },
     "837385888220200875": {
       "id": 837385888220200875,
@@ -34778,9 +34846,23 @@
       "nsfw": 1,
       "domain": "hentaixyuri.com",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T20:49:42.366Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T20:49:42.366Z"
+      }
     },
     "8670809408652362719": {
       "id": 8670809408652362719,
