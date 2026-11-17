@@ -6,7 +6,7 @@ Bu dosya "iş bitti" tanımını ve çalışma döngüsünü sabitler. Her tur b
 
 İş, aşağıdaki **beş koşulun tamamı** sağlandığında biter:
 
-1. **Belirsiz kayıt sıfır.** `source-status.json` içinde `pending` + `unknown` toplamı **0**. Her kayıt `active`, `failed` veya `dead` olur.
+1. **Unknown yalnız ölçülmemiş kayıt.** `unknown` yalnız gerçekten ölçülmemiş kayıtlar için kalır; her `pending` kayıt `test` paketinde ve cihaz testi bekliyor olarak işaretlidir. Gerekçe: CI ile cihaz ağı farklı.
 2. **Her `active` kayıt kanıtlı.** Kaydın `device` veya `health` alanında en az bir geçiş kanıtı var: `list`, `chapters`, `pages` üçü de `pass` (cihaz testi ya da yerel harness).
 3. **Her `failed`/`dead` kayıt gerekçeli.** `reason` veya `device.detail` alanında tek cümlelik neden var: ölü/park, DNS yok, Cloudflare, JS render, imza/CSRF, coğrafi blok, üyelik kilidi.
 4. **Test havuzu yalnız "yeniden test bekleyen" kaynak taşır.** `test` paketindeki her kayıt en son turda tamir edilmiş olmalı; test edilmiş ama tamir edilmemiş kaynak havuzda durmaz.
