@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T21:37:28Z",
+  "generated": "2026-11-17T21:39:25Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -72,18 +72,6 @@
       "device_step": "list",
       "unreachable": true,
       "kapali": true
-    },
-    "1064800861221082664": {
-      "id": 1064800861221082664,
-      "kind": "catalogue",
-      "title": "Kiryuu",
-      "lang": "id",
-      "nsfw": 0,
-      "domain": "v5.kiryuu.to",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
     },
     "1070937091469606342": {
       "id": 1070937091469606342,
@@ -906,23 +894,10 @@
       "domain": "apkomik.cc",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1207,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "1376573640710455391": {
       "id": 1376573640710455391,
@@ -980,15 +955,9 @@
       "domain": "www.baozimh.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpStatusException: . Status=403, URL=[https://www.baozimh.com/api/bzmhq/amp_comic_list?filter=*&region=all&type=all&state=all&limit=36&page=1]",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: gatekeeper challenge_required"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "1376583886603367371": {
       "id": 1376583886603367371,
@@ -1317,23 +1286,10 @@
       "domain": "haikyuu.fr",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 941,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "1376745785900979432": {
       "id": 1376745785900979432,
@@ -2091,22 +2047,9 @@
       "domain": "id.mgkomik.cc",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 743,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Cloudflare Just a moment"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "1376880665164811639": {
       "id": 1376880665164811639,
@@ -2623,23 +2566,10 @@
       "domain": "so-manga.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 3122,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "DIGER: JS challenge; Loading... 474B",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "1377071611800653221": {
       "id": 1377071611800653221,
@@ -2669,23 +2599,10 @@
       "domain": "www.toongod.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 931,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "1377071612696647377": {
       "id": 1377071612696647377,
@@ -3830,22 +3747,9 @@
       "domain": "mangazodiac.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 827,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "DIGER: JS challenge (?ch=1 JWT) yonlendirmesi"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "1608895844235022990": {
       "id": 1608895844235022990,
@@ -4098,23 +4002,10 @@
       "domain": "nettruyenhe.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 2058,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge; redirect izlendi",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "1670524346210395535": {
       "id": 1670524346210395535,
@@ -5964,23 +5855,10 @@
       "domain": "manga-lionz.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 792,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "2134596247691827462": {
       "id": 2134596247691827462,
@@ -6029,16 +5907,10 @@
       "domain": "mangamoins.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "details",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "2134596280325782704": {
       "id": 2134596280325782704,
@@ -6412,22 +6284,9 @@
       "domain": "mangacrab.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1298,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Attention Required (Cloudflare blok)"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "2134596772001600088": {
       "id": 2134596772001600088,
@@ -6483,23 +6342,10 @@
       "domain": "manhuafast.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 3139,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "2134639440514999049": {
       "id": 2134639440514999049,
@@ -6606,21 +6452,9 @@
       "domain": "manhwaclan.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 752,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "device_step": "list",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "2134641143355242586": {
       "id": 2134641143355242586,
@@ -6657,21 +6491,9 @@
       "domain": "manhwafull.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 502,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "device_step": "list",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "2134641148036391789": {
       "id": 2134641148036391789,
@@ -6857,23 +6679,10 @@
       "domain": "mashlescan.fr",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "http5xx",
-        "http_code": "523",
-        "ms": 4319,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpStatusException: . Status=523, URL=[https://mashlescan.fr/]",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "KAPALI: Cloudflare 523 origin yok",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "2145489765485420150": {
       "id": 2145489765485420150,
@@ -7082,22 +6891,9 @@
       "domain": "www.hentaivnx.autos",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 695,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Attention Required (Cloudflare blok)"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "2232544399427080151": {
       "id": 2232544399427080151,
@@ -7504,22 +7300,9 @@
       "domain": "emperorscan.mundoalterno.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1725,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: imperiomanhwa.com'a yonlendiriyor; Attention Required"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "2376274492388345035": {
       "id": 2376274492388345035,
@@ -7632,22 +7415,9 @@
       "domain": "bakamh.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 823,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "2424632140094543548": {
       "id": 2424632140094543548,
@@ -7824,23 +7594,10 @@
       "domain": "hijala.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 951,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "2424636476473933108": {
       "id": 2424636476473933108,
@@ -7956,23 +7713,10 @@
       "domain": "luvyaa.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 2426,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge; redirect izlendi",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "2424640671303173927": {
       "id": 2424640671303173927,
@@ -8092,23 +7836,10 @@
       "domain": "toonfr.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1091,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "2424648168090947417": {
       "id": 2424648168090947417,
@@ -8332,23 +8063,10 @@
       "domain": "vercomicsporno.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 575,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "2498280634065554519": {
       "id": 2498280634065554519,
@@ -8454,22 +8172,9 @@
       "domain": "x-manga.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 785,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "2544801090729548498": {
       "id": 2544801090729548498,
@@ -8499,21 +8204,9 @@
       "domain": "itsyourightmanhua.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 673,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "device_step": "list",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "2552077712919917108": {
       "id": 2552077712919917108,
@@ -8868,22 +8561,9 @@
       "domain": "beta.epsilonsoft.to",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1751,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: epsilonsoft.to'ya yonlendiriyor; Attention Required"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "2681047300985850594": {
       "id": 2681047300985850594,
@@ -9165,16 +8845,10 @@
       "domain": "bentomanga.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "2799779033885564804": {
       "id": 2799779033885564804,
@@ -9325,23 +8999,10 @@
       "domain": "hellsparadisescan.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1183,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "2899526010499517863": {
       "id": 2899526010499517863,
@@ -9481,23 +9142,9 @@
       "nsfw": 0,
       "domain": "olympusxyz.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness (list/chapters/pages>0)",
-        "at": "2026-11-17T18:44:56Z"
-      }
+      "state": "pending"
     },
     "2950297680644095236": {
       "id": 2950297680644095236,
@@ -9860,23 +9507,10 @@
       "domain": "nettruyenx.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 843,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3044950700807787228": {
       "id": 3044950700807787228,
@@ -9998,14 +9632,8 @@
       "domain": "millascan.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE - 403 'Just a moment...' + challenge-platform; Cloudflare managed challenge. Govdede kart yok.",
-        "at": "2026-11-16T22:14:59.157499Z"
-      },
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "3105018861730110456": {
       "id": 3105018861730110456,
@@ -10068,23 +9696,10 @@
       "domain": "topcomicporno.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1065,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: Detay: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "details",
-      "reason": "DIGER: 403 challenge metni yok",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3119831850640083424": {
       "id": 3119831850640083424,
@@ -10427,13 +10042,6 @@
       "domain": "arcurafansub.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE: Tüm HTML ve JSON uçları Cloudflare challenge döndürüyor, HTML alınamadığı için script/inline JSON avı yapılamadı. Denenen uçlar: wp-json wp/v2/manga, /api/v1/series/{slug}/chapters/{bolum}, /wp-json/. Aşılamadı.",
-        "at": "2026-11-17T18:15:56Z"
-      },
       "device_step": "list",
       "sorun": "cloudflare",
       "reason": "CF: cerez gerekiyor (olculemedi)"
@@ -10486,23 +10094,10 @@
       "domain": "demonslayerscan.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "http5xx",
-        "http_code": "523",
-        "ms": 2426,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpStatusException: . Status=523, URL=[https://demonslayerscan.com/]",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "KAPALI: Cloudflare 523 origin yok",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3212366893365143622": {
       "id": 3212366893365143622,
@@ -10631,22 +10226,9 @@
       "domain": "xcalibrscans.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 3433,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Cloudflare challenge (canlilik olcumu)"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "3284491439038302242": {
       "id": 3284491439038302242,
@@ -10842,23 +10424,10 @@
       "domain": "stellarsaber.pro",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 793,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3336063824056253900": {
       "id": 3336063824056253900,
@@ -11071,23 +10640,10 @@
       "domain": "bluelockscan.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 966,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3468208220164560789": {
       "id": 3468208220164560789,
@@ -11317,23 +10873,10 @@
       "domain": "tokyorevengers.fr",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "http5xx",
-        "http_code": "523",
-        "ms": 3248,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpStatusException: . Status=523, URL=[https://tokyorevengers.fr/]",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "KAPALI: Cloudflare 523 origin yok",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3601982995182824927": {
       "id": 3601982995182824927,
@@ -11369,23 +10912,10 @@
       "domain": "begatranslation.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1306,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3625384586976844080": {
       "id": 3625384586976844080,
@@ -11776,23 +11306,10 @@
       "domain": "berserkscan.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1393,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3758130351044916558": {
       "id": 3758130351044916558,
@@ -12567,23 +12084,10 @@
       "domain": "manhuafast.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 3276,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3758243091528592709": {
       "id": 3758243091528592709,
@@ -12697,22 +12201,9 @@
       "domain": "mangafoxfull.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 678,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: NotFoundException: . Status=404, URL=[https://mangafoxfull.com/wp-admin/admin-ajax.php]",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Cloudflare challenge (canlilik olcumu)"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "3758266340840845747": {
       "id": 3758266340840845747,
@@ -12760,23 +12251,10 @@
       "domain": "link-manga.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 707,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3758421238394403541": {
       "id": 3758421238394403541,
@@ -13063,23 +12541,9 @@
       "nsfw": 0,
       "domain": "v7.kiryuu.to",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness (list/chapters/pages>0)",
-        "at": "2026-11-17T18:44:56Z"
-      }
+      "state": "pending"
     },
     "3789389920063824891": {
       "id": 3789389920063824891,
@@ -13242,23 +12706,10 @@
       "domain": "manhwa-latino.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1101,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3801554143820933393": {
       "id": 3801554143820933393,
@@ -13297,23 +12748,10 @@
       "domain": "manhwa-online.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 798,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3801569636868632647": {
       "id": 3801569636868632647,
@@ -13766,22 +13204,9 @@
       "domain": "ainzscans.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1081,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "3938073419364942094": {
       "id": 3938073419364942094,
@@ -13926,23 +13351,10 @@
       "domain": "ar.kenmanga.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1153,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3943569930192103312": {
       "id": 3943569930192103312,
@@ -14161,23 +13573,10 @@
       "domain": "bokugents.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1059,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "3966263488430819490": {
       "id": 3966263488430819490,
@@ -14513,23 +13912,10 @@
       "domain": "dragontea.ink",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 850,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4019266417607582536": {
       "id": 4019266417607582536,
@@ -14724,23 +14110,10 @@
       "domain": "evil-manga.eu",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1156,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4056113000552116517": {
       "id": 4056113000552116517,
@@ -14789,14 +14162,8 @@
       "domain": "manga-tr.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE - 403 DDoS-Guard ara sayfasi: title 'DDoS-Guard', govdede 'Checking your browser'. Kuyruktaki '.well-known/ddos-guard' JS challenge ile ayni. Secici ile cozulmez, istek govdesinde kart yok.",
-        "at": "2026-11-16T22:14:59.157499Z"
-      },
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "4062420937604231679": {
       "id": 4062420937604231679,
@@ -14886,14 +14253,8 @@
       "domain": "mangadot.net",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE - 403 'Just a moment...' + challenge-platform isareti; Cloudflare managed challenge. Govdede kart yok.",
-        "at": "2026-11-16T22:14:59.157499Z"
-      },
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "4063869146371370879": {
       "id": 4063869146371370879,
@@ -15418,22 +14779,9 @@
       "domain": "ddt.hastateam.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 866,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "4110200957959026711": {
       "id": 4110200957959026711,
@@ -15536,23 +14884,10 @@
       "domain": "hijala.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1002,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4113818041737722979": {
       "id": 4113818041737722979,
@@ -15808,22 +15143,9 @@
       "domain": "mugiwarasoficial.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 580,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "4180504126586091018": {
       "id": 4180504126586091018,
@@ -15898,23 +15220,10 @@
       "domain": "kissmanga.in",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 836,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4192322257904556654": {
       "id": 4192322257904556654,
@@ -15980,23 +15289,10 @@
       "domain": "komikzoid.id",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1290,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4197738527627437825": {
       "id": 4197738527627437825,
@@ -16212,22 +15508,9 @@
       "domain": "lermangas.me",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 972,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "4215063058121359987": {
       "id": 4215063058121359987,
@@ -16549,15 +15832,9 @@
       "domain": "mangadex.org",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: JSONException: Value <!doctype of type java.lang.String cannot be converted to JSONObject",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "DIGER: 302 -> /edge/challenge bot kontrolu"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "4234251759634896464": {
       "id": 4234251759634896464,
@@ -16825,23 +16102,10 @@
       "domain": "manga-leko.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 744,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4234251767220191541": {
       "id": 4234251767220191541,
@@ -16852,16 +16116,10 @@
       "domain": "www.manga-mana.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4234251767225851938": {
       "id": 4234251767225851938,
@@ -17442,22 +16700,9 @@
       "domain": "manhuauss.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1521,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpStatusException: . Status=403, URL=[https://manhuauss.com/?s=&post_type=wp-manga&m_orderby=views]",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "DIGER: https/http/www hepsi 403/548; challenge metni yok"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "4234253214816658264": {
       "id": 4234253214816658264,
@@ -17563,23 +16808,10 @@
       "domain": "manhwa-es.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 717,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4234254327182926308": {
       "id": 4234254327182926308,
@@ -17876,23 +17108,10 @@
       "domain": "nettruyenar.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 934,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4263181832304562611": {
       "id": 4263181832304562611,
@@ -18025,22 +17244,9 @@
       "domain": "novelcrow.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 834,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: https 403/5950; govde challenge-platform (Cloudflare challenge)"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "4272413275476131702": {
       "id": 4272413275476131702,
@@ -18077,14 +17283,8 @@
       "domain": "zenithscans.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "BULUNAMADI: Cloudflare arkasinda origin 503 Service Unavailable (299 baytlik Apache hata sayfasi), 3 URL ve 2 tur denendi, kalici. Sayfa olculemedigi icin hicbir secici yazilmadi. Katalogda mevcut mangareader kaydi var (chapterSelector div.eph-num a, itemSelector div.bsx, readerSelector div#readerarea img) ama canli dogrulanmadi.",
-        "at": "2026-11-17T18:15:56Z"
-      },
-      "reason": "origin kapalı: 503 Maintenance mode"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "4293571469005629200": {
       "id": 4293571469005629200,
@@ -18193,15 +17393,9 @@
       "domain": "mangakakalot.gg",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "covers: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-17T09:52:10Z"
-      },
       "device_step": "covers",
-      "reason": "DIGER: 301 -> https://www.kakamanga.com/"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "4321967665832850627": {
       "id": 4321967665832850627,
@@ -18794,23 +17988,10 @@
       "domain": "shirakami.xyz",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1043,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4393416906712395520": {
       "id": 4393416906712395520,
@@ -19535,23 +18716,10 @@
       "domain": "vermanhwa.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 866,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4474268584874203947": {
       "id": 4474268584874203947,
@@ -19656,16 +18824,10 @@
       "domain": "waveteamy.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "4491309248779553622": {
       "id": 4491309248779553622,
@@ -20648,22 +19810,9 @@
       "domain": "portalyaoi.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1023,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Cloudflare Attention Required"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "4860641570266560086": {
       "id": 4860641570266560086,
@@ -20752,22 +19901,9 @@
       "domain": "dragontranslation.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 850,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Cloudflare Attention Required"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "4890247698976986192": {
       "id": 4890247698976986192,
@@ -20948,23 +20084,10 @@
       "domain": "sakamotodays.fr",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "http5xx",
-        "http_code": "523",
-        "ms": 3199,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpStatusException: . Status=523, URL=[https://sakamotodays.fr/]",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Cloudflare error 523 origin down",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "503588840434121011": {
       "id": 503588840434121011,
@@ -21020,23 +20143,10 @@
       "domain": "vermangasporno.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 880,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5067175583958641562": {
       "id": 5067175583958641562,
@@ -21233,23 +20343,10 @@
       "domain": "kingdomscan.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 866,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5192441489584699527": {
       "id": 5192441489584699527,
@@ -21666,23 +20763,10 @@
       "domain": "flowermanga.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "http5xx",
-        "http_code": "523",
-        "ms": 2662,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpStatusException: . Status=523, URL=[https://flowermanga.net/wp-admin/admin-ajax.php]",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Cloudflare error 523",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5417450913768408581": {
       "id": 5417450913768408581,
@@ -21768,13 +20852,6 @@
       "domain": "gaiatoon.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE: Cloudflare 'Just a moment...' 403 (5456 bayt). Denenen: GET / ve GET /wp-json/wp/v2/wp-manga?per_page=1 -> 403/5613 ayni challenge. admin-ajax denenmedi (403 sonrasi anlamsiz). HTML ve JSON ucu kapali, detay/bolum olculemedi.",
-        "at": "2026-11-17T18:15:56Z"
-      },
       "sorun": "cloudflare",
       "reason": "CF: cerez gerekiyor (olculemedi)"
     },
@@ -21983,23 +21060,10 @@
       "domain": "scanjujutsukaisen.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 753,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5607681567668141710": {
       "id": 5607681567668141710,
@@ -22414,23 +21478,10 @@
       "domain": "dandadan.fr",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "http5xx",
-        "http_code": "523",
-        "ms": 3055,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpStatusException: . Status=523, URL=[https://dandadan.fr/]",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Cloudflare error 523",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5782250123606374640": {
       "id": 5782250123606374640,
@@ -22467,23 +21518,10 @@
       "domain": "doujinku.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 880,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5782622800939707298": {
       "id": 5782622800939707298,
@@ -22929,23 +21967,10 @@
       "domain": "lirescanvf.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "http5xx",
-        "http_code": "525",
-        "ms": 859,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpStatusException: . Status=525, URL=[https://lirescanvf.com/filterList/?page=1&author=&tag=&alpha=&cat=&sortBy=views&asc=false]",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Cloudflare error 525 SSL",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5787979820185491117": {
       "id": 5787979820185491117,
@@ -23296,15 +22321,9 @@
       "domain": "kunmanga.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "BULUNAMADI: Domain canli ama Cloudflare challenge ile 403. Adres degismedi; yeni adres yok. Cozum domain degil, CF asimi.",
-        "at": "2026-11-17T17:40:26Z"
-      },
       "device_step": "list",
-      "reason": "CF: cf-block"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "5788803617698434203": {
       "id": 5788803617698434203,
@@ -23718,23 +22737,10 @@
       "domain": "mangahub.fr",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 871,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5789623240787033937": {
       "id": 5789623240787033937,
@@ -23847,16 +22853,10 @@
       "domain": "manga-oni.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5789623240963337075": {
       "id": 5789623240963337075,
@@ -24136,23 +23136,10 @@
       "domain": "manhuaus.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 725,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5789623287569152041": {
       "id": 5789623287569152041,
@@ -24722,16 +23709,9 @@
       "domain": "sadscans.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
       "sorun": "cloudflare",
-      "reason": "DIGER: 301 -> sadscans.net"
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "5794583010975319217": {
       "id": 5794583010975319217,
@@ -24874,23 +23854,10 @@
       "domain": "theblank.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 630,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5795678932361119658": {
       "id": 5795678932361119658,
@@ -25167,23 +24134,10 @@
       "domain": "yaoiscan.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 794,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5799528948033097120": {
       "id": 5799528948033097120,
@@ -25570,22 +24524,9 @@
       "domain": "mangasnosekai.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1254,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Attention Required Cloudflare"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "584806591128881071": {
       "id": 584806591128881071,
@@ -26065,23 +25006,10 @@
       "domain": "www.ykmh.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1269,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5975905237564651606": {
       "id": 5975905237564651606,
@@ -26144,23 +25072,10 @@
       "domain": "manga-scantrad.io",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1325,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "5976553864598182102": {
       "id": 5976553864598182102,
@@ -26630,15 +25545,9 @@
       "domain": "mangabats.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "covers: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-17T09:52:10Z"
-      },
       "device_step": "covers",
-      "reason": "JS_RENDER: mangabats.com -> www.mangabats.com; kart bloklari var ama seri href'i yok (yalniz /history, /images), liste JS ile doluyor."
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "6074095230818574849": {
       "id": 6074095230818574849,
@@ -26737,22 +25646,9 @@
       "domain": "ravenscans.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 417,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CF",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "6079771261904476856": {
       "id": 6079771261904476856,
@@ -27460,14 +26356,9 @@
       "domain": "manhuascans.org",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE - Bölüm listesi ucu Cloudflare JS challenge arkasında; Referer + X-Requested-With ile de 403.",
-        "at": "2026-11-17T14:31:41.061125Z"
-      },
-      "device_step": "details"
+      "device_step": "details",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "6259609919500194210": {
       "id": 6259609919500194210,
@@ -27608,14 +26499,8 @@
       "domain": "ravenscans.org",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE - 403 'Just a moment...' + challenge-platform; Cloudflare managed challenge. Govdede kart yok.",
-        "at": "2026-11-16T22:14:59.157499Z"
-      },
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "6280265351565677007": {
       "id": 6280265351565677007,
@@ -27930,22 +26815,9 @@
       "domain": "hentaiseason.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 949,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Attention Required Cloudflare"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "6387964797870248642": {
       "id": 6387964797870248642,
@@ -28387,18 +27259,6 @@
       },
       "device_step": "list",
       "reason": "DIGER: 301 https ayni host"
-    },
-    "6535151987581154260": {
-      "id": 6535151987581154260,
-      "kind": "catalogue",
-      "title": "Olympus Scanlation",
-      "lang": "es",
-      "nsfw": 0,
-      "domain": "olympusbiblioteca.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
     },
     "6537085686219641703": {
       "id": 6537085686219641703,
@@ -29079,13 +27939,6 @@
       "domain": "yaoimangaoku.net",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE: Ana sayfa ve /wp-json/wp/v2/manga?search=x ayni Cloudflare challenge'ini donduruyor: title 'Just a moment...', 403, 5460/5602 bayt, script-src challenges.cloudflare.com. HTML'de Madara/WP izi yok, API avi yapilamadi (wp-json de ayni duvarda). Mevcut kayit engine=madara, status=failed.",
-        "at": "2026-11-17T18:15:56Z"
-      },
       "device_step": "list",
       "sorun": "cloudflare",
       "reason": "CF: cerez gerekiyor (olculemedi)"
@@ -29572,23 +28425,10 @@
       "domain": "scanboruto.fr",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 787,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "6900925595853952382": {
       "id": 6900925595853952382,
@@ -29802,23 +28642,10 @@
       "domain": "setsuscans.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 772,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "697069726751790962": {
       "id": 697069726751790962,
@@ -29868,23 +28695,10 @@
       "domain": "readcomicsonline.ru",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 490,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "698230191586447331": {
       "id": 698230191586447331,
@@ -30443,23 +29257,10 @@
       "domain": "komikdewasa.art",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 685,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "search: Arama: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "search",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "7167846481826986747": {
       "id": 7167846481826986747,
@@ -31192,23 +29993,10 @@
       "domain": "myheroacademiascan.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 960,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "7456858038220536869": {
       "id": 7456858038220536869,
@@ -31351,22 +30139,9 @@
       "domain": "hentaicube.xyz",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1067,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "chapters: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "chapters",
-      "reason": "CF: Just a moment (CF challenge)"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "7521631915001593124": {
       "id": 7521631915001593124,
@@ -31377,22 +30152,9 @@
       "domain": "hentaiteca.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1159,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Attention Required! | Cloudflare"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "7521631920623184303": {
       "id": 7521631920623184303,
@@ -31403,22 +30165,9 @@
       "domain": "hentaizone.xyz",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 899,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Attention Required! | Cloudflare"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "7524045765057135272": {
       "id": 7524045765057135272,
@@ -31550,23 +30299,10 @@
       "domain": "ar.kenmanga.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 610,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "7592598665213375640": {
       "id": 7592598665213375640,
@@ -32472,22 +31208,9 @@
       "domain": "minitwoscan.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1207,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Attention Required! | Cloudflare"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "7929561600850497215": {
       "id": 7929561600850497215,
@@ -32577,23 +31300,10 @@
       "domain": "lekmanga.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 715,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: just a moment",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "7941759990078220528": {
       "id": 7941759990078220528,
@@ -33127,22 +31837,9 @@
       "domain": "reader.hastateam.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 733,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Attention Required! | Cloudflare"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "8131725821546908076": {
       "id": 8131725821546908076,
@@ -34808,22 +33505,9 @@
       "domain": "zenithscans.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "http5xx",
-        "http_code": "503",
-        "ms": 472,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "BULUNAMADI: Cloudflare arkasinda origin 503 Service Unavailable (299 baytlik Apache hata sayfasi), 3 URL ve 2 tur denendi, kalici. Sayfa olculemedigi icin hicbir secici yazilmadi. Katalogda mevcut mangareader kaydi var (chapterSelector div.eph-num a, itemSelector div.bsx, readerSelector div#readerarea img) ama canli dogrulanmadi.",
-        "at": "2026-11-17T18:15:56Z"
-      },
       "device_step": "list",
-      "reason": "origin kapalı: 503 Maintenance mode"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "8599633753611392879": {
       "id": 8599633753611392879,
@@ -34912,23 +33596,10 @@
       "domain": "nhattruyenqq.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 593,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "8619863207035716648": {
       "id": 8619863207035716648,
@@ -35538,23 +34209,10 @@
       "domain": "www.webtoon.xyz",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 782,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "8808733758739076800": {
       "id": 8808733758739076800,
@@ -35918,23 +34576,10 @@
       "domain": "astral-manga.fr",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 833,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "8865451704337696765": {
       "id": 8865451704337696765,
@@ -36309,23 +34954,10 @@
       "domain": "komikdewasa.art",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 453,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "search: Arama: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "search",
-      "reason": "CF: Just a moment challenge",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "9071994506968925327": {
       "id": 9071994506968925327,
@@ -36479,23 +35111,10 @@
       "domain": "apenasmaisumyaoi.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 1276,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
       "device_step": "list",
-      "reason": "CF: Just a moment + challenge-platform",
-      "unreachable": true
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "unreachable": true,
+      "sorun": "cloudflare"
     },
     "9201850297206503205": {
       "id": 9201850297206503205,
@@ -36532,15 +35151,9 @@
       "domain": "poseidonscans.com",
       "packages": [],
       "state": "failed",
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Cloudflare engelledi, manuel doğrulama gerekli",
-        "at": "2026-11-16T18:05:29Z"
-      },
       "device_step": "list",
-      "reason": "CF: Attention Required! | Cloudflare"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "sorun": "cloudflare"
     },
     "9214913727506606575": {
       "id": 9214913727506606575,

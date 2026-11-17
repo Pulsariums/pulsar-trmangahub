@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "generated_at": "2026-11-17T17:51:06Z",
-  "total_count": 584,
+  "total_count": 582,
   "languages": [
     "tr"
   ],
@@ -4664,9 +4664,9 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": ".card",
+        "chapterSelector": "a[href*='/capitulo/']",
+        "readerSelector": "img[src*='imagesolymp']"
       },
       "selector_verified": true,
       "origins": [
@@ -12628,27 +12628,6 @@
       "dead": false
     },
     {
-      "id": "olympusbiblioteca.com",
-      "name": "Olympus Scanlation",
-      "lang": "es",
-      "nsfw": 0,
-      "domain": "olympusbiblioteca.com",
-      "baseUrl": "https://olympusxyz.com",
-      "engine": "custom",
-      "config": {
-        "listPath": "/series",
-        "itemSelector": ".card",
-        "chapterSelector": "a[href*='/capitulo/']",
-        "readerSelector": "img[src*='imagesolymp']"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "pulsar_olcum"
-      ],
-      "selector_verified": true,
-      "dead": false
-    },
-    {
       "id": "skymangas.com",
       "name": "SkyMangas",
       "lang": "es",
@@ -12790,26 +12769,6 @@
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader",
         "pageJsonArray": "images"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "pulsar_olcum"
-      ],
-      "selector_verified": true,
-      "dead": false
-    },
-    {
-      "id": "v5.kiryuu.to",
-      "name": "Kiryuu",
-      "lang": "id",
-      "nsfw": 0,
-      "domain": "v5.kiryuu.to",
-      "baseUrl": "https://v7.kiryuu.to",
-      "engine": "custom",
-      "config": {
-        "itemSelector": "a[href*=\"/manga/\"]",
-        "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "img[src*=\"imgsc\"]"
       },
       "verified_by_user": false,
       "origins": [
