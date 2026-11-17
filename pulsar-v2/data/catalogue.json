@@ -6783,7 +6783,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": "div.reading-content img.wp-manga-chapter-img"
+        "readerSelector": "div.reading-content img.wp-manga-chapter-img",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
       },
       "selector_verified": true,
       "origins": [
@@ -7760,7 +7761,8 @@
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
       },
       "selector_verified": true,
       "origins": [
@@ -11796,7 +11798,8 @@
         "listPath": "/bruxonas/manga/",
         "itemSelector": "manga-card",
         "chapterSelector": "a[href*=\"/capitulo-\"]",
-        "readerSelector": ".reading-content img.wp-manga-chapter-img"
+        "readerSelector": ".reading-content img.wp-manga-chapter-img",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
       },
       "selector_verified": true,
       "origins": [
