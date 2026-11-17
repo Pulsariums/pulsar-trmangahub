@@ -11,3 +11,7 @@ Her satir bir Kototoro kaynak testi raporudur. Ham dosyalar `pulsar-v2/data/test
 | 2026-11-17T15:44:26Z | 85 | 1 | 81 | 0 | harness-belirsiz |
 | 2026-11-17T17:03:19Z | 36 | 11 | 25 | 0 | harness-test-grubu |
 | 2026-11-17T18:04:21Z | 80 | 20 | 60 | 0 | harness-test-buyuk |
+| 2026-11-17T21:45:42Z | 86* | 57* | 29 | 0 | `2026-11-17T2145Z-cihaz.json` |
+
+`*` 21:45 cihaz raporunun basligi 86/57/29 diyor; dosya yalniz 29 hata kaydi iceriyor
+(gecen 57 kaynagin kaniti yok). Ayrinti: `docs/DENETIM-2026-11-18.md` §2.
