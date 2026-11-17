@@ -1,0 +1,49 @@
+name: '8) Rapor-build eslestir'
+on:
+  workflow_dispatch:
+    inputs:
+      zaman:
+        description: 'Cihaz testinin UTC zamani'
+        type: string
+        default: '2026-11-17T06:12:56Z'
+permissions:
+  contents: write
+jobs:
+  e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Eslestir
+        env:
+          Z: ${{ inputs.zaman }}
+        run: |
+          set -euo pipefail
+          T=pulsar-v2/data/device-fails.tsv
+          echo "tsv: $(wc -l < $T) satir, sha256 $(sha256sum $T | cut -c1-16)"
+          C=$(git log --before="$Z" -1 --format=%H -- pulsar-v2/repo/index.min.json)
+          echo "test edilen build commit: $C ($(git log -1 --format=%cI $C))"
+          git show $C:pulsar-v2/repo/index.min.json > /tmp/b.json
+          jq -r '.[]|.name as $p|.sources[]|[.id,$p,.name,.baseUrl]|@tsv' /tmp/b.json | sort -u -k1,1 > /tmp/B.tsv
+          jq -r '.[]|.name as $p|.sources[]|[.id,$p,.name,.baseUrl]|@tsv' pulsar-v2/repo/index.min.json | sort -u -k1,1 > /tmp/N.tsv
+          cut -f1,2 $T | sort -u -k1,1 > /tmp/R.tsv
+          echo "build kaynak: $(wc -l < /tmp/B.tsv) | rapor satir: $(wc -l < /tmp/R.tsv) | simdiki yayin: $(wc -l < /tmp/N.tsv)"
+          join -t$'\t' /tmp/B.tsv /tmp/R.tsv > /tmp/BR.tsv
+          join -t$'\t' -v1 /tmp/B.tsv /tmp/R.tsv > /tmp/GECTI.tsv
+          join -t$'\t' -v2 /tmp/B.tsv /tmp/R.tsv > /tmp/ESKI.tsv
+          join -t$'\t' -v1 /tmp/N.tsv /tmp/B.tsv > /tmp/BILINMEYEN.tsv
+          echo "raporda+buildde (tamir): $(wc -l < /tmp/BR.tsv)"
+          echo "buildde raporda yok (gecti): $(wc -l < /tmp/GECTI.tsv)"
+          echo "raporda buildde yok (eski id): $(wc -l < /tmp/ESKI.tsv)"
+          echo "simdi yayinda ama test edilmemis (bilinmeyen): $(wc -l < /tmp/BILINMEYEN.tsv)"
+          echo '--- bilinmeyen paket dagilimi'; cut -f2 /tmp/BILINMEYEN.tsv | sort | uniq -c
+          echo '--- tamir paket dagilimi'; cut -f2 /tmp/BR.tsv | sort | uniq -c
+          echo '--- eski id'; cat /tmp/ESKI.tsv | head -120
+          j() { jq -Rn '[inputs|split("\t")|{id:.[0],paket:.[1],ad:.[2],url:.[3],durum:.[4]}]' "$1"; }
+          jq -n --arg c "$C" --arg z "$Z" --argjson tm "$(j /tmp/BR.tsv)" --argjson g "$(j /tmp/GECTI.tsv)" --argjson e "$(jq -Rn '[inputs|split("\t")|{id:.[0],durum:.[1]}]' /tmp/ESKI.tsv)" --argjson b "$(j /tmp/BILINMEYEN.tsv)" \
+            '{test_zamani:$z, build_commit:$c, tamir:$tm, gecti:$g, eski_id:$e, bilinmeyen:$b}' > pulsar-v2/depo/rapor-eslesme.json
+          git config user.name pulsarium
+          git config user.email pulsariums@gmail.com
+          git add pulsar-v2/depo/rapor-eslesme.json
+          git diff --cached --quiet || { git commit -qm 'data(rapor): cihaz raporu build ile eslestirildi'; git pull -q --rebase --autostash origin main; git push -q origin main; }

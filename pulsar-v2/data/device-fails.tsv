@@ -271,7 +271,7 @@
 8277548740759618769	fail	pages	
 2178892498027704727	fail	list	
 5795806212815873629	fail	search	
-4890247698976986192	fail	details	
+4890247698976986192	fail	details	Detay: UnknownHostException: Unable to resolve host "truyenh
 5795816581533772330	fail	list	Liste: Zaman aşımı (20s)
 4428472468111092856	fail	list	Liste: UnknownHostException: Unable to resolve host "tumanhw
 6696108672721987561	fail	list	
@@ -295,6 +295,7 @@
 4105434876092086865	fail	list	Liste: UnknownHostException: Unable to resolve host "xxx.rev
 2764949415776739148	fail	covers	
 6718632900011266890	fail	list	Liste: Zaman aşımı (20s)
+5799459698953933208	fail	list	Liste: UnknownHostException: Unable to resolve host "yaoi.mo
 7792545351410114774	fail	covers	
 1377191865874405498	fail	list	Liste: HttpStatusException: . Status=523, URL=[https://yaoih
 2912196475858692337	fail	list	Liste: Zaman aşımı (20s)
@@ -327,4 +328,13 @@
 1608876321677130153	cloudflare	list	
 5789623287569152041	cloudflare	list	
 2231270806527394226	cloudflare	list	
-4271345145581530938	fail	list	
+4271345145581530938	cloudflare	list	
+4856925517439351632	cloudflare	list	
+8822715490128628151	cloudflare	covers	
+4554859152419927880	cloudflare	covers	
+2950297680644095236	cloudflare	covers	
+2042580902588587935	cloudflare	covers	
+6141892580213926042	cloudflare	covers	
+4168662132362877672	cloudflare	covers	
+3336063824056253900	cloudflare	covers	
+798888619164960500	r
