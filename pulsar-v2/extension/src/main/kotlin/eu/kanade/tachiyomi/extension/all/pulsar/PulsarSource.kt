@@ -274,10 +274,12 @@ class PulsarSource(
     private fun apiChapters(response: Response): List<SChapter> {
         val text = response.body?.string().orEmpty()
         val itemsKey = config.optString("chapterApiItems", "data")
-        val arr = runCatching { org.json.JSONObject(text).optJSONArray(itemsKey) }.getOrNull()
-            ?: throw IllegalStateException(
-                "TANI3 api url=${response.request.url} len=${text.length} ilk=${text.take(160)}",
-            )
+        // chapterApiItems noktalı yol olabilir: "data.chapters".
+        var node: Any? = runCatching { JSONObject(text) }.getOrNull()
+        for (part in itemsKey.split('.')) {
+            node = (node as? JSONObject)?.opt(part)
+        }
+        val arr = node as? JSONArray ?: return emptyList()
         val nameKey = config.optString("chapterApiFieldName", "name")
         val numKey = config.optString("chapterApiFieldNumber", "number")
         val urlKey = config.optString("chapterApiFieldUrl", "url")
