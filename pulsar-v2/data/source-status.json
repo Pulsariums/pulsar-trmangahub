@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T20:49:45Z",
+  "generated": "2026-11-17T20:53:57Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -107,7 +107,7 @@
       "nsfw": 0,
       "domain": "sleepytranslations.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -122,7 +122,9 @@
         "detail": "pages: Sayfa listesi boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "pages"
+      "device_step": "pages",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1079335891060482737": {
       "id": 1079335891060482737,
@@ -818,7 +820,7 @@
       "nsfw": 0,
       "domain": "madarascans.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -833,7 +835,9 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1376559024287151630": {
       "id": 1376559024287151630,
@@ -1004,11 +1008,11 @@
       "lang": "th",
       "nsfw": 1,
       "domain": "cat-300.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "covers"
+      "packages": [],
+      "state": "dead",
+      "device_step": "covers",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1376621809967140958": {
       "id": 1376621809967140958,
@@ -1017,10 +1021,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "cocomic.co",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1376621810110674001": {
       "id": 1376621810110674001,
@@ -1073,11 +1077,11 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "covendasbruxonas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1376648740269414884": {
       "id": 1376648740269414884,
@@ -1151,7 +1155,7 @@
       "nsfw": 0,
       "domain": "elftoon.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1166,7 +1170,9 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1376675703621109685": {
       "id": 1376675703621109685,
@@ -1188,7 +1194,7 @@
       "nsfw": 0,
       "domain": "ezmanga.org",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -1203,7 +1209,9 @@
         "detail": "search: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "search"
+      "device_step": "search",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1376703950234547432": {
       "id": 1376703950234547432,
@@ -1518,10 +1526,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komiku.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1376851595674172806": {
       "id": 1376851595674172806,
@@ -1933,11 +1941,11 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "www.mangatv.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "covers"
+      "packages": [],
+      "state": "dead",
+      "device_step": "covers",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1376874560920958363": {
       "id": 1376874560920958363,
@@ -1971,11 +1979,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangawt.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1376874562419981901": {
       "id": 1376874562419981901,
@@ -2662,10 +2670,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "toonily.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1377071612709576671": {
       "id": 1377071612709576671,
@@ -2675,7 +2683,7 @@
       "nsfw": 1,
       "domain": "toonizy.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -2690,7 +2698,9 @@
         "detail": "details: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "details"
+      "device_step": "details",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1377114256810592249": {
       "id": 1377114256810592249,
@@ -2756,10 +2766,10 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "www.manhwaden.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1377191865684637297": {
       "id": 1377191865684637297,
@@ -2956,11 +2966,11 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "visormanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1434562422133231058": {
       "id": 1434562422133231058,
@@ -3456,11 +3466,11 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "vortexscans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "details"
+      "packages": [],
+      "state": "dead",
+      "device_step": "details",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1608875891802860974": {
       "id": 1608875891802860974,
@@ -3470,7 +3480,7 @@
       "nsfw": 1,
       "domain": "mangahentai.me",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3485,7 +3495,9 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1608876321677130153": {
       "id": 1608876321677130153,
@@ -3495,7 +3507,7 @@
       "nsfw": 0,
       "domain": "mangahub.io",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -3510,7 +3522,9 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1608877145623678989": {
       "id": 1608877145623678989,
@@ -3616,11 +3630,11 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "mangakoma01.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1608882107575608993": {
       "id": 1608882107575608993,
@@ -3649,10 +3663,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaowl.io",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1608882355825858688": {
       "id": 1608882355825858688,
@@ -3775,11 +3789,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangawt.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1608891509777540327": {
       "id": 1608891509777540327,
@@ -4891,11 +4905,11 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "vortexscans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "details"
+      "packages": [],
+      "state": "dead",
+      "device_step": "details",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1923350458611978292": {
       "id": 1923350458611978292,
@@ -4974,10 +4988,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "xoxocomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "1944203743121263189": {
       "id": 1944203743121263189,
@@ -7175,7 +7189,7 @@
       "nsfw": 0,
       "domain": "arc-relight.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7190,7 +7204,9 @@
         "detail": "details: ClassCastException: org.json.JSONArray cannot be cast to java.lang.Iterable",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "details"
+      "device_step": "details",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "2329293374084611909": {
       "id": 2329293374084611909,
@@ -7288,10 +7304,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikstation.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "2359120158125930842": {
       "id": 2359120158125930842,
@@ -7511,11 +7527,11 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "3asq.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "2424630965560744408": {
       "id": 2424630965560744408,
@@ -7613,11 +7629,11 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "fl-ares.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "2424634715367379330": {
       "id": 2424634715367379330,
@@ -7783,10 +7799,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komiku.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "2424639311097801421": {
       "id": 2424639311097801421,
@@ -7933,11 +7949,11 @@
       "lang": "ko",
       "nsfw": 1,
       "domain": "rawdex.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "2424644734865344558": {
       "id": 2424644734865344558,
@@ -8495,7 +8511,7 @@
       "nsfw": 1,
       "domain": "hentaimanga.me",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8510,7 +8526,9 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "2586288452807117005": {
       "id": 2586288452807117005,
@@ -8533,7 +8551,7 @@
       "nsfw": 1,
       "domain": "hentaixyuri.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -8548,7 +8566,9 @@
         "detail": "details: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "details"
+      "device_step": "details",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "2603934391614044375": {
       "id": 2603934391614044375,
@@ -9565,7 +9585,7 @@
       "nsfw": 0,
       "domain": "spiderscans.xyz",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -9580,7 +9600,9 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "3005221185490201859": {
       "id": 3005221185490201859,
@@ -10004,7 +10026,7 @@
       "nsfw": 0,
       "domain": "nightsup.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -10019,7 +10041,9 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "3122020051456233672": {
       "id": 3122020051456233672,
@@ -12849,11 +12873,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.mangadenizi.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "3758907033275771070": {
       "id": 3758907033275771070,
@@ -13766,10 +13790,10 @@
       "lang": "ar",
       "nsfw": 1,
       "domain": "arabtoons.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "3942956575215849264": {
       "id": 3942956575215849264,
@@ -13872,11 +13896,11 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "azoramoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "chapters"
+      "packages": [],
+      "state": "dead",
+      "device_step": "chapters",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "3954462845410125041": {
       "id": 3954462845410125041,
@@ -15024,10 +15048,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "gedecomix.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4087575506275568444": {
       "id": 4087575506275568444,
@@ -15435,10 +15459,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "hivetoons.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4114056360088724654": {
       "id": 4114056360088724654,
@@ -16399,10 +16423,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangadass.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4234251759355922218": {
       "id": 4234251759355922218,
@@ -16456,10 +16480,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "www.mgeko.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4234251762292700524": {
       "id": 4234251762292700524,
@@ -16806,10 +16830,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangapill.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4234251770454362048": {
       "id": 4234251770454362048,
@@ -17115,10 +17139,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "www.mangatown.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4234251777202023553": {
       "id": 4234251777202023553,
@@ -17232,11 +17256,11 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "www.manhuabug.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4234253159891945521": {
       "id": 4234253159891945521,
@@ -17328,10 +17352,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "www.manhwaden.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4234253214945593826": {
       "id": 4234253214945593826,
@@ -17411,10 +17435,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhwatop.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4234253215589794301": {
       "id": 4234253215589794301,
@@ -17634,10 +17658,10 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "multporn.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4250752132752556322": {
       "id": 4250752132752556322,
@@ -18192,10 +18216,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentaiwebtoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4338934327639157846": {
       "id": 4338934327639157846,
@@ -18373,10 +18397,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "novelstreams.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4364897249796919871": {
       "id": 4364897249796919871,
@@ -19415,10 +19439,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "hivetoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4476492204269139558": {
       "id": 4476492204269139558,
@@ -19529,10 +19553,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "4491758654893492698": {
       "id": 4491758654893492698,
@@ -21573,10 +21597,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "allporncomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "5425569062261084453": {
       "id": 5425569062261084453,
@@ -23335,10 +23359,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manga18x.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "5789623240101006789": {
       "id": 5789623240101006789,
@@ -23399,10 +23423,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangazin.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "5789623240583472034": {
       "id": 5789623240583472034,
@@ -23824,10 +23848,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangazin.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "5789623268605899408": {
       "id": 5789623268605899408,
@@ -23837,7 +23861,7 @@
       "nsfw": 1,
       "domain": "manhatic.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23853,7 +23877,8 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
-      "reason": "DIGER: 301 https ayni host"
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "5789623268611678862": {
       "id": 5789623268611678862,
@@ -24127,10 +24152,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "milftoon.xxx",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "5790546302475861043": {
       "id": 5790546302475861043,
@@ -24317,10 +24342,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "nyxscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "5791654679194078693": {
       "id": 5791654679194078693,
@@ -24437,10 +24462,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "kenscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "5793729223449529669": {
       "id": 5793729223449529669,
@@ -24771,10 +24796,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "tritinia.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "5795816581519710978": {
       "id": 5795816581519710978,
@@ -24889,11 +24914,11 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "vortexscans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "5798190793828674196": {
       "id": 5798190793828674196,
@@ -25762,10 +25787,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangadistrict.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "5965634366863290136": {
       "id": 5965634366863290136,
@@ -27524,10 +27549,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "violetscans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "6359063432093703606": {
       "id": 6359063432093703606,
@@ -27704,11 +27729,11 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "hentaireader.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "covers"
+      "packages": [],
+      "state": "dead",
+      "device_step": "covers",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "6387964605119291472": {
       "id": 6387964605119291472,
@@ -27781,10 +27806,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "hentaixcomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "6387974376496686455": {
       "id": 6387974376496686455,
@@ -27875,11 +27900,11 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "rocksmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "pages"
+      "packages": [],
+      "state": "dead",
+      "device_step": "pages",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "6427620697796849177": {
       "id": 6427620697796849177,
@@ -27993,10 +28018,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "philiascans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "6467530274650613980": {
       "id": 6467530274650613980,
@@ -28198,10 +28223,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "www.manhwaden.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "6552627474297646427": {
       "id": 6552627474297646427,
@@ -30772,10 +30797,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "genzupdates.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "7407258471214415340": {
       "id": 7407258471214415340,
@@ -31215,11 +31240,11 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "lermangaonline.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "7567809191033269015": {
       "id": 7567809191033269015,
@@ -31767,10 +31792,10 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "falcoscan.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "7773948419402672541": {
       "id": 7773948419402672541,
@@ -31942,7 +31967,7 @@
       "nsfw": 0,
       "domain": "legionscans.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -31958,7 +31983,8 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
-      "reason": "DIGER: CF 301 (275B); hedef dogrulanmadi"
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "7837632913631218411": {
       "id": 7837632913631218411,
@@ -32744,10 +32770,10 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "arthurscan.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "8072775914527805808": {
       "id": 8072775914527805808,
@@ -35205,11 +35231,11 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "shirodoujin.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "8798867856165195470": {
       "id": 8798867856165195470,
@@ -36157,11 +36183,11 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikrealm.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "kapali": true
     },
     "9193201418665813084": {
       "id": 9193201418665813084,
