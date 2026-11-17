@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T15:18:23Z",
+  "generated": "2026-11-17T15:30:56Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -4233,9 +4233,23 @@
       "nsfw": 0,
       "domain": "rawkuma.net",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L94/C1/P32",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
       "device_step": "search"
     },
     "1656003814974793263": {
@@ -7142,9 +7156,23 @@
       "nsfw": 0,
       "domain": "ciao.shogakukan.co.jp",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L29/C7/P1",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
       "device_step": "covers"
     },
     "2186605994348349763": {
@@ -10843,15 +10871,15 @@
         "status": "ok",
         "http_code": "200",
         "ms": 0,
-        "detail": "cihaz testi",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
       },
       "device": {
         "status": "pass",
         "http_code": "",
         "ms": 0,
-        "detail": "cihaz testi 2026-11-17T15:03Z",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "yerel harness L8/C1/P5",
+        "at": "2026-11-17T15:30:53.604236Z"
       },
       "device_step": "pages",
       "sorun": "cloudflare"
@@ -13748,9 +13776,23 @@
       "nsfw": 0,
       "domain": "submanhwa.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L470/C52/P35",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
       "device_step": "list"
     },
     "3858669502915686574": {
@@ -21463,9 +21505,23 @@
       "nsfw": 0,
       "domain": "nabicix.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "unknown"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L10/C140/P2",
+        "at": "2026-11-17T15:30:53.604236Z"
+      }
     },
     "4913495778819209502": {
       "id": 4913495778819209502,
@@ -22249,9 +22305,23 @@
       "nsfw": 0,
       "domain": "comichubfree.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L36/C51/P1",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
       "device_step": "pages"
     },
     "5390747718232305300": {
@@ -27223,9 +27293,23 @@
       "nsfw": 0,
       "domain": "leercapitulo.co",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L30/C14/P17",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
       "device_step": "covers"
     },
     "6029481931652111950": {
@@ -29712,9 +29796,23 @@
       "nsfw": 0,
       "domain": "uchuujinmangas.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L70/C229/P27",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
       "device_step": "list"
     },
     "6698416942605335398": {
@@ -32620,9 +32718,23 @@
       "nsfw": 0,
       "domain": "spicyseries.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L94/C12/P19",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
       "device_step": "list"
     },
     "7699615627407197318": {
@@ -35082,9 +35194,23 @@
       "nsfw": 1,
       "domain": "mangtto.com",
       "packages": [
-        "test"
+        "tr18"
       ],
-      "state": "unknown",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L92/C1/P19",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
       "device_step": "covers"
     },
     "8463142241276011825": {
@@ -35191,9 +35317,23 @@
       "nsfw": 0,
       "domain": "nikkangecchan.jp",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L17/C2/P725",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
       "device_step": "list"
     },
     "8510231231653797281": {
@@ -36423,9 +36563,23 @@
       "nsfw": 0,
       "domain": "ichicomi.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "unknown",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L808/C6/P1",
+        "at": "2026-11-17T15:30:53.604236Z"
+      },
       "device_step": "covers"
     },
     "8822715490128628151": {
