@@ -26,7 +26,7 @@ Durum sözlüğü: `active` yayında ve kanıtlı · `failed` ölçülmüş kır
 
 **Kalan iş iki kovada:**
 - **132 motor kaynağı** yalnız cihaz testiyle kapanır (yerel test imkânsız: Mihon ABI).
-- Katalog tarafında bekleyen kayıt **0** (14 kaydın 12si geçti, 2si gerekçeli ).
+- Katalog tarafında bekleyen kayıt **0** (14 kaydın 12'si geçti, 2'si gerekçeli failed).
 
 **Bu oturumda kapananlar (özet):**
 - Katalog ölçüm kuyruğunun tamamı (199 dilim) ve 197 "geçici görünümlü" hata tarandı.
