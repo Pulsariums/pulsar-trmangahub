@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T15:33:19Z",
+  "generated": "2026-11-17T15:42:59Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -144,7 +144,14 @@
       "packages": [
         "test"
       ],
-      "state": "unknown"
+      "state": "unknown",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "sayfa boş (harness)",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "1085305392848287310": {
       "id": 1085305392848287310,
@@ -413,8 +420,15 @@
       "nsfw": 0,
       "domain": "ragnarokscan.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: ragnarokscan.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "1254625717579109559": {
       "id": 1254625717579109559,
@@ -449,8 +463,15 @@
       "nsfw": 0,
       "domain": "msypublisher.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: msypublisher.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "1256178622669487949": {
       "id": 1256178622669487949,
@@ -486,8 +507,15 @@
       "nsfw": 0,
       "domain": "rogmangas.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: rogmangas.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "1269241608370959777": {
       "id": 1269241608370959777,
@@ -587,8 +615,15 @@
       "nsfw": 0,
       "domain": "burningscans.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: burningscans.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "1336513517169247551": {
       "id": 1336513517169247551,
@@ -3289,8 +3324,15 @@
       "nsfw": 0,
       "domain": "zinmanga.cc",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: zinmanga.cc",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "154815361965219974": {
       "id": 154815361965219974,
@@ -3300,8 +3342,15 @@
       "nsfw": 0,
       "domain": "zinmanga.ms",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: zinmanga.ms",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "1559926148650693672": {
       "id": 1559926148650693672,
@@ -4260,8 +4309,15 @@
       "nsfw": 0,
       "domain": "rawmanga.su",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: rawmanga.su",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "1665276189507377415": {
       "id": 1665276189507377415,
@@ -4486,8 +4542,15 @@
       "nsfw": 0,
       "domain": "alceacomic.my.id",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: alceacomic.my.id",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "1741814796015341403": {
       "id": 1741814796015341403,
@@ -4622,8 +4685,15 @@
       "nsfw": 0,
       "domain": "mangasonline.cc",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: mangasonline.cc",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "1754559666946848503": {
       "id": 1754559666946848503,
@@ -4650,11 +4720,16 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "tapas.io",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
-      "device_step": "details"
+      "packages": [],
+      "state": "failed",
+      "device_step": "details",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "1769466275926738671": {
       "id": 1769466275926738671,
@@ -4750,11 +4825,16 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "animexnovel.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
-      "device_step": "pages"
+      "packages": [],
+      "state": "failed",
+      "device_step": "pages",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "1847284941352855352": {
       "id": 1847284941352855352,
@@ -7186,7 +7266,14 @@
         "test"
       ],
       "state": "unknown",
-      "device_step": "list"
+      "device_step": "list",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "sayfa boş (harness)",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "2190287912977065806": {
       "id": 2190287912977065806,
@@ -8731,7 +8818,7 @@
       "nsfw": 1,
       "domain": "fuchscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "http",
         "http_code": "000",
@@ -8739,7 +8826,14 @@
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
       },
-      "dead": true
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: fuchscans.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "2507851544741178776": {
       "id": 2507851544741178776,
@@ -9034,8 +9128,15 @@
       "nsfw": 0,
       "domain": "manga4life.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: manga4life.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "2620204204814440175": {
       "id": 2620204204814440175,
@@ -9344,8 +9445,15 @@
       "nsfw": 0,
       "domain": "inmoralnofansub.xyz",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "2756643525011277180": {
       "id": 2756643525011277180,
@@ -9648,8 +9756,15 @@
       "nsfw": 0,
       "domain": "cartelmanhwas.net",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: cartelmanhwas.net",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "2903349764043054566": {
       "id": 2903349764043054566,
@@ -9791,8 +9906,15 @@
       "nsfw": 0,
       "domain": "lermanga.org",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: lermanga.org",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "295804037218286158": {
       "id": 295804037218286158,
@@ -10185,8 +10307,15 @@
       "nsfw": 0,
       "domain": "radiantscans.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "3067383443860379137": {
       "id": 3067383443860379137,
@@ -10642,7 +10771,7 @@
       "nsfw": 0,
       "domain": "guildknives.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -10650,7 +10779,14 @@
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
       },
-      "dead": true
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "3170876120391462040": {
       "id": 3170876120391462040,
@@ -11045,8 +11181,15 @@
       "nsfw": 0,
       "domain": "foxwhite.com.br",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: foxwhite.com.br",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "332285895094324893": {
       "id": 332285895094324893,
@@ -11255,8 +11398,15 @@
       "nsfw": 0,
       "domain": "mangananquim.site",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: mangananquim.site",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "3430942165888452983": {
       "id": 3430942165888452983,
@@ -11266,8 +11416,15 @@
       "nsfw": 0,
       "domain": "birdmanga.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: birdmanga.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "3431498174555067516": {
       "id": 3431498174555067516,
@@ -11744,8 +11901,15 @@
       "nsfw": 0,
       "domain": "cabaredowatame.site",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: cabaredowatame.site",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "3646305211930278364": {
       "id": 3646305211930278364,
@@ -11893,11 +12057,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
-      "device_step": "pages"
+      "packages": [],
+      "state": "failed",
+      "device_step": "pages",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "3704693444647218571": {
       "id": 3704693444647218571,
@@ -11959,8 +12128,15 @@
       "nsfw": 0,
       "domain": "ancientcomics.com.br",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: ancientcomics.com.br",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "3731345054251723521": {
       "id": 3731345054251723521,
@@ -13331,8 +13507,15 @@
       "nsfw": 0,
       "domain": "gloryscans.fr",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: gloryscans.fr",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "3769975289076265806": {
       "id": 3769975289076265806,
@@ -13657,8 +13840,15 @@
       "nsfw": 0,
       "domain": "yubikiri.my.id",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: yubikiri.my.id",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "3817617414691183727": {
       "id": 3817617414691183727,
@@ -14334,11 +14524,16 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "namicomi.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
-      "device_step": "list"
+      "packages": [],
+      "state": "failed",
+      "device_step": "list",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "3957800042269399520": {
       "id": 3957800042269399520,
@@ -14545,8 +14740,15 @@
       "nsfw": 0,
       "domain": "inkstory.me",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: inkstory.me",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "3990362785301222581": {
       "id": 3990362785301222581,
@@ -14841,7 +15043,7 @@
       "nsfw": 0,
       "domain": "ww16.mangaoku.info",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -14849,7 +15051,14 @@
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
       },
-      "dead": true
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4021680936479585906": {
       "id": 4021680936479585906,
@@ -15450,8 +15659,15 @@
       "nsfw": 0,
       "domain": "lkscanlation.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: lkscanlation.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4089261932879757723": {
       "id": 4089261932879757723,
@@ -15867,8 +16083,15 @@
       "nsfw": 0,
       "domain": "lunarscans.fr",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: lunarscans.fr",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4115781025364170103": {
       "id": 4115781025364170103,
@@ -15878,8 +16101,15 @@
       "nsfw": 0,
       "domain": "clubinari.org",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "EOFException: SSL peer shut down incorrectly",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4116707331773940228": {
       "id": 4116707331773940228,
@@ -16067,8 +16297,15 @@
       "nsfw": 0,
       "domain": "catharsisfantasy.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: catharsisfantasy.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4177200439259800459": {
       "id": 4177200439259800459,
@@ -16449,8 +16686,15 @@
       "nsfw": 0,
       "domain": "mangaschan.net",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: mangaschan.net",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4212079203674738000": {
       "id": 4212079203674738000,
@@ -16688,8 +16932,15 @@
       "nsfw": 0,
       "domain": "mangastorm.org",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: mangastorm.org",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4231843737385138446": {
       "id": 4231843737385138446,
@@ -19468,8 +19719,15 @@
       "nsfw": 0,
       "domain": "franxxmangas.net",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: franxxmangas.net",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4404345813067789386": {
       "id": 4404345813067789386,
@@ -19479,8 +19737,15 @@
       "nsfw": 0,
       "domain": "sheakomik.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4404495316641007547": {
       "id": 4404495316641007547,
@@ -20265,8 +20530,15 @@
       "nsfw": 0,
       "domain": "scan-manga.me",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: scan-manga.me",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4495049174044908885": {
       "id": 4495049174044908885,
@@ -20352,11 +20624,16 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaforfree.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
-      "device_step": "details"
+      "packages": [],
+      "state": "failed",
+      "device_step": "details",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4539181955248324512": {
       "id": 4539181955248324512,
@@ -20829,8 +21106,15 @@
       "nsfw": 0,
       "domain": "rainbowfairyscan.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: rainbowfairyscan.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4667097719857917273": {
       "id": 4667097719857917273,
@@ -20972,7 +21256,7 @@
       "nsfw": 0,
       "domain": "juratempe.st",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -20980,7 +21264,14 @@
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
       },
-      "dead": true
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4714465711693073737": {
       "id": 4714465711693073737,
@@ -21101,8 +21392,15 @@
       "nsfw": 0,
       "domain": "visormonarca.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: visormonarca.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "4771541692129045910": {
       "id": 4771541692129045910,
@@ -21635,8 +21933,15 @@
       "nsfw": 0,
       "domain": "novelstown.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: novelstown.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "5017455864591765198": {
       "id": 5017455864591765198,
@@ -21807,8 +22112,15 @@
       "nsfw": 0,
       "domain": "swatscans.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "5117503242233509669": {
       "id": 5117503242233509669,
@@ -22940,8 +23252,15 @@
       "nsfw": 0,
       "domain": "hunlight.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "5755636531598069462": {
       "id": 5755636531598069462,
@@ -22976,8 +23295,15 @@
       "nsfw": 0,
       "domain": "skymanga.work",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: skymanga.work",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "5779873155655263510": {
       "id": 5779873155655263510,
@@ -26366,11 +26692,16 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "covendasbruxonas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
-      "device_step": "list"
+      "packages": [],
+      "state": "failed",
+      "device_step": "list",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "5824161584162899529": {
       "id": 5824161584162899529,
@@ -26877,8 +27208,15 @@
       "nsfw": 0,
       "domain": "imperioscans.com.br",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: imperioscans.com.br",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "5964032022384100874": {
       "id": 5964032022384100874,
@@ -27442,8 +27780,15 @@
       "nsfw": 0,
       "domain": "1manhwa.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: 1manhwa.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6061006270135958233": {
       "id": 6061006270135958233,
@@ -27639,8 +27984,15 @@
       "nsfw": 0,
       "domain": "mangaid.click",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: mangaid.click",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6079425587928375229": {
       "id": 6079425587928375229,
@@ -27711,8 +28063,15 @@
       "nsfw": 0,
       "domain": "mangapeak.org",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: mangapeak.org",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6084136124414068965": {
       "id": 6084136124414068965,
@@ -27749,8 +28108,15 @@
       "nsfw": 0,
       "domain": "mangaruby.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: mangaruby.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6086089492809230311": {
       "id": 6086089492809230311,
@@ -27786,8 +28152,15 @@
       "nsfw": 0,
       "domain": "mangashiro.me",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: mangashiro.me",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6086879984931973565": {
       "id": 6086879984931973565,
@@ -27954,8 +28327,15 @@
       "nsfw": 0,
       "domain": "rsdleft.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: rsdleft.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6136639672694483708": {
       "id": 6136639672694483708,
@@ -27990,8 +28370,15 @@
       "nsfw": 0,
       "domain": "comic21.me",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: comic21.me",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6141892580213926042": {
       "id": 6141892580213926042,
@@ -28108,8 +28495,15 @@
       "nsfw": 0,
       "domain": "elarctoon.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6201733055569750935": {
       "id": 6201733055569750935,
@@ -28189,8 +28583,15 @@
       "nsfw": 0,
       "domain": "oioivn.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: oioivn.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6231234991403533934": {
       "id": 6231234991403533934,
@@ -28235,8 +28636,15 @@
       "nsfw": 0,
       "domain": "noonscan.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: noonscan.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6252364042656292639": {
       "id": 6252364042656292639,
@@ -28246,8 +28654,15 @@
       "nsfw": 0,
       "domain": "noonscan.net",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: noonscan.net",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6254854953373229299": {
       "id": 6254854953373229299,
@@ -28438,8 +28853,15 @@
       "nsfw": 0,
       "domain": "voidscans.co",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: voidscans.co",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6309802498252370062": {
       "id": 6309802498252370062,
@@ -28903,11 +29325,16 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "hyakuro.net",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
-      "device_step": "covers"
+      "packages": [],
+      "state": "failed",
+      "device_step": "covers",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "SocketTimeoutException: Read timed out",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6418857290741556046": {
       "id": 6418857290741556046,
@@ -29576,7 +30003,14 @@
         "test"
       ],
       "state": "unknown",
-      "device_step": "pages"
+      "device_step": "pages",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "sayfa boş (harness)",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6620603193106345631": {
       "id": 6620603193106345631,
@@ -30440,8 +30874,15 @@
       "nsfw": 0,
       "domain": "hoifansub.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6900920757230238366": {
       "id": 6900920757230238366,
@@ -30547,8 +30988,15 @@
       "nsfw": 0,
       "domain": "starboundscans.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: starboundscans.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "6958297225666389056": {
       "id": 6958297225666389056,
@@ -31520,8 +31968,15 @@
       "nsfw": 0,
       "domain": "bakaman.net",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: bakaman.net",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "7267491895505856696": {
       "id": 7267491895505856696,
@@ -31531,8 +31986,15 @@
       "nsfw": 0,
       "domain": "yd-comics.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: yd-comics.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "7276031357538379431": {
       "id": 7276031357538379431,
@@ -31685,8 +32147,15 @@
       "nsfw": 0,
       "domain": "phetruyen.vip",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: phetruyen.vip",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "7328594960091535432": {
       "id": 7328594960091535432,
@@ -31962,8 +32431,15 @@
       "nsfw": 0,
       "domain": "manhwanew.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: manhwanew.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "7418784480186149141": {
       "id": 7418784480186149141,
@@ -32347,8 +32823,15 @@
       "nsfw": 0,
       "domain": "ladyestelarscan.com.br",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: ladyestelarscan.com.br",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "7533210681705529466": {
       "id": 7533210681705529466,
@@ -32769,8 +33252,15 @@
       "nsfw": 0,
       "domain": "mangascan-fr.net",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: mangascan-fr.net",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "7713332514084384978": {
       "id": 7713332514084384978,
@@ -32779,11 +33269,16 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "dreamteams.space",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
-      "device_step": "covers"
+      "packages": [],
+      "state": "failed",
+      "device_step": "covers",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "7739392788631822474": {
       "id": 7739392788631822474,
@@ -33082,8 +33577,15 @@
       "nsfw": 0,
       "domain": "jpmangas.xyz",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "7817108636375764582": {
       "id": 7817108636375764582,
@@ -33181,8 +33683,15 @@
       "nsfw": 0,
       "domain": "otsugami.id",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: otsugami.id",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "7849977061084682679": {
       "id": 7849977061084682679,
@@ -33209,8 +33718,15 @@
       "nsfw": 0,
       "domain": "frscans.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: frscans.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "7850641826358118318": {
       "id": 7850641826358118318,
@@ -33786,8 +34302,15 @@
       "nsfw": 0,
       "domain": "mangaowlnet.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: mangaowlnet.com",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "8036167423689503081": {
       "id": 8036167423689503081,
@@ -33859,8 +34382,15 @@
       "nsfw": 0,
       "domain": "copypastescan.xyz",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "8062705055979744270": {
       "id": 8062705055979744270,
@@ -34239,11 +34769,16 @@
       "lang": "zh",
       "nsfw": 0,
       "domain": "mhua5.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
-      "device_step": "list"
+      "packages": [],
+      "state": "failed",
+      "device_step": "list",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "819133826546505053": {
       "id": 819133826546505053,
@@ -34879,8 +35414,15 @@
       "nsfw": 0,
       "domain": "laidbackscans.org",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: laidbackscans.org",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "8430776217561870927": {
       "id": 8430776217561870927,
@@ -35588,8 +36130,15 @@
       "nsfw": 0,
       "domain": "infamous-scans.com",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "8595121624957657926": {
       "id": 8595121624957657926,
@@ -35823,11 +36372,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "dragonball-multiverse.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown",
-      "device_step": "details"
+      "packages": [],
+      "state": "failed",
+      "device_step": "details",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "8657398763211315182": {
       "id": 8657398763211315182,
@@ -36048,8 +36602,15 @@
       "nsfw": 0,
       "domain": "komiksan.link",
       "packages": [],
-      "state": "unknown",
-      "dead": true
+      "state": "failed",
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "UnknownHostException: komiksan.link",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "8722072517629445249": {
       "id": 8722072517629445249,
@@ -36837,7 +37398,7 @@
       "nsfw": 1,
       "domain": "alliedfansub.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -36845,7 +37406,14 @@
         "detail": "liste: 0 link",
         "at": "2026-11-13T19:01:05Z"
       },
-      "dead": true
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "popüler liste boş",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "8927390274036640763": {
       "id": 8927390274036640763,
@@ -37313,9 +37881,25 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "jiangzaitoon.nl",
-      "packages": [],
-      "state": "unknown",
-      "dead": true
+      "packages": [
+        "tr18"
+      ],
+      "state": "active",
+      "dead": true,
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T15:42:59.035062Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness L10/C52/P18",
+        "at": "2026-11-17T15:42:59.035062Z"
+      }
     },
     "925134491016928900": {
       "id": 925134491016928900,
