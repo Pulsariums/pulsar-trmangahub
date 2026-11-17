@@ -297,7 +297,14 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
         // failed'e düşerdi. Etiket ya da CF gerekçesi duruyorsa korunur.
         let engelli_koru = s.sorun.eq_ignore_ascii_case("cloudflare") || s.reason.starts_with("CF:");
         s.sorun = if engelli_koru {
-            s.sorun.clone()
+            // Kalıcılık yalnız gerekçe metnine bağlı kalmamalı: CF gerekçesi varken
+            // `sorun` boşsa "cloudflare" yazılır; `reason` sonradan temizlense de
+            // kayıt engelli kalır (120 kayıt yalnız CF: metniyle ayakta kalıyordu).
+            if s.sorun.is_empty() && s.reason.starts_with("CF:") {
+                "cloudflare".to_string()
+            } else {
+                s.sorun.clone()
+            }
         } else if device_pass {
             String::new()
         } else {
