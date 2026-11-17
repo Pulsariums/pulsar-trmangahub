@@ -1,0 +1,20 @@
+name: '7) Tablo kur (havuz + depo)'
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Uret
+        run: bash pulsar-v2/scripts/tablo-kur.sh
+      - name: Commit
+        run: |
+          git config user.name pulsarium
+          git config user.email pulsariums@gmail.com
+          git add pulsar-v2/havuz pulsar-v2/depo
+          git diff --cached --quiet && { echo 'degisiklik yok'; exit 0; }
+          git commit -qm 'data(tablo): havuz ve depo tablolari uretildi'
+          git pull -q --rebase --autostash origin main && git push -q origin main
