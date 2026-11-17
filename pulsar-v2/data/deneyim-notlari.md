@@ -321,3 +321,4 @@ Bu turda düzeltilen kusurlar; her biri gerçek cihaz/harness hatasıyla tetikle
 - **Harness listenin ilk serisine takılmamalı.** İlk kart 0 bölümlüyse kaynak haksız yere "bölüm listesi boş" düşüyordu. Düzeltme: en fazla 6 seri ve 3 bölüm denenir (`Harness.java`). Cihaz testi de aynı tuzağa düşer; cihazda `chapters: Bölüm listesi boş` görülürse önce seçilen serinin bölümü var mı bakılır.
 - **Cihaz raporu `MIHON_<id>` taşır; id = pulsar_id.** Rapordaki bir kaynağın hangi katmanda (katalog/motor) ve hangi durumda olduğu `source-status.json` anahtarıyla birebir eşleşir. "Bu hata yayında mı?" sorusu tahminle değil bu eşleştirmeyle yanıtlanır (§23).
 - **Canlılık taraması DNS önbelleğine kanabilir.** Aynı domain bir turda `CANLI`, ertesi tur `ENOTFOUND` çıkabiliyor; `CANLI` kararı tam ölçümle doğrulanmadan `active` yapılmaz.
+- **`reason` aktarımı `dead` bloğuna bağlıydı → engelli kayıtların gerekçesi kayboluyordu → aktarım `dead` koşulundan çıkarıldı.**

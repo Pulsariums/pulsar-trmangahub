@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T22:05:29Z",
+  "generated": "2026-11-17T22:10:50Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -5353,7 +5353,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "gorsel CDN token/JS istiyor, UA/Referer/cerez ile 403 - motor basligi yetersiz"
     },
     "209650416390992343": {
       "id": 209650416390992343,
@@ -8353,7 +8354,8 @@
       "domain": "sadscans.com",
       "packages": [],
       "state": "engelli",
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "reason": "CF: cloudflare"
     },
     "2586288247862613348": {
       "id": 2586288247862613348,
@@ -10607,7 +10609,8 @@
         "ms": 0,
         "detail": "CF",
         "at": "2026-11-16T22:05:11.851283Z"
-      }
+      },
+      "reason": "DIGER: https 301->https://www.natomanga.com/; http 301/167; www 301/167; redirect dongusu"
     },
     "3400478864029140695": {
       "id": 3400478864029140695,
@@ -14224,7 +14227,8 @@
       "domain": "webtoonhatti.club",
       "packages": [],
       "state": "engelli",
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "4062350174854844668": {
       "id": 4062350174854844668,
@@ -27790,7 +27794,8 @@
         "ms": 0,
         "detail": "",
         "at": "2026-11-17T17:02:29Z"
-      }
+      },
+      "reason": "Sayfa listesi APIde: /v1/readV2/by-order 400 CLIENT_HEADER_MISSING donuyor; zorunlu istemci basliginin adi olculemedi. Release HTMLinde yalniz 1 preload gorseli var; thumbnail CDN (digitaloceanspaces) Refererli/Referersiz 200."
     },
     "6654923665789802916": {
       "id": 6654923665789802916,
@@ -28629,7 +28634,8 @@
       "domain": "araznovel.com",
       "packages": [],
       "state": "engelli",
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "6958297225666389056": {
       "id": 6958297225666389056,
@@ -29590,7 +29596,8 @@
         "ms": 0,
         "detail": "yerel harness",
         "at": "2026-11-17T19:55:06Z"
-      }
+      },
+      "reason": "okuyucu JS decrypt + kapak JS template - seciciyle cozulmez"
     },
     "7294049394344984284": {
       "id": 7294049394344984284,
@@ -30174,7 +30181,8 @@
         "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
         "at": "2026-11-17T17:02:29Z"
       },
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "reason": "CF: cloudflare"
     },
     "751725947791672488": {
       "id": 751725947791672488,
@@ -32098,7 +32106,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "site manga degil (Lunar Realms tanitim sayfasi, /mangas/ 404) - 2026-11-16 olcumu"
     },
     "8170497644902480619": {
       "id": 8170497644902480619,
@@ -35066,7 +35075,8 @@
         "ms": 0,
         "detail": "yerel harness (list/chapters/pages>0)",
         "at": "2026-11-17T18:44:56Z"
-      }
+      },
+      "reason": "site el degistirmis (Tayca bahis/manga, TR icerik yok) - 2026-11-16 olcumu"
     },
     "9083609997475506503": {
       "id": 9083609997475506503,

@@ -236,10 +236,12 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
                 if !c.sorun.is_empty() {
                     manual.insert((c.domain.to_lowercase(), c.lang.to_lowercase()), c.sorun);
                 }
-                if c.dead {
+                // Gerekçe, ölü işaretinden bağımsız taşınır: engelli (cloudflare)
+                // kayıt ölü değildir ama gerekçe metni defterde bulunmak zorunda.
                 if !c.reason.is_empty() {
                     reasons.insert((c.domain.to_lowercase(), c.lang.to_lowercase()), c.reason);
                 }
+                if c.dead {
                     dead.insert((c.domain.to_lowercase(), c.lang.to_lowercase()));
                 }
             }
@@ -315,6 +317,12 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
             if let Some(r) = reasons.get(&(e.domain.to_lowercase(), e.lang.to_lowercase())) {
                 s.reason = r.clone();
             }
+        }
+        // Katalogda olcum metni hic yoksa engel etiketten turetilir; sorun=cloudflare
+        // tek basina kalirsa engelli kaydin gerekcesi bos gorunuyordu (sadscans.com,
+        // manga.araznovel.com). Metin olcum iddiasi tasimaz, etiketi tekrarlar.
+        if s.reason.is_empty() && s.sorun.eq_ignore_ascii_case("cloudflare") {
+            s.reason = "CF: cloudflare".to_string();
         }
         // Ölü işareti kalıcıdır: ölçüm "DNS yok" dediyse status koşusu silmez.
         s.dead = s.dead || dead.contains(&(e.domain.to_lowercase(), e.lang.to_lowercase()));
