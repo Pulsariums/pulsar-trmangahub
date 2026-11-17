@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "generated_at": "2026-11-17T17:51:06Z",
-  "total_count": 553,
+  "total_count": 554,
   "languages": [
     "tr"
   ],
@@ -3244,24 +3244,21 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "elftoon.com",
-      "baseUrl": "https://elftoon.com",
+      "baseUrl": "https://elftoon.net",
       "engine": "custom",
       "config": {
-        "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "div[data-card-set-item]",
-        "chapterSelector": "",
-        "readerSelector": "",
-        "searchUrl": "https://elftoon.xyz/api/search?q={query}",
-        "searchJsonItems": "series",
-        "searchJsonUrl": "urlSlug",
-        "searchJsonTitle": "title",
-        "searchJsonPathPrefix": "/series/"
+        "listPath": "/series",
+        "itemSelector": "[data-card-set-item]",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
+        "readerSelector": "img[src*=\"/uploads/series/\"]"
       },
-      "selector_verified": true,
+      "verified_by_user": false,
       "origins": [
-        "auto_scan_2026"
-      ]
+        "auto_scan_2026",
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "ezmanga.org",
@@ -3272,16 +3269,19 @@
       "baseUrl": "https://ezmanga.org",
       "engine": "custom",
       "config": {
-        "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "listPath": "/manhwa",
+        "itemSelector": "ul.sg-grid li",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": "img.r-page-img",
+        "searchUrl": "https://ezmanga.org/browse?q={query}"
       },
-      "selector_verified": true,
+      "verified_by_user": false,
       "origins": [
-        "auto_scan_2026"
-      ]
+        "auto_scan_2026",
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "fl-ares.com",
@@ -12275,6 +12275,26 @@
       "reason": "domain parkta (GoDaddy forsale) - 2026-11-16 olcumu",
       "dead": true,
       "deadReason": "alan adi baska siteye yonleniyor/park (2026-11-17 probe)"
+    },
+    {
+      "id": "cocomic.co",
+      "name": "CoComic",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "cocomic.co",
+      "baseUrl": "https://cocomic.co",
+      "engine": "custom",
+      "config": {
+        "itemSelector": "a.swimlane-poster-wrap",
+        "chapterSelector": ".asura-chapters-stream a",
+        "readerSelector": ".asura-stream-images img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
     }
   ]
 }

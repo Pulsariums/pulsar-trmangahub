@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T19:02:52Z",
+  "generated": "2026-11-17T19:07:44Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -27430,16 +27430,9 @@
       "nsfw": 0,
       "domain": "elftoon.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "6061006270746792897": {
       "id": 6061006270746792897,
@@ -27987,6 +27980,18 @@
       },
       "dead": true,
       "unreachable": true
+    },
+    "6132026486342764608": {
+      "id": 6132026486342764608,
+      "kind": "catalogue",
+      "title": "CoComic",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "cocomic.co",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6136639672694483708": {
       "id": 6136639672694483708,
@@ -33866,16 +33871,9 @@
       "nsfw": 0,
       "domain": "ezmanga.org",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "8028472323659382853": {
       "id": 8028472323659382853,
