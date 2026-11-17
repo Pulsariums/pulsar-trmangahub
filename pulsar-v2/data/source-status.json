@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T10:55:02Z",
+  "generated": "2026-11-17T11:20:09Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -150,7 +150,7 @@
         "http_code": "",
         "ms": 0,
         "detail": "",
-        "at": "2026-11-17T10:55:02Z"
+        "at": "2026-11-17T11:20:09Z"
       }
     },
     "1085305392848287310": {
@@ -430,10 +430,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "kuroimanga.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -442,12 +440,13 @@
         "at": "2026-11-16T22:05:11.851283Z"
       },
       "device": {
-        "status": "r",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:55:02Z"
-      }
+        "detail": "pages: IOException: unexpected end of stream on https://www.kuroimanga.top/...",
+        "at": "2026-11-17T11:20:09Z"
+      },
+      "device_step": "pages"
     },
     "1255008208586588111": {
       "id": 1255008208586588111,
@@ -4836,10 +4835,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "opiatoon.shop",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4848,12 +4845,13 @@
         "at": "2026-11-13T19:01:05Z"
       },
       "device": {
-        "status": "r",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:55:02Z"
+        "detail": "details: giris gerekli: detay https://opiatoon.shop/giris-yapmalisiniz/ adresine yonleniyor",
+        "at": "2026-11-17T11:20:09Z"
       },
+      "device_step": "details",
       "sorun": "login"
     },
     "1854510220106965266": {
@@ -7324,7 +7322,7 @@
         "http_code": "",
         "ms": 0,
         "detail": "",
-        "at": "2026-11-17T10:55:02Z"
+        "at": "2026-11-17T11:20:09Z"
       }
     },
     "2264580951411441594": {
@@ -7354,9 +7352,9 @@
       "nsfw": 0,
       "domain": "anikiga.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7365,11 +7363,11 @@
         "at": "2026-11-16T22:05:11.851283Z"
       },
       "device": {
-        "status": "r",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
         "detail": "",
-        "at": "2026-11-17T10:55:02Z"
+        "at": "2026-11-17T11:20:09Z"
       }
     },
     "2273313023247309827": {
@@ -9726,15 +9724,15 @@
       "nsfw": 0,
       "domain": "eleceedturkiye.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "device": {
-        "status": "r",
+        "status": "pass",
         "http_code": "",
         "ms": 0,
         "detail": "",
-        "at": "2026-11-17T10:55:02Z"
+        "at": "2026-11-17T11:20:09Z"
       }
     },
     "2922748393657669149": {
@@ -11402,7 +11400,7 @@
         "http_code": "",
         "ms": 0,
         "detail": "",
-        "at": "2026-11-17T10:55:02Z"
+        "at": "2026-11-17T11:20:09Z"
       }
     },
     "3488647577143589694": {
@@ -11428,7 +11426,7 @@
         "http_code": "",
         "ms": 0,
         "detail": "",
-        "at": "2026-11-17T10:23:03Z"
+        "at": "2026-11-17T11:20:09Z"
       }
     },
     "3495313140920905784": {
@@ -11918,17 +11916,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "r",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:55:02Z"
-      }
+        "detail": "pages: HttpException: HTTP error 404",
+        "at": "2026-11-17T11:20:09Z"
+      },
+      "device_step": "pages"
     },
     "3704693444647218571": {
       "id": 3704693444647218571,

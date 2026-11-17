@@ -1,6 +1,6 @@
 {
   "surum": 1,
-  "uretildi": "2026-11-17T10:55:03Z",
+  "uretildi": "2026-11-17T11:20:11Z",
   "toplam": 1702,
   "kayitlar": [
     {
@@ -225,8 +225,7 @@
       "kokenler": [
         "keiyoushi_index",
         "local_tr",
-        "nyora_datadriven",
-        "pulsar-oto-tamir"
+        "nyora_datadriven"
       ],
       "repolar": [
         "hyperion",
@@ -674,11 +673,11 @@
       "dil": "tr",
       "nsfw": 1,
       "alan_adi": "kuroimanga.site",
-      "durum": "pending",
-      "grup": "test",
-      "yayinda": true,
+      "durum": "failed",
+      "grup": "yok",
+      "yayinda": false,
       "eklentide_kapali": false,
-      "evre": "testte",
+      "evre": "tamir-kuyrugunda",
       "motor": "madara",
       "kokenler": [
         "keiyoushi_index",
@@ -695,9 +694,9 @@
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "r",
-      "hata_adimi": null,
-      "hata_mesaji": "",
+      "cihaz": "fail",
+      "hata_adimi": "pages",
+      "hata_mesaji": "pages: IOException: unexpected end of stream on https://www.kuroimanga.top/...",
       "saglik": "ok",
       "olu": false,
       "ulasilamaz": false,
@@ -706,8 +705,8 @@
       "tamir_kayitlari": [],
       "tamir_denemesi": 3,
       "son_tamir": "aday",
-      "tamir_edildi": true,
-      "etiket": "yeniden-test"
+      "tamir_edildi": false,
+      "etiket": "tamir-edilebilir"
     },
     {
       "id": "1255008208586588111",
@@ -1316,8 +1315,7 @@
       "kokenler": [
         "keiyoushi_index",
         "local_tr",
-        "nyora_datadriven",
-        "pulsar-oto-tamir"
+        "nyora_datadriven"
       ],
       "repolar": [
         "hyperion",
@@ -7386,11 +7384,11 @@
       "dil": "tr",
       "nsfw": 1,
       "alan_adi": "opiatoon.shop",
-      "durum": "pending",
-      "grup": "test",
-      "yayinda": true,
+      "durum": "failed",
+      "grup": "yok",
+      "yayinda": false,
       "eklentide_kapali": false,
-      "evre": "testte",
+      "evre": "tamir-kuyrugunda",
       "motor": "madara",
       "kokenler": [
         "keiyoushi_index",
@@ -7403,9 +7401,9 @@
       "katalogda": true,
       "havuzda": false,
       "secici_dogrulandi": true,
-      "cihaz": "r",
-      "hata_adimi": null,
-      "hata_mesaji": "",
+      "cihaz": "fail",
+      "hata_adimi": "details",
+      "hata_mesaji": "details: giris gerekli: detay https://opiatoon.shop/giris-yapmalisiniz/ adresine yonleniyor",
       "saglik": "ok",
       "olu": false,
       "ulasilamaz": false,
@@ -7416,8 +7414,8 @@
       ],
       "tamir_denemesi": 3,
       "son_tamir": "aday",
-      "tamir_edildi": true,
-      "etiket": "yeniden-test"
+      "tamir_edildi": false,
+      "etiket": "tamir-edilebilir"
     },
     {
       "id": "1854510220106965266",
@@ -11184,17 +11182,16 @@
       "dil": "tr",
       "nsfw": 0,
       "alan_adi": "anikiga.com",
-      "durum": "pending",
-      "grup": "test",
+      "durum": "active",
+      "grup": "tr",
       "yayinda": true,
       "eklentide_kapali": false,
-      "evre": "testte",
+      "evre": "ana-grupta",
       "motor": "madara",
       "kokenler": [
         "keiyoushi_index",
         "local_tr",
-        "nyora_datadriven",
-        "pulsar-oto-tamir"
+        "nyora_datadriven"
       ],
       "repolar": [
         "hyperion",
@@ -11204,7 +11201,7 @@
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "r",
+      "cihaz": "pass",
       "hata_adimi": null,
       "hata_mesaji": "",
       "saglik": "ok",
@@ -11218,8 +11215,8 @@
       ],
       "tamir_denemesi": 0,
       "son_tamir": null,
-      "tamir_edildi": true,
-      "etiket": "yeniden-test"
+      "tamir_edildi": false,
+      "etiket": "gecti"
     },
     {
       "id": "2273313023247309827",
@@ -14774,21 +14771,20 @@
       "dil": "tr",
       "nsfw": 0,
       "alan_adi": "eleceedturkiye.com",
-      "durum": "pending",
-      "grup": "test",
+      "durum": "active",
+      "grup": "tr",
       "yayinda": true,
       "eklentide_kapali": false,
-      "evre": "testte",
-      "motor": "mangareader",
+      "evre": "ana-grupta",
+      "motor": "custom",
       "kokenler": [
-        "auto_scan_2026",
-        "pulsar-oto-tamir"
+        "auto_scan_2026"
       ],
       "repolar": [],
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "r",
+      "cihaz": "pass",
       "hata_adimi": null,
       "hata_mesaji": "",
       "saglik": null,
@@ -14799,8 +14795,8 @@
       "tamir_kayitlari": [],
       "tamir_denemesi": 0,
       "son_tamir": null,
-      "tamir_edildi": true,
-      "etiket": "yeniden-test"
+      "tamir_edildi": false,
+      "etiket": "gecti"
     },
     {
       "id": "2922748393657669149",
@@ -18359,11 +18355,11 @@
       "dil": "tr",
       "nsfw": 0,
       "alan_adi": "webtoontr.net",
-      "durum": "pending",
-      "grup": "test",
-      "yayinda": true,
+      "durum": "failed",
+      "grup": "yok",
+      "yayinda": false,
       "eklentide_kapali": false,
-      "evre": "testte",
+      "evre": "tamir-kuyrugunda",
       "motor": "madara",
       "kokenler": [
         "local_tr",
@@ -18374,9 +18370,9 @@
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "r",
-      "hata_adimi": null,
-      "hata_mesaji": "",
+      "cihaz": "fail",
+      "hata_adimi": "pages",
+      "hata_mesaji": "pages: HttpException: HTTP error 404",
       "saglik": null,
       "olu": false,
       "ulasilamaz": false,
@@ -18385,8 +18381,8 @@
       "tamir_kayitlari": [],
       "tamir_denemesi": 3,
       "son_tamir": "aday",
-      "tamir_edildi": true,
-      "etiket": "yeniden-test"
+      "tamir_edildi": false,
+      "etiket": "tamir-edilebilir"
     },
     {
       "id": "3704693444647218571",
@@ -52422,8 +52418,7 @@
       "kokenler": [
         "keiyoushi_index",
         "local_tr",
-        "nyora_datadriven",
-        "pulsar-oto-tamir"
+        "nyora_datadriven"
       ],
       "repolar": [
         "hyperion",
@@ -55423,10 +55418,9 @@
       "yayinda": false,
       "eklentide_kapali": false,
       "evre": "tamir-kuyrugunda",
-      "motor": "mangareader",
+      "motor": "custom",
       "kokenler": [
-        "auto_scan_2026",
-        "pulsar-oto-tamir"
+        "auto_scan_2026"
       ],
       "repolar": [],
       "katalogda": true,

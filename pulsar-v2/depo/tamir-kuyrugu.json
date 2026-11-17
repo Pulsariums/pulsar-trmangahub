@@ -1,14 +1,14 @@
 {
-  "uretildi": "2026-11-17T10:55:03Z",
-  "toplam": 1166,
+  "uretildi": "2026-11-17T11:20:11Z",
+  "toplam": 1169,
   "ozet": {
-    "tr": 149,
-    "katalog": 188,
+    "tr": 152,
+    "katalog": 191,
     "etiket": {
       "alan-adi-aranacak": 92,
       "cloudflare": 76,
       "gecti": 6,
-      "tamir-edilebilir": 992
+      "tamir-edilebilir": 995
     }
   },
   "kayitlar": [
@@ -356,6 +356,26 @@
       ]
     },
     {
+      "id": "1254625717579109559",
+      "ad": "Kuroi Manga",
+      "alan_adi": "kuroimanga.site",
+      "dil": "tr",
+      "nsfw": 1,
+      "tur": "catalogue",
+      "motor": "madara",
+      "etiket": "tamir-edilebilir",
+      "hata_adimi": "pages",
+      "hata_mesaji": "pages: IOException: unexpected end of stream on https://www.kuroimanga.top/...",
+      "eklentide_kapali": false,
+      "tamir_denemesi": 3,
+      "son_tamir": "aday",
+      "repolar": [
+        "hyperion",
+        "keiyoushi",
+        "yuzono-ayna"
+      ]
+    },
+    {
       "id": "8167411798342220595",
       "ad": "Lunar Manga",
       "alan_adi": "lunarx.to",
@@ -468,6 +488,22 @@
       ]
     },
     {
+      "id": "3691037704178132287",
+      "ad": "WebtoonTr",
+      "alan_adi": "webtoontr.net",
+      "dil": "tr",
+      "nsfw": 0,
+      "tur": "catalogue",
+      "motor": "madara",
+      "etiket": "tamir-edilebilir",
+      "hata_adimi": "pages",
+      "hata_mesaji": "pages: HttpException: HTTP error 404",
+      "eklentide_kapali": false,
+      "tamir_denemesi": 3,
+      "son_tamir": "aday",
+      "repolar": []
+    },
+    {
       "id": "7456858038220536869",
       "ad": "Xiaoaitoon",
       "alan_adi": "xiaoaitoon.org.tr",
@@ -543,6 +579,22 @@
         "keiyoushi",
         "yuzono-ayna"
       ]
+    },
+    {
+      "id": "1851475661416641513",
+      "ad": "OpiaToon",
+      "alan_adi": "opiatoon.shop",
+      "dil": "tr",
+      "nsfw": 1,
+      "tur": "catalogue",
+      "motor": "madara",
+      "etiket": "tamir-edilebilir",
+      "hata_adimi": "details",
+      "hata_mesaji": "details: giris gerekli: detay https://opiatoon.shop/giris-yapmalisiniz/ adresine yonleniyor",
+      "eklentide_kapali": false,
+      "tamir_denemesi": 3,
+      "son_tamir": "aday",
+      "repolar": []
     },
     {
       "id": "5848984120118583218",
@@ -1638,7 +1690,7 @@
       "dil": "tr",
       "nsfw": 0,
       "tur": "engine",
-      "motor": "mangareader",
+      "motor": "custom",
       "etiket": "tamir-edilebilir",
       "hata_adimi": "covers",
       "hata_mesaji": "covers: ",
