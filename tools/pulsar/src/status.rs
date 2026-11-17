@@ -80,7 +80,7 @@ pub struct StatusFile {
 /// Paket kuralı: ana gruba (tr/tr18/global/global18) YALNIZ cihaz testinde geçen
 /// ya da sağlık sonucu "ok" olan (state active) ve "sorun" etiketi olmayan
 /// kaynak girer. Kesin ölü (dead/kapali) ve cihazda düşen (state failed)
-/// kaynak hiçbir pakete girmez. Geri kalan (pending, unknown, unreachable,
+/// kaynak hiçbir pakete girmez. Geri kalan (pending, unreachable,
 /// sorun etiketli) "test" paketindedir. Test = yalnız henüz cihazda test
 /// edilmemiş, çalışma ihtimali olan kaynakların havuzu; cihaz testine
 /// hazırlık havuzudur. 18+ kaynaklar ayrı
@@ -124,14 +124,14 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
 
 /// Durumu yeniden hesaplar ve paketi buna göre atar. Cihazda geçen ("pass")
 /// kaynak "active" olur; cihaz sonucu olmayan kaynak cihaz testinden geçmediği
-/// için sağlık sonucu "ok" olsa bile "active" sayılmaz (unknown/pending kalır).
+/// için sağlık sonucu "ok" olsa bile "active" sayılmaz (pending kalır).
 /// Cihazda düşen ("fail"/"cloudflare") kaynak "failed" olur ve hiçbir pakete
-/// girmez: sonucu bilindiği için test havuzunda da durmaz. Sağlık sonucu
-/// (GitHub sunucusundan, canlı siteleri yanlışlıkla "empty" sayabilir) durumu
-/// yalnız pending/unknown arasında ayırır.
+/// girmez: sonucu bilindiği için test havuzunda da durmaz. Cihaz ve sağlık
+/// verisi hiç olmayan kayıt da test havuzunda "pending" bekler; "unknown"
+/// yalnız hiç ölçülmemiş kayıt için ayrılmıştı, öyle bir bayrak yok.
 pub fn recompute_state(e: &mut StatusEntry) {
     // Ölü kayıt cihaz/sağlık verisiyle diriltilmez: "dead" kesin işarettir,
-    // her status koşusunda unknown'a düşürülmemeli.
+    // her status koşusunda pending'e düşürülmemeli.
     if e.dead {
         e.state = "dead".to_string();
         e.packages = Vec::new();
@@ -179,9 +179,9 @@ pub fn recompute_state(e: &mut StatusEntry) {
         "pending".to_string()
     } else if health == "ok" && !device.is_empty() {
         "active".to_string()
-    } else if health.is_empty() {
-        "unknown".to_string()
     } else {
+        // Cihaz ve sağlık verisi olmayan kayıt hiç ölçülmemiş sayılır ama
+        // yayın havuzuna değil test havuzuna girer: "unknown" üretilmez.
         "pending".to_string()
     };
     e.packages = packages_for(e);
@@ -238,7 +238,7 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
             nsfw: 0,
             domain: String::new(),
             packages: Vec::new(),
-            state: "unknown".to_string(),
+            state: "pending".to_string(),
             health: None,
             device: None,
             device_step: None,
