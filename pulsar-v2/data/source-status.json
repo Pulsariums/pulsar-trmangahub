@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T19:40:09Z",
+  "generated": "2026-11-17T19:43:09Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -34729,9 +34729,23 @@
       "nsfw": 0,
       "domain": "mangawt.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T19:43:02Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list=12 chapters=494 pages=7)",
+        "at": "2026-11-17T19:43:02Z"
+      }
     },
     "8462394428445828805": {
       "id": 8462394428445828805,
