@@ -1,12 +1,11 @@
 name: '6) Cihaz sonucunu isle'
 
 # Girdi: pulsar-v2/data/device-fails.tsv ("id<TAB>durum<TAB>adim<TAB>mesaj"; durum fail|cloudflare|r)
-#        ve testin UTC zamani.
+#        testin UTC zamani, istege bagli paket adi (yalniz o paket test edildiyse).
 # Kural: testin yapildigi build = o zamandan onceki son index.min.json.
-#   buildde olup raporda olmayan -> pass (saglam)
+#   (paket suzgecli) buildde olup raporda olmayan -> pass
 #   raporda olan -> fail/cloudflare (tamir) ya da r (tamir edildi, teste doner)
-#   buildde olmayan ve raporda olmayan -> dokunulmaz (bilinmeyen kalir)
-# Sonra depo/havuz tablolari yeniden kurulur.
+#   test edilmeyen -> dokunulmaz
 on:
   workflow_dispatch:
     inputs:
@@ -14,6 +13,10 @@ on:
         description: 'Cihaz testinin UTC zamani (ornek 2026-11-17T06:12:56Z)'
         type: string
         required: true
+      paket:
+        description: 'Yalniz bu paket test edildiyse adi (ornek: Pulsar Test). Bos = hepsi'
+        type: string
+        default: ''
 
 permissions:
   contents: write
@@ -29,12 +32,13 @@ jobs:
       - name: Isle
         env:
           Z: ${{ inputs.zaman }}
+          PK: ${{ inputs.paket }}
         run: |
           set -euo pipefail
           T=pulsar-v2/data/device-fails.tsv
           C=$(git log --before="$Z" -1 --format=%H -- pulsar-v2/repo/index.min.json)
-          echo "test edilen build: $C ($(git log -1 --format=%cI $C))"
-          git show $C:pulsar-v2/repo/index.min.json | jq -r '.[].sources[].id' | sort -u > /tmp/B
+          echo "test edilen build: $C ($(git log -1 --format=%cI $C)) paket=[${PK:-hepsi}]"
+          git show $C:pulsar-v2/repo/index.min.json | jq -r --arg p "$PK" '.[]|select($p=="" or .name==$p)|.sources[].id' | sort -u > /tmp/B
           cut -f1 $T | sort -u > /tmp/R
           comm -23 /tmp/B /tmp/R > /tmp/P
           echo "build: $(wc -l < /tmp/B) | rapor: $(wc -l < /tmp/R) | gecen: $(wc -l < /tmp/P) | raporda+buildde: $(comm -12 /tmp/B /tmp/R | wc -l)"
@@ -42,12 +46,11 @@ jobs:
               ($f|split("\n")|map(select(length>0)|split("\t")|{name:("MIHON_"+.[0]),status:.[1],steps:{((.[2]//"")):{status:.[1],message:(.[3]//"")}}}))
             + ($p|split("\n")|map(select(length>0)|{name:("MIHON_"+.),status:"pass"}))
           )}' > /tmp/device.json
-          jq '.sources|length' /tmp/device.json
           ./tools/pulsar/target/release/pulsar status --device /tmp/device.json
           bash pulsar-v2/scripts/tablo-kur.sh
           git config user.name pulsarium
           git config user.email pulsariums@gmail.com
           git add pulsar-v2/data/source-status.json pulsar-v2/depo pulsar-v2/havuz
           git diff --cached --quiet && { echo 'degisiklik yok'; exit 0; }
-          git commit -qm "data(durum): cihaz raporu ($Z) islendi; tablolar guncellendi"
+          git commit -qm "data(durum): cihaz raporu ($Z ${PK}) islendi; tablolar guncellendi"
           git pull -q --rebase --autostash origin main && git push -q origin main

@@ -1,0 +1,22 @@
+name: '9) Kod yamasi uygula'
+# pulsar-v2/yamalar/*.patch dosyalarini git apply ile uygular, yamalari siler, commit eder.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Uygula
+        run: |
+          set -e
+          shopt -s nullglob
+          for p in pulsar-v2/yamalar/*.patch; do echo "== $p"; git apply --verbose "$p"; git rm -q "$p"; done
+          git config user.name pulsarium
+          git config user.email pulsariums@gmail.com
+          git add -A
+          git diff --cached --quiet && { echo 'degisiklik yok'; exit 0; }
+          git commit -qm 'fix(kod): yamalar uygulandi'
+          git pull -q --rebase --autostash origin main && git push -q origin main
