@@ -95,6 +95,11 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
     if e.dead || e.state == "failed" {
         return Vec::new();
     }
+    // Eklenti çalışma anında oluşturulmayan (patches deadSources/deadHosts)
+    // kayıt hiçbir pakete girmemeli; aksi hâlde izin listesinde hayalet id kalır.
+    if e.kapali {
+        return Vec::new();
+    }
     // ulaşılamayan kaynak (DNS/TLS/timeout/bağlantı hatası) test havuzunda
     // kalır: sağlık ölçümü CI/GitHub sunucusundan yapılır, cihaz ağı farklıdır
     // (birçok site GitHub IP'sini engeller). Bayrak kaynağın değil ölçüm
@@ -104,12 +109,6 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
         return vec!["test".to_string()];
     }
     if e.state != "active" || !e.sorun.is_empty() {
-        // Kapalı kaynak (çalışma anı filtresi) pakete giremez; bu kural yalnız
-        // aktif olmayan kayıt için geçerlidir. Aktif kayıt kapalı işaretli
-        // kalsa da base pakete düşer (aşağıda), paketsiz kalmaz.
-        if e.kapali && e.state != "active" {
-            return Vec::new();
-        }
         // Ayri test18 paketi yok: 18+ kaynak da test havuzuna duser, gorunen
         // adinda " [18+]" etiketi tasir (istemci suzgeci icin).
         return vec!["test".to_string()];
@@ -136,6 +135,13 @@ pub fn recompute_state(e: &mut StatusEntry) {
     // Ölü kayıt cihaz/sağlık verisiyle diriltilmez: "dead" kesin işarettir,
     // her status koşusunda pending'e düşürülmemeli.
     if e.dead {
+        e.state = "dead".to_string();
+        e.packages = Vec::new();
+        return;
+    }
+    // Eklenti çalışma anında oluşturulmayan (patches deadSources/deadHosts) kayıt
+    // hiçbir pakete girmemeli; aksi hâlde izin listesinde hayalet id kalır.
+    if e.kapali {
         e.state = "dead".to_string();
         e.packages = Vec::new();
         return;
