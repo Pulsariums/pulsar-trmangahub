@@ -16,9 +16,9 @@ Bu dosya "iş bitti" tanımını ve çalışma döngüsünü sabitler. Her tur b
 
 | Katman | Toplam | active | failed | pending | engelli | dead | unknown |
 |---|---|---|---|---|---|---|---|
-| Katalog (bizim) | 461 | 234 | 88 | 14 | 20 | 105 | 0 |
+| Katalog (bizim) | 461 | 246 | 90 | 0 | 20 | 105 | 0 |
 | Motor (JitPack parser) | 1272 | 121 | 299 | 132 | 126 | 594 | 0 |
-| **Toplam** | **1733** | **355** | **387** | **146** | **146** | **699** | **0** |
+| **Toplam** | **1733** | **367** | **389** | **132** | **146** | **699** | **0** |
 
 Durum sözlüğü: `active` yayında ve kanıtlı · `failed` ölçülmüş kırık (gerekçeli) · `pending` yeniden test bekliyor · `engelli` Cloudflare/çerez duvarı (ne yayın ne test) · `dead` kalıcı ölü.
 
@@ -26,7 +26,7 @@ Durum sözlüğü: `active` yayında ve kanıtlı · `failed` ölçülmüş kır
 
 **Kalan iş iki kovada:**
 - **132 motor kaynağı** yalnız cihaz testiyle kapanır (yerel test imkânsız: Mihon ABI).
-- **14 katalog kaydı** config değişikliği sonrası harness tekrarı bekliyor.
+- Katalog tarafında bekleyen kayıt **0** (14 kaydın 12si geçti, 2si gerekçeli ).
 
 **Bu oturumda kapananlar (özet):**
 - Katalog ölçüm kuyruğunun tamamı (199 dilim) ve 197 "geçici görünümlü" hata tarandı.
