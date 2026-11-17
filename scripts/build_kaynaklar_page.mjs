@@ -2,6 +2,13 @@
 import fs from 'node:fs';
 
 const src = 'pulsar-v2/depo/kaynaklar.json';
+const hizSrc = 'pulsar-v2/data/hiz.json';
+let hiz = {};
+let hizVar = fs.existsSync(hizSrc);
+if (hizVar) {
+  try { hiz = JSON.parse(fs.readFileSync(hizSrc, 'utf8')).kaynaklar || {}; } catch { hizVar = false; hiz = {}; }
+}
+const hizJson = JSON.stringify(hiz);
 fs.mkdirSync('site', { recursive: true });
 if (!fs.existsSync(src)) { console.log('kaynaklar.json yok, sayfa atlandi'); process.exit(0); }
 fs.copyFileSync(src, 'site/kaynaklar.json');
@@ -32,6 +39,8 @@ const html = `<!doctype html>
   .e.imkansiz { background:#f6dcdc; border-color:#e0a1a1; }
   .e.tamir-edilebilir,.e.yeniden-test,.e.cloudflare,.e.alan-adi-aranacak { background:#fbeccc; border-color:#e6c377; }
   .m { color:var(--mut); font-size:.85rem; }
+  .badge { display:inline-block; padding:2px 10px; border-radius:99px; font-size:.8rem; font-weight:700; border:1px solid var(--line); background:#eef0f4; }
+  .badge-warn { background:#fbeccc; border-color:#e6c377; }
   .tabwrap { overflow-x:auto; }
 </style>
 </head>
@@ -49,7 +58,7 @@ const html = `<!doctype html>
   </div>
   <div class="sayac" id="s"></div>
   <div class="tabwrap"><table>
-    <thead><tr><th>Kaynak</th><th>Geldiği repolar</th><th>Yayında</th><th>Evre</th><th>Grup</th><th>Etiket</th><th>Tamir</th><th>Son hata</th></tr></thead>
+    <thead><tr><th>Kaynak</th><th>Geldiği repolar</th><th>Yayında</th><th>Evre</th><th>Grup</th><th>Etiket</th><th>Tamir</th><th>Son hata</th>${hizVar ? '<th>Hız</th>' : ''}</tr></thead>
     <tbody id="t"></tbody>
   </table></div>
 </div>
@@ -57,6 +66,9 @@ const html = `<!doctype html>
 const $ = (i) => document.getElementById(i);
 const esc = (v) => String(v == null ? '' : v).replace(/[&<>"]/g, (c) => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
 let K = [];
+const HIZ = ${hizJson};
+const HIZVAR = ${hizVar ? 'true' : 'false'};
+const hiz = (v) => (v && v.ms != null ? (v.ms > 8000 ? '<span class="badge badge-warn">' + v.ms + ' ms</span>' : v.ms + ' ms') : '-');
 function doldur(sel, vals) { [...new Set(vals)].filter(Boolean).sort().forEach((v) => { const o = document.createElement('option'); o.value = v; o.textContent = v; sel.appendChild(o); }); }
 function ciz() {
   const q = $('q').value.toLowerCase(), fe = $('fe').value, fg = $('fg').value, fl = $('fl').value, fr = $('fr').value, ft = $('ft').value;
@@ -68,7 +80,8 @@ function ciz() {
     + '<td>' + esc(k.evre) + '</td><td>' + esc(k.grup) + '</td>'
     + '<td><span class="e ' + esc(k.etiket) + '">' + esc(k.etiket) + '</span></td>'
     + '<td>' + (k.tamir_edildi ? 'edildi' : '-') + (k.tamir_kayitlari.length ? '<div class="m">' + esc(k.tamir_kayitlari.join(', ')) + '</div>' : '') + '</td>'
-    + '<td class="m">' + esc(k.hata_adimi ? k.hata_adimi + ': ' : '') + esc((k.hata_mesaji || '').slice(0, 120)) + '</td></tr>').join('');
+    + '<td class="m">' + esc(k.hata_adimi ? k.hata_adimi + ': ' : '') + esc((k.hata_mesaji || '').slice(0, 120)) + '</td>'
+    + (HIZVAR ? '<td>' + hiz(HIZ[k.alan_adi]) + '</td>' : '') + '</tr>').join('');
 }
 fetch('kaynaklar.json').then((r) => r.json()).then((d) => {
   K = d.kayitlar;
