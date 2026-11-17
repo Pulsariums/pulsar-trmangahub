@@ -1658,7 +1658,11 @@
         "chapterSelector": ".chapter-item a.chapter-item-link",
         "readerSelector": "#readerPages img.reader-page",
         "titleSelector": ".series-card-title",
-        "searchUrl": "https://okutoon.com/tur?q={query}&sira=updated"
+        "searchUrl": "https://okutoon.com/tur?q={query}&sira=updated",
+        "pageApiUrl": "https://okutoon.com/api/v1/series/{1}/chapters/{2}",
+        "pageApiIdPattern": "okutoon\\.com/([^/]+)/(bolum-[0-9]+)",
+        "pageApiItems": "data.pages",
+        "pageApiFieldUrl": "image_url"
       },
       "verified_by_user": false,
       "origins": [
@@ -2024,7 +2028,7 @@
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
         "searchJsonTitle": "title",
-        "chapterAjaxUrl": "https://tonizu.top/manga/<slug>/ajax/chapters/?t=1"
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
       },
       "verified_by_user": false,
       "origins": [
@@ -2859,7 +2863,7 @@
         "itemSelector": ".manga__item",
         "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": "",
-        "chapterAjaxUrl": "https://arthurscan.xyz/manga/i-randomly-have-a-new-career-every-week-1/ajax/chapters/?t=1",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "titleSelector": ".post-title h1"
       },
       "selector_verified": true,
@@ -3322,7 +3326,7 @@
         "itemSelector": "",
         "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": "div.reading-content img.wp-manga-chapter-img",
-        "chapterAjaxUrl": "https://hentaixyuri.com/manga/osananajimi-to-koisuru-tamago/ajax/chapters/?t=1",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "titleSelector": ".post-title h1"
       },
       "selector_verified": true,
@@ -4211,7 +4215,7 @@
         "itemSelector": "",
         "chapterSelector": "#manga-chapters-holder li.wp-manga-chapter a",
         "readerSelector": "",
-        "chapterAjaxUrl": "https://www.manhwatoon.me/manhwa/one-piece/ajax/chapters/",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "titleSelector": "h1"
       },
       "selector_verified": true,
@@ -4657,7 +4661,7 @@
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
         "searchJsonTitle": "title",
-        "chapterAjaxUrl": "https://toonizy.com/webtoon/swole-joseon/ajax/chapters/",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "titleSelector": ".summary_content .post-content h3"
       },
       "selector_verified": true,
@@ -5176,7 +5180,7 @@
         "itemSelector": ".c-blog_item",
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "img.wp-manga-chapter-img",
-        "chapterAjaxUrl": "https://seraphic-deviltry.com/manga/<slug>/ajax/chapters/?t=1"
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
       },
       "selector_verified": true,
       "origins": [
@@ -6163,7 +6167,7 @@
         "itemSelector": "",
         "chapterSelector": "#manga-chapters-holder li.wp-manga-chapter a",
         "readerSelector": "",
-        "chapterAjaxUrl": "https://www.manhwatoon.me/manhwa/one-piece/ajax/chapters/",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "titleSelector": "h1"
       },
       "selector_verified": true,
@@ -6991,7 +6995,7 @@
         "itemSelector": "div.page-item-detail",
         "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": "",
-        "chapterAjaxUrl": "https://inventariooculto.com/manga/kagurabachi/ajax/chapters/?t=1",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "titleSelector": ".post-title h1"
       },
       "selector_verified": true,
@@ -7806,7 +7810,7 @@
         "itemSelector": "",
         "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": "",
-        "chapterAjaxUrl": "https://mrtenzus.com/manga/roses-and-champagne-novel/ajax/chapters/?t=1",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "titleSelector": "h1"
       },
       "selector_verified": true,
@@ -11800,7 +11804,7 @@
         "itemSelector": "div.page-item-detail, div.manga",
         "chapterSelector": "#manga-chapters-holder li.wp-manga-chapter a",
         "readerSelector": "div.reading-content img, div.page-break img",
-        "chapterAjaxUrl": "https://tritinia.org/manga/kekkon-shiyou-rikon-zentei-de/ajax/chapters/",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "titleSelector": ".post-title h1"
       },
       "selector_verified": true,
