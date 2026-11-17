@@ -87,7 +87,7 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
     if e.dead || e.state == "failed" {
         return Vec::new();
     }
-    // Ulaşılamayan kaynak (DNS/TLS/timeout/bağlantı hatası) ayrı tutulur:
+    // ulaşılamayan kaynak (DNS/TLS/timeout/bağlantı hatası) ayrı tutulur:
     // test havuzuna da girmez, çünkü sorun kaynakta değil erişimdedir.
     if e.unreachable {
         return Vec::new();
@@ -150,6 +150,8 @@ pub fn recompute_state(e: &mut StatusEntry) {
     } else if device == "fail" || device == "cloudflare" {
         // Test edildi, sonucu biliniyor: ne yayina ne test havuzuna girer.
         "failed".to_string()
+    } else if device == "r" {
+        "pending".to_string()
     } else if list_dead {
         "pending".to_string()
     } else if health == "ok" && !device.is_empty() {
