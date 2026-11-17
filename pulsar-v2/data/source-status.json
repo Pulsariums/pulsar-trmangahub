@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T22:44:09Z",
+  "generated": "2026-11-17T22:51:11Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -5352,10 +5352,23 @@
       "nsfw": 0,
       "domain": "amangaplanet.com.tr",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
-      "reason": "gorsel CDN token/JS istiyor, UA/Referer/cerez ile 403 - motor basligi yetersiz"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "209650416390992343": {
       "id": 209650416390992343,
@@ -6746,9 +6759,23 @@
       "nsfw": 0,
       "domain": "ruhmanga.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "2145489765485420150": {
       "id": 2145489765485420150,
@@ -10788,10 +10815,16 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tuhafscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: liste 12 / bolum 45 / sayfa 0",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "reason": "harness: liste 12 / bolum 45 / sayfa 0"
     },
     "3488647577143589694": {
       "id": 3488647577143589694,
@@ -11246,9 +11279,23 @@
       "nsfw": 0,
       "domain": "webtoontr.net",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "3704693444647218571": {
       "id": 3704693444647218571,
@@ -13012,9 +13059,23 @@
       "nsfw": 1,
       "domain": "hentaimanga.me",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "3845434200471616927": {
       "id": 3845434200471616927,
@@ -14275,9 +14336,23 @@
       "nsfw": 1,
       "domain": "manga18x.net",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "4063053647762505851": {
       "id": 4063053647762505851,
@@ -24816,9 +24891,23 @@
       "nsfw": 1,
       "domain": "gedecomix.com",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "5913531196666726580": {
       "id": 5913531196666726580,
@@ -25977,9 +26066,23 @@
       "nsfw": 1,
       "domain": "hentaiwebtoon.com",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "6090117639599749850": {
       "id": 6090117639599749850,
@@ -26651,9 +26754,23 @@
       "nsfw": 0,
       "domain": "ghostoon.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "6311269189769404898": {
       "id": 6311269189769404898,
@@ -31589,9 +31706,23 @@
       "nsfw": 0,
       "domain": "okutoon.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "7998688569255459784": {
       "id": 7998688569255459784,
@@ -32106,10 +32237,23 @@
       "nsfw": 0,
       "domain": "lunarx.to",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
-      "reason": "site manga degil (Lunar Realms tanitim sayfasi, /mangas/ 404) - 2026-11-16 olcumu"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "8170497644902480619": {
       "id": 8170497644902480619,
@@ -32389,10 +32533,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "trmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: liste 24 / bolum 76 / sayfa 0",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "reason": "harness: liste 24 / bolum 76 / sayfa 0"
     },
     "8287199181829843047": {
       "id": 8287199181829843047,
@@ -33205,9 +33355,23 @@
       "nsfw": 1,
       "domain": "mangtto.com",
       "packages": [
-        "test"
+        "tr18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "8463142241276011825": {
       "id": 8463142241276011825,
@@ -34337,9 +34501,23 @@
       "nsfw": 0,
       "domain": "mundomanhwa.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:49:58Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-17T22:49:58Z"
+      }
     },
     "881979483256639463": {
       "id": 881979483256639463,
