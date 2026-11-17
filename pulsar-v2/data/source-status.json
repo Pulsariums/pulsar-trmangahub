@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T20:54:52Z",
+  "generated": "2026-11-17T21:37:28Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -44,7 +44,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "okuyucu POST admin-ajax rawi_ch_images; cid/exp/t bölüm HTML'inde, motor gövdeye koyamıyor"
+      "reason": "SERBEST: Seri detayi /webtoon/{slug}/, bolum /chapter/{slug}/; bolum sayfasinda okuyucu gorseli yok, 4 img site varligi."
     },
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -72,6 +72,18 @@
       "device_step": "list",
       "unreachable": true,
       "kapali": true
+    },
+    "1064800861221082664": {
+      "id": 1064800861221082664,
+      "kind": "catalogue",
+      "title": "Kiryuu",
+      "lang": "id",
+      "nsfw": 0,
+      "domain": "v5.kiryuu.to",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1070937091469606342": {
       "id": 1070937091469606342,
@@ -143,6 +155,7 @@
         "at": "2026-11-17T08:34:35Z"
       },
       "device_step": "pages",
+      "reason": "PAGE_SCRIPT: Bolum gorselleri inline scriptte atob(slides_p_path[...]) ile base64 cozuluyor",
       "unreachable": true
     },
     "1084418383174697768": {
@@ -152,15 +165,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tonizu.top",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "liste/sayfa bos (harness)",
-        "at": "2026-11-17T17:02:29Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1085305392848287310": {
       "id": 1085305392848287310,
@@ -212,11 +220,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "sapphirescan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "111322155383399025": {
       "id": 111322155383399025,
@@ -411,6 +418,18 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "dead": true
+    },
+    "1183619313064535407": {
+      "id": 1183619313064535407,
+      "kind": "catalogue",
+      "title": "KomikDex",
+      "lang": "id",
+      "nsfw": 0,
+      "domain": "alterkaiscans.my.id",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1203470067124874019": {
       "id": 1203470067124874019,
@@ -807,10 +826,9 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "sarcasmscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "1350317231338804055": {
       "id": 1350317231338804055,
@@ -850,7 +868,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "LISTE_DUZELT: Bolum listesi HTMLde yok (JS menu, data-issue-count=205); okuyucu gorselleri data-src=/manga/content/comics/..."
     },
     "1376568239241029358": {
       "id": 1376568239241029358,
@@ -930,10 +949,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "ayatoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "1376583637539257459": {
       "id": 1376583637539257459,
@@ -1090,10 +1108,9 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "doujins.lat",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "1376651252963693657": {
       "id": 1376651252963693657,
@@ -1181,10 +1198,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.epikman.ga",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "1376684333740686254": {
       "id": 1376684333740686254,
@@ -1353,10 +1369,9 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "heytoon.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "1376779621504514638": {
       "id": 1376779621504514638,
@@ -1395,7 +1410,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "details"
+      "device_step": "details",
+      "reason": "JS_RENDER: SPA; /manga/consult ve POST /manga/getMangasConsult HTML sayfa donuyor, seri linki yok."
     },
     "1376802032703853112": {
       "id": 1376802032703853112,
@@ -1426,7 +1442,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "1376821621685517565": {
       "id": 1376821621685517565,
@@ -1490,7 +1507,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Qwik; detay q-data.json icindeki bolum dizisi obf _objs referanslariyla geliyor."
     },
     "1376833596686797612": {
       "id": 1376833596686797612,
@@ -1595,7 +1613,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "search"
+      "device_step": "search",
+      "reason": "JS_RENDER: Post linkleri JS sablon dizelerinde; blogger feed calisiyor ama motor duz dizi bekliyor."
     },
     "1376874367033116698": {
       "id": 1376874367033116698,
@@ -1659,7 +1678,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "CHAPTER_SECICI: Seri linkleri /manhwa/<slug>, bolum linkleri /manhwa/<slug>/chapter-N; ana sayfa kartlari JS ile de doluyor ama .story_item bloklari var, okuyucu gorseli olculmedi."
     },
     "1376874560887473279": {
       "id": 1376874560887473279,
@@ -1820,7 +1840,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Kart bloklari (.flex1.listitem) HTML'de bos, seri href'i (/read-manga/...) hicbir listede yok; JS ile dolduruluyor."
     },
     "1376874560909429360": {
       "id": 1376874560909429360,
@@ -2171,11 +2192,10 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "mrbenne.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "1376895169146961402": {
       "id": 1376895169146961402,
@@ -2332,7 +2352,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "SERBEST: Seri detayi /webtoon/{slug}/, bolum /chapter/{slug}/; bolum sayfasinda okuyucu gorseli yok, 4 img site varligi."
     },
     "1376968403079460822": {
       "id": 1376968403079460822,
@@ -2345,7 +2366,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "details"
+      "device_step": "details",
+      "reason": "CHAPTER_SECICI: Next.js RSC (self.__next_f); bolum sayfasinda gorsel yok, okuyucu istemci tarafinda."
     },
     "1376971060559161534": {
       "id": 1376971060559161534,
@@ -2453,7 +2475,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: api.remanga.org/api/titles 404, /api/v1/titles 404, remanga.org/api/search 404, RSC 307; denenen uclar sonucsuz"
     },
     "1377020372809438008": {
       "id": 1377020372809438008,
@@ -2542,7 +2565,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: FoOlSlide okuyucu; /directory/ seri linkleri var ama /read/bousou_shojo/en/0/10/ sayfasinda sayfa gorselleri yok (yalniz tema ikonlari), sayfalar AJAX ile yukleniyor."
     },
     "1377036614337780580": {
       "id": 1377036614337780580,
@@ -2731,7 +2755,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "ESKI_DOMAIN: vymanga.net kapanmis, everythingmoe.com listeleme sayfasina 403 ile yonlendiriyor; alan adinda icerik yok."
     },
     "1377142050488011391": {
       "id": 1377142050488011391,
@@ -2778,10 +2803,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "yaoibar.gay",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "1377191865874405498": {
       "id": 1377191865874405498,
@@ -3034,7 +3058,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Madara temasi ama seri href'leri hex ile gizlenmis ('/#5137...'); HTML'de cozulmus /manga/ linki yok, JS cozuyor."
     },
     "1517957525448774817": {
       "id": 1517957525448774817,
@@ -3348,7 +3373,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "BULUNAMADI: Ozel blogger sablonu; post-body/entry-content siniflari eslesmedi, kart ve bolum secici olculemedi."
     },
     "1608870337387244709": {
       "id": 1608870337387244709,
@@ -3383,10 +3409,9 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "mangadeemak.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "1608872760522121285": {
       "id": 1608872760522121285,
@@ -3732,7 +3757,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: Vite SPA; /manga/<id> listesi var ama bolum listesi istemcide, /api/* SPA index donuyor."
     },
     "1608885648486679737": {
       "id": 1608885648486679737,
@@ -3925,7 +3951,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "SERBEST: Ana sayfa kartları JS ile doluyor (0 post linki), liste Blogger feed JSON ile geliyor ve feed seri+bölüm karışık; Smut/Ecchi etiketleri var."
     },
     "1619975144588948836": {
       "id": 1619975144588948836,
@@ -4465,7 +4492,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "list",
-      "reason": "harness: popüler liste boş"
+      "reason": "JS_RENDER: Vite SPA; /assets/api-QA2PVF0c.js icinde /works/{slug} var ama /works/, /api/works/, api.luxmanga.net/api/works, /v1/works hepsi 404; gorsel ucu bulunamadi."
     },
     "1757135486284259116": {
       "id": 1757135486284259116,
@@ -4511,6 +4538,30 @@
       },
       "device_step": "list",
       "kapali": true
+    },
+    "177199669003950156": {
+      "id": 177199669003950156,
+      "kind": "catalogue",
+      "title": "FuryoSociety",
+      "lang": "fr",
+      "nsfw": 0,
+      "domain": "furyosociety.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
+    "177546127898650049": {
+      "id": 177546127898650049,
+      "kind": "catalogue",
+      "title": "MangaOwl",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "vyvymanga.org",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "178171581382307178": {
       "id": 178171581382307178,
@@ -4601,6 +4652,18 @@
         "at": "2026-11-17T10:02:04Z"
       }
     },
+    "1843907598759145760": {
+      "id": 1843907598759145760,
+      "kind": "catalogue",
+      "title": "Noromax",
+      "lang": "id",
+      "nsfw": 0,
+      "domain": "noromax02.my.id",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "1845278797031432533": {
       "id": 1845278797031432533,
       "kind": "catalogue",
@@ -4616,7 +4679,8 @@
         "ms": 0,
         "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
         "at": "2026-11-17T18:04:21Z"
-      }
+      },
+      "reason": "LISTE_DUZELT: Okuyucu gorselleri sinifsiz <img>; container secicisi dogrulanmadi, wp-json/axn/v1/chapters/ ucu var."
     },
     "1847284941352855352": {
       "id": 1847284941352855352,
@@ -4898,6 +4962,18 @@
       },
       "device_step": "list"
     },
+    "1910862088388825602": {
+      "id": 1910862088388825602,
+      "kind": "catalogue",
+      "title": "Mangasusu",
+      "lang": "id",
+      "nsfw": 0,
+      "domain": "mangasusuku.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "1922179475422564101": {
       "id": 1922179475422564101,
       "kind": "engine",
@@ -4922,7 +4998,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "ESKI_DOMAIN: Sayfa yeni domaine tasindigini duyuruyor; hedef alan Cloudflare JS challenge donuyor."
     },
     "1927310685288413647": {
       "id": 1927310685288413647,
@@ -4934,7 +5011,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Kartlar ve bolum listesi istemcide uretiliyor; /api/manga 404, yalniz /search-live JSON donuyor."
     },
     "1929051402711187591": {
       "id": 1929051402711187591,
@@ -5415,7 +5493,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "pages"
+      "device_step": "pages",
+      "reason": "SERBEST: Tek gonderi = tek icerik; bolum listesi yok, gorseller gonderi HTML'inde."
     },
     "2121016891599622380": {
       "id": 2121016891599622380,
@@ -5428,7 +5507,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "search"
+      "device_step": "search",
+      "reason": "SERBEST: Bölüm listesi şablonda Blogger label feed ile JS çekiliyor (label adı doğrulanamadı), bölüm görselleri HTML içinde 25 adet."
     },
     "2121025303286850185": {
       "id": 2121025303286850185,
@@ -5490,10 +5570,9 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "viyafansub.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "2125177024463197399": {
       "id": 2125177024463197399,
@@ -5819,10 +5898,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangakings.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "2134596225128838841": {
       "id": 2134596225128838841,
@@ -5911,11 +5989,10 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "mangalivre.tv",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "2134596267842728044": {
       "id": 2134596267842728044,
@@ -6023,10 +6100,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangaokutr.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "2134596350520665723": {
       "id": 2134596350520665723,
@@ -6123,10 +6199,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "manga-sehri.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "2134596439020741272": {
       "id": 2134596439020741272,
@@ -6157,7 +6232,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CHAPTER_AJAX: manga-spark.com sparkmanga.net adresine yonlendiriyor; gorseller tempsparkio.sparkmanga.net uzerinden geliyor."
     },
     "2134596449442079703": {
       "id": 2134596449442079703,
@@ -6633,7 +6709,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "2134641150569758847": {
       "id": 2134641150569758847,
@@ -6798,6 +6875,18 @@
       "reason": "KAPALI: Cloudflare 523 origin yok",
       "unreachable": true
     },
+    "2145489765485420150": {
+      "id": 2145489765485420150,
+      "kind": "catalogue",
+      "title": "Mangas Origines",
+      "lang": "fr",
+      "nsfw": 0,
+      "domain": "mangas-origines.fr",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "2162105181326002302": {
       "id": 2162105181326002302,
       "kind": "engine",
@@ -6826,7 +6915,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "ESKI_DOMAIN: Sayfa meta refresh ile lunarx.to adresine yonlendiriyor; manga icerigi yok"
     },
     "2163489010838436047": {
       "id": 2163489010838436047,
@@ -7053,10 +7143,9 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "moondaisyscans.biz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "2268549974061786227": {
       "id": 2268549974061786227,
@@ -7518,7 +7607,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "search"
+      "device_step": "search",
+      "reason": "JS_RENDER: React MUI SPA (bundle.js); /manga HTMLinde seri linki yok"
     },
     "2424630613627178214": {
       "id": 2424630613627178214,
@@ -7585,11 +7675,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "daprob.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "2424632789065798594": {
       "id": 2424632789065798594,
@@ -7620,7 +7709,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Bolum listesi yalniz sablonda (#/chapter-{{number}}); /ajax/chapters ayni sayfayi dondu, admin-ajax 400."
     },
     "2424634671368246918": {
       "id": 2424634671368246918,
@@ -7720,11 +7810,10 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "gmanga.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "2424636302119245438": {
       "id": 2424636302119245438,
@@ -7760,11 +7849,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "01.holotoon.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "2424638868588394576": {
       "id": 2424638868588394576,
@@ -7790,7 +7878,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "pages"
+      "device_step": "pages",
+      "reason": "JS_RENDER: Vue SPA (index-Cu-xtsAi.js); api.komiic.com DNS cozulmuyor, uclara ulasilamadi"
     },
     "2424639028759259211": {
       "id": 2424639028759259211,
@@ -7918,11 +8007,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "ngomik.mom",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "2424642277032682273": {
       "id": 2424642277032682273,
@@ -7966,7 +8054,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "pages"
+      "device_step": "pages",
+      "reason": "JS_RENDER: Blogger MangaDB_v6 (galax ile ayni sablon), icerik JS ile basiliyor."
     },
     "2424645511239002777": {
       "id": 2424645511239002777,
@@ -8059,7 +8148,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "covers"
+      "device_step": "covers",
+      "reason": "JS_RENDER: weloma.net adresine yonlendiriyor; kartlarda data-id bos, seri linki HTMLde yok"
     },
     "2424650231537006054": {
       "id": 2424650231537006054,
@@ -8094,10 +8184,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "yaoitr.fun",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "2424650585843186305": {
       "id": 2424650585843186305,
@@ -8231,7 +8320,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Bolum listesi ve sayfalar jQuery ajax (/admin-ajax) ile geliyor; HTML'de gorsel yok."
     },
     "2462254973344388239": {
       "id": 2462254973344388239,
@@ -8541,7 +8631,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "pages"
+      "device_step": "pages",
+      "reason": "SERBEST: Tek gonderi = tek icerik; bolum listesi yok, gorseller gonderi HTML'inde."
     },
     "2586288572012258029": {
       "id": 2586288572012258029,
@@ -8641,6 +8732,18 @@
       "device_step": "list",
       "kapali": true
     },
+    "2661323974230789189": {
+      "id": 2661323974230789189,
+      "kind": "catalogue",
+      "title": "KomikIndo",
+      "lang": "id",
+      "nsfw": 0,
+      "domain": "komikindo.ch",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "2661509985880858827": {
       "id": 2661509985880858827,
       "kind": "catalogue",
@@ -8658,7 +8761,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "bölüm sayfası 3 denemede zaman aşımı; ts_reader doğrulanamadı"
+      "reason": "LISTE_DUZELT: Detay ve bolum istekleri iki denemede 25s zaman asimina ugradi, bolum secici olculemedi."
     },
     "2662341039809361960": {
       "id": 2662341039809361960,
@@ -8842,11 +8945,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "jiangzaitoon.top",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "2693529818399974276": {
       "id": 2693529818399974276,
@@ -8885,7 +8987,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: Next.js istemci tarafli; denenen uclar: /api/manga, /api/mangas, /api/series, /api/home, /api/comics."
     },
     "2725895723461968521": {
       "id": 2725895723461968521,
@@ -8902,7 +9005,8 @@
         "ms": 0,
         "detail": "liste 0 / bölüm 0 / sayfa 0",
         "at": "2026-11-17T18:44:56Z"
-      }
+      },
+      "reason": "SERBEST: Novel sitesi: bolum sayfasi 316KB metin, gorsel sayfa yok; seri/bolum linkleri HTML de calisiyor."
     },
     "2749533608105807003": {
       "id": 2749533608105807003,
@@ -9289,7 +9393,9 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "2919132306397933009": {
       "id": 2919132306397933009,
@@ -9530,7 +9636,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Seri /comic/<slug>, dil sayfasi /comic/<slug>/<lang>; dil sayfasinda bolum linki HTML'de yok, kartlar JS ile doluyor."
     },
     "299562798421296729": {
       "id": 299562798421296729,
@@ -9655,25 +9762,12 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "klikmanga.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "search: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:34:35Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "search",
-      "reason": "DIGER: govde yok;redir:https://klikmanga.org/;fallback:http://klikmanga.com/",
-      "unreachable": true
+      "reason": "DIGER: govde yok;redir:https://klikmanga.org/;fallback:http://klikmanga.com/"
     },
     "3014905157894709296": {
       "id": 3014905157894709296,
@@ -9876,11 +9970,10 @@
       "lang": "fr",
       "nsfw": 1,
       "domain": "hentai.scantrad-vf.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "3092217945331933279": {
       "id": 3092217945331933279,
@@ -9893,7 +9986,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "ESKI_DOMAIN: revolutionscantrad.com manganimeden.net adresine yonlendiriyor; kart siniflari manga-info/manga-cover olculdu, item secici dogrulanmadi."
     },
     "3102562105875263557": {
       "id": 3102562105875263557,
@@ -10340,7 +10434,9 @@
         "detail": "CLOUDFLARE: Tüm HTML ve JSON uçları Cloudflare challenge döndürüyor, HTML alınamadığı için script/inline JSON avı yapılamadı. Denenen uçlar: wp-json wp/v2/manga, /api/v1/series/{slug}/chapters/{bolum}, /wp-json/. Aşılamadı.",
         "at": "2026-11-17T18:15:56Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "3201609293231115184": {
       "id": 3201609293231115184,
@@ -10523,7 +10619,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "search"
+      "device_step": "search",
+      "reason": "JS_RENDER: Laravel tabanli SPA (Loading); app.js ve /api/series denendi, api izi bulunamadi."
     },
     "3272070851841154384": {
       "id": 3272070851841154384,
@@ -10935,7 +11032,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: Blogger temasi istemci tarafli; /feeds/posts/default?alt=json bos (1394b)."
     },
     "343839699839506457": {
       "id": 343839699839506457,
@@ -11180,7 +11278,9 @@
         "ms": 0,
         "detail": "JS_RENDER: Her yol (/, /manga/, /?s=naruto) 200/1686 bayt ayni 'Bot Verification' sayfasi; LiteSpeed reCAPTCHA gate (sitekey 6Leio6YU...). /wp-json/wp/v2/manga bos yanit (curl 52). Denenen: /, /manga/, /?s=, /wp-json/wp/v2/manga. API izi yok.",
         "at": "2026-11-17T17:40:26Z"
-      }
+      },
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "3581135968918069737": {
       "id": 3581135968918069737,
@@ -11245,7 +11345,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "SERBEST: FoolSlide klonu; detay GET'te 'Adult content notice' donuyor."
     },
     "3620657863442801971": {
       "id": 3620657863442801971,
@@ -11306,15 +11407,10 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "lekmanga.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "IOException: Cloudflare bypass currently disabled",
-        "at": "2026-11-17T18:44:56Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "3625557739488350650": {
       "id": 3625557739488350650,
@@ -11428,7 +11524,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "3673016313234795202": {
       "id": 3673016313234795202,
@@ -11463,10 +11560,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "lilyumfansub.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "3688690594033706893": {
       "id": 3688690594033706893,
@@ -11615,10 +11711,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "culturesubs.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "3736714740149822308": {
       "id": 3736714740149822308,
@@ -12590,7 +12685,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "CHAPTER_AJAX: Madara; detayda bolum linki yok ama POST admin-ajax action=manga_get_chapters&manga=363120 14 bolum linki dondurdu (GET ajax/chapters/?t=1 SSR sayfa donuyor)."
     },
     "3758248374558119257": {
       "id": 3758248374558119257,
@@ -12625,10 +12721,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangagezginim.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "3758368269838243122": {
       "id": 3758368269838243122,
@@ -12693,7 +12788,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Madara temasi; ilk istek 522 dondu, ikinci 200. Seri ve bolum anchor'lari SSR'de bos, manga id'si bulunamadigi icin admin-ajax dogrulanamadi."
     },
     "3758447685694539407": {
       "id": 3758447685694539407,
@@ -12861,10 +12957,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.mangatilkisi.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "3758899467340376098": {
       "id": 3758899467340376098,
@@ -13450,6 +13545,18 @@
         "at": "2026-11-17T10:02:04Z"
       }
     },
+    "3864261013583477357": {
+      "id": 3864261013583477357,
+      "kind": "catalogue",
+      "title": "Say Hentai",
+      "lang": "vi",
+      "nsfw": 1,
+      "domain": "sayhentaii.art",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "386746428516970468": {
       "id": 386746428516970468,
       "kind": "catalogue",
@@ -13807,7 +13914,8 @@
       ],
       "state": "pending",
       "device_step": "list",
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "3943041137748889772": {
       "id": 3943041137748889772,
@@ -14249,7 +14357,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: comicazen.com comicaso.com a yonlendiriyor; icerik v3.mangacaso.web.id uygulama kabugunda."
     },
     "3994141251366129846": {
       "id": 3994141251366129846,
@@ -14282,7 +14391,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "covers"
+      "device_step": "covers",
+      "reason": "PAGE_API: Vue SPA; HTML 3 KB, kart yok. API data[] icinde id/name/cover_url donuyor; bolum ucunun tam yolu olculmedi."
     },
     "4005863284828173913": {
       "id": 4005863284828173913,
@@ -14313,7 +14423,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Next.js (self.__next_f); bolum sayfasi SSR ve gorseller media.omegascans.org'dan geliyor ama seri sayfasinda bolum linki yok, liste RSC payload'inda."
     },
     "4008834734900539866": {
       "id": 4008834734900539866,
@@ -14371,7 +14482,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "pages"
+      "device_step": "pages",
+      "reason": "LISTE_DUZELT: v2.dilar.tube dilar.tube adresine yonlendiriyor; detay SPA, bolumler /api/series/{id} releases dizisinde, sayfa ucu dogrulanmadi."
     },
     "4017854140074331651": {
       "id": 4017854140074331651,
@@ -15026,7 +15138,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "chapters",
-      "reason": "harness: bölüm listesi boş"
+      "reason": "JS_RENDER: Vite SPA; /manga/<id> listesi var ama bolum listesi istemcide, /api/* SPA index donuyor."
     },
     "4081958157659691020": {
       "id": 4081958157659691020,
@@ -15039,7 +15151,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: Blogger feed calisiyor ama ana sayfada post bagi yok; liste istemci tarafinda kuruluyor."
     },
     "4084813374125857116": {
       "id": 4084813374125857116,
@@ -15358,7 +15471,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Bolum listesi JS ile doluyor (items-block bos); /manga/2263_marie/1/ ve /vol1/1/ 404"
     },
     "4110592311627303703": {
       "id": 4110592311627303703,
@@ -15447,10 +15561,9 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "hiper.cool",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "4113976277368451618": {
       "id": 4113976277368451618,
@@ -15511,7 +15624,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: mangabats.com -> www.mangabats.com; kart bloklari var ama seri href'i yok (yalniz /history, /images), liste JS ile doluyor."
     },
     "4118551129163381075": {
       "id": 4118551129163381075,
@@ -15643,10 +15757,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "jellyring.co",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "4168662132362877672": {
       "id": 4168662132362877672,
@@ -15745,11 +15858,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "katakomik.my.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "4186957739764566600": {
       "id": 4186957739764566600,
@@ -16203,11 +16315,10 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "limboscan.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "pages"
+      "packages": [],
+      "state": "dead",
+      "device_step": "pages",
+      "kapali": true
     },
     "4225231211802280181": {
       "id": 4225231211802280181,
@@ -16317,7 +16428,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Madara temasi ama SSR'de seri ve bolum anchor'i yok (chapter-item div'leri bos, data-id yok); /manga/ listesi 404, admin-ajax icin manga id'si bulunamadi."
     },
     "4234251741855210585": {
       "id": 4234251741855210585,
@@ -16585,7 +16697,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "chapters"
+      "device_step": "chapters",
+      "reason": "READER_LAZY: Okuyucu gorselleri data-src=/manga/content/comics/... seklinde lazy; DLE CMS"
     },
     "4234251764787398864": {
       "id": 4234251764787398864,
@@ -17056,11 +17169,10 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "www.manga-soul.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "4234251773163615050": {
       "id": 4234251773163615050,
@@ -17117,7 +17229,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Tailwind SPA; /browse sayfasinda tek bir seri anchor'i yok, kartlar istemci tarafinda ciziliyor."
     },
     "4234251773660946004": {
       "id": 4234251773660946004,
@@ -17130,7 +17243,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "PAGE_API: Tam SPA; window.__MT_SERIES_SEED__ ve /api/trpc uclari var (content.getSeriesBySlug, content.getChapterPages, content.getChapterPagesWeb). tRPC input semasi dogrulanmadi, pageApiItems yazilmadi."
     },
     "4234251773842224359": {
       "id": 4234251773842224359,
@@ -17247,7 +17361,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: Tamami istemci tarafli SPA; HTML'de tek satir baslik disinda veri yok."
     },
     "4234253159748739998": {
       "id": 4234253159748739998,
@@ -17314,10 +17429,9 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "www.manhuakey.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "4234253160291203858": {
       "id": 4234253160291203858,
@@ -17492,10 +17606,9 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "manycomic.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "4234516664039514459": {
       "id": 4234516664039514459,
@@ -17637,7 +17750,9 @@
         "ms": 0,
         "detail": "CF",
         "at": "2026-11-16T22:05:11.851283Z"
-      }
+      },
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "4250461281253797656": {
       "id": 4250461281253797656,
@@ -17649,7 +17764,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "SERBEST: Site giriş zorunlu (title: Giriş Gerekli); REST türlerinde manga/series CPT yok, yalnız post/page açık."
     },
     "4250602956249399538": {
       "id": 4250602956249399538,
@@ -18051,7 +18167,9 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "4317299584788043221": {
       "id": 4317299584788043221,
@@ -18063,7 +18181,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "BULUNAMADI: Gonderi galerisi: bolum bagi yok, tum sayfalar tek gonderide."
     },
     "4317677246683745288": {
       "id": 4317677246683745288,
@@ -18246,15 +18365,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "petrotechsociety.org",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: UnsupportedOperationException",
-        "at": "2026-11-17T19:55:06Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "list",
       "reason": "harness: UnsupportedOperationException"
     },
@@ -18431,7 +18545,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "ESKI_DOMAIN: Sayfa yeni adres duyurusu; yeni adres rimuscan.fr, hedefin canli oldugu dogrulanmadi."
     },
     "4368184715532928873": {
       "id": 4368184715532928873,
@@ -18487,7 +18602,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: HTML kabuk; kart/seri linki yok. app.js+search.js yalniz /auth/* uclari iceriyor; seri listesi ucu bulunamadi."
     },
     "4377972755806414361": {
       "id": 4377972755806414361,
@@ -18496,10 +18612,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "ruyamanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "4381294723770585814": {
       "id": 4381294723770585814,
@@ -18512,7 +18627,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: SPA; kitap rotalari /book/<hash>, icerik istemcide uretiliyor."
     },
     "4386994428803572385": {
       "id": 4386994428803572385,
@@ -18791,7 +18907,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "PAGE_API: Blogger feed'i bolum gonderilerini veriyor; liste/okuyucu secicisi dogrulanmadi."
     },
     "4398367252779217148": {
       "id": 4398367252779217148,
@@ -18804,7 +18921,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: soulscans.my.id -> v1.soulscans.asia; SvelteKit devalue verisi, bolum listesi istemcide."
     },
     "4401559982712521884": {
       "id": 4401559982712521884,
@@ -18835,7 +18953,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "covers"
+      "device_step": "covers",
+      "reason": "PAGE_SCRIPT: Bolum gorselleri ts_reader.run sources[].images icinde c.sushiscan.net uzerinden geliyor."
     },
     "4403238292814890068": {
       "id": 4403238292814890068,
@@ -18848,7 +18967,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: sussytoons.wtf vegitoons.black'a yonlendiriyor; Vite SPA + api host'u var ama GET uclari 404/405."
     },
     "4403913632851110207": {
       "id": 4403913632851110207,
@@ -18888,10 +19008,9 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "sweetscan.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "4413542524968942590": {
       "id": 4413542524968942590,
@@ -19144,7 +19263,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Blogger; gonderiler /feeds/posts/default uzerinden JS ile basiliyor."
     },
     "4423618538247237882": {
       "id": 4423618538247237882,
@@ -19221,7 +19341,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: mangamonk.com comizy.io adresine yonlendiriyor; comizy.io curl cevabi 20KB SEO kabugu, script ve seri linki yok."
     },
     "4426281071318329362": {
       "id": 4426281071318329362,
@@ -19569,7 +19690,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: westmanga.tv -> westmanga.site ara sayfasi -> v1.westmanga.top inline script SPA."
     },
     "4493078286094002534": {
       "id": 4493078286094002534,
@@ -19724,7 +19846,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "list",
-      "reason": "harness: popüler liste boş"
+      "reason": "JS_RENDER: api.remanga.org/api/titles 404, /api/v1/titles 404, remanga.org/api/search 404, RSC 307; denenen uclar sonucsuz"
     },
     "4550544076198380891": {
       "id": 4550544076198380891,
@@ -19737,7 +19859,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "search"
+      "device_step": "search",
+      "reason": "CHAPTER_SECICI: Blogger; seri sayfasi post'un kendisi (.chapternum a ile bolumler), bolum gorselleri Blogger separator div'lerinde. Ana sayfa indeksinde kart sinifi bulunamadi."
     },
     "4551735306240529483": {
       "id": 4551735306240529483,
@@ -19746,11 +19869,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "hadesnofansub.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "4554859152419927880": {
       "id": 4554859152419927880,
@@ -19910,7 +20032,8 @@
         "ms": 0,
         "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
         "at": "2026-11-17T18:44:56Z"
-      }
+      },
+      "reason": "JS_RENDER: Bolum listesi JS ile doluyor (items-block bos); /manga/2263_marie/1/ ve /vol1/1/ 404"
     },
     "4621767986997099328": {
       "id": 4621767986997099328,
@@ -19965,7 +20088,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: Vite SPA; yalniz /api/admin/* uclari okunabildi, icerik ucu bulunamadi."
     },
     "4630567486225422818": {
       "id": 4630567486225422818,
@@ -20069,7 +20193,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "LISTE_DUZELT: Okuyucu gorselleri sinifsiz <img>; container secicisi dogrulanmadi, wp-json/axn/v1/chapters/ ucu var."
     },
     "4645282634064046819": {
       "id": 4645282634064046819,
@@ -20078,10 +20203,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "anisamanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "4648495069634047799": {
       "id": 4648495069634047799,
@@ -20130,7 +20254,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: JS cookie/JWT yonlendirmesi (?ch=1&js=...), HTML govde yok."
     },
     "4674982239962707571": {
       "id": 4674982239962707571,
@@ -20161,7 +20286,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "ESKI_DOMAIN: drakecomic.org drakecomic.net adresine yonlendiriyor; Next.js, seri sayfasi /collections/<slug> ama HTML de bolum linki yok (flight verisi)."
     },
     "4690519039882039315": {
       "id": 4690519039882039315,
@@ -20227,10 +20353,9 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "readfreecomics.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "4720786131215367529": {
       "id": 4720786131215367529,
@@ -20304,7 +20429,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Tema 'liliana' kendi crypto.js'ini yukluyor ve kart icerigi JS ile cozuluyor; all-manga sayfasinda seri href'i yok, denenen: /all-manga/1 HTML, inline JSON, /api/ izi."
     },
     "4767926519332995781": {
       "id": 4767926519332995781,
@@ -20453,7 +20579,8 @@
       ],
       "state": "pending",
       "device_step": "list",
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "4850244828520154280": {
       "id": 4850244828520154280,
@@ -20506,15 +20633,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lectorhub.j5z.xyz",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: list=25 chapters=20 pages=0",
-        "at": "2026-11-17T20:49:42.366Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "reason": "harness: list=25 chapters=20 pages=0"
     },
     "4856925517439351632": {
@@ -20554,7 +20676,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: Yanit JWTli ?ch=1&js=... adresine window.location.replace yapan JS kapisi; HTML icerik yok"
     },
     "4863545277450334415": {
       "id": 4863545277450334415,
@@ -20922,10 +21045,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "tempestfansub.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "507162270957965065": {
       "id": 507162270957965065,
@@ -21289,10 +21411,9 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "en.huntersscan.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "526711023258927537": {
       "id": 526711023258927537,
@@ -21327,11 +21448,10 @@
       "lang": "fr",
       "nsfw": 1,
       "domain": "hentai-origines.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "5303101850799378736": {
       "id": 5303101850799378736,
@@ -21609,10 +21729,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "prunusscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "5443582880216157130": {
       "id": 5443582880216157130,
@@ -21655,7 +21774,9 @@
         "ms": 0,
         "detail": "CLOUDFLARE: Cloudflare 'Just a moment...' 403 (5456 bayt). Denenen: GET / ve GET /wp-json/wp/v2/wp-manga?per_page=1 -> 403/5613 ayni challenge. admin-ajax denenmedi (403 sonrasi anlamsiz). HTML ve JSON ucu kapali, detay/bolum olculemedi.",
         "at": "2026-11-17T18:15:56Z"
-      }
+      },
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "5450546641896784725": {
       "id": 5450546641896784725,
@@ -21820,7 +21941,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: Next.js SPA; api host'unda /api/mangas 401 (yetki istiyor), diger adaylar 404."
     },
     "5510327410107376308": {
       "id": 5510327410107376308,
@@ -21839,6 +21961,18 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "dead": true
+    },
+    "5520987628326976642": {
+      "id": 5520987628326976642,
+      "kind": "catalogue",
+      "title": "Brakeout",
+      "lang": "es",
+      "nsfw": 0,
+      "domain": "brakeout.xyz",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5564279680493652484": {
       "id": 5564279680493652484,
@@ -21982,7 +22116,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "5688257569344618943": {
       "id": 5688257569344618943,
@@ -22098,6 +22233,18 @@
       "dead": true,
       "unreachable": true
     },
+    "5772350135376077015": {
+      "id": 5772350135376077015,
+      "kind": "catalogue",
+      "title": "SkyMangas",
+      "lang": "es",
+      "nsfw": 0,
+      "domain": "skymangas.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "5779873155655263510": {
       "id": 5779873155655263510,
       "kind": "engine",
@@ -22208,10 +22355,9 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "birdtoon.shop",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "5780904096827346445": {
       "id": 5780904096827346445,
@@ -22224,7 +22370,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "JS_RENDER: Laravel SPA; app.js icinde /api/ izi bulunamadi, liste yolu 404."
     },
     "5781045829398655397": {
       "id": 5781045829398655397,
@@ -22371,11 +22518,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "dtupscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "5783543145789372133": {
       "id": 5783543145789372133,
@@ -22520,7 +22666,9 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "5785150848886155708": {
       "id": 5785150848886155708,
@@ -22578,7 +22726,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "pages"
+      "device_step": "pages",
+      "reason": "PAGE_SCRIPT: Bolum gorselleri inline scriptte atob(slides_p_path[...]) ile base64 cozuluyor"
     },
     "5785631191583536485": {
       "id": 5785631191583536485,
@@ -22688,7 +22837,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "IMZA_GEREKLI: SPA; veri /api/trpc uzerinden ve 401 \"Invalid or missing API Key\" donuyor; API anahtari olmadan okunamaz."
     },
     "5786054036392098798": {
       "id": 5786054036392098798,
@@ -22885,7 +23035,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Liste ve bolum listesi HTML de; bolum sayfasi 0 img (Next.js, gorseller istemci tarafinda). Denenen: /api/* izi ve _next chunk adlarinda chapter/read gecen dosya bulunamadi."
     },
     "5788199800528750443": {
       "id": 5788199800528750443,
@@ -23056,7 +23207,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "LISTE_DUZELT: Detay ve bolum istekleri iki denemede 25s zaman asimina ugradi, bolum secici olculemedi."
     },
     "5788353350203111296": {
       "id": 5788353350203111296,
@@ -23087,7 +23239,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "5788353350231800029": {
       "id": 5788353350231800029,
@@ -23266,7 +23419,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "pages"
+      "device_step": "pages",
+      "reason": "JS_RENDER: Laravel + js/app.js SPA; /comics HTMLi bos, /api/search 404"
     },
     "5789341099061895582": {
       "id": 5789341099061895582,
@@ -23278,7 +23432,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Vite SPA; /assets/api-QA2PVF0c.js icinde /works/{slug} var ama /works/, /api/works/, api.luxmanga.net/api/works, /v1/works hepsi 404; gorsel ucu bulunamadi."
     },
     "5789618909581566450": {
       "id": 5789618909581566450,
@@ -23461,10 +23616,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangacim.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "5789623240607215930": {
       "id": 5789623240607215930,
@@ -23473,10 +23627,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangacix.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "5789623240639777024": {
       "id": 5789623240639777024,
@@ -23735,7 +23888,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CHAPTER_SECICI: Seri URL kalibi /raw/<slug>, bolum /raw/<slug>/<x>; okuyucu gorselleri blogger.googleusercontent.com uzerinde"
     },
     "5789623241051339689": {
       "id": 5789623241051339689,
@@ -23891,7 +24045,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "pages"
+      "device_step": "pages",
+      "reason": "CHAPTER_SECICI: Blogger, yokai ile ayni sablon (chapternum/chapterdate); test edilen post slug'i 404 dondu, gecerli seri slug'i feed'den alinmali. Okuyucu secici olculmedi."
     },
     "5789623285808801851": {
       "id": 5789623285808801851,
@@ -24333,7 +24488,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "SERBEST: 429 Too many requests; uc denemede de engel, HTML alinamadi."
     },
     "5791086280610013818": {
       "id": 5791086280610013818,
@@ -24901,11 +25057,10 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "www.umimanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "search"
+      "packages": [],
+      "state": "dead",
+      "device_step": "search",
+      "kapali": true
     },
     "5797114347977132736": {
       "id": 5797114347977132736,
@@ -24930,7 +25085,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "SERBEST: Novel sitesi: bolum sayfasi 316KB metin, gorsel sayfa yok; seri/bolum linkleri HTML de calisiyor."
     },
     "5798654863193396278": {
       "id": 5798654863193396278,
@@ -24961,7 +25117,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "ESKI_DOMAIN: v9 v18.yaoi-chan.me adresine yonlendiriyor; v18 502 ve ardindan zaman asimi, config bos"
     },
     "5799459692662431969": {
       "id": 5799459692662431969,
@@ -24970,10 +25127,9 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "yaoiflix.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "5799459698953933208": {
       "id": 5799459698953933208,
@@ -25267,10 +25423,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangaefendisi.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "5827014979493050397": {
       "id": 5827014979493050397,
@@ -25305,11 +25460,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaleveling.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "reason": "DIGER: ilk deneme 200/27521; sonraki 3 deneme 000"
+      "packages": [],
+      "state": "dead",
+      "reason": "DIGER: ilk deneme 200/27521; sonraki 3 deneme 000",
+      "kapali": true
     },
     "5831517820660691357": {
       "id": 5831517820660691357,
@@ -25321,7 +25475,9 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "5831741679683196228": {
       "id": 5831741679683196228,
@@ -25375,10 +25531,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "manga-sehri.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "5835717275901038433": {
       "id": 5835717275901038433,
@@ -25550,7 +25705,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "5890559186142010175": {
       "id": 5890559186142010175,
@@ -25633,6 +25789,18 @@
         "detail": "",
         "at": "2026-11-17T10:02:04Z"
       }
+    },
+    "5922755793366266846": {
+      "id": 5922755793366266846,
+      "kind": "catalogue",
+      "title": "Sekte Doujin",
+      "lang": "id",
+      "nsfw": 1,
+      "domain": "sektedoujin.cc",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5925244894679392886": {
       "id": 5925244894679392886,
@@ -25803,7 +25971,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "search"
+      "device_step": "search",
+      "reason": "LISTE_DUZELT: Bolum gorselleri canvas data-page-url icinde; motor rawImages yedegi 01.webp adlarini topluyor."
     },
     "5972280998053804390": {
       "id": 5972280998053804390,
@@ -25831,10 +26000,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "kedi.to",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "5972281005079028369": {
       "id": 5972281005079028369,
@@ -26005,7 +26173,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "LISTE_DUZELT: Madara kartlarinda tirnakli olmayan href var; bolum ajax ucu 307 redirect dongusune girdi."
     },
     "5986107400386508090": {
       "id": 5986107400386508090,
@@ -26468,7 +26637,8 @@
         "detail": "covers: Cloudflare engelledi, manuel doğrulama gerekli",
         "at": "2026-11-17T09:52:10Z"
       },
-      "device_step": "covers"
+      "device_step": "covers",
+      "reason": "JS_RENDER: mangabats.com -> www.mangabats.com; kart bloklari var ama seri href'i yok (yalniz /history, /images), liste JS ile doluyor."
     },
     "6074095230818574849": {
       "id": 6074095230818574849,
@@ -26619,6 +26789,18 @@
         "detail": "liste 0 / bölüm 0 / sayfa 0",
         "at": "2026-11-17T18:44:56Z"
       }
+    },
+    "6080646864642055960": {
+      "id": 6080646864642055960,
+      "kind": "catalogue",
+      "title": "mangalami.com",
+      "lang": "th",
+      "nsfw": 0,
+      "domain": "mangalami.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6084020956957541828": {
       "id": 6084020956957541828,
@@ -27540,7 +27722,8 @@
         "ms": 0,
         "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
         "at": "2026-11-17T18:44:56Z"
-      }
+      },
+      "reason": "JS_RENDER: Liste ve bolum listesi HTML de; bolum sayfasi 0 img (Next.js, gorseller istemci tarafinda). Denenen: /api/* izi ve _next chunk adlarinda chapter/read gecen dosya bulunamadi."
     },
     "6336788940996830678": {
       "id": 6336788940996830678,
@@ -27566,7 +27749,8 @@
       ],
       "state": "pending",
       "device_step": "list",
-      "sorun": "cloudflare"
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "6359822944885655295": {
       "id": 6359822944885655295,
@@ -27654,7 +27838,8 @@
         "ms": 0,
         "detail": "BULUNAMADI: Ana sayfa yalnizca tema CSS'i + avatar yukleme JS'i donuyor, tek bir seri linki yok (manga/comic/seri kalibi 0 eslesme). /manga/ istegi 200 ama <title>Giris Gerekli< olan giris duvarina dusuyor. /wp-json/wp/v2/manga -> 404, ana sayfada /api/, fetch(, axios. izi yok (yalniz admin-ajax.php referansi). Icerik giris gerektirdigi icin liste/bolum/okuyucu olculemedi.",
         "at": "2026-11-17T18:15:56Z"
-      }
+      },
+      "reason": "SERBEST: Site giriş zorunlu (title: Giriş Gerekli); REST türlerinde manga/series CPT yok, yalnız post/page açık."
     },
     "6377507938794774820": {
       "id": 6377507938794774820,
@@ -27666,7 +27851,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "BULUNAMADI: Ana sayfada 57 chapter-item var ama seri/detay linki yok (tum 204 derin link kategori/odeme sayfalari); liste ucu olculemedi."
     },
     "6379770814877065740": {
       "id": 6379770814877065740,
@@ -27771,7 +27957,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Laravel+Livewire; seri linkleri HTML'de var ama detayda bolum listesi yok, home.js/app.js icinde /api yolu bulunamadi, livewire bileseni istemci tarafinda yukleniyor."
     },
     "6387967424523772208": {
       "id": 6387967424523772208,
@@ -27821,7 +28008,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "READER_DUZELT: Madara; bolum sayfasindaki 6 img kapak onerileri, gercek sayfalar \"*-r2-data\" attribute undeki JSON icinde ({\"images\":[{\"src\":...}]) — img etiketi yok."
     },
     "6407946477640517166": {
       "id": 6407946477640517166,
@@ -27917,7 +28105,9 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "6429679440215957503": {
       "id": 6429679440215957503,
@@ -27930,7 +28120,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "SERBEST: Bolum listesi istemci tarafinda (next_f icinde tek chapter-1 var); okuyucu HTML'inde gercek sayfa gorselleri var."
     },
     "6443267486824169723": {
       "id": 6443267486824169723,
@@ -28197,6 +28388,18 @@
       "device_step": "list",
       "reason": "DIGER: 301 https ayni host"
     },
+    "6535151987581154260": {
+      "id": 6535151987581154260,
+      "kind": "catalogue",
+      "title": "Olympus Scanlation",
+      "lang": "es",
+      "nsfw": 0,
+      "domain": "olympusbiblioteca.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "6537085686219641703": {
       "id": 6537085686219641703,
       "kind": "engine",
@@ -28264,7 +28467,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "6560643256604346821": {
       "id": 6560643256604346821,
@@ -28382,6 +28586,18 @@
         "at": "2026-11-17T10:02:04Z"
       }
     },
+    "6611281688307269259": {
+      "id": 6611281688307269259,
+      "kind": "catalogue",
+      "title": "Assorted Scans",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "assortedscans.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "661348012455677696": {
       "id": 661348012455677696,
       "kind": "catalogue",
@@ -28475,7 +28691,8 @@
         "ms": 0,
         "detail": "liste/sayfa bos (harness)",
         "at": "2026-11-17T18:04:21Z"
-      }
+      },
+      "reason": "SERBEST: Bölüm listesi şablonda Blogger label feed ile JS çekiliyor (label adı doğrulanamadı), bölüm görselleri HTML içinde 25 adet."
     },
     "6620603193106345631": {
       "id": 6620603193106345631,
@@ -28514,7 +28731,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "pages"
+      "device_step": "pages",
+      "reason": "JS_RENDER: Blogger MangaDB_v6; /feeds/posts/default JSON 200 ama engine listJson duz anahtar bekliyor, icerik JS ile basiliyor."
     },
     "6631366457942760323": {
       "id": 6631366457942760323,
@@ -28868,7 +29086,9 @@
         "detail": "CLOUDFLARE: Ana sayfa ve /wp-json/wp/v2/manga?search=x ayni Cloudflare challenge'ini donduruyor: title 'Just a moment...', 403, 5460/5602 bayt, script-src challenges.cloudflare.com. HTML'de Madara/WP izi yok, API avi yapilamadi (wp-json de ayni duvarda). Mevcut kayit engine=madara, status=failed.",
         "at": "2026-11-17T18:15:56Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "673270202559723773": {
       "id": 673270202559723773,
@@ -28880,7 +29100,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "IMZA_GEREKLI: SPA; /api/v1/manga 403 {\"message\":\"Missing token\",\"code\":\"missing_token\"}; token/imza olmadan icerik alinamaz."
     },
     "673270202559783355": {
       "id": 673270202559783355,
@@ -29000,7 +29221,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: Ozel JS guard sayfasi donuyor, HTML icerik yok."
     },
     "673270492982977468": {
       "id": 673270492982977468,
@@ -29099,10 +29321,9 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "utoon.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "673270826728541468": {
       "id": 673270826728541468,
@@ -29146,7 +29367,9 @@
         "detail": "Kapak 404 gercek: cdn.pianmanga.me data-src iki ayri URL 404 (text/html) dondu. List saglam (16 kart).",
         "at": "2026-11-17T15:18:20.071105Z"
       },
-      "device_step": "covers"
+      "device_step": "covers",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "6778680128073846783": {
       "id": 6778680128073846783,
@@ -29226,11 +29449,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "territorioleal.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "6820752722408743171": {
       "id": 6820752722408743171,
@@ -29634,7 +29856,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "6980975435194571714": {
       "id": 6980975435194571714,
@@ -29723,10 +29946,9 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "lectorikigai.acamu.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "7032361130743410061": {
       "id": 7032361130743410061,
@@ -29947,7 +30169,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "7060977346741045579": {
       "id": 7060977346741045579,
@@ -30327,7 +30550,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "LISTE_DUZELT: Bolum ve /manga/ istekleri 504 Gateway Timeout; yalnizca kart sinifi olculdu."
     },
     "7199847461939925125": {
       "id": 7199847461939925125,
@@ -30346,7 +30570,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "reader-blob.js obfuscated, HTML'de sayfa adresi yok"
+      "reason": "JS_RENDER: Bolum listesi ve sayfalar jQuery ajax (/admin-ajax) ile geliyor; HTML'de gorsel yok."
     },
     "7206313674903334634": {
       "id": 7206313674903334634,
@@ -30640,7 +30864,9 @@
         "ms": 0,
         "detail": "CF",
         "at": "2026-11-16T22:05:11.851283Z"
-      }
+      },
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "7339138535602617755": {
       "id": 7339138535602617755,
@@ -30695,10 +30921,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "tempestscans.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "7367496482927145507": {
       "id": 7367496482927145507,
@@ -30738,6 +30963,18 @@
       "device_step": "list",
       "reason": "OLU: https/http/www uc denemede zaman asimi",
       "dead": true
+    },
+    "7367967526739481108": {
+      "id": 7367967526739481108,
+      "kind": "catalogue",
+      "title": "Manhua Top",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "manhuatop.org",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "7368085083996674415": {
       "id": 7368085083996674415,
@@ -30809,11 +31046,10 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "pinkteacomics.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "7418352862295975887": {
       "id": 7418352862295975887,
@@ -30905,11 +31141,10 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "hangtruyen.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "7422890420858543832": {
       "id": 7422890420858543832,
@@ -30944,10 +31179,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "hayalistic.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "7437503977254350462": {
       "id": 7437503977254350462,
@@ -31080,7 +31314,7 @@
         "detail": "harness: OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
         "at": "2026-11-17T20:49:42.366Z"
       },
-      "reason": "harness: OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
+      "reason": "JS_RENDER: Madara temasi; ilk istek 522 dondu, ikinci 200. Seri ve bolum anchor'lari SSR'de bos, manga id'si bulunamadigi icin admin-ajax dogrulanamadi."
     },
     "7521631886315243057": {
       "id": 7521631886315243057,
@@ -31092,7 +31326,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: 18porncomic.com adresine yonlendiriyor; bolum gorselleri HTML de yok, script icinde base64 slides_p_path dizisinden atob ile uretiliyor."
     },
     "7521631900297857558": {
       "id": 7521631900297857558,
@@ -31104,7 +31339,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "READER_DUZELT: Her seri tek post galerisi; bolum listesi yok, gorseller detay sayfasinda entry-content icinde img.openhentai.net uzerinden geliyor."
     },
     "7521631900371292781": {
       "id": 7521631900371292781,
@@ -31199,7 +31435,8 @@
         "ms": 0,
         "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
         "at": "2026-11-17T18:44:56Z"
-      }
+      },
+      "reason": "JS_RENDER: Qwik; detay q-data.json icindeki bolum dizisi obf _objs referanslariyla geliyor."
     },
     "7527354308421653932": {
       "id": 7527354308421653932,
@@ -31227,11 +31464,10 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "templescanesp.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "7550173475771309008": {
       "id": 7550173475771309008,
@@ -31369,7 +31605,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "BULUNAMADI: IP bazli 429; govde 479 bayt, olcum yapilamadi."
     },
     "7614540930515269084": {
       "id": 7614540930515269084,
@@ -31540,10 +31777,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.imparatormanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "7697591737694502654": {
       "id": 7697591737694502654,
@@ -31783,7 +32019,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "7749975326063746325": {
       "id": 7749975326063746325,
@@ -31827,7 +32064,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "search"
+      "device_step": "search",
+      "reason": "JS_RENDER: Next.js; HTMLde seri karti/linki yok, /comics istemci tarafinda doluyor"
     },
     "7792545351410114774": {
       "id": 7792545351410114774,
@@ -32221,10 +32459,9 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "mindafansub.online",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "7912332843948948278": {
       "id": 7912332843948948278,
@@ -32507,7 +32744,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "798888619164960500": {
       "id": 798888619164960500,
@@ -32603,7 +32841,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "JS_RENDER: toonily.me toontop.io adresine yonlendiriyor; curl cevabi 15KB, tek script ld+json SEO blogu, seri linki/kart yok."
     },
     "8022742468678056385": {
       "id": 8022742468678056385,
@@ -32720,10 +32959,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "asurascans.com.tr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "8047257152713495236": {
       "id": 8047257152713495236,
@@ -33152,7 +33390,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "BULUNAMADI: Ana sayfa acik, /manga/<slug> ve kok slug detaylari 404 (13 bayt) dondu."
     },
     "8204588517936607172": {
       "id": 8204588517936607172,
@@ -33235,7 +33474,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "BULUNAMADI: GET api.golgebahcesi.com/api/chapters/{slug}/{chapter}=200 fakat 241 sayfanin url alani bos (imageEnc:true), gorseller istemcide cozuluyor."
     },
     "8226934736647195750": {
       "id": 8226934736647195750,
@@ -33292,7 +33532,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "search"
+      "device_step": "search",
+      "reason": "JS_RENDER: api.comick.io 522, api.comick.app HTML redirect, api.comick.me/fun DNS yok; uclar kapali"
     },
     "8263744577511030659": {
       "id": 8263744577511030659,
@@ -33731,6 +33972,18 @@
       },
       "dead": true
     },
+    "8399921646016000819": {
+      "id": 8399921646016000819,
+      "kind": "catalogue",
+      "title": "Euphoria Scan",
+      "lang": "pt",
+      "nsfw": 0,
+      "domain": "euphoriascan.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "8400532630224716727": {
       "id": 8400532630224716727,
       "kind": "engine",
@@ -33819,6 +34072,18 @@
         "detail": "CF",
         "at": "2026-11-16T22:05:11.851283Z"
       }
+    },
+    "845297677165041745": {
+      "id": 845297677165041745,
+      "kind": "catalogue",
+      "title": "Isekai Komik",
+      "lang": "id",
+      "nsfw": 0,
+      "domain": "isekaikomik.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "845371345206609558": {
       "id": 845371345206609558,
@@ -33922,7 +34187,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "ajax yanıtı HTML-içinde-JSON; motor ayrıştıramıyor"
+      "reason": "JS_RENDER: Tema 'liliana' kendi crypto.js'ini yukluyor ve kart icerigi JS ile cozuluyor; all-manga sayfasinda seri href'i yok, denenen: /all-manga/1 HTML, inline JSON, /api/ izi."
     },
     "8461833419006748458": {
       "id": 8461833419006748458,
@@ -34167,7 +34432,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "SERBEST: Yas kapisi: detay GET'te notice, POST adult=true + cerez sonrasi aciliyor; okuyucu olculmedi."
     },
     "8463275472233816534": {
       "id": 8463275472233816534,
@@ -34964,7 +35230,8 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list"
+      "device_step": "list",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "8711315038175625549": {
       "id": 8711315038175625549,
@@ -35071,7 +35338,7 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device_step": "pages",
-      "reason": "manifest şifreli, READER_ID_REQUIRED, imza istemcide"
+      "reason": "BULUNAMADI: GET api.golgebahcesi.com/api/chapters/{slug}/{chapter}=200 fakat 241 sayfanin url alani bos (imageEnc:true), gorseller istemcide cozuluyor."
     },
     "874345810698457818": {
       "id": 874345810698457818,
@@ -35123,10 +35390,9 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "harmony-scan.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "8756179784818649526": {
       "id": 8756179784818649526,
@@ -35315,6 +35581,18 @@
       },
       "device_step": "list",
       "kapali": true
+    },
+    "8816980852211307886": {
+      "id": 8816980852211307886,
+      "kind": "catalogue",
+      "title": "Mundo Manhwa",
+      "lang": "es",
+      "nsfw": 0,
+      "domain": "mundomanhwa.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "881979483256639463": {
       "id": 881979483256639463,
@@ -35516,7 +35794,9 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "8822476144695710531": {
       "id": 8822476144695710531,
@@ -35925,10 +36205,9 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.yetiskinruyamanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "8986677657343345148": {
       "id": 8986677657343345148,
@@ -35940,7 +36219,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "BULUNAMADI: Tum istekler Cowboy sunucusundan 429 Too many requests, olcum yapilamadi"
     },
     "8996937872705098973": {
       "id": 8996937872705098973,
@@ -36174,7 +36454,8 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "pending",
+      "reason": "LISTE_DUZELT: Detay sayfasinda chapternum metinleri var ama bolum hrefi yok, bolum secici olculemedi."
     },
     "914231297451265265": {
       "id": 914231297451265265,
@@ -36324,6 +36605,30 @@
       "device_step": "list",
       "unreachable": true,
       "kapali": true
+    },
+    "939535656995890735": {
+      "id": 939535656995890735,
+      "kind": "catalogue",
+      "title": "toomtam-manga.com",
+      "lang": "th",
+      "nsfw": 0,
+      "domain": "toomtam-manga.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
+    "947646064643117123": {
+      "id": 947646064643117123,
+      "kind": "catalogue",
+      "title": "Mihentai",
+      "lang": "id",
+      "nsfw": 1,
+      "domain": "mihentai.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "952507434691460791": {
       "id": 952507434691460791,

@@ -1,12 +1,26 @@
 {
-  "catalogue_after": 439,
-  "catalogue_before": 554,
+  "catalogue_after": 455,
+  "catalogue_before": 575,
   "dropped": [
+    {
+      "domain": "arcurafansub.com",
+      "kept": "ArcuraFansub",
+      "lang": "tr",
+      "name": "Arcura Fansub",
+      "nsfw": 1
+    },
     {
       "domain": "diamondfansub.com",
       "kept": "DiamondFansub",
       "lang": "tr",
       "name": "DiamondFansub",
+      "nsfw": 0
+    },
+    {
+      "domain": "gaiatoon.com",
+      "kept": "GaiaToon",
+      "lang": "tr",
+      "name": "Gaiatoon",
       "nsfw": 0
     },
     {
@@ -73,11 +87,25 @@
       "nsfw": 0
     },
     {
+      "domain": "raindropteamfan.com",
+      "kept": "Raindrop Fansub",
+      "lang": "tr",
+      "name": "Raindrop Fansub",
+      "nsfw": 0
+    },
+    {
       "domain": "sadscans.com",
       "kept": "SadScans",
       "lang": "tr",
       "name": "SadScans",
       "nsfw": 0
+    },
+    {
+      "domain": "yaoimangaoku.net",
+      "kept": "YaoiMangaOku",
+      "lang": "tr",
+      "name": "Yaoi Manga Oku",
+      "nsfw": 1
     },
     {
       "domain": "demonicscans.org",
@@ -105,6 +133,13 @@
       "kept": "MangaBuff",
       "lang": "ru",
       "name": "MangaBuff",
+      "nsfw": 0
+    },
+    {
+      "domain": "webdexscans.com",
+      "kept": "WebDexScans",
+      "lang": "en",
+      "name": "WebDexScans",
       "nsfw": 0
     },
     {
@@ -809,7 +844,9 @@
     }
   ],
   "dropped_ids": [
+    3194760788292645390,
     5335900657314089990,
+    5447717829511226753,
     4064318592690171903,
     6174331399853269477,
     7170599070299314950,
@@ -819,11 +856,14 @@
     4061344289012005112,
     7652509331851274426,
     6946651026380347829,
+    357698414057326452,
     258218291388547981,
+    6718632900011266890,
     8230647377971906276,
     5452887278882590031,
     4434136942147328383,
     4063768058096310907,
+    7330781361776944799,
     513391446834079432,
     4799276220939522567,
     6983378665536208517,
@@ -926,7 +966,7 @@
     4871458201540002697
   ],
   "engine_keys": 860,
-  "generated": "2026-11-17T21:25:05Z",
+  "generated": "2026-11-17T21:37:25Z",
   "mirrors": 15,
   "note": "Ayni host+dil+nsfw motor kaynagi katalogdan dusuruldu; tasinmis alan adlari mirrors'a yazildi."
 }
