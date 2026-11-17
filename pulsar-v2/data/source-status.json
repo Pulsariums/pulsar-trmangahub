@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T19:07:44Z",
+  "generated": "2026-11-17T19:15:26Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -33751,15 +33751,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "okutoon.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "site Coming Soon (2026-11-17 20:55) - okutoon.net 2997B",
-        "at": "2026-11-17T17:54:55Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "7998688569255459784": {
       "id": 7998688569255459784,
