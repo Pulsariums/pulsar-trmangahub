@@ -12,18 +12,21 @@ Bu dosya "iş bitti" tanımını ve çalışma döngüsünü sabitler. Her tur b
 4. **Test havuzu yalnız "yeniden test bekleyen" kaynak taşır.** `test` paketindeki her kayıt en son turda tamir edilmiş olmalı; test edilmiş ama tamir edilmemiş kaynak havuzda durmaz.
 5. **Her test kayıtlı.** Her cihaz/harness koşusu `pulsar-v2/data/testler/` altına zaman damgalı girer ve `test-kayitlari.md` tablosunda görünür.
 
-## 2. Bugünkü durum (2026-11-17)
+## 2. Bugünkü durum (2026-11-18)
 
-| Katman | Toplam | active | failed | pending | dead | unknown |
-|---|---|---|---|---|---|---|
-| Katalog (bizim) | 439 | 233 | 102 | 0 | 104 | 0 |
-| Motor (JitPack parser) | 1272 | 123 | 404 | 218 | 527 | 0 |
-| **Toplam** | **1711** | **356** | **506** | **218** | **631** | **0** |
+| Katman | Toplam | active | failed | pending | engelli | dead | unknown |
+|---|---|---|---|---|---|---|---|
+| Katalog (bizim) | 461 | 234 | 88 | 14 | 20 | 105 | 0 |
+| Motor (JitPack parser) | 1272 | 121 | 299 | 132 | 126 | 594 | 0 |
+| **Toplam** | **1733** | **355** | **387** | **146** | **146** | **699** | **0** |
 
-Yayın (embed): tr 50 · tr18 8 · global 269 · global18 29 · test 218. Kaynak: commit `e79c88d` (kopya motor temizliği), build `44174345687`.
+Durum sözlüğü: `active` yayında ve kanıtlı · `failed` ölçülmüş kırık (gerekçeli) · `pending` yeniden test bekliyor · `engelli` Cloudflare/çerez duvarı (ne yayın ne test) · `dead` kalıcı ölü.
 
-**Kalan iş tek kovada:**
-- **218 motor kaynağı** yalnız cihaz testiyle kapanır (yerel test imkânsız: Mihon ABI). Katalog tarafında bekleyen kayıt **0**.
+**Yayın denetimi (bu turun ana sonucu):** yayındaki **236 katalog kaynağının tamamı** yerel harness ile koşuldu → **234 geçti, 2 düştü** (kırık oran %0,8). Düşenler: `sleepytranslations.com` (roman sitesi, görsel yok → `dead`), `mangatv.net` (sayfa listesi boş → gerekçeli `failed`). Test kaydı: `pulsar-v2/data/testler/2026-11-18T0143Z-harness-aktif.json`.
+
+**Kalan iş iki kovada:**
+- **132 motor kaynağı** yalnız cihaz testiyle kapanır (yerel test imkânsız: Mihon ABI).
+- **14 katalog kaydı** config değişikliği sonrası harness tekrarı bekliyor.
 
 **Bu oturumda kapananlar (özet):**
 - Katalog ölçüm kuyruğunun tamamı (199 dilim) ve 197 "geçici görünümlü" hata tarandı.
