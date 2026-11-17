@@ -66,6 +66,11 @@ while read -r row; do
   if [ -z "$karar" ]; then
     if [ "$n" -gt 0 ] && [ "$c" -gt 0 ] && [ "$p" -gt 0 ] && [ "$ic" = 200 ]; then karar="duzeltildi"; elif [ "$n" -gt 0 ] && [ "$c" -gt 0 ]; then karar="aday"; else karar="dogrulama-gecmedi"; fi
   fi
+  # Ayni alan adinin katalog surumu cihazda geciyorsa ona dokunma (motor kopyasi dusse bile).
+  if [ "$karar" = duzeltildi ] || [ "$karar" = aday ]; then
+    act=$(jq -r --arg d "$dom" '[.sources[]|select(.kind=="catalogue" and .domain==$d and .state=="active")]|length' pulsar-v2/data/source-status.json)
+    [ "$act" -gt 0 ] && karar="katalog-surumu-calisiyor"
+  fi
   # Dogrulamayi telefon yapar: liste+bolum alinabiliyorsa ayar yazilir, kaynak teste gider (aday).
   if [ "$karar" = duzeltildi ] || [ "$karar" = aday ]; then
     if jq -e --arg d "$dom" 'any(.sources[]; .domain==$d)' "$CAT" >/dev/null; then
