@@ -322,3 +322,4 @@ Bu turda düzeltilen kusurlar; her biri gerçek cihaz/harness hatasıyla tetikle
 - **Cihaz raporu `MIHON_<id>` taşır; id = pulsar_id.** Rapordaki bir kaynağın hangi katmanda (katalog/motor) ve hangi durumda olduğu `source-status.json` anahtarıyla birebir eşleşir. "Bu hata yayında mı?" sorusu tahminle değil bu eşleştirmeyle yanıtlanır (§23).
 - **Canlılık taraması DNS önbelleğine kanabilir.** Aynı domain bir turda `CANLI`, ertesi tur `ENOTFOUND` çıkabiliyor; `CANLI` kararı tam ölçümle doğrulanmadan `active` yapılmaz.
 - **`reason` aktarımı `dead` bloğuna bağlıydı → engelli kayıtların gerekçesi kayboluyordu → aktarım `dead` koşulundan çıkarıldı.**
+- **Bayat `reason` katalogdan geri gelir.** `pulsar status`, defterde silinen `reason`'ı `catalogue.json`'daki değerden yeniden yazar; promote sonrası etiketin gitmesi için **kaynak** alan (`catalogue.json`) temizlenir. Aynı mantık `sorun` için de geçerlidir.
