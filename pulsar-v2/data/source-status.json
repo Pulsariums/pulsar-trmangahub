@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T18:50:20Z",
+  "generated": "2026-11-17T18:54:45Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -223,6 +223,7 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
+      "reason": "Ana sayfa 814292.toplakehorizon.com adresine mlk parametresiyle yonlendiriyor, title ..Loading.. Domain reklam yonlendirmesine dusmus.",
       "dead": true
     },
     "1141920126157789855": {
@@ -293,6 +294,7 @@
         "detail": "BULUNAMADI: Site ayakta (DNS cozuluyor, Cowboy sunucu yanit veriyor) ama 4 denemede de 429 'Too many requests' (17 bayt). HTML, kart, bolum ve okuyucu olculemedi; IP/rate-limit engeli. Selector uydurulmadi.",
         "at": "2026-11-17T18:15:56Z"
       },
+      "reason": "Park/el degistirmis: 302 surveymrs.com adresine yonlendiriyor, icerik yok.",
       "dead": true
     },
     "1158981255736960832": {
@@ -846,7 +848,8 @@
         "detail": "details: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "details"
+      "device_step": "details",
+      "kapali": true
     },
     "1376570003715008387": {
       "id": 1376570003715008387,
@@ -1458,6 +1461,7 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
+      "reason": "OLU: Site ayakta ama icerik yok: ana sayfa /home/ 200 (20 kart, hepsi /manga/<slug>/ adresine link) iken tum detay linkleri Apache 404/273 donuyor. Denenen ve 404 alan adresler: /manga/, /manga/a-coelha-e-seu-dono/ (slas",
       "dead": true
     },
     "1376828156869442484": {
@@ -1755,6 +1759,7 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
+      "reason": "Ana sayfa Apache autoindex: <title>Index of /</title> (4160 bayt). /manga istegi 200 ile https://manga-ay.com/grup/1/manga-ay adresine gidiyor ve title 'BMW777 : Akses Portal Slot Provider Pragmatic Perkalian 10 Ribu'. Domain slot/kumar portalina yonlendirilmis, manga icerigi yok.",
       "dead": true
     },
     "1376874560903382020": {
@@ -2022,22 +2027,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangawt.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1673,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "list"
     },
     "1376874562419981901": {
@@ -3761,6 +3754,7 @@
         "detail": "TLS sertifika zinciri",
         "at": "2026-11-16T22:05:11.851283Z"
       },
+      "reason": "Parklogic park sayfasi. Harness SunCertPathBuilder hatasi park hostunun zincirinden; site OLU. - olcum 2026-11-17",
       "dead": true,
       "kapali": true
     },
@@ -4005,22 +3999,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangawt.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1674,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "list"
     },
     "1608891509777540327": {
@@ -4148,15 +4130,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "snscoeurturkey.blogspot.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "JS_RENDER: Blogger blogu. Ana sayfada seri kartlari JS ile basiliyor: 8 snippet-thumbnail ve 1 postItem var ama <a href> icinde gercek seri adresi YOK (58 anchor'un tamami sablon/JS dizesi veya /search/label). Blogger feed JSON'u calisiyor (feed.entry[].title, alternate link, content) fakat motor jsonListParse yalniz kok diziyi okuyor, 'feed.entry' noktali yolu desteklemiyor; bu yuzden listJsonUrl yazilmadi. Detay sayfasi (2021/11/thundercloud-rainstorm.html) 174826 bayt: 1 seri kapagi + 9 img, okuma sayfa",
-        "at": "2026-11-17T18:15:56Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1619975144588948836": {
       "id": 1619975144588948836,
@@ -4475,6 +4452,7 @@
         "detail": "",
         "at": "2026-11-17T10:02:04Z"
       },
+      "reason": "Domain canli ama icerik yok: /manga/99-in-love-2/ 673 bayt donuyor ve govde DEMO version only includes 4 pages diyor; yayinda gercek seri/bolum yok.",
       "dead": true,
       "kapali": true
     },
@@ -4706,7 +4684,8 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "1793420480712657216": {
       "id": 1793420480712657216,
@@ -5638,22 +5617,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "shadowceviri.blogspot.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1642,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "search: Sonuç yok: a, one",
-        "at": "2026-11-16T18:05:29Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "search"
     },
     "2121025303286850185": {
@@ -8671,6 +8638,7 @@
         "detail": "UnknownHostException: fuchscans.com",
         "at": "2026-11-17T15:42:59.035062Z"
       },
+      "reason": "Alan adi DNSte yok. Eski adres notu: fuchscans.com. Yeni adres olcülmedi. - olcum 2026-11-17",
       "dead": true,
       "unreachable": true,
       "kapali": true
@@ -9207,22 +9175,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "jiangzaitoon.top",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 145,
-        "detail": "curl: (6) Could not resolve host: jiangzaitoon.top",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "list"
     },
     "2693529818399974276": {
@@ -9294,6 +9250,7 @@
       "domain": "inmoralnofansub.xyz",
       "packages": [],
       "state": "dead",
+      "reason": "ww38.* park alanina yonlendiriyor, sayfada 2 kez \"Buy this domain\" gecti; manga listesi/karti yok. Park edilmis.",
       "dead": true
     },
     "2756643525011277180": {
@@ -9313,7 +9270,8 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "2757001393088596194": {
       "id": 2757001393088596194,
@@ -9409,6 +9367,7 @@
         "detail": "Liste boş",
         "at": "2026-11-17T15:05:59.415241Z"
       },
+      "reason": "cgi-sys/suspendedpage.cgi adresine dusuyor, title Account Suspended.",
       "dead": true
     },
     "278873742098884769": {
@@ -9658,15 +9617,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "yaoimangaoku.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE: Ana sayfa ve /wp-json/wp/v2/manga?search=x ayni Cloudflare challenge'ini donduruyor: title 'Just a moment...', 403, 5460/5602 bayt, script-src challenges.cloudflare.com. HTML'de Madara/WP izi yok, API avi yapilamadi (wp-json de ayni duvarda). Mevcut kayit engine=madara, status=failed.",
-        "at": "2026-11-17T18:15:56Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "list"
     },
     "2919132306397933009": {
@@ -10115,6 +10069,7 @@
       "domain": "mangalivre.net",
       "packages": [],
       "state": "dead",
+      "reason": "Site okuyucu degil, dis baglanti portali: 24 .ed-card'in hepsi harici resmi kaynaklara gidiyor (mangaplus.shueisha.co.jp, br.comikey.com). Ana sayfada kendi icerigine giden tek bir baglanti yok, /manga = 404 (9 bayt). Katalog/bolum yok.",
       "dead": true
     },
     "3026487048596454952": {
@@ -10203,6 +10158,7 @@
       "domain": "radiantscans.com",
       "packages": [],
       "state": "dead",
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true
     },
     "3067383443860379137": {
@@ -10248,6 +10204,7 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
+      "reason": "Domain canli ama icerik yok: /manga/99-in-love-2/ 673 bayt donuyor ve govde DEMO version only includes 4 pages diyor; yayinda gercek seri/bolum yok.",
       "dead": true
     },
     "3080414706188145613": {
@@ -10666,6 +10623,7 @@
       "domain": "guildknives.com",
       "packages": [],
       "state": "dead",
+      "reason": "Govde 114 bayt: <script>window.location.href=\"/lander\"</script>. Domain satis/park lander sayfasi.",
       "dead": true,
       "kapali": true
     },
@@ -11280,6 +11238,7 @@
         "detail": "curl: (28) Connection timed out after 15004 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       },
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true
     },
     "3428459131026179554": {
@@ -11629,7 +11588,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "3581619951854792193": {
       "id": 3581619951854792193,
@@ -13355,22 +13315,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.mangadenizi.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 3851,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: NotFoundException: . Status=404, URL=[https://mangadenizi.net/filterList?page=1&author=&tag=&alpha=&cat=&sortBy=views&asc=false]",
-        "at": "2026-11-16T18:05:29Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "list"
     },
     "3758907033275771070": {
@@ -14036,6 +13984,7 @@
         "detail": "curl: (28) Connection timed out after 15009 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       },
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true
     },
     "3906929553798875459": {
@@ -14987,6 +14936,7 @@
       "domain": "ww16.mangaoku.info",
       "packages": [],
       "state": "dead",
+      "reason": "Baslik: \"mangaoku.info - Bu web sitesi satiliktir!\" - domain satilik ilan sayfasi.",
       "dead": true
     },
     "4021680936479585906": {
@@ -15084,6 +15034,7 @@
       "domain": "mangalivre.net",
       "packages": [],
       "state": "dead",
+      "reason": "Site okuyucu degil, dis baglanti portali: 24 .ed-card'in hepsi harici resmi kaynaklara gidiyor (mangaplus.shueisha.co.jp, br.comikey.com). Ana sayfada kendi icerigine giden tek bir baglanti yok, /manga = 404 (9 bayt). Katalog/bolum yok.",
       "dead": true,
       "kapali": true
     },
@@ -15198,6 +15149,7 @@
       "domain": "manga-ay.com",
       "packages": [],
       "state": "dead",
+      "reason": "Ana sayfa Apache autoindex: <title>Index of /</title> (4160 bayt). /manga istegi 200 ile https://manga-ay.com/grup/1/manga-ay adresine gidiyor ve title 'BMW777 : Akses Portal Slot Provider Pragmatic Perkalian 10 Ribu'. Domain slot/kumar portalina yonlendirilmis, manga icerigi yok.",
       "dead": true
     },
     "4062366187196257270": {
@@ -15634,6 +15586,7 @@
         "detail": "curl: (28) Connection timed out after 15007 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       },
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true
     },
     "4089642082775445637": {
@@ -15945,6 +15898,7 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
+      "reason": "OLU: Site Plesk Obsidian 18.0.81 varsayilan sayfasi donuyor (title=\"Plesk Obsidian 18.0.81\", html class=\"sid-plesk\"); hem / hem /?s=&post_type=wp-manga ayni panel sayfasi. SSL zinciri dogrulanamiyor (curl SEC_E_UNTRUSTED",
       "dead": true
     },
     "4113655825246396673": {
@@ -16096,6 +16050,7 @@
         "detail": "park/satilik (olcum 2026-11-17)",
         "at": "2026-11-17T00:00:00Z"
       },
+      "reason": "Icerik yok: baslik \"hoifansub.com\", meta description \"Find the best information and most relevant links...\". Yalniz /privacy linki ve spinner. Domain monetizasyon/park ara sayfasi.",
       "dead": true,
       "kapali": true
     },
@@ -16860,7 +16815,8 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4226106584062559336": {
       "id": 4226106584062559336,
@@ -16904,6 +16860,7 @@
         "detail": "TLS sertifika zinciri",
         "at": "2026-11-16T22:05:11.851283Z"
       },
+      "reason": "Parklogic park sayfasi. Harness TLS hatasi park hostundan; site OLU. - olcum 2026-11-17",
       "dead": true,
       "kapali": true
     },
@@ -18387,22 +18344,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mugimanga.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1214,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "BULUNAMADI: Ana sayfa yalnizca tema CSS'i + avatar yukleme JS'i donuyor, tek bir seri linki yok (manga/comic/seri kalibi 0 eslesme). /manga/ istegi 200 ama <title>Giris Gerekli< olan giris duvarina dusuyor. /wp-json/wp/v2/manga -> 404, ana sayfada /api/, fetch(, axios. izi yok (yalniz admin-ajax.php referansi). Icerik giris gerektirdigi icin liste/bolum/okuyucu olculemedi.",
-        "at": "2026-11-17T18:15:56Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4250602956249399538": {
       "id": 4250602956249399538,
@@ -18456,7 +18401,8 @@
         "ms": 0,
         "detail": "HttpStatusException: . Status=400, URL=[https://www.nabicix.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-17T15:05:59.415241Z"
-      }
+      },
+      "kapali": true
     },
     "4262606449626957027": {
       "id": 4262606449626957027,
@@ -18764,7 +18710,8 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "4313861447404019709": {
       "id": 4313861447404019709,
@@ -18965,6 +18912,7 @@
         "detail": "TLS sertifika zinciri",
         "at": "2026-11-16T22:05:11.851283Z"
       },
+      "reason": "Parklogic park sayfasi. Harness SunCertPathBuilder hatasi park hostunun zincirinden; site OLU. - olcum 2026-11-17",
       "dead": true,
       "kapali": true
     },
@@ -19409,6 +19357,7 @@
         "detail": "park/satilik (olcum 2026-11-17)",
         "at": "2026-11-17T00:00:00Z"
       },
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true,
       "kapali": true
     },
@@ -19692,6 +19641,7 @@
       "domain": "sheakomik.com",
       "packages": [],
       "state": "dead",
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true
     },
     "4404495316641007547": {
@@ -20432,15 +20382,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "UnsupportedOperationException",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4491758654893492698": {
       "id": 4491758654893492698,
@@ -21193,6 +21138,7 @@
       "domain": "juratempe.st",
       "packages": [],
       "state": "dead",
+      "reason": "Kok adres YouTube \"Rickroll (Meme Template)\" videosuna yonlendiriyor; site icerigi kalmamis.",
       "dead": true
     },
     "4714465711693073737": {
@@ -21451,25 +21397,12 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoonhatti.club",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 487,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "list",
-      "sorun": "cloudflare",
-      "unreachable": true
+      "sorun": "cloudflare"
     },
     "4850244828520154280": {
       "id": 4850244828520154280,
@@ -22000,6 +21933,7 @@
       "domain": "swatscans.com",
       "packages": [],
       "state": "dead",
+      "reason": "Sayfa metni: \"Domain registration has expired\" (Namecheap yenileme sayfasi). Süresi dolmus.",
       "dead": true
     },
     "5117503242233509669": {
@@ -22011,6 +21945,7 @@
       "domain": "titanmanga.com",
       "packages": [],
       "state": "dead",
+      "reason": "titanmanga.com istegi https://www.hugedomains.com/domain_profile.cfm?d=titanmanga.com adresine gidiyor (HugeDomains domain satis sayfasi, CF arkasinda). Site el degistirmis.",
       "dead": true,
       "kapali": true
     },
@@ -22037,6 +21972,7 @@
         "detail": "park/satilik (olcum 2026-11-17)",
         "at": "2026-11-17T00:00:00Z"
       },
+      "reason": "ww38.* park alanina yonlendiriyor, sayfada 2 kez \"Buy this domain\" gecti; manga listesi/karti yok. Park edilmis.",
       "dead": true,
       "kapali": true
     },
@@ -22425,7 +22361,8 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5332408265489266018": {
       "id": 5332408265489266018,
@@ -22842,7 +22779,8 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "5508199094423291149": {
       "id": 5508199094423291149,
@@ -23056,6 +22994,7 @@
       "packages": [],
       "state": "dead",
       "device_step": "covers",
+      "reason": "OLU: Site ayakta ama icerik yok: ana sayfa /home/ 200 (20 kart, hepsi /manga/<slug>/ adresine link) iken tum detay linkleri Apache 404/273 donuyor. Denenen ve 404 alan adresler: /manga/, /manga/a-coelha-e-seu-dono/ (slas",
       "dead": true
     },
     "5690255701410638136": {
@@ -23111,6 +23050,7 @@
       "domain": "hunlight.com",
       "packages": [],
       "state": "dead",
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true
     },
     "5755636531598069462": {
@@ -23490,7 +23430,8 @@
         "detail": "list: Liste boş",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5783895556273349094": {
       "id": 5783895556273349094,
@@ -23594,7 +23535,8 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "5784701058565822220": {
       "id": 5784701058565822220,
@@ -23603,22 +23545,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "gaiatoon.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 713,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE: Cloudflare 'Just a moment...' 403 (5456 bayt). Denenen: GET / ve GET /wp-json/wp/v2/wp-manga?per_page=1 -> 403/5613 ayni challenge. admin-ajax denenmedi (403 sonrasi anlamsiz). HTML ve JSON ucu kapali, detay/bolum olculemedi.",
-        "at": "2026-11-17T18:15:56Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5785150848886155708": {
       "id": 5785150848886155708,
@@ -23834,6 +23764,7 @@
         "detail": "park/satilik (olcum 2026-11-17)",
         "at": "2026-11-17T00:00:00Z"
       },
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true,
       "kapali": true
     },
@@ -23886,6 +23817,7 @@
         "detail": "park/satilik (olcum 2026-11-17)",
         "at": "2026-11-17T00:00:00Z"
       },
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true,
       "kapali": true
     },
@@ -25462,6 +25394,7 @@
         "detail": "curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed",
         "at": "2026-11-13T17:07:52Z"
       },
+      "reason": "Sayfa metni: \"Domain registration has expired\" (Namecheap yenileme sayfasi). Süresi dolmus.",
       "dead": true
     },
     "5790819801755723352": {
@@ -25547,23 +25480,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "nyxmanga.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 463,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "GEO_BLOK: 4 istek (mobil ve masaustu UA; '/', '/manga', '/robots.txt'; aralarda 12sn ve 55sn bekleme) hepsi HTTP 429, govde 17 bayt 'Too many requests'. Yanit basliklari: server: Cowboy, cache-control: max-age=0 private must-revalidate, set-cookie: sid=... Tek bir HTML bile donmedigi icin kart/detay/bolum secicisi ve API ucu olculemedi; JS/API avi yapilamadi.",
-        "at": "2026-11-17T18:15:56Z"
-      },
-      "kapali": true
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5791086280610013818": {
       "id": 5791086280610013818,
@@ -26256,23 +26176,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "yaoiflix.me",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1680,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "park/satilik (olcum 2026-11-17)",
-        "at": "2026-11-17T00:00:00Z"
-      },
-      "kapali": true
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5799459698953933208": {
       "id": 5799459698953933208,
@@ -26507,6 +26414,7 @@
       "domain": "garciamanga.com",
       "packages": [],
       "state": "dead",
+      "reason": "cgi-sys/suspendedpage.cgi adresine dusuyor, title Account Suspended.",
       "dead": true
     },
     "5822259194978908981": {
@@ -26790,6 +26698,7 @@
         "detail": "TLS sertifika zinciri",
         "at": "2026-11-16T22:05:11.851283Z"
       },
+      "reason": "Park/trafik yonlendirme sayfasi (pltraffic). Harness TLS hatasi park hostundan; site OLU. - olcum 2026-11-17",
       "dead": true
     },
     "5874491653243184507": {
@@ -26844,23 +26753,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.raindropteamfan.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 377,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "park/satilik (olcum 2026-11-17)",
-        "at": "2026-11-17T00:00:00Z"
-      },
-      "kapali": true
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5890559186142010175": {
       "id": 5890559186142010175,
@@ -26927,6 +26823,7 @@
       "domain": "athenamanga.com",
       "packages": [],
       "state": "dead",
+      "reason": "Ana sayfa 814292.toplakehorizon.com adresine mlk parametresiyle yonlendiriyor, title ..Loading.. Domain reklam yonlendirmesine dusmus.",
       "dead": true
     },
     "5929466406882050558": {
@@ -26996,7 +26893,8 @@
         "detail": "list: AuthRequiredException: Authorization required",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "594512146449951667": {
       "id": 594512146449951667,
@@ -27863,6 +27761,7 @@
         "detail": "curl: (6) Could not resolve host: fuchscans.com",
         "at": "2026-11-13T17:07:52Z"
       },
+      "reason": "Alan adi DNSte yok. Eski adres notu: fuchscans.com. Yeni adres olcülmedi. - olcum 2026-11-17",
       "dead": true
     },
     "6080360458635054121": {
@@ -28799,25 +28698,12 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoonhatti.club",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 434,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-16T18:05:29Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "list",
-      "sorun": "cloudflare",
-      "unreachable": true
+      "sorun": "cloudflare"
     },
     "6359822944885655295": {
       "id": 6359822944885655295,
@@ -28956,7 +28842,8 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "6380263472802307634": {
       "id": 6380263472802307634,
@@ -29234,15 +29121,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "arcurafansub.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE: Tüm HTML ve JSON uçları Cloudflare challenge döndürüyor, HTML alınamadığı için script/inline JSON avı yapılamadı. Denenen uçlar: wp-json wp/v2/manga, /api/v1/series/{slug}/chapters/{bolum}, /wp-json/. Aşılamadı.",
-        "at": "2026-11-17T18:15:56Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "list"
     },
     "6429679440215957503": {
@@ -30110,6 +29992,7 @@
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details",
+      "reason": "OLU: Site Plesk Obsidian 18.0.81 varsayilan sayfasi donuyor (title=\"Plesk Obsidian 18.0.81\", html class=\"sid-plesk\"); hem / hem /?s=&post_type=wp-manga ayni panel sayfasi. SSL zinciri dogrulanamiyor (curl SEC_E_UNTRUSTED",
       "dead": true,
       "kapali": true
     },
@@ -30350,23 +30233,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "manwe.pro",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "http",
-        "http_code": "456",
-        "ms": 761,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CLOUDFLARE: Her istekte 456 + 47 bayt: <script src=\"/_guard/html.js?js=p456\"></script>. Guard JS (200/40803B) basligi '访问已被阻止 · 不死鸟CDN' (Phoenix CDN WAF blok sayfasi), cerez/location atmiyor. UA degistirmek (Windows Chrome), Accept-Language, Googlebot UA ve robots.txt/http: hepsi 456. Icerik olculmedi.",
-        "at": "2026-11-17T18:15:56Z"
-      },
-      "kapali": true
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "673270492982977468": {
       "id": 673270492982977468,
@@ -30726,6 +30596,7 @@
       "domain": "hoifansub.com",
       "packages": [],
       "state": "dead",
+      "reason": "Icerik yok: baslik \"hoifansub.com\", meta description \"Find the best information and most relevant links...\". Yalniz /privacy linki ve spinner. Domain monetizasyon/park ara sayfasi.",
       "dead": true
     },
     "6900920757230238366": {
@@ -32702,6 +32573,7 @@
       "domain": "mindafansub.dev",
       "packages": [],
       "state": "dead",
+      "reason": "502 gateway, 16 bayt bos govde. Site ayakta degil.",
       "dead": true,
       "kapali": true
     },
@@ -32946,7 +32818,8 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "7663701235462277388": {
       "id": 7663701235462277388,
@@ -32957,6 +32830,7 @@
       "domain": "seraphmanga.com",
       "packages": [],
       "state": "dead",
+      "reason": "click-v4.explclk.com adresine yonlendiriyor, 0 bayt. Domain reklam tiklama agina dusmus.",
       "dead": true
     },
     "7664165123676750379": {
@@ -33390,6 +33264,7 @@
       "domain": "jpmangas.xyz",
       "packages": [],
       "state": "dead",
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true
     },
     "7817108636375764582": {
@@ -33514,7 +33389,8 @@
         "ms": 0,
         "detail": "covers+pages Cloudflare - cihaz 2026-11-16T21:42Z",
         "at": "2026-11-16T21:42:28Z"
-      }
+      },
+      "kapali": true
     },
     "7850418808484344907": {
       "id": 7850418808484344907,
@@ -33558,6 +33434,7 @@
         "detail": "TLS sertifika zinciri",
         "at": "2026-11-16T22:05:11.851283Z"
       },
+      "reason": "Park/trafik yonlendirme sayfasi (pltraffic). Harness TLS hatasi park hostundan; site OLU. - olcum 2026-11-17",
       "dead": true,
       "kapali": true
     },
@@ -33584,6 +33461,7 @@
         "detail": "CF",
         "at": "2026-11-16T22:05:11.851283Z"
       },
+      "reason": "titanmanga.com istegi https://www.hugedomains.com/domain_profile.cfm?d=titanmanga.com adresine gidiyor (HugeDomains domain satis sayfasi, CF arkasinda). Site el degistirmis.",
       "dead": true,
       "kapali": true
     },
@@ -33629,6 +33507,7 @@
         "detail": "BULUNAMADI: Site ayakta (DNS cozuluyor, Cowboy sunucu yanit veriyor) ama 4 denemede de 429 'Too many requests' (17 bayt). HTML, kart, bolum ve okuyucu olculemedi; IP/rate-limit engeli. Selector uydurulmadi.",
         "at": "2026-11-17T18:15:56Z"
       },
+      "reason": "Park/el degistirmis: 302 surveymrs.com adresine yonlendiriyor, icerik yok.",
       "dead": true,
       "kapali": true
     },
@@ -33656,7 +33535,8 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list",
-      "unreachable": true
+      "unreachable": true,
+      "kapali": true
     },
     "7901110876800051171": {
       "id": 7901110876800051171,
@@ -34021,15 +33901,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tonizu.top",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KAPSAM_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "pages"
     },
     "8004965338622879732": {
@@ -34204,6 +34079,7 @@
       "domain": "copypastescan.xyz",
       "packages": [],
       "state": "dead",
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true
     },
     "8062705055979744270": {
@@ -34691,7 +34567,8 @@
         "detail": "list: NotFoundException: . Status=404, URL=[https://heffalumpa.com/manga/?order=popular&page=1]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list"
+      "device_step": "list",
+      "kapali": true
     },
     "8225768823080191385": {
       "id": 8225768823080191385,
@@ -34700,22 +34577,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "golgebahcesi.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1008,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "list"
     },
     "8226934736647195750": {
@@ -35133,6 +34998,7 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
+      "reason": "Ana sayfa ve /manga 5564/5577 baytlik 'Redirecting...' sayfasi; govdedeki tek harici adres https://router.parklogic.com/ (parklogic). Site park edilmis, manga icerigi yok.",
       "dead": true
     },
     "8383972804019895112": {
@@ -35310,6 +35176,7 @@
       "domain": "laviniafansub.site",
       "packages": [],
       "state": "dead",
+      "reason": "Ana sayfa ve /manga 5564/5577 baytlik 'Redirecting...' sayfasi; govdedeki tek harici adres https://router.parklogic.com/ (parklogic). Site park edilmis, manga icerigi yok.",
       "dead": true
     },
     "845629044054474958": {
@@ -35355,6 +35222,7 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
+      "reason": "domain parkta (GoDaddy forsale) - 2026-11-16 olcumu",
       "dead": true,
       "unreachable": true
     },
@@ -35968,6 +35836,7 @@
       "domain": "infamous-scans.com",
       "packages": [],
       "state": "dead",
+      "reason": "ww38.* park alanina yonlendirme, \"Buy this domain\" x2. Park edilmis.",
       "dead": true
     },
     "8595121624957657926": {
@@ -37136,6 +37005,7 @@
         "detail": "park/satilik (olcum 2026-11-17)",
         "at": "2026-11-17T00:00:00Z"
       },
+      "reason": "Sayfa assets.abovedomains.com/javascript/forsale.min.js yukluyor, govde metni \"Do Not Sell or Share My Personal Information\". Domain satis sayfasi.",
       "dead": true,
       "kapali": true
     },
@@ -37269,6 +37139,7 @@
       "domain": "alliedfansub.net",
       "packages": [],
       "state": "dead",
+      "reason": "Sayfa assets.abovedomains.com/javascript/forsale.min.js yukluyor, govde metni \"Do Not Sell or Share My Personal Information\". Domain satis sayfasi.",
       "dead": true,
       "kapali": true
     },
