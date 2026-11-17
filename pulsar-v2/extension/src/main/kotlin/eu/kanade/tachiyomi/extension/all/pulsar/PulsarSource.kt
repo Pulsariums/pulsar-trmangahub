@@ -87,7 +87,7 @@ class PulsarSource(
     }
 
     override val id: Long by lazy {
-        val key = "pulsar/$domain/$lang"
+        val key = "pulsar/${domain.removePrefix("www.")}/$lang"
         var h = 1125899906842597L
         for (ch in key) h = 31 * h + ch.code
         h and Long.MAX_VALUE
