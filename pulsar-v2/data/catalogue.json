@@ -193,8 +193,8 @@
           "tagsExclusion": false
         },
         "engine": "custom",
-        "listPath": "/manga/",
-        "itemSelector": ".ymk-card-view",
+        "listPath": "/seriler/",
+        "itemSelector": "a.ymk-card-title-link",
         "chapterSelector": "a.ymk-chapter-item",
         "readerSelector": "img.ymk-chapter-img",
         "searchUrl": "https://gafeland.com/?s={query}&post_type=wp-manga",
@@ -401,12 +401,12 @@
         "postReq": true,
         "datePattern": "dd MMMM yyyy",
         "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail",
-        "chapterSelector": "a.tuhaf-ch-item",
+        "listPath": "/manga/",
+        "itemSelector": "div.page-item-detail.manga",
+        "chapterSelector": "a[href*=\"/bolum-\"]",
         "readerSelector": ".reading-content img",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "searchUrl": "/?s={query}&post_type=wp-manga"
+        "searchUrl": "https://tuhafscans.com/wp-admin/admin-ajax.php"
       },
       "verified_by_user": true,
       "origins": [
@@ -481,11 +481,15 @@
         },
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "article.manga-card",
+        "itemSelector": "div.manga-card",
         "chapterSelector": "a[href^=\"/read/\"]",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
         "pageScriptSelector": "script",
-        "pageScriptContains": "reader-images"
+        "pageScriptContains": "reader-images",
+        "pageApiUrl": "https://mangadenizi.net/api/v1/reader/{1}/{2}",
+        "pageApiItems": "pages",
+        "pageApiFieldUrl": "image_url",
+        "searchUrl": "https://mangadenizi.net/manga?search={query}"
       },
       "verified_by_user": true,
       "origins": [
@@ -508,11 +512,11 @@
       "config": {
         "datePattern": "dd/MM/yyyy",
         "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "article.mgcr-archive-card",
-        "chapterSelector": "li.wp-manga-chapter",
+        "listPath": "/manga/",
+        "itemSelector": ".page-item-detail",
+        "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": "div.page-break img",
-        "searchUrl": "https://www.tilkiscans.com/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+        "searchUrl": "/?s={query}&post_type=wp-manga",
         "searchMethod": "POST",
         "searchBody": "action=wp-manga-search-manga&title={query}",
         "searchJsonItems": "data",
@@ -1377,8 +1381,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "",
-        "itemSelector": "a.flex-none",
+        "listPath": "/",
+        "itemSelector": "a[href^=\"/title-detail/\"]",
         "chapterSelector": "a.bg-primary",
         "readerSelector": "img[data-src], div.page-break img",
         "chapterApiUrl": "https://mangaball.com/api/v1/title/chapter-listing?title_id={id}&page={page}&limit=500&group_by=flat&sort_order=desc&language=all&search=&user_id=",
@@ -1496,7 +1500,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/latest.php",
-        "itemSelector": ".recent-card",
+        "itemSelector": "div.recent-card",
         "chapterSelector": "a.chapter-grid-item-new",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
@@ -2043,7 +2047,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga/",
-        "itemSelector": "a[href*=\"/manga/\"]",
+        "itemSelector": ".adult-cover-wrapper",
         "chapterSelector": "a[href*=\"-bolum/\"]",
         "readerSelector": ".protected-image-container img"
       },
@@ -2072,11 +2076,11 @@
           "tagsExclusion": false
         },
         "engine": "custom",
-        "listPath": "manga",
+        "listPath": "/manga",
         "itemSelector": "div.page-item-detail",
         "searchUrl": "https://www.tarotscans.com/?s={query}&post_type=wp-manga",
-        "chapterSelector": "div.chapter-item",
-        "readerSelector": "div.page-break img"
+        "chapterSelector": "li.chapter-item",
+        "readerSelector": "div.reading-content img"
       },
       "verified_by_user": false,
       "origins": [
@@ -2155,7 +2159,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "webtoon-listesi",
+        "listPath": "/webtoon-listesi",
         "itemSelector": "a[href*=\"/webtoon/\"]",
         "chapterSelector": "ol#chapters li.wt-ch a",
         "readerSelector": "div#images img.reader-img"
@@ -2202,9 +2206,9 @@
         "listUrl": "webtoon/",
         "datePattern": "dd/MM/yyyy",
         "engine": "madara",
-        "listPath": "/manga",
-        "itemSelector": ".page-item-detail",
-        "chapterSelector": ".wp-manga-chapter a",
+        "listPath": "/webtoon",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter",
         "readerSelector": ".reading-content img",
         "searchUrl": "https://webtoontr.net/?s={query}&post_type=wp-manga"
       },
@@ -2400,8 +2404,8 @@
         "listPath": "/manga",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter",
-        "readerSelector": "div.reading-content img",
-        "searchUrl": "https://averisfansub.site/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+        "readerSelector": "img.wp-manga-chapter-img",
+        "searchUrl": "https://averisfansub.site/?s={query}&post_type=wp-manga",
         "searchMethod": "GET",
         "searchBody": "title={query}",
         "searchJsonItems": "data",
@@ -2486,7 +2490,7 @@
       "config": {
         "engine": "custom",
         "listPath": "manga",
-        "itemSelector": ".manga-card-v2",
+        "itemSelector": "div.manga-card-v2",
         "chapterSelector": "a[href*=\"/bolum-\"]",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
       },
@@ -2954,10 +2958,10 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail",
+        "listPath": "/porncomic",
+        "itemSelector": ".page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": "div.page-break img",
+        "readerSelector": "div.reading-content img",
         "searchUrl": "https://allporncomic.com/?s={query}&post_type=wp-manga"
       },
       "selector_verified": true,
@@ -3455,7 +3459,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "div.item",
+        "itemSelector": "div.object-cover a",
         "chapterSelector": "#link-to-reader",
         "readerSelector": "",
         "pageScriptSelector": "script.should-remove",
@@ -3676,8 +3680,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "#search-results > div, #searchResults > a[href*=\"/manga/\"]",
-        "chapterSelector": "a[href^=\"http\"][href*=\"/chapter-\"]",
+        "itemSelector": "a[href*=\"/manga/\"]:not([href*=\"/chapter-\"]):has(img)",
+        "chapterSelector": "div[data-chapter-number]",
         "readerSelector": "section[data-image-data] img",
         "searchUrl": "https://v7.kiryuu.to/wp-admin/admin-ajax.php?nonce=bcbb237d77&action=search",
         "searchMethod": "POST",
@@ -3764,9 +3768,9 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "manga/",
-        "itemSelector": "div.bsx",
-        "chapterSelector": "",
+        "listPath": "/manga",
+        "itemSelector": ".leftseries h2 a.series",
+        "chapterSelector": "div.eph-num a",
         "readerSelector": ""
       },
       "selector_verified": true,
@@ -3830,7 +3834,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "div.bs.styletere",
+        "itemSelector": "a[href*=\"/manga/\"]",
         "chapterSelector": "a.leer",
         "readerSelector": "",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
@@ -3890,7 +3894,7 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "luxmanga.net",
-      "baseUrl": "https://luxmanga.net",
+      "baseUrl": "https://api.luxmanga.net",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -3898,12 +3902,15 @@
         "itemSelector": "a[href^=\"/series/\"]",
         "chapterSelector": "a[href*=\"/chapter-\"]",
         "readerSelector": "",
-        "searchUrl": "https://api.luxmanga.net/works?search={query}&page=1&limit=20",
+        "searchUrl": "https://api.luxmanga.net/works?page=1&limit=24&search={query}",
         "searchMethod": "GET",
         "searchJsonItems": "data",
         "searchJsonUrl": "slug",
         "searchJsonTitle": "title",
-        "searchJsonPathPrefix": "/series/"
+        "searchJsonPathPrefix": "/series/",
+        "pageApiUrl": "https://api.luxmanga.net/chapters/{1}",
+        "pageApiItems": "images",
+        "listJsonUrl": "https://api.luxmanga.net/works?page={page}&limit=24"
       },
       "selector_verified": true,
       "origins": [
@@ -4028,9 +4035,9 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga/",
-        "itemSelector": ".page-item-detail",
-        "chapterSelector": ".wp-manga-chapter a",
+        "listPath": "manga",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter",
         "readerSelector": ""
       },
       "selector_verified": true,
@@ -4324,7 +4331,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "relative block",
+        "itemSelector": "a[href*=\"/manga/\"]",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -4343,11 +4350,11 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "hot/adventure",
-        "itemSelector": "a.manga_cover",
-        "chapterSelector": "ul.chapter_list a",
+        "listPath": "/directory/",
+        "itemSelector": "a[href^=\"/manga/\"]",
+        "chapterSelector": "ul.chapter_list li a",
         "readerSelector": "#image",
-        "searchUrl": "http://www.mangatown.com/search?q={query}"
+        "searchUrl": "https://www.mangatown.com/search?name={query}"
       },
       "selector_verified": true,
       "origins": [
@@ -4557,7 +4564,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "ed-card",
+        "itemSelector": "a.ed-card",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -4884,9 +4891,9 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "comics",
+        "listPath": "/comics",
         "itemSelector": "a.falco-card",
-        "chapterSelector": "a.chapter-card",
+        "chapterSelector": "a[href*=\"/capitulo-\"]",
         "readerSelector": "div.cap-canvas",
         "searchUrl": "https://falcoscan.net/comics?search={query}"
       },
@@ -4956,9 +4963,9 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "comics",
-        "itemSelector": "div.bsx",
-        "chapterSelector": "div.eph-num",
+        "listPath": "/",
+        "itemSelector": "div.violet-card-shell",
+        "chapterSelector": "#chapterlist li a",
         "readerSelector": "",
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader",
@@ -5002,7 +5009,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "aspect-square overflow-hidden",
+        "itemSelector": "a[href*=\"/series/\"]:not([href$=random])",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -5021,9 +5028,9 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "a.block.h-full.group",
-        "chapterSelector": "a[href*='/chapter-']",
+        "listPath": "browse",
+        "itemSelector": "a.block[href^=\"/series/\"]",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
         "readerSelector": ""
       },
       "selector_verified": true,
@@ -5042,10 +5049,10 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail",
+        "listPath": "/",
+        "itemSelector": ".page-item-detail",
         "chapterSelector": ".chapter-item a",
-        "readerSelector": ".wp-manga-chapter-img",
+        "readerSelector": "img.wp-manga-chapter-img",
         "searchUrl": "https://www.zinmanga.net/?s={query}&post_type=wp-manga"
       },
       "selector_verified": true,
@@ -5090,7 +5097,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "a.image-wrap",
+        "itemSelector": "a[href^='/comics/']",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -5110,7 +5117,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "a[href^='/comics/']",
+        "itemSelector": "a.image-wrap",
         "chapterSelector": "",
         "readerSelector": "",
         "listJsonUrl": "https://br.comikey.com/sapi/comics?ordering=-last_updated&page={page}"
@@ -5131,7 +5138,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/home/",
-        "itemSelector": "div.thumb_link",
+        "itemSelector": ".thumb_link",
         "chapterSelector": "a[href*=\"manga-reader\"]",
         "readerSelector": "img[src*=\"hennojin-manga\"]",
         "searchUrl": "https://hennojin.com/home/?s={query}",
@@ -5194,7 +5201,7 @@
       "config": {
         "engine": "custom",
         "listPath": "manga/",
-        "itemSelector": ".page-item-detail, .c-tabs-item__content",
+        "itemSelector": ".page-item-detail",
         "chapterSelector": "",
         "readerSelector": "div.reading-content img.wp-manga-chapter-img",
         "searchUrl": "https://mangaforfree.net/?s={query}&post_type=wp-manga",
@@ -5289,8 +5296,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/en",
-        "itemSelector": "a[href*=\"/en/title/\"][class*=\"group/card\"]",
+        "listPath": "/en/",
+        "itemSelector": "swiper-slide",
         "chapterSelector": "a[href*=\"/en/chapter/\"]",
         "readerSelector": ""
       },
@@ -5392,12 +5399,14 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "div.rec-item.rec-manga",
-        "chapterSelector": "a[href*=\"/chapter/\"]",
+        "listPath": "list/Hot-Manga/",
+        "itemSelector": ".manga-item",
+        "chapterSelector": "a.hover-underline[href*=\"/chapter/\"]",
         "readerSelector": "",
         "searchUrl": "/search/?name={query}",
-        "searchMethod": "GET"
+        "searchMethod": "GET",
+        "chapterAjaxUrl": "{url}/chapters.html",
+        "chapterAjaxMethod": "GET"
       },
       "selector_verified": true,
       "origins": [
@@ -5519,8 +5528,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "en",
-        "itemSelector": "a[id][href^=\"/en/comic/\"]",
+        "listPath": "/",
+        "itemSelector": "a.hidden[href^=\"/en/comic/\"]",
         "chapterSelector": "a[href^=\"/en/chapter/\"]",
         "readerSelector": "",
         "pageApiUrl": "https://api.ysk-comics.com/api/v1/chapters/{1}/images",
@@ -6617,9 +6626,9 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "a[href^=\"/manga/\"]",
-        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
-        "readerSelector": "img.js-page"
+        "itemSelector": "li a[href^=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
+        "readerSelector": ".js-pages-container img"
       },
       "selector_verified": true,
       "origins": [
@@ -6681,8 +6690,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "a[href^=\"/manga/\"]",
-        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "itemSelector": "a.block[href^=\"/manga/\"]",
+        "chapterSelector": "div.grid.grid-cols-4.items-center",
         "readerSelector": "img.js-page"
       },
       "selector_verified": true,
@@ -6746,8 +6755,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
-        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "itemSelector": "a[href^=\"/manga/\"]",
+        "chapterSelector": "a.text-sm[href*=\"/chapter/\"]",
         "readerSelector": "img.js-page"
       },
       "selector_verified": true,
@@ -6789,8 +6798,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
-        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "itemSelector": "a[href^=\"/manga/\"]",
+        "chapterSelector": "a.text-sm[href*=\"/chapter/\"]",
         "readerSelector": "img.js-page"
       },
       "selector_verified": true,
@@ -6810,8 +6819,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
-        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "itemSelector": "a.block[href^=\"/manga/\"]",
+        "chapterSelector": "div.grid.grid-cols-4.items-center",
         "readerSelector": "img.js-page"
       },
       "selector_verified": true,
@@ -6853,8 +6862,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
-        "chapterSelector": "a[href*=\"/chapter/\"]",
+        "itemSelector": "a[href^=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
         "readerSelector": "img.js-page"
       },
       "selector_verified": true,
@@ -6874,8 +6883,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
-        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "itemSelector": "a[href^=\"/manga/\"]",
+        "chapterSelector": "div.bg-bg-secondary.p-3.rounded.mb-3.shadow a[href*=\"/chapter/\"]",
         "readerSelector": "img.js-page"
       },
       "selector_verified": true,
@@ -6959,8 +6968,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
-        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "itemSelector": "a.block[href^=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
         "readerSelector": "img.js-page"
       },
       "selector_verified": true,
@@ -7002,8 +7011,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
-        "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
+        "itemSelector": "a.block[href^=\"/manga/\"]",
+        "chapterSelector": "div.grid.grid-cols-4.items-center",
         "readerSelector": "img.js-page"
       },
       "selector_verified": true,
@@ -7083,9 +7092,9 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "article, .search-item-wrap",
-        "chapterSelector": "a.episode-item",
-        "readerSelector": "img.content__img",
+        "itemSelector": "article a[href^='/series/']",
+        "chapterSelector": "li.episode-list__item a[href*='/episode/']",
+        "readerSelector": "img.content__img[data-src]",
         "titleSelector": "p.title",
         "searchUrl": "https://tapas.io/search?q={query}"
       },
@@ -7175,7 +7184,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/en/",
-        "itemSelector": "flex flex-col cursor-pointer no-underline group",
+        "itemSelector": "a[href^=\"/en/comic/\"]",
         "chapterSelector": "a[href^=\"/en/bl/\"]",
         "readerSelector": "img.reader-image-list__img"
       },
@@ -7348,7 +7357,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga/",
-        "itemSelector": "a[href^=\"/manga/\"]",
+        "itemSelector": "article.lc-card",
         "chapterSelector": "a[href^=\"/leer/\"]",
         "readerSelector": "img[data-src]"
       },
@@ -7370,7 +7379,8 @@
         "listPath": "/",
         "itemSelector": ".element",
         "chapterSelector": ".list .group .title a",
-        "readerSelector": ""
+        "readerSelector": "",
+        "pageApiFieldUrl": "url"
       },
       "selector_verified": true,
       "origins": [
@@ -7471,8 +7481,8 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "div.last_series",
-        "chapterSelector": "a.ll-chapitre",
+        "itemSelector": "a.slider_item",
+        "chapterSelector": "a[href*=\"/chapitre/\"]",
         "readerSelector": ""
       },
       "selector_verified": true,
@@ -7491,8 +7501,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": ".flexbox4-item",
+        "listPath": "/doujin-list/",
+        "itemSelector": "li.Doujinshi",
         "chapterSelector": ".flexch-infoz a",
         "readerSelector": ".reader-area img"
       },
@@ -7707,8 +7717,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/series",
-        "itemSelector": "a[href*='/series/']",
+        "listPath": "/",
+        "itemSelector": "li.daily-series-item",
         "chapterSelector": "",
         "readerSelector": "link.test-fetch-pageimage",
         "searchUrl": "https://comic-days.com/search?q={query}"
@@ -7792,7 +7802,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/series",
-        "itemSelector": "c-series-items__item",
+        "itemSelector": ".c-series-items__item",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -7816,7 +7826,8 @@
         "itemSelector": ".story_item",
         "chapterSelector": ".chapter_box li a.chapter_num",
         "readerSelector": "",
-        "pageApiUrl": "https://mangakuro.net/ajax/image/list/chap/{chapterId}"
+        "pageApiUrl": "https://mangakuro.net/ajax/image/list/chap/{chapterId}",
+        "searchUrl": "https://mangakuro.net/search?keyword={query}"
       },
       "selector_verified": true,
       "origins": [
@@ -7855,7 +7866,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "imgBox",
+        "itemSelector": "div.contentInner figure",
         "chapterSelector": "",
         "readerSelector": "img.episode-page"
       },
@@ -7874,8 +7885,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/web/",
-        "itemSelector": "PCOM-productCover",
+        "listPath": "/",
+        "itemSelector": ".PCOM-prdTile",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -8059,10 +8070,11 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "div.relative.overflow-hidden.rounded-lg",
+        "itemSelector": "a[title][href^=\"/manga/\"]",
         "chapterSelector": "a[href*=\"/chapter/\"]",
         "readerSelector": "",
-        "searchUrl": "https://leituramanga.net/search?q={query}"
+        "searchUrl": "https://leituramanga.net/search?q={query}",
+        "pageScriptSelector": "script"
       },
       "selector_verified": true,
       "origins": [
@@ -8080,7 +8092,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "br/browse",
+        "listPath": "/br/browse",
         "itemSelector": "a[href^=\"/br/manga/\"]",
         "chapterSelector": "",
         "readerSelector": ""
@@ -8695,7 +8707,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "li.comic-item-jp",
+        "itemSelector": "comic-item",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -12131,10 +12143,10 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga/",
-        "itemSelector": ".page-item-detail",
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": "img.wp-manga-chapter-img",
+        "readerSelector": "div.reading-content img",
         "searchUrl": "https://mangazin.org/?s={query}&post_type=wp-manga"
       },
       "selector_verified": true,
@@ -12225,8 +12237,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "div.manga-card",
+        "listPath": "/bruxonas/manga/",
+        "itemSelector": "manga-card",
         "chapterSelector": "a[href*=\"/capitulo-\"]",
         "readerSelector": ".reading-content img.wp-manga-chapter-img",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1"

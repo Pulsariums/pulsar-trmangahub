@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T18:21:54Z",
+  "generated": "2026-11-17T18:26:15Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -4596,8 +4596,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "device_step": "details"
+      "state": "pending"
     },
     "1769466275926738671": {
       "id": 1769466275926738671,
@@ -4929,15 +4928,10 @@
       "lang": "pt-br",
       "nsfw": 0,
       "domain": "leituramanga.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "liste/sayfa bos (harness)",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1909318976133429781": {
       "id": 1909318976133429781,
@@ -5106,16 +5100,10 @@
       "lang": "pt-br",
       "nsfw": 0,
       "domain": "mangaflix.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "JS_RENDER - Bölümler Next.js self.__next_f RSC yükünde kaçışlı JSON olarak duruyor; ayrı JSON ucu yok, pageJsonArray düz yol ile okunamaz. Tek harici host static.mangaflix.net.",
-        "at": "2026-11-17T14:31:41.061125Z"
-      },
-      "device_step": "details"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1956357450137632728": {
       "id": 1956357450137632728,
@@ -8897,16 +8885,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikpoi.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "SocketTimeoutException: timeout",
-        "at": "2026-11-17T18:04:21Z"
-      },
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "2662341039809361960": {
       "id": 2662341039809361960,
@@ -8961,8 +8943,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "device_step": "covers"
+      "state": "pending"
     },
     "2679866704867796873": {
       "id": 2679866704867796873,
@@ -9208,23 +9189,9 @@
       "nsfw": 0,
       "domain": "falcoscan.net",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness-test-buyuk",
-        "at": "2026-11-17T18:04:21Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness-test-buyuk",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "state": "pending"
     },
     "2776111846383631153": {
       "id": 2776111846383631153,
@@ -11625,15 +11592,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "UnsupportedOperationException",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "3704693444647218571": {
       "id": 3704693444647218571,
@@ -13097,23 +13059,9 @@
       "nsfw": 0,
       "domain": "v7.kiryuu.to",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness-test-buyuk",
-        "at": "2026-11-17T18:04:21Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness-test-buyuk",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "state": "pending"
     },
     "3789389920063824891": {
       "id": 3789389920063824891,
@@ -14549,8 +14497,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "device_step": "covers"
+      "state": "pending"
     },
     "4019165827542876336": {
       "id": 4019165827542876336,
@@ -26242,8 +26189,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "device_step": "covers"
+      "state": "pending"
     },
     "5876870061752477644": {
       "id": 5876870061752477644,
@@ -26883,8 +26829,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "device_step": "covers"
+      "state": "pending"
     },
     "6029481931652111950": {
       "id": 6029481931652111950,
@@ -27106,15 +27051,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaball.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6072456827135650688": {
       "id": 6072456827135650688,
@@ -27272,15 +27212,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "mangakuro.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "liste/sayfa bos (harness)",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6084020956957541828": {
       "id": 6084020956957541828,
@@ -27311,8 +27246,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "device_step": "list"
+      "state": "pending"
     },
     "6086084485207567652": {
       "id": 6086084485207567652,
@@ -27469,23 +27403,9 @@
       "nsfw": 0,
       "domain": "mangazin.org",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness-test-buyuk",
-        "at": "2026-11-17T18:04:21Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness-test-buyuk",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "state": "pending"
     },
     "6111110345453636155": {
       "id": 6111110345453636155,
@@ -28980,15 +28900,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "mangadusleri.mom",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "liste/sayfa bos (harness)",
-        "at": "2026-11-17T17:02:29Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6581990139232227222": {
       "id": 6581990139232227222,
@@ -29460,7 +29375,7 @@
     "670740038008065849": {
       "id": 670740038008065849,
       "kind": "catalogue",
-      "title": "Pati Manga",
+      "title": "PatiManga",
       "lang": "tr",
       "nsfw": 0,
       "domain": "patimanga.com",
@@ -34075,8 +33990,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "device_step": "pages"
+      "state": "pending"
     },
     "8287199181829843047": {
       "id": 8287199181829843047,
@@ -34881,8 +34795,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "device_step": "list"
+      "state": "pending"
     },
     "8510231231653797281": {
       "id": 8510231231653797281,
