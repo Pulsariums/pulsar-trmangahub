@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T22:10:50Z",
+  "generated": "2026-11-17T22:11:34Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -6736,6 +6736,18 @@
       "sorun": "cloudflare",
       "reason": "CF: cerez gerekiyor (olculemedi)",
       "unreachable": true
+    },
+    "2139896355107159006": {
+      "id": 2139896355107159006,
+      "kind": "catalogue",
+      "title": "MangaRuhu",
+      "lang": "tr",
+      "nsfw": 0,
+      "domain": "ruhmanga.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "2145489765485420150": {
       "id": 2145489765485420150,
@@ -25883,18 +25895,6 @@
       },
       "dead": true,
       "unreachable": true
-    },
-    "6086089492809230311": {
-      "id": 6086089492809230311,
-      "kind": "catalogue",
-      "title": "MangaRuhu",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "mangaruhu.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
     },
     "6086566232223732046": {
       "id": 6086566232223732046,
