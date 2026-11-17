@@ -29,6 +29,7 @@ pub struct CatEntry {
     #[serde(default)] pub lang: String,
     #[serde(default)] pub sorun: String,
     #[serde(default)] pub dead: bool,
+    #[serde(default)] pub reason: String,
 }
 
 #[derive(Deserialize, Default)]
@@ -214,6 +215,7 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
     let cat_path = root.join("pulsar-v2/data/catalogue.json");
     let mut manual: std::collections::HashMap<(String, String), String> = std::collections::HashMap::new();
     let mut dead: std::collections::HashSet<(String, String)> = std::collections::HashSet::new();
+    let mut reasons: std::collections::HashMap<(String, String), String> = std::collections::HashMap::new();
     if let Ok(cat_text) = std::fs::read_to_string(&cat_path) {
         if let Ok(cat) = serde_json::from_str::<CatalogueFile>(&cat_text) {
             for c in cat.sources {
@@ -221,6 +223,9 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
                     manual.insert((c.domain.to_lowercase(), c.lang.to_lowercase()), c.sorun);
                 }
                 if c.dead {
+                if !c.reason.is_empty() {
+                    reasons.insert((c.domain.to_lowercase(), c.lang.to_lowercase()), c.reason);
+                }
                     dead.insert((c.domain.to_lowercase(), c.lang.to_lowercase()));
                 }
             }
@@ -273,6 +278,12 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
         // sorun:"cloudflare" yüzünden test paketinde kalıyordu).
         let device_pass = s.device.as_ref().map(|p| p.status.as_str()) == Some("pass");
         s.sorun = if device_pass { String::new() } else { sorun };
+        // Katalogda ölçülmüş gerekçe deftere taşınır; cihaz/harness gerekçesi (dolu ise) önceliklidir.
+        if s.reason.is_empty() {
+            if let Some(r) = reasons.get(&(e.domain.to_lowercase(), e.lang.to_lowercase())) {
+                s.reason = r.clone();
+            }
+        }
         // Ölü işareti kalıcıdır: ölçüm "DNS yok" dediyse status koşusu silmez.
         s.dead = s.dead || dead.contains(&(e.domain.to_lowercase(), e.lang.to_lowercase()));
         s.kapali = if e.kind == "engine" {
