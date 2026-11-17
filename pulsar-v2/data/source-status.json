@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T10:23:03Z",
+  "generated": "2026-11-17T10:55:02Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -142,15 +142,15 @@
       "nsfw": 1,
       "domain": "tonizu.top",
       "packages": [
-        "tr18"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "r",
         "http_code": "",
         "ms": 0,
         "detail": "",
-        "at": "2026-11-17T10:02:04Z"
+        "at": "2026-11-17T10:55:02Z"
       }
     },
     "1085305392848287310": {
@@ -430,8 +430,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "kuroimanga.site",
-      "packages": [],
-      "state": "failed",
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -440,13 +442,12 @@
         "at": "2026-11-16T22:05:11.851283Z"
       },
       "device": {
-        "status": "fail",
+        "status": "r",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: IOException: unexpected end of stream on https://www.kuroimanga.top/...",
-        "at": "2026-11-17T08:34:35Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-17T10:55:02Z"
+      }
     },
     "1255008208586588111": {
       "id": 1255008208586588111,
@@ -4835,8 +4836,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "opiatoon.shop",
-      "packages": [],
-      "state": "failed",
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4845,13 +4848,12 @@
         "at": "2026-11-13T19:01:05Z"
       },
       "device": {
-        "status": "fail",
+        "status": "r",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "",
+        "at": "2026-11-17T10:55:02Z"
       },
-      "device_step": "details",
       "sorun": "login"
     },
     "1854510220106965266": {
@@ -7306,8 +7308,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "outcatscans.net",
-      "packages": [],
-      "state": "failed",
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7316,13 +7320,12 @@
         "at": "2026-11-16T21:08:33.899Z"
       },
       "device": {
-        "status": "fail",
+        "status": "r",
         "http_code": "",
         "ms": 0,
-        "detail": "search: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "search"
+        "detail": "",
+        "at": "2026-11-17T10:55:02Z"
+      }
     },
     "2264580951411441594": {
       "id": 2264580951411441594,
@@ -7351,9 +7354,9 @@
       "nsfw": 0,
       "domain": "anikiga.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -7362,11 +7365,11 @@
         "at": "2026-11-16T22:05:11.851283Z"
       },
       "device": {
-        "status": "pass",
+        "status": "r",
         "http_code": "",
         "ms": 0,
         "detail": "",
-        "at": "2026-11-17T10:02:04Z"
+        "at": "2026-11-17T10:55:02Z"
       }
     },
     "2273313023247309827": {
@@ -9723,15 +9726,15 @@
       "nsfw": 0,
       "domain": "eleceedturkiye.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
+      "state": "pending",
       "device": {
-        "status": "pass",
+        "status": "r",
         "http_code": "",
         "ms": 0,
         "detail": "",
-        "at": "2026-11-17T10:02:04Z"
+        "at": "2026-11-17T10:55:02Z"
       }
     },
     "2922748393657669149": {
@@ -11390,16 +11393,17 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tuhafscans.com",
-      "packages": [],
-      "state": "failed",
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device": {
-        "status": "fail",
+        "status": "r",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-17T10:55:02Z"
+      }
     },
     "3488647577143589694": {
       "id": 3488647577143589694,
@@ -11914,16 +11918,17 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [],
-      "state": "failed",
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device": {
-        "status": "fail",
+        "status": "r",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "pages"
+        "detail": "",
+        "at": "2026-11-17T10:55:02Z"
+      }
     },
     "3704693444647218571": {
       "id": 3704693444647218571,

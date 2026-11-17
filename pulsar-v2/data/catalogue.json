@@ -315,28 +315,31 @@
         "datePattern": "d MMMM yyyy",
         "http1": true,
         "engine": "madara",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail",
-        "chapterSelector": "li.wp-manga-chapter",
-        "readerSelector": "div.page-break img, div.reading-content img",
-        "searchUrl": "https://www.kuroimanga.site/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+        "listPath": "/manga/?m_orderby=latest",
+        "itemSelector": ".page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": ".reading-content img",
+        "searchUrl": "https://www.kuroimanga.site/?s={query}&post_type=wp-manga",
         "searchMethod": "POST",
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "chapterAjaxUrl": "{url}ajax/chapters/"
       },
       "verified_by_user": true,
       "origins": [
         "keiyoushi_index",
         "local_custom",
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
       "altDomains": [
         "kuroimanga.com"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "limonmanga.com",
@@ -373,18 +376,22 @@
         "postReq": true,
         "datePattern": "dd MMMM yyyy",
         "engine": "madara",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
-        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": ".wp-manga-chapter-img"
+        "listPath": "/manga/?m_orderby=latest",
+        "itemSelector": ".page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": ".reading-content img",
+        "chapterAjaxUrl": "{url}ajax/chapters/",
+        "searchUrl": "https://tuhafscans.com/?s={query}&post_type=wp-manga"
       },
       "verified_by_user": true,
       "origins": [
         "keiyoushi_index",
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "mangadiyari.com",
@@ -1676,20 +1683,24 @@
       "config": {
         "datePattern": "d MMMM",
         "engine": "madara",
-        "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga, div.c-tabs-item__content",
-        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img",
-        "searchUrl": "https://opiatoon.shop/?s={query}&post_type=wp-manga"
+        "listPath": "/manga/?m_orderby=latest",
+        "itemSelector": ".page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": ".reading-content img",
+        "searchUrl": "https://opiatoon.shop/?s={query}&post_type=wp-manga",
+        "chapterAjaxUrl": "{url}ajax/chapters/"
       },
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index",
         "local_custom",
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
-      "sorun": "login"
+      "sorun": "login",
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "6830559705127350757",
@@ -2005,25 +2016,27 @@
       "config": {
         "datePattern": "dd/mm/yyyy",
         "engine": "madara",
-        "listPath": "https://tonizu.top/",
-        "itemSelector": ".page-item-detail.manga",
+        "listPath": "/manga/?m_orderby=latest",
+        "itemSelector": ".page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": ".reading-content img.wp-manga-chapter-img",
-        "searchUrl": "https://tonizu.top/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+        "readerSelector": ".reading-content img",
+        "searchUrl": "https://tonizu.top/?s={query}&post_type=wp-manga",
         "searchMethod": "POST",
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
         "searchJsonTitle": "title",
-        "chapterAjaxUrl": "https://tonizu.top/manga/<slug>/ajax/chapters/?t=1"
+        "chapterAjaxUrl": "{url}ajax/chapters/"
       },
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index",
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "trmanga.com",
@@ -2081,17 +2094,20 @@
         "listUrl": "webtoon/",
         "datePattern": "dd/MM/yyyy",
         "engine": "madara",
-        "listPath": "/webtoon",
-        "itemSelector": "div.page-item-detail.manga, div.popular-item-wrap",
-        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
-        "readerSelector": "div.page-break img, div.reading-content img"
+        "listPath": "/manga/?m_orderby=latest",
+        "itemSelector": ".page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": ".reading-content img",
+        "searchUrl": "https://webtoontr.net/?s={query}&post_type=wp-manga"
       },
       "verified_by_user": false,
       "origins": [
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "6593451456647607548",
@@ -2585,27 +2601,30 @@
       "nsfw": 1,
       "domain": "outcatscans.net",
       "baseUrl": "https://outcatscans.net",
-      "engine": "custom",
+      "engine": "madara",
       "config": {
-        "engine": "custom",
-        "listPath": "https://outcatscans.net/",
-        "itemSelector": ".page-item-detail.manga",
+        "engine": "madara",
+        "listPath": "/manga/?m_orderby=latest",
+        "itemSelector": ".page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
-        "searchUrl": "https://outcatscans.net/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
+        "readerSelector": ".reading-content img",
+        "searchUrl": "https://outcatscans.net/?s={query}&post_type=wp-manga",
         "searchMethod": "POST",
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "chapterAjaxUrl": "{url}ajax/chapters/"
       },
       "altDomains": [],
       "verified_by_user": false,
       "origins": [
         "keiyoushi_index",
-        "local_tr"
+        "local_tr",
+        "pulsar-oto-tamir"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "titanmanga.com",

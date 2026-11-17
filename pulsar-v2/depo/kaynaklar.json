@@ -1,6 +1,6 @@
 {
   "surum": 1,
-  "uretildi": "2026-11-17T10:33:57Z",
+  "uretildi": "2026-11-17T10:55:03Z",
   "toplam": 1702,
   "kayitlar": [
     {
@@ -136,7 +136,7 @@
       "tamir_kayitlari": [
         "kuroi-stream-sonu"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": true,
       "etiket": "tamir-edilebilir"
@@ -216,16 +216,17 @@
       "dil": "tr",
       "nsfw": 1,
       "alan_adi": "tonizu.top",
-      "durum": "active",
-      "grup": "tr18",
+      "durum": "pending",
+      "grup": "test",
       "yayinda": true,
       "eklentide_kapali": false,
-      "evre": "ana-grupta",
+      "evre": "testte",
       "motor": "madara",
       "kokenler": [
         "keiyoushi_index",
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
       "repolar": [
         "hyperion",
@@ -235,7 +236,7 @@
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "pass",
+      "cihaz": "r",
       "hata_adimi": null,
       "hata_mesaji": "",
       "saglik": null,
@@ -246,8 +247,8 @@
       "tamir_kayitlari": [],
       "tamir_denemesi": 0,
       "son_tamir": null,
-      "tamir_edildi": false,
-      "etiket": "gecti"
+      "tamir_edildi": true,
+      "etiket": "yeniden-test"
     },
     {
       "id": "1085305392848287310",
@@ -278,7 +279,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -347,7 +348,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -451,7 +452,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -673,17 +674,18 @@
       "dil": "tr",
       "nsfw": 1,
       "alan_adi": "kuroimanga.site",
-      "durum": "failed",
-      "grup": "yok",
-      "yayinda": false,
+      "durum": "pending",
+      "grup": "test",
+      "yayinda": true,
       "eklentide_kapali": false,
-      "evre": "tamir-kuyrugunda",
+      "evre": "testte",
       "motor": "madara",
       "kokenler": [
         "keiyoushi_index",
         "local_custom",
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
       "repolar": [
         "hyperion",
@@ -693,19 +695,19 @@
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "fail",
-      "hata_adimi": "pages",
-      "hata_mesaji": "pages: IOException: unexpected end of stream on https://www.kuroimanga.top/...",
+      "cihaz": "r",
+      "hata_adimi": null,
+      "hata_mesaji": "",
       "saglik": "ok",
       "olu": false,
       "ulasilamaz": false,
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
-      "son_tamir": "dogrulama-gecmedi",
-      "tamir_edildi": false,
-      "etiket": "tamir-edilebilir"
+      "tamir_denemesi": 3,
+      "son_tamir": "aday",
+      "tamir_edildi": true,
+      "etiket": "yeniden-test"
     },
     {
       "id": "1255008208586588111",
@@ -1223,7 +1225,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -1337,7 +1339,7 @@
         "anikiga-ajax-400",
         "merlin-ajax-400"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "duzeltildi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -1437,7 +1439,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -1914,7 +1916,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -2763,7 +2765,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -3070,7 +3072,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -3179,7 +3181,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -3386,7 +3388,7 @@
       "tamir_kayitlari": [
         "ssl-zincir-ayrimi"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -4473,7 +4475,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -5757,7 +5759,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -6104,7 +6106,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -6309,7 +6311,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -7168,7 +7170,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -7384,25 +7386,26 @@
       "dil": "tr",
       "nsfw": 1,
       "alan_adi": "opiatoon.shop",
-      "durum": "failed",
-      "grup": "yok",
-      "yayinda": false,
+      "durum": "pending",
+      "grup": "test",
+      "yayinda": true,
       "eklentide_kapali": false,
-      "evre": "tamir-kuyrugunda",
+      "evre": "testte",
       "motor": "madara",
       "kokenler": [
         "keiyoushi_index",
         "local_custom",
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
       "repolar": [],
       "katalogda": true,
       "havuzda": false,
-      "secici_dogrulandi": false,
-      "cihaz": "fail",
-      "hata_adimi": "details",
-      "hata_mesaji": "details: ",
+      "secici_dogrulandi": true,
+      "cihaz": "r",
+      "hata_adimi": null,
+      "hata_mesaji": "",
       "saglik": "ok",
       "olu": false,
       "ulasilamaz": false,
@@ -7411,10 +7414,10 @@
       "tamir_kayitlari": [
         "opiatoon-giris"
       ],
-      "tamir_denemesi": 2,
-      "son_tamir": "dogrulama-gecmedi",
-      "tamir_edildi": false,
-      "etiket": "tamir-edilebilir"
+      "tamir_denemesi": 3,
+      "son_tamir": "aday",
+      "tamir_edildi": true,
+      "etiket": "yeniden-test"
     },
     {
       "id": "1854510220106965266",
@@ -8437,7 +8440,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "dogrulama-gecmedi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -8615,7 +8618,7 @@
       "tamir_kayitlari": [
         "shadowceviri-arama-bos"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -8717,7 +8720,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -9228,7 +9231,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -9535,7 +9538,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -9703,7 +9706,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -11105,15 +11108,16 @@
       "dil": "tr",
       "nsfw": 1,
       "alan_adi": "outcatscans.net",
-      "durum": "failed",
-      "grup": "yok",
-      "yayinda": false,
+      "durum": "pending",
+      "grup": "test",
+      "yayinda": true,
       "eklentide_kapali": false,
-      "evre": "tamir-kuyrugunda",
-      "motor": "custom",
+      "evre": "testte",
+      "motor": "madara",
       "kokenler": [
         "keiyoushi_index",
-        "local_tr"
+        "local_tr",
+        "pulsar-oto-tamir"
       ],
       "repolar": [
         "hyperion",
@@ -11123,9 +11127,9 @@
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "fail",
-      "hata_adimi": "search",
-      "hata_mesaji": "search: ",
+      "cihaz": "r",
+      "hata_adimi": null,
+      "hata_mesaji": "",
       "saglik": "ok",
       "olu": false,
       "ulasilamaz": false,
@@ -11134,10 +11138,10 @@
       "tamir_kayitlari": [
         "outcat-rol-gerek"
       ],
-      "tamir_denemesi": 2,
-      "son_tamir": "dogrulama-gecmedi",
-      "tamir_edildi": false,
-      "etiket": "tamir-edilebilir"
+      "tamir_denemesi": 3,
+      "son_tamir": "aday",
+      "tamir_edildi": true,
+      "etiket": "yeniden-test"
     },
     {
       "id": "2264580951411441594",
@@ -11168,7 +11172,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -11180,11 +11184,11 @@
       "dil": "tr",
       "nsfw": 0,
       "alan_adi": "anikiga.com",
-      "durum": "active",
-      "grup": "tr",
+      "durum": "pending",
+      "grup": "test",
       "yayinda": true,
       "eklentide_kapali": false,
-      "evre": "ana-grupta",
+      "evre": "testte",
       "motor": "madara",
       "kokenler": [
         "keiyoushi_index",
@@ -11200,7 +11204,7 @@
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "pass",
+      "cihaz": "r",
       "hata_adimi": null,
       "hata_mesaji": "",
       "saglik": "ok",
@@ -11214,8 +11218,8 @@
       ],
       "tamir_denemesi": 0,
       "son_tamir": null,
-      "tamir_edildi": false,
-      "etiket": "gecti"
+      "tamir_edildi": true,
+      "etiket": "yeniden-test"
     },
     {
       "id": "2273313023247309827",
@@ -12908,7 +12912,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -14031,7 +14035,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -14203,7 +14207,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -14344,7 +14348,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -14548,7 +14552,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -14758,7 +14762,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -14770,11 +14774,11 @@
       "dil": "tr",
       "nsfw": 0,
       "alan_adi": "eleceedturkiye.com",
-      "durum": "active",
-      "grup": "tr",
+      "durum": "pending",
+      "grup": "test",
       "yayinda": true,
       "eklentide_kapali": false,
-      "evre": "ana-grupta",
+      "evre": "testte",
       "motor": "mangareader",
       "kokenler": [
         "auto_scan_2026",
@@ -14784,7 +14788,7 @@
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "pass",
+      "cihaz": "r",
       "hata_adimi": null,
       "hata_mesaji": "",
       "saglik": null,
@@ -14795,8 +14799,8 @@
       "tamir_kayitlari": [],
       "tamir_denemesi": 0,
       "son_tamir": null,
-      "tamir_edildi": false,
-      "etiket": "gecti"
+      "tamir_edildi": true,
+      "etiket": "yeniden-test"
     },
     {
       "id": "2922748393657669149",
@@ -15652,7 +15656,7 @@
       "tamir_kayitlari": [
         "nivera-merge-tuzagi"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "dogrulama-gecmedi",
       "tamir_edildi": true,
       "etiket": "tamir-edilebilir"
@@ -16304,7 +16308,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -16455,7 +16459,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -17431,7 +17435,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -17511,16 +17515,17 @@
       "dil": "tr",
       "nsfw": 1,
       "alan_adi": "tuhafscans.com",
-      "durum": "failed",
-      "grup": "yok",
-      "yayinda": false,
+      "durum": "pending",
+      "grup": "test",
+      "yayinda": true,
       "eklentide_kapali": false,
-      "evre": "tamir-kuyrugunda",
+      "evre": "testte",
       "motor": "madara",
       "kokenler": [
         "keiyoushi_index",
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
       "repolar": [
         "hyperion",
@@ -17530,19 +17535,19 @@
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "fail",
-      "hata_adimi": "pages",
-      "hata_mesaji": "pages: ",
+      "cihaz": "r",
+      "hata_adimi": null,
+      "hata_mesaji": "",
       "saglik": null,
       "olu": false,
       "ulasilamaz": false,
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
-      "son_tamir": "dogrulama-gecmedi",
-      "tamir_edildi": false,
-      "etiket": "tamir-edilebilir"
+      "tamir_denemesi": 3,
+      "son_tamir": "aday",
+      "tamir_edildi": true,
+      "etiket": "yeniden-test"
     },
     {
       "id": "3488647577143589694",
@@ -17757,7 +17762,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -17791,7 +17796,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -17892,7 +17897,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -18268,7 +18273,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -18354,33 +18359,34 @@
       "dil": "tr",
       "nsfw": 0,
       "alan_adi": "webtoontr.net",
-      "durum": "failed",
-      "grup": "yok",
-      "yayinda": false,
+      "durum": "pending",
+      "grup": "test",
+      "yayinda": true,
       "eklentide_kapali": false,
-      "evre": "tamir-kuyrugunda",
+      "evre": "testte",
       "motor": "madara",
       "kokenler": [
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
       "repolar": [],
       "katalogda": true,
       "havuzda": true,
       "secici_dogrulandi": true,
-      "cihaz": "fail",
-      "hata_adimi": "pages",
-      "hata_mesaji": "pages: ",
+      "cihaz": "r",
+      "hata_adimi": null,
+      "hata_mesaji": "",
       "saglik": null,
       "olu": false,
       "ulasilamaz": false,
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
-      "son_tamir": "dogrulama-gecmedi",
-      "tamir_edildi": false,
-      "etiket": "tamir-edilebilir"
+      "tamir_denemesi": 3,
+      "son_tamir": "aday",
+      "tamir_edildi": true,
+      "etiket": "yeniden-test"
     },
     {
       "id": "3704693444647218571",
@@ -18514,7 +18520,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -19842,7 +19848,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -20270,7 +20276,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -20441,7 +20447,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -20646,7 +20652,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -20687,7 +20693,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -21272,7 +21278,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -23458,7 +23464,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -25011,7 +25017,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -25955,7 +25961,8 @@
       "kokenler": [
         "keiyoushi_index",
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
       "repolar": [
         "hyperion",
@@ -25974,8 +25981,8 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
-      "son_tamir": "dogrulama-gecmedi",
+      "tamir_denemesi": 3,
+      "son_tamir": "aday",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
     },
@@ -27216,7 +27223,7 @@
         "harness-yanlis-pozitif",
         "merlin-ajax-400"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": true,
       "etiket": "gecti"
@@ -28306,7 +28313,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -28408,7 +28415,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -28864,7 +28871,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -29619,7 +29626,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -31096,7 +31103,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -31333,7 +31340,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -31422,7 +31429,8 @@
       "motor": "madara",
       "kokenler": [
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
       "repolar": [],
       "katalogda": true,
@@ -31437,8 +31445,8 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
-      "son_tamir": "dogrulama-gecmedi",
+      "tamir_denemesi": 3,
+      "son_tamir": "aday",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
     },
@@ -32112,7 +32120,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -32349,7 +32357,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -33317,7 +33325,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -33835,7 +33843,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -34584,7 +34592,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -34954,7 +34962,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -35028,7 +35036,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -35234,7 +35242,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -35776,7 +35784,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -35844,7 +35852,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -36221,7 +36229,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -36397,7 +36405,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -37533,7 +37541,7 @@
       "tamir_kayitlari": [
         "kuroi-stream-sonu"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": true,
       "etiket": "tamir-edilebilir"
@@ -37942,7 +37950,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -37976,7 +37984,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -38283,7 +38291,7 @@
       "tamir_kayitlari": [
         "kesin-olu-isareti"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": true,
       "etiket": "tamir-edilebilir"
@@ -39213,7 +39221,7 @@
       "tamir_kayitlari": [
         "kesin-olu-isareti"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": true,
       "etiket": "tamir-edilebilir"
@@ -39281,7 +39289,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -40376,7 +40384,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -40789,7 +40797,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -40891,7 +40899,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -41098,7 +41106,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -41132,7 +41140,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -41235,7 +41243,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -41379,7 +41387,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -41517,7 +41525,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -41626,8 +41634,8 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
-      "son_tamir": "dogrulama-gecmedi",
+      "tamir_denemesi": 3,
+      "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
     },
@@ -41864,7 +41872,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -42863,7 +42871,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -43968,7 +43976,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -44665,7 +44673,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -44734,7 +44742,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -45079,7 +45087,7 @@
       "tamir_kayitlari": [
         "kesin-olu-isareti"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": true,
       "etiket": "tamir-edilebilir"
@@ -45153,7 +45161,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -45773,7 +45781,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -46052,7 +46060,7 @@
       "tamir_kayitlari": [
         "shadowceviri-arama-bos"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -46261,7 +46269,7 @@
       "sorun": "oturum",
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -46648,7 +46656,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -46884,7 +46892,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -47572,7 +47580,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -49012,7 +49020,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -49420,7 +49428,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -49520,7 +49528,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -49861,7 +49869,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -49929,7 +49937,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "dogrulama-gecmedi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -50384,7 +50392,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -50732,7 +50740,7 @@
         "tarot-arama",
         "nivera-merge-tuzagi"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": true,
       "etiket": "tamir-edilebilir"
@@ -50767,7 +50775,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -50835,7 +50843,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -51349,7 +51357,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -51802,7 +51810,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -51836,8 +51844,8 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
-      "son_tamir": "motor-taninmadi",
+      "tamir_denemesi": 3,
+      "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
     },
@@ -51936,7 +51944,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -52178,7 +52186,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -52359,7 +52367,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -52414,7 +52422,8 @@
       "kokenler": [
         "keiyoushi_index",
         "local_tr",
-        "nyora_datadriven"
+        "nyora_datadriven",
+        "pulsar-oto-tamir"
       ],
       "repolar": [
         "hyperion",
@@ -52433,8 +52442,8 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
-      "son_tamir": "dogrulama-gecmedi",
+      "tamir_denemesi": 3,
+      "son_tamir": "aday",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
     },
@@ -52644,7 +52653,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -52715,7 +52724,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -53033,7 +53042,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -53244,7 +53253,7 @@
         "lunar-liste-json",
         "harness-yanlis-pozitif"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": true,
       "etiket": "tamir-edilebilir"
@@ -53483,7 +53492,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -53523,7 +53532,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -53737,7 +53746,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -53973,7 +53982,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -54149,7 +54158,7 @@
       "tamir_kayitlari": [
         "ssl-zincir-ayrimi"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -54460,7 +54469,7 @@
       "tamir_kayitlari": [
         "ssl-zincir-ayrimi"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -54879,7 +54888,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -54918,7 +54927,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -55055,7 +55064,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -55432,7 +55441,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "duzeltildi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -55582,7 +55591,7 @@
         "rsc-dizi-siniri",
         "nyx-sayfa-img"
       ],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": true,
       "etiket": "tamir-edilebilir"
@@ -55786,7 +55795,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -55858,7 +55867,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -56278,7 +56287,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "cloudflare",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -57599,7 +57608,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "erisilemiyor",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
@@ -58079,7 +58088,7 @@
       "sorun": null,
       "not": null,
       "tamir_kayitlari": [],
-      "tamir_denemesi": 2,
+      "tamir_denemesi": 3,
       "son_tamir": "motor-taninmadi",
       "tamir_edildi": false,
       "etiket": "tamir-edilebilir"
