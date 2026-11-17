@@ -63,6 +63,8 @@ pub struct StatusEntry {
     #[serde(default, skip_serializing_if = "String::is_empty")] pub note: String,
     /// Sorun türü ("cloudflare"/"login"). Dolu ise kaynak "test" paketinde kalır (etiket silinmez).
     #[serde(default, skip_serializing_if = "String::is_empty")] pub sorun: String,
+    /// Ölçüm gerekçesi (failed/dead kayıtlar için). Status koşusu silmemeli.
+    #[serde(default, skip_serializing_if = "String::is_empty")] pub reason: String,
     /// Kesin ölü (park sayfası, NXDOMAIN, satılık). Hiçbir pakete girmez.
     #[serde(default, skip_serializing_if = "std::ops::Not::not")] pub dead: bool,
     #[serde(default, skip_serializing_if = "std::ops::Not::not")] pub unreachable: bool,
@@ -244,6 +246,7 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
             device_step: None,
             note: String::new(),
             sorun: String::new(),
+            reason: String::new(),
             dead: false,
             unreachable: false,
             kapali: false,
@@ -270,7 +273,8 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
         // sorun:"cloudflare" yüzünden test paketinde kalıyordu).
         let device_pass = s.device.as_ref().map(|p| p.status.as_str()) == Some("pass");
         s.sorun = if device_pass { String::new() } else { sorun };
-        s.dead = dead.contains(&(e.domain.to_lowercase(), e.lang.to_lowercase()));
+        // Ölü işareti kalıcıdır: ölçüm "DNS yok" dediyse status koşusu silmez.
+        s.dead = s.dead || dead.contains(&(e.domain.to_lowercase(), e.lang.to_lowercase()));
         s.kapali = if e.kind == "engine" {
             dead_sources.contains(&e.name)
         } else {
