@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T14:18:30Z",
+  "generated": "2026-11-17T14:32:10Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -40,8 +40,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Korunan okuyucu: görseller yükleme sonrası admin-ajax a token ile isteniyor (rawi_ch_images). Token sayfaya özel; motor POST/token yapamıyor.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -675,15 +675,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "pornhwa18.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "1344025467833272995": {
@@ -3073,22 +3068,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "kumapoi.info",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "1414899155488272818": {
@@ -4246,22 +4229,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "rawkuma.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "search: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "search"
     },
     "1656003814974793263": {
@@ -4282,22 +4253,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "topmanhua.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: HttpException: HTTP error 526",
-        "at": "2026-11-17T08:34:35Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "1670524346204645872": {
@@ -4567,15 +4526,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "ganma.jp",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "1746687897184884790": {
@@ -4669,15 +4623,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "tapas.io",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "details"
     },
     "1769466275926738671": {
@@ -4774,15 +4723,10 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "animexnovel.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "1847284941352855352": {
@@ -4837,19 +4781,12 @@
       "domain": "opiatoon.shop",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "liste: 29 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
       "device": {
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: giris gerekli: detay https://opiatoon.shop/giris-yapmalisiniz/ adresine yonleniyor",
-        "at": "2026-11-17T11:20:09Z"
+        "detail": "Icerik login duvari arkasinda",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details",
       "sorun": "login"
@@ -5031,8 +4968,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Next App Router flight metni: tırnaklar kaçışlı (ters bölü + tırnak), URL ler göreli (https://cdn.leituramanga.net/ öneki gerekli). scriptJsonPages kaçışı çözmü",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -5043,15 +4980,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "seraphic-deviltry.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpException: HTTP error 404",
-        "at": "2026-11-17T08:34:35Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "1922179475422564101": {
@@ -5213,8 +5145,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Next.js; bölümler istemci tarafinda yukleniyor",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -7143,16 +7075,9 @@
       "nsfw": 0,
       "domain": "topcomicporno.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "unknown"
     },
     "2181705404398428261": {
       "id": 2181705404398428261,
@@ -7174,15 +7099,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "webcomicsapp.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "2190287912977065806": {
@@ -9048,8 +8968,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Ana sayfadan alınan /a-rich-lady-chapter-57/ adresi iki denemede de gövde döndürmedi. Ölçüm yapılamadı; site yavaş ya da bot engeli var.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -9178,15 +9098,10 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "lermangaonline.com.br",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "details"
     },
     "2683798939323503291": {
@@ -9295,8 +9210,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Woopread webnovel: bölüm metin paragraflarından oluşuyor, sayfa görseli yok.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -9893,15 +9808,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "pocket.shonenmagazine.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "3002384199708631612": {
@@ -10570,8 +10480,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Cihaz URL'i 404 (slug eskimiş); /manga listesindeki canli detayda h1+og:image var, bölüm listesi istemci tarafinda doluyor",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -10823,15 +10733,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "sleptmanga.com.tr",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages",
       "sorun": "cloudflare"
     },
@@ -11842,15 +11747,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: HttpException: HTTP error 404",
-        "at": "2026-11-17T11:20:09Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "3704693444647218571": {
@@ -13723,15 +13623,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "submanhwa.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "3858669502915686574": {
@@ -14274,15 +14169,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "namicomi.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "3957800042269399520": {
@@ -14884,15 +14774,10 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "mangalivre.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "4039665587600458579": {
@@ -15002,8 +14887,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Ana sayfa 200 ama icerik AliExpress e-ticaret sablonu (/grup/1/manga-aytrade/search?SearchText=...), seri linki 0; /manga/ kok sayfaya 301.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "list"
     },
@@ -15138,22 +15023,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangahere.cc",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "4064041705395617170": {
@@ -15315,8 +15188,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Bölüm listesi SPA tarafinda; HTML'de bölüm linki yok",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -15553,15 +15426,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhwa18.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "4107194506193138488": {
@@ -15962,8 +15830,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Sayfa 4.6 KB Next.js kabuğu; reader tamamen istemcide kuruluyor. Resmî SQEX uygulaması; üyelik/kota gerekebilir.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -16327,19 +16195,12 @@
       "domain": "comic-days.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
       "device": {
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Sayfa listesi #page-viewer div inin attribute değerinde pageStructure.pages[].src; HTML entity kaçışlı (&quot;) ve URL ler uzantısız (/public/original/<id>-<has",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -18673,8 +18534,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "URL ler tek tırnaklı JS dizisinde: thzq ile başlayan [ ... ] (https://i1.mangakatana.com/token/...jpg). scriptJsonPages kalıbı thzq: veya thzq,N,[ bekliyor; thz",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -19863,8 +19724,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Okuyucu harici vw.mangaz.com viewer ında (JS/DRM). HTML de sayfa görseli yok; data-src ler yalnız benzer kitap kapakları.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -20284,15 +20145,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaforfree.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "details"
     },
     "4539181955248324512": {
@@ -20540,8 +20396,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Yaş kapisi (id=btn-continue 'Продовжити') arkasinda; icerik HTML'de gelmedi, cerez adi/degeri görülmedi",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -20768,8 +20624,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Sayfa listesi viewer API sinden (bibGetCntntInfo) oturuma özel random_identification ile geliyor. HTML de görsel yok; attribute değeri motor tarafından okunamıy",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -20954,15 +20810,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "piccoma.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "4747418060607817046": {
@@ -21480,15 +21331,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "ohjoysextoy.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "4974835479241504833": {
@@ -21969,8 +21815,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "/manga/absolute-necromancer/chapter-1/ isteği detay sayfasını döndürdü; gerçek okuyucu URL si bulunamadı. Sayfada data-src/data-original hiç yok.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -22080,8 +21926,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "FoOlSlide adult-notice JS kapisi: popupglobal1117/popup11117/popup1n1117 cerezleri sayfada görüldü ama istenen degerler oturuma özel; icerik gelmedi",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -22197,22 +22043,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "comichubfree.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "5390747718232305300": {
@@ -26253,15 +26087,10 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "covendasbruxonas.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-17T08:34:35Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "5824161584162899529": {
@@ -26497,8 +26326,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Bölüm listesi istemci tarafinda; HTML'de bölüm linki yok",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -26751,8 +26580,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Bölüm listesi JS ile doluyor; ayrica age-gate overlay ve login linkleri var",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -27466,15 +27295,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "monomanga.com.tr",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "6077478264730102242": {
@@ -27570,8 +27394,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "AJAX ucu sayfa dizisi değil HTML gövdesi döndürüyor (html alanı). pageApiItems bir JSONArray beklediği için kullanılamıyor.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -27593,15 +27417,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangapill.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "6086084485207567652": {
@@ -28125,8 +27944,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "detayda class=chapterlists animate-pulse; /chapterlist/timid-palette sayfasinda da bölüm linki yok (yalniz navigasyon)",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -28369,8 +28188,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Next.js App Router iskeleti. Sayfa görselleri istemci tarafı API den geliyor; HTML/RSC metninde CDN veya görsel yolu yok.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -29207,8 +29026,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Tek bölümlük doujin postu: /home/manga-reader/?manga=...&view=page linki var, bölüm listesi yok; admin-ajax gövdesi ölçülmedi",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -29435,15 +29254,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "shadowceviri.blogspot.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "6620603193106345631": {
@@ -29536,8 +29350,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Nuxt 3. __NUXT_DATA__ 83 eleman; images dizisi yalnız dosya adı (6afb3b64c56f9.webp). Tam yol mangaDir+chapterDir ile istemcide kuruluyor; pageJsonArray images ",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -29662,15 +29476,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "uchuujinmangas.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "6698416942605335398": {
@@ -29711,8 +29520,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Site Plesk varsayilan sayfasina düşmüş; manga içeriği yok. Cihaz ayni URL'de 200 görmüş, bizim ölçümümüzde 404",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -31297,15 +31106,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lectorhentai.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "details"
     },
     "7206313674903334634": {
@@ -31347,8 +31151,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Gerçek adres https://cdn.meowing.org/uploads/{uid}. uid-URL eşlemesi istemcide; HTML de dizi yok, cdn.meowing yalnız meta og:image ve ld+json içinde. readerSele",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -32551,15 +32355,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "spicyseries.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "7699615627407197318": {
@@ -33100,8 +32899,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Yalniz JS challenge: window.location.replace(/manga?ch=1&js=<JWT>); HTML icinde seri yok.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "list"
     },
@@ -33785,15 +33584,10 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "multporn.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "8123620034208406844": {
@@ -33992,19 +33786,12 @@
       "domain": "lunarx.to",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
       "device": {
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Next.js; HTML de seri linki ve slug alani 0. /api/proxy/m/ yalniz varlik proxy oneki, seri JSON ucu gorulmedi.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -34058,15 +33845,10 @@
       "lang": "zh",
       "nsfw": 0,
       "domain": "mhua5.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "819133826546505053": {
@@ -34296,22 +34078,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "trmanga.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "8287199181829843047": {
@@ -34622,8 +34392,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Razure webnovel: bölüm 141 p metninden oluşuyor, sayfa görseli yok. Görsel okuyucu olarak okunamaz.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -34837,8 +34607,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "DocTruyen5s: gerçek sayfa URL leri JS ile atanıyor. HTML de uploads/chapters yolu hiç yok (grep=0); 8 data-src yalnız kapak görselleri.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -34900,8 +34670,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Sunucu yaş kapısı sayfası döndürüyor (CSRF li confirm_age formu). Motor özel çerez göndermiyor; config ile aşılamaz.",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -34944,8 +34714,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Resmi tanitim sayfasi, web'de bölüm listesi yok; icerik mobil uygulamada",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -34997,8 +34767,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Sayfa tamamen istemci tarafinda render; HTML iskelet",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -35118,15 +34888,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "nikkangecchan.jp",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "8510231231653797281": {
@@ -35306,16 +35071,9 @@
       "nsfw": 0,
       "domain": "montetaiscanlator.xyz",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "unknown"
     },
     "8565451209846899036": {
       "id": 8565451209846899036,
@@ -35410,22 +35168,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "nyxscans.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "8607382649550260430": {
@@ -35608,22 +35354,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "dragonball-multiverse.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "http404",
-        "http_code": "404",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "details"
     },
     "8657398763211315182": {
@@ -35717,8 +35451,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Sayfa URL listesi XOR ile gizlenmiş ((charCodeAt(i+16) ^ charCodeAt(i%16)) -> JSON.parse) ve canvas a çiziliyor. HTML de düz görsel yolu yok; sayfadaki yorum: n",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "pages"
     },
@@ -36441,8 +36175,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "details: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "Bölümler takip edilebilir link degil: href='#' + onclick cview(); secici ile cikarilamaz",
+        "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details"
     },
@@ -36523,15 +36257,10 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "unicomics.ru",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "889450546053005384": {
@@ -36568,16 +36297,9 @@
       "nsfw": 0,
       "domain": "weebcentral.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "unknown"
     },
     "8901726653993792036": {
       "id": 8901726653993792036,
@@ -36834,22 +36556,10 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "speed-manga.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "9083609997475506503": {

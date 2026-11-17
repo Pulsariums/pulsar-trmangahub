@@ -367,10 +367,10 @@ object EngineRegistry {
                 // İki biçim var: düz JSON `"alan":[...]` ve Qwik durum dizisi
                 // `"alan",<tip>,[0,"adres",0,"adres",...]` (xcomic imageUrls).
                 val head = Regex(
-                    "\"?${Regex.escape(arrayName)}\"?\\s*(?::\\s*|,\\s*\\d+\\s*,\\s*)\\[([\\s\\S]*?)\\]",
+                    "\"?${Regex.escape(arrayName)}\"?\\s*(?::\\s*|=\\s*|,\\s*\\d+\\s*,\\s*)\\[([\\s\\S]*?)\\]",
                 ).find(text)
                 if (head != null) {
-                    for (m in Regex("\"([^\"]+)\"").findAll(head.groupValues[1])) {
+                    for (m in Regex("[\"']([^\"']+)[\"']").findAll(head.groupValues[1])) {
                         addPageUrl(out, m.groupValues[1], allow, urlBase)
                     }
                 }
