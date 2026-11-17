@@ -374,9 +374,9 @@
         "postReq": true,
         "datePattern": "dd MMMM yyyy",
         "engine": "madara",
-        "listPath": "/manga/?m_orderby=latest",
-        "itemSelector": ".page-item-detail",
-        "chapterSelector": "li.wp-manga-chapter a",
+        "listPath": "/manga/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "a[href*=\"/bolum-\"]",
         "readerSelector": ".reading-content img",
         "chapterAjaxUrl": "{url}ajax/chapters/",
         "searchUrl": "https://tuhafscans.com/?s={query}&post_type=wp-manga"
@@ -401,15 +401,15 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
+        "listPath": "/seri",
         "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
+        "chapterSelector": "a[href*=\"/bolum/\"]",
         "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img",
         "listJsonUrl": "https://mangadiyari.com/api/series?page={page}",
         "listJsonItems": "series",
         "listJsonTitle": "title",
         "listJsonUrlField": "slug",
-        "listJsonUrlTemplate": "/seri/{slug}",
+        "listJsonUrlTemplate": "https://mangadiyari.com/seri/{slug}",
         "listJsonCover": "cover_url",
         "searchUrl": "https://mangadiyari.com/api/series?search={query}",
         "searchJsonItems": "series",
@@ -419,18 +419,21 @@
         "pageApiUrl": "https://mangadiyari.com/api/chapters/{1}",
         "pageApiIdPattern": "/bolum/(\\d+)",
         "pageApiLookupUrl": "https://mangadiyari.com/api/series/{1}",
-        "pageApiLookupPattern": "/seri/([^/]+)/bolum/(\\d+(?:\\.\\d+)?)",
+        "pageApiLookupPattern": "/seri/([^/]+)/bolum/([0-9]+)",
         "pageApiLookupItems": "chapters",
         "pageApiLookupNumberField": "chapter_number",
         "pageApiLookupIdField": "id",
         "pageApiItems": "pages",
-        "pageApiFieldUrl": "display_image"
+        "pageApiFieldUrl": "image_path",
+        "searchMethod": "GET"
       },
       "verified_by_user": true,
       "origins": [
         "keiyoushi_index",
         "local_tr"
-      ]
+      ],
+      "dead": false,
+      "selector_verified": true
     },
     {
       "id": "mangadenizi.net",
@@ -1799,7 +1802,8 @@
       ],
       "selector_verified": true,
       "status": "dead",
-      "reason": "Istek 814292.toplakehorizon.com park adresine yonleniyor, title=..Loading.., sayfada sedo izi. Alan adi park edilmis. - olcum 2026-11-17"
+      "reason": "Park/el degistirmis: 302 surveymrs.com adresine yonlendiriyor, icerik yok.",
+      "dead": true
     },
     {
       "id": "raindropteamfan.com",
@@ -4381,7 +4385,9 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": true,
+      "reason": "Site okuyucu degil, dis baglanti portali: 24 .ed-card'in hepsi harici resmi kaynaklara gidiyor (mangaplus.shueisha.co.jp, br.comikey.com). Ana sayfada kendi icerigine giden tek bir baglanti yok, /manga = 404 (9 bayt). Katalog/bolum yok."
     },
     {
       "id": "nightsup.net",
@@ -5070,15 +5076,16 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "en/discover/comics",
-        "itemSelector": "a[href*=\"/en/title/\"]",
-        "chapterSelector": "a[href*=\"/en/chapter/\"]",
+        "listPath": "/en/discover/comics",
+        "itemSelector": "a[href*='/title/']",
+        "chapterSelector": "a[href*='/chapter/']",
         "readerSelector": ""
       },
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "br.niadd.com",
@@ -5614,20 +5621,21 @@
       "name": "Diva Scans",
       "lang": "en",
       "nsfw": 0,
-      "domain": "divatoon.com",
+      "domain": "divascans.org",
       "baseUrl": "https://divascans.org",
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/series/comic",
-        "itemSelector": "div[data-rail-slide]",
-        "chapterSelector": "",
+        "listPath": "/series",
+        "itemSelector": "div.card-feedback",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
         "readerSelector": ""
       },
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "elftoon.xyz",
@@ -6239,15 +6247,16 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "category/comic/",
-        "itemSelector": "div.comicarchiveframe",
+        "listPath": "/category/comic/",
+        "itemSelector": ".comicarchiveframe",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": ".comicpane img"
       },
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "1manga.co",
@@ -7215,15 +7224,16 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/doujin-list/",
-        "itemSelector": "li.Doujinshi",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "listPath": "/baca/series/",
+        "itemSelector": "div.flexbox2-item",
+        "chapterSelector": "ul.series-chapterlist a",
+        "readerSelector": "div.reader-area img"
       },
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "dreamteams.space",
@@ -7457,14 +7467,15 @@
       "config": {
         "engine": "custom",
         "listPath": "/web",
-        "itemSelector": "a[href*=\"/web/magazine/\"]",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "a[href^=\"/web/magazine/\"]",
+        "chapterSelector": "a[href^=\"/web/reader/\"]",
+        "readerSelector": "img[src*=\"story_\"]"
       },
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "ichicomi.com",
@@ -7496,7 +7507,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "series",
+        "listPath": "/series",
         "itemSelector": ".c-series-items__item",
         "chapterSelector": "",
         "readerSelector": ""
@@ -7504,7 +7515,8 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "mangakuro.net",
@@ -7577,15 +7589,16 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "web/",
-        "itemSelector": "a[href*=\"/web/product/\"]",
+        "listPath": "/",
+        "itemSelector": ".PCOM-prdTile",
         "chapterSelector": "",
         "readerSelector": ""
       },
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "rawkuma.net",
@@ -7942,7 +7955,8 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "mangahub.ru",

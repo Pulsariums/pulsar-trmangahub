@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T17:27:17Z",
+  "generated": "2026-11-17T17:40:32Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -209,7 +209,7 @@
       "nsfw": 0,
       "domain": "athenamanga.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "http",
         "http_code": "429",
@@ -287,22 +287,8 @@
       "nsfw": 1,
       "domain": "piedpiperfansubyy.me",
       "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 430,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list"
+      "state": "dead",
+      "dead": true
     },
     "1158981255736960832": {
       "id": 1158981255736960832,
@@ -388,10 +374,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "catharsisfantasy.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -399,8 +383,7 @@
         "detail": "curl: (6) Could not resolve host: catharsisfantasy.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1203470067124874019": {
       "id": 1203470067124874019,
@@ -429,7 +412,7 @@
       "nsfw": 0,
       "domain": "ragnarokscan.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -466,7 +449,7 @@
       "nsfw": 0,
       "domain": "msypublisher.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -511,7 +494,7 @@
       "nsfw": 0,
       "domain": "rogmangas.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -620,7 +603,7 @@
       "nsfw": 0,
       "domain": "burningscans.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -773,9 +756,7 @@
         "ms": 139,
         "detail": "curl: (6) Could not resolve host: sarcasmscans.com",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "1350317231338804055": {
       "id": 1350317231338804055,
@@ -906,9 +887,7 @@
         "ms": 721,
         "detail": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_ILLEGAL_MESSAGE (0x80090326) - This error usually occurs when a fatal SSL/TLS alert is received (e.g. handshake fa",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "1376583637539257459": {
       "id": 1376583637539257459,
@@ -917,10 +896,8 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "bakaman.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -928,8 +905,7 @@
         "detail": "curl: (6) Could not resolve host: bakaman.net",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1376583769673693016": {
       "id": 1376583769673693016,
@@ -974,12 +950,9 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "bidmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "packages": [],
+      "state": "dead",
+      "dead": true
     },
     "1376610350639104046": {
       "id": 1376610350639104046,
@@ -1064,10 +1037,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "comic21.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -1075,8 +1046,7 @@
         "detail": "curl: (6) Could not resolve host: comic21.me",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1376628086099821360": {
       "id": 1376628086099821360,
@@ -1110,24 +1080,10 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "doujins.lat",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 152,
-        "detail": "curl: (6) Could not resolve host: doujins.lat",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: UnknownHostException: Unable to resolve host \"doujins",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "1376651252963693657": {
       "id": 1376651252963693657,
@@ -1222,9 +1178,7 @@
         "ms": 233,
         "detail": "curl: (6) Could not resolve host: www.epikman.ga",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "1376684333740686254": {
       "id": 1376684333740686254,
@@ -1388,17 +1342,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "heytoon.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: UnknownHostException: Unable to resolve host \"heytoon",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "1376779621504514638": {
       "id": 1376779621504514638,
@@ -1450,10 +1397,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "s2manga.io",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -1461,8 +1406,7 @@
         "detail": "curl: (6) Could not resolve host: s2manga.io",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1376821484119694574": {
       "id": 1376821484119694574,
@@ -1477,11 +1421,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: UnknownHostException: Unable to resolve host \"yuzuki.kagane.org\": No address associated with hostname",
-        "at": "2026-11-16T18:05:29Z"
+        "detail": "BULUNAMADI: kagane.org canli ve adres degismemis; sayfa mirrors listesi. Isaret ettigi kagane.moe Cloudflare challenge nedeniyle dogrulanamadi.",
+        "at": "2026-11-17T17:40:26Z"
       },
-      "device_step": "list",
-      "unreachable": true
+      "device_step": "list"
     },
     "1376821621685517565": {
       "id": 1376821621685517565,
@@ -1593,19 +1536,12 @@
       "domain": "komiku.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
       "device": {
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: ",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "BULUNAMADI: Domain canli, adres degismedi; yeni adres aramaya gerek yok.",
+        "at": "2026-11-17T17:40:26Z"
       },
       "device_step": "list"
     },
@@ -1820,7 +1756,7 @@
       "nsfw": 0,
       "domain": "manga-ay.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -1934,10 +1870,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "mangaid.click",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -1945,8 +1879,7 @@
         "detail": "curl: (6) Could not resolve host: mangaid.click",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1376874560910710401": {
       "id": 1376874560910710401,
@@ -1955,10 +1888,8 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "mangajp.top",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "refused",
         "http_code": "000",
@@ -1966,8 +1897,7 @@
         "detail": "curl: (7) Failed to connect to mangajp.top:443 after 709 ms: Could not connect to server",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1376874560912170477": {
       "id": 1376874560912170477,
@@ -2354,10 +2284,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "neroxus.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -2365,8 +2293,7 @@
         "detail": "curl: (6) Could not resolve host: neroxus.com.br",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1376907794721299442": {
       "id": 1376907794721299442,
@@ -2427,10 +2354,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "1manhwa.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -2438,8 +2363,7 @@
         "detail": "curl: (6) Could not resolve host: 1manhwa.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1376943768242673917": {
       "id": 1376943768242673917,
@@ -3011,9 +2935,7 @@
         "ms": 201,
         "detail": "curl: (6) Could not resolve host: yaoibar.gay",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "1377191865874405498": {
       "id": 1377191865874405498,
@@ -3366,7 +3288,7 @@
       "nsfw": 0,
       "domain": "zinmanga.cc",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -3385,7 +3307,7 @@
       "nsfw": 0,
       "domain": "zinmanga.ms",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -3403,10 +3325,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "ragnarokscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -3414,8 +3334,7 @@
         "detail": "curl: (6) Could not resolve host: ragnarokscan.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1563705163345870652": {
       "id": 1563705163345870652,
@@ -3452,19 +3371,12 @@
       "domain": "orimanga.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "http",
-        "http_code": "503",
-        "ms": 0,
-        "detail": "liste: 0 link",
-        "at": "2026-11-13T19:01:05Z"
-      },
       "device": {
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "BULUNAMADI - Ana sayfa ve /manga ikisi de 503, 6144 bayt; gercek site title'i (OriManga | Webtoon Oku...) geliyor ama govdede 'maintenance' 2 kez geciyor, tek kart sinifi yok (bsx/manga-card/chapter-item = 0). Site bakimda; liste/detay olculemedi.",
-        "at": "2026-11-16T22:05:11.851283Z"
+        "detail": "BULUNAMADI: Tum on yuz yollari wp-maintenance eklentisi ile 503; REST (/wp-json, wp/v2/manga) 200 donuyor ama bolum/sayfa verisi yok. Frontend acilmadan secici olculmez. Denenen: /, /manga, /?s=a, /manga/barbarians-adventure-in-a-fantasy-world/, masaustu UA.",
+        "at": "2026-11-17T17:40:26Z"
       }
     },
     "1582187608480708671": {
@@ -3854,7 +3766,7 @@
       "nsfw": 0,
       "domain": "mangakazani.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -4051,10 +3963,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "mangas-scans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -4062,8 +3972,7 @@
         "detail": "curl: (6) Could not resolve host: mangas-scans.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1608885718281838973": {
       "id": 1608885718281838973,
@@ -4098,10 +4007,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangatyrant.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -4109,8 +4016,7 @@
         "detail": "curl: (28) Connection timed out after 15001 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1608889112777444179": {
       "id": 1608889112777444179,
@@ -4297,10 +4203,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "mantrazscan.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -4308,8 +4212,7 @@
         "detail": "curl: (6) Could not resolve host: mantrazscan.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1627694386920730916": {
       "id": 1627694386920730916,
@@ -4372,7 +4275,7 @@
       "nsfw": 0,
       "domain": "rawmanga.su",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -4606,7 +4509,7 @@
       "nsfw": 0,
       "domain": "alceacomic.my.id",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -4676,16 +4579,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "ganma.jp",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "HttpException: HTTP error 403",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "1746687897184884790": {
       "id": 1746687897184884790,
@@ -4694,10 +4591,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "tenshi01.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -4705,8 +4600,7 @@
         "detail": "curl: (6) Could not resolve host: tenshi01.id",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1751547615777173452": {
       "id": 1751547615777173452,
@@ -4734,10 +4628,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "irisscanlator.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "ssl_trust",
         "http_code": "000",
@@ -4745,8 +4637,7 @@
         "detail": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - Hedef as�l ad� yanl��.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncurl fai",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1754073277889650436": {
       "id": 1754073277889650436,
@@ -4756,7 +4647,7 @@
       "nsfw": 0,
       "domain": "mangasonline.cc",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -5001,10 +4892,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "lunarscans.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5012,8 +4901,7 @@
         "detail": "curl: (6) Could not resolve host: lunarscans.fr",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "1854959394301365757": {
       "id": 1854959394301365757,
@@ -5073,9 +4961,9 @@
       "nsfw": 0,
       "domain": "nabimanga.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -5544,10 +5432,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "edscanlation.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5555,8 +5441,7 @@
         "detail": "curl: (6) Could not resolve host: edscanlation.fr",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2042580902588587935": {
       "id": 2042580902588587935,
@@ -5566,7 +5451,7 @@
       "nsfw": 0,
       "domain": "ww9.readhaikyuu.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "cloudflare",
         "http_code": "",
@@ -5739,10 +5624,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lkscanlation.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5750,8 +5633,7 @@
         "detail": "curl: (6) Could not resolve host: lkscanlation.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2118098309490634743": {
       "id": 2118098309490634743,
@@ -5871,9 +5753,7 @@
         "ms": 154,
         "detail": "curl: (6) Could not resolve host: viyafansub.com",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "2125177024463197399": {
       "id": 2125177024463197399,
@@ -5882,10 +5762,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "ladyestelarscan.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5893,8 +5771,7 @@
         "detail": "curl: (6) Could not resolve host: ladyestelarscan.com.br",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2127348687487016380": {
       "id": 2127348687487016380,
@@ -5903,10 +5780,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "starboundscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -5914,8 +5789,7 @@
         "detail": "curl: (6) Could not resolve host: starboundscans.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2128092120813576068": {
       "id": 2128092120813576068,
@@ -6052,10 +5926,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manga4life.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6063,8 +5935,7 @@
         "detail": "curl: (6) Could not resolve host: manga4life.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2134595982688071985": {
       "id": 2134595982688071985,
@@ -6098,10 +5969,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "toonclash.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6109,8 +5978,7 @@
         "detail": "curl: (6) Could not resolve host: toonclash.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2134596002543147874": {
       "id": 2134596002543147874,
@@ -6216,9 +6084,7 @@
         "ms": 138,
         "detail": "curl: (6) Could not resolve host: mangakings.com.tr",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "2134596225128838841": {
       "id": 2134596225128838841,
@@ -6434,9 +6300,7 @@
         "ms": 208,
         "detail": "curl: (6) Could not resolve host: mangaokutr.net",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "2134596350520665723": {
       "id": 2134596350520665723,
@@ -6514,10 +6378,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "mangaschan.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6525,8 +6387,7 @@
         "detail": "curl: (6) Could not resolve host: mangaschan.net",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2134596436329422687": {
       "id": 2134596436329422687,
@@ -6545,9 +6406,7 @@
         "ms": 210,
         "detail": "curl: (6) Could not resolve host: manga-sehri.com",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "2134596439020741272": {
       "id": 2134596439020741272,
@@ -6556,10 +6415,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "mangashiro.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -6567,8 +6424,7 @@
         "detail": "curl: (28) Connection timed out after 15011 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2134596445891618114": {
       "id": 2134596445891618114,
@@ -6628,12 +6484,9 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "mangastorm.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "packages": [],
+      "state": "dead",
+      "dead": true
     },
     "2134596450835166565": {
       "id": 2134596450835166565,
@@ -6668,10 +6521,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "manga-terra.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6679,8 +6530,7 @@
         "detail": "curl: (6) Could not resolve host: manga-terra.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2134596481349045180": {
       "id": 2134596481349045180,
@@ -6689,10 +6539,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangatx.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6700,8 +6548,7 @@
         "detail": "curl: (6) Could not resolve host: mangatx.cc",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2134596481352858428": {
       "id": 2134596481352858428,
@@ -6710,10 +6557,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangatx.gg",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6721,8 +6566,7 @@
         "detail": "curl: (6) Could not resolve host: mangatx.gg",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2134596546279512783": {
       "id": 2134596546279512783,
@@ -6833,10 +6677,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "mangascan-fr.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6844,8 +6686,7 @@
         "detail": "curl: (6) Could not resolve host: mangascan-fr.net",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2134639439233628557": {
       "id": 2134639439233628557,
@@ -6932,10 +6773,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "kaliscan.io",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -6943,8 +6782,7 @@
         "detail": "curl: (6) Could not resolve host: kaliscan.io",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2134639457379445821": {
       "id": 2134639457379445821,
@@ -7260,10 +7098,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "lc5.cosmicscans.asia",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -7271,8 +7107,7 @@
         "detail": "curl: (6) Could not resolve host: lc5.cosmicscans.asia",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2163483283579746245": {
       "id": 2163483283579746245,
@@ -7300,10 +7135,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "gloryscans.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -7311,8 +7144,7 @@
         "detail": "curl: (6) Could not resolve host: gloryscans.fr",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2178892498027704727": {
       "id": 2178892498027704727,
@@ -7322,7 +7154,7 @@
       "nsfw": 0,
       "domain": "trwebtoon.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -7412,10 +7244,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "altayscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -7423,8 +7253,7 @@
         "detail": "curl: (60) schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - Sertifika zinciri g�venilmeyen bir yetkili taraf�ndan verildi.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncu",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2195630278199994241": {
       "id": 2195630278199994241,
@@ -7494,10 +7323,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "anisascans.in",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -7505,8 +7332,7 @@
         "detail": "curl: (6) Could not resolve host: anisascans.in",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2244960048938891485": {
       "id": 2244960048938891485,
@@ -7551,9 +7377,7 @@
         "ms": 15038,
         "detail": "curl: (28) Connection timed out after 15014 milliseconds",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "2268549974061786227": {
       "id": 2268549974061786227,
@@ -7613,10 +7437,8 @@
       "lang": "pl",
       "nsfw": 0,
       "domain": "skanlacje-feniksy.pl",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -7624,8 +7446,7 @@
         "detail": "curl: (6) Could not resolve host: skanlacje-feniksy.pl",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2315073161197987356": {
       "id": 2315073161197987356,
@@ -7984,10 +7805,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "msypublisher.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -7995,8 +7814,7 @@
         "detail": "curl: (6) Could not resolve host: msypublisher.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "239208987752357590": {
       "id": 239208987752357590,
@@ -8005,12 +7823,9 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "goctruyentranh.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "packages": [],
+      "state": "dead",
+      "dead": true
     },
     "2392133878554443860": {
       "id": 2392133878554443860,
@@ -8150,7 +7965,7 @@
       "nsfw": 0,
       "domain": "x.desu.city",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "200",
@@ -8416,22 +8231,14 @@
       "domain": "komiku.org",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
       "device": {
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: Liste: UnknownHostException: Unable to resolve host \"api.kom",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "BULUNAMADI: Domain canli, adres degismedi; yeni adres aramaya gerek yok.",
+        "at": "2026-11-17T17:40:26Z"
       },
-      "device_step": "list",
-      "unreachable": true
+      "device_step": "list"
     },
     "2424639311097801421": {
       "id": 2424639311097801421,
@@ -8568,10 +8375,8 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "oioivn.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -8579,8 +8384,7 @@
         "detail": "curl: (6) Could not resolve host: oioivn.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2424644622546363119": {
       "id": 2424644622546363119,
@@ -8777,9 +8581,7 @@
         "ms": 230,
         "detail": "curl: (6) Could not resolve host: yaoitr.fun",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "2424650585843186305": {
       "id": 2424650585843186305,
@@ -8978,7 +8780,7 @@
       "nsfw": 1,
       "domain": "fuchscans.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "http",
         "http_code": "000",
@@ -9004,10 +8806,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "ancientcomics.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -9015,8 +8815,7 @@
         "detail": "curl: (6) Could not resolve host: ancientcomics.com.br",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2525181669852038243": {
       "id": 2525181669852038243,
@@ -9025,10 +8824,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "zinmanga.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -9036,8 +8833,7 @@
         "detail": "curl: (6) Could not resolve host: zinmanga.cc",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2525181669861750109": {
       "id": 2525181669861750109,
@@ -9046,10 +8842,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "zinmanga.ms",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -9057,8 +8851,7 @@
         "detail": "curl: (6) Could not resolve host: zinmanga.ms",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2543926824329199167": {
       "id": 2543926824329199167,
@@ -9299,7 +9092,7 @@
       "nsfw": 0,
       "domain": "manga4life.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -9717,7 +9510,7 @@
       "nsfw": 0,
       "domain": "garciamanga.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -9859,7 +9652,7 @@
       "nsfw": 0,
       "domain": "yurigarden.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "http404",
         "http_code": "404",
@@ -9930,7 +9723,7 @@
       "nsfw": 0,
       "domain": "cartelmanhwas.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -9969,22 +9762,14 @@
       "domain": "yaoimangaoku.net",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 492,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
       "device": {
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "CLOUDFLARE: Cloudflare challenge tum yollarda, /wp-json dahil. Asilamaz.",
+        "at": "2026-11-17T17:40:26Z"
       },
-      "device_step": "list",
-      "unreachable": true
+      "device_step": "list"
     },
     "2919132306397933009": {
       "id": 2919132306397933009,
@@ -9994,9 +9779,9 @@
       "nsfw": 0,
       "domain": "eleceedturkiye.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "device": {
         "status": "pass",
         "http_code": "",
@@ -10032,7 +9817,7 @@
       "nsfw": 0,
       "domain": "ww11.readnaruto.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -10051,7 +9836,7 @@
       "nsfw": 0,
       "domain": "dragontranslation.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "200",
@@ -10070,7 +9855,7 @@
       "nsfw": 0,
       "domain": "ww10.dbsmanga.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "cloudflare",
         "http_code": "",
@@ -10089,7 +9874,7 @@
       "nsfw": 0,
       "domain": "lermanga.org",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -10107,10 +9892,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "laidbackscans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -10118,8 +9901,7 @@
         "detail": "curl: (6) Could not resolve host: laidbackscans.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "2968693738912507374": {
       "id": 2968693738912507374,
@@ -10154,7 +9936,7 @@
       "nsfw": 0,
       "domain": "blogtruyenmoi.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "200",
@@ -10250,16 +10032,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "pocket.shonenmagazine.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Nuxt SSR. Episode sayfasi 45065 b; __NUXT__ icinde episode meta var ama sayfa gorseli yok, sadece /img/img_spacer01.png ve baslik grid gorseli. Gorseller istemc",
-        "at": "2026-11-17T15:18:20.071105Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "3002384199708631612": {
       "id": 3002384199708631612,
@@ -10293,10 +10069,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "rsdleft.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -10304,8 +10078,7 @@
         "detail": "curl: (6) Could not resolve host: rsdleft.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3007568540437666355": {
       "id": 3007568540437666355,
@@ -10384,10 +10157,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "necroscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -10395,8 +10166,7 @@
         "detail": "curl: (6) Could not resolve host: necroscans.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3025187814319619495": {
       "id": 3025187814319619495,
@@ -10406,22 +10176,8 @@
       "nsfw": 0,
       "domain": "mangalivre.net",
       "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2670,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: NotFoundException: . Status=404, URL=[https://mangalivre.net/wp-admin/admin-ajax.php]",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "state": "dead",
+      "dead": true
     },
     "3026487048596454952": {
       "id": 3026487048596454952,
@@ -11026,11 +10782,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "CLOUDFLARE: Cloudflare challenge tum yollarda, /wp-json dahil. Asilamaz; API ucu yok.",
+        "at": "2026-11-17T17:40:26Z"
       },
-      "device_step": "list",
-      "unreachable": true
+      "device_step": "list"
     },
     "3201609293231115184": {
       "id": 3201609293231115184,
@@ -11148,8 +10903,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "search: Sonuç yok: a, one",
-        "at": "2026-11-17T09:52:10Z"
+        "detail": "BULUNAMADI: Domain canli, adres degismedi; yeni adres aramaya gerek yok.",
+        "at": "2026-11-17T17:40:26Z"
       },
       "device_step": "search"
     },
@@ -11262,10 +11017,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "novelstown.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -11273,8 +11026,7 @@
         "detail": "curl: (6) Could not resolve host: novelstown.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3298382380898468109": {
       "id": 3298382380898468109,
@@ -11370,7 +11122,7 @@
       "nsfw": 0,
       "domain": "foxwhite.com.br",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -11516,10 +11268,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "rainbowfairyscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -11527,8 +11277,7 @@
         "detail": "curl: (6) Could not resolve host: rainbowfairyscan.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3389656568466815148": {
       "id": 3389656568466815148,
@@ -11554,10 +11303,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "copypastescan.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -11565,8 +11312,7 @@
         "detail": "curl: (28) Connection timed out after 15004 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3428459131026179554": {
       "id": 3428459131026179554,
@@ -11575,10 +11321,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "monzee01.my.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -11586,8 +11330,7 @@
         "detail": "curl: (6) Could not resolve host: monzee01.my.id",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3429438113635916506": {
       "id": 3429438113635916506,
@@ -11597,7 +11340,7 @@
       "nsfw": 0,
       "domain": "mangananquim.site",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -11616,7 +11359,7 @@
       "nsfw": 0,
       "domain": "birdmanga.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -11737,15 +11480,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tuhafscans.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Madara. reading-content bos, data-src=0, wp-manga-chapter-img=0. Sayfada 73 login + required-login gecisi var: bolum gorselleri giris istiyor. Olculen secici yo",
-        "at": "2026-11-17T15:18:20.071105Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "3488647577143589694": {
       "id": 3488647577143589694,
@@ -11772,7 +11510,7 @@
       "nsfw": 0,
       "domain": "newmanhua.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -11865,8 +11603,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CLOUDFLARE - 1686 baytlik Bot Verification sayfasi (bot korumasi). HTML icerik yok.",
-        "at": "2026-11-16T22:14:59.157499Z"
+        "detail": "JS_RENDER: Her yol (/, /manga/, /?s=naruto) 200/1686 bayt ayni 'Bot Verification' sayfasi; LiteSpeed reCAPTCHA gate (sitekey 6Leio6YU...). /wp-json/wp/v2/manga bos yanit (curl 52). Denenen: /, /manga/, /?s=, /wp-json/wp/v2/manga. API izi yok.",
+        "at": "2026-11-17T17:40:26Z"
       }
     },
     "3581135968918069737": {
@@ -11955,9 +11693,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "state": "unknown"
     },
     "3623239322859855998": {
       "id": 3623239322859855998,
@@ -12104,7 +11840,7 @@
       "nsfw": 0,
       "domain": "cabaredowatame.site",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -12209,9 +11945,7 @@
         "ms": 162,
         "detail": "curl: (6) Could not resolve host: lilyumfansub.com.tr",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "3688690594033706893": {
       "id": 3688690594033706893,
@@ -12334,7 +12068,7 @@
       "nsfw": 0,
       "domain": "ancientcomics.com.br",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -12362,9 +12096,7 @@
         "ms": 227,
         "detail": "curl: (6) Could not resolve host: culturesubs.com",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "3736714740149822308": {
       "id": 3736714740149822308,
@@ -13391,9 +13123,7 @@
         "ms": 155,
         "detail": "curl: (6) Could not resolve host: mangagezginim.com",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "3758368269838243122": {
       "id": 3758368269838243122,
@@ -13479,10 +13209,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "mangananquim.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -13490,8 +13218,7 @@
         "detail": "curl: (6) Could not resolve host: mangananquim.site",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3758482848022057842": {
       "id": 3758482848022057842,
@@ -13551,10 +13278,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaowlnet.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -13562,8 +13287,7 @@
         "detail": "curl: (6) Could not resolve host: mangaowlnet.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3758492846151951116": {
       "id": 3758492846151951116,
@@ -13598,10 +13322,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "mangasonline.cc",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -13609,8 +13331,7 @@
         "detail": "curl: (6) Could not resolve host: mangasonline.cc",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3758609675079330242": {
       "id": 3758609675079330242,
@@ -13655,9 +13376,7 @@
         "ms": 141,
         "detail": "curl: (6) Could not resolve host: www.mangatilkisi.net",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "3758899467340376098": {
       "id": 3758899467340376098,
@@ -13735,7 +13454,7 @@
       "nsfw": 0,
       "domain": "gloryscans.fr",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -13753,10 +13472,8 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "ruahapchanhday.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -13764,8 +13481,7 @@
         "detail": "curl: (28) Connection timed out after 15006 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3783033271837288806": {
       "id": 3783033271837288806,
@@ -13912,10 +13628,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhwafreake.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -13923,8 +13637,7 @@
         "detail": "curl: (28) Connection timed out after 15001 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3801549989741520352": {
       "id": 3801549989741520352,
@@ -14037,10 +13750,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhwafreak.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -14048,8 +13759,7 @@
         "detail": "curl: (28) Connection timed out after 15001 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3807978410042868468": {
       "id": 3807978410042868468,
@@ -14084,7 +13794,7 @@
       "nsfw": 0,
       "domain": "yubikiri.my.id",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -14154,10 +13864,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "noonscan.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -14165,8 +13873,7 @@
         "detail": "curl: (6) Could not resolve host: noonscan.net",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3836293900617067342": {
       "id": 3836293900617067342,
@@ -14342,10 +14049,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "infamous-scans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -14353,8 +14058,7 @@
         "detail": "curl: (28) Connection timed out after 15009 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3906929553798875459": {
       "id": 3906929553798875459,
@@ -14490,10 +14194,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "alceacomic.my.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -14501,8 +14203,7 @@
         "detail": "curl: (6) Could not resolve host: alceacomic.my.id",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3939878246804060282": {
       "id": 3939878246804060282,
@@ -14511,12 +14212,9 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "anime-sama.eu",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "packages": [],
+      "state": "dead",
+      "dead": true
     },
     "3940138749548478169": {
       "id": 3940138749548478169,
@@ -14781,16 +14479,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "namicomi.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T15:42:59.035062Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "3957800042269399520": {
       "id": 3957800042269399520,
@@ -14876,10 +14568,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "birdmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -14887,8 +14577,7 @@
         "detail": "curl: (6) Could not resolve host: birdmanga.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3966166097339423290": {
       "id": 3966166097339423290,
@@ -15000,7 +14689,7 @@
       "nsfw": 0,
       "domain": "inkstory.me",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -15061,10 +14750,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "comicarab.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15072,8 +14759,7 @@
         "detail": "curl: (6) Could not resolve host: comicarab.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "3991617105516777154": {
       "id": 3991617105516777154,
@@ -15191,7 +14877,7 @@
       "nsfw": 0,
       "domain": "seitacelestial.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "200",
@@ -15296,10 +14982,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "fairydream.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15307,8 +14991,7 @@
         "detail": "curl: (6) Could not resolve host: fairydream.com.br",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4021130600798442386": {
       "id": 4021130600798442386,
@@ -15353,10 +15036,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "origami-orpheans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15364,8 +15045,7 @@
         "detail": "curl: (6) Could not resolve host: origami-orpheans.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4033099941655651971": {
       "id": 4033099941655651971,
@@ -15418,15 +15098,9 @@
       "nsfw": 0,
       "domain": "mangalivre.net",
       "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "IMZA_GEREKLI - comikey uygulaması Firebase App Check istiyor (bundle'da content-firebaseappcheck + media.comikey.com); HTML'de /api/ yolu yok. NeoxScans kartları br.comikey.com/comics/<slug>/<id>/ adresine gidiyor.",
-        "at": "2026-11-17T15:18:20.071105Z"
-      },
-      "device_step": "list"
+      "state": "dead",
+      "dead": true,
+      "kapali": true
     },
     "4039665587600458579": {
       "id": 4039665587600458579,
@@ -15436,7 +15110,7 @@
       "nsfw": 0,
       "domain": "elarctoon.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "http",
         "http_code": "429",
@@ -15611,7 +15285,7 @@
       "nsfw": 0,
       "domain": "firescans.xyz",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -15777,7 +15451,7 @@
       "nsfw": 0,
       "domain": "flixscans.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -15913,10 +15587,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "ghostscan.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -15924,8 +15596,7 @@
         "detail": "curl: (6) Could not resolve host: ghostscan.xyz",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "408818994966795928": {
       "id": 408818994966795928,
@@ -15935,7 +15606,7 @@
       "nsfw": 0,
       "domain": "lkscanlation.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -15953,10 +15624,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "radiantscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -15964,8 +15633,7 @@
         "detail": "curl: (28) Connection timed out after 15007 milliseconds",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4089642082775445637": {
       "id": 4089642082775445637,
@@ -16121,10 +15789,8 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "hamtruyen1.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -16132,8 +15798,7 @@
         "detail": "curl: (6) Could not resolve host: hamtruyen1.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4107317166875924393": {
       "id": 4107317166875924393,
@@ -16313,24 +15978,10 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "hiper.cool",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 211,
-        "detail": "curl: (6) Could not resolve host: hiper.cool",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: UnknownHostException: Unable to resolve host \"hiper.c",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "4113976277368451618": {
       "id": 4113976277368451618,
@@ -16366,7 +16017,7 @@
       "nsfw": 0,
       "domain": "lunarscans.fr",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -16385,7 +16036,7 @@
       "nsfw": 0,
       "domain": "clubinari.org",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -16428,7 +16079,7 @@
       "nsfw": 0,
       "domain": "hoifansub.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -16559,9 +16210,7 @@
         "ms": 140,
         "detail": "curl: (6) Could not resolve host: jellyring.co",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "4168662132362877672": {
       "id": 4168662132362877672,
@@ -16571,7 +16220,7 @@
       "nsfw": 0,
       "domain": "ww7.readneverland.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "cloudflare",
         "http_code": "",
@@ -16590,7 +16239,7 @@
       "nsfw": 0,
       "domain": "catharsisfantasy.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -16786,12 +16435,9 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "be.komikcast.fit",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "packages": [],
+      "state": "dead",
+      "dead": true
     },
     "4194885150730244972": {
       "id": 4194885150730244972,
@@ -16800,10 +16446,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikmama.lat",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -16811,8 +16455,7 @@
         "detail": "curl: (6) Could not resolve host: komikmama.lat",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4194885162664996228": {
       "id": 4194885162664996228,
@@ -16898,10 +16541,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "visormonarca.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -16909,8 +16550,7 @@
         "detail": "curl: (6) Could not resolve host: visormonarca.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4203164591483289693": {
       "id": 4203164591483289693,
@@ -16989,7 +16629,7 @@
       "nsfw": 0,
       "domain": "mangaschan.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -17236,7 +16876,7 @@
       "nsfw": 0,
       "domain": "mangastorm.org",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -17255,7 +16895,7 @@
       "nsfw": 0,
       "domain": "noxscans.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -17357,7 +16997,7 @@
       "nsfw": 0,
       "domain": "manga-chan.me",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "404",
@@ -17494,10 +17134,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangagojo.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -17505,8 +17143,7 @@
         "detail": "curl: (6) Could not resolve host: mangagojo.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4234251762781153760": {
       "id": 4234251762781153760,
@@ -17566,10 +17203,8 @@
       "lang": "pl",
       "nsfw": 0,
       "domain": "mangahona.pl",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -17577,8 +17212,7 @@
         "detail": "curl: (6) Could not resolve host: mangahona.pl",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4234251764048820885": {
       "id": 4234251764048820885,
@@ -17605,10 +17239,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mgjinx.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -17616,8 +17248,7 @@
         "detail": "curl: (6) Could not resolve host: mgjinx.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4234251765673532618": {
       "id": 4234251765673532618,
@@ -17678,10 +17309,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "mangakita.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -17689,8 +17318,7 @@
         "detail": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_ILLEGAL_MESSAGE (0x80090326) - This error usually occurs when a fatal SSL/TLS alert is received (e.g. handshake fa",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4234251766332777203": {
       "id": 4234251766332777203,
@@ -17770,10 +17398,8 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "manga-mate.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -17781,8 +17407,7 @@
         "detail": "curl: (6) Could not resolve host: manga-mate.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4234251768113653387": {
       "id": 4234251768113653387,
@@ -17809,10 +17434,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "vrnoin.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -17820,8 +17443,7 @@
         "detail": "curl: (6) Could not resolve host: vrnoin.site",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4234251769985511170": {
       "id": 4234251769985511170,
@@ -17830,10 +17452,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "mangapeak.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -17841,8 +17461,7 @@
         "detail": "curl: (6) Could not resolve host: mangapeak.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4234251770110216416": {
       "id": 4234251770110216416,
@@ -18020,10 +17639,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaruby.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -18031,8 +17648,7 @@
         "detail": "curl: (6) Could not resolve host: mangaruby.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4234251772225348094": {
       "id": 4234251772225348094,
@@ -18301,12 +17917,9 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "manga.wtf",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "packages": [],
+      "state": "dead",
+      "dead": true
     },
     "4234252625984316407": {
       "id": 4234252625984316407,
@@ -18510,10 +18123,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhwanew.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -18521,8 +18132,7 @@
         "detail": "curl: (6) Could not resolve host: manhwanew.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4234253215244278278": {
       "id": 4234253215244278278,
@@ -18608,10 +18218,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "vrnoin.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -18619,8 +18227,7 @@
         "detail": "curl: (6) Could not resolve host: vrnoin.site",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4234267176398092817": {
       "id": 4234267176398092817,
@@ -18879,10 +18486,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "neatmangas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "ssl_trust",
         "http_code": "000",
@@ -18890,8 +18495,7 @@
         "detail": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - Hedef as�l ad� yanl��.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncurl fai",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4262866747878890487": {
       "id": 4262866747878890487,
@@ -18952,7 +18556,7 @@
       "nsfw": 0,
       "domain": "newmanhua.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -19053,10 +18657,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "norterose.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19064,8 +18666,7 @@
         "detail": "curl: (6) Could not resolve host: norterose.com.br",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4271345145581530938": {
       "id": 4271345145581530938,
@@ -19193,10 +18794,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "perf-scan.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19204,8 +18803,7 @@
         "detail": "curl: (6) Could not resolve host: perf-scan.xyz",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4316696799221465247": {
       "id": 4316696799221465247,
@@ -19302,10 +18900,8 @@
       "lang": "th",
       "nsfw": 0,
       "domain": "popsmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19313,8 +18909,7 @@
         "detail": "curl: (6) Could not resolve host: popsmanga.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4325055161271704072": {
       "id": 4325055161271704072,
@@ -19376,7 +18971,7 @@
       "nsfw": 0,
       "domain": "mangakazani.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "empty",
         "http_code": "200",
@@ -19426,10 +19021,8 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "truyentranhfull.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19437,8 +19030,7 @@
         "detail": "curl: (6) Could not resolve host: truyentranhfull.net",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4361115049955014954": {
       "id": 4361115049955014954,
@@ -19575,10 +19167,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "rezoscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19586,8 +19176,7 @@
         "detail": "curl: (6) Could not resolve host: rezoscans.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4367837165202979033": {
       "id": 4367837165202979033,
@@ -19647,10 +19236,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "rogmangas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19658,8 +19245,7 @@
         "detail": "curl: (6) Could not resolve host: rogmangas.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4372717779628362313": {
       "id": 4372717779628362313,
@@ -19696,9 +19282,7 @@
         "ms": 341,
         "detail": "curl: (6) Could not resolve host: ruyamanga.net",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "4381294723770585814": {
       "id": 4381294723770585814,
@@ -19743,10 +19327,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "scan-manga.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19754,8 +19336,7 @@
         "detail": "curl: (6) Could not resolve host: scan-manga.me",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4388004712278807001": {
       "id": 4388004712278807001,
@@ -19815,7 +19396,7 @@
       "nsfw": 0,
       "domain": "sectscans.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -19841,7 +19422,7 @@
       "nsfw": 0,
       "domain": "sheakomik.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -19912,7 +19493,7 @@
       "nsfw": 0,
       "domain": "sitemanga.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -19962,10 +19543,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "skymanga.work",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -19973,8 +19552,7 @@
         "detail": "curl: (6) Could not resolve host: skymanga.work",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4397398368560684058": {
       "id": 4397398368560684058,
@@ -19984,7 +19562,7 @@
       "nsfw": 0,
       "domain": "flixscans.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -20060,10 +19638,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "ssreading.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -20071,8 +19647,7 @@
         "detail": "curl: (6) Could not resolve host: ssreading.com.br",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4403228470811652129": {
       "id": 4403228470811652129,
@@ -20125,7 +19700,7 @@
       "nsfw": 0,
       "domain": "franxxmangas.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -20546,7 +20121,7 @@
       "nsfw": 0,
       "domain": "trwebtoon.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -20919,7 +20494,7 @@
       "nsfw": 0,
       "domain": "scan-manga.me",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -21032,10 +20607,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "yaoimanga.es",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -21043,8 +20616,7 @@
         "detail": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - Yerel G�venlik Yetkilisi ile ba�lant� kurulam�yor",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4543072178093183112": {
       "id": 4543072178093183112,
@@ -21122,7 +20694,7 @@
       "nsfw": 0,
       "domain": "ww7.readdrstone.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "cloudflare",
         "http_code": "",
@@ -21495,9 +21067,7 @@
         "ms": 933,
         "detail": "curl: (6) Could not resolve host: anisamanga.com",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "4648495069634047799": {
       "id": 4648495069634047799,
@@ -21507,7 +21077,7 @@
       "nsfw": 0,
       "domain": "rainbowfairyscan.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -21710,16 +21280,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "piccoma.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Urun sayfasi 7264 b JS kabugu; episode linki 0. /web/api/product/43170, /web/api/product/43170/episodes, /web/api/episode/list/43170 -> hepsi 404. pcm_web_v33.0",
-        "at": "2026-11-17T15:18:20.071105Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "4747418060607817046": {
       "id": 4747418060607817046,
@@ -21780,7 +21344,7 @@
       "nsfw": 0,
       "domain": "visormonarca.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -21971,10 +21535,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "pojokmanga.info",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -21982,8 +21544,7 @@
         "detail": "curl: (6) Could not resolve host: pojokmanga.info",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "4850765163480887189": {
       "id": 4850765163480887189,
@@ -21992,24 +21553,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "crotpedia.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "4851494886996968982": {
       "id": 4851494886996968982,
@@ -22115,9 +21662,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "state": "unknown"
     },
     "4872650919616038499": {
       "id": 4872650919616038499,
@@ -22263,17 +21808,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "ohjoysextoy.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "IOException: Connection reset",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
-      "device_step": "list",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "4974835479241504833": {
       "id": 4974835479241504833,
@@ -22327,7 +21865,7 @@
       "nsfw": 0,
       "domain": "novelstown.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -22452,9 +21990,7 @@
         "ms": 1322,
         "detail": "curl: (6) Could not resolve host: tempestfansub.net",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "507162270957965065": {
       "id": 507162270957965065,
@@ -22532,7 +22068,7 @@
       "nsfw": 0,
       "domain": "inmoralnofansub.xyz",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -22685,10 +22221,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "otakusan.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -22696,8 +22230,7 @@
         "detail": "curl: (6) Could not resolve host: otakusan.me",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "519463498715105311": {
       "id": 519463498715105311,
@@ -22706,10 +22239,8 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "otakusan.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -22717,8 +22248,7 @@
         "detail": "curl: (6) Could not resolve host: otakusan.me",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5196330272388690439": {
       "id": 5196330272388690439,
@@ -22909,10 +22439,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "moonwitchscan.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -22920,8 +22448,7 @@
         "detail": "curl: (6) Could not resolve host: moonwitchscan.com.br",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5327924617305439150": {
       "id": 5327924617305439150,
@@ -23199,9 +22726,7 @@
         "ms": 141,
         "detail": "curl: (6) Could not resolve host: prunusscans.com",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "5443582880216157130": {
       "id": 5443582880216157130,
@@ -23410,10 +22935,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "cabaredowatame.site",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -23421,8 +22944,7 @@
         "detail": "curl: (6) Could not resolve host: cabaredowatame.site",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5564279680493652484": {
       "id": 5564279680493652484,
@@ -23641,7 +23163,7 @@
       "nsfw": 0,
       "domain": "po2scans.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -23695,7 +23217,7 @@
       "nsfw": 0,
       "domain": "skymanga.work",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -23815,24 +23337,10 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "birdtoon.shop",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 211,
-        "detail": "curl: (6) Could not resolve host: birdtoon.shop",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: UnknownHostException: Unable to resolve host \"birdtoo",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "5780904096827346445": {
       "id": 5780904096827346445,
@@ -24089,22 +23597,14 @@
       "domain": "fbsquadx.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 226,
-        "detail": "curl: (6) Could not resolve host: fbsquadx.com",
-        "at": "2026-11-13T17:07:52Z"
-      },
       "device": {
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: Liste: UnknownHostException: Unable to resolve host \"fbsquad",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "BULUNAMADI: fbsquadx.net canli gorunuyor ama govdede manga kaniti yok (duz 403). Dogrulanmadi; .com DNSte yok.",
+        "at": "2026-11-17T17:40:26Z"
       },
-      "device_step": "list",
-      "unreachable": true
+      "device_step": "list"
     },
     "5783982450202146438": {
       "id": 5783982450202146438,
@@ -24113,10 +23613,8 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "mangasup.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24124,8 +23622,7 @@
         "detail": "curl: (6) Could not resolve host: mangasup.net",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5784264972814693156": {
       "id": 5784264972814693156,
@@ -24134,10 +23631,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "foxwhite.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24145,8 +23640,7 @@
         "detail": "curl: (6) Could not resolve host: foxwhite.com.br",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5784698602441107348": {
       "id": 5784698602441107348,
@@ -24205,10 +23699,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "siyahmelek.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24216,8 +23708,7 @@
         "detail": "curl: (6) Could not resolve host: siyahmelek.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5785227396830298855": {
       "id": 5785227396830298855,
@@ -24400,7 +23891,7 @@
       "nsfw": 0,
       "domain": "hunlight.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -24452,7 +23943,7 @@
       "nsfw": 0,
       "domain": "jpmangas.xyz",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -24777,10 +24268,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komiksan.link",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -24788,8 +24277,7 @@
         "detail": "curl: (6) Could not resolve host: komiksan.link",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5788353350203438997": {
       "id": 5788353350203438997,
@@ -24869,22 +24357,14 @@
       "domain": "kunmanga.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 608,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
       "device": {
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: UnknownHostException: Unable to resolve host \"kunmanga.com\": No address associated with hostname",
-        "at": "2026-11-16T18:05:29Z"
+        "detail": "BULUNAMADI: Domain canli ama Cloudflare challenge ile 403. Adres degismedi; yeni adres yok. Cozum domain degil, CF asimi.",
+        "at": "2026-11-17T17:40:26Z"
       },
-      "device_step": "list",
-      "unreachable": true
+      "device_step": "list"
     },
     "5788803617698434203": {
       "id": 5788803617698434203,
@@ -24938,12 +24418,9 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "lermanga.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "packages": [],
+      "state": "dead",
+      "dead": true
     },
     "5789005791492500131": {
       "id": 5789005791492500131,
@@ -25252,9 +24729,7 @@
         "ms": 268,
         "detail": "curl: (6) Could not resolve host: mangacim.com.tr",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "5789623240607215930": {
       "id": 5789623240607215930,
@@ -25273,9 +24748,7 @@
         "ms": 1971,
         "detail": "curl: (6) Could not resolve host: mangaoku.org.tr",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "5789623240639777024": {
       "id": 5789623240639777024,
@@ -26067,10 +25540,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "noonscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -26078,8 +25549,7 @@
         "detail": "curl: (6) Could not resolve host: noonscan.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5790816613309957164": {
       "id": 5790816613309957164,
@@ -26088,10 +25558,8 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "swatscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -26099,8 +25567,7 @@
         "detail": "curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5790819801755723352": {
       "id": 5790819801755723352,
@@ -26235,10 +25702,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "opiatoon.art",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -26246,8 +25711,7 @@
         "detail": "curl: (6) Could not resolve host: opiatoon.art",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5791733359941749340": {
       "id": 5791733359941749340,
@@ -26282,10 +25746,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "otsugami.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -26293,8 +25755,7 @@
         "detail": "curl: (6) Could not resolve host: otsugami.id",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5792089966875567925": {
       "id": 5792089966875567925,
@@ -26329,7 +25790,7 @@
       "nsfw": 0,
       "domain": "po2scans.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -26372,10 +25833,8 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "rawmanga.su",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -26383,8 +25842,7 @@
         "detail": "curl: (6) Could not resolve host: rawmanga.su",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5793731109962281176": {
       "id": 5793731109962281176,
@@ -26394,7 +25852,7 @@
       "nsfw": 0,
       "domain": "raysscan.blogspot.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "http404",
         "http_code": "404",
@@ -26445,10 +25903,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "roseveil.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -26456,8 +25912,7 @@
         "detail": "curl: (6) Could not resolve host: roseveil.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5794532813292313368": {
       "id": 5794532813292313368,
@@ -26485,10 +25940,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "aquascans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -26496,8 +25949,7 @@
         "detail": "curl: (6) Could not resolve host: aquascans.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5794583011862256904": {
       "id": 5794583011862256904,
@@ -26549,10 +26001,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "siikomik.fun",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -26560,8 +26010,7 @@
         "detail": "curl: (6) Could not resolve host: siikomik.fun",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5794902966455248003": {
       "id": 5794902966455248003,
@@ -27002,10 +26451,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "yd-comics.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -27013,8 +26460,7 @@
         "detail": "curl: (6) Could not resolve host: yd-comics.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5799977401881654077": {
       "id": 5799977401881654077,
@@ -27023,10 +26469,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "yubikiri.my.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -27034,8 +26478,7 @@
         "detail": "curl: (6) Could not resolve host: yubikiri.my.id",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5799991049029331967": {
       "id": 5799991049029331967,
@@ -27088,12 +26531,9 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "inkstory.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "packages": [],
+      "state": "dead",
+      "dead": true
     },
     "5800490090703324334": {
       "id": 5800490090703324334,
@@ -27127,12 +26567,9 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "zonatmo.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "packages": [],
+      "state": "dead",
+      "dead": true
     },
     "5811112400216208071": {
       "id": 5811112400216208071,
@@ -27142,7 +26579,7 @@
       "nsfw": 0,
       "domain": "truyentranh3qc.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "200",
@@ -27250,9 +26687,7 @@
         "ms": 2563,
         "detail": "curl: (6) Could not resolve host: mangaefendisi.net",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "5827014979493050397": {
       "id": 5827014979493050397,
@@ -27383,9 +26818,7 @@
         "ms": 357,
         "detail": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - Hedef as�l ad� yanl��.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncurl fai",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "5835717275901038433": {
       "id": 5835717275901038433,
@@ -27489,7 +26922,7 @@
       "nsfw": 0,
       "domain": "timenaight.org",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -27594,12 +27027,9 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "mediocretoons.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "dead": false,
-      "kapali": false
+      "packages": [],
+      "state": "dead",
+      "dead": true
     },
     "5913531196666726580": {
       "id": 5913531196666726580,
@@ -27664,10 +27094,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "bananamanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -27675,8 +27103,7 @@
         "detail": "curl: (6) Could not resolve host: bananamanga.net",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5943193894247680779": {
       "id": 5943193894247680779,
@@ -27754,7 +27181,7 @@
       "nsfw": 0,
       "domain": "imperioscans.com.br",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -27823,7 +27250,7 @@
       "nsfw": 0,
       "domain": "com-x.life",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "404",
@@ -27851,9 +27278,7 @@
         "ms": 534,
         "detail": "curl: (6) Could not resolve host: kedi.to",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "5972281005079028369": {
       "id": 5972281005079028369,
@@ -28017,10 +27442,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "voidscans.co",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -28028,8 +27451,7 @@
         "detail": "curl: (6) Could not resolve host: voidscans.co",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5994119241647268337": {
       "id": 5994119241647268337,
@@ -28038,10 +27460,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "br.ninemanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -28049,8 +27469,7 @@
         "detail": "curl: (6) Could not resolve host: br.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5994119241648727709": {
       "id": 5994119241648727709,
@@ -28059,10 +27478,8 @@
       "lang": "de",
       "nsfw": 0,
       "domain": "de.ninemanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -28070,8 +27487,7 @@
         "detail": "curl: (6) Could not resolve host: de.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5994119241649919389": {
       "id": 5994119241649919389,
@@ -28105,10 +27521,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "es.ninemanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -28116,8 +27530,7 @@
         "detail": "curl: (6) Could not resolve host: es.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5994119241650962109": {
       "id": 5994119241650962109,
@@ -28126,10 +27539,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "fr.ninemanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -28137,8 +27548,7 @@
         "detail": "curl: (6) Could not resolve host: fr.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5994119241653792349": {
       "id": 5994119241653792349,
@@ -28147,10 +27557,8 @@
       "lang": "it",
       "nsfw": 0,
       "domain": "it.ninemanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -28158,8 +27566,7 @@
         "detail": "curl: (6) Could not resolve host: it.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "5994119241662134109": {
       "id": 5994119241662134109,
@@ -28168,10 +27575,8 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "ru.ninemanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -28179,8 +27584,7 @@
         "detail": "curl: (6) Could not resolve host: ru.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "6002082093712723253": {
       "id": 6002082093712723253,
@@ -28358,7 +27762,7 @@
       "nsfw": 0,
       "domain": "1manhwa.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -28561,7 +27965,7 @@
       "nsfw": 0,
       "domain": "mangaid.click",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -28604,10 +28008,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "fuchscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -28615,8 +28017,7 @@
         "detail": "curl: (6) Could not resolve host: fuchscans.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "6080360458635054121": {
       "id": 6080360458635054121,
@@ -28644,7 +28045,7 @@
       "nsfw": 0,
       "domain": "mangapeak.org",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -28690,7 +28091,7 @@
       "nsfw": 0,
       "domain": "mangaruby.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -28735,7 +28136,7 @@
       "nsfw": 0,
       "domain": "mangashiro.me",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -28893,7 +28294,7 @@
       "nsfw": 0,
       "domain": "traduccionesamistosas.topmanhuas.org",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "http404",
         "http_code": "404",
@@ -28919,7 +28320,7 @@
       "nsfw": 0,
       "domain": "rsdleft.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -28963,7 +28364,7 @@
       "nsfw": 0,
       "domain": "comic21.me",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -28982,7 +28383,7 @@
       "nsfw": 0,
       "domain": "ww4.readkaguyasama.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "cloudflare",
         "http_code": "",
@@ -29070,10 +28471,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "reset-scans.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -29081,8 +28480,7 @@
         "detail": "curl: (6) Could not resolve host: reset-scans.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "619328310543751277": {
       "id": 619328310543751277,
@@ -29092,7 +28490,7 @@
       "nsfw": 0,
       "domain": "elarctoon.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -29136,7 +28534,7 @@
       "nsfw": 0,
       "domain": "flixscans.org",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -29181,7 +28579,7 @@
       "nsfw": 0,
       "domain": "oioivn.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -29199,16 +28597,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "divatoon.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: HttpException: HTTP error 404",
-        "at": "2026-11-17T08:34:35Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "6249030196088162656": {
       "id": 6249030196088162656,
@@ -29235,7 +28627,7 @@
       "nsfw": 0,
       "domain": "noonscan.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -29254,7 +28646,7 @@
       "nsfw": 0,
       "domain": "noonscan.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -29435,10 +28827,8 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "frscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -29446,8 +28836,7 @@
         "detail": "curl: (6) Could not resolve host: frscans.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "6291728220002070611": {
       "id": 6291728220002070611,
@@ -29457,7 +28846,7 @@
       "nsfw": 0,
       "domain": "voidscans.co",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -29650,7 +29039,7 @@
       "nsfw": 0,
       "domain": "phenix-scans.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "200",
@@ -30009,22 +29398,14 @@
       "domain": "arcurafansub.com",
       "packages": [],
       "state": "failed",
-      "health": {
-        "status": "cloudflare",
-        "http_code": "403",
-        "ms": 761,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
       "device": {
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CLOUDFLARE - Kuyrukta 'liste zaman asimi' yaziyor; canli olcumde ana sayfa 403 'Just a moment...' Cloudflare managed challenge donduruyor. Govdede kart yok.",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "CLOUDFLARE: Cloudflare challenge tum yollarda, /wp-json dahil. Asilamaz; API ucu yok.",
+        "at": "2026-11-17T17:40:26Z"
       },
-      "device_step": "list",
-      "unreachable": true
+      "device_step": "list"
     },
     "6429679440215957503": {
       "id": 6429679440215957503,
@@ -30204,10 +29585,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "imperioscans.com.br",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -30215,8 +29594,7 @@
         "detail": "curl: (6) Could not resolve host: imperioscans.com.br",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "6500503485261765203": {
       "id": 6500503485261765203,
@@ -30449,10 +29827,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "snowmachinetranslation.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -30460,8 +29836,7 @@
         "detail": "curl: (6) Could not resolve host: snowmachinetranslation.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "6593423917153634481": {
       "id": 6593423917153634481,
@@ -30824,24 +30199,10 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "hentailib.me",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Zaman aşımı (20s)",
-        "at": "2026-11-17T10:02:04Z"
-      },
-      "device_step": "list",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "6696108672721987561": {
       "id": 6696108672721987561,
@@ -30990,10 +30351,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komiksin.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -31001,8 +30360,7 @@
         "detail": "curl: (6) Could not resolve host: komiksin.net",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "6718632900011266890": {
       "id": 6718632900011266890,
@@ -31017,11 +30375,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CLOUDFLARE - 403 'Just a moment...' (5460 bayt) Cloudflare managed challenge. Kuyrukta liste zaman asimi yaziyor; canli olcumde dogrudan 403 donuyor. Govdede kart yok.",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "CLOUDFLARE: Cloudflare challenge tum yollarda, /wp-json dahil. Asilamaz.",
+        "at": "2026-11-17T17:40:26Z"
       },
-      "device_step": "list",
-      "unreachable": true
+      "device_step": "list"
     },
     "673270202559723773": {
       "id": 673270202559723773,
@@ -31100,10 +30457,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "01.hwago.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -31111,8 +30466,7 @@
         "detail": "curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "673270363979099541": {
       "id": 673270363979099541,
@@ -31139,10 +30493,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lmtos.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -31150,8 +30502,7 @@
         "detail": "curl: (6) Could not resolve host: lmtos.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "673270465301806234": {
       "id": 673270465301806234,
@@ -31186,7 +30537,7 @@
       "nsfw": 0,
       "domain": "natsu.tv",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "200",
@@ -31299,7 +30650,7 @@
       "nsfw": 0,
       "domain": "zevep.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -31342,10 +30693,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "cartelmanhwas.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -31353,8 +30702,7 @@
         "detail": "curl: (6) Could not resolve host: cartelmanhwas.net",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "6789386601322204074": {
       "id": 6789386601322204074,
@@ -31433,10 +30781,8 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "ichiromanga.my.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -31444,8 +30790,7 @@
         "detail": "curl: (6) Could not resolve host: ichiromanga.my.id",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "6855233230088208936": {
       "id": 6855233230088208936,
@@ -31639,7 +30984,7 @@
       "nsfw": 0,
       "domain": "starboundscans.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -31914,24 +31259,10 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "lectorikigai.acamu.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 140,
-        "detail": "curl: (6) Could not resolve host: lectorikigai.acamu.net",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste: UnknownHostException: Unable to resolve host \"api.lec",
-        "at": "2026-11-17T08:09:33Z"
-      },
-      "device_step": "list",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "7032361130743410061": {
       "id": 7032361130743410061,
@@ -32620,7 +31951,7 @@
       "nsfw": 0,
       "domain": "bakaman.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -32639,7 +31970,7 @@
       "nsfw": 0,
       "domain": "yd-comics.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -32753,10 +32084,8 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "phetruyen.vip",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -32764,8 +32093,7 @@
         "detail": "curl: (6) Could not resolve host: phetruyen.vip",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "731009019605331101": {
       "id": 731009019605331101,
@@ -32775,7 +32103,7 @@
       "nsfw": 0,
       "domain": "scansmangas.me",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -32812,7 +32140,7 @@
       "nsfw": 0,
       "domain": "phetruyen.vip",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -32928,9 +32256,7 @@
         "ms": 739,
         "detail": "curl: (6) Could not resolve host: tempestscans.net",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "7367496482927145507": {
       "id": 7367496482927145507,
@@ -32964,11 +32290,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "list: Liste: Zaman aşımı (20s)",
-        "at": "2026-11-17T08:09:33Z"
+        "detail": "BULUNAMADI: https://manhuagui.com/ ve https://www.manhuagui.com/ 25s ve 20s --max-time ile iki kez denendi, ikisinde de curl (28) connection timed out, 0 bayt. Bu agdan erisilemiyor; olcum yapilamadi.",
+        "at": "2026-11-17T17:40:26Z"
       },
-      "device_step": "list",
-      "unreachable": true
+      "device_step": "list"
     },
     "7368085083996674415": {
       "id": 7368085083996674415,
@@ -33105,7 +32430,7 @@
       "nsfw": 0,
       "domain": "manhwanew.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -33221,9 +32546,7 @@
         "ms": 615,
         "detail": "curl: (6) Could not resolve host: hayalistic.com",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "7437503977254350462": {
       "id": 7437503977254350462,
@@ -33491,7 +32814,7 @@
       "nsfw": 0,
       "domain": "ladyestelarscan.com.br",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -33732,10 +33055,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "hikariscan.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -33743,8 +33064,7 @@
         "detail": "curl: (6) Could not resolve host: hikariscan.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "7629051305080791197": {
       "id": 7629051305080791197,
@@ -33851,9 +33171,7 @@
         "ms": 213,
         "detail": "curl: (6) Could not resolve host: www.imparatormanga.com",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "7697591737694502654": {
       "id": 7697591737694502654,
@@ -33915,7 +33233,7 @@
       "nsfw": 0,
       "domain": "mangascan-fr.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -33996,10 +33314,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "olyteconscans.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -34007,8 +33323,7 @@
         "detail": "curl: (6) Could not resolve host: olyteconscans.xyz",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "7742290400056325398": {
       "id": 7742290400056325398,
@@ -34253,10 +33568,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "franxxmangas.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -34264,8 +33577,7 @@
         "detail": "curl: (6) Could not resolve host: franxxmangas.net",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "7825827736298041629": {
       "id": 7825827736298041629,
@@ -34345,7 +33657,7 @@
       "nsfw": 0,
       "domain": "otsugami.id",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -34381,7 +33693,7 @@
       "nsfw": 0,
       "domain": "frscans.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -34400,7 +33712,7 @@
       "nsfw": 0,
       "domain": "timenaight.org",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -34426,7 +33738,7 @@
       "nsfw": 0,
       "domain": "titanmanga.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "cloudflare",
         "http_code": "403",
@@ -34452,15 +33764,9 @@
       "nsfw": 1,
       "domain": "piedpiperfansubyy.me",
       "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CSRF_GEREKLI - window.location.replace('https://piedpiperfansubyy.me/?ch=1&js=<JWT>&sid=<uuid>'); challenge adresi 302 ile reklam tıklamasına atıyor ve çerez set etmiyor, curl ile geçilemedi. Katalogdaki Madara seçicileri bu yüzden doğrulanamıyor.",
-        "at": "2026-11-17T14:31:41.061125Z"
-      },
-      "device_step": "list"
+      "state": "dead",
+      "dead": true,
+      "kapali": true
     },
     "7894614281626720954": {
       "id": 7894614281626720954,
@@ -34495,10 +33801,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "zandynofansub.aishiteru.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -34506,8 +33810,7 @@
         "detail": "curl: (6) Could not resolve host: zandynofansub.aishiteru.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "790332314641794410": {
       "id": 790332314641794410,
@@ -34552,9 +33855,7 @@
         "ms": 15035,
         "detail": "curl: (28) Connection timed out after 15009 milliseconds",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "7912332843948948278": {
       "id": 7912332843948948278,
@@ -34968,7 +34269,7 @@
       "nsfw": 0,
       "domain": "mangaowlnet.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -35038,9 +34339,7 @@
         "ms": 164,
         "detail": "curl: (6) Could not resolve host: asurascans.com.tr",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "8047257152713495236": {
       "id": 8047257152713495236,
@@ -35413,7 +34712,7 @@
       "nsfw": 0,
       "domain": "scansmangas.me",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -35474,7 +34773,7 @@
       "nsfw": 0,
       "domain": "elevenscanlator.blogspot.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "http404",
         "http_code": "404",
@@ -35567,10 +34866,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "ghostfansub.co",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -35578,8 +34875,7 @@
         "detail": "curl: (6) Could not resolve host: ghostfansub.co",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "8242157299877837327": {
       "id": 8242157299877837327,
@@ -35588,22 +34884,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangadiyari.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "PAGE_API - Next.js SPA + JSON API. Olculen uclar: GET /api/series?page=1 -> 200/35.857 {series:[{id,title,slug,description,...}]}; GET /api/series/{slug} -> 200/475.583, {series:{...}, chapters:[2922 adet]}, chapter alanlari: id,series_id,chapter_number,title,created_at,publish_at,chapter_views,read_count; GET /api/chapters/{id} (3496) -> 200/5.625, {chapter:{id,...,content:null,thumbnail_url:null",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "8244651774479139223": {
       "id": 8244651774479139223,
@@ -35843,7 +35127,7 @@
       "nsfw": 0,
       "domain": "mangaonline.blog",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "reset",
         "http_code": "000",
@@ -35945,7 +35229,7 @@
       "nsfw": 1,
       "domain": "laviniafansub.site",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -36015,7 +35299,7 @@
       "nsfw": 0,
       "domain": "flixscans.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -36033,7 +35317,7 @@
       "nsfw": 0,
       "domain": "flixscans.org",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -36076,7 +35360,7 @@
       "nsfw": 0,
       "domain": "laidbackscans.org",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -36167,7 +35451,7 @@
       "nsfw": 0,
       "domain": "cococomic.co",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -36544,7 +35828,7 @@
       "nsfw": 0,
       "domain": "zevep.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -36561,10 +35845,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "clubinari.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -36572,8 +35854,7 @@
         "detail": "curl: (6) Could not resolve host: clubinari.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "8527269950007325556": {
       "id": 8527269950007325556,
@@ -36582,10 +35863,8 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "clubinari.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -36593,8 +35872,7 @@
         "detail": "curl: (6) Could not resolve host: clubinari.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "854068893759986154": {
       "id": 854068893759986154,
@@ -37264,7 +36542,7 @@
       "nsfw": 0,
       "domain": "komiksan.link",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -37377,24 +36655,10 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "harmony-scan.fr",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1174,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: UnknownHostException: Unable to resolve host \"harmony-scan.fr\": No address associated with hostname",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "unreachable": true
+      "packages": [
+        "test"
+      ],
+      "state": "unknown"
     },
     "8756179784818649526": {
       "id": 8756179784818649526,
@@ -37403,10 +36667,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "1stkissmanga.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -37414,8 +36676,7 @@
         "detail": "curl: (6) Could not resolve host: 1stkissmanga.org",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "8756179810298772662": {
       "id": 8756179810298772662,
@@ -37425,7 +36686,7 @@
       "nsfw": 0,
       "domain": "1stkissmanga.mom",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -37832,7 +37093,7 @@
       "nsfw": 0,
       "domain": "ww10.readmha.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "cloudflare",
         "http_code": "",
@@ -37940,7 +37201,7 @@
       "nsfw": 1,
       "domain": "alliedfansub.net",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "timeout",
         "http_code": "000",
@@ -38099,10 +37360,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "burningscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -38110,8 +37369,7 @@
         "detail": "curl: (6) Could not resolve host: burningscans.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "8936794995291272293": {
       "id": 8936794995291272293,
@@ -38183,9 +37441,7 @@
         "ms": 139,
         "detail": "curl: (6) Could not resolve host: www.yetiskinruyamanga.com",
         "at": "2026-11-13T17:07:52Z"
-      },
-      "dead": false,
-      "kapali": false
+      }
     },
     "8986677657343345148": {
       "id": 8986677657343345148,
@@ -38563,10 +37819,8 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "jiangzaitoon.nl",
-      "packages": [
-        "test"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -38581,7 +37835,7 @@
         "detail": "yerel harness L10/C52/P18",
         "at": "2026-11-17T15:42:59.035062Z"
       },
-      "dead": false
+      "dead": true
     },
     "925134491016928900": {
       "id": 925134491016928900,
@@ -38729,10 +37983,8 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "winterscan.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "dns",
         "http_code": "000",
@@ -38740,8 +37992,7 @@
         "detail": "curl: (6) Could not resolve host: winterscan.com",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "995938032023079284": {
       "id": 995938032023079284,
@@ -38750,10 +38001,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "altayscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "ssl",
         "http_code": "000",
@@ -38761,8 +38010,7 @@
         "detail": "curl: (60) schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - Sertifika zinciri g�venilmeyen bir yetkili taraf�ndan verildi.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncu",
         "at": "2026-11-13T17:07:52Z"
       },
-      "dead": false,
-      "kapali": false
+      "dead": true
     },
     "999492486814920464": {
       "id": 999492486814920464,
