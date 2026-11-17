@@ -3009,7 +3009,7 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "drakecomic.org",
-      "baseUrl": "https://drakecomic.org",
+      "baseUrl": "https://drakecomic.net",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -3478,7 +3478,7 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "klikmanga.com",
-      "baseUrl": "https://klikmanga.com",
+      "baseUrl": "https://klikmanga.org",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -4662,7 +4662,9 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "dead": true,
+      "deadReason": "alan adi baska siteye yonleniyor/park (2026-11-17 probe)"
     },
     {
       "id": "violetscans.org",
@@ -5533,7 +5535,7 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "divatoon.com",
-      "baseUrl": "https://divatoon.com",
+      "baseUrl": "https://divascans.org",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -6324,7 +6326,9 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": true,
+      "deadReason": "alan adi baska siteye yonleniyor/park (2026-11-17 probe)"
     },
     {
       "id": "ww5.readchainsawman.com",
@@ -6364,7 +6368,9 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": true,
+      "deadReason": "alan adi baska siteye yonleniyor/park (2026-11-17 probe)"
     },
     {
       "id": "ww7.readdrstone.com",
@@ -6384,7 +6390,9 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": true,
+      "deadReason": "alan adi baska siteye yonleniyor/park (2026-11-17 probe)"
     },
     {
       "id": "ww8.readfairytail.com",
@@ -6424,7 +6432,9 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": true,
+      "deadReason": "alan adi baska siteye yonleniyor/park (2026-11-17 probe)"
     },
     {
       "id": "ww6.readhxh.com",
@@ -6484,7 +6494,9 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": true,
+      "deadReason": "alan adi baska siteye yonleniyor/park (2026-11-17 probe)"
     },
     {
       "id": "ww5.readkingdom.com",
@@ -6544,7 +6556,9 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": true,
+      "deadReason": "alan adi baska siteye yonleniyor/park (2026-11-17 probe)"
     },
     {
       "id": "ww12.readonepiece.com",
@@ -6624,7 +6638,9 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": true,
+      "deadReason": "alan adi baska siteye yonleniyor/park (2026-11-17 probe)"
     },
     {
       "id": "ww11.tokyoghoulre.com",
@@ -11807,7 +11823,9 @@
         "device_fix_2026"
       ],
       "status": "dead",
-      "reason": "domain parkta (GoDaddy forsale) - 2026-11-16 olcumu"
+      "reason": "domain parkta (GoDaddy forsale) - 2026-11-16 olcumu",
+      "dead": true,
+      "deadReason": "alan adi baska siteye yonleniyor/park (2026-11-17 probe)"
     }
   ]
 }
