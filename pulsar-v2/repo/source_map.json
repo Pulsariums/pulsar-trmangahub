@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T17:46:09Z",
+ "generated": "2026-11-17T17:53:34Z",
  "note": "id = Kotlin PulsarKotatsuSource/PulsarSource hash'inin Python kopyası; bakım bacası (07_maintain.py) MIHON_<id> -> kaynak eşlemesini bundan yapar.",
  "engine": [
   {
@@ -14104,7 +14104,7 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "anikiga.com",
-   "engine": "madara"
+   "engine": "custom"
   },
   {
    "id": 1845278797031432533,
@@ -14387,13 +14387,13 @@
    "engine": "custom"
   },
   {
-   "id": 8798867856205443111,
+   "id": 8798867856165195470,
    "kind": "catalogue",
-   "name": "DrakeComic",
-   "title": "DrakeComic",
+   "name": "Drake Comic",
+   "title": "Drake Comic",
    "lang": "en",
    "nsfw": 0,
-   "domain": "drakecomic.org",
+   "domain": "drakecomic.net",
    "engine": "custom"
   },
   {
@@ -14567,6 +14567,16 @@
    "engine": "custom"
   },
   {
+   "id": 3179435076707922441,
+   "kind": "catalogue",
+   "name": "Gafeland",
+   "title": "Gafeland",
+   "lang": "tr",
+   "nsfw": 0,
+   "domain": "gafeland.com",
+   "engine": "custom"
+  },
+  {
    "id": 5447717829511226753,
    "kind": "catalogue",
    "name": "Gaiatoon",
@@ -14589,8 +14599,8 @@
   {
    "id": 2544801090729548498,
    "kind": "catalogue",
-   "name": "GenzToon",
-   "title": "GenzToon",
+   "name": "Genz Toon",
+   "title": "Genz Toon",
    "lang": "en",
    "nsfw": 0,
    "domain": "genzupdates.com",
@@ -14654,7 +14664,7 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "golgebahcesi.com",
-   "engine": "mangareader"
+   "engine": "custom"
   },
   {
    "id": 670727602571935975,
@@ -14797,16 +14807,6 @@
    "engine": "custom"
   },
   {
-   "id": 6642245290597469030,
-   "kind": "catalogue",
-   "name": "HiveComic",
-   "title": "HiveComic",
-   "lang": "en",
-   "nsfw": 0,
-   "domain": "hivetoons.org",
-   "engine": "custom"
-  },
-  {
    "id": 8842581693807969518,
    "kind": "catalogue",
    "name": "HiveToon",
@@ -14814,6 +14814,16 @@
    "lang": "en",
    "nsfw": 0,
    "domain": "hivetoon.com",
+   "engine": "custom"
+  },
+  {
+   "id": 6642245290597469030,
+   "kind": "catalogue",
+   "name": "HiveToons",
+   "title": "HiveToons",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "hivetoons.org",
    "engine": "custom"
   },
   {
@@ -15147,13 +15157,13 @@
    "engine": "custom"
   },
   {
-   "id": 5418177941820983643,
+   "id": 7879483250760763388,
    "kind": "catalogue",
    "name": "LectorMiau",
    "title": "LectorMiau",
    "lang": "es",
    "nsfw": 0,
-   "domain": "leemiau.com",
+   "domain": "leer.lectovela.com",
    "engine": "custom"
   },
   {
@@ -15225,16 +15235,6 @@
    "nsfw": 0,
    "domain": "01.lumosgg.com",
    "engine": "custom"
-  },
-  {
-   "id": 3483176489432573539,
-   "kind": "catalogue",
-   "name": "Luna Scans",
-   "title": "Luna Scans",
-   "lang": "tr",
-   "nsfw": 1,
-   "domain": "tuhafscans.com",
-   "engine": "madara"
   },
   {
    "id": 8167411798342220595,
@@ -15459,8 +15459,8 @@
   {
    "id": 5213479314965651874,
    "kind": "catalogue",
-   "name": "Manga1st",
-   "title": "Manga1st",
+   "name": "Manga1ST",
+   "title": "Manga1ST",
    "lang": "en",
    "nsfw": 0,
    "domain": "manga1st.online",
@@ -15804,16 +15804,6 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "mangaruhu.net",
-   "engine": "madara"
-  },
-  {
-   "id": 681306618208001196,
-   "kind": "catalogue",
-   "name": "MangaTilkisi",
-   "title": "MangaTilkisi",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "tilkiscans.com",
    "engine": "madara"
   },
   {
@@ -16174,7 +16164,7 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "nabicix.com",
-   "engine": "madara"
+   "engine": "custom"
   },
   {
    "id": 3956326609690997569,
@@ -16317,14 +16307,14 @@
    "engine": "mangareader"
   },
   {
-   "id": 8599633753611393348,
+   "id": 8599633753611392879,
    "kind": "catalogue",
    "name": "Nyx Scans",
    "title": "Nyx Scans",
-   "lang": "tr",
+   "lang": "en",
    "nsfw": 0,
    "domain": "nyxscans.com",
-   "engine": "mangareader"
+   "engine": "custom"
   },
   {
    "id": 4967549401724555135,
@@ -16347,13 +16337,13 @@
    "engine": "custom"
   },
   {
-   "id": 6535151987581154260,
+   "id": 2948301250697045057,
    "kind": "catalogue",
    "name": "OlimpoScans",
    "title": "OlimpoScans",
    "lang": "es",
    "nsfw": 0,
-   "domain": "olympusbiblioteca.com",
+   "domain": "olympusxyz.com",
    "engine": "custom"
   },
   {
@@ -16444,7 +16434,7 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "patimanga.com",
-   "engine": "mangareader"
+   "engine": "custom"
   },
   {
    "id": 1045587388600521946,
@@ -17007,6 +16997,16 @@
    "engine": "custom"
   },
   {
+   "id": 8277548740759618769,
+   "kind": "catalogue",
+   "name": "TRManga",
+   "title": "TRManga",
+   "lang": "tr",
+   "nsfw": 0,
+   "domain": "trmanga.com",
+   "engine": "custom"
+  },
+  {
    "id": 1757135486284259116,
    "kind": "catalogue",
    "name": "Tapas",
@@ -17024,7 +17024,7 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "tarotscans.com",
-   "engine": "mangareader"
+   "engine": "custom"
   },
   {
    "id": 2771923609751875169,
@@ -17044,6 +17044,16 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "tenshimanga.com",
+   "engine": "custom"
+  },
+  {
+   "id": 681306618208001196,
+   "kind": "catalogue",
+   "name": "Tilki Scans",
+   "title": "Tilki Scans",
+   "lang": "tr",
+   "nsfw": 0,
+   "domain": "tilkiscans.com",
    "engine": "custom"
   },
   {
@@ -17137,16 +17147,6 @@
    "engine": "custom"
   },
   {
-   "id": 8277548740759618769,
-   "kind": "catalogue",
-   "name": "TrManga",
-   "title": "TrManga",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "trmanga.com",
-   "engine": "custom"
-  },
-  {
    "id": 2178892498027704727,
    "kind": "catalogue",
    "name": "TrWebtoon",
@@ -17154,6 +17154,16 @@
    "lang": "tr",
    "nsfw": 0,
    "domain": "trwebtoon.com",
+   "engine": "custom"
+  },
+  {
+   "id": 3483176489432573539,
+   "kind": "catalogue",
+   "name": "Tuhaf Scans",
+   "title": "Tuhaf Scans",
+   "lang": "tr",
+   "nsfw": 1,
+   "domain": "tuhafscans.com",
    "engine": "custom"
   },
   {
@@ -17219,8 +17229,8 @@
   {
    "id": 3170876120391462040,
    "kind": "catalogue",
-   "name": "VioletScans",
-   "title": "VioletScans",
+   "name": "Violet Scans",
+   "title": "Violet Scans",
    "lang": "en",
    "nsfw": 0,
    "domain": "violetscans.org",
@@ -17229,8 +17239,8 @@
   {
    "id": 7317326350988863047,
    "kind": "catalogue",
-   "name": "VortexScans",
-   "title": "VortexScans",
+   "name": "Vortex Scans",
+   "title": "Vortex Scans",
    "lang": "en",
    "nsfw": 0,
    "domain": "vortexscans.org",
@@ -17334,6 +17344,16 @@
    "lang": "tr",
    "nsfw": 1,
    "domain": "xiaoaitoon.org.tr",
+   "engine": "custom"
+  },
+  {
+   "id": 8956038307457102053,
+   "kind": "catalogue",
+   "name": "XoxoComic",
+   "title": "XoxoComic",
+   "lang": "en",
+   "nsfw": 0,
+   "domain": "xoxocomic.com",
    "engine": "custom"
   },
   {
@@ -17615,16 +17635,6 @@
    "nsfw": 0,
    "domain": "frscans.com",
    "engine": "custom"
-  },
-  {
-   "id": 3179435076707922441,
-   "kind": "catalogue",
-   "name": "gafeland",
-   "title": "gafeland",
-   "lang": "tr",
-   "nsfw": 0,
-   "domain": "gafeland.com",
-   "engine": "mangareader"
   },
   {
    "id": 3765108990625910995,
@@ -18164,16 +18174,6 @@
    "lang": "en",
    "nsfw": 0,
    "domain": "voidscans.co",
-   "engine": "custom"
-  },
-  {
-   "id": 936026425526885605,
-   "kind": "catalogue",
-   "name": "xoxocomic.com",
-   "title": "xoxocomic.com",
-   "lang": "all",
-   "nsfw": 0,
-   "domain": "xoxocomic.com",
    "engine": "custom"
   },
   {
