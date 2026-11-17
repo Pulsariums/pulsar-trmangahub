@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T18:04:34Z",
+  "generated": "2026-11-17T18:07:50Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -37,7 +37,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "1052887235366545898": {
       "id": 1052887235366545898,
@@ -162,7 +162,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "109266153397226665": {
       "id": 109266153397226665,
@@ -742,22 +742,11 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "sarcasmscans.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 139,
-        "detail": "curl: (6) Could not resolve host: sarcasmscans.com",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "1350317231338804055": {
       "id": 1350317231338804055,
@@ -878,22 +867,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "ayatoon.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ssl",
-        "http_code": "000",
-        "ms": 721,
-        "detail": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_ILLEGAL_MESSAGE (0x80090326) - This error usually occurs when a fatal SSL/TLS alert is received (e.g. handshake fa",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "1376583637539257459": {
       "id": 1376583637539257459,
@@ -1086,15 +1064,11 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "doujins.lat",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "1376651252963693657": {
       "id": 1376651252963693657,
@@ -1179,22 +1153,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.epikman.ga",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 233,
-        "detail": "curl: (6) Could not resolve host: www.epikman.ga",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "1376684333740686254": {
       "id": 1376684333740686254,
@@ -1358,15 +1321,11 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "heytoon.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "1376779621504514638": {
       "id": 1376779621504514638,
@@ -1508,7 +1467,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "1376833596686797612": {
       "id": 1376833596686797612,
@@ -1546,7 +1505,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "1376851595674172806": {
       "id": 1376851595674172806,
@@ -2421,7 +2380,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "1376968403079460822": {
       "id": 1376968403079460822,
@@ -2546,7 +2505,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "1377020372809438008": {
       "id": 1377020372809438008,
@@ -2909,22 +2868,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "yaoibar.gay",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 201,
-        "detail": "curl: (6) Could not resolve host: yaoibar.gay",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "1377191865874405498": {
       "id": 1377191865874405498,
@@ -3457,7 +3405,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "1608869871563550339": {
       "id": 1608869871563550339,
@@ -4269,7 +4217,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "1670524346204645872": {
       "id": 1670524346204645872,
@@ -4649,7 +4597,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "1757135486284259116": {
       "id": 1757135486284259116,
@@ -4783,7 +4731,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "1848540025471539039": {
       "id": 1848540025471539039,
@@ -5167,7 +5115,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "1944203743121263189": {
       "id": 1944203743121263189,
@@ -5697,22 +5645,11 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "viyafansub.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 154,
-        "detail": "curl: (6) Could not resolve host: viyafansub.com",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "2125177024463197399": {
       "id": 2125177024463197399,
@@ -6033,22 +5970,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangakings.com.tr",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 138,
-        "detail": "curl: (6) Could not resolve host: mangakings.com.tr",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "2134596225128838841": {
       "id": 2134596225128838841,
@@ -6254,22 +6180,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangaokutr.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 208,
-        "detail": "curl: (6) Could not resolve host: mangaokutr.net",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "2134596350520665723": {
       "id": 2134596350520665723,
@@ -6365,22 +6280,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "manga-sehri.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 210,
-        "detail": "curl: (6) Could not resolve host: manga-sehri.com",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "2134596439020741272": {
       "id": 2134596439020741272,
@@ -7338,22 +7242,11 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "moondaisyscans.biz",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "timeout",
-        "http_code": "000",
-        "ms": 15038,
-        "detail": "curl: (28) Connection timed out after 15014 milliseconds",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "2268549974061786227": {
       "id": 2268549974061786227,
@@ -7612,7 +7505,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "2359120158125930842": {
       "id": 2359120158125930842,
@@ -8194,7 +8087,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "2424639311097801421": {
       "id": 2424639311097801421,
@@ -8527,22 +8420,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "yaoitr.fun",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 230,
-        "detail": "curl: (6) Could not resolve host: yaoitr.fun",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "2424650585843186305": {
       "id": 2424650585843186305,
@@ -8656,7 +8538,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "245090160632924176": {
       "id": 245090160632924176,
@@ -8668,7 +8550,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "2462254973344388239": {
       "id": 2462254973344388239,
@@ -8899,7 +8781,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "2571777675483697949": {
       "id": 2571777675483697949,
@@ -9012,7 +8894,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "2618646420420740860": {
       "id": 2618646420420740860,
@@ -9324,7 +9206,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "2749533608105807003": {
       "id": 2749533608105807003,
@@ -9392,7 +9274,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "2771923609751875169": {
       "id": 2771923609751875169,
@@ -9536,7 +9418,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "2859476016271759146": {
       "id": 2859476016271759146,
@@ -9768,7 +9650,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "2950297680644095236": {
       "id": 2950297680644095236,
@@ -9836,7 +9718,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "2974006917749580032": {
       "id": 2974006917749580032,
@@ -10005,7 +9887,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "3014905157548567667": {
       "id": 3014905157548567667,
@@ -10043,7 +9925,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "3015179990886286454": {
       "id": 3015179990886286454,
@@ -10582,7 +10464,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "3149873241825014135": {
       "id": 3149873241825014135,
@@ -10790,7 +10672,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "3226537239648532225": {
       "id": 3226537239648532225,
@@ -10965,7 +10847,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "3317141599925034536": {
       "id": 3317141599925034536,
@@ -11413,7 +11295,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "3517094690583648677": {
       "id": 3517094690583648677,
@@ -11570,7 +11452,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "3623239322859855998": {
       "id": 3623239322859855998,
@@ -11812,22 +11694,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "lilyumfansub.com.tr",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 162,
-        "detail": "curl: (6) Could not resolve host: lilyumfansub.com.tr",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "3688690594033706893": {
       "id": 3688690594033706893,
@@ -11967,22 +11838,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "culturesubs.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 227,
-        "detail": "curl: (6) Could not resolve host: culturesubs.com",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "3736714740149822308": {
       "id": 3736714740149822308,
@@ -12999,22 +12859,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangagezginim.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 155,
-        "detail": "curl: (6) Could not resolve host: mangagezginim.com",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "3758368269838243122": {
       "id": 3758368269838243122,
@@ -13257,22 +13106,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.mangatilkisi.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 141,
-        "detail": "curl: (6) Could not resolve host: www.mangatilkisi.net",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "3758899467340376098": {
       "id": 3758899467340376098,
@@ -14619,7 +14457,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "3991617090094006131": {
       "id": 3991617090094006131,
@@ -15692,7 +15530,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "4107194506193138488": {
       "id": 4107194506193138488,
@@ -15798,7 +15636,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "4110592311627303703": {
       "id": 4110592311627303703,
@@ -15884,15 +15722,11 @@
       "lang": "pt",
       "nsfw": 1,
       "domain": "hiper.cool",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "4113976277368451618": {
       "id": 4113976277368451618,
@@ -16111,22 +15945,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "jellyring.co",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 140,
-        "detail": "curl: (6) Could not resolve host: jellyring.co",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "4168662132362877672": {
       "id": 4168662132362877672,
@@ -17748,7 +17571,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "4234251777202023553": {
       "id": 4234251777202023553,
@@ -18344,7 +18167,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "4250752132752556322": {
       "id": 4250752132752556322,
@@ -19182,22 +19005,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "ruyamanga.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 341,
-        "detail": "curl: (6) Could not resolve host: ruyamanga.net",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "4381294723770585814": {
       "id": 4381294723770585814,
@@ -20510,7 +20322,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "4539181955248324512": {
       "id": 4539181955248324512,
@@ -20540,7 +20352,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "4550544076198380891": {
       "id": 4550544076198380891,
@@ -20762,7 +20574,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "4621767986997099328": {
       "id": 4621767986997099328,
@@ -20957,22 +20769,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "anisamanga.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 933,
-        "detail": "curl: (6) Could not resolve host: anisamanga.com",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "4648495069634047799": {
       "id": 4648495069634047799,
@@ -21003,7 +20804,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "4670366393428216076": {
       "id": 4670366393428216076,
@@ -21587,7 +21388,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "4872650919616038499": {
       "id": 4872650919616038499,
@@ -21910,22 +21711,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "tempestfansub.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 1322,
-        "detail": "curl: (6) Could not resolve host: tempestfansub.net",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "507162270957965065": {
       "id": 507162270957965065,
@@ -22358,7 +22148,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "5314545691510821070": {
       "id": 5314545691510821070,
@@ -22626,22 +22416,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "prunusscans.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 141,
-        "detail": "curl: (6) Could not resolve host: prunusscans.com",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "5443582880216157130": {
       "id": 5443582880216157130,
@@ -23261,15 +23040,11 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "birdtoon.shop",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "5780904096827346445": {
       "id": 5780904096827346445,
@@ -24001,7 +23776,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "5788199800528750443": {
       "id": 5788199800528750443,
@@ -24423,7 +24198,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "5789618909581566450": {
       "id": 5789618909581566450,
@@ -24628,22 +24403,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangacim.com.tr",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 268,
-        "detail": "curl: (6) Could not resolve host: mangacim.com.tr",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "5789623240607215930": {
       "id": 5789623240607215930,
@@ -24652,22 +24416,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangacix.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "301",
-        "ms": 1971,
-        "detail": "curl: (6) Could not resolve host: mangaoku.org.tr",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "5789623240639777024": {
       "id": 5789623240639777024,
@@ -26234,7 +25987,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "5798654863193396278": {
       "id": 5798654863193396278,
@@ -26584,22 +26337,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "mangaefendisi.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 2563,
-        "detail": "curl: (6) Could not resolve host: mangaefendisi.net",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "5827014979493050397": {
       "id": 5827014979493050397,
@@ -26720,22 +26462,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "manga-sehri.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ssl_trust",
-        "http_code": "000",
-        "ms": 357,
-        "detail": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - Hedef as�l ad� yanl��.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncurl fai",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "5835717275901038433": {
       "id": 5835717275901038433,
@@ -27082,7 +26813,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "5955495849228102124": {
       "id": 5955495849228102124,
@@ -27113,7 +26844,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "5965634366863290136": {
       "id": 5965634366863290136,
@@ -27166,22 +26897,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "kedi.to",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 534,
-        "detail": "curl: (6) Could not resolve host: kedi.to",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "5972281005079028369": {
       "id": 5972281005079028369,
@@ -28076,7 +27796,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "6088612262114850543": {
       "id": 6088612262114850543,
@@ -28795,7 +28515,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "6336788940996830678": {
       "id": 6336788940996830678,
@@ -29200,7 +28920,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "6418857290741556046": {
       "id": 6418857290741556046,
@@ -29331,7 +29051,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "646189134545719402": {
       "id": 646189134545719402,
@@ -29607,7 +29327,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "6553363709144475916": {
       "id": 6553363709144475916,
@@ -30649,7 +30369,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "6864523400679060774": {
       "id": 6864523400679060774,
@@ -31100,15 +30820,11 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "lectorikigai.acamu.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "7032361130743410061": {
       "id": 7032361130743410061,
@@ -31737,7 +31453,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "7206313674903334634": {
       "id": 7206313674903334634,
@@ -32094,22 +31810,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "tempestscans.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 739,
-        "detail": "curl: (6) Could not resolve host: tempestscans.net",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "7367496482927145507": {
       "id": 7367496482927145507,
@@ -32389,22 +32094,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "hayalistic.com.tr",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "301",
-        "ms": 615,
-        "detail": "curl: (6) Could not resolve host: hayalistic.com",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "7437503977254350462": {
       "id": 7437503977254350462,
@@ -32649,7 +32343,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "7527354308421653932": {
       "id": 7527354308421653932,
@@ -33006,22 +32700,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.imparatormanga.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 213,
-        "detail": "curl: (6) Could not resolve host: www.imparatormanga.com",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "7697591737694502654": {
       "id": 7697591737694502654,
@@ -33104,7 +32787,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "7739392788631822474": {
       "id": 7739392788631822474,
@@ -33360,7 +33043,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "7799671096902519693": {
       "id": 7799671096902519693,
@@ -33604,7 +33287,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "7893052437992694291": {
       "id": 7893052437992694291,
@@ -33695,22 +33378,11 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "mindafansub.online",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "timeout",
-        "http_code": "000",
-        "ms": 15035,
-        "detail": "curl: (28) Connection timed out after 15009 milliseconds",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "7912332843948948278": {
       "id": 7912332843948948278,
@@ -34188,22 +33860,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "asurascans.com.tr",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 164,
-        "detail": "curl: (6) Could not resolve host: asurascans.com.tr",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "8047257152713495236": {
       "id": 8047257152713495236,
@@ -34329,7 +33990,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "8123620034208406844": {
       "id": 8123620034208406844,
@@ -34527,7 +34188,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "8170497644902480619": {
       "id": 8170497644902480619,
@@ -34851,7 +34512,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "8287377573619738771": {
       "id": 8287377573619738771,
@@ -34863,7 +34524,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "8329652869642848348": {
       "id": 8329652869642848348,
@@ -35135,7 +34796,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "8390623784752854269": {
       "id": 8390623784752854269,
@@ -35281,7 +34942,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "845640352969867542": {
       "id": 845640352969867542,
@@ -35444,7 +35105,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "8461886736658207680": {
       "id": 8461886736658207680,
@@ -35960,7 +35621,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "8607382649550260430": {
       "id": 8607382649550260430,
@@ -36512,15 +36173,11 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "harmony-scan.fr",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "8756179784818649526": {
       "id": 8756179784818649526,
@@ -36576,7 +36233,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "8765752838049320565": {
       "id": 8765752838049320565,
@@ -36638,7 +36295,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "880006159466720824": {
       "id": 880006159466720824,
@@ -37007,7 +36664,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "8862253965650556151": {
       "id": 8862253965650556151,
@@ -37248,7 +36905,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "8967568472237641111": {
       "id": 8967568472237641111,
@@ -37284,22 +36941,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.yetiskinruyamanga.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "dns",
-        "http_code": "000",
-        "ms": 139,
-        "detail": "curl: (6) Could not resolve host: www.yetiskinruyamanga.com",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "KATALOG_DISI",
-        "at": "2026-11-17T18:04:21Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "dead": false
     },
     "8986677657343345148": {
       "id": 8986677657343345148,
@@ -37439,7 +37085,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "9083609997475506503": {
       "id": 9083609997475506503,
@@ -37751,7 +37397,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending"
+      "state": "unknown"
     },
     "955191849114859000": {
       "id": 955191849114859000,
