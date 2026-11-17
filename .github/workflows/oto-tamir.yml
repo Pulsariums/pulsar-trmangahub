@@ -1,0 +1,48 @@
+name: '10) Otomatik tamir (kuyruk)'
+# Tamir kuyrugundan (pulsar-v2/depo/tamir-kuyrugu.json) N kaynak alir, olcer, dogrulanan
+# ayari kataloga yazar; duzelenler teste doner. Her deneme depo/tamir-denemeleri.jsonl'da.
+on:
+  workflow_dispatch:
+    inputs:
+      adet:
+        description: 'Kuyruktan kac kaynak'
+        type: string
+        default: '40'
+      dil:
+        description: 'Yalniz bu dil (tr, en ...). Bos = hepsi (TR zaten once)'
+        type: string
+        default: ''
+permissions:
+  contents: write
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo build --release --manifest-path tools/pulsar/Cargo.toml
+      - name: Kuyruk + tamir
+        env:
+          N: ${{ inputs.adet }}
+          DIL: ${{ inputs.dil }}
+        run: |
+          set -euo pipefail
+          bash pulsar-v2/scripts/tablo-kur.sh >/dev/null
+          bash pulsar-v2/scripts/oto-tamir.sh
+          if [ -s /tmp/r.ids ]; then
+            jq -Rn '{total:0, sources:[inputs|select(length>0)|{name:("MIHON_"+.),status:"r"}]}' /tmp/r.ids > /tmp/device.json
+            ./tools/pulsar/target/release/pulsar status --device /tmp/device.json
+          fi
+          bash pulsar-v2/scripts/tablo-kur.sh
+          echo '--- bu turun kararlari'; tail -n "$N" pulsar-v2/depo/tamir-denemeleri.jsonl | jq -r .karar | sort | uniq -c
+      - name: Commit
+        env:
+          N: ${{ inputs.adet }}
+        run: |
+          # kimlik son commitin yazarindan alinir
+          git config user.name "$(git log -1 --format=%an)"
+          git config user.email "$(git log -1 --format=%ae)"
+          git add pulsar-v2/data/catalogue.json pulsar-v2/data/source-status.json pulsar-v2/depo pulsar-v2/havuz
+          git diff --cached --quiet && { echo 'degisiklik yok'; exit 0; }
+          git commit -qm "fix(oto-tamir): kuyruktan $N kaynak denendi"
+          git pull -q --rebase --autostash origin main && git push -q origin main
