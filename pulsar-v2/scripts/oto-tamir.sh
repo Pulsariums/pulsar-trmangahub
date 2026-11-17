@@ -64,14 +64,16 @@ while read -r row; do
   fi
   ic=000; [ -n "$img" ] && ic=$(curl -sS -m 20 -A "$UA" -e "$host/" -o /dev/null -w '%{http_code}' "$img" 2>/dev/null || echo 000)
   if [ -z "$karar" ]; then
-    if [ "$n" -gt 0 ] && [ "$c" -gt 0 ] && [ "$p" -gt 0 ] && [ "$ic" = 200 ]; then karar="duzeltildi"; else karar="dogrulama-gecmedi"; fi
+    if [ "$n" -gt 0 ] && [ "$c" -gt 0 ] && [ "$p" -gt 0 ] && [ "$ic" = 200 ]; then karar="duzeltildi"; elif [ "$n" -gt 0 ] && [ "$c" -gt 0 ]; then karar="aday"; else karar="dogrulama-gecmedi"; fi
   fi
-  if [ "$karar" = duzeltildi ]; then
+  # Dogrulamayi telefon yapar: liste+bolum alinabiliyorsa ayar yazilir, kaynak teste gider (aday).
+  if [ "$karar" = duzeltildi ] || [ "$karar" = aday ]; then
     if jq -e --arg d "$dom" 'any(.sources[]; .domain==$d)' "$CAT" >/dev/null; then
       jq --arg d "$dom" --arg h "$host" --argjson c "$cfg" '.sources |= map(if .domain==$d then
           .baseUrl=$h | .engine=$c.engine | .config=((.config // {}) + $c) | .selector_verified=true
           | .dead=false | del(.deadReason) | .origins=((.origins // []) + ["pulsar-oto-tamir"] | unique) else . end)' "$CAT" > /tmp/cat && cp /tmp/cat "$CAT"
-      [ "$tur" = catalogue ] && echo "$id" >> /tmp/r.ids
+      cid=$(jq -r --arg d "$dom" '.sources|to_entries[]|select(.value.kind=="catalogue" and .value.domain==$d)|.key' pulsar-v2/data/source-status.json | head -1)
+      [ -n "$cid" ] && echo "$cid" >> /tmp/r.ids
     else
       jq --arg d "$dom" --arg h "$host" --arg ad "$ad" --arg dil "$dil" --argjson ns "${nsfw:-0}" --argjson c "$cfg" \
         '.sources += [{id:$d,name:$ad,lang:$dil,nsfw:$ns,domain:$d,baseUrl:$h,engine:$c.engine,config:$c,
