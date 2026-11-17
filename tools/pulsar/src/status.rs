@@ -79,10 +79,11 @@ pub struct StatusFile {
 
 /// Paket kuralı: ana gruba (tr/tr18/global/global18) YALNIZ cihaz testinde geçen
 /// ya da sağlık sonucu "ok" olan (state active) ve "sorun" etiketi olmayan
-/// kaynak girer. Kesin ölü, ulaşılamayan (ağ/TLS/DNS) ve cihazda düşen
-/// (state failed) kaynak hiçbir pakete girmez. Geri kalan (pending, unknown,
+/// kaynak girer. Kesin ölü (dead/kapali) ve cihazda düşen (state failed)
+/// kaynak hiçbir pakete girmez. Geri kalan (pending, unknown, unreachable,
 /// sorun etiketli) "test" paketindedir. Test = yalnız henüz cihazda test
-/// edilmemiş, çalışma ihtimali olan kaynakların havuzu. 18+ kaynaklar ayrı
+/// edilmemiş, çalışma ihtimali olan kaynakların havuzu; cihaz testine
+/// hazırlık havuzudur. 18+ kaynaklar ayrı
 /// paket taşımaz; "test" paketinde yayınlanır ve görünen adlarına " [18+]"
 /// etiketi eklenir.
 pub fn packages_for(e: &StatusEntry) -> Vec<String> {
@@ -90,10 +91,13 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
     if e.dead || e.kapali || e.state == "failed" {
         return Vec::new();
     }
-    // ulaşılamayan kaynak (DNS/TLS/timeout/bağlantı hatası) ayrı tutulur:
-    // test havuzuna da girmez, çünkü sorun kaynakta değil erişimdedir.
+    // ulaşılamayan kaynak (DNS/TLS/timeout/bağlantı hatası) test havuzunda
+    // kalır: sağlık ölçümü CI/GitHub sunucusundan yapılır, cihaz ağı farklıdır
+    // (birçok site GitHub IP'sini engeller). Bayrak kaynağın değil ölçüm
+    // ortamının erişimini anlatır; test havuzu cihaz testine hazırlık
+    // havuzudur, kaynak cihazda hâlâ çalışıyor olabilir.
     if e.unreachable {
-        return Vec::new();
+        return vec!["test".to_string()];
     }
     if e.state != "active" || !e.sorun.is_empty() {
         // Ayri test18 paketi yok: 18+ kaynak da test havuzuna duser, gorunen
