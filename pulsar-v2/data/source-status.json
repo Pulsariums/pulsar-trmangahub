@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T16:09:35Z",
+  "generated": "2026-11-17T16:12:50Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -79,15 +79,22 @@
       "nsfw": 1,
       "domain": "www.kuroimanga.com",
       "packages": [
-        "test"
+        "tr18"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 2143,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "canli (olcum 2026-11-17) - testte",
+        "at": "2026-11-17T00:00:00Z"
       }
     },
     "1072133646472920863": {
@@ -381,13 +388,20 @@
       "nsfw": 0,
       "domain": "catharsisfantasy.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 737,
         "detail": "curl: (6) Could not resolve host: catharsisfantasy.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -770,13 +784,20 @@
       "nsfw": 1,
       "domain": "sarcasmscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 139,
         "detail": "curl: (6) Could not resolve host: sarcasmscans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -900,13 +921,20 @@
       "nsfw": 0,
       "domain": "ayatoon.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ssl",
         "http_code": "000",
         "ms": 721,
         "detail": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_ILLEGAL_MESSAGE (0x80090326) - This error usually occurs when a fatal SSL/TLS alert is received (e.g. handshake fa",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -918,13 +946,20 @@
       "nsfw": 0,
       "domain": "bakaman.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 504,
         "detail": "curl: (6) Could not resolve host: bakaman.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -973,7 +1008,14 @@
       "nsfw": 0,
       "domain": "bidmanga.com",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -1061,13 +1103,20 @@
       "nsfw": 0,
       "domain": "comic21.me",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 200,
         "detail": "curl: (6) Could not resolve host: comic21.me",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -1207,13 +1256,20 @@
       "nsfw": 0,
       "domain": "www.epikman.ga",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 233,
         "detail": "curl: (6) Could not resolve host: www.epikman.ga",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -1442,13 +1498,20 @@
       "nsfw": 0,
       "domain": "s2manga.io",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 143,
         "detail": "curl: (6) Could not resolve host: s2manga.io",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -1923,13 +1986,20 @@
       "nsfw": 0,
       "domain": "mangaid.click",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 204,
         "detail": "curl: (6) Could not resolve host: mangaid.click",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -1942,13 +2012,20 @@
       "nsfw": 0,
       "domain": "mangajp.top",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "refused",
         "http_code": "000",
         "ms": 748,
         "detail": "curl: (7) Failed to connect to mangajp.top:443 after 709 ms: Could not connect to server",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -2012,13 +2089,20 @@
       "nsfw": 0,
       "domain": "mangatr.app",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 756,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -2232,13 +2316,20 @@
       "nsfw": 0,
       "domain": "milascans.tr",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 723,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -2325,13 +2416,20 @@
       "nsfw": 0,
       "domain": "neroxus.com.br",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 949,
         "detail": "curl: (6) Could not resolve host: neroxus.com.br",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -2396,13 +2494,20 @@
       "nsfw": 0,
       "domain": "1manhwa.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 139,
         "detail": "curl: (6) Could not resolve host: 1manhwa.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -2968,13 +3073,20 @@
       "nsfw": 0,
       "domain": "yaoibar.gay",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 201,
         "detail": "curl: (6) Could not resolve host: yaoibar.gay",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -3367,13 +3479,20 @@
       "nsfw": 0,
       "domain": "ragnarokscan.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 150,
         "detail": "curl: (6) Could not resolve host: ragnarokscan.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -3840,13 +3959,20 @@
       "nsfw": 0,
       "domain": "mangakoleji.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ssl",
         "http_code": "000",
         "ms": 354,
         "detail": "curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -4005,13 +4131,20 @@
       "nsfw": 0,
       "domain": "mangas-scans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 1145,
         "detail": "curl: (6) Could not resolve host: mangas-scans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -4050,13 +4183,20 @@
       "nsfw": 0,
       "domain": "mangatyrant.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15041,
         "detail": "curl: (28) Connection timed out after 15001 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -4247,13 +4387,20 @@
       "nsfw": 0,
       "domain": "mantrazscan.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 166,
         "detail": "curl: (6) Could not resolve host: mantrazscan.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -4642,13 +4789,20 @@
       "nsfw": 0,
       "domain": "tenshi01.id",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 79,
         "detail": "curl: (6) Could not resolve host: tenshi01.id",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -4680,13 +4834,20 @@
       "nsfw": 0,
       "domain": "irisscanlator.com.br",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ssl_trust",
         "http_code": "000",
         "ms": 1864,
         "detail": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - Hedef as�l ad� yanl��.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncurl fai",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -4946,13 +5107,20 @@
       "nsfw": 0,
       "domain": "lunarscans.fr",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 163,
         "detail": "curl: (6) Could not resolve host: lunarscans.fr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -5486,13 +5654,20 @@
       "nsfw": 0,
       "domain": "edscanlation.fr",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 151,
         "detail": "curl: (6) Could not resolve host: edscanlation.fr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -5678,13 +5853,20 @@
       "nsfw": 0,
       "domain": "lkscanlation.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 138,
         "detail": "curl: (6) Could not resolve host: lkscanlation.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -5798,13 +5980,20 @@
       "nsfw": 1,
       "domain": "viyafansub.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 154,
         "detail": "curl: (6) Could not resolve host: viyafansub.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -5816,13 +6005,20 @@
       "nsfw": 0,
       "domain": "ladyestelarscan.com.br",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 330,
         "detail": "curl: (6) Could not resolve host: ladyestelarscan.com.br",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -5835,13 +6031,20 @@
       "nsfw": 0,
       "domain": "starboundscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 171,
         "detail": "curl: (6) Could not resolve host: starboundscans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -5982,13 +6185,20 @@
       "nsfw": 0,
       "domain": "manga4life.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 538,
         "detail": "curl: (6) Could not resolve host: manga4life.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -6026,13 +6236,20 @@
       "nsfw": 0,
       "domain": "toonclash.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 1135,
         "detail": "curl: (6) Could not resolve host: toonclash.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -6132,13 +6349,20 @@
       "nsfw": 0,
       "domain": "mangakings.com.tr",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 138,
         "detail": "curl: (6) Could not resolve host: mangakings.com.tr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -6347,13 +6571,20 @@
       "nsfw": 0,
       "domain": "mangaokutr.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 208,
         "detail": "curl: (6) Could not resolve host: mangaokutr.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -6434,13 +6665,20 @@
       "nsfw": 0,
       "domain": "mangaschan.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 327,
         "detail": "curl: (6) Could not resolve host: mangaschan.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -6453,13 +6691,20 @@
       "nsfw": 0,
       "domain": "manga-sehri.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 210,
         "detail": "curl: (6) Could not resolve host: manga-sehri.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -6471,13 +6716,20 @@
       "nsfw": 0,
       "domain": "mangashiro.me",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15042,
         "detail": "curl: (28) Connection timed out after 15011 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -6541,7 +6793,14 @@
       "nsfw": 0,
       "domain": "mangastorm.org",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -6579,13 +6838,20 @@
       "nsfw": 0,
       "domain": "manga-terra.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 201,
         "detail": "curl: (6) Could not resolve host: manga-terra.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -6598,13 +6864,20 @@
       "nsfw": 0,
       "domain": "mangatx.cc",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 497,
         "detail": "curl: (6) Could not resolve host: mangatx.cc",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -6617,13 +6890,20 @@
       "nsfw": 0,
       "domain": "mangatx.gg",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 535,
         "detail": "curl: (6) Could not resolve host: mangatx.gg",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -6738,13 +7018,20 @@
       "nsfw": 0,
       "domain": "mangascan-fr.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 160,
         "detail": "curl: (6) Could not resolve host: mangascan-fr.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -6835,13 +7122,20 @@
       "nsfw": 0,
       "domain": "kaliscan.io",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 141,
         "detail": "curl: (6) Could not resolve host: kaliscan.io",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -7161,13 +7455,20 @@
       "nsfw": 0,
       "domain": "lc5.cosmicscans.asia",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 2150,
         "detail": "curl: (6) Could not resolve host: lc5.cosmicscans.asia",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -7199,13 +7500,20 @@
       "nsfw": 0,
       "domain": "gloryscans.fr",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 161,
         "detail": "curl: (6) Could not resolve host: gloryscans.fr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -7309,13 +7617,20 @@
       "nsfw": 0,
       "domain": "altayscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ssl",
         "http_code": "000",
         "ms": 870,
         "detail": "curl: (60) schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - Sertifika zinciri g�venilmeyen bir yetkili taraf�ndan verildi.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncu",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -7389,13 +7704,20 @@
       "nsfw": 0,
       "domain": "anisascans.in",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 532,
         "detail": "curl: (6) Could not resolve host: anisascans.in",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -7434,13 +7756,20 @@
       "nsfw": 1,
       "domain": "moondaisyscans.biz",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15038,
         "detail": "curl: (28) Connection timed out after 15014 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -7503,13 +7832,20 @@
       "nsfw": 0,
       "domain": "skanlacje-feniksy.pl",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 730,
         "detail": "curl: (6) Could not resolve host: skanlacje-feniksy.pl",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -7872,13 +8208,20 @@
       "nsfw": 0,
       "domain": "msypublisher.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 167,
         "detail": "curl: (6) Could not resolve host: msypublisher.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -7891,7 +8234,14 @@
       "nsfw": 0,
       "domain": "goctruyentranh.net",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -8033,7 +8383,14 @@
       "nsfw": 0,
       "domain": "x.desu.city",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -8445,13 +8802,20 @@
       "nsfw": 0,
       "domain": "oioivn.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 143,
         "detail": "curl: (6) Could not resolve host: oioivn.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -8642,13 +9006,20 @@
       "nsfw": 0,
       "domain": "yaoitr.fun",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 230,
         "detail": "curl: (6) Could not resolve host: yaoitr.fun",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -8876,13 +9247,20 @@
       "nsfw": 0,
       "domain": "ancientcomics.com.br",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 523,
         "detail": "curl: (6) Could not resolve host: ancientcomics.com.br",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -8895,13 +9273,20 @@
       "nsfw": 0,
       "domain": "zinmanga.cc",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 246,
         "detail": "curl: (6) Could not resolve host: zinmanga.cc",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -8914,13 +9299,20 @@
       "nsfw": 0,
       "domain": "zinmanga.ms",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 231,
         "detail": "curl: (6) Could not resolve host: zinmanga.ms",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -9730,13 +10122,20 @@
       "nsfw": 0,
       "domain": "yurigarden.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "http404",
         "http_code": "404",
         "ms": 1585,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "404",
+        "ms": 0,
+        "detail": "site yok (HTTP 404)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -9914,7 +10313,14 @@
       "nsfw": 0,
       "domain": "dragontranslation.net",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -9964,13 +10370,20 @@
       "nsfw": 0,
       "domain": "laidbackscans.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 199,
         "detail": "curl: (6) Could not resolve host: laidbackscans.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -10008,7 +10421,14 @@
       "nsfw": 0,
       "domain": "blogtruyenmoi.com",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -10141,13 +10561,20 @@
       "nsfw": 0,
       "domain": "rsdleft.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 144,
         "detail": "curl: (6) Could not resolve host: rsdleft.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -10230,13 +10657,20 @@
       "nsfw": 0,
       "domain": "necroscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 539,
         "detail": "curl: (6) Could not resolve host: necroscans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -10796,13 +11230,20 @@
       "nsfw": 0,
       "domain": "zamanmanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 1834,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -11121,13 +11562,20 @@
       "nsfw": 0,
       "domain": "novelstown.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 143,
         "detail": "curl: (6) Could not resolve host: novelstown.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -11373,13 +11821,20 @@
       "nsfw": 0,
       "domain": "rainbowfairyscan.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 138,
         "detail": "curl: (6) Could not resolve host: rainbowfairyscan.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -11409,13 +11864,20 @@
       "nsfw": 0,
       "domain": "copypastescan.xyz",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15034,
         "detail": "curl: (28) Connection timed out after 15004 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -11428,13 +11890,20 @@
       "nsfw": 0,
       "domain": "monzee01.my.id",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 82,
         "detail": "curl: (6) Could not resolve host: monzee01.my.id",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -11803,7 +12272,14 @@
       "nsfw": 0,
       "domain": "",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "kapali": true
     },
     "3623239322859855998": {
@@ -12047,13 +12523,20 @@
       "nsfw": 0,
       "domain": "lilyumfansub.com.tr",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 162,
         "detail": "curl: (6) Could not resolve host: lilyumfansub.com.tr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -12197,13 +12680,20 @@
       "nsfw": 0,
       "domain": "culturesubs.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 227,
         "detail": "curl: (6) Could not resolve host: culturesubs.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -13223,13 +13713,20 @@
       "nsfw": 0,
       "domain": "mangagezginim.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 155,
         "detail": "curl: (6) Could not resolve host: mangagezginim.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -13318,13 +13815,20 @@
       "nsfw": 0,
       "domain": "mangananquim.site",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 144,
         "detail": "curl: (6) Could not resolve host: mangananquim.site",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -13337,13 +13841,20 @@
       "nsfw": 0,
       "domain": "mangaokusana.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 687,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -13381,13 +13892,20 @@
       "nsfw": 0,
       "domain": "mangaowlnet.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 153,
         "detail": "curl: (6) Could not resolve host: mangaowlnet.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -13426,13 +13944,20 @@
       "nsfw": 0,
       "domain": "mangasonline.cc",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 528,
         "detail": "curl: (6) Could not resolve host: mangasonline.cc",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -13471,13 +13996,20 @@
       "nsfw": 0,
       "domain": "www.mangatilkisi.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 141,
         "detail": "curl: (6) Could not resolve host: www.mangatilkisi.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -13576,13 +14108,20 @@
       "nsfw": 0,
       "domain": "ruahapchanhday.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15034,
         "detail": "curl: (28) Connection timed out after 15006 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -13733,13 +14272,20 @@
       "nsfw": 0,
       "domain": "manhwafreake.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15022,
         "detail": "curl: (28) Connection timed out after 15001 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -13856,13 +14402,20 @@
       "nsfw": 0,
       "domain": "manhwafreak.xyz",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15025,
         "detail": "curl: (28) Connection timed out after 15001 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -13875,13 +14428,20 @@
       "nsfw": 0,
       "domain": "adumanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 2804,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -13964,13 +14524,20 @@
       "nsfw": 0,
       "domain": "noonscan.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 170,
         "detail": "curl: (6) Could not resolve host: noonscan.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -14150,13 +14717,20 @@
       "nsfw": 0,
       "domain": "infamous-scans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15034,
         "detail": "curl: (28) Connection timed out after 15009 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -14296,13 +14870,20 @@
       "nsfw": 0,
       "domain": "alceacomic.my.id",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 208,
         "detail": "curl: (6) Could not resolve host: alceacomic.my.id",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -14315,7 +14896,14 @@
       "nsfw": 0,
       "domain": "anime-sama.eu",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -14677,13 +15265,20 @@
       "nsfw": 0,
       "domain": "birdmanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 204,
         "detail": "curl: (6) Could not resolve host: birdmanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -14860,13 +15455,20 @@
       "nsfw": 0,
       "domain": "comicarab.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 488,
         "detail": "curl: (6) Could not resolve host: comicarab.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -14987,7 +15589,14 @@
       "nsfw": 0,
       "domain": "seitacelestial.com",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -15086,13 +15695,20 @@
       "nsfw": 0,
       "domain": "fairydream.com.br",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 232,
         "detail": "curl: (6) Could not resolve host: fairydream.com.br",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -15155,13 +15771,20 @@
       "nsfw": 0,
       "domain": "origami-orpheans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 729,
         "detail": "curl: (6) Could not resolve host: origami-orpheans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -15235,13 +15858,20 @@
       "nsfw": 0,
       "domain": "elarctoon.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "http",
         "http_code": "429",
         "ms": 1032,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -15410,13 +16040,20 @@
       "nsfw": 0,
       "domain": "firescans.xyz",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15046,
         "detail": "curl: (28) Connection timed out after 15015 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -15707,13 +16344,20 @@
       "nsfw": 0,
       "domain": "ghostscan.xyz",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 951,
         "detail": "curl: (6) Could not resolve host: ghostscan.xyz",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -15745,13 +16389,20 @@
       "nsfw": 0,
       "domain": "radiantscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15030,
         "detail": "curl: (28) Connection timed out after 15007 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -15911,13 +16562,20 @@
       "nsfw": 0,
       "domain": "hamtruyen1.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 218,
         "detail": "curl: (6) Could not resolve host: hamtruyen1.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -16215,13 +16873,20 @@
       "nsfw": 0,
       "domain": "hoifansub.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 1040,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -16331,13 +16996,20 @@
       "nsfw": 0,
       "domain": "jellyring.co",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 140,
         "detail": "curl: (6) Could not resolve host: jellyring.co",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -16565,7 +17237,14 @@
       "nsfw": 0,
       "domain": "be.komikcast.fit",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -16577,13 +17256,20 @@
       "nsfw": 0,
       "domain": "komikmama.lat",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 215,
         "detail": "curl: (6) Could not resolve host: komikmama.lat",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -16673,13 +17359,20 @@
       "nsfw": 0,
       "domain": "visormonarca.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 168,
         "detail": "curl: (6) Could not resolve host: visormonarca.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -17129,7 +17822,14 @@
       "nsfw": 0,
       "domain": "manga-chan.me",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "404",
+        "ms": 0,
+        "detail": "site yok (HTTP 404)",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -17260,13 +17960,20 @@
       "nsfw": 0,
       "domain": "mangagojo.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 168,
         "detail": "curl: (6) Could not resolve host: mangagojo.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -17330,13 +18037,20 @@
       "nsfw": 0,
       "domain": "mangahona.pl",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 216,
         "detail": "curl: (6) Could not resolve host: mangahona.pl",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -17367,13 +18081,20 @@
       "nsfw": 0,
       "domain": "mgjinx.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 164,
         "detail": "curl: (6) Could not resolve host: mgjinx.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -17438,13 +18159,20 @@
       "nsfw": 0,
       "domain": "mangakita.id",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ssl",
         "http_code": "000",
         "ms": 640,
         "detail": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_ILLEGAL_MESSAGE (0x80090326) - This error usually occurs when a fatal SSL/TLS alert is received (e.g. handshake fa",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -17528,13 +18256,20 @@
       "nsfw": 0,
       "domain": "manga-mate.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 218,
         "detail": "curl: (6) Could not resolve host: manga-mate.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -17565,13 +18300,20 @@
       "nsfw": 0,
       "domain": "vrnoin.site",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 529,
         "detail": "curl: (6) Could not resolve host: vrnoin.site",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -17584,13 +18326,20 @@
       "nsfw": 0,
       "domain": "mangapeak.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 137,
         "detail": "curl: (6) Could not resolve host: mangapeak.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -17772,13 +18521,20 @@
       "nsfw": 0,
       "domain": "mangaruby.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 146,
         "detail": "curl: (6) Could not resolve host: mangaruby.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -18050,7 +18806,14 @@
       "nsfw": 0,
       "domain": "manga.wtf",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -18257,13 +19020,20 @@
       "nsfw": 0,
       "domain": "manhwanew.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 133,
         "detail": "curl: (6) Could not resolve host: manhwanew.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -18353,13 +19123,20 @@
       "nsfw": 0,
       "domain": "vrnoin.site",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 136,
         "detail": "curl: (6) Could not resolve host: vrnoin.site",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -18622,13 +19399,20 @@
       "nsfw": 0,
       "domain": "neatmangas.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ssl_trust",
         "http_code": "000",
         "ms": 1351,
         "detail": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - Hedef as�l ad� yanl��.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncurl fai",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -18794,13 +19578,20 @@
       "nsfw": 0,
       "domain": "norterose.com.br",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 277,
         "detail": "curl: (6) Could not resolve host: norterose.com.br",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -18931,13 +19722,20 @@
       "nsfw": 0,
       "domain": "perf-scan.xyz",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 219,
         "detail": "curl: (6) Could not resolve host: perf-scan.xyz",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -19038,13 +19836,20 @@
       "nsfw": 0,
       "domain": "popsmanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 328,
         "detail": "curl: (6) Could not resolve host: popsmanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -19160,13 +19965,20 @@
       "nsfw": 0,
       "domain": "truyentranhfull.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 493,
         "detail": "curl: (6) Could not resolve host: truyentranhfull.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -19307,13 +20119,20 @@
       "nsfw": 0,
       "domain": "rezoscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 138,
         "detail": "curl: (6) Could not resolve host: rezoscans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -19377,13 +20196,20 @@
       "nsfw": 0,
       "domain": "rogmangas.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 143,
         "detail": "curl: (6) Could not resolve host: rogmangas.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -19414,13 +20240,20 @@
       "nsfw": 0,
       "domain": "ruyamanga.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 341,
         "detail": "curl: (6) Could not resolve host: ruyamanga.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -19468,13 +20301,20 @@
       "nsfw": 0,
       "domain": "scan-manga.me",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 142,
         "detail": "curl: (6) Could not resolve host: scan-manga.me",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -19537,13 +20377,20 @@
       "nsfw": 0,
       "domain": "sectscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15037,
         "detail": "curl: (28) Connection timed out after 15010 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -19556,13 +20403,20 @@
       "nsfw": 0,
       "domain": "sheakomik.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15038,
         "detail": "curl: (28) Connection timed out after 15012 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -19620,13 +20474,20 @@
       "nsfw": 0,
       "domain": "sitemanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15042,
         "detail": "curl: (28) Connection timed out after 15013 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -19664,13 +20525,20 @@
       "nsfw": 0,
       "domain": "skymanga.work",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 534,
         "detail": "curl: (6) Could not resolve host: skymanga.work",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -19760,13 +20628,20 @@
       "nsfw": 0,
       "domain": "ssreading.com.br",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 140,
         "detail": "curl: (6) Could not resolve host: ssreading.com.br",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -20749,13 +21624,20 @@
       "nsfw": 0,
       "domain": "yaoimanga.es",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ssl",
         "http_code": "000",
         "ms": 595,
         "detail": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - Yerel G�venlik Yetkilisi ile ba�lant� kurulam�yor",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -21031,13 +21913,20 @@
       "nsfw": 0,
       "domain": "domalfansb.com.tr",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 1795,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -21193,13 +22082,20 @@
       "nsfw": 0,
       "domain": "anisamanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 933,
         "detail": "curl: (6) Could not resolve host: anisamanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -21690,13 +22586,20 @@
       "nsfw": 0,
       "domain": "pojokmanga.info",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 146,
         "detail": "curl: (6) Could not resolve host: pojokmanga.info",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -21829,7 +22732,14 @@
       "nsfw": 0,
       "domain": "",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "kapali": true
     },
     "4872650919616038499": {
@@ -22156,13 +23066,20 @@
       "nsfw": 0,
       "domain": "tempestfansub.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 1322,
         "detail": "curl: (6) Could not resolve host: tempestfansub.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -22255,13 +23172,20 @@
       "nsfw": 0,
       "domain": "inmoralnofansub.xyz",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15034,
         "detail": "curl: (28) Connection timed out after 15006 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -22402,13 +23326,20 @@
       "nsfw": 0,
       "domain": "otakusan.me",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 163,
         "detail": "curl: (6) Could not resolve host: otakusan.me",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -22421,13 +23352,20 @@
       "nsfw": 0,
       "domain": "otakusan.me",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 209,
         "detail": "curl: (6) Could not resolve host: otakusan.me",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -22622,13 +23560,20 @@
       "nsfw": 0,
       "domain": "moonwitchscan.com.br",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 208,
         "detail": "curl: (6) Could not resolve host: moonwitchscan.com.br",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -22900,13 +23845,20 @@
       "nsfw": 0,
       "domain": "prunusscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 141,
         "detail": "curl: (6) Could not resolve host: prunusscans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -23118,13 +24070,20 @@
       "nsfw": 0,
       "domain": "cabaredowatame.site",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 138,
         "detail": "curl: (6) Could not resolve host: cabaredowatame.site",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -23426,13 +24385,20 @@
       "nsfw": 0,
       "domain": "adumanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 2835,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -23469,15 +24435,22 @@
       "nsfw": 0,
       "domain": "www.mangaoku.org",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 1991,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "canli (olcum 2026-11-17) - testte",
+        "at": "2026-11-17T00:00:00Z"
       }
     },
     "5780610906402649511": {
@@ -23811,13 +24784,20 @@
       "nsfw": 0,
       "domain": "mangasup.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 204,
         "detail": "curl: (6) Could not resolve host: mangasup.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -23830,13 +24810,20 @@
       "nsfw": 0,
       "domain": "foxwhite.com.br",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 274,
         "detail": "curl: (6) Could not resolve host: foxwhite.com.br",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -23899,13 +24886,20 @@
       "nsfw": 0,
       "domain": "siyahmelek.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 215,
         "detail": "curl: (6) Could not resolve host: siyahmelek.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -24091,13 +25085,20 @@
       "nsfw": 0,
       "domain": "hunlight.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15034,
         "detail": "curl: (28) Connection timed out after 15007 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -24136,13 +25137,20 @@
       "nsfw": 0,
       "domain": "jpmangas.xyz",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15046,
         "detail": "curl: (28) Connection timed out after 15003 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -24455,13 +25463,20 @@
       "nsfw": 0,
       "domain": "komiksan.link",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 201,
         "detail": "curl: (6) Could not resolve host: komiksan.link",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -24614,7 +25629,14 @@
       "nsfw": 0,
       "domain": "lermanga.org",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -24626,15 +25648,22 @@
       "nsfw": 0,
       "domain": "www.kuroimanga.com",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 2399,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "canli (olcum 2026-11-17) - testte",
+        "at": "2026-11-17T00:00:00Z"
       }
     },
     "5789018501803821785": {
@@ -24909,13 +25938,20 @@
       "nsfw": 0,
       "domain": "mangacim.com.tr",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 268,
         "detail": "curl: (6) Could not resolve host: mangacim.com.tr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -24927,13 +25963,20 @@
       "nsfw": 0,
       "domain": "mangacix.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "301",
         "ms": 1971,
         "detail": "curl: (6) Could not resolve host: mangaoku.org.tr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -25134,13 +26177,20 @@
       "nsfw": 0,
       "domain": "mangaoku.info",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15025,
         "detail": "curl: (28) Connection timed out after 15002 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -25721,13 +26771,20 @@
       "nsfw": 0,
       "domain": "noonscan.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 214,
         "detail": "curl: (6) Could not resolve host: noonscan.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -25740,13 +26797,20 @@
       "nsfw": 0,
       "domain": "swatscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ssl",
         "http_code": "000",
         "ms": 1068,
         "detail": "curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -25835,13 +26899,20 @@
       "nsfw": 0,
       "domain": "nyxmanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 463,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -25878,13 +26949,20 @@
       "nsfw": 0,
       "domain": "opiatoon.art",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 144,
         "detail": "curl: (6) Could not resolve host: opiatoon.art",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -25923,13 +27001,20 @@
       "nsfw": 0,
       "domain": "otsugami.id",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 157,
         "detail": "curl: (6) Could not resolve host: otsugami.id",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -26011,13 +27096,20 @@
       "nsfw": 0,
       "domain": "rawmanga.su",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 175,
         "detail": "curl: (6) Could not resolve host: rawmanga.su",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -26030,13 +27122,20 @@
       "nsfw": 0,
       "domain": "raysscan.blogspot.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "http404",
         "http_code": "404",
         "ms": 1724,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "404",
+        "ms": 0,
+        "detail": "site yok (HTTP 404)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -26075,13 +27174,20 @@
       "nsfw": 0,
       "domain": "roseveil.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 4153,
         "detail": "curl: (6) Could not resolve host: roseveil.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -26113,13 +27219,20 @@
       "nsfw": 0,
       "domain": "aquascans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 710,
         "detail": "curl: (6) Could not resolve host: aquascans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -26175,13 +27288,20 @@
       "nsfw": 0,
       "domain": "siikomik.fun",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 280,
         "detail": "curl: (6) Could not resolve host: siikomik.fun",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -26549,13 +27669,20 @@
       "nsfw": 1,
       "domain": "yaoiflix.me",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 1680,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -26619,13 +27746,20 @@
       "nsfw": 0,
       "domain": "yd-comics.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 147,
         "detail": "curl: (6) Could not resolve host: yd-comics.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -26638,13 +27772,20 @@
       "nsfw": 0,
       "domain": "yubikiri.my.id",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 531,
         "detail": "curl: (6) Could not resolve host: yubikiri.my.id",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -26701,7 +27842,14 @@
       "nsfw": 0,
       "domain": "inkstory.me",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -26738,7 +27886,14 @@
       "nsfw": 0,
       "domain": "zonatmo.com",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -26750,7 +27905,14 @@
       "nsfw": 0,
       "domain": "truyentranh3qc.com",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -26840,13 +28002,20 @@
       "nsfw": 0,
       "domain": "mangaefendisi.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 2563,
         "detail": "curl: (6) Could not resolve host: mangaefendisi.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -26970,13 +28139,20 @@
       "nsfw": 0,
       "domain": "manga-sehri.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ssl_trust",
         "http_code": "000",
         "ms": 357,
         "detail": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - Hedef as�l ad� yanl��.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncurl fai",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -26988,13 +28164,20 @@
       "nsfw": 0,
       "domain": "mangasiginagi.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 555,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -27130,13 +28313,20 @@
       "nsfw": 0,
       "domain": "www.raindropteamfan.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 377,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -27174,7 +28364,14 @@
       "nsfw": 0,
       "domain": "mediocretoons.com",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -27248,13 +28445,20 @@
       "nsfw": 0,
       "domain": "bananamanga.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 209,
         "detail": "curl: (6) Could not resolve host: bananamanga.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -27404,7 +28608,14 @@
       "nsfw": 0,
       "domain": "com-x.life",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "404",
+        "ms": 0,
+        "detail": "site yok (HTTP 404)",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -27416,13 +28627,20 @@
       "nsfw": 0,
       "domain": "kedi.to",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 534,
         "detail": "curl: (6) Could not resolve host: kedi.to",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -27589,13 +28807,20 @@
       "nsfw": 0,
       "domain": "voidscans.co",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 139,
         "detail": "curl: (6) Could not resolve host: voidscans.co",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -27608,13 +28833,20 @@
       "nsfw": 0,
       "domain": "br.ninemanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 107,
         "detail": "curl: (6) Could not resolve host: br.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -27627,13 +28859,20 @@
       "nsfw": 0,
       "domain": "de.ninemanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 200,
         "detail": "curl: (6) Could not resolve host: de.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -27671,13 +28910,20 @@
       "nsfw": 0,
       "domain": "es.ninemanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 139,
         "detail": "curl: (6) Could not resolve host: es.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -27690,13 +28936,20 @@
       "nsfw": 0,
       "domain": "fr.ninemanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 154,
         "detail": "curl: (6) Could not resolve host: fr.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -27709,13 +28962,20 @@
       "nsfw": 0,
       "domain": "it.ninemanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 153,
         "detail": "curl: (6) Could not resolve host: it.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -27728,13 +28988,20 @@
       "nsfw": 0,
       "domain": "ru.ninemanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 136,
         "detail": "curl: (6) Could not resolve host: ru.ninemanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -28164,13 +29431,20 @@
       "nsfw": 1,
       "domain": "fuchscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 139,
         "detail": "curl: (6) Could not resolve host: fuchscans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -28450,13 +29724,20 @@
       "nsfw": 0,
       "domain": "traduccionesamistosas.topmanhuas.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "http404",
         "http_code": "404",
         "ms": 930,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "404",
+        "ms": 0,
+        "detail": "site yok (HTTP 404)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -28621,13 +29902,20 @@
       "nsfw": 0,
       "domain": "reset-scans.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 326,
         "detail": "curl: (6) Could not resolve host: reset-scans.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -28984,13 +30272,20 @@
       "nsfw": 0,
       "domain": "frscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 139,
         "detail": "curl: (6) Could not resolve host: frscans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -29196,7 +30491,14 @@
       "nsfw": 0,
       "domain": "phenix-scans.com",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -29497,13 +30799,20 @@
       "nsfw": 0,
       "domain": "www.guildknives.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 705,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -29737,13 +31046,20 @@
       "nsfw": 0,
       "domain": "imperioscans.com.br",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 335,
         "detail": "curl: (6) Could not resolve host: imperioscans.com.br",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -29981,13 +31297,20 @@
       "nsfw": 0,
       "domain": "snowmachinetranslation.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 327,
         "detail": "curl: (6) Could not resolve host: snowmachinetranslation.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -30521,13 +31844,20 @@
       "nsfw": 0,
       "domain": "komiksin.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 342,
         "detail": "curl: (6) Could not resolve host: komiksin.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -30629,13 +31959,20 @@
       "nsfw": 0,
       "domain": "01.hwago.xyz",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ssl",
         "http_code": "000",
         "ms": 1063,
         "detail": "curl: (35) schannel: failed to receive handshake, SSL/TLS connection failed",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -30666,13 +32003,20 @@
       "nsfw": 0,
       "domain": "lmtos.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 263,
         "detail": "curl: (6) Could not resolve host: lmtos.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -30685,13 +32029,20 @@
       "nsfw": 0,
       "domain": "manwe.pro",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "http",
         "http_code": "456",
         "ms": 761,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "456",
+        "ms": 0,
+        "detail": "site yok (HTTP 456)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -30703,7 +32054,14 @@
       "nsfw": 0,
       "domain": "natsu.tv",
       "packages": [],
-      "state": "unknown",
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -30853,13 +32211,20 @@
       "nsfw": 0,
       "domain": "cartelmanhwas.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 138,
         "detail": "curl: (6) Could not resolve host: cartelmanhwas.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -30942,13 +32307,20 @@
       "nsfw": 0,
       "domain": "ichiromanga.my.id",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 140,
         "detail": "curl: (6) Could not resolve host: ichiromanga.my.id",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -31127,13 +32499,20 @@
       "nsfw": 0,
       "domain": "mangagezgini.site",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15034,
         "detail": "curl: (28) Connection timed out after 15011 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -32252,13 +33631,20 @@
       "nsfw": 0,
       "domain": "phetruyen.vip",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 531,
         "detail": "curl: (6) Could not resolve host: phetruyen.vip",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -32415,13 +33801,20 @@
       "nsfw": 0,
       "domain": "tempestscans.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 739,
         "detail": "curl: (6) Could not resolve host: tempestscans.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -32471,13 +33864,20 @@
       "nsfw": 0,
       "domain": "summertoon.co",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 1194,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -32698,13 +34098,20 @@
       "nsfw": 0,
       "domain": "hayalistic.com.tr",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "301",
         "ms": 615,
         "detail": "curl: (6) Could not resolve host: hayalistic.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -33231,13 +34638,20 @@
       "nsfw": 0,
       "domain": "hikariscan.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 140,
         "detail": "curl: (6) Could not resolve host: hikariscan.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -33344,13 +34758,20 @@
       "nsfw": 0,
       "domain": "www.imparatormanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 213,
         "detail": "curl: (6) Could not resolve host: www.imparatormanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -33496,13 +34917,20 @@
       "nsfw": 0,
       "domain": "olyteconscans.xyz",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 147,
         "detail": "curl: (6) Could not resolve host: olyteconscans.xyz",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -33759,13 +35187,20 @@
       "nsfw": 0,
       "domain": "franxxmangas.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 338,
         "detail": "curl: (6) Could not resolve host: franxxmangas.net",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -33998,13 +35433,20 @@
       "nsfw": 0,
       "domain": "zandynofansub.aishiteru.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 528,
         "detail": "curl: (6) Could not resolve host: zandynofansub.aishiteru.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -34043,13 +35485,20 @@
       "nsfw": 1,
       "domain": "mindafansub.online",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15035,
         "detail": "curl: (28) Connection timed out after 15009 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -34215,13 +35664,20 @@
       "nsfw": 0,
       "domain": "koreliscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 866,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -34532,13 +35988,20 @@
       "nsfw": 0,
       "domain": "asurascans.com.tr",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 164,
         "detail": "curl: (6) Could not resolve host: asurascans.com.tr",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -34982,13 +36445,20 @@
       "nsfw": 0,
       "domain": "elevenscanlator.blogspot.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "http404",
         "http_code": "404",
         "ms": 1837,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "404",
+        "ms": 0,
+        "detail": "site yok (HTTP 404)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -35069,13 +36539,20 @@
       "nsfw": 0,
       "domain": "ghostfansub.co",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 138,
         "detail": "curl: (6) Could not resolve host: ghostfansub.co",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -35361,13 +36838,20 @@
       "nsfw": 0,
       "domain": "mangaonline.blog",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "reset",
         "http_code": "000",
         "ms": 1152,
         "detail": "curl: (56) schannel: server closed abruptly (missing close_notify)",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -36012,13 +37496,20 @@
       "nsfw": 0,
       "domain": "asemifansub.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 3179,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -36075,13 +37566,20 @@
       "nsfw": 0,
       "domain": "clubinari.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 694,
         "detail": "curl: (6) Could not resolve host: clubinari.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -36094,13 +37592,20 @@
       "nsfw": 0,
       "domain": "clubinari.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 952,
         "detail": "curl: (6) Could not resolve host: clubinari.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -36504,13 +38009,20 @@
       "nsfw": 0,
       "domain": "guncelmanga.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
         "ms": 3184,
         "detail": "",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -36908,13 +38420,20 @@
       "nsfw": 0,
       "domain": "1stkissmanga.org",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 172,
         "detail": "curl: (6) Could not resolve host: 1stkissmanga.org",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -36927,13 +38446,20 @@
       "nsfw": 0,
       "domain": "1stkissmanga.mom",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15027,
         "detail": "curl: (28) Connection timed out after 15003 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -37435,13 +38961,20 @@
       "nsfw": 1,
       "domain": "alliedfansub.net",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "timeout",
         "http_code": "000",
         "ms": 15027,
         "detail": "curl: (28) Connection timed out after 15001 milliseconds",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "park/satilik (olcum 2026-11-17)",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -37602,13 +39135,20 @@
       "nsfw": 0,
       "domain": "burningscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 136,
         "detail": "curl: (6) Could not resolve host: burningscans.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -37674,13 +39214,20 @@
       "nsfw": 0,
       "domain": "www.yetiskinruyamanga.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 139,
         "detail": "curl: (6) Could not resolve host: www.yetiskinruyamanga.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "kapali": true
     },
@@ -38224,13 +39771,20 @@
       "nsfw": 0,
       "domain": "winterscan.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "dns",
         "http_code": "000",
         "ms": 495,
         "detail": "curl: (6) Could not resolve host: winterscan.com",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
@@ -38243,13 +39797,20 @@
       "nsfw": 0,
       "domain": "altayscans.com",
       "packages": [],
-      "state": "pending",
+      "state": "failed",
       "health": {
         "status": "ssl",
         "http_code": "000",
         "ms": 654,
         "detail": "curl: (60) schannel: SEC_E_UNTRUSTED_ROOT (0x80090325) - Sertifika zinciri g�venilmeyen bir yetkili taraf�ndan verildi.\r\nMore details here: https://curl.se/docs/sslcerts.html\r\n\r\ncu",
         "at": "2026-11-13T17:07:52Z"
+      },
+      "device": {
+        "status": "fail",
+        "http_code": "000",
+        "ms": 0,
+        "detail": "erisilemedi (000) - 2026-11-17 olcumu",
+        "at": "2026-11-17T00:00:00Z"
       },
       "dead": true,
       "kapali": true
