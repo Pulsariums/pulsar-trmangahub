@@ -111,7 +111,7 @@ class PulsarSource(
         // Bazı siteler listeyi HTML yerine JSON API'de veriyor (mangadiyari, mangawt).
         val listJsonUrl = config.optString("listJsonUrl", "")
         if (listJsonUrl.isNotBlank()) {
-            val target = listJsonUrl.replace("{page}", page.toString())
+            val target = absolute(listJsonUrl.replace("{page}", page.toString()))
             return Request.Builder().url(target).headers(headers).build()
         }
         val listPath = config.optString("listPath", "/manga").trimStart('/')
@@ -183,10 +183,10 @@ class PulsarSource(
         }
         val isPost = config.optString("searchMethod", "GET").equals("POST", ignoreCase = true)
         if (!isPost) {
-            val target = apiUrl.replace("{query}", query)
+            val target = absolute(apiUrl.replace("{query}", query))
             return Request.Builder().url(target).headers(headers).build()
         }
-        val target = if (page > 1) "$apiUrl&page=$page" else apiUrl
+        val target = absolute(if (page > 1) "$apiUrl&page=$page" else apiUrl)
         val body = config.optString("searchBody", "title={query}").replace("{query}", query)
         return Request.Builder()
             .url(target)
@@ -255,9 +255,15 @@ class PulsarSource(
     // istek kurarken baseUrl + manga.url yapar; ikisi birleşince host
     // "site.comhttps" oluyordu. Cihaz raporu: Unable to resolve host
     // "anikiga.comhttps" — Amanga Planet, Anikiga, Rüya Manga bu yüzden düştü.
-    private fun absolute(url: String): String =
-        if (url.startsWith("http://") || url.startsWith("https://")) secure(url)
-        else "$baseUrl/${url.trimStart('/')}"
+    // Ayar dosyasindaki yollar goreli olabilir (searchUrl=/?s={query}, /search?q=...).
+    // OkHttp sema ister; goreli adres "Expected URL scheme 'http' or 'https'"
+    // firlatiyordu (cihaz: Comizy, GedeComix, PatiManga, Tilki Scans).
+    private fun absolute(url: String): String {
+        val t = url.trim()
+        if (t.startsWith("http://") || t.startsWith("https://")) return secure(t)
+        if (t.startsWith("//")) return (if (baseUrl.startsWith("https://")) "https:" else "http:") + t
+        return "$baseUrl/${t.trimStart('/')}"
+    }
 
     // Site https iken bazı Madara temaları bölüm/görsel linklerini http:// yazıyor;
     // sunucu http bağlantısını kesiyor ("unexpected end of stream on http://...").
@@ -331,7 +337,7 @@ class PulsarSource(
 
     override fun chapterListRequest(manga: SManga): Request {
         val api = apiChapterUrl(manga)
-        if (api != null) return Request.Builder().url(api).headers(headers).build()
+        if (api != null) return Request.Builder().url(absolute(api)).headers(headers).build()
         val mangaUrl = absolute(manga.url)
         // Madara: bölümler sayfada değil POST {manga}/ajax/chapters/ yanıtında (anikiga).
         if (config.optBoolean("chapterAjax", false)) {
@@ -382,7 +388,7 @@ class PulsarSource(
         for (i in 1 until m.groupValues.size) url = url.replace("{$i}", m.groupValues[i])
         if (url.contains("{")) return null
         val text = runCatching {
-            client.newCall(Request.Builder().url(url).headers(headers).build())
+            client.newCall(Request.Builder().url(absolute(url)).headers(headers).build())
                 .execute().use { it.body?.string().orEmpty() }
         }.getOrNull().orEmpty()
         val root = runCatching { JSONObject(text) }.getOrNull() ?: return null
@@ -545,7 +551,7 @@ class PulsarSource(
                     .post(body.toRequestBody("application/x-www-form-urlencoded".toMediaType()))
                     .build()
             }
-            return Request.Builder().url(api).headers(headers).build()
+            return Request.Builder().url(absolute(api)).headers(headers).build()
         }
         return Request.Builder().url(absolute(chapter.url)).headers(headers).build()
     }
@@ -584,7 +590,7 @@ class PulsarSource(
         // POST {url}ajax/chapters/). chapterAjaxUrl "{url}" yer tutucusunu tasir.
         val chapterAjax = config.optString("chapterAjaxUrl", "")
         if (chapterAjax.isNotBlank()) {
-            val target = chapterAjax.replace("{url}", response.request.url.toString())
+            val target = absolute(chapterAjax.replace("{url}", response.request.url.toString()))
             val isPost = config.optString("chapterAjaxMethod", "POST").equals("POST", ignoreCase = true)
             val body = config.optString("chapterAjaxBody", "")
             val req = Request.Builder().url(target).headers(headers)
