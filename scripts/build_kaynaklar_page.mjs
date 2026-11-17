@@ -49,7 +49,7 @@ const html = `<!doctype html>
   </div>
   <div class="sayac" id="s"></div>
   <div class="tabwrap"><table>
-    <thead><tr><th>Kaynak</th><th>Geldiği repolar</th><th>Evre</th><th>Grup</th><th>Etiket</th><th>Tamir</th><th>Son hata</th></tr></thead>
+    <thead><tr><th>Kaynak</th><th>Geldiği repolar</th><th>Yayında</th><th>Evre</th><th>Grup</th><th>Etiket</th><th>Tamir</th><th>Son hata</th></tr></thead>
     <tbody id="t"></tbody>
   </table></div>
 </div>
@@ -64,6 +64,7 @@ function ciz() {
   $('s').textContent = r.length + ' / ' + K.length + ' kaynak';
   $('t').innerHTML = r.slice(0, 1500).map((k) => '<tr><td><b>' + esc(k.ad) + '</b><div class="m">' + esc(k.alan_adi) + ' · ' + esc(k.dil) + (k.nsfw ? ' · 18+' : '') + '</div></td>'
     + '<td>' + esc((k.repolar.length ? k.repolar : k.kokenler).join(', ') || '-') + '</td>'
+    + '<td>' + (k.yayinda ? 'evet' : 'hayır') + '</td>'
     + '<td>' + esc(k.evre) + '</td><td>' + esc(k.grup) + '</td>'
     + '<td><span class="e ' + esc(k.etiket) + '">' + esc(k.etiket) + '</span></td>'
     + '<td>' + (k.tamir_edildi ? 'edildi' : '-') + (k.tamir_kayitlari.length ? '<div class="m">' + esc(k.tamir_kayitlari.join(', ')) + '</div>' : '') + '</td>'
