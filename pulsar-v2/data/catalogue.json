@@ -4083,7 +4083,7 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangatown.com",
-      "baseUrl": "https://mangatown.com",
+      "baseUrl": "https://www.mangatown.com",
       "engine": "custom",
       "config": {
         "engine": "custom",
@@ -4434,13 +4434,14 @@
       "nsfw": 0,
       "domain": "rawdex.net",
       "baseUrl": "https://rawdex.net",
-      "engine": "custom",
+      "engine": "madara",
       "config": {
-        "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "engine": "madara",
+        "listPath": "/manga/?m_orderby=latest",
+        "itemSelector": ".page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": ".reading-content img.wp-manga-chapter-img",
+        "chapterAjaxUrl": "{url}ajax/chapters/"
       },
       "selector_verified": true,
       "origins": [
@@ -4973,7 +4974,8 @@
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "http1": true
       },
       "selector_verified": true,
       "origins": [
@@ -5776,7 +5778,8 @@
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "http1": true
       },
       "selector_verified": true,
       "origins": [
@@ -6945,9 +6948,9 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": ".page-listing-item .post-title a",
-        "chapterSelector": "a[href*=\"/capitulo-\"]",
+        "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "img.wp-manga-chapter-img",
-        "chapterAjaxUrl": "https://houseofotakusv2.xyz/wp-admin/admin-ajax.php?action=manga_get_chapters&manga=2127"
+        "chapterAjaxUrl": "{url}ajax/chapters/"
       },
       "selector_verified": true,
       "origins": [
@@ -7068,9 +7071,9 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "",
-        "chapterSelector": "#manga-chapters-holder li.wp-manga-chapter a",
+        "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "",
-        "chapterAjaxUrl": "https://topcomicporno.com/manga/que-puedo-hacer-si-estoy-en-un-isla-al-juego-del-fap/ajax/chapters/",
+        "chapterAjaxUrl": "{url}ajax/chapters/",
         "titleSelector": ".post-title h1"
       },
       "selector_verified": true,
@@ -7754,7 +7757,7 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "div.mt-manga-catalog-card",
-        "chapterSelector": ".mtx-chapter-main",
+        "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "img.wp-manga-chapter-img",
         "searchUrl": "https://montetaiscanlator.xyz/wp-admin/admin-ajax.php?action=wp-manga-search-manga",
         "searchMethod": "POST",
@@ -7762,7 +7765,7 @@
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
         "searchJsonTitle": "title",
-        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
+        "chapterAjaxUrl": "{url}ajax/chapters/"
       },
       "selector_verified": true,
       "origins": [
