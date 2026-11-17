@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T21:44:55Z",
+  "generated": "2026-11-17T22:00:37Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -153,10 +153,16 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "tonizu.top",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: list=11 chapters=40 pages=0",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "reason": "harness: list=11 chapters=40 pages=0"
     },
     "1085305392848287310": {
       "id": 1085305392848287310,
@@ -415,9 +421,23 @@
       "nsfw": 0,
       "domain": "alterkaiscans.my.id",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "1203470067124874019": {
       "id": 1203470067124874019,
@@ -4436,10 +4456,16 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "furyosociety.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "reason": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
     },
     "177546127898650049": {
       "id": 177546127898650049,
@@ -4449,9 +4475,23 @@
       "nsfw": 0,
       "domain": "vyvymanga.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "178171581382307178": {
       "id": 178171581382307178,
@@ -4550,9 +4590,23 @@
       "nsfw": 0,
       "domain": "noromax02.my.id",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "1845278797031432533": {
       "id": 1845278797031432533,
@@ -4860,9 +4914,23 @@
       "nsfw": 0,
       "domain": "mangasusuku.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "1922179475422564101": {
       "id": 1922179475422564101,
@@ -6689,10 +6757,16 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "mangas-origines.fr",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "reason": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
     },
     "2162105181326002302": {
       "id": 2162105181326002302,
@@ -8284,6 +8358,17 @@
         "at": "2026-11-17T10:02:04Z"
       }
     },
+    "258218291388547981": {
+      "id": 258218291388547981,
+      "kind": "catalogue",
+      "title": "SadScans",
+      "lang": "tr",
+      "nsfw": 0,
+      "domain": "sadscans.com",
+      "packages": [],
+      "state": "engelli",
+      "sorun": "cloudflare"
+    },
     "2586288247862613348": {
       "id": 2586288247862613348,
       "kind": "engine",
@@ -8431,9 +8516,23 @@
       "nsfw": 0,
       "domain": "komikindo.ch",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "2661509985880858827": {
       "id": 2661509985880858827,
@@ -9139,9 +9238,23 @@
       "nsfw": 0,
       "domain": "olympusxyz.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "2950297680644095236": {
       "id": 2950297680644095236,
@@ -9407,11 +9520,23 @@
       "nsfw": 0,
       "domain": "klikmanga.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
-      "device_step": "search",
-      "reason": "DIGER: govde yok;redir:https://klikmanga.org/;fallback:http://klikmanga.com/"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "3014905157894709296": {
       "id": 3014905157894709296,
@@ -10934,10 +11059,16 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "lekmanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: IOException: Cloudflare bypass currently disabled",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "reason": "harness: IOException: Cloudflare bypass currently disabled"
     },
     "3625557739488350650": {
       "id": 3625557739488350650,
@@ -12537,9 +12668,23 @@
       "nsfw": 0,
       "domain": "v7.kiryuu.to",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "3789389920063824891": {
       "id": 3789389920063824891,
@@ -12986,10 +13131,16 @@
       "lang": "vi",
       "nsfw": 1,
       "domain": "sayhentaii.art",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "reason": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
     },
     "386746428516970468": {
       "id": 386746428516970468,
@@ -14134,6 +14285,17 @@
       },
       "device_step": "list",
       "kapali": true
+    },
+    "4061344289012005112": {
+      "id": 4061344289012005112,
+      "kind": "catalogue",
+      "title": "Webtoon Hatti",
+      "lang": "tr",
+      "nsfw": 0,
+      "domain": "webtoonhatti.club",
+      "packages": [],
+      "state": "engelli",
+      "sorun": "cloudflare"
     },
     "4062350174854844668": {
       "id": 4062350174854844668,
@@ -17552,11 +17714,23 @@
       "nsfw": 1,
       "domain": "petrotechsociety.org",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending",
-      "device_step": "list",
-      "reason": "harness: UnsupportedOperationException"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "4354551168694971882": {
       "id": 4354551168694971882,
@@ -19786,10 +19960,23 @@
       "nsfw": 0,
       "domain": "lectorhub.j5z.xyz",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
-      "reason": "harness: list=25 chapters=20 pages=0"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "4856925517439351632": {
       "id": 4856925517439351632,
@@ -21037,9 +21224,23 @@
       "nsfw": 0,
       "domain": "brakeout.xyz",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "5564279680493652484": {
       "id": 5564279680493652484,
@@ -21293,10 +21494,16 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "skymangas.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "reason": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
     },
     "5779873155655263510": {
       "id": 5779873155655263510,
@@ -24722,9 +24929,23 @@
       "nsfw": 1,
       "domain": "sektedoujin.cc",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "5925244894679392886": {
       "id": 5925244894679392886,
@@ -25677,9 +25898,23 @@
       "nsfw": 0,
       "domain": "mangalami.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "6084020956957541828": {
       "id": 6084020956957541828,
@@ -27433,9 +27668,23 @@
       "nsfw": 0,
       "domain": "assortedscans.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "661348012455677696": {
       "id": 661348012455677696,
@@ -28505,6 +28754,17 @@
       },
       "dead": true,
       "unreachable": true
+    },
+    "6946651026380347829": {
+      "id": 6946651026380347829,
+      "kind": "catalogue",
+      "title": "ArazNovel",
+      "lang": "tr",
+      "nsfw": 0,
+      "domain": "araznovel.com",
+      "packages": [],
+      "state": "engelli",
+      "sorun": "cloudflare"
     },
     "6958297225666389056": {
       "id": 6958297225666389056,
@@ -29750,9 +30010,23 @@
       "nsfw": 0,
       "domain": "manhuatop.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "7368085083996674415": {
       "id": 7368085083996674415,
@@ -32652,9 +32926,23 @@
       "nsfw": 0,
       "domain": "euphoriascan.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "8400532630224716727": {
       "id": 8400532630224716727,
@@ -32753,9 +33041,23 @@
       "nsfw": 0,
       "domain": "isekaikomik.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "845371345206609558": {
       "id": 845371345206609558,
@@ -35199,9 +35501,23 @@
       "nsfw": 0,
       "domain": "toomtam-manga.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "947646064643117123": {
       "id": 947646064643117123,
@@ -35211,9 +35527,23 @@
       "nsfw": 1,
       "domain": "mihentai.com",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T22:00:11.445Z"
+      }
     },
     "952507434691460791": {
       "id": 952507434691460791,
