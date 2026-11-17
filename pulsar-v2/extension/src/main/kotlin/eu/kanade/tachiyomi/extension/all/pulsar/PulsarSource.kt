@@ -687,7 +687,12 @@ class PulsarSource(
         val imageUrls = if (scriptFirst) {
             scriptPages
         } else {
-            EngineRegistry.parsePages(doc, readerSelector, baseUrl)
+            EngineRegistry.parsePages(
+                doc,
+                readerSelector,
+                baseUrl,
+                config.optString("pageUrlTemplate", ""),
+            )
                 .ifEmpty { EngineRegistry.rawImages(html, baseUrl) }
                 .ifEmpty { scriptPages }
         }
