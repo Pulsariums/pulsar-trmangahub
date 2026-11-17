@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T15:07:29Z",
+  "generated": "2026-11-17T15:18:23Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -674,8 +674,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "2/3 kapak: HTTP 404",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Kapak 404 yeniden uretilmedi (data-src 200 image/webp).",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "list"
     },
@@ -3072,8 +3072,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "HttpException: HTTP error 404",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Pages 404 yeniden uretilmedi: tek bolum 200 ve 11 img.",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "pages"
     },
@@ -4232,15 +4232,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "rawkuma.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "2/3 kapak: Kapak URL yok",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "search"
     },
     "1656003814974793263": {
@@ -4641,15 +4636,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "tapas.io",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "IllegalStateException: TANI kod=200 url=https://tapas.io/series/i-shall-master-this-family len=170268 a=49 sel=0 gen=0 ilk=https://www.microsoft.com/edge https:",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "details"
     },
     "1769466275926738671": {
@@ -4746,15 +4736,10 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "animexnovel.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Sayfa listesi boş",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "1847284941352855352": {
@@ -7156,15 +7141,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "ciao.shogakukan.co.jp",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "0/3 kapak: Kapak URL yok",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "covers"
     },
     "2186605994348349763": {
@@ -7174,15 +7154,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "webcomicsapp.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "0/3 kapak: Kapak URL yok",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "2190287912977065806": {
@@ -9018,11 +8993,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "UnknownHostException: Unable to resolve host \"img11.mangarussia.com\": No address associated with hostname",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Ana domain 200; kapak hostu img11.mangarussia.com 1.1.1.1 ve 8.8.8.8 uzerinde SERVFAIL. Cihaz agi degil, kapak hostu site tarafinda bozuk.",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
-      "device_step": "covers",
-      "unreachable": true
+      "device_step": "covers"
     },
     "2618646420420740860": {
       "id": 2618646420420740860,
@@ -9937,8 +9911,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Sayfa listesi boş",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Nuxt SSR. Episode sayfasi 45065 b; __NUXT__ icinde episode meta var ama sayfa gorseli yok, sadece /img/img_spacer01.png ve baslik grid gorseli. Gorseller istemc",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "list"
     },
@@ -11384,8 +11358,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Sayfa listesi boş",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Madara. reading-content bos, data-src=0, wp-manga-chapter-img=0. Sayfada 73 login + required-login gecisi var: bolum gorselleri giris istiyor. Olculen secici yo",
+        "at": "2026-11-17T15:18:20.071105Z"
       }
     },
     "3488647577143589694": {
@@ -11892,15 +11866,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "HttpException: HTTP error 404",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "3704693444647218571": {
@@ -14324,15 +14293,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "namicomi.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "IllegalStateException: TANI kod=200 url=https://namicomi.com/en/title/search?sort=views.desc&readingModes=horizontal&readingModes=longstrip len=95138 a=32 sel=0",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "3957800042269399520": {
@@ -14945,8 +14909,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "HttpException: HTTP error 404",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "NeoxScans kaydi. Kartlar br.comikey.com/comics/<slug>/<id>/ adresine gidiyor; comikey detayi JS uygulamasi (window.__FINIT__), HTML icinde bolum linki yok.",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "list"
     },
@@ -15199,8 +15163,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "HttpException: HTTP error 404",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Pages 404 yeniden uretilmedi; bolum sayfasi 200 ve 24 img. chapterSelector dogrulanmadi.",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "pages"
     },
@@ -20347,15 +20311,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangaforfree.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "IllegalStateException: TANI kod=200 url=https://mangaforfree.net/manga/mothers-friends/ len=85237 a=26 sel=0 gen=0 ilk=https://mangaforfree.net/ https://mangafo",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "details"
     },
     "4539181955248324512": {
@@ -21037,8 +20996,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "IllegalStateException: TANI kod=200 url=https://piccoma.com/web/product/43170 len=7265 a=6 sel=0 gen=0 ilk=/web/ /web/contact /web/contact http://www.kakaopicco",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Urun sayfasi 7264 b JS kabugu; episode linki 0. /web/api/product/43170, /web/api/product/43170/episodes, /web/api/episode/list/43170 -> hepsi 404. pcm_web_v33.0",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "list"
     },
@@ -21504,23 +21463,9 @@
       "nsfw": 0,
       "domain": "nabicix.com",
       "packages": [
-        "tr"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "unknown"
     },
     "4913495778819209502": {
       "id": 4913495778819209502,
@@ -21869,18 +21814,6 @@
         "at": "2026-11-16T18:05:29Z"
       },
       "device_step": "list"
-    },
-    "513391446834079432": {
-      "id": 513391446834079432,
-      "kind": "catalogue",
-      "title": "Weeb Central",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "weebcentral.com",
-      "packages": [
-        "test"
-      ],
-      "state": "unknown"
     },
     "513536896037529513": {
       "id": 513536896037529513,
@@ -22315,15 +22248,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "comichubfree.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "0/3 kapak: Kapak URL yok",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "5390747718232305300": {
@@ -26340,8 +26268,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "cPanel Account Suspended sayfasi. Iki GarciaManga kaydi (2776111846383631153, 5815221491918609206) ayni domain.",
+        "at": "2026-11-17T15:18:20.071105Z"
       }
     },
     "5822259194978908981": {
@@ -26369,15 +26297,10 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "covendasbruxonas.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "5824161584162899529": {
@@ -27299,15 +27222,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "leercapitulo.co",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "covers"
     },
     "6029481931652111950": {
@@ -28902,15 +28820,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "hyakuro.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "2/3 kapak: HTTP 404",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "covers"
     },
     "6418857290741556046": {
@@ -29576,15 +29489,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "shadowceviri.blogspot.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Sayfa listesi boş",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "6620603193106345631": {
@@ -30245,8 +30153,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "0/3 kapak: HTTP 404",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Kapak 404 gercek: cdn.pianmanga.me data-src iki ayri URL 404 (text/html) dondu. List saglam (16 kart).",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "covers"
     },
@@ -31458,8 +31366,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "IllegalStateException: TANI kod=200 url=https://lectorhentai.com/manga/89014/todos-los-dias len=170820 a=109 sel=0 gen=0 ilk=https://lectorhentai.com https://le",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Read sayfasi (/read/89014/todos-los-dias) 126551 b; 3 img de logo/readerarea.svg. ts_reader verisi assets/js/reader-blob.js ile obfuscate edilmis, duz JSON yok.",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "details"
     },
@@ -31542,8 +31450,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "1/3 kapak: Kapak URL yok",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Seri kartlari HTML de yok: kapak markup u JS template string icinde (getAdultHtml, manga.thumbnail) ve liste fetch ile doluyor. Sunucu render kart yok -> KAPAK_",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "covers"
     },
@@ -32760,15 +32668,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "dreamteams.space",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "0/3 kapak: Kapak URL yok",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "covers"
     },
     "7739392788631822474": {
@@ -34225,15 +34128,10 @@
       "lang": "zh",
       "nsfw": 0,
       "domain": "mhua5.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Liste boş",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "819133826546505053": {
@@ -34292,11 +34190,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "IOException: Unable to resolve host \"www.techsmartideas.com\": No address associated with hostname",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Ana domain 200, ama cihazin pages asamasi www.techsmartideas.com cozumleyemedigi icin dusuyor. Ayni host 1.1.1.1 ve 8.8.8.8 uzerinde SERVFAIL veriyor (NXDOMAIN ",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
-      "device_step": "covers",
-      "unreachable": true
+      "device_step": "covers"
     },
     "8219791118026558216": {
       "id": 8219791118026558216,
@@ -35184,15 +35081,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "mangtto.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "1/3 kapak: Kapak URL yok",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "covers"
     },
     "8463142241276011825": {
@@ -35298,15 +35190,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "nikkangecchan.jp",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "Sayfa listesi boş",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "list"
     },
     "8510231231653797281": {
@@ -35797,15 +35684,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "dragonball-multiverse.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "HttpException: HTTP error 404",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "details"
     },
     "8657398763211315182": {
@@ -36540,15 +36422,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "ichicomi.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "0/3 kapak: Kapak URL yok",
-        "at": "2026-11-17T15:05:59.415241Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "covers"
     },
     "8822715490128628151": {
@@ -36716,8 +36593,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "Sayfa listesi boş",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Issue sayfasi (.issue-page) yalnizca kapak gorseli tasiyor: asm_001_big.jpg. /comics/issue/.../read ayni 14866 baytlik sayfayi dondurdu, ek sayfa gorseli yok. R",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "list"
     },
@@ -37048,8 +36925,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "HttpException: HTTP error 404",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Pages 404 yeniden uretilmedi; bolum 200/36 img. Bolum linkleri /<slug>-ตอนที่-N/ biciminde, chapter kelimesi gecmiyor.",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
       "device_step": "pages"
     },
@@ -37370,11 +37247,10 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "IOException: Unable to resolve host \"www.techsmartideas.com\": No address associated with hostname",
-        "at": "2026-11-17T15:05:59.415241Z"
+        "detail": "Ana domain 200; pages asamasi www.techsmartideas.com SERVFAIL (1.1.1.1 + 8.8.8.8). Cihaz agi degil, gorsel hostu bozuk.",
+        "at": "2026-11-17T15:18:20.071105Z"
       },
-      "device_step": "covers",
-      "unreachable": true
+      "device_step": "covers"
     },
     "955191849114859000": {
       "id": 955191849114859000,

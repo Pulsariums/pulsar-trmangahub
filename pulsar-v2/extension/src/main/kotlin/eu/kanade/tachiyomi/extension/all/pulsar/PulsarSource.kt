@@ -70,10 +70,21 @@ class PulsarSource(
             .build()
     }
 
-    override fun headersBuilder(): Headers.Builder = super.headersBuilder()
-        .removeAll("User-Agent")
-        .add("Referer", "$baseUrl/")
-        .add("User-Agent", desktopUserAgent)
+    // Mihon eklentileri kaynak başına başlık gönderebilir (Referer/Cookie/UA).
+    // catalogue.json'da "headers": {"Referer": "...", "Cookie": "..."} ile verilir.
+    override fun headersBuilder(): Headers.Builder {
+        val b = super.headersBuilder()
+            .removeAll("User-Agent")
+            .add("Referer", "$baseUrl/")
+            .add("User-Agent", desktopUserAgent)
+        config.optJSONObject("headers")?.let { o ->
+            for (k in o.keys()) {
+                val v = o.optString(k)
+                if (v.isNotBlank()) b.set(k, v)
+            }
+        }
+        return b
+    }
 
     override val id: Long by lazy {
         val key = "pulsar/$domain/$lang"
@@ -333,6 +344,17 @@ class PulsarSource(
         return url.takeIf { !it.contains("{") }
     }
 
+    // pageApiMethod "POST" iken gövde şablonu: {url} bölüm adresi, {1},{2}... yakalama grupları.
+    private fun fillApiBody(chapter: SChapter, template: String): String {
+        var body = template.replace("{url}", absolute(chapter.url))
+        val pattern = config.optString("pageApiIdPattern", "")
+        if (pattern.isNotBlank()) {
+            val m = runCatching { Regex(pattern).find(chapter.url) }.getOrNull()
+            if (m != null) for (i in 1 until m.groupValues.size) body = body.replace("{$i}", m.groupValues[i])
+        }
+        return body
+    }
+
     // Bölüm URL'sindeki sayı gerçek id değilse: seri JSON'undaki numara alanından id çözülür.
     // Örn. /seri/<slug>/bolum/3851 -> /api/series/<slug> -> chapter_number=3851 -> id=6417.
     private fun lookupApiId(chapter: SChapter): String? {
@@ -498,7 +520,18 @@ class PulsarSource(
                 .build()
         }
         val api = apiPageUrl(chapter)
-        if (api != null) return Request.Builder().url(api).headers(headers).build()
+        if (api != null) {
+            // Bazı sayfa API'leri GET yerine POST bekliyor; gövde form olarak gönderilir.
+            if (config.optString("pageApiMethod", "GET").trim().equals("POST", ignoreCase = true)) {
+                val body = fillApiBody(chapter, config.optString("pageApiBody", ""))
+                return Request.Builder()
+                    .url(api)
+                    .headers(headers)
+                    .post(body.toRequestBody("application/x-www-form-urlencoded".toMediaType()))
+                    .build()
+            }
+            return Request.Builder().url(api).headers(headers).build()
+        }
         return Request.Builder().url(absolute(chapter.url)).headers(headers).build()
     }
 
