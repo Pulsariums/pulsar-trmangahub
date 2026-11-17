@@ -35,6 +35,13 @@ const repoSlug = (() => {
 })();
 const REPO_RAW_URL = `https://raw.githubusercontent.com/${repoSlug}/main/pulsar-v2/repo/index.min.json`;
 
+// Kaynaklar sayfasi baglantisi: sayi kaynaklar.json'daki toplam alanindan okunur
+const kaynaklarMeta = readJson('pulsar-v2/depo/kaynaklar.json', {});
+const kaynaklarTotal = Number(kaynaklarMeta && kaynaklarMeta.toplam);
+const kaynaklarLabel = kaynaklarTotal > 0
+  ? `Tüm kaynaklar ve durum (${kaynaklarTotal})`
+  : 'Tüm kaynaklar ve durum';
+
 const esc = (v) => String(v == null ? '' : v).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 const packageCards = packages.map((p) => {
@@ -280,6 +287,7 @@ const html = `<!doctype html>
       <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
       Depo Adresini Kopyala
     </button>
+    <a class="btn btn-secondary" href="kaynaklar.html" style="margin-top:12px">${esc(kaynaklarLabel)}</a>
   </div>
 
   <h2>Paketler</h2>
