@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T20:07:24Z",
+  "generated": "2026-11-17T20:13:23Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -34153,9 +34153,23 @@
       "nsfw": 0,
       "domain": "mangadenizi.net",
       "packages": [
-        "test"
+        "tr"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-17T20:13:20Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list 15/chapters 43/pages 17)",
+        "at": "2026-11-17T20:13:20Z"
+      }
     },
     "8132273477468721739": {
       "id": 8132273477468721739,
