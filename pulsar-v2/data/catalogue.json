@@ -24,9 +24,9 @@
         "netshield": true,
         "engine": "custom",
         "listPath": "/manga",
-        "itemSelector": "a.group[href^=\"/manga/\"]",
-        "chapterSelector": "a[href*=\"-bolum-oku\"]",
-        "readerSelector": ".manga-reader-container img"
+        "itemSelector": "a[href^=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"bolum-oku\"]",
+        "readerSelector": "img.ep-item"
       },
       "verified_by_user": true,
       "origins": [
@@ -51,12 +51,12 @@
         "postReq": true,
         "chapterAjax": true,
         "engine": "custom",
-        "listPath": "/manga/",
-        "itemSelector": ".page-item-detail",
-        "chapterSelector": ".wp-manga-chapter a",
-        "readerSelector": ".reading-content img",
+        "listPath": "manga/",
+        "itemSelector": "div.page-item-detail, div.c-tabs-item__content",
+        "chapterSelector": "li.wp-manga-chapter",
+        "readerSelector": "img.wp-manga-chapter-img",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "searchUrl": "/?s={query}&post_type=wp-manga"
+        "searchUrl": "https://anikiga.com/?s={query}&post_type=wp-manga"
       },
       "verified_by_user": true,
       "origins": [
@@ -95,7 +95,14 @@
         "nyora_datadriven"
       ],
       "selector_verified": true,
-      "status": "failed"
+      "status": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "CLOUDFLARE: Tüm HTML ve JSON uçları Cloudflare challenge döndürüyor, HTML alınamadığı için script/inline JSON avı yapılamadı. Denenen uçlar: wp-json wp/v2/manga, /api/v1/series/{slug}/chapters/{bolum}, /wp-json/. Aşılamadı.",
+        "at": "2026-11-17T18:15:56Z"
+      }
     },
     {
       "id": "diamondfansub.com",
@@ -186,11 +193,12 @@
           "tagsExclusion": false
         },
         "engine": "custom",
-        "listPath": "/manga/",
-        "itemSelector": ".ymk-card-s5-thumb",
-        "chapterSelector": ".ymk-chapter-item a",
-        "readerSelector": ".ymk-chapter-img",
-        "searchUrl": "/?s={query}"
+        "listPath": "/seriler/",
+        "itemSelector": "a.ymk-card-title-link",
+        "chapterSelector": "a.ymk-chapter-item",
+        "readerSelector": "img.ymk-chapter-img",
+        "searchUrl": "https://gafeland.com/?s={query}&post_type=wp-manga",
+        "searchMethod": "GET"
       },
       "verified_by_user": true,
       "origins": [
@@ -228,7 +236,14 @@
         "nyora_datadriven"
       ],
       "selector_verified": true,
-      "status": "failed"
+      "status": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "CLOUDFLARE: Cloudflare 'Just a moment...' 403 (5456 bayt). Denenen: GET / ve GET /wp-json/wp/v2/wp-manga?per_page=1 -> 403/5613 ayni challenge. admin-ajax denenmedi (403 sonrasi anlamsiz). HTML ve JSON ucu kapali, detay/bolum olculemedi.",
+        "at": "2026-11-17T18:15:56Z"
+      }
     },
     {
       "id": "golgebahcesi.com",
@@ -385,11 +400,11 @@
         "postReq": true,
         "datePattern": "dd MMMM yyyy",
         "engine": "custom",
-        "listPath": "/manga/?m_orderby=latest",
-        "itemSelector": ".page-item-detail",
-        "chapterSelector": ".wp-manga-chapter a",
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "a.tuhaf-ch-item, div.chapter-item, li.wp-manga-chapter",
         "readerSelector": ".reading-content img",
-        "chapterAjaxUrl": "{url}ajax/chapters/",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "searchUrl": "/?s={query}&post_type=wp-manga"
       },
       "verified_by_user": true,
@@ -547,7 +562,7 @@
       "nsfw": 0,
       "domain": "mangawt.com",
       "baseUrl": "https://mangawt.com",
-      "engine": "madara",
+      "engine": "custom",
       "config": {
         "engine": "madara",
         "listPath": "/manga",
@@ -566,12 +581,14 @@
         "pageApiFieldUrl": "url",
         "searchUrl": "https://mangawt.com/api/mangas?q={query}",
         "searchJsonItems": "mangas",
-        "searchJsonUrl": "_id",
+        "searchJsonUrl": "slug",
         "searchJsonTitle": "title",
         "searchJsonPathPrefix": "/manga",
-        "chapterApiUrl": "https://mangawt.com/api/mangas/{id}",
+        "chapterApiUrl": "https://mangawt.com/api/mangas/slug/{id}",
         "chapterApiItems": "chapters",
-        "chapterApiIdPattern": "([a-f0-9]{24})"
+        "chapterApiIdPattern": "/manga/([^/]+)",
+        "chapterApiFieldName": "title",
+        "searchMethod": "GET"
       },
       "verified_by_user": true,
       "origins": [
@@ -579,7 +596,8 @@
         "local_tr",
         "nyora_datadriven"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "dead": false
     },
     {
       "id": "mangtto.com",
@@ -672,14 +690,21 @@
         "local_tr"
       ],
       "status": "dead",
-      "reason": "Cloudflare one cikiyor (503 degil, CF saglam); origin maintenance 503 sayfasi donuyor. Secici duzeltmesi ise yaramaz, kaynak tarafinda bakim var. - olcum 2026-11-17"
+      "reason": "Cloudflare one cikiyor (503 degil, CF saglam); origin maintenance 503 sayfasi donuyor. Secici duzeltmesi ise yaramaz, kaynak tarafinda bakim var. - olcum 2026-11-17",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "BULUNAMADI: Tum HTML 503: wp-content/plugins/wp-maintenance bakim sayfasi (baslik OriManga, govde bakim temasi). OLU degil, bakim modu. Acik kalan tek uc wp-json: GET /wp-json/wp/v2/manga?per_page=2 -> 200, type=manga, link https://orimanga.net/manga/<slug>/ (Madara/ozel tema). Baska uclar: POST admin-ajax action=manga_get_chapters&manga=3109 -> 400 (1 bayt), /wp-json/wp/v2/chapters -> 404 rest_no_route. Detay ve bolum HTML'i gorulemedigi icin chapter/reader secicileri olculemedi; yazilmadi.",
+        "at": "2026-11-17T18:15:56Z"
+      }
     },
     {
       "id": "patimanga.com",
-      "name": "Pati Manga",
+      "name": "PatiManga",
       "lang": "tr",
       "nsfw": 0,
-      "domain": "patimanga.com",
+      "domain": "www.patimanga.com",
       "baseUrl": "https://www.patimanga.com",
       "engine": "custom",
       "config": {
@@ -690,9 +715,9 @@
         },
         "engine": "custom",
         "listPath": "/manga/",
-        "itemSelector": ".ymk-card-s3-thumb",
-        "chapterSelector": ".ymk-chapter-item a",
-        "readerSelector": "#ymkChapterReaderRoot img",
+        "itemSelector": "div.ymk-card-view",
+        "chapterSelector": "a.ymk-chapter-item",
+        "readerSelector": "#ymkChapterReaderRoot img.ymk-chapter-img",
         "searchUrl": "/?s={query}"
       },
       "verified_by_user": true,
@@ -1558,7 +1583,8 @@
         "nyora_datadriven"
       ],
       "status": "dead",
-      "reason": "Baslik: \"mangaoku.info - Bu web sitesi satiliktir!\" - domain satilik ilan sayfasi."
+      "reason": "Baslik: \"mangaoku.info - Bu web sitesi satiliktir!\" - domain satilik ilan sayfasi.",
+      "deadReason": "OLU: Sedo park: url_effective https://ww16.mangaoku.info/?sub1=20261118-0508-199f-acd2-53af261a796c, <title>mangaoku.info - Bu web sitesi satiliktir!</title>, kaynakta img.sedoparking.com ve sedoparking (2 kez) gecti. Manga icerigi yok."
     },
     {
       "id": "millascan.com",
@@ -1607,7 +1633,14 @@
         "nyora_datadriven"
       ],
       "selector_verified": true,
-      "status": "failed"
+      "status": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "BULUNAMADI: Ana sayfa yalnizca tema CSS'i + avatar yukleme JS'i donuyor, tek bir seri linki yok (manga/comic/seri kalibi 0 eslesme). /manga/ istegi 200 ama <title>Giris Gerekli< olan giris duvarina dusuyor. /wp-json/wp/v2/manga -> 404, ana sayfada /api/, fetch(, axios. izi yok (yalniz admin-ajax.php referansi). Icerik giris gerektirdigi icin liste/bolum/okuyucu olculemedi.",
+        "at": "2026-11-17T18:15:56Z"
+      }
     },
     {
       "id": "noxscans.com",
@@ -1636,7 +1669,8 @@
         "nyora_datadriven"
       ],
       "status": "dead",
-      "reason": "Parklogic park sayfasi. Harness TLS hatasi park hostundan; site OLU. - olcum 2026-11-17"
+      "reason": "Parklogic park sayfasi. Harness TLS hatasi park hostundan; site OLU. - olcum 2026-11-17",
+      "deadReason": "OLU: Park: <title>Redirecting...</title>, 5556 baytlik anti-adblock JS yalnizca https://router.parklogic.com/ adresine POST atip location.replace ile yonlendiriyor. Kaynakta baska harici manga linki/script src yok. Yayin icerigi yok."
     },
     {
       "id": "niverafansub.org",
@@ -1660,7 +1694,8 @@
       "selector_verified": true,
       "dead": true,
       "reason": "Domain canli ama icerik yok: /manga/99-in-love-2/ 673 bayt donuyor ve govde DEMO version only includes 4 pages diyor; yayinda gercek seri/bolum yok.",
-      "status": "dead"
+      "status": "dead",
+      "deadReason": "OLU: Site Wayback Machine Downloader'in DEMO kabugu: ic sayfalar 'The DEMO version only includes 4 pages' uyarisi donuyor (673/676 bayt). Ana sayfa arsivden kopyalanmis gorunuyor ama manga detay/bolum sayfalari yok. Gercek icerik yok, secici yazmak anlamsiz."
     },
     {
       "id": "nyxscans.com",
@@ -1829,7 +1864,14 @@
       "selector_verified": true,
       "status": "dead",
       "reason": "Park/el degistirmis: 302 surveymrs.com adresine yonlendiriyor, icerik yok.",
-      "dead": true
+      "dead": true,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "BULUNAMADI: Site ayakta (DNS cozuluyor, Cowboy sunucu yanit veriyor) ama 4 denemede de 429 'Too many requests' (17 bayt). HTML, kart, bolum ve okuyucu olculemedi; IP/rate-limit engeli. Selector uydurulmadi.",
+        "at": "2026-11-17T18:15:56Z"
+      }
     },
     {
       "id": "raindropteamfan.com",
@@ -1911,7 +1953,8 @@
         "nyora_datadriven"
       ],
       "status": "dead",
-      "reason": "Govde 114 bayt: <script>window.location.href=\"/lander\"</script>. Domain satis/park lander sayfasi."
+      "reason": "Govde 114 bayt: <script>window.location.href=\"/lander\"</script>. Domain satis/park lander sayfasi.",
+      "deadReason": "OLU: Ana sayfa 114 baytlık JS yönlendirme, /lander park sayfası (window._trfd ap:'parking'). Manga içeriği yok, site ölü."
     },
     {
       "id": "sadscans.com",
@@ -1976,7 +2019,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": ".poster_item",
+        "itemSelector": "div.content_item",
         "chapterSelector": "ul.clstyle li, div.chapter-list li",
         "readerSelector": "div.separator img"
       },
@@ -2028,11 +2071,11 @@
           "tagsExclusion": false
         },
         "engine": "custom",
-        "listPath": "manga",
+        "listPath": "/manga",
         "itemSelector": "div.page-item-detail",
         "searchUrl": "https://www.tarotscans.com/?s={query}&post_type=wp-manga",
-        "chapterSelector": "div.chapter-item",
-        "readerSelector": "div.page-break img"
+        "chapterSelector": "li.chapter-item",
+        "readerSelector": "div.reading-content img"
       },
       "verified_by_user": false,
       "origins": [
@@ -2222,7 +2265,14 @@
       ],
       "selector_verified": true,
       "status": "dead",
-      "reason": "Cloudflare ayakta, origin Apache 503 donuyor. Secici duzeltmesi ise yaramaz. - olcum 2026-11-17"
+      "reason": "Cloudflare ayakta, origin Apache 503 donuyor. Secici duzeltmesi ise yaramaz. - olcum 2026-11-17",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "BULUNAMADI: Cloudflare arkasinda origin 503 Service Unavailable (299 baytlik Apache hata sayfasi), 3 URL ve 2 tur denendi, kalici. Sayfa olculemedigi icin hicbir secici yazilmadi. Katalogda mevcut mangareader kaydi var (chapterSelector div.eph-num a, itemSelector div.bsx, readerSelector div#readerarea img) ama canli dogrulanmadi.",
+        "at": "2026-11-17T18:15:56Z"
+      }
     },
     {
       "id": "mangakulesi.com",
@@ -2761,7 +2811,14 @@
       ],
       "status": "failed",
       "selector_verified": true,
-      "dead": false
+      "dead": false,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS_RENDER: Vite SPA (index-CR_afPIp.js, /assets/* chunk'lari). Ana sayfa 22743 bayt, seri bagi/kart yok. API avi: bundle'da base bulundu https://master.toonspace.io/api (Pd.request url + params service); denenen uclar hepsi 404 NotFoundError: /api/v1, /api/v1/series?page=1&per_page=20, /api/series?page=1, /api/v1/titles?page=1, /api/v1/titles/by-slug/homeless-hottie, /api/v1/title/<slug>, /api/v1/titles/slug/<slug>, /api/v1/home. Sitemap.xml 280 URL: seri /t/<slug>, sayfa /p/<id>; /t/<slug> sunucu HTML'ind",
+        "at": "2026-11-17T18:15:56Z"
+      }
     },
     {
       "id": "3151409498215291942",
@@ -2809,7 +2866,14 @@
         "nyora_datadriven"
       ],
       "selector_verified": true,
-      "status": "failed"
+      "status": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "CLOUDFLARE: Ana sayfa ve /wp-json/wp/v2/manga?search=x ayni Cloudflare challenge'ini donduruyor: title 'Just a moment...', 403, 5460/5602 bayt, script-src challenges.cloudflare.com. HTML'de Madara/WP izi yok, API avi yapilamadi (wp-json de ayni duvarda). Mevcut kayit engine=madara, status=failed.",
+        "at": "2026-11-17T18:15:56Z"
+      }
     },
     {
       "id": "2452661550434610263",
@@ -2935,7 +2999,7 @@
         "listPath": "/",
         "itemSelector": "a.block.h-full",
         "chapterSelector": "li.chapter-item a",
-        "readerSelector": ".reader img",
+        "readerSelector": "img[alt^=\"الصفحة\"]",
         "pageApiUrl": "https://arabtoons.net/api/manga/{slug}/{chapter}",
         "pageApiItems": "data.images",
         "pageApiFieldUrl": "name"
@@ -3293,7 +3357,8 @@
         "auto_scan_2026"
       ],
       "dead": true,
-      "reason": "OLU: Site Plesk Obsidian 18.0.81 varsayilan sayfasi donuyor (title=\"Plesk Obsidian 18.0.81\", html class=\"sid-plesk\"); hem / hem /?s=&post_type=wp-manga ayni panel sayfasi. SSL zinciri dogrulanamiyor (curl SEC_E_UNTRUSTED"
+      "reason": "OLU: Site Plesk Obsidian 18.0.81 varsayilan sayfasi donuyor (title=\"Plesk Obsidian 18.0.81\", html class=\"sid-plesk\"); hem / hem /?s=&post_type=wp-manga ayni panel sayfasi. SSL zinciri dogrulanamiyor (curl SEC_E_UNTRUSTED",
+      "deadReason": "OLU: Kok adres https://hhentai.fr:443/login_up.php adresine gidiyor, sayfa basligi Plesk Obsidian 18.0.81. Site yayinda degil. Sertifika zinciri de gecersiz (curl -k ile alindi)."
     },
     {
       "id": "hanman18.com",
@@ -3562,9 +3627,9 @@
       "config": {
         "engine": "custom",
         "listPath": "/series/",
-        "itemSelector": "a[href^=\"/series/\"]",
+        "itemSelector": "a[href^=\"/series/\"]:not([href*=\"-chapter-\"])",
         "chapterSelector": "a[href*=\"-chapter-\"]",
-        "readerSelector": "",
+        "readerSelector": "img",
         "pageApiFieldUrl": "url",
         "pageScriptSelector": "script",
         "pageScriptContains": "\"pages\"",
@@ -3761,7 +3826,7 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "a[href*=\"/manga/\"]",
-        "chapterSelector": "",
+        "chapterSelector": "a.leer",
         "readerSelector": "",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "searchUrl": "https://lectorhentai.com/tipo/all?s={query}"
@@ -4038,16 +4103,17 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga/",
-        "itemSelector": ".page-item-detail",
-        "chapterSelector": ".wp-manga-chapter a",
-        "readerSelector": ".reading-content img",
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": "div.reading-content img",
         "searchUrl": "https://mangadistrict.com/?s={query}&post_type=wp-manga",
         "searchMethod": "POST",
         "searchBody": "action=wp-manga-search-manga&title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
       },
       "selector_verified": true,
       "origins": [
@@ -4548,13 +4614,13 @@
       "config": {
         "engine": "custom",
         "listPath": "/webtoon/",
-        "itemSelector": ".rf-grid-item",
-        "chapterSelector": "a.chapter-link",
+        "itemSelector": ".webtoon-card",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
         "readerSelector": "",
         "pageJsonArray": "urls",
         "pageApiUrl": "{url}wp-admin/admin-ajax.php?action=rawi_ch_images",
         "pageApiItems": "data.urls",
-        "searchUrl": "https://peach-bl.com/search?s={query}"
+        "searchUrl": "https://peach-bl.com/?s={query}"
       },
       "selector_verified": true,
       "origins": [
@@ -4593,16 +4659,16 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
+        "listPath": "manga",
         "itemSelector": "div.page-item-detail",
-        "chapterSelector": "",
+        "chapterSelector": "li.wp-manga-chapter",
         "readerSelector": ""
       },
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
       ],
-      "dead": true,
+      "dead": false,
       "reason": "OLU: Ana sayfa ve /manga/ listesi 200 donuyor ama butun /manga/<slug>/ detaylari 404 veya 403 (denenen: sunshine-shower, the-tosas-master, alpha-no-chouinshiki, run-away-if-you-can). 403 govdesi nginx + 'ely-exclusive-pa"
     },
     {
@@ -5056,10 +5122,12 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/home",
-        "itemSelector": "div.thumb_link a",
-        "chapterSelector": "a[href*=\"/manga-reader/\"]",
-        "readerSelector": ""
+        "listPath": "/home/",
+        "itemSelector": ".thumb_link",
+        "chapterSelector": "a[href*=\"manga-reader\"]",
+        "readerSelector": "img[src*=\"hennojin-manga\"]",
+        "searchUrl": "https://hennojin.com/home/?s={query}",
+        "searchMethod": "GET"
       },
       "selector_verified": true,
       "origins": [
@@ -5420,10 +5488,12 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/photos",
-        "itemSelector": "a.group[href^=\"/photo/\"]",
-        "chapterSelector": "",
-        "readerSelector": "img.object-top"
+        "listPath": "/",
+        "itemSelector": "a[href^=\"/photo/\"]",
+        "chapterSelector": "a[href^=\"/photo/\"]",
+        "readerSelector": "img[src*=\"/photos2/\"]",
+        "searchUrl": "https://en.xchina.co/search?q={query}",
+        "searchMethod": "GET"
       },
       "selector_verified": true,
       "origins": [
@@ -5820,10 +5890,11 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "series",
+        "listPath": "/",
         "itemSelector": "a[href^='/series/']",
         "chapterSelector": "a[href^='/chapter/']",
-        "readerSelector": "div#pages img"
+        "readerSelector": "div#pages img",
+        "pageUrlTemplate": "https://cdn.meowing.org/uploads/{uid}"
       },
       "selector_verified": true,
       "origins": [
@@ -5883,8 +5954,8 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "",
+        "listPath": "/allmanga/",
+        "itemSelector": "a[href*=\"/manga/\"]",
         "chapterSelector": "",
         "readerSelector": "",
         "chapterAjaxUrl": "https://manhuascans.org/manga/get?mid=<mid>&mode=all",
@@ -5893,7 +5964,8 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "dead": false
     },
     {
       "id": "en-hijala.com",
@@ -5925,11 +5997,11 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "div.swiper-slide section",
+        "listPath": "/manga",
+        "itemSelector": "a[href^=\"/manga/\"]:not([href*=\"/read\"]):not([href*=\"/download\"])",
         "chapterSelector": "",
         "readerSelector": "",
-        "pageApiUrl": "https://hyakuro.net/backend/api/mangas?filters[slug][$eq]={slug}&populate=Cover,Chapters,Chapters.Pages",
+        "pageApiUrl": "https://hyakuro.net/backend/api/mangas?filters%5Bslug%5D%5B%24eq%5D={id}&populate=Cover,Chapters,Chapters.Pages",
         "pageApiItems": "data.0.attributes.Chapters.0.Pages.data",
         "pageApiFieldUrl": "attributes.url",
         "searchUrl": "/backend/api/mangas?filters[Title][$containsi]={query}&populate=Cover",
@@ -5937,7 +6009,8 @@
         "searchJsonItems": "data",
         "searchJsonUrl": "attributes.slug",
         "searchJsonTitle": "attributes.Title",
-        "searchJsonPathPrefix": "/manga/"
+        "searchJsonPathPrefix": "/manga/",
+        "pageApiIdPattern": "/manga/([^/]+)/read/"
       },
       "selector_verified": true,
       "origins": [
@@ -6536,9 +6609,9 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "a.block[href^=\"/manga/\"]",
-        "chapterSelector": "div.grid.grid-cols-4.items-center",
-        "readerSelector": "img.js-page"
+        "itemSelector": "li a[href^=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
+        "readerSelector": ".js-pages-container img"
       },
       "selector_verified": true,
       "origins": [
@@ -6556,7 +6629,7 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
+        "listPath": "/manga/berserk/",
         "itemSelector": "",
         "chapterSelector": "a[href*=\"/chapter/\"]",
         "readerSelector": "img.pages__img"
@@ -6879,7 +6952,7 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "a.block[href^=\"/manga/\"]",
-        "chapterSelector": "div.grid.grid-cols-4.items-center",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
         "readerSelector": "img.js-page"
       },
       "selector_verified": true,
@@ -7451,10 +7524,10 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/manga",
-        "itemSelector": ".page-item-detail",
-        "chapterSelector": ".wp-manga-chapter",
-        "readerSelector": ".wp-manga-chapter-img",
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": "div.reading-content img",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "searchUrl": "https://klikmanga.org/wp-admin/admin-ajax.php",
         "searchMethod": "POST",
@@ -7519,11 +7592,14 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "manga/",
-        "itemSelector": "div.bsx",
-        "chapterSelector": "",
+        "listPath": "/manga/",
+        "itemSelector": ".bsx",
+        "chapterSelector": "a[href*=\"-chapter-\"]",
         "readerSelector": "",
-        "searchUrl": "https://kumapoi.info/?s={query}"
+        "searchUrl": "https://kumapoi.info/?s={query}&post_type=wp-manga",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "ts_reader.run",
+        "pageJsonArray": "sources.0.images"
       },
       "selector_verified": true,
       "origins": [
@@ -7561,10 +7637,10 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": "div.flex.overflow-hidden.rounded-lg.bg-white.shadow-md",
+        "listPath": "/comic-list/",
+        "itemSelector": "div.overflow-hidden.rounded-lg",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "div.bg-reader img.imgku"
+        "readerSelector": "img.imgku"
       },
       "selector_verified": true,
       "origins": [
@@ -8160,7 +8236,14 @@
       "origins": [
         "miguel_2026"
       ],
-      "dead": false
+      "dead": false,
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "BULUNAMADI: Vue/Vite SPA, HTML 18KB kabuk. JS bundle icinde /api/manga/{manga}/chapters ve /api/{mediaType}/{slug} yollari var ama GET istekleri nginx 404 donduruyor (XHR + Referer basliklariyla da 404). api.hentailib.me DNS cozulmuyor. Bolum ve okuyucu ucu bulunamadi.",
+        "at": "2026-11-17T18:15:56Z"
+      }
     },
     {
       "id": "mangahub.ru",

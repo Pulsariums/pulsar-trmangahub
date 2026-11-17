@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T18:10:56Z",
+  "generated": "2026-11-17T18:16:04Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -159,10 +159,15 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "toon.space",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS_RENDER: Vite SPA (index-CR_afPIp.js, /assets/* chunk'lari). Ana sayfa 22743 bayt, seri bagi/kart yok. API avi: bundle'da base bulundu https://master.toonspace.io/api (Pd.request url + params service); denenen uclar hepsi 404 NotFoundError: /api/v1, /api/v1/series?page=1&per_page=20, /api/series?page=1, /api/v1/titles?page=1, /api/v1/titles/by-slug/homeless-hottie, /api/v1/title/<slug>, /api/v1/titles/slug/<slug>, /api/v1/home. Sitemap.xml 280 URL: seri /t/<slug>, sayfa /p/<id>; /t/<slug> sunucu HTML'ind",
+        "at": "2026-11-17T18:15:56Z"
+      }
     },
     "109266153397226665": {
       "id": 109266153397226665,
@@ -276,6 +281,13 @@
       "domain": "piedpiperfansubyy.me",
       "packages": [],
       "state": "dead",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "BULUNAMADI: Site ayakta (DNS cozuluyor, Cowboy sunucu yanit veriyor) ama 4 denemede de 429 'Too many requests' (17 bayt). HTML, kart, bolum ve okuyucu olculemedi; IP/rate-limit engeli. Selector uydurulmadi.",
+        "at": "2026-11-17T18:15:56Z"
+      },
       "dead": true
     },
     "1158981255736960832": {
@@ -3314,8 +3326,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "BULUNAMADI: Tum on yuz yollari wp-maintenance eklentisi ile 503; REST (/wp-json, wp/v2/manga) 200 donuyor ama bolum/sayfa verisi yok. Frontend acilmadan secici olculmez. Denenen: /, /manga, /?s=a, /manga/barbarians-adventure-in-a-fantasy-world/, masaustu UA.",
-        "at": "2026-11-17T17:40:26Z"
+        "detail": "BULUNAMADI: Tum HTML 503: wp-content/plugins/wp-maintenance bakim sayfasi (baslik OriManga, govde bakim temasi). OLU degil, bakim modu. Acik kalan tek uc wp-json: GET /wp-json/wp/v2/manga?per_page=2 -> 200, type=manga, link https://orimanga.net/manga/<slug>/ (Madara/ozel tema). Baska uclar: POST admin-ajax action=manga_get_chapters&manga=3109 -> 400 (1 bayt), /wp-json/wp/v2/chapters -> 404 rest_no_route. Detay ve bolum HTML'i gorulemedigi icin chapter/reader secicileri olculemedi; yazilmadi.",
+        "at": "2026-11-17T18:15:56Z"
       }
     },
     "1582187608480708671": {
@@ -4107,8 +4119,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "JS_RENDER: Liste DOMda yok: bookItem kartlari JS ile Blogger feedinden (feeds/posts/default?alt=json-in-script&max-results=150) uretiliyor. Motorun listJsonItems kok dizide dizi ar",
-        "at": "2026-11-17T17:51:06Z"
+        "detail": "JS_RENDER: Blogger blogu. Ana sayfada seri kartlari JS ile basiliyor: 8 snippet-thumbnail ve 1 postItem var ama <a href> icinde gercek seri adresi YOK (58 anchor'un tamami sablon/JS dizesi veya /search/label). Blogger feed JSON'u calisiyor (feed.entry[].title, alternate link, content) fakat motor jsonListParse yalniz kok diziyi okuyor, 'feed.entry' noktali yolu desteklemiyor; bu yuzden listJsonUrl yazilmadi. Detay sayfasi (2021/11/thundercloud-rainstorm.html) 174826 bayt: 1 seri kapagi + 9 img, okuma sayfa",
+        "at": "2026-11-17T18:15:56Z"
       }
     },
     "1619975144588948836": {
@@ -9547,8 +9559,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CLOUDFLARE: Cloudflare challenge tum yollarda, /wp-json dahil. Asilamaz.",
-        "at": "2026-11-17T17:40:26Z"
+        "detail": "CLOUDFLARE: Ana sayfa ve /wp-json/wp/v2/manga?search=x ayni Cloudflare challenge'ini donduruyor: title 'Just a moment...', 403, 5460/5602 bayt, script-src challenges.cloudflare.com. HTML'de Madara/WP izi yok, API avi yapilamadi (wp-json de ayni duvarda). Mevcut kayit engine=madara, status=failed.",
+        "at": "2026-11-17T18:15:56Z"
       },
       "device_step": "list"
     },
@@ -10542,8 +10554,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CLOUDFLARE: Cloudflare challenge tum yollarda, /wp-json dahil. Asilamaz; API ucu yok.",
-        "at": "2026-11-17T17:40:26Z"
+        "detail": "CLOUDFLARE: Tüm HTML ve JSON uçları Cloudflare challenge döndürüyor, HTML alınamadığı için script/inline JSON avı yapılamadı. Denenen uçlar: wp-json wp/v2/manga, /api/v1/series/{slug}/chapters/{bolum}, /wp-json/. Aşılamadı.",
+        "at": "2026-11-17T18:15:56Z"
       },
       "device_step": "list"
     },
@@ -18135,8 +18147,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "BULUNAMADI: Tum sayfalar '<title>Giris Gerekli</title>' donduruyor (/ ve /manga/ ayni 68449 bayt login sayfasi). wp-json/wp/v2/types 200 ama post tipleri arasinda manga yok; wp-jso",
-        "at": "2026-11-17T17:54:55Z"
+        "detail": "BULUNAMADI: Ana sayfa yalnizca tema CSS'i + avatar yukleme JS'i donuyor, tek bir seri linki yok (manga/comic/seri kalibi 0 eslesme). /manga/ istegi 200 ama <title>Giris Gerekli< olan giris duvarina dusuyor. /wp-json/wp/v2/manga -> 404, ana sayfada /api/, fetch(, axios. izi yok (yalniz admin-ajax.php referansi). Icerik giris gerektirdigi icin liste/bolum/okuyucu olculemedi.",
+        "at": "2026-11-17T18:15:56Z"
       }
     },
     "4250602956249399538": {
@@ -18443,11 +18455,11 @@
       "packages": [],
       "state": "failed",
       "device": {
-        "status": "cloudflare",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CF",
-        "at": "2026-11-16T22:05:11.851283Z"
+        "detail": "BULUNAMADI: Cloudflare arkasinda origin 503 Service Unavailable (299 baytlik Apache hata sayfasi), 3 URL ve 2 tur denendi, kalici. Sayfa olculemedigi icin hicbir secici yazilmadi. Katalogda mevcut mangareader kaydi var (chapterSelector div.eph-num a, itemSelector div.bsx, readerSelector div#readerarea img) ama canli dogrulanmadi.",
+        "at": "2026-11-17T18:15:56Z"
       }
     },
     "4293571469005629200": {
@@ -18527,7 +18539,7 @@
       "nsfw": 0,
       "domain": "pianmanga.me",
       "packages": [],
-      "state": "dead",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -18542,8 +18554,7 @@
         "detail": "list: NotFoundException: . Status=404, URL=[https://pianmanga.me/wp-admin/admin-ajax.php]",
         "at": "2026-11-16T18:05:29Z"
       },
-      "device_step": "list",
-      "dead": true
+      "device_step": "list"
     },
     "4317299584788043221": {
       "id": 4317299584788043221,
@@ -22438,8 +22449,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CLOUDFLARE: Cloudflare 'Just a moment...' challange (title + challenges.cloudflare.com, 5 cf izi). /manga, /wp-json/wp/v2/manga, /sitemap.xml, /api/manga, /manifest.json hepsi 403.",
-        "at": "2026-11-17T17:54:55Z"
+        "detail": "CLOUDFLARE: Cloudflare 'Just a moment...' 403 (5456 bayt). Denenen: GET / ve GET /wp-json/wp/v2/wp-manga?per_page=1 -> 403/5613 ayni challenge. admin-ajax denenmedi (403 sonrasi anlamsiz). HTML ve JSON ucu kapali, detay/bolum olculemedi.",
+        "at": "2026-11-17T18:15:56Z"
       }
     },
     "5450546641896784725": {
@@ -23368,8 +23379,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CLOUDFLARE: Cloudflare 'Just a moment...' challange (title + challenges.cloudflare.com, 5 cf izi). /manga, /wp-json/wp/v2/manga, /sitemap.xml, /api/manga, /manifest.json hepsi 403.",
-        "at": "2026-11-17T17:54:55Z"
+        "detail": "CLOUDFLARE: Cloudflare 'Just a moment...' 403 (5456 bayt). Denenen: GET / ve GET /wp-json/wp/v2/wp-manga?per_page=1 -> 403/5613 ayni challenge. admin-ajax denenmedi (403 sonrasi anlamsiz). HTML ve JSON ucu kapali, detay/bolum olculemedi.",
+        "at": "2026-11-17T18:15:56Z"
       }
     },
     "5785150848886155708": {
@@ -25310,10 +25321,10 @@
       },
       "device": {
         "status": "fail",
-        "http_code": "200",
+        "http_code": "",
         "ms": 0,
-        "detail": "park/satilik (olcum 2026-11-17)",
-        "at": "2026-11-17T00:00:00Z"
+        "detail": "GEO_BLOK: 4 istek (mobil ve masaustu UA; '/', '/manga', '/robots.txt'; aralarda 12sn ve 55sn bekleme) hepsi HTTP 429, govde 17 bayt 'Too many requests'. Yanit basliklari: server: Cowboy, cache-control: max-age=0 private must-revalidate, set-cookie: sid=... Tek bir HTML bile donmedigi icin kart/detay/bolum secicisi ve API ucu olculemedi; JS/API avi yapilamadi.",
+        "at": "2026-11-17T18:15:56Z"
       },
       "kapali": true
     },
@@ -26459,10 +26470,10 @@
       },
       "device": {
         "status": "fail",
-        "http_code": "200",
+        "http_code": "",
         "ms": 0,
-        "detail": "park/satilik (olcum 2026-11-17)",
-        "at": "2026-11-17T00:00:00Z"
+        "detail": "BULUNAMADI: Site canli (HTTP yaniti veriyor) ama tum yollar ve UA varyantlari icin 429 'Too many requests' (17 bayt) donuyor: /, /manga, /robots.txt, /sitemap.xml ve UA'siz istek ayni sonucu verdi. Cloudflare degil (cf-ray/cf-mitigated basligi yok), server: Cowboy + set-cookie sid => uygulama seviyesinde IP limiti. HTML alinamadigi icin liste/detay/bolum secicisi olculmedi, API ucu aranamadi.",
+        "at": "2026-11-17T18:15:56Z"
       },
       "kapali": true
     },
@@ -28625,8 +28636,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "BULUNAMADI: Tum sayfalar '<title>Giris Gerekli</title>' donduruyor (/ ve /manga/ ayni 68449 bayt login sayfasi). wp-json/wp/v2/types 200 ama post tipleri arasinda manga yok; wp-jso",
-        "at": "2026-11-17T17:54:55Z"
+        "detail": "BULUNAMADI: Ana sayfa yalnizca tema CSS'i + avatar yukleme JS'i donuyor, tek bir seri linki yok (manga/comic/seri kalibi 0 eslesme). /manga/ istegi 200 ama <title>Giris Gerekli< olan giris duvarina dusuyor. /wp-json/wp/v2/manga -> 404, ana sayfada /api/, fetch(, axios. izi yok (yalniz admin-ajax.php referansi). Icerik giris gerektirdigi icin liste/bolum/okuyucu olculemedi.",
+        "at": "2026-11-17T18:15:56Z"
       }
     },
     "6377507938794774820": {
@@ -28957,8 +28968,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CLOUDFLARE: Cloudflare challenge tum yollarda, /wp-json dahil. Asilamaz; API ucu yok.",
-        "at": "2026-11-17T17:40:26Z"
+        "detail": "CLOUDFLARE: Tüm HTML ve JSON uçları Cloudflare challenge döndürüyor, HTML alınamadığı için script/inline JSON avı yapılamadı. Denenen uçlar: wp-json wp/v2/manga, /api/v1/series/{slug}/chapters/{bolum}, /wp-json/. Aşılamadı.",
+        "at": "2026-11-17T18:15:56Z"
       },
       "device_step": "list"
     },
@@ -29722,10 +29733,8 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "hentailib.me",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "",
@@ -29734,11 +29743,11 @@
         "at": "2026-11-17T18:04:21Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "harness-test-buyuk",
-        "at": "2026-11-17T18:04:21Z"
+        "detail": "BULUNAMADI: Vue/Vite SPA, HTML 18KB kabuk. JS bundle icinde /api/manga/{manga}/chapters ve /api/{mediaType}/{slug} yollari var ama GET istekleri nginx 404 donduruyor (XHR + Referer basliklariyla da 404). api.hentailib.me DNS cozulmuyor. Bolum ve okuyucu ucu bulunamadi.",
+        "at": "2026-11-17T18:15:56Z"
       }
     },
     "6696108672721987561": {
@@ -29810,7 +29819,8 @@
         "at": "2026-11-17T14:31:41.061125Z"
       },
       "device_step": "details",
-      "dead": true
+      "dead": true,
+      "kapali": true
     },
     "670740038008065849": {
       "id": 670740038008065849,
@@ -29913,8 +29923,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "CLOUDFLARE: Cloudflare challenge tum yollarda, /wp-json dahil. Asilamaz.",
-        "at": "2026-11-17T17:40:26Z"
+        "detail": "CLOUDFLARE: Ana sayfa ve /wp-json/wp/v2/manga?search=x ayni Cloudflare challenge'ini donduruyor: title 'Just a moment...', 403, 5460/5602 bayt, script-src challenges.cloudflare.com. HTML'de Madara/WP izi yok, API avi yapilamadi (wp-json de ayni duvarda). Mevcut kayit engine=madara, status=failed.",
+        "at": "2026-11-17T18:15:56Z"
       },
       "device_step": "list"
     },
@@ -30060,10 +30070,10 @@
       },
       "device": {
         "status": "fail",
-        "http_code": "456",
+        "http_code": "",
         "ms": 0,
-        "detail": "site yok (HTTP 456)",
-        "at": "2026-11-17T00:00:00Z"
+        "detail": "CLOUDFLARE: Her istekte 456 + 47 bayt: <script src=\"/_guard/html.js?js=p456\"></script>. Guard JS (200/40803B) basligi '访问已被阻止 · 不死鸟CDN' (Phoenix CDN WAF blok sayfasi), cerez/location atmiyor. UA degistirmek (Windows Chrome), Accept-Language, Googlebot UA ve robots.txt/http: hepsi 456. Icerik olculmedi.",
+        "at": "2026-11-17T18:15:56Z"
       },
       "kapali": true
     },
@@ -30214,7 +30224,7 @@
       "nsfw": 0,
       "domain": "pianmanga.me",
       "packages": [],
-      "state": "dead",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -30222,8 +30232,7 @@
         "detail": "Kapak 404 gercek: cdn.pianmanga.me data-src iki ayri URL 404 (text/html) dondu. List saglam (16 kart).",
         "at": "2026-11-17T15:18:20.071105Z"
       },
-      "device_step": "covers",
-      "dead": true
+      "device_step": "covers"
     },
     "6778680128073846783": {
       "id": 6778680128073846783,
@@ -33266,6 +33275,13 @@
       "domain": "piedpiperfansubyy.me",
       "packages": [],
       "state": "dead",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "BULUNAMADI: Site ayakta (DNS cozuluyor, Cowboy sunucu yanit veriyor) ama 4 denemede de 429 'Too many requests' (17 bayt). HTML, kart, bolum ve okuyucu olculemedi; IP/rate-limit engeli. Selector uydurulmadi.",
+        "at": "2026-11-17T18:15:56Z"
+      },
       "dead": true,
       "kapali": true
     },
@@ -35572,8 +35588,8 @@
         "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "BULUNAMADI - 299 baytlik Apache '503 Service Unavailable / The server is temporarily unable to service your request due to maintenance downtime'. Icerik, kart veya cozulebilir bir engel yok; olcum yapilamadi.",
-        "at": "2026-11-16T22:05:11.851283Z"
+        "detail": "BULUNAMADI: Cloudflare arkasinda origin 503 Service Unavailable (299 baytlik Apache hata sayfasi), 3 URL ve 2 tur denendi, kalici. Sayfa olculemedigi icin hicbir secici yazilmadi. Katalogda mevcut mangareader kaydi var (chapterSelector div.eph-num a, itemSelector div.bsx, readerSelector div#readerarea img) ama canli dogrulanmadi.",
+        "at": "2026-11-17T18:15:56Z"
       },
       "device_step": "list"
     },
