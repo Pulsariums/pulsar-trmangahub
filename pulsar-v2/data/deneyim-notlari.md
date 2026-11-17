@@ -289,3 +289,11 @@ Kural: bir kaynak için "JS" teşhisi konduğunda **önce API ucu aranır** (en 
 - **Harness kapsamı.** Paket allowlist'i dışındaki katalog kaynakları `KAPSAM_DISI` döner (`.work/harness-tekrar.csv`). Bu kaynaklar `HARNESS_KATALOG=1` ile katalogdan doğrudan `PulsarSource` olarak örneklenip test edilir (`tools/harness/Harness.java:117-121, 285`).
 - **`source-status.json` okuma tuzağı.** Dosya UTF-8'dir; okuyucuya kodlama sabit verilmezse Windows locale'i (cp1254) Türkçe alanları bozar. Node `JSON.parse` id'leri 2^53 üstünde yuvarladığı için bu dosya int'i koruyan okuyucuyla işlenmeli (bkz. §23).
 - **`PulsarData.kt` üretilen dosyadır.** Kalıcı düzeltme `tools/pulsar/src/embed.rs` şablonuna yazılır; doğrudan Kotlin dosyası bir sonraki `embed` koşusunda ezilir (bkz. §21).
+
+## 26. Yanlış etiket kaynağı öldürür (OkuToon dersi)
+
+- OkuToon'a ilk turda **"Cloudflare"** dendi: bölüm HTML'i gerçekten `403 Cf-Mitigated: challenge` dönüyordu. Bu, kaynağın ölü olduğu sanısına yol açtı.
+- Gerçek durum: HTML kapalıydı ama site kendi okuyucusunu besleyen **JSON API'yi açık bırakıyordu** — `GET /api/v1/series/<slug>/chapters/<bolum>` → `data.pages[].image_url`, görseller `cdn.okutoon.net`. Aynı desen Gölge Bahçesi'nde `api.<site>/api/chapters/.../manifest` olarak çıktı.
+- İkinci yanlış: "JS_RENDER" etiketi. JS, "veri HTML'de yok" demektir; "veri yok" demek değildir. JS etiketli 45 kaynağın bir kısmı (MangaKatana `thzq=[...]`, Tapas `img.content__img`, Nikkangecchan `img.episode-page`) tek bir uç/attribute bulunduğunda açıldı.
+- Kural: `Cloudflare` ve `JS_RENDER` **ara karardır**. `failed` yazmadan önce (a) JSON ucu, (b) script içi JSON, (c) bilinen CMS uçları denenir; sonuç yoksa karar nedeni yazılır (`IMZA_GEREKLI`, `CSRF_GEREKLI`, `GEO_BLOK`).
+- Doğrulanmış imkânsızlar: `pocket.shonenmagazine` (imza), `lectorhentai` (AES-GCM + CSRF), `piccoma` (Japonya IP bloğu).
