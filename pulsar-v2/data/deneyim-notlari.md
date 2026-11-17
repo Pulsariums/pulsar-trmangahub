@@ -266,3 +266,15 @@ Aynı görsel adresi 10 GET'in ~4'ünde 200, ~6'sında 403 dönüyor. User-Agent
 - `pulsar status` çalışınca `source_map.json` id'lerini `retain` eder; haritada olmayan yeni bir giriş bir sonraki koşuda düşer. Kalıcı çözüm `emit_source_map.py` ile haritayı yenilemektir (CI yapar).
 - **Node tuzağı:** id'ler 2^53'ü aşan i64. `JSON.parse` + `JSON.stringify` bu değerleri yuvarlar (`7849977061084682679 → ...680`), yani dosyanın tamamı bozulur. Bu dosyayı düzenleyen araç int'i koruyan bir okuyucu kullanmalı (Rust `i64` veya Python `int`).
 - Aynı domainde hem eski `kind:"engine"` hem yeni `kind:"catalogue"` kaydı varsa, domain üzerinden eşleştirme yapan her işlem **yanlış kayda** gider. Bitişik kayıtlar için önce `kind` filtresi uygulanır.
+
+## 24. Kanıtlanmış çözülemezler (2026-11-17)
+
+Bu üç kaynak API avıyla **ölçülerek** kapandı; tekrar denenmesi gereksiz:
+
+| Kaynak | Neden çözülemez |
+|---|---|
+| `pocket.shonenmagazine.com` | Uç var (`GET /episode/viewer?episode_id=`), ama her istek params'tan hesaplanan `requestHeaderServiceHash` + `x-app-assertion` başlığı istiyor; imza istemcide üretiliyor. Config ile üretilemez. |
+| `lectorhentai.com` | Okuyucu `reader-blob.js` (javascript-obfuscator) ile AES-GCM çözüyor; `ts_reader` içindeki 24 URL placeholder SVG, `data-rb` öğesi sayfada 0. Bölüm listesi CSRF'li `POST get_chapters`. |
+| `piccoma.com` | Coğrafi blok: ürün/okuyucu sayfası "bu hizmet yalnızca Japonya'da kullanılabilir" döndürüyor. Ana sayfa açık, ürün sayfası kapalı. |
+
+Kural: bir kaynak için "JS" teşhisi konduğunda **önce API ucu aranır** (en fazla 3 uç); uç varsa imza/CSRF/geo kontrolü yapılır. Bu üçünde kapanış nedenleri yukarıdaki gibidir; `failed` kalırlar.
