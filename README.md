@@ -32,11 +32,11 @@ Mihon yüklü cihazınızdan tek tıkla eklemek için:
 
 1. **Mihon / Tachiyomi** uygulamasını açın.
 2. **Daha Fazla (More) → Ayarlar (Settings) → Gözat (Browse) → Eklenti depoları (Extension repos) → +** simgesine dokunun.
-3. Aşağıdaki bağlantıyı yapıştırın:
+3. Aşağıdaki depo adresini yapıştırın:
    ```text
-   https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/index.min.json
+   https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/pulsar-v2/repo/index.min.json
    ```
-   *(veya doğrudan v2 alt yolu: `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/pulsar-v2/repo/index.min.json`)*
+   *(kök ayna adres: `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/index.min.json`)*
 4. **Gözat → Eklentiler** sekmesinden dilediğiniz paketi kurun.
 
 ---
@@ -52,14 +52,17 @@ Mihon yüklü cihazınızdan tek tıkla eklemek için:
 | **Pulsar Global (NSFW)** | `jar/apk/global-nsfw.jar` | Dünya çapında yetişkin kaynaklar |
 
 ### Mihon (APK) Birleşik Paketleri
-| Eklenti Adı | Paket Kimliği | İçerik ve Kapsam | Sürüm |
-|---|---|---|---|
-| **Pulsar TR** | `…pulsar.tr` | Tüm Türkçe Normal Manga ve Webtoon Siteleri | **v1.6.15** |
-| **Pulsar TR 18+** | `…pulsar.tr18` | Tüm Türkçe Yetişkin (+18 / NSFW) Siteleri | **v1.6.15** |
-| **Pulsar Global** | `…pulsar.global` | Dünya Genelindeki Normal Manga Siteleri | **v1.6.15** |
-| **Pulsar Global 18+** | `…pulsar.global18` | Dünya Genelindeki Yetişkin Siteleri | **v1.6.15** |
+| Eklenti Adı | Paket Kimliği | İçerik ve Kapsam | Kaynak Sayısı | Sürüm |
+|---|---|---|---|---|
+| **Pulsar TR** | `…pulsar.tr` | Tüm Türkçe Normal Manga ve Webtoon Siteleri | **41** | **v1.6.165** |
+| **Pulsar TR 18+** | `…pulsar.tr18` | Tüm Türkçe Yetişkin (+18 / NSFW) Siteleri | **7** | **v1.6.165** |
+| **Pulsar Global** | `…pulsar.global` | Dünya Genelindeki Normal Manga Siteleri | **217** | **v1.6.165** |
+| **Pulsar Global 18+** | `…pulsar.global18` | Dünya Genelindeki Yetişkin Siteleri | **25** | **v1.6.165** |
+| **Pulsar Test** | `…pulsar.test` | Deneysel / doğrulanmamış kaynaklar | **2** | **v1.6.165** |
 
-> **Not:** Tek bir eklenti (örn: *Pulsar TR*) yüklediğinizde, içindeki 92 kaynak Mihon'un kaynaklar listesinde ayrı ayrı görünür ve dilediğinizi kullanabilirsiniz.
+> **Not:** Tek bir eklenti (örn: *Pulsar TR*) yüklediğinizde, içindeki 41 kaynak Mihon'un kaynaklar listesinde ayrı ayrı görünür ve dilediğinizi kullanabilirsiniz.
+
+> **18+ içerik:** Yetişkin kaynaklar yalnızca `tr18` ve `global18` paketlerinde yer alır. `test` paketi ise deneysel kaynaklar içindir; kararlı kullanım için önerilmez.
 
 ---
 
@@ -74,6 +77,14 @@ Mihon yüklü cihazınızdan tek tıkla eklemek için:
 * **Hafif ve Hızlı (Lazy Loading):** Yüzlerce kaynak aynı anda belleği şişirmez; sadece tıkladığınız kaynak anlık başlatılır.
 * **Mihon Cloudflare Entegrasyonu:** Cloudflare korumalı siteler Mihon'un dahili "WebView ile Aç" özelliğiyle tamamen uyumludur.
 * **Geleceğe Hazır Çok Dilli Mimari:** Gelecekte Japonca, İngilizce, Korece gibi yeni diller tek bir parametre (`--lang ja`) ile anında bağımsız paketlere dönüştürülebilir.
+
+---
+
+## 🔗 Bağlantılar
+
+* **Pano:** <https://pulsariums.github.io/pulsar-trmangahub/>
+* **Kaynak Tablosu:** <https://pulsariums.github.io/pulsar-trmangahub/kaynaklar.html>
+* **Depo Adresi:** `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/pulsar-v2/repo/index.min.json`
 
 ---
 
