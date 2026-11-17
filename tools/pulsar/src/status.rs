@@ -244,7 +244,12 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
             .get(&(e.domain.to_lowercase(), e.lang.to_lowercase()))
             .cloned()
             .unwrap_or_default();
-        s.sorun = sorun;
+        // Bayat etiket cihaz/harness sonucunu ezmemeli: cihaz testini geçen
+        // kayıtta elle işaretli "sorun" uygulanmaz ve önceki turdan kalan
+        // etiket temizlenir (Slept Manga: dört adımı da geçtiği halde
+        // sorun:"cloudflare" yüzünden test paketinde kalıyordu).
+        let device_pass = s.device.as_ref().map(|p| p.status.as_str()) == Some("pass");
+        s.sorun = if device_pass { String::new() } else { sorun };
         s.dead = dead.contains(&(e.domain.to_lowercase(), e.lang.to_lowercase()));
         s.kapali = if e.kind == "engine" {
             dead_sources.contains(&e.name)
