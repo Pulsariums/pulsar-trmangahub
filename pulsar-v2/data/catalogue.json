@@ -568,7 +568,8 @@
       "origins": [
         "keiyoushi_index",
         "local_tr"
-      ]
+      ],
+      "selector_verified": true
     },
     {
       "id": "mikrokosmosfb.blogspot.com",
@@ -2285,8 +2286,8 @@
         "itemSelector": ".page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": ".reading-content img",
-        "searchUrl": "https://averisfansub.site/?s={query}&post_type=wp-manga",
-        "searchMethod": "POST",
+        "searchUrl": "?s={query}&post_type=wp-manga",
+        "searchMethod": "GET",
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
@@ -2608,9 +2609,9 @@
         "itemSelector": ".page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": ".reading-content img",
-        "searchUrl": "https://outcatscans.net/?s={query}&post_type=wp-manga",
+        "searchUrl": "https://outcatscans.net/wp-admin/admin-ajax.php",
         "searchMethod": "POST",
-        "searchBody": "title={query}",
+        "searchBody": "action=wp-manga-search-manga&title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
         "searchJsonTitle": "title",
@@ -3489,7 +3490,11 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "searchUrl": "https://v7.kiryuu.to/wp-json/wp/v2/search?search={query}&per_page=20",
+        "searchMethod": "GET",
+        "searchJsonUrl": "url",
+        "searchJsonTitle": "title"
       },
       "selector_verified": true,
       "origins": [
@@ -3892,7 +3897,13 @@
         "listPath": "/",
         "itemSelector": "article.reco-card",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "searchUrl": "https://mangadistrict.com/wp-admin/admin-ajax.php",
+        "searchMethod": "POST",
+        "searchBody": "action=wp-manga-search-manga&title={query}",
+        "searchJsonItems": "data",
+        "searchJsonUrl": "url",
+        "searchJsonTitle": "title"
       },
       "selector_verified": true,
       "origins": [
@@ -4822,7 +4833,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "a[href^='/comics/']",
+        "itemSelector": "a[href^=\"/comics/\"]",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -4842,7 +4853,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "a[href^='/comics/']",
+        "itemSelector": "a[href^=\"/comics/\"]",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -5037,7 +5048,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": ".rec-item.rec-manga .rec-manga-pic img",
+        "itemSelector": "div.rec-item.rec-manga",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -5157,7 +5168,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": ".rec-item.rec-manga .rec-manga-pic img",
+        "itemSelector": "div.rec-item.rec-manga",
         "chapterSelector": "",
         "readerSelector": ""
       },
@@ -6971,7 +6982,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": ".page-listing-item .post-title a",
+        "itemSelector": "div.page-listing-item",
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "img.wp-manga-chapter-img",
         "chapterAjaxUrl": "{url}ajax/chapters/"
@@ -6996,7 +7007,13 @@
         "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": "",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "titleSelector": ".post-title h1"
+        "titleSelector": ".post-title h1",
+        "searchUrl": "https://inventariooculto.com/wp-admin/admin-ajax.php",
+        "searchMethod": "POST",
+        "searchBody": "action=wp-manga-search-manga&title={query}",
+        "searchJsonItems": "data",
+        "searchJsonUrl": "url",
+        "searchJsonTitle": "title"
       },
       "selector_verified": true,
       "origins": [
@@ -7014,7 +7031,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/manga/",
-        "itemSelector": "a[href^=\"/manga/\"]",
+        "itemSelector": ".lc-slide",
         "chapterSelector": "a[href^=\"/leer/\"]",
         "readerSelector": "img[data-src]"
       },
@@ -7679,7 +7696,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": ".post-title a",
+        "itemSelector": ".slider__item",
         "chapterSelector": "",
         "readerSelector": "img.wp-manga-chapter-img",
         "chapterAjaxUrl": "https://hotcabaretscan.com/wp-admin/admin-ajax.php?action=manga_get_chapters&manga=813"
@@ -11780,7 +11797,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "div.item a[href*=\"/comic/\"]",
+        "itemSelector": "div.item",
         "chapterSelector": "#nt_listchapter .chapter a[href*=\"/issue-\"]",
         "readerSelector": "div.reading-detail img[data-original]",
         "titleSelector": "h1.title-detail"
@@ -11805,7 +11822,13 @@
         "chapterSelector": "#manga-chapters-holder li.wp-manga-chapter a",
         "readerSelector": "div.reading-content img, div.page-break img",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "titleSelector": ".post-title h1"
+        "titleSelector": ".post-title h1",
+        "searchUrl": "https://tritinia.org/wp-admin/admin-ajax.php",
+        "searchMethod": "POST",
+        "searchBody": "action=wp-manga-search-manga&title={query}",
+        "searchJsonItems": "data",
+        "searchJsonUrl": "url",
+        "searchJsonTitle": "title"
       },
       "selector_verified": true,
       "origins": [

@@ -128,7 +128,11 @@ object EngineRegistry {
 
     private fun looksLikeBadge(url: String): Boolean {
         val l = url.lowercase()
-        return l.contains("badge") || l.contains("placeholder") || l.contains("logo") || l.contains("icon")
+        if (l.contains("badge") || l.contains("placeholder")) return true
+        // "logo"/"icon" yalnız DOSYA ADINDA rozet sayılır: niadd kapakları
+        // .../<dil>_manga/logo/<kapak>.jpg yolundan geliyor ve yanlışlıkla eleniyordu.
+        val dosya = l.substringAfterLast('/').substringBefore('?').substringBefore('#')
+        return dosya.contains("logo") || dosya.contains("icon")
     }
 
     private val CHAPTER_HINT =
