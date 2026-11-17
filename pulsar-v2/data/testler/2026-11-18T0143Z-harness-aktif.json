@@ -1,0 +1,24 @@
+{
+  "generated": "2026-11-17T22:43:40Z",
+  "kapsam": "yayindaki katalog kaynaklari (236)",
+  "total": 236,
+  "passed": 234,
+  "failed": 2,
+  "tekrar": "ikinci kosu ayni: sleepytranslations.com list=0/chapters=0/pages=0 (OnNextValue: HttpException), mangatv.net list=30/chapters=10/pages=0 (hata yok)",
+  "sources": [
+    {
+      "domain": "sleepytranslations.com",
+      "list": 0,
+      "chapters": 0,
+      "pages": 0,
+      "hata": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
+    },
+    {
+      "domain": "mangatv.net",
+      "list": 30,
+      "chapters": 10,
+      "pages": 0,
+      "hata": ""
+    }
+  ]
+}

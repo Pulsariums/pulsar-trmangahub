@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T22:11:34Z",
+  "generated": "2026-11-17T22:44:09Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -124,6 +124,7 @@
       },
       "device_step": "pages",
       "reason": "kopya: ayni domainde calisan katalog kaydi var",
+      "dead": true,
       "kapali": true
     },
     "1079335891060482737": {
@@ -18765,17 +18766,18 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "sleepytranslations.com",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "dead",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+        "detail": "harness: OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
+        "at": "2026-11-17T22:43:37Z"
+      },
+      "device_step": "list",
+      "reason": "roman sitesi: sayfa görseli yok (kaynak kaldirildi)",
+      "dead": true
     },
     "4463039793384401654": {
       "id": 4463039793384401654,
@@ -33157,24 +33159,17 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "mangatv.net",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness-test-buyuk",
-        "at": "2026-11-17T18:04:21Z"
-      },
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "harness-test-buyuk",
-        "at": "2026-11-17T18:04:21Z"
-      }
+        "detail": "harness: 30/10/0",
+        "at": "2026-11-17T22:43:37Z"
+      },
+      "device_step": "pages",
+      "reason": "harness: 30/10/0"
     },
     "8461894771860958934": {
       "id": 8461894771860958934,
