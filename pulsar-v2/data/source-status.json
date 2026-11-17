@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T14:32:10Z",
+  "generated": "2026-11-17T14:36:29Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -18528,15 +18528,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangakatana.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "URL ler tek tırnaklı JS dizisinde: thzq ile başlayan [ ... ] (https://i1.mangakatana.com/token/...jpg). scriptJsonPages kalıbı thzq: veya thzq,N,[ bekliyor; thz",
-        "at": "2026-11-17T14:31:41.061125Z"
-      },
+      "packages": [
+        "test"
+      ],
+      "state": "unknown",
       "device_step": "pages"
     },
     "4325421766298213107": {
