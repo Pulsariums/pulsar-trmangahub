@@ -1,12 +1,5 @@
-5476386572172144796	fail	pages	HttpException: HTTP error 414
-8761066519613127518	fail	search	Zaman aşımı (20s)
-3217992944139339645	fail	search	Sonuç yok: a, one
-5418177941820983643	fail	pages	HttpException: HTTP error 404
-3704693444647218571	r	pages	IOException: unexpected end of stream on http://manga18free.com/...
-4062420937604231679	r	pages	IOException: unexpected end of stream on http://manhwaclub.net/...
-6087582712121596268	fail	details	IllegalStateException: TANI kod=200 url=https://www.mangatown.com/manga/koi_wa_amaagari_no_you_ni/ len=54298 a=142 sel=0 gen=0
-8461892268518968357	fail	pages	Sayfa listesi boş
-8607382649550260430	r	pages	IOException: unexpected end of stream on http://manhwaclub.net/...
-4799276220939522567	fail	covers	0/3 kapak: HTTP 404
-6072456827135650688	cloudflare	covers	Cloudflare engelledi, manuel doğrulama gerekli
-4317677246683745288	cloudflare	covers	Cloudflare engelledi, manuel doğrulama gerekli
+6693579565776986745	fail	list	Zaman aşımı (20s)
+4062420937604231679	fail	pages	HttpException: HTTP error 404
+198391761016384461	fail	list	HttpStatusException: . Status=522, URL=[https://www.petrotechsociety.org/wp-admin/admin-ajax.php]
+3601982995182824927	fail	covers	StreamResetException: stream was reset: REFUSED_STREAM
+1377036478854300161	fail	search	StreamResetException: stream was reset: REFUSED_STREAM
