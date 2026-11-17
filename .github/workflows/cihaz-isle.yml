@@ -1,15 +1,19 @@
 name: '6) Cihaz sonucunu isle'
 
-# pulsar-v2/data/device-fails.tsv ("id<TAB>durum<TAB>adim<TAB>mesaj" satirlari, tam test = yalniz dusenler)
-# durum: fail | cloudflare | r (yeniden test: test paketine doner)
-# -> source-status.json: gecenler ana pakete, digerleri test paketine.
+# Girdi: pulsar-v2/data/device-fails.tsv ("id<TAB>durum<TAB>adim<TAB>mesaj"; durum fail|cloudflare|r)
+#        ve testin UTC zamani.
+# Kural: testin yapildigi build = o zamandan onceki son index.min.json.
+#   buildde olup raporda olmayan -> pass (saglam)
+#   raporda olan -> fail/cloudflare (tamir) ya da r (tamir edildi, teste doner)
+#   buildde olmayan ve raporda olmayan -> dokunulmaz (bilinmeyen kalir)
+# Sonra depo/havuz tablolari yeniden kurulur.
 on:
   workflow_dispatch:
     inputs:
-      toplam:
-        description: 'Cihaz testindeki toplam kaynak sayisi (tam test: >=100)'
+      zaman:
+        description: 'Cihaz testinin UTC zamani (ornek 2026-11-17T06:12:56Z)'
         type: string
-        default: '566'
+        required: true
 
 permissions:
   contents: write
@@ -19,19 +23,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - run: cargo build --release --manifest-path tools/pulsar/Cargo.toml
       - name: Isle
         env:
-          TOPLAM: ${{ inputs.toplam }}
+          Z: ${{ inputs.zaman }}
         run: |
-          set -e
-          jq -R -s --argjson t "$TOPLAM" '{total:$t, sources:(split("\n")|map(select(length>0)|split("\t")|{name:("MIHON_"+.[0]),status:.[1],steps:{((.[2]//"")):{status:.[1],message:(.[3]//"")}}}))}' pulsar-v2/data/device-fails.tsv > /tmp/device.json
+          set -euo pipefail
+          T=pulsar-v2/data/device-fails.tsv
+          C=$(git log --before="$Z" -1 --format=%H -- pulsar-v2/repo/index.min.json)
+          echo "test edilen build: $C ($(git log -1 --format=%cI $C))"
+          git show $C:pulsar-v2/repo/index.min.json | jq -r '.[].sources[].id' | sort -u > /tmp/B
+          cut -f1 $T | sort -u > /tmp/R
+          comm -23 /tmp/B /tmp/R > /tmp/P
+          echo "build: $(wc -l < /tmp/B) | rapor: $(wc -l < /tmp/R) | gecen: $(wc -l < /tmp/P) | raporda+buildde: $(comm -12 /tmp/B /tmp/R | wc -l)"
+          jq -n --rawfile f $T --rawfile p /tmp/P '{total:0, sources:(
+              ($f|split("\n")|map(select(length>0)|split("\t")|{name:("MIHON_"+.[0]),status:.[1],steps:{((.[2]//"")):{status:.[1],message:(.[3]//"")}}}))
+            + ($p|split("\n")|map(select(length>0)|{name:("MIHON_"+.),status:"pass"}))
+          )}' > /tmp/device.json
           jq '.sources|length' /tmp/device.json
           ./tools/pulsar/target/release/pulsar status --device /tmp/device.json
-          jq -r '[.sources[]|.packages[0]//"-"]|group_by(.)|map("\(.[0]) \(length)")|.[]' pulsar-v2/data/source-status.json
+          bash pulsar-v2/scripts/tablo-kur.sh
           git config user.name pulsarium
           git config user.email pulsariums@gmail.com
-          git add pulsar-v2/data/source-status.json
+          git add pulsar-v2/data/source-status.json pulsar-v2/depo pulsar-v2/havuz
           git diff --cached --quiet && { echo 'degisiklik yok'; exit 0; }
-          git commit -qm "data(durum): cihaz sonucu islendi; dusenler paketlerden cikti, r olanlar teste dondu"
-          git pull -q --rebase origin main && git push -q origin main
+          git commit -qm "data(durum): cihaz raporu ($Z) islendi; tablolar guncellendi"
+          git pull -q --rebase --autostash origin main && git push -q origin main
