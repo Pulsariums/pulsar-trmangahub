@@ -1,0 +1,16 @@
+--- a/pulsar-v2/scripts/oto-tamir.sh
++++ b/pulsar-v2/scripts/oto-tamir.sh
+@@ -36,9 +36,10 @@
+     if [ -n "$s" ] && [ "$n" -gt 0 ]; then
+       post "${s%/}/ajax/chapters/" /tmp/c.html >/dev/null; c=$(grep -o 'wp-manga-chapter' /tmp/c.html | wc -l); ajax=1
+       if [ "$c" -eq 0 ]; then get "$s" /tmp/c.html >/dev/null; c=$(grep -o 'wp-manga-chapter' /tmp/c.html | wc -l); ajax=0; fi
+-      b=$(grep -oE 'href="[^"]+"' /tmp/c.html | sed -E 's/^href="//;s/"$//' | grep -vE '#|/feed' | grep -F "${s%/}/" | grep -vxF "$s" | head -1)
+-      [ -n "$b" ] && { get "$(absu "$b" "$host")" /tmp/b.html >/dev/null; p=$(grep -o 'wp-manga-chapter-img' /tmp/b.html | wc -l)
+-        img=$(grep -oE '<img[^>]*wp-manga-chapter-img[^>]*>' /tmp/b.html | grep -oE '(data-src|data-lazy-src|src)="\s*https?://[^"]+' | head -1 | sed -E 's/^[a-z-]+="\s*//'); }
++      b=$(grep -A4 'wp-manga-chapter' /tmp/c.html | grep -oE 'href="[^"#]+"' | sed -E 's/^href="//;s/"$//' | grep -vE '/feed|/page/' | head -1)
++      [ -n "$b" ] && { get "$(absu "$b" "$host")" /tmp/b.html >/dev/null
++        p=$(grep -oE 'wp-manga-chapter-img|class="page-break' /tmp/b.html | wc -l)
++        img=$(sed -n '/reading-content/,$p' /tmp/b.html | grep -oE '(data-src|data-lazy-src|src)="\s*https?://[^"]+\.(jpe?g|png|webp|avif|gif)[^"]*' | grep -viE 'logo|loading|dflazy|avatar|gravatar' | head -1 | sed -E 's/^[a-z-]+="\s*//'); }
+     fi
+     ax=$([ "$ajax" = 1 ] && echo '{url}ajax/chapters/' || echo '')
+     cfg=$(jq -nc --arg h "$host" --arg ax "$ax" '{engine:"madara",listPath:"/manga/?m_orderby=latest",itemSelector:".page-item-detail",
