@@ -232,8 +232,16 @@ class PulsarSource(
     // "site.comhttps" oluyordu. Cihaz raporu: Unable to resolve host
     // "anikiga.comhttps" — Amanga Planet, Anikiga, Rüya Manga bu yüzden düştü.
     private fun absolute(url: String): String =
-        if (url.startsWith("http://") || url.startsWith("https://")) url
+        if (url.startsWith("http://") || url.startsWith("https://")) secure(url)
         else "$baseUrl/${url.trimStart('/')}"
+
+    // Site https iken bazı Madara temaları bölüm/görsel linklerini http:// yazıyor;
+    // sunucu http bağlantısını kesiyor ("unexpected end of stream on http://...").
+    // http linkini https'e yükseltiyoruz (manga18free, manhwaclub, manga18x -> manhwaclub.net).
+    private fun secure(url: String): String {
+        if (!url.startsWith("http://") || !baseUrl.startsWith("https://")) return url
+        return "https://" + url.removePrefix("http://")
+    }
 
     override fun mangaDetailsRequest(manga: SManga): Request =
         Request.Builder().url(absolute(manga.url)).headers(headers).build()
@@ -498,7 +506,7 @@ class PulsarSource(
     // Görseli bölüm sayfasını Referer vererek istiyoruz.
     override fun imageRequest(page: Page): Request =
         Request.Builder()
-            .url(page.imageUrl.orEmpty())
+            .url(secure(page.imageUrl.orEmpty()))
             .headers(headers)
             .header("Referer", if (page.url.startsWith("http")) page.url else "$baseUrl/")
             .build()
