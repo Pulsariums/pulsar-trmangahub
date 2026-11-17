@@ -88,7 +88,8 @@ pub struct StatusFile {
 /// etiketi eklenir.
 pub fn packages_for(e: &StatusEntry) -> Vec<String> {
     // Cihazda düşen kaynağın sonucu biliniyor; test havuzuna da girmez.
-    if e.dead || e.kapali || e.state == "failed" {
+    // Kesin ölü kayıt da hiçbir pakete girmez.
+    if e.dead || e.state == "failed" {
         return Vec::new();
     }
     // ulaşılamayan kaynak (DNS/TLS/timeout/bağlantı hatası) test havuzunda
@@ -100,10 +101,18 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
         return vec!["test".to_string()];
     }
     if e.state != "active" || !e.sorun.is_empty() {
+        // Kapalı kaynak (çalışma anı filtresi) pakete giremez; bu kural yalnız
+        // aktif olmayan kayıt için geçerlidir. Aktif kayıt kapalı işaretli
+        // kalsa da base pakete düşer (aşağıda), paketsiz kalmaz.
+        if e.kapali && e.state != "active" {
+            return Vec::new();
+        }
         // Ayri test18 paketi yok: 18+ kaynak da test havuzuna duser, gorunen
         // adinda " [18+]" etiketi tasir (istemci suzgeci icin).
         return vec!["test".to_string()];
     }
+    // Aktif kayıt paketsiz bırakılmaz: kapali işareti nedeniyle base paket
+    // atlanınca state "active" + packages [] kalıyordu (jiangzaitoon).
     let base = match (e.lang == "tr", e.nsfw == 1) {
         (true, false) => "tr",
         (true, true) => "tr18",
@@ -121,6 +130,13 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
 /// (GitHub sunucusundan, canlı siteleri yanlışlıkla "empty" sayabilir) durumu
 /// yalnız pending/unknown arasında ayırır.
 pub fn recompute_state(e: &mut StatusEntry) {
+    // Ölü kayıt cihaz/sağlık verisiyle diriltilmez: "dead" kesin işarettir,
+    // her status koşusunda unknown'a düşürülmemeli.
+    if e.dead {
+        e.state = "dead".to_string();
+        e.packages = Vec::new();
+        return;
+    }
     let device = e.device.as_ref().map(|p| p.status.as_str()).unwrap_or("");
     let health = e.health.as_ref().map(|p| p.status.as_str()).unwrap_or("");
     // Cihaz hatasının nedeni ağ/TLS/DNS ise kaynak "ulaşılamaz" sayılır.
