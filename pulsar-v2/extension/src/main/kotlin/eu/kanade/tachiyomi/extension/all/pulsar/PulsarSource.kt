@@ -176,6 +176,12 @@ class PulsarSource(
     // admin-ajax.php üzerinden POST gövdesiyle döner (ör. ruyamanga2.com:
     // action=wp-manga-search-manga, gövde title=one). Bu yüzden adres ve yöntem
     // catalogue.json'dan gelir.
+    // Desteklenmeyen/kisa sorgu istisnasi (IllegalArgumentException) aramayi
+    // dusurmesin: Mihon'da bu durumda bos sonuc beklenir (ComicK, HoneyManga).
+    override suspend fun getSearchManga(page: Int, query: String, filters: FilterList): MangasPage =
+        runCatching { super.getSearchManga(page, query, filters) }.getOrElse { e ->
+            if (e is IllegalArgumentException) MangasPage(emptyList(), hasNextPage = false) else throw e
+        }
     override fun searchMangaRequest(page: Int, query: String, filters: FilterList): Request {
         val apiUrl = config.optString("searchUrl", "")
         if (apiUrl.isBlank()) {
@@ -560,7 +566,8 @@ class PulsarSource(
     // Görseli bölüm sayfasını Referer vererek istiyoruz.
     override fun imageRequest(page: Page): Request =
         Request.Builder()
-            .url(secure(page.imageUrl.orEmpty()))
+            // Gorsel adresi goreli gelebilir (pageUrlTemplate/script yolu); OkHttp sema ister, absolute() baseUrl ile birlestirir.
+            .url(absolute(page.imageUrl.orEmpty()))
             .headers(headers)
             .header("Referer", if (page.url.startsWith("http")) page.url else "$baseUrl/")
             .build()

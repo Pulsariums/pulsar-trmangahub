@@ -83,6 +83,13 @@ class PulsarContext(baseClient: OkHttpClient) : MangaLoaderContext() {
     override fun getConfig(source: LibMangaSource): MangaSourceConfig =
         PulsarSourceConfig(source, webViewUserAgent)
 
+    // Hanman18 gibi parser'lar base64 blogunu bosluk/satir sonuyla veriyor; varsayilan getDecoder() "Illegal base64 character 20" atiyor.
+    override fun decodeBase64(data: String): ByteArray {
+        val clean = data.filterNot { it.isWhitespace() }
+        return runCatching { java.util.Base64.getDecoder().decode(clean) }
+            .getOrElse { java.util.Base64.getMimeDecoder().decode(data) }
+    }
+
     @Deprecated("Provide a base url")
     override suspend fun evaluateJs(script: String): String? = null
 

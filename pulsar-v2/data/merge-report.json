@@ -1,5 +1,5 @@
 {
-  "catalogue_after": 461,
+  "catalogue_after": 457,
   "catalogue_before": 573,
   "dropped": [
     {
@@ -785,6 +785,34 @@
       "lang": "es",
       "name": "zonatmo.com",
       "nsfw": 0
+    },
+    {
+      "domain": "petrotechsociety.org",
+      "kept": "Petrotech Society",
+      "lang": "en",
+      "name": "Petro Tech Society",
+      "nsfw": 1
+    },
+    {
+      "domain": "komikindo.ch",
+      "kept": "KomikIndo.ch",
+      "lang": "id",
+      "name": "KomikIndo",
+      "nsfw": 0
+    },
+    {
+      "domain": "noromax02.my.id",
+      "kept": "Noromax",
+      "lang": "id",
+      "name": "Noromax",
+      "nsfw": 0
+    },
+    {
+      "domain": "sektedoujin.cc",
+      "kept": "SekteDoujin",
+      "lang": "id",
+      "name": "Sekte Doujin",
+      "nsfw": 1
     }
   ],
   "dropped_ids": [
@@ -899,10 +927,14 @@
     3217817295926720102,
     1276158899068279610,
     6949446744053329043,
-    4871458201540002697
+    4871458201540002697,
+    4345487257700612863,
+    2661323974230789189,
+    1843907598759145760,
+    5922755793366266846
   ],
   "engine_keys": 860,
-  "generated": "2026-11-18T16:21:33Z",
+  "generated": "2026-11-18T16:30:23Z",
   "mirrors": 14,
   "note": "Ayni host+dil+nsfw motor kaynagi katalogdan dusuruldu; tasinmis alan adlari mirrors'a yazildi."
 }

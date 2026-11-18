@@ -53,8 +53,15 @@ class PulsarKotatsuSource(
 
     override suspend fun getPopularManga(page: Int): MangasPage = list(page, SortOrder.POPULARITY, null)
     override suspend fun getLatestUpdates(page: Int): MangasPage = list(page, SortOrder.UPDATED, null)
+    // Bazi parser'lar aramayi desteklemiyor (SEARCH_NOT_SUPPORTED) ya da en az 3 karakter istiyor (ComicK/HoneyManga); istisna yerine bos sonuc donuyoruz.
     override suspend fun getSearchManga(page: Int, query: String, filters: FilterList): MangasPage =
-        list(page, SortOrder.RELEVANCE, query)
+        if (query.isBlank()) {
+            MangasPage(emptyList(), hasNextPage = false)
+        } else {
+            runCatching { list(page, SortOrder.RELEVANCE, query) }.getOrElse { e ->
+                if (e is IllegalArgumentException) MangasPage(emptyList(), hasNextPage = false) else throw e
+            }
+        }
 
     override suspend fun getMangaUpdate(
         manga: SManga,
@@ -144,7 +151,8 @@ class PulsarKotatsuSource(
 
     private fun SManga.toLib() = LibManga(
         id = url.hashCode().toLong(), title = title, altTitles = emptySet(), url = url,
-        publicUrl = url, rating = -1f, contentRating = null, coverUrl = thumbnail_url,
+        // Parser detay istegini publicUrl uzerinden kuruyor (InManga/Prochan); goreli url "Expected URL scheme" atiyor.
+        publicUrl = url.toAbsoluteUrl(parser.domain), rating = -1f, contentRating = null, coverUrl = thumbnail_url,
         tags = emptySet(), state = null, authors = emptySet(), source = parserSource,
     )
 
