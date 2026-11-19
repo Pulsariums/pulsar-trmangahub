@@ -45,6 +45,11 @@ android {
         buildConfigField("boolean", "PULSAR_NSFW", (pulsarNsfw != "0").toString())
         buildConfigField("String", "PULSAR_NAME", "\"$pulsarName\"")
         manifestPlaceholders["pulsarName"] = pulsarName
+        // 18+ paket bayrağı: Mihon `tachiyomi.extension.nsfw` int bekler (1/0);
+        // Kototoro manifest okuyucusu `tachiyomix.contentWarning` için 2'yi NSFW sayar.
+        val isNsfwFlavor = pulsarNsfw != "0"
+        manifestPlaceholders["pulsarNsfwInt"] = if (isNsfwFlavor) 1 else 0
+        manifestPlaceholders["pulsarContentWarning"] = if (isNsfwFlavor) 2 else 1
     }
 
     buildFeatures {

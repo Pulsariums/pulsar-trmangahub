@@ -26,6 +26,19 @@
         <meta-data
             android:name="tachiyomix.extensionLib"
             android:value="1.6" />
+
+        <!-- 18+ paket işareti: Mihon standardı. 18+ flavor'da 1, diğerlerinde 0.
+             Bu bayrak "adult manga" seçeneğini besler; eksikse 18+ paketler
+             eklenti yönetiminde yetişkin olarak görünmez. -->
+        <meta-data
+            android:name="tachiyomi.extension.nsfw"
+            android:value="${pulsarNsfwInt}" />
+
+        <!-- Kototoro içerik uyarısı: manifest okuyucusu 2 değerini NSFW sayar
+             (TachiyomiApkLoaderRuntime → ExternalExtensionMetadataSupport). -->
+        <meta-data
+            android:name="tachiyomix.contentWarning"
+            android:value="${pulsarContentWarning}" />
     </application>
 
 </manifest>
