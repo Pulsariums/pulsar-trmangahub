@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T11:23:45Z",
+  "generated": "2026-11-19T15:22:47Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -10786,9 +10786,23 @@
       "nsfw": 1,
       "domain": "averisfansub.site",
       "packages": [
-        "test"
+        "tr18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-19T15:22:09Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (paket denetimi)",
+        "at": "2026-11-19T15:22:09Z"
+      }
     },
     "3495313140920905784": {
       "id": 3495313140920905784,
@@ -29086,9 +29100,23 @@
       "nsfw": 1,
       "domain": "mrtenzus.com",
       "packages": [
-        "test"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-19T15:22:47Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (paket denetimi)",
+        "at": "2026-11-19T15:22:47Z"
+      }
     },
     "7039343362984733996": {
       "id": 7039343362984733996,
