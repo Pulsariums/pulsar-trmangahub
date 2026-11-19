@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T10:54:27Z",
+  "generated": "2026-11-19T11:03:09Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -5365,9 +5365,23 @@
       "nsfw": 0,
       "domain": "it.niadd.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-19T11:03:05.710Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-19T11:03:05.709Z"
+      },
       "device_step": "covers"
     },
     "2106433588541418302": {
@@ -8452,9 +8466,23 @@
       "nsfw": 0,
       "domain": "ru.niadd.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-19T11:03:05.710Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-19T11:03:05.710Z"
+      }
     },
     "2618646420420740860": {
       "id": 2618646420420740860,
@@ -19297,9 +19325,23 @@
       "nsfw": 0,
       "domain": "br.niadd.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-19T11:03:05.710Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-19T11:03:05.710Z"
+      },
       "device_step": "covers"
     },
     "4587021830589594478": {
@@ -19858,9 +19900,23 @@
       "nsfw": 0,
       "domain": "fr.niadd.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-19T11:03:05.710Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-19T11:03:05.710Z"
+      }
     },
     "48344863515944583": {
       "id": 48344863515944583,
@@ -35019,9 +35075,23 @@
       "nsfw": 0,
       "domain": "de.niadd.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-19T11:03:05.710Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-19T11:03:05.710Z"
+      },
       "device_step": "covers"
     },
     "8970835273563196311": {
