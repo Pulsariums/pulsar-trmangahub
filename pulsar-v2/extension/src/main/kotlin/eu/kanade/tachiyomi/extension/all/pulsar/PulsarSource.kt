@@ -16,6 +16,7 @@ import okhttp3.Response
 import org.json.JSONArray
 import org.json.JSONObject
 import org.jsoup.Jsoup
+import org.jsoup.nodes.Document
 import java.util.concurrent.TimeUnit
 
 class PulsarSource(
@@ -691,7 +692,7 @@ class PulsarSource(
         if (config.optBoolean("pageQwik", false)) {
             return qwikPages(response)
         }
-        // API yanıtı HTML değil JSON'dur; gövdeyi tüketmeden ilk bayta bakılır.
+        // API yanıtı HTML değil JSON belgesidir; gövdeyi tüketmeden ilk bayta bakılır.
         if (config.optString("pageApiUrl", "").isNotBlank() &&
             response.peekBody(1).string().trimStart().startsWith("{")
         ) {
@@ -699,7 +700,52 @@ class PulsarSource(
         }
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
-        val readerSelector = config.optString("readerSelector", "")
+        val chapterUrl = response.request.url.toString()
+        val imageUrls = pageImagesFrom(doc, html).toMutableList()
+
+        // Çok sayfalı okuyucu zinciri: bazı sitelerde bölüm tek HTML değil, ayrı
+        // belgelerden oluşur (niadd: /chapter/x/123/ -> /chapter/x/123-2.html ...).
+        // pageNextSelector boşsa davranış eskisiyle birebir aynıdır.
+        val nextSelector = config.optString("pageNextSelector", "").trim()
+        if (nextSelector.isNotBlank()) {
+            val limit = config.optInt("pageNextLimit", 30).let { if (it > 0) it else 30 }
+            // pageNextPattern: bağlantının "sonraki sayfa" olduğunu doğrulayan isteğe
+            // bağlı regex (ör. niadd "-2.html" son eki). Boşsa seçici tek başına yeter.
+            val pattern = config.optString("pageNextPattern", "").trim()
+                .takeIf { it.isNotBlank() }
+                ?.let { runCatching { Regex(it) }.getOrNull() }
+            val visited = HashSet<String>()
+            visited.add(normalizeUrl(chapterUrl))
+            val chapterDir = pageDir(chapterUrl)
+            var currentDoc = doc
+            var currentUrl = chapterUrl
+            var followed = 0
+            while (followed < limit) {
+                val next = nextPageUrl(currentDoc, nextSelector, currentUrl, pattern) ?: break
+                // Döngü koruması: aynı adresi ikinci kez çekme.
+                if (!visited.add(normalizeUrl(next))) break
+                // Bölüm sınırı: son sayfanın "Next" bağlantısı sonraki bölüme
+                // gider; aynı dizinde kalmayan bağlantı izlenmez.
+                if (pageDir(next) != chapterDir) break
+                // 2. sayfa ve sonrası hata verirse elde edilen görsellerle dön.
+                val fetched = runCatching { fetchPageDocument(next, currentUrl) }.getOrNull() ?: break
+                val imgs = pageImagesFrom(fetched.first, fetched.second)
+                if (imgs.isEmpty()) break
+                imageUrls.addAll(imgs)
+                currentDoc = fetched.first
+                currentUrl = fetched.third
+                followed++
+            }
+        }
+
+        return imageUrls.mapIndexed { index, imgUrl ->
+            Page(index, chapterUrl, imgUrl)
+        }
+    }
+
+    // Tek bir bölüm belgesinden görsel adreslerini çıkarır. İlk sayfa ve zincirin
+    // sonraki sayfaları aynı yolu kullanır (davranış tek yerde kalır).
+    private fun pageImagesFrom(doc: Document, html: String): List<String> {
         val scriptPages = EngineRegistry.scriptJsonPages(
             html,
             config.optString("pageScriptSelector", ""),
@@ -710,26 +756,60 @@ class PulsarSource(
             config.optString("pageScriptContains", ""),
             config.optString("pageUrlBase", ""),
         )
-        // Bazı sitelerde DOM'daki <img> adresleri doğrudan çalışmıyor (Amanga: .link
-        // origin'de 403). Site kendi okuyucusunda <script> içindedir ve proxy adresi
-        // üretir; "pageScriptFirst" işaretliyse script sonucu DOM'dan önce gelir.
+        // Bazı sitelerde DOM içindeki <img> adresleri doğrudan çalışmıyor (Amanga: .link
+        // originde 403). Site kendi okuyucusunda <script> içindedir ve proxy adresi
+        // üretir; "pageScriptFirst" işaretliyse script sonucu DOM içeriğinden önce gelir.
         val scriptFirst = config.optString("pageScriptFirst", "").isNotBlank() && scriptPages.isNotEmpty()
-        val imageUrls = if (scriptFirst) {
+        return if (scriptFirst) {
             scriptPages
         } else {
             EngineRegistry.parsePages(
                 doc,
-                readerSelector,
+                config.optString("readerSelector", ""),
                 baseUrl,
                 config.optString("pageUrlTemplate", ""),
             )
                 .ifEmpty { EngineRegistry.rawImages(html, baseUrl) }
                 .ifEmpty { scriptPages }
         }
+    }
 
-        val chapterUrl = response.request.url.toString()
-        return imageUrls.mapIndexed { index, imgUrl ->
-            Page(index, chapterUrl, imgUrl)
+    // Sayfa zincirindeki "sonraki" bağlantısını çözer. Göreli href geçerli sayfa
+    // adresine göre mutlaklaştırılır (-2.html gibi kısa yollar baseUrl köküne değil).
+    private fun nextPageUrl(doc: Document, selector: String, currentUrl: String, pattern: Regex?): String? {
+        val el = doc.selectFirst(selector) ?: return null
+        val href = el.attr("href").trim()
+        if (href.isBlank() || href == "#" || href.startsWith("javascript:", ignoreCase = true)) return null
+        if (pattern != null && !pattern.containsMatchIn(href)) return null
+        return resolveAgainst(currentUrl, href)
+    }
+
+    private fun resolveAgainst(base: String, ref: String): String {
+        val t = ref.trim()
+        if (t.startsWith("http://") || t.startsWith("https://")) return t
+        return runCatching { java.net.URI(base).resolve(t).toString() }.getOrElse { absolute(t) }
+    }
+
+    private fun normalizeUrl(url: String): String =
+        runCatching { java.net.URI(url.trim()).normalize().toString() }
+            .getOrDefault(url.trim())
+            .substringBefore("#")
+
+    // Zincirdeki sayfaların ortak dizini. Sondaki / atılır: niadd bölüm başlangıcı
+    // "/chapter/x/123/" iken sonraki sayfalar "/chapter/x/123-2.html" biçiminde.
+    private fun pageDir(url: String): String =
+        url.substringBefore("#").substringBefore("?").trimEnd('/').substringBeforeLast('/', "")
+
+    private fun fetchPageDocument(url: String, referer: String): Triple<Document, String, String> {
+        val req = Request.Builder()
+            .url(url)
+            .headers(headers.newBuilder().set("Referer", referer).build())
+            .build()
+        client.newCall(req).execute().use { resp ->
+            if (!resp.isSuccessful) throw IllegalStateException("HTTP ${resp.code}")
+            val body = resp.body?.string().orEmpty()
+            if (body.isBlank()) throw IllegalStateException("boş gövde")
+            return Triple(Jsoup.parse(body, url), body, resp.request.url.toString())
         }
     }
 

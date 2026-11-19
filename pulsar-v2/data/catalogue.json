@@ -5393,7 +5393,9 @@
         "listPath": "/",
         "itemSelector": "div.rec-item.rec-manga",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "img.manga_pic",
+        "pageNextSelector": "div.btn-next a",
+        "pageNextLimit": 200
       },
       "selector_verified": true,
       "origins": [
@@ -5457,7 +5459,9 @@
         "listPath": "/",
         "itemSelector": "div.rec-item.rec-manga",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "img.manga_pic",
+        "pageNextSelector": "div.btn-next a",
+        "pageNextLimit": 200
       },
       "selector_verified": true,
       "origins": [
@@ -5475,13 +5479,15 @@
       "config": {
         "engine": "custom",
         "listPath": "list/Hot-Manga/",
-        "itemSelector": ".manga-item",
+        "itemSelector": "div.manga-item",
         "chapterSelector": "a.hover-underline[href*=\"/chapter/\"]",
-        "readerSelector": "",
+        "readerSelector": "img.manga_pic",
         "searchUrl": "/search/?name={query}",
         "searchMethod": "GET",
         "chapterAjaxUrl": "{url}/chapters.html",
-        "chapterAjaxMethod": "GET"
+        "chapterAjaxMethod": "GET",
+        "pageNextSelector": "div.btn-next a",
+        "pageNextLimit": 200
       },
       "selector_verified": true,
       "origins": [
@@ -5502,7 +5508,9 @@
         "listPath": "/",
         "itemSelector": ".rec-item.rec-manga .rec-manga-pic img",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "img.manga_pic",
+        "pageNextSelector": "div.btn-next a",
+        "pageNextLimit": 200
       },
       "selector_verified": true,
       "origins": [
@@ -5522,7 +5530,9 @@
         "listPath": "/",
         "itemSelector": ".rec-item.rec-manga .rec-manga-pic img",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "img.manga_pic",
+        "pageNextSelector": "div.btn-next a",
+        "pageNextLimit": 200
       },
       "selector_verified": true,
       "origins": [
