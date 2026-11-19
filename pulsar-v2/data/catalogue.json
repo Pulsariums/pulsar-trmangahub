@@ -5392,10 +5392,12 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": "div.rec-item.rec-manga",
-        "chapterSelector": "",
+        "chapterSelector": "a.hover-underline[href*=\"/chapter/\"]",
         "readerSelector": "img.manga_pic",
         "pageNextSelector": "div.btn-next a",
-        "pageNextLimit": 200
+        "pageNextLimit": 200,
+        "chapterAjaxUrl": "{url}/chapters.html",
+        "chapterAjaxMethod": "GET"
       },
       "selector_verified": true,
       "origins": [
@@ -5507,10 +5509,12 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": ".rec-item.rec-manga .rec-manga-pic img",
-        "chapterSelector": "",
+        "chapterSelector": "a.hover-underline[href*=\"/chapter/\"]",
         "readerSelector": "img.manga_pic",
         "pageNextSelector": "div.btn-next a",
-        "pageNextLimit": 200
+        "pageNextLimit": 200,
+        "chapterAjaxUrl": "{url}/chapters.html",
+        "chapterAjaxMethod": "GET"
       },
       "selector_verified": true,
       "origins": [
@@ -5529,10 +5533,12 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": ".rec-item.rec-manga .rec-manga-pic img",
-        "chapterSelector": "",
+        "chapterSelector": "a.hover-underline[href*=\"/chapter/\"]",
         "readerSelector": "img.manga_pic",
         "pageNextSelector": "div.btn-next a",
-        "pageNextLimit": 200
+        "pageNextLimit": 200,
+        "chapterAjaxUrl": "{url}/chapters.html",
+        "chapterAjaxMethod": "GET"
       },
       "selector_verified": true,
       "origins": [

@@ -253,6 +253,20 @@ object EngineRegistry {
         return if (items.isNotEmpty()) items else genericList(doc, baseUrl)
     }
 
+    // Bölüm numarası ad metninde yoksa URL yolundan çıkarılır:
+    // /chapter/Solo_Leveling_052/6527549/ -> son parça kayıt id'sidir, ondan
+    // önceki parça (Solo_Leveling_052) bölüm numarasını taşır. Yol bölüm
+    // kökü (/chapter, /bolum ...) içermiyorsa tahmin yapılmaz.
+    private fun numberFromChapterUrl(rawUrl: String): Float? {
+        val parts = rawUrl.substringBefore('?').substringBefore('#').trimEnd('/')
+            .split('/').filter { it.isNotBlank() }
+        if (parts.none { it.lowercase() in CHAPTER_ROOTS }) return null
+        var seg = parts.last()
+        if (seg.all { it.isDigit() } && parts.size >= 2) seg = parts[parts.size - 2]
+        val m = Regex("""(\d+(?:[.,]\d+)?)$""").find(seg.substringBefore('.')) ?: return null
+        return m.groupValues[1].replace(',', '.').toFloatOrNull()
+    }
+
     fun parseChapters(doc: Document, selector: String, baseUrl: String): List<ParsedChapter> {
         val sel = selector.ifBlank { "div.chapter-item, li.wp-manga-chapter, div.eph-num, ul.clstyle li" }
         val chapterRegex = Regex(
@@ -262,6 +276,30 @@ object EngineRegistry {
 
         val items = doc.select(sel).mapIndexedNotNull { index, el ->
             runCatching {
+                // Bölüm listesi native dropdown içinde olabilir:
+                // <select><option value="/chapter/...">Ch 200</option></select>.
+                // option değeri bölüm URL'i, metni bölüm adıdır. Bu ek bir yoldur;
+                // <a href> davranışı aşağıda değişmeden durur.
+                if (el.tagName() == "option") {
+                    val rawUrl = el.attr("value").trim()
+                        .ifBlank { el.attr("data-href") }
+                        .ifBlank { el.attr("data-url") }
+                        .trim()
+                    if (rawUrl.isEmpty() || rawUrl.startsWith("#")) return@runCatching null
+                    val fullUrl = if (rawUrl.startsWith("http")) rawUrl else "$baseUrl/${rawUrl.trimStart('/')}"
+                    val name = el.text().trim().ifBlank { el.attr("label").trim() }.ifBlank { rawUrl }
+                    val match = chapterRegex.find(name)
+                    val num = (match?.groupValues?.getOrNull(1)?.takeIf { it.isNotBlank() }
+                        ?: match?.groupValues?.getOrNull(2))?.toFloatOrNull()
+                        ?: numberFromChapterUrl(rawUrl)
+                        ?: (index + 1).toFloat()
+                    return@runCatching ParsedChapter(
+                        name = name,
+                        url = fullUrl,
+                        chapterNumber = num,
+                        dateUpload = 0L,
+                    )
+                }
                 // Seçici doğrudan bölüm bağlantısını eşleştirebilir (a.chapter-box).
                 // Jsoup'un alt öğe araması kendini bulmaz; önce kendine bakılır.
                 val linkEl = if (el.tagName() == "a" && el.hasAttr("href")) {
@@ -279,6 +317,7 @@ object EngineRegistry {
                 val match = chapterRegex.find(name)
                 val num = (match?.groupValues?.getOrNull(1)?.takeIf { it.isNotBlank() }
                     ?: match?.groupValues?.getOrNull(2))?.toFloatOrNull()
+                    ?: numberFromChapterUrl(rawUrl)
                     ?: (index + 1).toFloat()
 
                 ParsedChapter(name = name, url = fullUrl, chapterNumber = num, dateUpload = 0L)
