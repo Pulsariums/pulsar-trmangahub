@@ -16,9 +16,9 @@ Bu dosya "iş bitti" tanımını ve çalışma döngüsünü sabitler. Her tur b
 
 | Katman | Toplam | active | failed | pending | engelli | dead | unknown |
 |---|---|---|---|---|---|---|---|
-| Katalog (bizim) | 461 | 246 | 90 | 0 | 20 | 105 | 0 |
-| Motor (JitPack parser) | 1272 | 121 | 299 | 132 | 126 | 594 | 0 |
-| **Toplam** | **1733** | **367** | **389** | **132** | **146** | **699** | **0** |
+| Katalog (bizim) | 455 | 234 | 93 | 2 | 21 | 105 | 0 |
+| Motor (JitPack parser) | 1272 | 131 | 313 | 106 | 128 | 594 | 0 |
+| **Toplam** | **1727** | **365** | **406** | **108** | **149** | **699** | **0** |
 
 Durum sözlüğü: `active` yayında ve kanıtlı · `failed` ölçülmüş kırık (gerekçeli) · `pending` yeniden test bekliyor · `engelli` Cloudflare/çerez duvarı (ne yayın ne test) · `dead` kalıcı ölü.
 
