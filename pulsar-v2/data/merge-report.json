@@ -1,5 +1,5 @@
 {
-  "catalogue_after": 457,
+  "catalogue_after": 455,
   "catalogue_before": 573,
   "dropped": [
     {
@@ -794,11 +794,25 @@
       "nsfw": 1
     },
     {
+      "domain": "mangamaniacs.org",
+      "kept": "MangaManiacs",
+      "lang": "en",
+      "name": "MangaManiacs",
+      "nsfw": 1
+    },
+    {
       "domain": "komikindo.ch",
       "kept": "KomikIndo.ch",
       "lang": "id",
       "name": "KomikIndo",
       "nsfw": 0
+    },
+    {
+      "domain": "mangasusuku.com",
+      "kept": "MangaSusuku",
+      "lang": "id",
+      "name": "Mangasusu",
+      "nsfw": 1
     },
     {
       "domain": "noromax02.my.id",
@@ -929,12 +943,14 @@
     6949446744053329043,
     4871458201540002697,
     4345487257700612863,
+    7521499901022487047,
     2661323974230789189,
+    1910862088388825602,
     1843907598759145760,
     5922755793366266846
   ],
   "engine_keys": 860,
-  "generated": "2026-11-19T08:20:57Z",
+  "generated": "2026-11-19T08:32:34Z",
   "mirrors": 14,
   "note": "Ayni host+dil+nsfw motor kaynagi katalogdan dusuruldu; tasinmis alan adlari mirrors'a yazildi."
 }
