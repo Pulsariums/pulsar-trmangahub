@@ -28,6 +28,7 @@ flavor_args() {
         global)   echo ".global|all|0" ;;
         global18) echo ".global18|all|1" ;;
         test)     echo ".test|all|0" ;;
+        test18)   echo ".test18|all|1" ;;
         *)        echo ".${1}|${1}|0" ;;
     esac
 }
@@ -38,11 +39,12 @@ flavor_name() {
         global) echo "Pulsar Global" ;;
         global18) echo "Pulsar Global 18+" ;;
         test) echo "Pulsar Test" ;;
+        test18) echo "Pulsar Test 18+" ;;
         *) echo "Pulsar $(echo "$1" | tr a-z A-Z)" ;;
     esac
 }
 
-FLAVORS="${FLAVORS:-tr,tr18,global,global18,test}"
+FLAVORS="${FLAVORS:-tr,tr18,global,global18,test,test18}"
 
 # Sürüm: versionCode ARTMALI ki bakım tamirleri cihazda "güncelleme" olsun.
 # CI'da GITHUB_RUN_NUMBER (monotonik); yerelde sabit 1. versionName kontratı:

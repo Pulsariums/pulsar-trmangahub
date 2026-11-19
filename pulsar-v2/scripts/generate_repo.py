@@ -36,6 +36,7 @@ FLAVOR_DEFS = {
     ".global": {"name": "Pulsar Global", "lang": "all", "nsfw": 0},
     ".global18": {"name": "Pulsar Global 18+", "lang": "all", "nsfw": 1},
     ".test": {"name": "Pulsar Test", "lang": "all", "nsfw": 0},
+    ".test18": {"name": "Pulsar Test 18+", "lang": "all", "nsfw": 1},
 }
 
 
@@ -291,4 +292,4 @@ if __name__ == "__main__":
     # Paket listesi tek yerden gelsin: CI'da FLAVORS, yoksa beş paketin tamamı.
     main(sys.argv[1] if len(sys.argv) > 1 else "repo-build",
          sys.argv[2] if len(sys.argv) > 2
-         else os.environ.get("FLAVORS", "tr,tr18,global,global18,test"))
+         else os.environ.get("FLAVORS", "tr,tr18,global,global18,test,test18"))

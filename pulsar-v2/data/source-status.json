@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T15:42:55Z",
+  "generated": "2026-11-19T16:19:10Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -1636,7 +1636,7 @@
       "nsfw": 1,
       "domain": "manga18.club",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "CHAPTER_SECICI: Seri linkleri /manhwa/<slug>, bolum linkleri /manhwa/<slug>/chapter-N; ana sayfa kartlari JS ile de doluyor ama .story_item bloklari var, okuyucu gorseli olculmedi."
@@ -2311,7 +2311,7 @@
       "nsfw": 1,
       "domain": "peach-bl.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "SERBEST: Seri detayi /webtoon/{slug}/, bolum /chapter/{slug}/; bolum sayfasinda okuyucu gorseli yok, 4 img site varligi."
@@ -3897,7 +3897,7 @@
       "nsfw": 1,
       "domain": "snscoeurturkey.blogspot.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "SERBEST: Ana sayfa kartları JS ile doluyor (0 post linki), liste Blogger feed JSON ile geliyor ve feed seri+bölüm karışık; Smut/Ecchi etiketleri var."
@@ -4940,7 +4940,7 @@
       "nsfw": 1,
       "domain": "doujinhentai.net",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "JS_RENDER: Kartlar ve bolum listesi istemcide uretiliyor; /api/manga 404, yalniz /search-live JSON donuyor."
@@ -5436,7 +5436,7 @@
       "nsfw": 1,
       "domain": "mundohentaioficial.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "device_step": "pages",
@@ -7569,7 +7569,7 @@
       "nsfw": 1,
       "domain": "dojing.net",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "JS_RENDER: Bolum listesi yalniz sablonda (#/chapter-{{number}}); /ajax/chapters ayni sayfayi dondu, admin-ajax 400."
@@ -8141,7 +8141,7 @@
       "nsfw": 1,
       "domain": "lectorhentai.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "JS_RENDER: Bolum listesi ve sayfalar jQuery ajax (/admin-ajax) ile geliyor; HTML'de gorsel yok."
@@ -8425,7 +8425,7 @@
       "nsfw": 1,
       "domain": "hentaitokyo.net",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "device_step": "pages",
@@ -9371,7 +9371,7 @@
       "nsfw": 1,
       "domain": "18porncomic.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "JS_RENDER: Seri /comic/<slug>, dil sayfasi /comic/<slug>/<lang>; dil sayfasinda bolum linki HTML'de yok, kartlar JS ile doluyor."
@@ -12292,7 +12292,7 @@
       "nsfw": 1,
       "domain": "mangaforfree.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "CHAPTER_AJAX: Madara; detayda bolum linki yok ama POST admin-ajax action=manga_get_chapters&manga=363120 14 bolum linki dondurdu (GET ajax/chapters/?t=1 SSR sayfa donuyor)."
@@ -13960,7 +13960,7 @@
       "nsfw": 1,
       "domain": "omegascans.org",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "JS_RENDER: Next.js (self.__next_f); bolum sayfasi SSR ve gorseller media.omegascans.org'dan geliyor ama seri sayfasinda bolum linki yok, liste RSC payload'inda."
@@ -14794,7 +14794,7 @@
       "nsfw": 1,
       "domain": "mangasusuku.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "device_step": "list"
@@ -14969,7 +14969,7 @@
       "nsfw": 1,
       "domain": "hentaiukr.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "JS_RENDER: Bolum listesi JS ile doluyor (items-block bos); /manga/2263_marie/1/ ve /vol1/1/ 404"
@@ -15875,7 +15875,7 @@
       "nsfw": 1,
       "domain": "madaradex.org",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "JS_RENDER: Madara temasi ama SSR'de seri ve bolum anchor'i yok (chapter-item div'leri bos, data-id yok); /manga/ listesi 404, admin-ajax icin manga id'si bulunamadi."
@@ -17555,7 +17555,7 @@
       "nsfw": 1,
       "domain": "pixhentai.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "BULUNAMADI: Gonderi galerisi: bolum bagi yok, tum sayfalar tek gonderide."
@@ -17994,7 +17994,7 @@
       "nsfw": 1,
       "domain": "sayhentaii.art",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "device_step": "covers"
@@ -18614,7 +18614,7 @@
       "nsfw": 1,
       "domain": "www.tooncubus.top",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "JS_RENDER: Blogger; gonderiler /feeds/posts/default uzerinden JS ile basiliyor."
@@ -21997,7 +21997,7 @@
       "nsfw": 1,
       "domain": "hanman18.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "device_step": "pages",
@@ -22109,7 +22109,7 @@
       "nsfw": 1,
       "domain": "hiperdex.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "IMZA_GEREKLI: SPA; veri /api/trpc uzerinden ve 401 \"Invalid or missing API Key\" donuyor; API anahtari olmadan okunamaz."
@@ -22466,7 +22466,7 @@
       "nsfw": 1,
       "domain": "komikpoi.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "LISTE_DUZELT: Detay ve bolum istekleri iki denemede 25s zaman asimina ugradi, bolum secici olculemedi."
@@ -23491,7 +23491,7 @@
       "nsfw": 1,
       "domain": "mihentai.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending"
     },
@@ -26368,6 +26368,19 @@
       "device_step": "list",
       "reason": "DIGER: onw2026.gercekgiris.it.com adresine yonlendiriyor"
     },
+    "6174331399853269477": {
+      "id": 6174331399853269477,
+      "kind": "catalogue",
+      "title": "Mikrokosmos Fansub",
+      "lang": "tr",
+      "nsfw": 0,
+      "domain": "mikrokosmosfb.blogspot.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "reason": "JS render (veri istemcide)"
+    },
     "6175751919463125781": {
       "id": 6175751919463125781,
       "kind": "engine",
@@ -27049,7 +27062,7 @@
       "nsfw": 1,
       "domain": "hentaislayer.net",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "JS_RENDER: Laravel+Livewire; seri linkleri HTML'de var ama detayda bolum listesi yok, home.js/app.js icinde /api yolu bulunamadi, livewire bileseni istemci tarafinda yukleniyor."
@@ -27100,7 +27113,7 @@
       "nsfw": 1,
       "domain": "hentai4free.net",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "READER_DUZELT: Madara; bolum sayfasindaki 6 img kapak onerileri, gercek sayfalar \"*-r2-data\" attribute undeki JSON icinde ({\"images\":[{\"src\":...}]) — img etiketi yok."
@@ -27209,7 +27222,7 @@
       "nsfw": 1,
       "domain": "traduccionesmoonlight.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "device_step": "list",
@@ -30359,7 +30372,7 @@
       "nsfw": 1,
       "domain": "hentai3z.cc",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "JS_RENDER: 18porncomic.com adresine yonlendiriyor; bolum gorselleri HTML de yok, script icinde base64 slides_p_path dizisinden atob ile uretiliyor."
@@ -30372,7 +30385,7 @@
       "nsfw": 1,
       "domain": "hentaicrot.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "READER_DUZELT: Her seri tek post galerisi; bolum listesi yok, gorseller detay sayfasinda entry-content icinde img.openhentai.net uzerinden geliyor."
@@ -31760,7 +31773,7 @@
       "nsfw": 1,
       "domain": "tonizu.top",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "device_step": "pages"
@@ -31799,7 +31812,7 @@
       "nsfw": 1,
       "domain": "toonily.me",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending",
       "reason": "JS_RENDER: toonily.me toontop.io adresine yonlendiriyor; curl cevabi 15KB, tek script ld+json SEO blogu, seri linki/kart yok."
@@ -35304,7 +35317,7 @@
       "nsfw": 1,
       "domain": "euphoriascan.com",
       "packages": [
-        "test"
+        "test18"
       ],
       "state": "pending"
     },

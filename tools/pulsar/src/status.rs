@@ -106,12 +106,15 @@ pub fn packages_for(e: &StatusEntry) -> Vec<String> {
     // ortamının erişimini anlatır; test havuzu cihaz testine hazırlık
     // havuzudur, kaynak cihazda hâlâ çalışıyor olabilir.
     if e.unreachable {
-        return vec!["test".to_string()];
+        // Ulaşılamayan 18+ kaynak da kendi test paketine gider.
+        return vec![if e.nsfw == 1 { "test18" } else { "test" }.to_string()];
     }
     if e.state != "active" || !e.sorun.is_empty() {
-        // Ayri test18 paketi yok: 18+ kaynak da test havuzuna duser, gorunen
-        // adinda " [18+]" etiketi tasir (istemci suzgeci icin).
-        return vec!["test".to_string()];
+        // Test havuzu 18+ için ayrı pakete gider: yetişkin kaynak normal test
+        // paketinde kalırsa istemcinin içerik süzgeci onu "Manga" sekmesinde
+        // gösteriyor (kullanıcı gözlemi, 2026-11-19). test18 manifestinde
+        // nsfw=1 olduğu için "Yetişkin" altında listelenir.
+        return vec![if e.nsfw == 1 { "test18" } else { "test" }.to_string()];
     }
     // Aktif kayıt paketsiz bırakılmaz: kapali işareti nedeniyle base paket
     // atlanınca state "active" + packages [] kalıyordu (jiangzaitoon).
