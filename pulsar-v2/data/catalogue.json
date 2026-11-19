@@ -2658,8 +2658,8 @@
       "config": {
         "engine": "madara",
         "listPath": "/manga",
-        "itemSelector": "div.page-item-detail, div.manga",
-        "chapterSelector": "li.wp-manga-chapter, div.chapter-item",
+        "itemSelector": "div.manga-item-grid",
+        "chapterSelector": "div.chapter-item",
         "readerSelector": "div.page-break img, div.reading-content img",
         "baseUrl": "https://ruhmanga.com"
       },
@@ -2671,7 +2671,8 @@
         "keiyoushi_index",
         "local_tr",
         "nyora_datadriven"
-      ]
+      ],
+      "reason": "bolumler uye/coin kilitli"
     },
     {
       "id": "monomanga.com.tr",
@@ -4995,7 +4996,8 @@
       "selector_verified": true,
       "origins": [
         "auto_scan_2026"
-      ]
+      ],
+      "reason": "govde 4097 baytta kesik; liste ucu yok (JS render)"
     },
     {
       "id": "trwebtoon.com",
@@ -5882,7 +5884,8 @@
       "selector_verified": true,
       "origins": [
         "miguel_2026"
-      ]
+      ],
+      "reason": "origin kapali (522)"
     },
     {
       "id": "incase.buttsmithy.com",
@@ -8255,7 +8258,7 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
+        "itemSelector": "div.page-item-detail.manga",
         "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": "",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
@@ -12250,7 +12253,9 @@
       "selector_verified": true,
       "origins": [
         "device_fix_2026"
-      ]
+      ],
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     {
       "id": "xoxocomic.com",

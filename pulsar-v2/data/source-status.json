@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T10:17:29Z",
+  "generated": "2026-11-19T10:51:16Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -6745,24 +6745,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "ruhmanga.com",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T22:49:58Z"
-      },
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "yerel harness (list/chapters/pages>0)",
-        "at": "2026-11-17T22:49:58Z"
-      }
+        "detail": "bolumler uye/coin kilitli",
+        "at": "2026-11-19T10:50:55Z"
+      },
+      "reason": "bolumler uye/coin kilitli"
     },
     "2145489765485420150": {
       "id": 2145489765485420150,
@@ -8673,25 +8665,10 @@
       "lang": "all",
       "nsfw": 0,
       "domain": "lermangaonline.com.br",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness (list/chapters/pages>0)",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "device_step": "details"
+      "packages": [],
+      "state": "engelli",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "2683798939323503291": {
       "id": 2683798939323503291,
@@ -11186,24 +11163,16 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "deatte5.com",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T18:44:56Z"
-      },
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "yerel harness (list/chapters/pages>0)",
-        "at": "2026-11-17T18:44:56Z"
-      }
+        "detail": "origin kapali (522)",
+        "at": "2026-11-19T10:50:55Z"
+      },
+      "reason": "origin kapali (522)"
     },
     "3678974139357715977": {
       "id": 3678974139357715977,
@@ -25290,10 +25259,8 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "toonizy.com",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -25302,12 +25269,13 @@
         "at": "2026-11-16T22:05:11.851283Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+        "detail": "govde 4097 baytta kesik; liste ucu yok (JS render)",
+        "at": "2026-11-19T10:50:55Z"
+      },
+      "reason": "govde 4097 baytta kesik; liste ucu yok (JS render)"
     },
     "5976152293871836317": {
       "id": 5976152293871836317,
@@ -29118,23 +29086,9 @@
       "nsfw": 1,
       "domain": "mrtenzus.com",
       "packages": [
-        "global18"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-16T22:05:11.851283Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "7039343362984733996": {
       "id": 7039343362984733996,
