@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T08:34:30Z",
+  "generated": "2026-11-19T10:17:29Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -80,24 +80,16 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "www.kuroimanga.com",
-      "packages": [
-        "tr18"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2143,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "pass",
-        "http_code": "200",
+        "status": "fail",
+        "http_code": "",
         "ms": 0,
-        "detail": "canli (olcum 2026-11-17) - testte",
-        "at": "2026-11-17T00:00:00Z"
-      }
+        "detail": "paket denetimi: uyelik duvari (login-required)",
+        "at": "2026-11-19T10:17:00Z"
+      },
+      "reason": "uyelik duvari (login-required)"
     },
     "1072133646472920863": {
       "id": 1072133646472920863,
@@ -485,24 +477,16 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "kuroimanga.site",
-      "packages": [
-        "tr18"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T19:55:06Z"
-      },
+      "packages": [],
+      "state": "failed",
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T19:55:06Z"
-      }
+        "detail": "paket denetimi: uyelik duvari (login-required)",
+        "at": "2026-11-19T10:17:00Z"
+      },
+      "reason": "uyelik duvari (login-required)"
     },
     "1255008208586588111": {
       "id": 1255008208586588111,
@@ -2716,11 +2700,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "vymanga.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "reason": "ESKI_DOMAIN: vymanga.net kapanmis, everythingmoe.com listeleme sayfasina 403 ile yonlendiriyor; alan adinda icerik yok."
+      "packages": [],
+      "state": "engelli",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "1377142050488011391": {
       "id": 1377142050488011391,
@@ -4922,32 +4905,6 @@
       },
       "device_step": "list"
     },
-    "1910862088388825602": {
-      "id": 1910862088388825602,
-      "kind": "catalogue",
-      "title": "Mangasusu",
-      "lang": "id",
-      "nsfw": 1,
-      "domain": "mangasusuku.com",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T22:00:11.445Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T22:00:11.445Z"
-      }
-    },
     "1922179475422564101": {
       "id": 1922179475422564101,
       "kind": "engine",
@@ -5088,7 +5045,8 @@
         "ms": 0,
         "detail": "",
         "at": "2026-11-17T10:02:04Z"
-      }
+      },
+      "reason": "JS render (veri istemcide)"
     },
     "198391761016384461": {
       "id": 198391761016384461,
@@ -10851,23 +10809,9 @@
       "nsfw": 1,
       "domain": "averisfansub.site",
       "packages": [
-        "tr18"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness (list/chapters/pages>0)",
-        "at": "2026-11-17T18:44:56Z"
-      }
+      "state": "pending"
     },
     "3495313140920905784": {
       "id": 3495313140920905784,
@@ -13994,12 +13938,17 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "cuutruyen.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS/SPA kabugu; 5000B alti, olculebilir liste yok.",
+        "at": "2026-11-19T10:17:00Z"
+      },
       "device_step": "covers",
-      "reason": "PAGE_API: Vue SPA; HTML 3 KB, kart yok. API data[] icinde id/name/cover_url donuyor; bolum ucunun tam yolu olculmedi."
+      "reason": "JS/SPA kabugu; 5000B alti, olculebilir liste yok."
     },
     "4005863284828173913": {
       "id": 4005863284828173913,
@@ -16863,12 +16812,10 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "manhastro.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list",
-      "reason": "JS_RENDER: Tamami istemci tarafli SPA; HTML'de tek satir baslik disinda veri yok."
+      "packages": [],
+      "state": "engelli",
+      "sorun": "cloudflare",
+      "reason": "CF: cerez gerekiyor (olculemedi)"
     },
     "4234253159748739998": {
       "id": 4234253159748739998,
@@ -17245,7 +17192,7 @@
         "test"
       ],
       "state": "pending",
-      "reason": "SERBEST: Site giriş zorunlu (title: Giriş Gerekli); REST türlerinde manga/series CPT yok, yalnız post/page açık."
+      "reason": "uyelik duvari"
     },
     "4250602956249399538": {
       "id": 4250602956249399538,
@@ -18330,12 +18277,17 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "soulscans.my.id",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS/SPA kabugu; 5000B alti, olculebilir liste yok.",
+        "at": "2026-11-19T10:17:00Z"
+      },
       "device_step": "list",
-      "reason": "JS_RENDER: soulscans.my.id -> v1.soulscans.asia; SvelteKit devalue verisi, bolum listesi istemcide."
+      "reason": "JS/SPA kabugu; 5000B alti, olculebilir liste yok."
     },
     "4401559982712521884": {
       "id": 4401559982712521884,
@@ -18376,12 +18328,17 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "sussytoons.wtf",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS/SPA kabugu; 5000B alti, olculebilir liste yok.",
+        "at": "2026-11-19T10:17:00Z"
+      },
       "device_step": "list",
-      "reason": "JS_RENDER: sussytoons.wtf vegitoons.black'a yonlendiriyor; Vite SPA + api host'u var ama GET uclari 404/405."
+      "reason": "JS/SPA kabugu; 5000B alti, olculebilir liste yok."
     },
     "4403913632851110207": {
       "id": 4403913632851110207,
@@ -18712,10 +18669,16 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhuatop.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Yonlendirme hedefi yanit vermiyor; karar kesin degil.",
+        "at": "2026-11-19T10:17:00Z"
+      },
+      "reason": "Yonlendirme hedefi yanit vermiyor; karar kesin degil."
     },
     "4423650343834209687": {
       "id": 4423650343834209687,
@@ -19479,12 +19442,17 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "doujindesu.tv",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS/SPA kabugu; 5000B alti, olculebilir liste yok.",
+        "at": "2026-11-19T10:17:00Z"
+      },
       "device_step": "list",
-      "reason": "JS_RENDER: Vite SPA; yalniz /api/admin/* uclari okunabildi, icerik ucu bulunamadi."
+      "reason": "JS/SPA kabugu; 5000B alti, olculebilir liste yok."
     },
     "4630567486225422818": {
       "id": 4630567486225422818,
@@ -19659,12 +19627,17 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "worldmanhwas.zone",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS/SPA kabugu; 5000B alti, olculebilir liste yok.",
+        "at": "2026-11-19T10:17:00Z"
+      },
       "device_step": "list",
-      "reason": "JS_RENDER: JS cookie/JWT yonlendirmesi (?ch=1&js=...), HTML govde yok."
+      "reason": "JS/SPA kabugu; 5000B alti, olculebilir liste yok."
     },
     "4674982239962707571": {
       "id": 4674982239962707571,
@@ -20079,12 +20052,17 @@
       "lang": "it",
       "nsfw": 0,
       "domain": "reader.powermanga.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS/JWT yonlendirme korumasi; https denemesi basarisiz oldugu icin http kullanildi.",
+        "at": "2026-11-19T10:17:00Z"
+      },
       "device_step": "list",
-      "reason": "JS_RENDER: Yanit JWTli ?ch=1&js=... adresine window.location.replace yapan JS kapisi; HTML icerik yok"
+      "reason": "JS/JWT yonlendirme korumasi; https denemesi basarisiz oldugu icin http kullanildi."
     },
     "4863545277450334415": {
       "id": 4863545277450334415,
@@ -23746,11 +23724,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "nyxmanga.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "reason": "SERBEST: 429 Too many requests; uc denemede de engel, HTML alinamadi."
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS/JWT yonlendirme korumasi; https denemesi basarisiz oldugu icin http kullanildi.",
+        "at": "2026-11-19T10:17:00Z"
+      },
+      "reason": "JS/JWT yonlendirme korumasi; https denemesi basarisiz oldugu icin http kullanildi."
     },
     "5791086280610013818": {
       "id": 5791086280610013818,
@@ -24355,11 +24338,16 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "v9.yaoi-chan.me",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "reason": "ESKI_DOMAIN: v9 v18.yaoi-chan.me adresine yonlendiriyor; v18 502 ve ardindan zaman asimi, config bos"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Yonlendirme hedefi yanit vermiyor; karar kesin degil.",
+        "at": "2026-11-19T10:17:00Z"
+      },
+      "reason": "Yonlendirme hedefi yanit vermiyor; karar kesin degil."
     },
     "5799459692662431969": {
       "id": 5799459692662431969,
@@ -28335,11 +28323,16 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "manwe.pro",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "reason": "JS_RENDER: Ozel JS guard sayfasi donuyor, HTML icerik yok."
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS bot korumasi (456); icerik olculmedi.",
+        "at": "2026-11-19T10:17:00Z"
+      },
+      "reason": "JS bot korumasi (456); icerik olculmedi."
     },
     "673270492982977468": {
       "id": 673270492982977468,
@@ -30376,24 +30369,6 @@
         "at": "2026-11-17T10:02:04Z"
       }
     },
-    "7521499901022487047": {
-      "id": 7521499901022487047,
-      "kind": "catalogue",
-      "title": "MangaManiacs",
-      "lang": "en",
-      "nsfw": 1,
-      "domain": "mangamaniacs.org",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
-        "at": "2026-11-17T20:49:42.366Z"
-      },
-      "reason": "JS_RENDER: Madara temasi; ilk istek 522 dondu, ikinci 200. Seri ve bolum anchor'lari SSR'de bos, manga id'si bulunamadigi icin admin-ajax dogrulanamadi."
-    },
     "7521631886315243057": {
       "id": 7521631886315243057,
       "kind": "engine",
@@ -30627,12 +30602,17 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lectorunitoon.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS/JWT yonlendirme korumasi; https denemesi basarisiz oldugu icin http kullanildi.",
+        "at": "2026-11-19T10:17:00Z"
+      },
       "device_step": "list",
-      "reason": "BULUNAMADI: IP bazli 429; govde 479 bayt, olcum yapilamadi."
+      "reason": "JS/JWT yonlendirme korumasi; https denemesi basarisiz oldugu icin http kullanildi."
     },
     "7614540930515269084": {
       "id": 7614540930515269084,
@@ -33427,11 +33407,16 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "adulto.seinagi.org.es",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "reason": "SERBEST: Yas kapisi: detay GET'te notice, POST adult=true + cerez sonrasi aciliyor; okuyucu olculmedi."
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "Site yanit vermiyor; sebep olculemedi.",
+        "at": "2026-11-19T10:17:00Z"
+      },
+      "reason": "Site yanit vermiyor; sebep olculemedi."
     },
     "8463275472233816534": {
       "id": 8463275472233816534,
@@ -35173,11 +35158,16 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "reaper-scans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "reason": "BULUNAMADI: Tum istekler Cowboy sunucusundan 429 Too many requests, olcum yapilamadi"
+      "packages": [],
+      "state": "failed",
+      "device": {
+        "status": "fail",
+        "http_code": "",
+        "ms": 0,
+        "detail": "JS/JWT yonlendirme korumasi; https denemesi basarisiz oldugu icin http kullanildi.",
+        "at": "2026-11-19T10:17:00Z"
+      },
+      "reason": "JS/JWT yonlendirme korumasi; https denemesi basarisiz oldugu icin http kullanildi."
     },
     "8996937872705098973": {
       "id": 8996937872705098973,

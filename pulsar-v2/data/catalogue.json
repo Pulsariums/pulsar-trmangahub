@@ -350,11 +350,7 @@
         "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": ".reading-content img",
         "searchUrl": "https://www.kuroimanga.site/?s={query}&post_type=wp-manga",
-        "searchMethod": "POST",
-        "searchBody": "title={query}",
-        "searchJsonItems": "data",
-        "searchJsonUrl": "url",
-        "searchJsonTitle": "title",
+        "searchMethod": "GET",
         "chapterAjaxUrl": "{url}ajax/chapters/"
       },
       "verified_by_user": true,
@@ -369,7 +365,8 @@
         "kuroimanga.com"
       ],
       "selector_verified": true,
-      "dead": false
+      "dead": false,
+      "reason": "uyelik duvari (login-required)"
     },
     {
       "id": "limonmanga.com",
@@ -632,7 +629,8 @@
         "keiyoushi_index",
         "local_tr"
       ],
-      "selector_verified": true
+      "selector_verified": true,
+      "not": "Arama /?s= sorguyu yok sayip ana sayfayi (92 kart) donduruyor. Gercek uc GET https://mangtto.com/api/manga/search?q={query} -> 200, hits[].document.{slug,title}; motor searchJsonUrl duz alan okudugu icin document.slug noktali yolunu cozemez, bu yuzden calisan arama config yazilmadi. /arama, /search, /manga?search= hepsi 404."
     },
     {
       "id": "mikrokosmosfb.blogspot.com",
@@ -653,7 +651,8 @@
       "origins": [
         "keiyoushi_index",
         "local_tr"
-      ]
+      ],
+      "reason": "JS render (veri istemcide)"
     },
     {
       "id": "mindafansub.dev",
@@ -2426,10 +2425,6 @@
         "readerSelector": "img.wp-manga-chapter-img",
         "searchUrl": "https://averisfansub.site/?s={query}&post_type=wp-manga",
         "searchMethod": "GET",
-        "searchBody": "title={query}",
-        "searchJsonItems": "data",
-        "searchJsonUrl": "url",
-        "searchJsonTitle": "title",
         "chapterAjaxUrl": "{url}ajax/chapters/"
       },
       "altDomains": [],

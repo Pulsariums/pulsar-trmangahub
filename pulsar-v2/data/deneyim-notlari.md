@@ -323,3 +323,18 @@ Bu turda düzeltilen kusurlar; her biri gerçek cihaz/harness hatasıyla tetikle
 - **Canlılık taraması DNS önbelleğine kanabilir.** Aynı domain bir turda `CANLI`, ertesi tur `ENOTFOUND` çıkabiliyor; `CANLI` kararı tam ölçümle doğrulanmadan `active` yapılmaz.
 - **`reason` aktarımı `dead` bloğuna bağlıydı → engelli kayıtların gerekçesi kayboluyordu → aktarım `dead` koşulundan çıkarıldı.**
 - **Bayat `reason` katalogdan geri gelir.** `pulsar status`, defterde silinen `reason`'ı `catalogue.json`'daki değerden yeniden yazar; promote sonrası etiketin gitmesi için **kaynak** alan (`catalogue.json`) temizlenir. Aynı mantık `sorun` için de geçerlidir.
+
+## 29. Paket denetimi dersleri (2026-11-19)
+
+tr18 ve test paketi denetimlerinden (ölçümlü) çıkan dersler; aynı desen yeni kaynakta görülünce önce buraya bakılır.
+
+- **Madara üye kilidi = ENGEL.** Bölüm HTML'inde `div.reading-content` içinde `content-blocked login-required` ve "Bu seriyi okumak için siteye üye olmalısınız" varsa sayfa listesi üretilemez; UA/Referer/çerez denemesi sonucu değiştirmedi (averis, kuroimanga; iki farklı seride de aynı).
+- **Madara aramasında POST + `searchBody=title={query}` + `searchJsonItems=data` yanlış.** Site HTML döndürüyor, JSON ayrıştırıcı boş liste üretiyor. Doğrusu: `searchMethod=GET`, `searchUrl=<host>/?s={query}&post_type=wp-manga`, `searchJson*` alanlarını sil.
+- **Blogger/ZeistManga liste ve bölümleri JS ile feed'den gelir.** `/p/manga-list.html` ve `/search/label/Seriler` içinde seri kartı 0; `feed.entry` iç içe ve etiket manga URL'inde yok, bu yüzden mevcut `listJsonItems`/`chapterApiItems` ile tüketilemez → JS_RENDER.
+- **Noktalı JSON yolu motorun dışında kalır.** Nuxt araması `hits[].document.slug` döndürüyor; motor `searchJsonUrl` alanını düz okuyor, `document.slug` yolunu çözemiyor. API 200 olsa da çalışan arama config'e yazılamaz (mangtto).
+- **Madara `chapterAjaxUrl` statik detayla aynı bölümleri veriyor** (averis 22/22, kuroimanga 28). Zararsız; kaldırmak zorunlu değil.
+- **Aynı Madara kurulumunun iki alan adı ayrı ayrı denenmez.** `kuroimanga.site` ile `www.kuroimanga.com` aynı tema/üye kilidi; ikisi de ENGEL, config denemesi sonucu değiştirmiyor.
+- **JS/JWT kapısı ölçüm yapılamaz demektir.** `window.location.replace(ch=1&js=...)`, `_guard/html.js` (456) veya ~480B "Loading" gövdesi dönen sitelerde HTML'de içerik yok; test paketinde bu desen birden çok kaynakta aynı sonucu verdi.
+- **SPA kabuğunda canlılık 200 parser durumu değildir.** Vite/SvelteKit/Vue kabuğu 5000B altında ve kart yok; ana sayfa 200 dönse de liste/ölçüm yok (DIGER: "sunucudan içerik gelmiyor").
+- **Cloudflare Turnstile/challenge ölçüm değil engeldir.** `Cf-Mitigated: challenge`, `challenges.cloudflare.com/turnstile` veya "Just a moment" → `sorun=cloudflare` + `reason="CF: ..."`; kayıt `engelli` olur, ne yayınlanır ne test edilir.
+- **Ana sayfada üye girişi de ENGEL'dir.** Başlık "Giriş Gerekli", form `wp-login.php` ise public içerik yok; parser ölçümü yapılamaz.
