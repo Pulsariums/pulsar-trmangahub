@@ -42,6 +42,44 @@ const kaynaklarLabel = kaynaklarTotal > 0
   ? `Tüm kaynaklar ve durum (${kaynaklarTotal})`
   : 'Tüm kaynaklar ve durum';
 
+// Durum defteri: active/failed/pending/engelli/dead sayilari
+const statusFile = readJson('pulsar-v2/data/source-status.json', {});
+const statusSources = statusFile.sources || statusFile || {};
+const stateCount = (s) => Object.values(statusSources).filter((v) => v && v.state === s).length;
+const activeCount = stateCount('active');
+const engelliCount = stateCount('engelli');
+const pendingCount = stateCount('pending');
+const deadCount = stateCount('dead');
+
+// Katalog: 18+ isaretli kaynak sayisi
+const catalogueFile = readJson('pulsar-v2/data/catalogue.json', []);
+const catalogueArr = Array.isArray(catalogueFile)
+  ? catalogueFile
+  : (catalogueFile.sources || catalogueFile.records || []);
+const nsfwSourceCount = catalogueArr.filter((r) => Number(r.nsfw || 0) === 1).length;
+
+// Son testler: data/testler/ altindaki en yeni 3 kayit
+const recentTests = (() => {
+  try {
+    return fs.readdirSync('pulsar-v2/data/testler')
+      .filter((f) => f.endsWith('.json'))
+      .sort()
+      .reverse()
+      .slice(0, 3)
+      .map((f) => {
+        const j = readJson(`pulsar-v2/data/testler/${f}`, {});
+        const stamp = f.slice(0, 15);
+        const scope = j.kapsam || j.kaynak || 'test';
+        const total = Number(j.total || (Array.isArray(j.sources) ? j.sources.length : 0));
+        const passed = Number(j.passed || 0);
+        const failed = Number(j.failed || 0);
+        return { stamp, scope, total, passed, failed };
+      });
+  } catch {
+    return [];
+  }
+})();
+
 const esc = (v) => String(v == null ? '' : v).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 const packageCards = packages.map((p) => {
@@ -275,7 +313,32 @@ const html = `<!doctype html>
       <div class="stat-num">${nsfwPackages}</div>
       <div class="stat-desc">18+ paket</div>
     </div>
+    <div class="stat-card">
+      <div class="stat-num">${activeCount}</div>
+      <div class="stat-desc">çalışan kaynak</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">${nsfwSourceCount}</div>
+      <div class="stat-desc">18+ kaynak</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">${engelliCount}</div>
+      <div class="stat-desc">Cloudflare (engelli)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">${pendingCount}</div>
+      <div class="stat-desc">yeniden test bekleyen</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">${deadCount}</div>
+      <div class="stat-desc">kalıcı ölü</div>
+    </div>
   </div>
+
+  ${recentTests.length ? `<h2>Son testler</h2>
+  <div class="action-box">
+    ${recentTests.map((t) => `<p><span class="badge-v2">${esc(t.stamp)}</span> ${esc(String(t.scope))} · ${t.total} kaynak · <b>${t.passed}</b> geçti${t.failed ? ` · ${t.failed} düştü` : ''}</p>`).join('\n    ')}
+  </div>` : ''}
 
   <h2>Kurulum</h2>
   <div class="action-box">
