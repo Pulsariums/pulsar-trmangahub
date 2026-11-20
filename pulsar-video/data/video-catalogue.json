@@ -10,9 +10,16 @@
       "domain": "9anime.org.lv",
       "baseUrl": "https://9anime.org.lv",
       "engine": "video",
-      "status": "unmeasured",
-      "config": {},
-      "not": "Ana sayfa 200/256773b (2026-11-20). Ilk hedef; liste/detay/bolum/video olculmedi."
+      "status": "video_unresolved",
+      "config": {
+        "listPath": "/anime/",
+        "itemSelector": "div.bsx",
+        "titleAttr": "title",
+        "coverSelector": "img.ts-post-image",
+        "episodeSelector": ".eplister ul li a",
+        "hosterSelector": "iframe[src*='newplayer']"
+      },
+      "not": "Olculdu (2026-11-20): liste /anime/ 30 kart div.bsx; baslik a[title]; detay .eplister 18 bolum; bolumde iframe gogoanime.me.uk/newplayer.php. VIDEO COZULMEDI: gogo player JS ile kuruluyor, CloudStream jar'inda GogoHelper var ama ExtractorApi degil (getUrl yok) -> koprüyle cagrilamaz."
     },
     {
       "id": "gogoanime3.net",
