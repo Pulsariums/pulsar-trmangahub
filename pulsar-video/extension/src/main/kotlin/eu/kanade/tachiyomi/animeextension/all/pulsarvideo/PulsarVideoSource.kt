@@ -139,6 +139,13 @@ class PulsarVideoSource(
     override fun videoListRequest(hoster: Hoster): Request = req(hoster.hosterUrl)
 
     override fun videoListParse(response: Response, hoster: Hoster): List<Video> {
+        // 0) Host APK'sinda CloudStream cozucusu varsa onu kullan (Kototoro).
+        val extractor = config.optString("hosterExtractor", "").trim()
+        if (extractor.isNotBlank() && ExtractorBridge.available) {
+            val links = ExtractorBridge.resolveBlocking(extractor, hoster.hosterUrl, "$baseUrl/")
+            if (links.isNotEmpty()) return links.map { (u, q) -> Video(u, q) }
+        }
+
         val body = response.body?.string().orEmpty()
 
         // 1) Doğrudan akış (m3u8/mp4)
