@@ -59,8 +59,13 @@ class PulsarVideoSource(
             val a = el.selectFirst("a[href]") ?: return@mapNotNull null
             SAnime.create().apply {
                 setUrlWithoutDomain(a.absUrl("href").ifBlank { a.attr("href") })
-                title = el.selectFirst(config.optString("titleSelector", ""))?.text()
-                    ?: a.text().ifBlank { "?" }
+                val titleAttr = config.optString("titleAttr", "")
+                title = if (titleAttr.isNotBlank()) {
+                    a.attr(titleAttr).ifBlank { el.attr(titleAttr) }
+                } else {
+                    el.selectFirst(config.optString("titleSelector", ""))?.text()
+                        ?: a.text()
+                }.ifBlank { "?" }
                 thumbnail_url = el.selectFirst("img")?.let { img ->
                     img.absUrl("data-src").ifBlank { img.absUrl("src") }
                 }
