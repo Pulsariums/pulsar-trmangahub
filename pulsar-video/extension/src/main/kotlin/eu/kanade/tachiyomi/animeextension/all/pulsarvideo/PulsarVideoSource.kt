@@ -4,6 +4,7 @@ import android.text.Html
 import eu.kanade.tachiyomi.animesource.AnimeCatalogueSource
 import eu.kanade.tachiyomi.animesource.model.AnimeFilterList
 import eu.kanade.tachiyomi.animesource.model.AnimesPage
+import eu.kanade.tachiyomi.animesource.model.Hoster
 import eu.kanade.tachiyomi.animesource.model.SAnime
 import eu.kanade.tachiyomi.animesource.model.SEpisode
 import eu.kanade.tachiyomi.animesource.model.Video
@@ -114,18 +115,31 @@ class PulsarVideoSource(
         }.reversed()
     }
 
-    // ---- Video ------------------------------------------------------------
+    // ---- Video: bölüm -> hoster listesi -> hoster başına video ----
+    // Aniyomi v16 ABI'si hoster tabanlı çalışır:
+    //   hosterListParse -> List<Hoster>, videoListParse(response, hoster) -> List<Video>
 
-    override fun videoListRequest(episode: SEpisode): Request = req(episode.url)
+    override fun hosterListRequest(episode: SEpisode): Request = req(episode.url)
 
-    // Aniyomi 0.16 sezon listesi bekliyor; bu kaynaklarda sezon ayrımı yok.
-    override fun seasonListParse(response: Response): List<SAnime> = emptyList()
+    override fun hosterListParse(response: Response): List<Hoster> {
+        val doc = response.asJsoup()
+        val sel = config.optString("hosterSelector", "")
+        if (sel.isBlank()) return emptyList()
+        return doc.select(sel).mapNotNull { el ->
+            val a = if (el.tagName() == "a") el else el.selectFirst("a[href]") ?: return@mapNotNull null
+            val url = a.absUrl("href").ifBlank { a.attr("href") }
+            if (url.isBlank()) return@mapNotNull null
+            Hoster(url, a.text().ifBlank { "embed" })
+        }
+    }
 
-    override fun videoListParse(response: Response): List<Video> {
+    override fun videoListRequest(hoster: Hoster): Request = req(hoster.hosterUrl)
+
+    override fun videoListParse(response: Response, hoster: Hoster): List<Video> {
         val body = response.body?.string().orEmpty()
 
-        // 1) Doğrudan akış (m3u8/mp4) — HTML içinde geçiyorsa
-        val direct = Regex("(https?:[^\"'\\s]+\\.(?:m3u8|mp4)[^\"'\\s]*)").find(body)?.groupValues?.get(1)
+        // 1) Doğrudan akış (m3u8/mp4)
+        val direct = Regex("(https?:[^\"'\s]+\.(?:m3u8|mp4)[^\"'\s]*)").find(body)?.groupValues?.get(1)
         if (direct != null) return listOf(Video(direct, "auto"))
 
         // 2) iframe/embed
@@ -139,8 +153,8 @@ class PulsarVideoSource(
             val jsonText = Jsoup.parse(body).selectFirst(jsonSel)?.html().orEmpty()
             val arr = runCatching { JSONObject(jsonText).optJSONArray("sources") }.getOrNull()
             if (arr != null) {
-                return (0 until arr.length()).mapNotNull { i ->
-                    val o = arr.optJSONObject(i) ?: return@mapNotNull null
+                return (0 until arr.length()).mapNotNull { k ->
+                    val o = arr.optJSONObject(k) ?: return@mapNotNull null
                     val u = o.optString("file", o.optString("url", ""))
                     if (u.isBlank()) null else Video(u, o.optString("label", "auto"))
                 }
