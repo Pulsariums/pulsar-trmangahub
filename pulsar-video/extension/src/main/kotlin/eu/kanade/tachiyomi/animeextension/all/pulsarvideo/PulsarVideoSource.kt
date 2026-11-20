@@ -47,7 +47,7 @@ class PulsarVideoSource(
     override fun popularAnimeRequest(page: Int): Request {
         val path = config.optString("listPath", "/")
         val url = if (path.startsWith("http")) path else "$baseUrl$path"
-        return GET(if (page > 1) "$url${if (url.contains('?')) '&' else '?'}page=$page" else url)
+        return req(if (page > 1) "$url${if (url.contains('?')) '&' else '?'}page=$page" else url)
     }
 
     override fun popularAnimeParse(response: Response): AnimesPage {
@@ -75,14 +75,14 @@ class PulsarVideoSource(
         val tpl = config.optString("searchUrl", "")
         if (tpl.isBlank()) throw Exception("Arama desteklenmiyor")
         val url = tpl.replace("{query}", query).replace("{page}", page.toString())
-        return GET(if (url.startsWith("http")) url else "$baseUrl$url")
+        return req(if (url.startsWith("http")) url else "$baseUrl$url")
     }
 
     override fun searchAnimeParse(response: Response) = popularAnimeParse(response)
 
     // ---- Detay ------------------------------------------------------------
 
-    override fun animeDetailsRequest(anime: SAnime): Request = GET(anime.url)
+    override fun animeDetailsRequest(anime: SAnime): Request = req(anime.url)
 
     override fun animeDetailsParse(response: Response): SAnime {
         val doc = response.asJsoup()
@@ -95,7 +95,7 @@ class PulsarVideoSource(
 
     // ---- Bölümler ---------------------------------------------------------
 
-    override fun episodeListRequest(anime: SAnime): Request = GET(anime.url)
+    override fun episodeListRequest(anime: SAnime): Request = req(anime.url)
 
     override fun episodeListParse(response: Response): List<SEpisode> {
         val doc = response.asJsoup()
@@ -116,7 +116,10 @@ class PulsarVideoSource(
 
     // ---- Video ------------------------------------------------------------
 
-    override fun videoListRequest(episode: SEpisode): Request = GET(episode.url)
+    override fun videoListRequest(episode: SEpisode): Request = req(episode.url)
+
+    // Aniyomi 0.16 sezon listesi bekliyor; bu kaynaklarda sezon ayrımı yok.
+    override fun seasonListParse(response: Response): List<SAnime> = emptyList()
 
     override fun videoListParse(response: Response): List<Video> {
         val body = response.body?.string().orEmpty()
@@ -145,6 +148,11 @@ class PulsarVideoSource(
         }
         return emptyList()
     }
+
+    private fun req(url: String): Request = Request.Builder()
+        .url(if (url.startsWith("http")) url else "$baseUrl/${url.trimStart('/')}")
+        .headers(headers)
+        .build()
 
     private fun Response.asJsoup(): Document = Jsoup.parse(body?.string().orEmpty(), baseUrl)
 }
