@@ -235,7 +235,7 @@ class PulsarVideoSource(
                 val req = Request.Builder().url(url).header("Accept", "application/dns-json").build()
                 bootstrap.newCall(req).execute().use { resp ->
                     val body = resp.body?.string().orEmpty()
-                    val ips = Regex("\"data\"\s*:\s*\"([0-9.]+)\"")
+                    val ips = Regex("""\"data\"\s*:\s*\"([0-9.]+)\"""")
                         .findAll(body)
                         .mapNotNull { m -> runCatching { InetAddress.getByName(m.groupValues[1]) }.getOrNull() }
                         .toList()
