@@ -133,13 +133,16 @@ class PulsarVideoSource(
         }
     }
 
+    // Aniyomi v16 sezon listesi bekliyor; bu kaynaklarda sezon ayrimi yok.
+    override fun seasonListParse(response: Response): List<SAnime> = emptyList()
+
     override fun videoListRequest(hoster: Hoster): Request = req(hoster.hosterUrl)
 
     override fun videoListParse(response: Response, hoster: Hoster): List<Video> {
         val body = response.body?.string().orEmpty()
 
         // 1) Doğrudan akış (m3u8/mp4)
-        val direct = Regex("(https?:[^\"'\s]+\.(?:m3u8|mp4)[^\"'\s]*)").find(body)?.groupValues?.get(1)
+        val direct = Regex("""(https?:[^\"'\s]+\.(?:m3u8|mp4)[^\"'\s]*)""").find(body)?.groupValues?.get(1)
         if (direct != null) return listOf(Video(direct, "auto"))
 
         // 2) iframe/embed
