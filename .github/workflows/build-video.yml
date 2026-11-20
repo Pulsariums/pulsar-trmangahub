@@ -26,7 +26,11 @@ jobs:
           java-version: '17'
 
       - name: Android SDK
-        uses: android-actions/setup-android@v3
+        run: |
+          export ANDROID_HOME="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          echo "ANDROID_HOME=$ANDROID_HOME" >> $GITHUB_ENV
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platform-tools" "platforms;android-35" "build-tools;35.0.0" > /dev/null
 
       - name: Gradle cache
         uses: actions/cache@v4
