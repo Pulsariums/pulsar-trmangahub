@@ -1,0 +1,54 @@
+{
+  "note": "Video kaynak katalogu. config alanlari OLCULMEDEN yazilmaz; olcum yoksa bos kalir.",
+  "updated": "2026-11-20",
+  "sources": [
+    {
+      "id": "9anime.org.lv",
+      "name": "9Anime",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "9anime.org.lv",
+      "baseUrl": "https://9anime.org.lv",
+      "engine": "video",
+      "status": "unmeasured",
+      "config": {},
+      "not": "Ana sayfa 200/256773b (2026-11-20). Ilk hedef; liste/detay/bolum/video olculmedi."
+    },
+    {
+      "id": "gogoanime3.net",
+      "name": "GogoAnime",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "gogoanime3.net",
+      "baseUrl": "https://gogoanime3.net",
+      "engine": "video",
+      "status": "unmeasured",
+      "config": {},
+      "not": "302 -> yonlendirme; hedef alan adi olculmedi."
+    },
+    {
+      "id": "animepahe.com",
+      "name": "AnimePahe",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "animepahe.com",
+      "baseUrl": "https://animepahe.com",
+      "engine": "video",
+      "status": "unmeasured",
+      "config": {},
+      "not": "301 -> yonlendirme; hedef olculmedi."
+    },
+    {
+      "id": "allanime.day",
+      "name": "AllAnime",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "allanime.day",
+      "baseUrl": "https://allanime.day",
+      "engine": "video",
+      "status": "unmeasured",
+      "config": {},
+      "not": "301 -> yonlendirme; hedef olculmedi."
+    }
+  ]
+}
