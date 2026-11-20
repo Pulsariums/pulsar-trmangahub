@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "generated_at": "2026-11-17T17:51:06Z",
-  "total_count": 612,
+  "total_count": 626,
   "languages": [
     "tr"
   ],
@@ -13669,6 +13669,327 @@
         "readerSelector": "img#img_gallery_big",
         "searchUrl": "https://en.thehentai.net/?s={query}",
         "searchMethod": "GET"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "108read.com",
+      "name": "108Read",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "108read.com",
+      "baseUrl": "https://www.108read.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.imgseries",
+        "readerSelector": "div.entry-content img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "4khd.com",
+      "name": "4KHD",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "4khd.com",
+      "baseUrl": "https://www.4khd.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "li.wp-block-post",
+        "readerSelector": "div.entry-content img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "astralscans.site",
+      "name": "AstralScans",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "astralscans.site",
+      "baseUrl": "https://astralscans.site",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.series",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "ts_reader",
+        "pageJsonArray": "images",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "bacakomik.pics",
+      "name": "BacaKomik",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "bacakomik.pics",
+      "baseUrl": "https://bacakomik.pics",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": ".card",
+        "chapterScriptSelector": "script",
+        "chapterScriptContains": "chapterData",
+        "chapterJsonArray": "chapterData",
+        "chapterJsonSlugField": "url",
+        "chapterUrlTemplate": "{slug}",
+        "readerSelector": "img[data-wm=\"1\"]",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "baramangaonline.com",
+      "name": "Bara Manga Online",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "baramangaonline.com",
+      "baseUrl": "https://baramangaonline.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": ".post-inner",
+        "readerSelector": "img[border=\"0\"]",
+        "searchUrl": "https://baramangaonline.com/?s={query}",
+        "searchMethod": "GET",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "bestporncomix.com",
+      "name": "Best Porn Comix",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "bestporncomix.com",
+      "baseUrl": "https://bestporncomix.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/gallery/category/hentai-manga/",
+        "itemSelector": "article.post",
+        "readerSelector": "figure.pswp-gallery__item a",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "comics18.org",
+      "name": "Comics18",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "comics18.org",
+      "baseUrl": "https://comics18.org",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.wp-show-posts-inner",
+        "readerSelector": "div.entry-content img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "cutiecomics.com",
+      "name": "Cutie Comics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "cutiecomics.com",
+      "baseUrl": "https://cutiecomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.w25",
+        "readerSelector": "div.field-name-field-com-pages img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "de.fsicomics.com",
+      "name": "FSI Comics (DE)",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "de.fsicomics.com",
+      "baseUrl": "https://de.fsicomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.p-wrap.p-grid-1",
+        "readerSelector": ".entry-content img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "de.wporncomics.com",
+      "name": "WPornComics (DE)",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "de.wporncomics.com",
+      "baseUrl": "https://de.wporncomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.block-images-comix-set",
+        "readerSelector": "div.block-images-comix img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "doujins.com",
+      "name": "Doujins.com",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "doujins.com",
+      "baseUrl": "https://doujins.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.thumbnail-doujin",
+        "readerSelector": "div.gallery-page img",
+        "pageNextSelector": "a.image-next",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "e621.net",
+      "name": "e621",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "e621.net",
+      "baseUrl": "https://e621.net",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "posts?tags=rating%3Aexplicit",
+        "itemSelector": "article.thumbnail",
+        "readerSelector": "a.ptbr-etc-download",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "elitebabes.com",
+      "name": "Elite Babes",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "elitebabes.com",
+      "baseUrl": "https://www.elitebabes.com",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "/sort/newest/",
+        "itemSelector": "ul.list-gallery > li",
+        "readerSelector": "a[href*=\"cdn.elitebabes.com/content/\"]",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "en.girlstop.info",
+      "name": "GirlsTop",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "en.girlstop.info",
+      "baseUrl": "https://en.girlstop.info",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "/",
+        "itemSelector": "div.thumb",
+        "readerSelector": "a.fullimg",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
       },
       "verified_by_user": false,
       "origins": [
