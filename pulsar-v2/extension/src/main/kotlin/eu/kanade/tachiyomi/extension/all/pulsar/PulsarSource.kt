@@ -6,6 +6,7 @@ import eu.kanade.tachiyomi.source.model.Page
 import eu.kanade.tachiyomi.source.model.SChapter
 import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.source.online.HttpSource
+import okhttp3.Dns
 import okhttp3.Headers
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
@@ -17,6 +18,9 @@ import org.json.JSONArray
 import org.json.JSONObject
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
+import java.net.InetAddress
+import java.net.InetSocketAddress
+import java.net.Proxy
 import java.util.concurrent.TimeUnit
 
 class PulsarSource(
@@ -43,6 +47,50 @@ class PulsarSource(
     // Tarayicidan alinan ham cerez dizesi ("cf_clearance=...; __cf_bm=...").
     private val cookieHeader: String = config.optString("cookie", "").trim()
 
+    // ISP DPI/DNS engeli icin kaynak basina ag ayarlari:
+    //  proxyUrl      : "http://host:port" veya "socks5://host:port"
+    //  dnsOverHttps  : DoH ucu, or. "https://cloudflare-dns.com/dns-query"
+    private val proxyUrl: String = config.optString("proxyUrl", "").trim()
+    private val dohUrl: String = config.optString("dnsOverHttps", "").trim()
+
+    private fun proxyFromConfig(): Proxy? {
+        if (proxyUrl.isBlank()) return null
+        return try {
+            val uri = java.net.URI(proxyUrl)
+            val host = uri.host ?: return null
+            val scheme = uri.scheme.orEmpty().lowercase()
+            val port = if (uri.port > 0) uri.port else if (scheme.startsWith("socks")) 1080 else 8080
+            val type = if (scheme.startsWith("socks")) Proxy.Type.SOCKS else Proxy.Type.HTTP
+            Proxy(type, InetSocketAddress(host, port))
+        } catch (_: Exception) {
+            null
+        }
+    }
+
+    /** DoH ile A kaydi cozer; uç hata verirse sistem DNS'ine duser. */
+    private class DohDns(private val endpoint: String) : Dns {
+        private val bootstrap = OkHttpClient()
+        private val fallback = Dns.SYSTEM
+
+        override fun lookup(hostname: String): List<InetAddress> {
+            if (hostname == "localhost") return fallback.lookup(hostname)
+            return try {
+                val url = endpoint.trimEnd('/') + "?name=" + hostname + "&type=A"
+                val req = Request.Builder().url(url).header("Accept", "application/dns-json").build()
+                bootstrap.newCall(req).execute().use { resp ->
+                    val body = resp.body?.string().orEmpty()
+                    val ips = Regex("\"data\"\\s*:\\s*\"([0-9.]+)\"")
+                        .findAll(body)
+                        .mapNotNull { m -> runCatching { InetAddress.getByName(m.groupValues[1]) }.getOrNull() }
+                        .toList()
+                    if (ips.isNotEmpty()) ips else fallback.lookup(hostname)
+                }
+            } catch (_: Exception) {
+                fallback.lookup(hostname)
+            }
+        }
+    }
+
     override val supportsLatest: Boolean = true
 
     override val client: OkHttpClient by lazy {
@@ -50,6 +98,11 @@ class PulsarSource(
             .connectTimeout(15, TimeUnit.SECONDS)
             .readTimeout(20, TimeUnit.SECONDS)
             .followRedirects(true)
+            .apply {
+                // DPI/proxy: yalniz bu kaynak icin gecerli, digerlerini etkilemez.
+                proxyFromConfig()?.let { proxy(it) }
+                if (dohUrl.isNotBlank()) dns(DohDns(dohUrl))
+            }
             .apply { if (config.optBoolean("http1", false)) protocols(listOf(Protocol.HTTP_1_1)) }
             // Aralıklı 403 (Amanga CDN): GET için 5 deneme; HTTP/2 akış sıfırlaması
             // (Kuroi PROTOCOL_ERROR) gibi IOException için 2 deneme.
