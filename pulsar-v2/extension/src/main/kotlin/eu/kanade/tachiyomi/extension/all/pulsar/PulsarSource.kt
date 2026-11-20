@@ -52,6 +52,9 @@ class PulsarSource(
     //  dnsOverHttps  : DoH ucu, or. "https://cloudflare-dns.com/dns-query"
     private val proxyUrl: String = config.optString("proxyUrl", "").trim()
     private val dohUrl: String = config.optString("dnsOverHttps", "").trim()
+    // SNI/DPI atlatma: TLS ClientHello'yu parcalayarak gonder (VPN degil).
+    private val tlsFragment: Boolean = config.optBoolean("tlsFragment", false)
+    private val tlsFragmentSize: Int = config.optInt("tlsFragmentSize", 1).coerceIn(1, 64)
 
     private fun proxyFromConfig(): Proxy? {
         if (proxyUrl.isBlank()) return null
@@ -66,6 +69,14 @@ class PulsarSource(
             null
         }
     }
+
+    /** Host'un kendi guven zincirini kullan (sistem CA deposu). */
+    private fun defaultTrustManager(): javax.net.ssl.X509TrustManager? = runCatching {
+        val f = javax.net.ssl.TrustManagerFactory
+            .getInstance(javax.net.ssl.TrustManagerFactory.getDefaultAlgorithm())
+        f.init(null as java.security.KeyStore?)
+        f.trustManagers.filterIsInstance<javax.net.ssl.X509TrustManager>().firstOrNull()
+    }.getOrNull()
 
     /** DoH ile A kaydi cozer; uç hata verirse sistem DNS'ine duser. */
     private class DohDns(private val endpoint: String) : Dns {
@@ -102,6 +113,12 @@ class PulsarSource(
                 // DPI/proxy: yalniz bu kaynak icin gecerli, digerlerini etkilemez.
                 proxyFromConfig()?.let { proxy(it) }
                 if (dohUrl.isNotBlank()) dns(DohDns(dohUrl))
+                if (tlsFragment) {
+                    // DPI SNI'ya bakip baglantiyi kesiyorsa ClientHello'yu bol.
+                    defaultTrustManager()?.let { tm ->
+                        sslSocketFactory(TlsFragmentingSocketFactory(tlsFragmentSize), tm)
+                    }
+                }
             }
             .apply { if (config.optBoolean("http1", false)) protocols(listOf(Protocol.HTTP_1_1)) }
             // Aralıklı 403 (Amanga CDN): GET için 5 deneme; HTTP/2 akış sıfırlaması
