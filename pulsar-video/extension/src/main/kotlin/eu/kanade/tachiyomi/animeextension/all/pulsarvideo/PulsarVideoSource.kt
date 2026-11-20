@@ -9,8 +9,13 @@ import eu.kanade.tachiyomi.animesource.model.SAnime
 import eu.kanade.tachiyomi.animesource.model.SEpisode
 import eu.kanade.tachiyomi.animesource.model.Video
 import eu.kanade.tachiyomi.animesource.online.AnimeHttpSource
+import okhttp3.Dns
+import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
+import java.net.InetAddress
+import java.net.InetSocketAddress
+import java.net.Proxy
 import org.json.JSONObject
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
@@ -176,6 +181,70 @@ class PulsarVideoSource(
             }
         }
         return emptyList()
+    }
+
+    // ---- Ag katmani: DPI/DNS engeli icin (manga motoruyla ayni desen) ----
+    private val proxyUrl: String = config.optString("proxyUrl", "").trim()
+    private val dohUrl: String = config.optString("dnsOverHttps", "").trim()
+    private val tlsFragment: Boolean = config.optBoolean("tlsFragment", false)
+    private val tlsFragmentSize: Int = config.optInt("tlsFragmentSize", 1).coerceIn(1, 64)
+
+    override val client: OkHttpClient by lazy {
+        super.client.newBuilder()
+            .apply {
+                proxyFromConfig()?.let { proxy(it) }
+                if (dohUrl.isNotBlank()) dns(VideoDohDns(dohUrl))
+                if (tlsFragment) {
+                    defaultTrustManager()?.let { tm ->
+                        sslSocketFactory(TlsFragmentingSocketFactory(tlsFragmentSize), tm)
+                    }
+                }
+            }
+            .build()
+    }
+
+    private fun proxyFromConfig(): Proxy? {
+        if (proxyUrl.isBlank()) return null
+        return try {
+            val uri = java.net.URI(proxyUrl)
+            val host = uri.host ?: return null
+            val scheme = uri.scheme.orEmpty().lowercase()
+            val port = if (uri.port > 0) uri.port else if (scheme.startsWith("socks")) 1080 else 8080
+            val type = if (scheme.startsWith("socks")) Proxy.Type.SOCKS else Proxy.Type.HTTP
+            Proxy(type, InetSocketAddress(host, port))
+        } catch (_: Exception) {
+            null
+        }
+    }
+
+    private fun defaultTrustManager(): javax.net.ssl.X509TrustManager? = runCatching {
+        val f = javax.net.ssl.TrustManagerFactory
+            .getInstance(javax.net.ssl.TrustManagerFactory.getDefaultAlgorithm())
+        f.init(null as java.security.KeyStore?)
+        f.trustManagers.filterIsInstance<javax.net.ssl.X509TrustManager>().firstOrNull()
+    }.getOrNull()
+
+    private class VideoDohDns(private val endpoint: String) : Dns {
+        private val bootstrap = OkHttpClient()
+        private val fallback = Dns.SYSTEM
+
+        override fun lookup(hostname: String): List<InetAddress> {
+            if (hostname == "localhost") return fallback.lookup(hostname)
+            return try {
+                val url = endpoint.trimEnd('/') + "?name=" + hostname + "&type=A"
+                val req = Request.Builder().url(url).header("Accept", "application/dns-json").build()
+                bootstrap.newCall(req).execute().use { resp ->
+                    val body = resp.body?.string().orEmpty()
+                    val ips = Regex("\"data\"\s*:\s*\"([0-9.]+)\"")
+                        .findAll(body)
+                        .mapNotNull { m -> runCatching { InetAddress.getByName(m.groupValues[1]) }.getOrNull() }
+                        .toList()
+                    if (ips.isNotEmpty()) ips else fallback.lookup(hostname)
+                }
+            } catch (_: Exception) {
+                fallback.lookup(hostname)
+            }
+        }
     }
 
     private fun req(url: String): Request = Request.Builder()
