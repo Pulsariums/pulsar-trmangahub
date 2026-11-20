@@ -39,6 +39,8 @@ dependencies {
     // Aniyomi eklenti API'si (AnimeSource, AnimeHttpSource, Video, Hoster, SAnime, SEpisode).
     // Sürüm, Aniyomi eklentilerinin kullandığı v16 ABI'sine sabit (sb-extensions-source ile aynı).
     compileOnly("com.github.aniyomiorg:extensions-lib:59418e2c2aab286dc654dde31e071aa82cb0ff7c")
+    // okhttp: Aniyomi lib compileOnly veriyor; derleme icin acikca eklenir (calisma aninda host saglar).
+    compileOnly("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("org.jsoup:jsoup:1.18.3")
     implementation("org.json:json:20240303")
 }
