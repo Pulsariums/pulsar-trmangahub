@@ -25,6 +25,8 @@ pub struct SourceMap {
 
 #[derive(Deserialize, Default)]
 pub struct CatEntry {
+    #[serde(default)] pub name: String,
+    #[serde(default)] pub nsfw: i32,
     #[serde(default)] pub domain: String,
     #[serde(default)] pub lang: String,
     #[serde(default)] pub sorun: String,
@@ -223,6 +225,20 @@ fn save(root: &Path, file: &StatusFile) -> Result<(), String> {
     std::fs::write(&path, text + "\n").map_err(|e| e.to_string())
 }
 
+/// PulsarSource.id / merge.rs::pulsar_id / emit_source_map.py ile birebir aynı hash.
+fn pulsar_id(key: &str) -> i64 {
+    let mut h: i64 = 1_125_899_906_842_597;
+    for ch in key.chars() {
+        h = h.wrapping_mul(31).wrapping_add(ch as i64);
+    }
+    h & i64::MAX
+}
+
+/// Kimlik anahtarı `www.` taşımaz (§28): alan adı küçük harfe indirilir.
+fn bare_domain(s: &str) -> String {
+    s.trim().to_lowercase().trim_start_matches("www.").to_string()
+}
+
 pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
     let map_path = root.join("pulsar-v2/repo/source_map.json");
     let text = std::fs::read_to_string(&map_path).map_err(|e| format!("{}: {e}", map_path.display()))?;
@@ -233,27 +249,51 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
     let mut manual: std::collections::HashMap<(String, String), String> = std::collections::HashMap::new();
     let mut dead: std::collections::HashSet<(String, String)> = std::collections::HashSet::new();
     let mut reasons: std::collections::HashMap<(String, String), String> = std::collections::HashMap::new();
+    // Kimlik kaynağı yalnız source_map.json'dı; harita CI'da (emit_source_map.py)
+    // yenilendiği için yeni katalog kaydı deftere hiç girmiyordu. Katalogdan id
+    // burada türetilir (PulsarSource.id ile aynı hash) ve yalnız bellekte kullanılır.
+    let mut derived: Vec<SourceEntry> = Vec::new();
     if let Ok(cat_text) = std::fs::read_to_string(&cat_path) {
         if let Ok(cat) = serde_json::from_str::<CatalogueFile>(&cat_text) {
             for c in cat.sources {
+                let domain = bare_domain(&c.domain);
+                let key = (domain.clone(), c.lang.to_lowercase());
                 if !c.sorun.is_empty() {
-                    manual.insert((c.domain.to_lowercase(), c.lang.to_lowercase()), c.sorun);
+                    manual.insert(key.clone(), c.sorun);
                 }
                 // Gerekçe, ölü işaretinden bağımsız taşınır: engelli (cloudflare)
                 // kayıt ölü değildir ama gerekçe metni defterde bulunmak zorunda.
                 if !c.reason.is_empty() {
-                    reasons.insert((c.domain.to_lowercase(), c.lang.to_lowercase()), c.reason);
+                    reasons.insert(key.clone(), c.reason);
                 }
                 if c.dead {
-                    dead.insert((c.domain.to_lowercase(), c.lang.to_lowercase()));
+                    dead.insert(key);
                 }
+                if domain.is_empty() {
+                    continue;
+                }
+                let lang = if c.lang.is_empty() { "all".to_string() } else { c.lang.to_lowercase() };
+                derived.push(SourceEntry {
+                    id: pulsar_id(&format!("pulsar/{domain}/{lang}")),
+                    kind: "catalogue".to_string(),
+                    name: c.name.clone(),
+                    title: c.name,
+                    lang,
+                    nsfw: c.nsfw,
+                    domain,
+                });
             }
         }
     }
     // Eklentinin çalışma anı filtresi: indeks/izin listesi bununla eşit olmalı.
     let (dead_sources, dead_hosts) = load_runtime_filters(root);
     let mut seen: std::collections::HashSet<String> = std::collections::HashSet::new();
-    for e in map.engine.into_iter().chain(map.catalogue) {
+    // Haritadaki id korunur; katalog verisi mevcut satırı ezmez, yalnız haritada
+    // olmayan kayıt birleşik kümeye katılır. retain(seen) bu birleşime göre çalışır.
+    let known: std::collections::HashSet<i64> =
+        map.engine.iter().chain(map.catalogue.iter()).map(|e| e.id).collect();
+    let extra = derived.into_iter().filter(|d| !known.contains(&d.id));
+    for e in map.engine.into_iter().chain(map.catalogue).chain(extra) {
         let key = e.id.to_string();
         seen.insert(key.clone());
         let s = file.sources.entry(key).or_insert_with(|| StatusEntry {
@@ -288,7 +328,7 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
         // kaynakları listeler; geçen kaynağın eski etiketi güncellenmediği için
         // cihazdan türetilen "sorun" bayat kalıyordu. Cihaz verisi saklanır.
         let sorun: String = manual
-            .get(&(e.domain.to_lowercase(), e.lang.to_lowercase()))
+            .get(&(bare_domain(&e.domain), e.lang.to_lowercase()))
             .cloned()
             .unwrap_or_default();
         // Bayat etiket cihaz/harness sonucunu ezmemeli: cihaz testini geçen
@@ -317,7 +357,7 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
         };
         // Katalogda ölçülmüş gerekçe deftere taşınır; cihaz/harness gerekçesi (dolu ise) önceliklidir.
         if s.reason.is_empty() {
-            if let Some(r) = reasons.get(&(e.domain.to_lowercase(), e.lang.to_lowercase())) {
+            if let Some(r) = reasons.get(&(bare_domain(&e.domain), e.lang.to_lowercase())) {
                 s.reason = r.clone();
             }
         }
@@ -328,7 +368,7 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
             s.reason = "CF: cloudflare".to_string();
         }
         // Ölü işareti kalıcıdır: ölçüm "DNS yok" dediyse status koşusu silmez.
-        s.dead = s.dead || dead.contains(&(e.domain.to_lowercase(), e.lang.to_lowercase()));
+        s.dead = s.dead || dead.contains(&(bare_domain(&e.domain), e.lang.to_lowercase()));
         s.kapali = if e.kind == "engine" {
             dead_sources.contains(&e.name)
         } else {
