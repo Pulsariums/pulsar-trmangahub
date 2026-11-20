@@ -13064,7 +13064,8 @@
         "listPath": "/",
         "itemSelector": "article.comic-card",
         "chapterSelector": "a[href$=\"/read\"]",
-        "readerSelector": "img[src*=\"azhentai.com/s/\"]"
+        "readerSelector": "img[src*=\"azhentai.com/s/\"]",
+        "singleChapter": true
       },
       "verified_by_user": false,
       "origins": [

@@ -700,7 +700,9 @@ class PulsarSource(
         // JSON API yolu gövdeyi apiChapters içinde tüketir; gövdeyi burada
         // okumadan önce ayrılmalı (OkHttp gövdesi tek okumalıktır).
         if (config.optString("chapterApiUrl", "").isNotBlank()) {
-            return apiChapters(response)
+            val apiList = apiChapters(response)
+            if (apiList.isNotEmpty()) return apiList
+            return singleChapterOrEmpty(response)
         }
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
@@ -744,7 +746,7 @@ class PulsarSource(
         // Bölümü olmayan seri (ör. yeni eklenmiş, "0 bölüm") kaynağı kırmamalı:
         // Mihon sözleşmesi boş liste döndürmektir. TANI2 kipi ölçüm için atmayı sürdürür.
         if (chapters.isEmpty()) {
-            return emptyList()
+            return singleChapterOrEmpty(response)
         }
 
         return chapters.map { ch ->
@@ -755,6 +757,25 @@ class PulsarSource(
                 date_upload = ch.dateUpload
             }
         }
+    }
+
+    // Tek bölümlü kaynak (singleChapter): galeri/booru tipi sitelerde (8muses,
+    // e621, elitebabes, girlstop, doujins.com, de.fsicomics, de.wporncomics)
+    // detay sayfası hem seri hem bölüm sayfasıdır; bölüm bağlantısı yoktur ve
+    // chapterListParse boş liste dönüyordu ("0 bölüm"). singleChapter açıksa
+    // serinin kendi adresi tek bölüm olarak döner; pageListParse değişmez,
+    // detay sayfasını readerSelector / pageScript* / pageApi* yoluyla ayrıştırır.
+    // Ayar kapalıyken (varsayılan) davranış eskisiyle birebir aynıdır: boş liste.
+    private fun singleChapterOrEmpty(response: Response): List<SChapter> {
+        if (!config.optBoolean("singleChapter", false)) return emptyList()
+        val label = config.optString("singleChapterName", "Bölüm").trim().ifBlank { "Bölüm" }
+        return listOf(
+            SChapter.create().apply {
+                url = relativize(response.request.url.toString())
+                this.name = label
+                chapter_number = 1f
+            },
+        )
     }
 
     // Pages
