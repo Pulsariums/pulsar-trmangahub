@@ -43,7 +43,7 @@ jobs:
       - name: Build video extension
         working-directory: pulsar-video/extension
         run: |
-          gradle --no-daemon :extension:assembleRelease \
+          gradle --no-daemon assembleRelease \
             -PpulsarVersionName="${{ inputs.versionName }}" \
             -PpulsarVersionCode="${{ inputs.versionCode }}"
 

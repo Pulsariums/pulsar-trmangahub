@@ -15,4 +15,3 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "pulsar-video"
-include(":extension")
