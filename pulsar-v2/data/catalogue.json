@@ -3012,7 +3012,7 @@
         "auto_scan_2026"
       ],
       "dead": false,
-      "reason": "LISTE_DUZELT: Okuyucu gorselleri sinifsiz <img>; container secicisi dogrulanmadi, wp-json/axn/v1/chapters/ ucu var."
+      "reason": ""
     },
     {
       "id": "arabtoons.net",
@@ -3498,7 +3498,7 @@
         "auto_scan_2026"
       ],
       "dead": false,
-      "reason": "JS_RENDER: Bolum listesi JS ile doluyor (items-block bos); /manga/2263_marie/1/ ve /vol1/1/ 404"
+      "reason": ""
     },
     {
       "id": "hentaiwebtoon.com",
@@ -3679,7 +3679,7 @@
         "auto_scan_2026"
       ],
       "dead": false,
-      "reason": "JS_RENDER: Liste ve bolum listesi HTML de; bolum sayfasi 0 img (Next.js, gorseller istemci tarafinda). Denenen: /api/* izi ve _next chunk adlarinda chapter/read gecen dosya bulunamadi."
+      "reason": ""
     },
     {
       "id": "kenscans.com",
@@ -3768,7 +3768,7 @@
         "auto_scan_2026"
       ],
       "dead": false,
-      "reason": "JS_RENDER: Qwik; detay q-data.json icindeki bolum dizisi obf _objs referanslariyla geliyor."
+      "reason": ""
     },
     {
       "id": "komiku.org",
@@ -4323,7 +4323,7 @@
       "origins": [
         "auto_scan_2026"
       ],
-      "reason": "JS_RENDER: Vite SPA; /manga/<id> listesi var ama bolum listesi istemcide, /api/* SPA index donuyor."
+      "reason": ""
     },
     {
       "id": "natomanga.com",
@@ -16926,7 +16926,8 @@
         "engine": "custom",
         "listPath": "/title/",
         "itemSelector": "div.page-item-detail",
-        "chapterSelector": "div.layl-chapters a"
+        "chapterSelector": "li.wp-manga-chapter a",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
       },
       "verified_by_user": false,
       "origins": [
@@ -16986,7 +16987,8 @@
       "config": {
         "listPath": "/comics",
         "itemSelector": "a[href^=\"/ver/\"]",
-        "chapterSelector": "a[href*=\"/capitulo-\"], a[href*=\"/chapter-\"]"
+        "chapterSelector": "a[href*=\"/capitulo-\"], a[href*=\"/chapter-\"]",
+        "readerSelector": "img[alt*=pagina]"
       },
       "verified_by_user": false,
       "origins": [
@@ -17085,7 +17087,7 @@
       "engine": "custom",
       "config": {
         "listPath": "/",
-        "itemSelector": "a[href*='/articles/']",
+        "itemSelector": "a.group.mx-auto",
         "chapterSelector": "div.grid.w-fit",
         "singleChapter": true,
         "searchUrl": "https://hentaipaw.com/articles/search?q={query}",
@@ -17296,10 +17298,11 @@
       "engine": "custom",
       "config": {
         "listPath": "/posts",
-        "itemSelector": "div.post-card",
+        "itemSelector": "article.post-card",
         "readerSelector": "a.fileThumb",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "chapterApiUrl": "{url}"
       },
       "verified_by_user": false,
       "origins": [
@@ -17343,7 +17346,8 @@
         "itemSelector": "ul.list-gallery li",
         "readerSelector": "a[data-fancybox=\"images\"]",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "chapterApiUrl": "{url}"
       },
       "verified_by_user": false,
       "origins": [
@@ -17406,7 +17410,8 @@
         "itemSelector": "li.thumbwook",
         "readerSelector": "a.rel-link",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "chapterSelector": "div[data-dd-content=\"nav-lang\"] a[data-lang=\"en\"]"
       },
       "verified_by_user": false,
       "origins": [
@@ -17428,7 +17433,8 @@
         "itemSelector": "a[href*=\"/pics/\"]",
         "readerSelector": "a.ss-image",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "chapterApiUrl": "{url}"
       },
       "verified_by_user": false,
       "origins": [
