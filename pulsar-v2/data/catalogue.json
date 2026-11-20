@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "generated_at": "2026-11-17T17:51:06Z",
-  "total_count": 582,
+  "total_count": 585,
   "languages": [
     "tr"
   ],
@@ -13002,6 +13002,69 @@
         "pageScriptSelector": "#readerarea",
         "pageJsonArray": "sources.0.images",
         "searchUrl": "?s={query}"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "177pica.com",
+      "name": "177Pica",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "177pica.com",
+      "baseUrl": "https://www.177pica.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.post",
+        "chapterSelector": "div.page-links a",
+        "readerSelector": "div.entry-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "4porncomic.com",
+      "name": "4PornComic",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "4porncomic.com",
+      "baseUrl": "https://4porncomic.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.latest-item",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": "div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "8muses.xxx",
+      "name": "8muses",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "8muses.xxx",
+      "baseUrl": "https://8muses.xxx",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.comic-card",
+        "chapterSelector": "a[href$=\"/read\"]",
+        "readerSelector": "img[src*=\"azhentai.com/s/\"]"
       },
       "verified_by_user": false,
       "origins": [
