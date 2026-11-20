@@ -239,11 +239,29 @@ fn bare_domain(s: &str) -> String {
     s.trim().to_lowercase().trim_start_matches("www.").to_string()
 }
 
+/// `merge`'in elediği katalog klonu kimlikleri. Bu id'ler APK'da yoktur
+/// (`merge-report.json` -> `dropped_ids`); deftere girmemeleri gerekir, aksi
+/// hâlde pending sayısı ve test paketi şişer (2026-11-20: pending 70 -> 187).
+fn load_dropped_ids(root: &Path) -> std::collections::HashSet<i64> {
+    let path = root.join("pulsar-v2/data/merge-report.json");
+    std::fs::read_to_string(&path)
+        .ok()
+        .and_then(|t| serde_json::from_str::<serde_json::Value>(&t).ok())
+        .and_then(|v| v.get("dropped_ids").and_then(|d| d.as_array()).cloned())
+        .unwrap_or_default()
+        .iter()
+        .filter_map(|v| v.as_i64())
+        .collect()
+}
+
 pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
     let map_path = root.join("pulsar-v2/repo/source_map.json");
     let text = std::fs::read_to_string(&map_path).map_err(|e| format!("{}: {e}", map_path.display()))?;
     let map: SourceMap = serde_json::from_str(&text).map_err(|e| format!("source_map.json: {e}"))?;
     let mut file = load(root);
+    // merge'in düşürdüğü klonlar APK'da yok; deftere eklenmezlerse retain
+    // önceki koşudan kalan dropped kayıtları kendiliğinden budar.
+    let dropped = load_dropped_ids(root);
     // Elle işaretli "sorun" alanları cihaz sonucundan önce gelir.
     let cat_path = root.join("pulsar-v2/data/catalogue.json");
     let mut manual: std::collections::HashMap<(String, String), String> = std::collections::HashMap::new();
@@ -292,7 +310,9 @@ pub fn ensure_all(root: &Path) -> Result<StatusFile, String> {
     // olmayan kayıt birleşik kümeye katılır. retain(seen) bu birleşime göre çalışır.
     let known: std::collections::HashSet<i64> =
         map.engine.iter().chain(map.catalogue.iter()).map(|e| e.id).collect();
-    let extra = derived.into_iter().filter(|d| !known.contains(&d.id));
+    let extra = derived
+        .into_iter()
+        .filter(|d| !known.contains(&d.id) && !dropped.contains(&d.id));
     for e in map.engine.into_iter().chain(map.catalogue).chain(extra) {
         let key = e.id.to_string();
         seen.insert(key.clone());
