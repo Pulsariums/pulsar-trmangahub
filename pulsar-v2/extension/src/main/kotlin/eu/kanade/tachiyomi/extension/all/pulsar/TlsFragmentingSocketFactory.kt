@@ -55,7 +55,7 @@ private class FragmentingSocket(private val inner: Socket, private val split: In
 
     override fun getOutputStream(): OutputStream = fragmentingOut
 
-    override fun getInputStream() = inner.getInputStream
+    override fun getInputStream() = inner.getInputStream()
     override fun close() = inner.close()
     override fun isClosed(): Boolean = inner.isClosed
     override fun isConnected(): Boolean = inner.isConnected
