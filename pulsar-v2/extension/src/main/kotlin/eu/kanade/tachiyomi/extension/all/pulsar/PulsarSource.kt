@@ -217,9 +217,12 @@ class PulsarSource(
     private fun jsonListParse(response: Response): MangasPage {
         val text = response.body?.string().orEmpty()
         val root = runCatching { JSONObject(text) }.getOrNull()
-            ?: return MangasPage(emptyList(), hasNextPage = false)
         val itemsKey = config.optString("listJsonItems", "")
-        val arr = if (itemsKey.isBlank()) root.optJSONArray("data") else root.optJSONArray(itemsKey)
+        // Alan yolu boş kaldığında kök dizi öğe listesidir: /wp-json/wp/v2/comic gibi
+        // uçlar gövdeyi doğrudan [ ... ] döndürüyor (vixenlogic). JSONObject yolu aynen durur.
+        val arr = root?.let { r ->
+            if (itemsKey.isBlank()) r.optJSONArray("data") else r.optJSONArray(itemsKey)
+        } ?: runCatching { JSONArray(text.trim()) }.getOrNull()
             ?: return MangasPage(emptyList(), hasNextPage = false)
         val titleKey = config.optString("listJsonTitle", "title")
         val slugKey = config.optString("listJsonUrlField", "slug")
@@ -311,7 +314,7 @@ class PulsarSource(
     private fun realImageUrl(raw: String?): String? {
         val u = raw?.trim().orEmpty()
         if (u.isEmpty()) return null
-        val abs = if (u.startsWith("http")) u else "$baseUrl/${u.trimStart('/')}"
+        val abs = absolute(u)
         if (!abs.contains("image-proxy")) return abs
         val enc = abs.substringAfter("url=", "").substringBefore('&')
         if (enc.isEmpty()) return abs
@@ -370,12 +373,16 @@ class PulsarSource(
     private fun apiChapters(response: Response): List<SChapter> {
         val text = response.body?.string().orEmpty()
         val itemsKey = config.optString("chapterApiItems", "data")
-        // chapterApiItems noktalı yol olabilir: "data.chapters".
-        var node: Any? = runCatching { JSONObject(text) }.getOrNull()
+        // chapterApiItems noktalı yol olabilir: "data.chapters". Gövde kök dizi ise
+        // alan yolu uygulanmaz, dizinin kendisi bölüm listesidir.
+        val rootObj = runCatching { JSONObject(text) }.getOrNull()
+        var node: Any? = rootObj
         for (part in itemsKey.split('.')) {
             node = (node as? JSONObject)?.opt(part)
         }
-        val arr = node as? JSONArray ?: return emptyList()
+        val arr = node as? JSONArray
+            ?: runCatching { JSONArray(text.trim()) }.getOrNull()
+            ?: return emptyList()
         val nameKey = config.optString("chapterApiFieldName", "name")
         val numKey = config.optString("chapterApiFieldNumber", "number")
         val urlKey = config.optString("chapterApiFieldUrl", "url")
@@ -488,15 +495,22 @@ class PulsarSource(
     private fun apiPages(response: Response): List<Page> {
         val text = response.body?.string().orEmpty()
         val root = runCatching { JSONObject(text) }.getOrNull()
-            ?: throw IllegalStateException(
+        // Gövde kök dizi olabilir (mimihentai items[] yerine doğrudan liste):
+        // o zaman alan yolu uygulanmaz, dizinin kendisi sayfa listesidir.
+        val rootArr = if (root == null) runCatching { JSONArray(text.trim()) }.getOrNull() else null
+        if (root == null && rootArr == null) {
+            throw IllegalStateException(
                 "TANI4 api url=${response.request.url} len=${text.length} ilk=${text.take(160)}",
             )
+        }
         // pageApiItems noktalı yol olabilir: "data.images".
         var node: Any? = root
-        for (part in config.optString("pageApiItems", "images").split('.')) {
-            node = (node as? JSONObject)?.opt(part)
+        if (root != null) {
+            for (part in config.optString("pageApiItems", "images").split('.')) {
+                node = (node as? JSONObject)?.opt(part)
+            }
         }
-        val arr = node as? org.json.JSONArray
+        val arr = node as? org.json.JSONArray ?: rootArr
             ?: throw IllegalStateException("TANI4 dizi yok: ${config.optString("pageApiItems")} url=${response.request.url}")
         val urlField = config.optString("pageApiFieldUrl", "")
         val out = ArrayList<Page>(arr.length())
@@ -507,7 +521,7 @@ class PulsarSource(
                 arr.optJSONObject(i)?.optString(urlField).orEmpty()
             }
             if (raw.isBlank()) continue
-            val u = if (raw.startsWith("http")) raw else "$baseUrl/${raw.trimStart('/')}"
+            val u = absolute(raw)
             out.add(Page(out.size, response.request.url.toString(), u))
         }
         return out
@@ -784,8 +798,9 @@ class PulsarSource(
             return qwikPages(response)
         }
         // API yanıtı HTML değil JSON belgesidir; gövdeyi tüketmeden ilk bayta bakılır.
+        // Kök dizi ([) de sayfa API'si olabilir; JSONObject yolu değişmeden durur.
         if (config.optString("pageApiUrl", "").isNotBlank() &&
-            response.peekBody(1).string().trimStart().startsWith("{")
+            response.peekBody(1).string().trimStart().let { it.startsWith("{") || it.startsWith("[") }
         ) {
             return apiPages(response)
         }

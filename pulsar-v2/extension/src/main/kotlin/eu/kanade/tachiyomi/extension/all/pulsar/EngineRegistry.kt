@@ -38,7 +38,7 @@ object EngineRegistry {
         for (a in doc.select("a[href]")) {
             val raw = a.attr("href").trim()
             if (raw.isEmpty() || raw.startsWith("#")) continue
-            val full = if (raw.startsWith("http")) raw else "$baseUrl/${raw.trimStart('/')}"
+            val full = absoluteUrl(raw, baseUrl)
             val afterScheme = full.substringAfter("://", full)
             val path = afterScheme.substringAfter('/', "")
                 .substringBefore('?').substringBefore('#').trim('/')
@@ -72,7 +72,11 @@ object EngineRegistry {
         return seen.values.toList()
     }
 
-    private fun absoluteUrl(u: String?, baseUrl: String): String {
+    // Göreli adres baseUrl'e göre mutlaklaştırılır; "//host/x" protokol-göreli
+    // adrestir ve https: ile tamamlanır. Eskiden birleştirme baseUrl + trimStart('/')
+    // yapıldığı için "https://site.com//host/x" üretiliyordu (wporncomics liste,
+    // wnacg okuyucu). Göreli→mutlak dönüşümlerinin tamamı bu tek noktadan geçer.
+    internal fun absoluteUrl(u: String?, baseUrl: String): String {
         if (u.isNullOrBlank()) return ""
         if (u.startsWith("http")) return u
         if (u.startsWith("//")) return "https:$u"
@@ -162,7 +166,7 @@ object EngineRegistry {
         for (a in doc.select("a[href]")) {
             val raw = a.attr("href").trim()
             if (raw.isEmpty() || raw.startsWith("#")) continue
-            val full = if (raw.startsWith("http")) raw else "$baseUrl/${raw.trimStart('/')}"
+            val full = absoluteUrl(raw, baseUrl)
             val path = full.substringAfter("://", full).substringAfter('/', "")
                 .substringBefore('?').substringBefore('#').trim('/')
             val parts = path.split('/')
@@ -198,7 +202,7 @@ object EngineRegistry {
             val raw = img.attr("data-src").ifBlank { img.attr("data-lazy-src") }
                 .ifBlank { img.attr("src") }.trim()
             if (raw.isEmpty()) continue
-            val full = if (raw.startsWith("http")) raw else "$baseUrl/${raw.trimStart('/')}"
+            val full = absoluteUrl(raw, baseUrl)
             val low = full.lowercase()
             if (low.contains("logo") || low.contains("icon") || low.contains("avatar") ||
                 low.contains("banner") || low.contains("favicon")
@@ -224,7 +228,7 @@ object EngineRegistry {
                 val linkEl = if (el.tagName() == "a" && el.hasAttr("href")) el else el.selectFirst("a[href]")
                 linkEl ?: return@runCatching null
                 val rawUrl = linkEl.attr("href")
-                val fullUrl = if (rawUrl.startsWith("http")) rawUrl else "$baseUrl/${rawUrl.trimStart('/')}"
+                val fullUrl = absoluteUrl(rawUrl, baseUrl)
                 // Kapak bağlantılarında metin boştur; başlık aria-label veya img alt'ta durur.
                 val title = el.selectFirst("h3, h2, h4, .title, a[title]")?.text()?.trim().orEmpty()
                     .ifBlank { linkEl.attr("title") }
@@ -238,14 +242,7 @@ object EngineRegistry {
                 // gerçek adresten al ve göreliyse mutlaklaştır.
                 // Kapak çıkarımı tek yerde: coverOf data-original/data-bg/srcset/
                 // background-image zincirini de geziyor ve 4 üst öğeye kadar iniyor.
-                val cover = coverOf(el)?.let { raw ->
-                    val u = raw.trim()
-                    when {
-                        u.startsWith("http") -> u
-                        u.startsWith("//") -> "https:$u"
-                        else -> "$baseUrl/${u.trimStart('/')}"
-                    }
-                }
+                val cover = coverOf(el)?.let { absoluteUrl(it, baseUrl) }
 
                 ParsedManga(title = title.trim(), url = fullUrl, coverUrl = cover)
             }.getOrNull()
@@ -286,7 +283,7 @@ object EngineRegistry {
                         .ifBlank { el.attr("data-url") }
                         .trim()
                     if (rawUrl.isEmpty() || rawUrl.startsWith("#")) return@runCatching null
-                    val fullUrl = if (rawUrl.startsWith("http")) rawUrl else "$baseUrl/${rawUrl.trimStart('/')}"
+                    val fullUrl = absoluteUrl(rawUrl, baseUrl)
                     val name = el.text().trim().ifBlank { el.attr("label").trim() }.ifBlank { rawUrl }
                     val match = chapterRegex.find(name)
                     val num = (match?.groupValues?.getOrNull(1)?.takeIf { it.isNotBlank() }
@@ -309,7 +306,7 @@ object EngineRegistry {
                 }
                 linkEl ?: return@runCatching null
                 val rawUrl = linkEl.attr("href")
-                val fullUrl = if (rawUrl.startsWith("http")) rawUrl else "$baseUrl/${rawUrl.trimStart('/')}"
+                val fullUrl = absoluteUrl(rawUrl, baseUrl)
                 // Kart bağlantılarında metin boş olabiliyor; ad aria-label/title'da durur.
                 val name = linkEl.text().ifBlank { linkEl.attr("aria-label") }
                     .ifBlank { linkEl.attr("title") }.ifBlank { el.text() }.trim()
@@ -337,6 +334,8 @@ object EngineRegistry {
             val uid = el.attr("uid").trim().ifBlank { null }
             val raw = el.attr("data-src").ifBlank { null }
                 ?: el.attr("data-lazy-src").ifBlank { null }
+                // mitaku: gerçek adres data-lazy'de, src ise spacer.gif.
+                ?: el.attr("data-lazy").ifBlank { null }
                 ?: el.attr("data-original").ifBlank { null }
                 ?: el.attr("src").ifBlank { null }
                 ?: el.attr("href").ifBlank { null }
@@ -353,7 +352,7 @@ object EngineRegistry {
                 return@mapNotNull pageUrlTemplate.replace("{uid}", uid)
             }
 
-            if (src.startsWith("http")) src else "$baseUrl/${src.trimStart('/')}"
+            absoluteUrl(src, baseUrl)
         }
         return if (items.isNotEmpty()) items else genericPages(doc, baseUrl)
     }
@@ -361,8 +360,10 @@ object EngineRegistry {
     // Bazı siteler sayfa görsellerini DOM'a koymuyor: inline `ts_reader.run` JSON'u
     // (nabicix), Qwik state (xcomic) gibi metin bloklarında duruyorlar. DOM'da aday
     // çıkmadığında ham HTML metninde mutlak/göreli görsel adresi arıyoruz.
+    // Göreli yol da yakalanır (myadultcomics: `let template` içinde books/1637/N.jpg);
+    // yanlış pozitife karşı adres en az bir "/" içermek zorunda (rawImages içinde).
     private val RAW_IMAGE = Regex(
-        """(?:"|\\"|=)((?:https?://|/)[^\s"'\\<>()]+?\.(?:webp|jpe?g|png|avif))""",
+        """(?:"|\\"|=)((?:https?://)?[^\s"'\\<>()]+?\.(?:webp|jpe?g|png|avif))""",
         RegexOption.IGNORE_CASE,
     )
 
@@ -370,6 +371,8 @@ object EngineRegistry {
         val seen = LinkedHashMap<String, String>()
         for (m in RAW_IMAGE.findAll(html)) {
             val u = m.groupValues[1].trimEnd(',', ']', '}', ';', ')')
+            // Tek parça dosya adı ("logo.png") görsel değildir: yol en az bir dizin taşır.
+            if (!u.contains('/')) continue
             val low = u.lowercase()
             if (low.contains("logo") || low.contains("icon") || low.contains("avatar") ||
                 low.contains("banner") || low.contains("favicon") || low.contains("badge") ||
@@ -383,7 +386,7 @@ object EngineRegistry {
                 Regex("""/ch[_-]?\d+/""").containsMatchIn(low) ||
                 Regex("""/manga_chapters?/""").containsMatchIn(low)
             if (!pageLike) continue
-            val full = if (u.startsWith("http")) u else "$baseUrl/${u.trimStart('/')}"
+            val full = absoluteUrl(u, baseUrl)
             seen[full] = full
         }
         return seen.keys.toList()
@@ -443,6 +446,8 @@ object EngineRegistry {
         if (rawUrl.length < 8) return
         val u = when {
             rawUrl.startsWith("http") -> rawUrl
+            // Protokol-göreli adres ("//cdn/x.jpg") urlBase'e eklenirse çift slash olur.
+            rawUrl.startsWith("//") -> "https:$rawUrl"
             urlBase.isBlank() -> rawUrl
             rawUrl.startsWith("/") -> urlBase.trimEnd('/') + rawUrl
             else -> urlBase.trimEnd('/') + "/" + rawUrl.trimStart('/')
@@ -535,6 +540,12 @@ object EngineRegistry {
 
     private fun numText(f: Float): String =
         if (f == f.toInt().toFloat()) f.toInt().toString() else f.toString()
+
+    // Gömülü JSON'da adres "https:\/\/site\/bolum\/1" biçiminde kaçışlı geliyor
+    // (bacakomik chapterData). Sayfa yolunda addPageUrl bunu çözüyor; bölüm
+    // yolunda çözülmediği için motor "https://site/https:\/\/..." kuruyordu.
+    private fun unescapeUrl(s: String): String =
+        s.replace("\\/", "/").replace("\\u002F", "/").replace("\\u002f", "/")
 
     private fun jsonUnescape(s: String): String {
         if (!s.contains('\\')) return s
@@ -687,7 +698,7 @@ object EngineRegistry {
                 "\"?${Regex.escape(numberField)}\"?\\s*:\\s*(?:\\\$R\\[\\d+\\]\\s*=\\s*)?(\\d+(?:\\.\\d+)?)",
             ).findAll(region).map { it.groupValues[1] }.toList()
             for (i in slugs.indices) {
-                val slug = slugs[i]
+                val slug = unescapeUrl(slugs[i])
                 val num = numbers.getOrNull(i)?.toFloatOrNull() ?: 0f
                 val url = urlTemplate.replace("{series}", series).replace("{slug}", slug).replace("{number}", numText(num))
                 out.add(ParsedChapter(name = "Bölüm " + numText(num), url = url, chapterNumber = num, dateUpload = 0L))
