@@ -1,0 +1,51 @@
+name: Build Pulsar Video (Aniyomi eklentisi)
+
+# Manga paketlerinden bağımsız: yalnız pulsar-video/extension derlenir.
+# Manuel tetiklenir; artefakt commit etmez (önce derleme/ABI doğrulaması).
+on:
+  workflow_dispatch:
+    inputs:
+      versionName:
+        description: 'versionName (<extLib>.<patch>)'
+        required: false
+        default: '1.0.1'
+      versionCode:
+        description: 'versionCode'
+        required: false
+        default: '1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Gradle cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: pulsar-video-gradle-${{ hashFiles('pulsar-video/extension/**/*.kts') }}
+
+      - name: Build video extension
+        working-directory: pulsar-video/extension
+        run: |
+          gradle --no-daemon :extension:assembleRelease \
+            -PpulsarVersionName="${{ inputs.versionName }}" \
+            -PpulsarVersionCode="${{ inputs.versionCode }}"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: pulsar-video-apk
+          path: pulsar-video/extension/build/outputs/apk/release/*.apk
+          if-no-files-found: error
