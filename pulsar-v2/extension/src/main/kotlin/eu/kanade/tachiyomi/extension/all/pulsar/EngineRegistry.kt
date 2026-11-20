@@ -39,6 +39,7 @@ object EngineRegistry {
             val raw = a.attr("href").trim()
             if (raw.isEmpty() || raw.startsWith("#")) continue
             val full = absoluteUrl(raw, baseUrl)
+            if (!isOwnSiteLink(full, baseUrl)) continue
             val afterScheme = full.substringAfter("://", full)
             val path = afterScheme.substringAfter('/', "")
                 .substringBefore('?').substringBefore('#').trim('/')
@@ -81,6 +82,47 @@ object EngineRegistry {
         if (u.startsWith("http")) return u
         if (u.startsWith("//")) return "https:$u"
         return baseUrl.trimEnd('/') + "/" + u.trimStart('/')
+    }
+
+    // Galeri detay sayfalarinda paylasim/reklam baglantilari bolum adayi
+    // saniliyordu (blogger.com/share-post, facebook.com/people/..., t.me
+    // promosyonu, x.com). Bunlar hicbir zaman bolum ya da manga karti degildir.
+    private val PROMO_HOSTS = setOf(
+        "t.me", "telegram.me", "wa.me", "facebook.com", "twitter.com", "x.com",
+        "blogger.com", "blogspot.com", "pinterest.com", "reddit.com", "discord.gg",
+        "youtube.com", "patreon.com",
+    )
+
+    private fun hostOf(url: String): String? {
+        val rest = url.substringAfter("://", "")
+            .substringBefore('/').substringBefore('?').substringBefore('#')
+        return rest.substringBefore(':').lowercase().trimEnd('.').ifEmpty { null }
+    }
+
+    // Son iki etiket (kayitli alan adi) karsilastirilir: cdn.<site> ile
+    // <site> ayni sitedir, <baska>.com degildir.
+    private fun registrableDomain(host: String): String {
+        val parts = host.split('.').filter { it.isNotEmpty() }
+        return if (parts.size <= 2) host else parts.takeLast(2).joinToString(".")
+    }
+
+    // <host> <promo> host'unun kendisi ya da alt alan adi mi.
+    private fun isPromoHost(host: String): Boolean =
+        PROMO_HOSTS.any { host == it || host.endsWith(".$it") }
+
+    // Mutlak adreste host bu sayfanin sitesine ait degilse aday degildir.
+    // Goreli adresler absoluteUrl'den buraya hep baseUrl host'uyla gelir.
+    // Kendi sitesi her zaman kabul edilir: kaynak blogspot/wordpress gibi
+    // paylasimli bir alan adinda bariniyor olabilir (546 blogspot kaynagi var),
+    // bu yuzden promo listesi ancak yabanci host'ta devreye girer.
+    private fun isOwnSiteLink(full: String, baseUrl: String): Boolean {
+        val host = hostOf(full) ?: return false
+        val base = hostOf(baseUrl) ?: return !isPromoHost(host)
+        // Ayni host, alt alan adi ya da ust alan adi.
+        if (host == base || host.endsWith(".$base") || base.endsWith(".$host")) return true
+        if (isPromoHost(host)) return false
+        // Kalan: ayni kayitli alan adinin kardes alt alan adlari.
+        return registrableDomain(host) == registrableDomain(base)
     }
 
     // Kart linkinin kendi içinde <img> yoksa en yakın 4 üst öğeye kadar bak.
@@ -167,6 +209,7 @@ object EngineRegistry {
             val raw = a.attr("href").trim()
             if (raw.isEmpty() || raw.startsWith("#")) continue
             val full = absoluteUrl(raw, baseUrl)
+            if (!isOwnSiteLink(full, baseUrl)) continue
             val path = full.substringAfter("://", full).substringAfter('/', "")
                 .substringBefore('?').substringBefore('#').trim('/')
             val parts = path.split('/')
