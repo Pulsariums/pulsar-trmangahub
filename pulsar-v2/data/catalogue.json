@@ -14355,7 +14355,7 @@
       "engine": "custom",
       "config": {
         "listPath": "/",
-        "itemSelector": "div.thumb",
+        "itemSelector": "div.inner_thumb > a[href^=\"/gallery/\"]",
         "chapterSelector": "div#thumbs_gallery_div a[href^=\"/view/\"]",
         "readerSelector": "div.gview img"
       },
@@ -14420,7 +14420,8 @@
         "listPath": "/",
         "itemSelector": "div.thumb-conteudo",
         "singleChapter": true,
-        "readerSelector": "div.post-texto img"
+        "readerSelector": "ul.post-fotos img",
+        "listExcludeUrl": "t[.]me"
       },
       "verified_by_user": false,
       "origins": [
@@ -14595,7 +14596,7 @@
       "engine": "custom",
       "config": {
         "listPath": "/",
-        "itemSelector": ".thumb-conteudo",
+        "itemSelector": "div.thumb-conteudo:not(.rod-native-legacy-simple-card)",
         "readerSelector": "a[href*=\"/galeria?\"] img",
         "singleChapter": true,
         "singleChapterName": "Galeri"
@@ -14617,7 +14618,7 @@
       "engine": "custom",
       "config": {
         "listPath": "/",
-        "itemSelector": "article.hz-gallery-card",
+        "itemSelector": "a.hz-gallery-card__cover",
         "chapterSelector": "a[href^=\"/g/\"]",
         "readerSelector": "img#readerImg"
       },
@@ -14681,10 +14682,13 @@
       "engine": "custom",
       "config": {
         "listPath": "/",
-        "itemSelector": "div.card",
-        "readerSelector": "#hm-post-body img",
+        "itemSelector": "article.card a.lanzador[rel=bookmark]",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "pages=[",
+        "pageJsonArray": "pages",
+        "pageScriptFirst": "1"
       },
       "verified_by_user": false,
       "origins": [
@@ -14748,7 +14752,9 @@
         "listPath": "/",
         "itemSelector": "div.post-outer",
         "readerSelector": "div.post-body img",
-        "singleChapter": true
+        "singleChapter": true,
+        "chapterApiUrl": "{id}",
+        "chapterApiIdPattern": "^(.+)$"
       },
       "verified_by_user": false,
       "origins": [
@@ -14767,9 +14773,9 @@
       "engine": "custom",
       "config": {
         "listPath": "/",
-        "itemSelector": "div.manga-list-2-cover",
-        "chapterSelector": "a.chapteritem",
-        "readerSelector": "#cp_img img"
+        "itemSelector": "div.mh-item",
+        "chapterSelector": "a[href^=\"/chapter/\"]",
+        "readerSelector": "div.comicpage img"
       },
       "verified_by_user": false,
       "origins": [
@@ -14810,9 +14816,11 @@
       "engine": "custom",
       "config": {
         "listPath": "/ai-porn/",
-        "itemSelector": "div.nrn-manga-card",
-        "readerSelector": "div.pswp-gallery__item a",
-        "singleChapter": true
+        "itemSelector": "article.nrn-manga-card",
+        "readerSelector": "figure.pswp-gallery__item a",
+        "singleChapter": true,
+        "chapterApiUrl": "{id}",
+        "chapterApiIdPattern": "^(/.+)$"
       },
       "verified_by_user": false,
       "origins": [
@@ -14831,9 +14839,11 @@
       "engine": "custom",
       "config": {
         "listPath": "/home/",
-        "itemSelector": "div.thumbnail",
-        "readerSelector": "a.gthumb img",
-        "singleChapter": true
+        "itemSelector": "div.thumb div.inner_thumb",
+        "readerSelector": "div.gthumb img",
+        "singleChapter": true,
+        "chapterApiUrl": "{id}",
+        "chapterApiIdPattern": "^(.+)$"
       },
       "verified_by_user": false,
       "origins": [
@@ -15377,7 +15387,9 @@
         "listPath": "/",
         "itemSelector": "ul.oceanwp-recent-posts li",
         "readerSelector": ".entry-content img",
-        "singleChapter": true
+        "singleChapter": true,
+        "chapterApiUrl": "{id}",
+        "chapterApiIdPattern": "^(.+)$"
       },
       "verified_by_user": false,
       "origins": [

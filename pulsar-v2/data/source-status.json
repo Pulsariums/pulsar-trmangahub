@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T21:17:07Z",
+  "generated": "2026-11-20T21:34:52Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -417,23 +417,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "creepyscans.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 930,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1178311518096235600": {
       "id": 1178311518096235600,
@@ -532,9 +519,28 @@
       "nsfw": 1,
       "domain": "laviniafansub.my",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "1237001117306275691": {
       "id": 1237001117306275691,
@@ -544,9 +550,28 @@
       "nsfw": 1,
       "domain": "truyenhentai18.net",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "1247569578643189917": {
       "id": 1247569578643189917,
@@ -909,9 +934,28 @@
       "nsfw": 1,
       "domain": "pornhwaz.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "1344025467833272995": {
       "id": 1344025467833272995,
@@ -1472,24 +1516,10 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "indo18h.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 749,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 429"
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "1376779857536879651": {
       "id": 1376779857536879651,
@@ -2382,17 +2412,10 @@
       "lang": "vi",
       "nsfw": 0,
       "domain": "otruyenapi.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "DIGER: Sorry the website has been stopped (hosting askida)"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1376953945501351732": {
       "id": 1376953945501351732,
@@ -3092,9 +3115,28 @@
       "nsfw": 1,
       "domain": "lhentai.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "1461972285187368456": {
       "id": 1461972285187368456,
@@ -3482,9 +3524,28 @@
       "nsfw": 1,
       "domain": "raw18.chat",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "1606567655751730923": {
       "id": 1606567655751730923,
@@ -3557,24 +3618,10 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "mangaatrend.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1833,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 429"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1608872472050834065": {
       "id": 1608872472050834065,
@@ -3917,7 +3964,6 @@
         "test"
       ],
       "state": "pending",
-      "device_step": "list",
       "reason": "JS_RENDER: Vite SPA; /manga/<id> listesi var ama bolum listesi istemcide, /api/* SPA index donuyor."
     },
     "1608885648486679737": {
@@ -4265,9 +4311,28 @@
       "nsfw": 1,
       "domain": "damconuong.cool",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "1661514052199711684": {
       "id": 1661514052199711684,
@@ -4277,9 +4342,28 @@
       "nsfw": 1,
       "domain": "damconuong.tech",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "1665276189507377415": {
       "id": 1665276189507377415,
@@ -4516,9 +4600,28 @@
       "nsfw": 1,
       "domain": "mihentai.net",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "1721265675649746340": {
       "id": 1721265675649746340,
@@ -4763,17 +4866,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "tapas.io",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: bölüm listesi boş",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "chapters",
-      "reason": "harness: bölüm listesi boş"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1769466275926738671": {
       "id": 1769466275926738671,
@@ -4808,16 +4904,10 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "furyosociety.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
-        "at": "2026-11-17T22:00:11.445Z"
-      },
-      "reason": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "177546127898650049": {
       "id": 177546127898650049,
@@ -4904,16 +4994,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mycomiclist.org",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1800873507328534306": {
       "id": 1800873507328534306,
@@ -4967,16 +5051,10 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "animexnovel.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T18:04:21Z"
-      },
-      "reason": "LISTE_DUZELT: Okuyucu gorselleri sinifsiz <img>; container secicisi dogrulanmadi, wp-json/axn/v1/chapters/ ucu var."
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1847284941352855352": {
       "id": 1847284941352855352,
@@ -5011,23 +5089,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "luffymanga.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1056,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1851475661416641513": {
       "id": 1851475661416641513,
@@ -5383,17 +5448,10 @@
       "lang": "pt-br",
       "nsfw": 0,
       "domain": "mangaflix.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: bölüm listesi boş",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "chapters",
-      "reason": "harness: bölüm listesi boş"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "1956357450137632728": {
       "id": 1956357450137632728,
@@ -5670,24 +5728,10 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "kakuseiproject.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1113,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: https 429; http 000"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "2082357823776198444": {
       "id": 2082357823776198444,
@@ -5847,24 +5891,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "shadowmangas.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1856,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 429"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "2121035003907492335": {
       "id": 2121035003907492335,
@@ -6082,23 +6112,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangabuddy.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 3039,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "2134596002140611882": {
       "id": 2134596002140611882,
@@ -6169,24 +6186,10 @@
       "lang": "ar",
       "nsfw": 0,
       "domain": "mangaflame.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 5754,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 429"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "2134596090101458900": {
       "id": 2134596090101458900,
@@ -6836,23 +6839,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "manhuazone.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 839,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "2134641142651310933": {
       "id": 2134641142651310933,
@@ -7105,16 +7095,10 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "mangas-origines.fr",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
-        "at": "2026-11-17T22:00:11.445Z"
-      },
-      "reason": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "215920246128311181": {
       "id": 215920246128311181,
@@ -7418,17 +7402,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "outcatscans.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "list",
-      "reason": "harness: OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "2262035939890059842": {
       "id": 2262035939890059842,
@@ -7570,24 +7547,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "mi2manga.lat",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 719,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 429 rate limit"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "2324499604299296220": {
       "id": 2324499604299296220,
@@ -7728,23 +7691,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "arvencomics.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1193,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "2348345368685887611": {
       "id": 2348345368685887611,
@@ -7998,9 +7948,28 @@
       "nsfw": 1,
       "domain": "photos18.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "239208987752357590": {
       "id": 239208987752357590,
@@ -8041,9 +8010,28 @@
       "nsfw": 1,
       "domain": "truyenhentaiz.net",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "2424630468580042448": {
       "id": 2424630468580042448,
@@ -8194,24 +8182,10 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "fr-scan.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "http",
-        "http_code": "429",
-        "ms": 1142,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 429 rate limit"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "2424634935369356386": {
       "id": 2424634935369356386,
@@ -8220,24 +8194,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "futari.info",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 960,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 429 rate limit"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "2424635551658692670": {
       "id": 2424635551658692670,
@@ -8766,9 +8726,28 @@
       "nsfw": 1,
       "domain": "lgbtoon.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "2498280634065554519": {
       "id": 2498280634065554519,
@@ -8780,8 +8759,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "device_step": "search"
+      "state": "pending"
     },
     "2503547837178658661": {
       "id": 2503547837178658661,
@@ -8996,9 +8974,28 @@
       "nsfw": 1,
       "domain": "bryaoi.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "2571777675483697949": {
       "id": 2571777675483697949,
@@ -9977,9 +9974,28 @@
       "nsfw": 1,
       "domain": "rubycomics.net",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "2879504473479900451": {
       "id": 2879504473479900451,
@@ -11010,17 +11026,10 @@
       "lang": "zh",
       "nsfw": 0,
       "domain": "m.g-mh.org",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: bölüm listesi boş",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "chapters",
-      "reason": "harness: bölüm listesi boş"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "3149873241825014135": {
       "id": 3149873241825014135,
@@ -11068,9 +11077,28 @@
       "nsfw": 1,
       "domain": "vietmanhwa.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "3170876120391462040": {
       "id": 3170876120391462040,
@@ -14404,16 +14432,10 @@
       "lang": "vi",
       "nsfw": 1,
       "domain": "sayhentaii.art",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
-        "at": "2026-11-17T22:00:11.445Z"
-      },
-      "reason": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "386746428516970468": {
       "id": 386746428516970468,
@@ -14623,23 +14645,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "agrcomics.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1450,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "3935923762041444861": {
       "id": 3935923762041444861,
@@ -14690,23 +14699,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "anshscans.org",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1788,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "3940693385592629123": {
       "id": 3940693385592629123,
@@ -15357,17 +15353,10 @@
       "lang": "pt-br",
       "nsfw": 0,
       "domain": "br.comikey.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: java.lang.NullPointerException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "list",
-      "reason": "harness: OnNextValue: OnError while emitting onNext value: okhttp3.Response.class [zincir: java.lang.NullPointerException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4019165827542876336": {
       "id": 4019165827542876336,
@@ -15832,9 +15821,28 @@
       "nsfw": 1,
       "domain": "mangapoi.io",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "4064239081235390644": {
       "id": 4064239081235390644,
@@ -15965,17 +15973,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "mangamukai.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: bölüm listesi boş",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "chapters",
-      "reason": "JS_RENDER: Vite SPA; /manga/<id> listesi var ama bolum listesi istemcide, /api/* SPA index donuyor."
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4078338846313360890": {
       "id": 4078338846313360890,
@@ -16609,15 +16610,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "global.manga-up.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T17:02:29Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4151305193651054851": {
       "id": 4151305193651054851,
@@ -17352,24 +17348,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangacute.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2604,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "DIGER: https 200/475; http 200/474; www 200/479; JS yonlendirme kabugu"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4234251759237812220": {
       "id": 4234251759237812220,
@@ -18004,24 +17986,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "ikiru.one",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2364,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 429 Too Many Requests"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4234251773436828431": {
       "id": 4234251773436828431,
@@ -19402,8 +19370,7 @@
       "packages": [
         "test18"
       ],
-      "state": "pending",
-      "device_step": "covers"
+      "state": "pending"
     },
     "4388004460188794969": {
       "id": 4388004460188794969,
@@ -19597,8 +19564,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "device_step": "list"
+      "state": "pending"
     },
     "4395210536564133943": {
       "id": 4395210536564133943,
@@ -20598,17 +20564,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "mangaforfree.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: bölüm listesi boş",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "chapters",
-      "reason": "harness: bölüm listesi boş"
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "4534776694416829290": {
       "id": 4534776694416829290,
@@ -20939,16 +20898,10 @@
       "lang": "uk",
       "nsfw": 1,
       "domain": "hentaiukr.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "reason": "JS_RENDER: Bolum listesi JS ile doluyor (items-block bos); /manga/2263_marie/1/ ve /vol1/1/ 404"
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "4594533042031966534": {
       "id": 4594533042031966534,
@@ -21175,24 +21128,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "anigliscans.xyz",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 901,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 429 www"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4640464692758722000": {
       "id": 4640464692758722000,
@@ -21535,9 +21474,28 @@
       "nsfw": 1,
       "domain": "pt.wporncomics.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "4767926519332995781": {
       "id": 4767926519332995781,
@@ -21630,9 +21588,28 @@
       "nsfw": 1,
       "domain": "hentai-scantrad.org",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "4792169455926769323": {
       "id": 4792169455926769323,
@@ -21668,9 +21645,28 @@
       "nsfw": 1,
       "domain": "quadrinhosdesexo.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "4817715180724452145": {
       "id": 4817715180724452145,
@@ -21680,9 +21676,28 @@
       "nsfw": 1,
       "domain": "ortegascans.fr",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "4826777915948697530": {
       "id": 4826777915948697530,
@@ -21936,9 +21951,28 @@
       "nsfw": 1,
       "domain": "sayhentai.cx",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "4890247698976986192": {
       "id": 4890247698976986192,
@@ -22767,17 +22801,10 @@
       "lang": "es",
       "nsfw": 1,
       "domain": "lector.lolivault.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: bölüm listesi boş",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "chapters",
-      "reason": "harness: bölüm listesi boş"
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "5314502167647300169": {
       "id": 5314502167647300169,
@@ -23622,8 +23649,7 @@
       "packages": [
         "test"
       ],
-      "state": "pending",
-      "device_step": "chapters"
+      "state": "pending"
     },
     "5669394548456226211": {
       "id": 5669394548456226211,
@@ -23856,16 +23882,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "skymangas.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]",
-        "at": "2026-11-17T22:00:11.445Z"
-      },
-      "reason": "harness: OnNextValue: OnError while emitting onNextValue: okhttp3.Response.class [zincir: eu.kanade.tachiyomi.network.HttpException <- rx.exceptions.OnErrorThrowable$OnNextValue]"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5779873155655263510": {
       "id": 5779873155655263510,
@@ -26066,24 +26086,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "pawmanga.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 657,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 3 denemede de 429"
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "5792428731102945952": {
       "id": 5792428731102945952,
@@ -27059,16 +27065,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "otakuangel.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T17:02:29Z"
-      },
-      "device_step": "details"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5863442274693704416": {
       "id": 5863442274693704416,
@@ -27343,17 +27343,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "heavenmanga.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: bölüm listesi boş",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "chapters",
-      "reason": "harness: bölüm listesi boş"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "5955495849228102124": {
       "id": 5955495849228102124,
@@ -27910,9 +27903,28 @@
       "nsfw": 1,
       "domain": "hentai-origines.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "6050296713552241791": {
       "id": 6050296713552241791,
@@ -28200,9 +28212,28 @@
       "nsfw": 1,
       "domain": "octopusmanga.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "6077742911305400814": {
       "id": 6077742911305400814,
@@ -28520,9 +28551,28 @@
       "nsfw": 1,
       "domain": "orchisasia.org",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "6092332465391866560": {
       "id": 6092332465391866560,
@@ -28654,24 +28704,10 @@
       "lang": "pt",
       "nsfw": 0,
       "domain": "cerise.leitorweb.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 979,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: Too many requests"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6140054045009211441": {
       "id": 6140054045009211441,
@@ -28746,9 +28782,28 @@
       "nsfw": 1,
       "domain": "pornhwa.me",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "6160588945234145856": {
       "id": 6160588945234145856,
@@ -28783,24 +28838,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "readmanhua.net",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1930,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "DIGER: onw2026.gercekgiris.it.com adresine yonlendiriyor"
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "6164338948038702129": {
       "id": 6164338948038702129,
@@ -29220,24 +29261,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "freakscans.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "http",
-        "http_code": "429",
-        "ms": 1672,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 3 denemede de 429"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6279075557994312388": {
       "id": 6279075557994312388,
@@ -29334,16 +29361,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "silentquill.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "reason": "JS_RENDER: Liste ve bolum listesi HTML de; bolum sayfasi 0 img (Next.js, gorseller istemci tarafinda). Denenen: /api/* izi ve _next chunk adlarinda chapter/read gecen dosya bulunamadi."
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "6336788940996830678": {
       "id": 6336788940996830678,
@@ -29917,9 +29938,28 @@
       "nsfw": 1,
       "domain": "revistasequadrinhos.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "649707442460325031": {
       "id": 649707442460325031,
@@ -31544,9 +31584,28 @@
       "nsfw": 1,
       "domain": "ryukomik.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "6900920757230238366": {
       "id": 6900920757230238366,
@@ -31913,9 +31972,28 @@
       "nsfw": 1,
       "domain": "readmanga18.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "7032361130743410061": {
       "id": 7032361130743410061,
@@ -32269,9 +32347,28 @@
       "nsfw": 1,
       "domain": "moondaisyscans.pro",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "7116985965262136829": {
       "id": 7116985965262136829,
@@ -33535,16 +33632,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikav.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T18:44:56Z"
-      },
-      "reason": "JS_RENDER: Qwik; detay q-data.json icindeki bolum dizisi obf _objs referanslariyla geliyor."
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "7527354308421653932": {
       "id": 7527354308421653932,
@@ -34241,17 +34332,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "erofus.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: bölüm listesi boş",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "chapters",
-      "reason": "harness: bölüm listesi boş"
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "7799671096902519693": {
       "id": 7799671096902519693,
@@ -35556,24 +35640,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "scambertraslator.com",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 1070,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 429 too many requests"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "8142309703226172870": {
       "id": 8142309703226172870,
@@ -36363,24 +36433,10 @@
       "lang": "id",
       "nsfw": 1,
       "domain": "manhwaland.asia",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 2752,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "DIGER: 302; govde bos; hedef dogrulanmadi"
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "837602110029849050": {
       "id": 837602110029849050,
@@ -36897,15 +36953,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "mangamo.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T18:44:56Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "8461886736658207680": {
       "id": 8461886736658207680,
@@ -37791,15 +37842,10 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "dragonball-multiverse.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T17:02:29Z"
-      }
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "8657398763211315182": {
       "id": 8657398763211315182,
@@ -37948,9 +37994,28 @@
       "nsfw": 1,
       "domain": "revivalscans.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "8702583702495860859": {
       "id": 8702583702495860859,
@@ -37973,9 +38038,28 @@
       "nsfw": 1,
       "domain": "tw.xchina.co",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-20T21:34:30Z",
+        "steps": [
+          "list",
+          "chapters",
+          "pages"
+        ]
+      }
     },
     "8711315038175625549": {
       "id": 8711315038175625549,
@@ -38687,17 +38771,10 @@
       "lang": "zh",
       "nsfw": 0,
       "domain": "8comic.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: bölüm listesi boş",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "chapters",
-      "reason": "harness: bölüm listesi boş"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "8862253965650556151": {
       "id": 8862253965650556151,
@@ -39364,24 +39441,10 @@
       "lang": "ja",
       "nsfw": 0,
       "domain": "welovemanga.one",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 4817,
-        "detail": "",
-        "at": "2026-11-13T17:07:52Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "list: Liste boş",
-        "at": "2026-11-16T18:05:29Z"
-      },
-      "device_step": "list",
-      "reason": "RATE: 429 too many requests"
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "9086923194205935294": {
       "id": 9086923194205935294,
