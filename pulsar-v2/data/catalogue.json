@@ -13997,6 +13997,2886 @@
       ],
       "selector_verified": true,
       "dead": false
+    },
+    {
+      "id": "hdporncomics.com",
+      "name": "HD Porn Comics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hdporncomics.com",
+      "baseUrl": "https://hdporncomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.comic-image",
+        "readerSelector": "img.galleryImage",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentai-archive.com",
+      "name": "Hentai Archive (Doujinshi)",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentai-archive.com",
+      "baseUrl": "https://www.hentai-archive.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "category/hentai-recenti/doujinshi/",
+        "itemSelector": "article.post-card",
+        "readerSelector": "a.comic__page img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentai-cosplay-xxx.com",
+      "name": "Hentai Cosplay XXX",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentai-cosplay-xxx.com",
+      "baseUrl": "https://hentai-cosplay-xxx.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.image-list-item",
+        "pageScriptSelector": "script[type=\"application/ld+json\"]",
+        "pageJsonArray": "image",
+        "pageScriptFirst": "1",
+        "readerSelector": "div.icon-overlay img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentai-ita.net",
+      "name": "Hentai ITA (Fumetti)",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentai-ita.net",
+      "baseUrl": "https://hentai-ita.net/it",
+      "engine": "custom",
+      "config": {
+        "listPath": "category/fumetti-porno/",
+        "itemSelector": "article.masonry-blog-item",
+        "readerSelector": ".wpb_gallery img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentai-one.com",
+      "name": "Hentai One",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentai-one.com",
+      "baseUrl": "https://hentai-one.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.group[href^=\"/articles/\"]",
+        "readerSelector": "div.space-y-10 img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentai.yoga",
+      "name": "Hentai Yoga",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentai.yoga",
+      "baseUrl": "https://hentai.yoga",
+      "engine": "custom",
+      "config": {
+        "listPath": "comics",
+        "itemSelector": "div.gallery-card",
+        "chapterSelector": "a[href*=\"/gallery/open/\"]",
+        "readerSelector": "#imageSlider img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentai1.io",
+      "name": "Hentai1",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentai1.io",
+      "baseUrl": "https://hentai1.io",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": "div.page-break img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentai18.net",
+      "name": "Hentai18",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentai18.net",
+      "baseUrl": "https://hentai18.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.hx-card",
+        "chapterSelector": "div#chapter-list a.hx-ep",
+        "readerSelector": "div.hx-pages img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentai20.ink",
+      "name": "Hentai20",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentai20.ink",
+      "baseUrl": "https://www.hentai20.ink",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "div.chapter-item a",
+        "readerSelector": "div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentai20.lol",
+      "name": "Hentai20",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentai20.lol",
+      "baseUrl": "https://hentai20.lol",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.latest-item",
+        "chapterSelector": "ul.chapter-list a",
+        "readerSelector": "div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaicomics.biz",
+      "name": "Hentai Comics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaicomics.biz",
+      "baseUrl": "https://hentaicomics.biz",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.post",
+        "readerSelector": "div.single-post img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaidad.com",
+      "name": "HentaiDad",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaidad.com",
+      "baseUrl": "https://hentaidad.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.archive-card-link",
+        "readerSelector": "a.gallery-item",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaidatia.com",
+      "name": "Hentai da Tia",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaidatia.com",
+      "baseUrl": "https://hentaidatia.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.thumb-conteudo",
+        "readerSelector": "div.post-texto img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaideck.com",
+      "name": "Hentaideck",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaideck.com",
+      "baseUrl": "https://hentaideck.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.leftseries",
+        "chapterSelector": "a[href*=\"-chapter-\"]",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "ts_reader.run",
+        "pageJsonArray": "images"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaidesi.com",
+      "name": "Hentaidesi",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaidesi.com",
+      "baseUrl": "https://hentaidesi.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.leftseries",
+        "chapterSelector": "a[href*=\"-chapter-\"]",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "ts_reader.run",
+        "pageJsonArray": "images"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaienvy.com",
+      "name": "HentaiEnvy",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaienvy.com",
+      "baseUrl": "https://hentaienvy.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.hnv-gallery-card",
+        "chapterSelector": "div#js-thumbs-grid a[href^=\"/g/\"]",
+        "readerSelector": "div.hnv-reader__image img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaiera.com",
+      "name": "Hentaiera",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaiera.com",
+      "baseUrl": "https://hentaiera.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.thumb",
+        "chapterSelector": "div#thumbs_gallery_div a[href^=\"/view/\"]",
+        "readerSelector": "div.gview img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaifc.com",
+      "name": "HentaiFC",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaifc.com",
+      "baseUrl": "https://hentaifc.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.item.transition",
+        "readerSelector": "div.thumbs a[href*=\"#page\"] img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaifull.net",
+      "name": "HentaiFull",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaifull.net",
+      "baseUrl": "https://hentaifull.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.item",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": "img.lazy"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaifusion.me",
+      "name": "Hentai Fusion",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaifusion.me",
+      "baseUrl": "https://hentaifusion.me",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.thumb-conteudo",
+        "singleChapter": true,
+        "readerSelector": "div.post-texto img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaihere.com",
+      "name": "HentaiHere",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaihere.com",
+      "baseUrl": "https://hentaihere.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.card",
+        "chapterSelector": "a[href$=\"/page-1\"]",
+        "readerSelector": "img[data-reader-image]",
+        "pageNextSelector": "a[data-reader-next]"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaimode.com",
+      "name": "HentaiMode",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaimode.com",
+      "baseUrl": "https://hentaimode.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.book-list2",
+        "chapterSelector": "a.btn-hentai",
+        "pageScriptSelector": "script",
+        "pageJsonUrlField": "page_image",
+        "pageScriptContains": "page_image",
+        "pageScriptFirst": "1",
+        "searchUrl": "https://hentaimode.com/buscar?s={query}"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaipill.com",
+      "name": "HentaiPill",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaipill.com",
+      "baseUrl": "https://hentaipill.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a[href*='/gallery/g']",
+        "singleChapter": true,
+        "readerSelector": "div.reading-pages-content img",
+        "searchUrl": "https://hentaipill.com/search?q={query}"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentairead.io",
+      "name": "Hentairead.io",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentairead.io",
+      "baseUrl": "https://hentairead.io",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.video",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": "div.page-chapter img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaiteca.online",
+      "name": "Hentai Teca",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaiteca.online",
+      "baseUrl": "https://hentaiteca.online",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail, div.c-tabs-item__content",
+        "chapterSelector": "div.chapter-item",
+        "readerSelector": "div.reading-content img",
+        "searchUrl": "https://hentaiteca.online/?s={query}&post_type=wp-manga"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaithai.com",
+      "name": "HentaiThai",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaithai.com",
+      "baseUrl": "https://hentaithai.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.doujin-item",
+        "singleChapter": true,
+        "readerSelector": "img[alt*='หน้า']",
+        "searchUrl": "https://hentaithai.com/search?q={query}"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaithai.net",
+      "name": "HentaiThai.net",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaithai.net",
+      "baseUrl": "https://hentaithai.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.number-even, a.number-odd",
+        "singleChapter": true,
+        "readerSelector": "img[data-layer]",
+        "searchUrl": "https://hentaithai.net/search?q={query}"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaiyaoi.net",
+      "name": "Hentai Yaoi",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaiyaoi.net",
+      "baseUrl": "https://hentaiyaoi.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": ".thumb-conteudo",
+        "readerSelector": "a[href*=\"/galeria?\"] img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaizap.com",
+      "name": "HentaiZap",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaizap.com",
+      "baseUrl": "https://hentaizap.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.hz-gallery-card",
+        "chapterSelector": "a[href^=\"/g/\"]",
+        "readerSelector": "img#readerImg"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentaizone.me",
+      "name": "Hentaizone",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentaizone.me",
+      "baseUrl": "https://hentaizone.me",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.hzel-card",
+        "readerSelector": "div.gff-gallery img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hentara.com",
+      "name": "Hentara",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hentara.com",
+      "baseUrl": "https://hentara.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.ssr-card",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": "main#reader img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hmanga.asia",
+      "name": "HManga",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hmanga.asia",
+      "baseUrl": "https://hmanga.asia",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.card",
+        "readerSelector": "#hm-post-body img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "horahentai.com",
+      "name": "HoraHentai",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "horahentai.com",
+      "baseUrl": "https://horahentai.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": ".novo-card-item",
+        "readerSelector": "img.galeriaConteudoImg",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hqdesexo.com",
+      "name": "HQ da Sexo",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hqdesexo.com",
+      "baseUrl": "https://www.hqdesexo.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.thumb",
+        "readerSelector": "div.content img.full",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "idol.gravureprincess.date",
+      "name": "Idol Gravure Princess",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "idol.gravureprincess.date",
+      "baseUrl": "https://idol.gravureprincess.date",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.post-outer",
+        "readerSelector": "div.post-body img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "ikanmh.xyz",
+      "name": "IkanMH",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "ikanmh.xyz",
+      "baseUrl": "https://ikanmh.xyz",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.manga-list-2-cover",
+        "chapterSelector": "a.chapteritem",
+        "readerSelector": "#cp_img img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "ikuhentai.net",
+      "name": "Iku Hentai",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "ikuhentai.net",
+      "baseUrl": "https://ikuhentai.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "div.chapter-item a",
+        "readerSelector": "div.reading-content img",
+        "searchUrl": "https://ikuhentai.net/?s={query}&post_type=wp-manga"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "ilikecomix.com",
+      "name": "I Like Comix",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "ilikecomix.com",
+      "baseUrl": "https://ilikecomix.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/ai-porn/",
+        "itemSelector": "div.nrn-manga-card",
+        "readerSelector": "div.pswp-gallery__item a",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "imhentai.xxx",
+      "name": "IMHentai",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "imhentai.xxx",
+      "baseUrl": "https://imhentai.xxx",
+      "engine": "custom",
+      "config": {
+        "listPath": "/home/",
+        "itemSelector": "div.thumbnail",
+        "readerSelector": "a.gthumb img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "inkapk.net",
+      "name": "Inkapk",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "inkapk.net",
+      "baseUrl": "https://inkapk.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "/obras/",
+        "itemSelector": "a.ink-card",
+        "chapterSelector": "#ink-ch-list a",
+        "readerSelector": "div.reading-content img",
+        "searchUrl": "/?s={query}&post_type=wp-manga"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "irovedout.com",
+      "name": "I Roved Out",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "irovedout.com",
+      "baseUrl": "https://www.irovedout.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/comic/",
+        "itemSelector": "div.comic-thumbnail-in-archive",
+        "readerSelector": "#comic img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "it.fsicomics.com",
+      "name": "FSI Comics (IT)",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "it.fsicomics.com",
+      "baseUrl": "https://it.fsicomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.p-wrap",
+        "readerSelector": "div.entry-content img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "jellycomics.online",
+      "name": "Jelly Comics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "jellycomics.online",
+      "baseUrl": "https://jellycomics.online",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": ".comic-list-item",
+        "chapterSelector": "a.chapter-link",
+        "readerSelector": "img.manga-page"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "jjcos.com",
+      "name": "JJCOS",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "jjcos.com",
+      "baseUrl": "https://jjcos.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.custom-article",
+        "readerSelector": ".post-content img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "jjmhw2.top",
+      "name": "漫小肆韓漫",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "jjmhw2.top",
+      "baseUrl": "https://jjmhw2.top",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": ".mh-item",
+        "chapterSelector": "a[href*=\"/chapter/\"]",
+        "readerSelector": ".comicpage img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "joymiihub.com",
+      "name": "Joymii",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "joymiihub.com",
+      "baseUrl": "https://www.joymiihub.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "ul.list-gallery.has-mobile-menu > li",
+        "readerSelector": "ul.list-gallery.css img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "kingcomix.com",
+      "name": "KingComiX",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "kingcomix.com",
+      "baseUrl": "https://kingcomix.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.entry",
+        "readerSelector": ".wp-block-gallery img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "kiutaku.com",
+      "name": "Kiutaku",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "kiutaku.com",
+      "baseUrl": "https://kiutaku.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.items-row",
+        "readerSelector": ".article-fulltext img",
+        "singleChapter": true,
+        "pageNextSelector": "a.pagination-link:not(.is-current)",
+        "pageNextLimit": 3
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "komikdewasa.mom",
+      "name": "Komik Dewasa",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "komikdewasa.mom",
+      "baseUrl": "https://komikdewasa.mom",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.uta",
+        "chapterSelector": ".chbox a",
+        "readerSelector": "#readerarea img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "komikindo.click",
+      "name": "Komikindo",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "komikindo.click",
+      "baseUrl": "https://komikindo.click",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "manga",
+        "itemSelector": "div.bsx",
+        "chapterSelector": "div.eph-num a",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "ts_reader.run",
+        "pageJsonArray": "images",
+        "pageScriptFirst": "1"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "kr.xchina.co",
+      "name": "xChina",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "kr.xchina.co",
+      "baseUrl": "https://kr.xchina.co",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "photos",
+        "itemSelector": "a[href^=\"/photo/\"]",
+        "singleChapter": true,
+        "readerSelector": "div[data-cols-grid] img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "kusowanka.com",
+      "name": "Kusowanka",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "kusowanka.com",
+      "baseUrl": "https://kusowanka.com",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "",
+        "itemSelector": "div.box_thumb",
+        "singleChapter": true,
+        "readerSelector": "div.post_image img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "lapkzone.com",
+      "name": "Lapkzone",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "lapkzone.com",
+      "baseUrl": "https://lapkzone.com",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "",
+        "itemSelector": "div.thumb-conteudo",
+        "singleChapter": true,
+        "readerSelector": "div.post-texto img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "leermanhwas.com",
+      "name": "LeerManhwas",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "leermanhwas.com",
+      "baseUrl": "https://leermanhwas.com",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "leer-manhwa-18",
+        "itemSelector": "div.latest-item",
+        "chapterSelector": "ul.chapter-list li a",
+        "readerSelector": "div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "long52.com",
+      "name": "龙禁漫",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "long52.com",
+      "baseUrl": "https://long52.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.module-poster-item",
+        "chapterSelector": "a.module-play-list-link",
+        "readerSelector": "div.img-wrap img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "lorangeteam.art",
+      "name": "Lorangeteam",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "lorangeteam.art",
+      "baseUrl": "https://lorangeteam.art",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.manga-card",
+        "chapterSelector": "a[href*=\"/chuong/\"]",
+        "readerSelector": "img[src*=\"/storage/manga/chapters/\"]"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "lxmanga.org",
+      "name": "LxManga (lxmanga.org)",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "lxmanga.org",
+      "baseUrl": "https://lxmanga.org",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.card.border-0",
+        "chapterSelector": "a[href*=\"/chap-\"]",
+        "readerSelector": "img[src*=\"tymanga.com\"]"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "xsnvshen.com",
+      "name": "秀色女神",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "xsnvshen.com",
+      "baseUrl": "https://www.xsnvshen.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/album/",
+        "itemSelector": "ul.camWholeBoxUl li",
+        "readerSelector": "#arcbox img",
+        "pageNextSelector": "#pageNum a.a1[href]",
+        "pageNextLimit": 10,
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "manga-th.net",
+      "name": "Manga-TH",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "manga-th.net",
+      "baseUrl": "https://manga-th.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div[data-content-type=\"manga\"]",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": "img[src*=\"cdn.manga-th.net\"]"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "mangabab.com",
+      "name": "Manga Bab",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "mangabab.com",
+      "baseUrl": "https://mangabab.com",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://mangabab.com",
+        "listPath": "/",
+        "itemSelector": "div.recentCard",
+        "chapterSelector": "a[href*=\"chapter-\"]",
+        "readerSelector": "div.page-chapter img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "mangafree.info",
+      "name": "MangaFree",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "mangafree.info",
+      "baseUrl": "https://mangafree.info",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://mangafree.info",
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "readerSelector": "div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "mangahot.org",
+      "name": "MangaHot",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "mangahot.org",
+      "baseUrl": "https://mangahot.org",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://mangahot.org",
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": "div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "mangalotus.com",
+      "name": "Manga Lotus",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "mangalotus.com",
+      "baseUrl": "https://mangalotus.com",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://mangalotus.com",
+        "listPath": "/",
+        "itemSelector": "article",
+        "readerSelector": ".entry-content img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "mangaplexe.com",
+      "name": "Mangaplexe",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "mangaplexe.com",
+      "baseUrl": "https://www.mangaplexe.com",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://www.mangaplexe.com",
+        "listPath": "/",
+        "itemSelector": "ul.oceanwp-recent-posts li",
+        "readerSelector": ".entry-content img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "manhwa18dash.com",
+      "name": "Manhwa18Dash",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "manhwa18dash.com",
+      "baseUrl": "https://manhwa18dash.com",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://manhwa18dash.com",
+        "listPath": "/",
+        "itemSelector": "a.manga-card",
+        "chapterSelector": "a.chapter-card",
+        "readerSelector": "img.manga-page"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "manhwa210.com",
+      "name": "Manhwa210",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "manhwa210.com",
+      "baseUrl": "https://manhwa210.com",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://manhwa210.com",
+        "listPath": "/",
+        "itemSelector": "div.manga-vertical",
+        "chapterSelector": "a[href*='/chapter-']",
+        "readerSelector": "img.lazy"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "manhwacomics.com",
+      "name": "ManhwaComics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "manhwacomics.com",
+      "baseUrl": "https://manhwacomics.com",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://manhwacomics.com",
+        "listPath": "/all-mahwa/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "readerSelector": "div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "manhwadesu.rest",
+      "name": "Manhwadesu",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "manhwadesu.rest",
+      "baseUrl": "https://manhwadesu.rest",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://manhwadesu.rest",
+        "listPath": "/",
+        "itemSelector": "a.series",
+        "chapterSelector": "div.eph-num",
+        "readerSelector": "div#readerarea img",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "ts_reader",
+        "pageJsonArray": "images"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "manhwahub.to",
+      "name": "ManhwaHub",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "manhwahub.to",
+      "baseUrl": "https://manhwahub.to",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://manhwahub.to",
+        "listPath": "/",
+        "itemSelector": "div.item__wrap",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "readerSelector": "img.wp-manga-chapter-img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "manhwalike.com",
+      "name": "ManhwaLike",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "manhwalike.com",
+      "baseUrl": "https://manhwalike.com",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://manhwalike.com",
+        "listPath": "/",
+        "itemSelector": "div.item",
+        "chapterSelector": "a[href*='-chapter-']",
+        "readerSelector": "div.page-chapter img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "manhwaus.net",
+      "name": "ManhwaUS",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "manhwaus.net",
+      "baseUrl": "https://manhwaus.net",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://manhwaus.net",
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "ul.row-content-chapter a",
+        "readerSelector": "div.read-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "manhwax.pro",
+      "name": "ManhwaX",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "manhwax.pro",
+      "baseUrl": "https://manhwax.pro",
+      "engine": "custom",
+      "config": {
+        "baseUrl": "https://manhwax.pro",
+        "listPath": "/",
+        "itemSelector": "a.hx-card",
+        "chapterSelector": "a[href*='/chapter-']",
+        "pageApiUrl": "https://manhwax.pro/api/chapter/{1}/{2}",
+        "pageApiIdPattern": "/([^/]+)/(chapter-[^/]+)$",
+        "pageApiItems": "images"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "mehentai.live",
+      "name": "Mehentai",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "mehentai.live",
+      "baseUrl": "https://mehentai.live",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "a[href*='/chuong/']",
+        "readerSelector": "img.chapter-img:not([data-src])"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "meijuntu.com",
+      "name": "Meijuntu (Jummeitu)",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "meijuntu.com",
+      "baseUrl": "https://meijuntu.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "ul.clearfix li:has(a[href^='/beauty/'])",
+        "readerSelector": "div.pictures img",
+        "pageNextSelector": "div.pages span + a",
+        "pageNextPattern": "-\\d+\\.html",
+        "pageNextLimit": 60,
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "melapelacomics.com",
+      "name": "Melapela Comics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "melapelacomics.com",
+      "baseUrl": "https://melapelacomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.c-blog_item",
+        "readerSelector": "div.entry-content figure.wp-block-gallery img",
+        "searchUrl": "https://melapelacomics.com/?s={query}",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "metarthunter.com",
+      "name": "MetArt Hunter",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "metarthunter.com",
+      "baseUrl": "https://www.metarthunter.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "ul.list-gallery.has-mobile-menu li",
+        "readerSelector": "ul.list-gallery.static a",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "miku-doujin.com",
+      "name": "Miku Doujin",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "miku-doujin.com",
+      "baseUrl": "https://miku-doujin.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.inz-col",
+        "readerSelector": "div.manga-content img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "mindafansub.nl",
+      "name": "Minda Fansub",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "mindafansub.nl",
+      "baseUrl": "https://mindafansub.nl",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.item__wrap",
+        "chapterSelector": "a[href*='/bolum-']",
+        "readerSelector": "div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "misskon.com",
+      "name": "MissKon",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "misskon.com",
+      "baseUrl": "https://misskon.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.item-list",
+        "readerSelector": "div.entry img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "mitaku.net",
+      "name": "Mitaku",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "mitaku.net",
+      "baseUrl": "https://mitaku.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.hentry",
+        "readerSelector": "img.msacwl-img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "momon-ga.com",
+      "name": "Momon GA",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "momon-ga.com",
+      "baseUrl": "https://momon-ga.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a[href*=\"/fanzine/mo\"], a[href*=\"/magazine/mo\"]",
+        "readerSelector": "div#post-hentai img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "myhentaicomics.com",
+      "name": "MyHentaiComics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "myhentaicomics.com",
+      "baseUrl": "https://myhentaicomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.comic-inner",
+        "readerSelector": "div#ajax_show img",
+        "pageNextSelector": "a#js__pagination__next",
+        "pageNextLimit": 30,
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "myhentaigallery.com",
+      "name": "MyHentaiGallery",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "myhentaigallery.com",
+      "baseUrl": "https://myhentaigallery.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "ul.comics-grid li.item",
+        "readerSelector": "div#ajax_show img",
+        "pageNextSelector": "a#js__pagination__next",
+        "pageNextLimit": 30,
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "myreadingcomic.com",
+      "name": "MyReadingComic",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "myreadingcomic.com",
+      "baseUrl": "https://myreadingcomic.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.latest-item",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "readerSelector": "div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "nhentai.to",
+      "name": "nHentai.to",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "nhentai.to",
+      "baseUrl": "https://nhentai.to",
+      "engine": "custom",
+      "config": {
+        "listPath": "home",
+        "itemSelector": "div.gallery",
+        "chapterSelector": "a.gallerythumb",
+        "readerSelector": "#image-container img",
+        "searchUrl": "https://nhentai.to/search/?q={query}"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "nhentai.website",
+      "name": "nHentai (website)",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "nhentai.website",
+      "baseUrl": "https://nhentai.website",
+      "engine": "custom",
+      "config": {
+        "listPath": "browse/doujinshi",
+        "itemSelector": "div.gallery",
+        "singleChapter": true,
+        "singleChapterName": "Galeri",
+        "readerSelector": "a.gallerythumb img",
+        "searchUrl": "https://nhentai.website/search/?q={query}"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "nhentai.xxx",
+      "name": "nHentai.xxx",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "nhentai.xxx",
+      "baseUrl": "https://nhentai.xxx",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.gallery_item",
+        "chapterSelector": "div.gt_th",
+        "readerSelector": "#fimg",
+        "searchUrl": "https://nhentai.xxx/search/?key={query}"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "nhentaiyaoi.com",
+      "name": "nHentai Yaoi",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "nhentaiyaoi.com",
+      "baseUrl": "https://nhentaiyaoi.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "div.chapter-item",
+        "readerSelector": "div.reading-content img",
+        "searchUrl": "https://nhentaiyaoi.com/?s={query}&post_type=wp-manga"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "nnhanman.xyz",
+      "name": "NNHanman",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "nnhanman.xyz",
+      "baseUrl": "https://nnhanman.xyz",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.ImgA",
+        "chapterSelector": "ul.Drama li",
+        "readerSelector": "div.img-wrap img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "nukibooks.com",
+      "name": "Nukibooks",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "nukibooks.com",
+      "baseUrl": "https://nukibooks.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.gallery-item",
+        "readerSelector": "div.article-page-list img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "oglaf.com",
+      "name": "Oglaf",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "oglaf.com",
+      "baseUrl": "https://www.oglaf.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/archive/",
+        "itemSelector": "a:has(img[src*='media.oglaf.com/archive/'])",
+        "readerSelector": "img#strip",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "onlythebesthentai.com",
+      "name": "Only The Best Hentai",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "onlythebesthentai.com",
+      "baseUrl": "https://onlythebesthentai.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": ".nv-post-wrap",
+        "readerSelector": ".entry-content img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "ososedki.com",
+      "name": "Ososedki",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "ososedki.com",
+      "baseUrl": "https://ososedki.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.gallery-item",
+        "readerSelector": ".photo-item img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "rokuhentai.com",
+      "name": "Roku Hentai",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "rokuhentai.com",
+      "baseUrl": "https://rokuhentai.com",
+      "engine": "custom",
+      "config": {
+        "singleChapter": true,
+        "singleChapterName": "Galeri",
+        "listPath": "/",
+        "itemSelector": "div.site-manga-card",
+        "readerSelector": "img.site-reader__image",
+        "searchUrl": "https://rokuhentai.com/?q={query}"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "rule34comic.party",
+      "name": "Rule34Comic",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "rule34comic.party",
+      "baseUrl": "https://rule34comic.party",
+      "engine": "custom",
+      "config": {
+        "singleChapter": true,
+        "singleChapterName": "Galeri",
+        "listPath": "/",
+        "itemSelector": "div.item.thumb",
+        "readerSelector": "a.item[data-album-viewer] img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "sexkomix2.com",
+      "name": "SexKomix2",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "sexkomix2.com",
+      "baseUrl": "https://sexkomix2.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "home/",
+        "itemSelector": "li.comix",
+        "readerSelector": "img.gallery-img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "simply-hentai.com",
+      "name": "Simply Hentai",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "simply-hentai.com",
+      "baseUrl": "https://www.simply-hentai.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "2-mangas",
+        "itemSelector": "article.manga-container",
+        "chapterSelector": "a.content-link",
+        "readerSelector": "div[data-testid=\"pages-overview\"] img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "squadxfbs.com",
+      "name": "Squad X FBS",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "squadxfbs.com",
+      "baseUrl": "https://squadxfbs.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "manga/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": ".wp-manga-chapter a",
+        "readerSelector": ".reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "superhentai.blog",
+      "name": "Super Hentai",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "superhentai.blog",
+      "baseUrl": "https://superhentai.blog",
+      "engine": "custom",
+      "config": {
+        "listPath": "",
+        "itemSelector": "div.thumb",
+        "readerSelector": "img.attachment-full",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "superhq.net",
+      "name": "SuperHQ",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "superhq.net",
+      "baseUrl": "https://www.superhq.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "category/hentai",
+        "itemSelector": "div.entry-body",
+        "readerSelector": "div.entry img[data-lazy-src]",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "teamsany.com",
+      "name": "TeamSany",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "teamsany.com",
+      "baseUrl": "https://teamsany.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.animepost",
+        "chapterSelector": "div.eps",
+        "readerSelector": "div.reader-area img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "thehentai.net",
+      "name": "The Hentai",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "thehentai.net",
+      "baseUrl": "https://thehentai.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.gridPosts",
+        "chapterSelector": "div.thumbnails a",
+        "readerSelector": "img#img_gallery_big"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "tmomanhwa.com",
+      "name": "ToonManhwa",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "tmomanhwa.com",
+      "baseUrl": "https://tmomanhwa.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.latest-item",
+        "chapterSelector": "ul.chapter-list a",
+        "readerSelector": "div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "airibox.top",
+      "name": "Airibox",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "airibox.top",
+      "baseUrl": "https://airibox.top",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "/",
+        "itemSelector": "li.wp-block-post",
+        "readerSelector": "div.entry-content img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "webtoonhentai.org",
+      "name": "Webtoon Hentai",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "webtoonhentai.org",
+      "baseUrl": "https://webtoonhentai.org",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.card",
+        "chapterSelector": "div.chap-grid a.chap:not(.first)",
+        "pageApiUrl": "https://webtoonhentai.org/api-proxy/v1/chapter?url=https%3A%2F%2Fmanhwa18.cc%2Fwebtoon%2F{1}%2F{2}",
+        "pageApiIdPattern": "read/([^/]+)/(chapter-\\d+)",
+        "pageApiItems": "pages"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "webtoonscan.org",
+      "name": "WebtoonScan",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "webtoonscan.org",
+      "baseUrl": "https://webtoonscan.org",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": "div.reading-content img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "wnacg.buzz",
+      "name": "Wnacg",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "wnacg.buzz",
+      "baseUrl": "https://www.wnacg.buzz",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "li.gallary_item",
+        "readerSelector": "div.pic_box img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "wporncomics.com",
+      "name": "WPornComics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "wporncomics.com",
+      "baseUrl": "https://wporncomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.block-images-comix-set",
+        "readerSelector": "div.block-images-comix img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "xchina.co",
+      "name": "xChina",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "xchina.co",
+      "baseUrl": "https://xchina.co",
+      "engine": "custom",
+      "config": {
+        "listPath": "/photos",
+        "itemSelector": "a.group",
+        "readerSelector": "img[src*=\"img.xchina.io/photos/\"]",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "xiutaku.com",
+      "name": "Xiutaku",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "xiutaku.com",
+      "baseUrl": "https://xiutaku.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.items-row",
+        "readerSelector": "div.article-fulltext img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "xlecx.one",
+      "name": "xLecx",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "xlecx.one",
+      "baseUrl": "https://xlecx.one",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.thumb",
+        "readerSelector": "ul.xfieldimagegallery a",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "xyzcomics.com",
+      "name": "XYZ Comics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "xyzcomics.com",
+      "baseUrl": "https://xyzcomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/allsexkomix",
+        "itemSelector": "article.post",
+        "readerSelector": "a[itemprop=\"contentUrl\"]",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "yaoihub.org",
+      "name": "YaoiHub",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "yaoihub.org",
+      "baseUrl": "https://yaoihub.org",
+      "engine": "custom",
+      "config": {
+        "listPath": "/manga",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": "div.reading-content img.wp-manga-chapter-img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "yespornpics.com",
+      "name": "Yes Porn Pics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "yespornpics.com",
+      "baseUrl": "https://yespornpics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.gallery",
+        "readerSelector": "div.jpeg img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "yonaber.com",
+      "name": "Yonaber",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "yonaber.com",
+      "baseUrl": "https://yonaber.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/yaoi",
+        "itemSelector": "div.item-summary",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": "div.reading-content img.wp-manga-chapter-img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "cin.blue",
+      "name": "Cin Blue",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "cin.blue",
+      "baseUrl": "https://cin.blue",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a[href^=\"/v/\"]",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "imageV2",
+        "pageJsonArray": "pages",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "es.fsicomics.com",
+      "name": "FSI Comics ES",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "es.fsicomics.com",
+      "baseUrl": "https://es.fsicomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.p-flink",
+        "readerSelector": "figure.wp-block-image img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "es.wporncomics.com",
+      "name": "WPornComics ES",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "es.wporncomics.com",
+      "baseUrl": "https://es.wporncomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a[href*=\"/content_comix/\"]",
+        "readerSelector": "a.fancybox",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "everia.club",
+      "name": "Everia.club",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "everia.club",
+      "baseUrl": "https://everia.club",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.tpg-post-link",
+        "readerSelector": "div.entry-content img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "everiaclub.com",
+      "name": "Everia Club",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "everiaclub.com",
+      "baseUrl": "https://www.everiaclub.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a[href^=\"/kk\"]",
+        "readerSelector": "img.alazy",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "fenixproject.website",
+      "name": "Fenix Project",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "fenixproject.website",
+      "baseUrl": "https://fenixproject.website",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.fenix-glow",
+        "chapterSelector": "a[href*=\"/capitulo-\"]",
+        "readerSelector": "img[phx-r]"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "fliptru.com.br",
+      "name": "Fliptru",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "fliptru.com.br",
+      "baseUrl": "https://fliptru.com.br",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.comic-card",
+        "chapterSelector": "a[href*=\"origin=chapter-list\"]",
+        "readerSelector": "div.comic_page_image img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "foamgirl.net",
+      "name": "FoamGirl",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "foamgirl.net",
+      "baseUrl": "https://foamgirl.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.thumb-srcbox",
+        "readerSelector": "a.imageclick-imgbox img",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "fr.fsicomics.com",
+      "name": "FSI Comics FR",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "fr.fsicomics.com",
+      "baseUrl": "https://fr.fsicomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.p-flink",
+        "chapterSelector": "a.p-flink",
+        "readerSelector": "figure.wp-block-image img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "freeadultcomix.com",
+      "name": "FreeAdultComix",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "freeadultcomix.com",
+      "baseUrl": "https://freeadultcomix.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a.titulo",
+        "readerSelector": "figure.dgwt-jg-item a",
+        "singleChapter": true
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "fsicomics.com",
+      "name": "FSI Comics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "fsicomics.com",
+      "baseUrl": "https://fsicomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.p-wrap",
+        "readerSelector": ".entry-content img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri",
+        "searchUrl": "https://fsicomics.com/?s={query}"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "ftvhunter.com",
+      "name": "FTV Hunter",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "ftvhunter.com",
+      "baseUrl": "https://www.ftvhunter.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/sort/newest/",
+        "itemSelector": "ul.list-gallery.static > li",
+        "readerSelector": "a[href*=\"cdn.ftvhunter.com/content/\"]",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "futapo.com",
+      "name": "Futapo",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "futapo.com",
+      "baseUrl": "https://futapo.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/futa-comics/",
+        "itemSelector": "div.ngg-album-compact",
+        "readerSelector": ".entry-content img",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "global.toomics.com",
+      "name": "Toomics",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "global.toomics.com",
+      "baseUrl": "https://global.toomics.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/en/webtoon/ranking",
+        "itemSelector": "ul.best > li",
+        "readerSelector": "img.lazy",
+        "singleChapter": true,
+        "singleChapterName": "Bölüm"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "godhman.net",
+      "name": "GodhMan",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "godhman.net",
+      "baseUrl": "https://www.godhman.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "",
+        "itemSelector": "div.bsx",
+        "chapterSelector": ".eph-num a",
+        "readerSelector": ".readercontent img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "goonscans.org",
+      "name": "Goon Scans",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "goonscans.org",
+      "baseUrl": "https://goonscans.org",
+      "engine": "custom",
+      "config": {
+        "listPath": "",
+        "itemSelector": "a.slide-cover-link",
+        "chapterSelector": "a.chapter-link",
+        "pageScriptSelector": "script",
+        "pageScriptContains": "const imageUrls",
+        "pageJsonArray": "imageUrls"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "hanimeone.me",
+      "name": "Hanime1 (comics)",
+      "lang": "all",
+      "nsfw": 1,
+      "domain": "hanimeone.me",
+      "baseUrl": "https://hanimeone.me",
+      "engine": "custom",
+      "config": {
+        "listPath": "/comics",
+        "itemSelector": "div.comic-rows-videos-div",
+        "chapterSelector": "a[data-page]",
+        "readerSelector": "img[src*=\"nhentai.net/galleries\"]"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
     }
   ]
 }
