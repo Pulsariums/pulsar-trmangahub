@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19T16:19:10Z",
+  "generated": "2026-11-20T17:26:16Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -164,15 +164,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "toon.space",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "JS_RENDER: Vite SPA (index-CR_afPIp.js, /assets/* chunk'lari). Ana sayfa 22743 bayt, seri bagi/kart yok. API avi: bundle'da base bulundu https://master.toonspace.io/api (Pd.request url + params service); denenen uclar hepsi 404 NotFoundError: /api/v1, /api/v1/series?page=1&per_page=20, /api/series?page=1, /api/v1/titles?page=1, /api/v1/titles/by-slug/homeless-hottie, /api/v1/title/<slug>, /api/v1/titles/slug/<slug>, /api/v1/home. Sitemap.xml 280 URL: seri /t/<slug>, sayfa /p/<id>; /t/<slug> sunucu HTML'ind",
-        "at": "2026-11-17T18:15:56Z"
-      }
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "1085364983716203602": {
       "id": 1085364983716203602,
@@ -4683,15 +4678,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "opiatoon.shop",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T17:02:29Z"
-      },
+      "packages": [
+        "test18"
+      ],
+      "state": "pending",
       "sorun": "login"
     },
     "1854510220106965266": {
@@ -20220,15 +20210,10 @@
       "lang": "en",
       "nsfw": 1,
       "domain": "ohjoysextoy.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "OnNextValue: OnError while emitting onNext value: okhttp3.Response.class",
-        "at": "2026-11-17T18:44:56Z"
-      }
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "4974835479241504833": {
       "id": 4974835479241504833,
@@ -27996,22 +27981,10 @@
       "lang": "ru",
       "nsfw": 1,
       "domain": "hentailib.me",
-      "packages": [],
-      "state": "failed",
-      "health": {
-        "status": "ok",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness-test-buyuk",
-        "at": "2026-11-17T18:04:21Z"
-      },
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "BULUNAMADI: Vue/Vite SPA, HTML 18KB kabuk. JS bundle icinde /api/manga/{manga}/chapters ve /api/{mediaType}/{slug} yollari var ama GET istekleri nginx 404 donduruyor (XHR + Referer basliklariyla da 404). api.hentailib.me DNS cozulmuyor. Bolum ve okuyucu ucu bulunamadi.",
-        "at": "2026-11-17T18:15:56Z"
-      }
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "6696108672721987561": {
       "id": 6696108672721987561,
@@ -30282,15 +30255,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "xiaoaitoon.org.tr",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "liste/sayfa bos (harness)",
-        "at": "2026-11-17T17:02:29Z"
-      }
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "7463464127094088901": {
       "id": 7463464127094088901,
@@ -31074,15 +31042,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "yaoi.me",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "liste/sayfa bos (harness)",
-        "at": "2026-11-17T17:02:29Z"
-      }
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "7793182120198515414": {
       "id": 7793182120198515414,
@@ -32715,15 +32678,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "panda.chaika.moe",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "liste/sayfa bos (harness)",
-        "at": "2026-11-17T17:02:29Z"
-      }
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "8366111277663094500": {
       "id": 8366111277663094500,
@@ -33029,15 +32987,10 @@
       "lang": "ar",
       "nsfw": 1,
       "domain": "webtoonempire-bl.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "cloudflare",
-        "http_code": "",
-        "ms": 0,
-        "detail": "CF",
-        "at": "2026-11-16T22:05:11.851283Z"
-      }
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "845297677165041745": {
       "id": 845297677165041745,
@@ -34191,15 +34144,10 @@
       "lang": "tr",
       "nsfw": 1,
       "domain": "3hentai.net",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "popüler liste boş",
-        "at": "2026-11-17T17:02:29Z"
-      }
+      "packages": [
+        "test18"
+      ],
+      "state": "pending"
     },
     "8714264625714073827": {
       "id": 8714264625714073827,
