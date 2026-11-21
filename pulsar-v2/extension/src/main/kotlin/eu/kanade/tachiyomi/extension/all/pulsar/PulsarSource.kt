@@ -949,6 +949,10 @@ class PulsarSource(
         val scriptFirst = config.optString("pageScriptFirst", "").isNotBlank() && scriptPages.isNotEmpty()
         return if (scriptFirst) {
             scriptPages
+        } else if (rscPages.isNotEmpty()) {
+            // pageRscKey verilmişse RSC dizisi DOM sezgisinden üstündür: hentailek ve
+            // pornhwareader'da DOM'da sayfanın yalnız birkaç görseli duruyor.
+            rscPages
         } else {
             // JS sonucu rawImages'tan önce denenir: DOM'daki <img> adresleri çoğu sitede
             // gerçek sayfa değil (kapak/reklam), JS hesabı ise tam listeyi verir.
