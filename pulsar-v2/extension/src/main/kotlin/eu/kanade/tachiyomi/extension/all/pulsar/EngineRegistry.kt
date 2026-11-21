@@ -786,9 +786,18 @@ object EngineRegistry {
         val fields = if (urlField.isNotBlank()) listOf(urlField) else listOf("src", "url")
         val base = urlBase.trimEnd('/')
         val out = LinkedHashSet<String>()
-        // Kaçış tek (hentailek) ya da çift (pornhwareader) katmanlı olabilir.
-        val text = rscText(html)
-        for (raw in listOf(text, text.replace("\\\"", "\""))) {
+        // RSC "flight" her zaman self.__next_f.push değildir: hentailek aynı JSON'u
+        // x-data="reader(JSON.parse('...'))" içine \u0022 kaçışıyla gömüyor.
+        // Flight parçaları önce denenir; bulunamazsa ham HTML'in kaçışı çözülür.
+        val rsc = rscText(html)
+        val plain = jsonUnescape(html)
+        val candidates = listOf(
+            rsc,
+            rsc.replace("\\\"", "\""),
+            plain,
+            jsonUnescape(plain),
+        )
+        for (raw in candidates) {
             if (raw.isEmpty()) continue
             val arr = arrayAfter(raw, key) ?: continue
             for (i in 0 until arr.length()) {
