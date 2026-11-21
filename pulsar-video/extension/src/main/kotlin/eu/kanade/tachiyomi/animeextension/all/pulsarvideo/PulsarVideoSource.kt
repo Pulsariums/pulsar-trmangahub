@@ -10,12 +10,19 @@ import eu.kanade.tachiyomi.animesource.model.SEpisode
 import eu.kanade.tachiyomi.animesource.model.Video
 import eu.kanade.tachiyomi.animesource.online.AnimeHttpSource
 import okhttp3.Dns
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
+import java.io.IOException
 import java.net.InetAddress
 import java.net.InetSocketAddress
 import java.net.Proxy
+import java.net.SocketException
+import java.net.UnknownHostException
+import java.util.concurrent.ConcurrentHashMap
+import javax.net.ssl.SSLException
+import javax.net.ssl.SSLHandshakeException
 import org.json.JSONObject
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
@@ -267,18 +274,105 @@ class PulsarVideoSource(
     private val tlsFragment: Boolean = config.optBoolean("tlsFragment", false)
     private val tlsFragmentSize: Int = config.optInt("tlsFragmentSize", 1).coerceIn(1, 64)
 
-    override val client: OkHttpClient by lazy {
+    // DoH yedegi (BILINCLI DAVRANIS DEGISIKLIGI): dnsOverHttps yazilmayan TUM
+    // kaynaklarda da sistem DNS'i cozemezse sorgu varsayilan DoH ucuna
+    // tekrarlanir; boylece her kaynaga ayar yazmak gerekmez. "off" yazilirsa
+    // yedek tamamen kapanir (eski davranis: yalniz sistem DNS'i).
+    private val dohFallbackEndpoint: String? =
+        if (dohUrl.equals("off", ignoreCase = true)) {
+            null
+        } else {
+            dohUrl.ifBlank { "https://cloudflare-dns.com/dns-query" }
+        }
+
+    // Ag katmani iki istemciye ayrilir:
+    //  baseClient     : mevcut kurulum (proxy, DoH yedegi, ayarliysa tlsFragment).
+    //  fragmentClient : ayni ayarlar + her zaman parcali ClientHello.
+    // client = baseClient + TLS reset yakalayan interceptor; reset olursa istek
+    // bir kez fragmentClient ile tekrarlanir. Boylece her kaynaga tlsFragment
+    // yazmak gerekmez.
+    private val baseClient: OkHttpClient by lazy {
         super.client.newBuilder()
             .apply {
                 proxyFromConfig()?.let { proxy(it) }
-                if (dohUrl.isNotBlank()) dns(VideoDohDns(dohUrl))
+                dohFallbackEndpoint?.let { dns(DohFallbackDns(it)) }
                 if (tlsFragment) {
+                    // DPI SNI'ya bakip baglantiyi kesiyorsa ClientHello'yu bol.
                     defaultTrustManager()?.let { tm ->
                         sslSocketFactory(TlsFragmentingSocketFactory(tlsFragmentSize), tm)
                     }
                 }
             }
             .build()
+    }
+
+    /** baseClient ayarlarini kopyalar, ustune her zaman parcali TLS koyar. */
+    private val fragmentClient: OkHttpClient by lazy {
+        baseClient.newBuilder()
+            .apply {
+                defaultTrustManager()?.let { tm ->
+                    sslSocketFactory(TlsFragmentingSocketFactory(tlsFragmentSize), tm)
+                }
+            }
+            .build()
+    }
+
+    override val client: OkHttpClient by lazy {
+        // tlsFragment zaten aciksa ilk istemci de parcalar; yedege gerek yok.
+        if (tlsFragment) {
+            baseClient
+        } else {
+            baseClient.newBuilder()
+                .addInterceptor(TlsRetryInterceptor(fragmentClient))
+                .build()
+        }
+    }
+
+    /**
+     * TLS el sikismasi DPI tarafindan sifirlandiginda istegi parcali ClientHello
+     * gonderdigi icin gecen istemciyle bir kez tekrarlar. Parcalama da
+     * basarisizsa ozgun istisna yukari firlatilir; cagiranin davranisi degismez.
+     *
+     * Sonsuz dongu korumasi: fragmentClient bu interceptor'i icermez; ayrica
+     * X-Pulsar-Tls-Retry basligini tasiyan istek yeniden denenmez.
+     */
+    private class TlsRetryInterceptor(private val fragmentClient: OkHttpClient) : Interceptor {
+        override fun intercept(chain: Interceptor.Chain): Response {
+            val request = chain.request()
+            try {
+                return chain.proceed(request)
+            } catch (e: IOException) {
+                // Yalniz TLS/SNI kaynakli resetlerde yedege gec.
+                if (!isTlsReset(e)) throw e
+                // Bu istek zaten parcali denemeyle gonderildiyse tekrar etme.
+                if (request.header(RETRY_HEADER) != null) throw e
+                val retry = request.newBuilder()
+                    .header(RETRY_HEADER, "1")
+                    .build()
+                return fragmentClient.newCall(retry).execute()
+            }
+        }
+
+        /** Istisna zinciri TLS el sikismasi / baglanti sifirlama izi tasiyor mu? */
+        private fun isTlsReset(e: IOException): Boolean {
+            var cur: Throwable? = e
+            while (cur != null) {
+                when (cur) {
+                    is SSLHandshakeException -> return true
+                    is SSLException -> return true
+                    is SocketException -> {
+                        val msg = cur.message.orEmpty().lowercase()
+                        if (msg.contains("reset") || msg.contains("broken pipe")) return true
+                    }
+                }
+                cur = cur.cause
+            }
+            return false
+        }
+
+        private companion object {
+            const val RETRY_HEADER = "X-Pulsar-Tls-Retry"
+        }
     }
 
     private fun proxyFromConfig(): Proxy? {
@@ -302,26 +396,58 @@ class PulsarVideoSource(
         f.trustManagers.filterIsInstance<javax.net.ssl.X509TrustManager>().firstOrNull()
     }.getOrNull()
 
-    private class VideoDohDns(private val endpoint: String) : Dns {
+    /**
+     * Once sistem DNS'i denenir (ek gecikme yok); cozulemezse sorgu DoH ile
+     * tekrarlanir ve sonuc surec omru boyunca bellekte tutulur. DoH da
+     * basarisizsa ozgun UnknownHostException firlatilir; boylece cagiran
+     * tarafin hata davranisi degismez.
+     *
+     * Ayarli DoH kullanan kaynaklar da bu siniftan gecer: tek kod yolu.
+     */
+    private class DohFallbackDns(private val endpoint: String) : Dns {
         private val bootstrap = OkHttpClient()
-        private val fallback = Dns.SYSTEM
 
         override fun lookup(hostname: String): List<InetAddress> {
-            if (hostname == "localhost") return fallback.lookup(hostname)
-            return try {
-                val url = endpoint.trimEnd('/') + "?name=" + hostname + "&type=A"
-                val req = Request.Builder().url(url).header("Accept", "application/dns-json").build()
-                bootstrap.newCall(req).execute().use { resp ->
-                    val body = resp.body?.string().orEmpty()
-                    val ips = Regex("""\"data\"\s*:\s*\"([0-9.]+)\"""")
-                        .findAll(body)
-                        .mapNotNull { m -> runCatching { InetAddress.getByName(m.groupValues[1]) }.getOrNull() }
-                        .toList()
-                    if (ips.isNotEmpty()) ips else fallback.lookup(hostname)
-                }
-            } catch (_: Exception) {
-                fallback.lookup(hostname)
+            if (hostname == "localhost") return Dns.SYSTEM.lookup(hostname)
+
+            var systemFailure: UnknownHostException? = null
+            try {
+                val system = Dns.SYSTEM.lookup(hostname)
+                if (system.isNotEmpty()) return system
+            } catch (e: UnknownHostException) {
+                systemFailure = e
             }
+
+            // Ayni host icin basarili DoH sonucu surec omru boyunca gecerlidir.
+            CACHE[hostname]?.let { return it }
+
+            val resolved = lookupDoh(hostname)
+            if (resolved.isNotEmpty()) {
+                CACHE[hostname] = resolved
+                return resolved
+            }
+            // DoH da cozemedi: sistemin ozgun hatasini koru (bos sonucta uret).
+            throw systemFailure ?: UnknownHostException(hostname)
+        }
+
+        /** DoH JSON yanitindan A kayitlarini okur; herhangi bir hata bos listedir. */
+        private fun lookupDoh(hostname: String): List<InetAddress> = try {
+            val url = endpoint.trimEnd('/') + "?name=" + hostname + "&type=A"
+            val req = Request.Builder().url(url).header("Accept", "application/dns-json").build()
+            bootstrap.newCall(req).execute().use { resp ->
+                val body = resp.body?.string().orEmpty()
+                Regex("\"data\"\\s*:\\s*\"([0-9.]+)\"")
+                    .findAll(body)
+                    .mapNotNull { m -> runCatching { InetAddress.getByName(m.groupValues[1]) }.getOrNull() }
+                    .toList()
+            }
+        } catch (_: Exception) {
+            emptyList()
+        }
+
+        private companion object {
+            // Bellek ici onbellek: surec (eklenti sinif yukleyici) omru boyunca yasar.
+            val CACHE = ConcurrentHashMap<String, List<InetAddress>>()
         }
     }
 
