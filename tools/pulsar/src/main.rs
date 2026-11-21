@@ -424,7 +424,7 @@ fn main() -> ExitCode {
             eprintln!("  pulsar sweep --apk <dosya.apk> [--lang <dil>] [--site <domain>]... [--limit N]");
             eprintln!("  pulsar sweep --jar <dosya.jar> --package <ad> --version-code <n> [--site <domain>]...");
             eprintln!("    ortak: [--java <yol>] [--app <dizin>] [--catalogue <yol>] [--timeout sn] [--apk-dir <dizin>] [--debug] [--engine]");
-            eprintln!("  pulsar video-repo [--apk-dir <dizin>] [--out <dizin>] [--dry-run]");
+            eprintln!("  pulsar video-repo [--apk-dir <dizin>] [--out <dizin>] [--catalogue <yol>] [--dry-run]");
             eprintln!("  pulsar merge [--map <source_map.json>] [--catalogue <catalogue.json>] [--dry-run]");
             ExitCode::from(64)
         }

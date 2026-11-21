@@ -115,12 +115,20 @@ jobs:
               const fs = require("fs");
               const index = JSON.parse(fs.readFileSync(".verify-index.min.json", "utf8"));
               if (!Array.isArray(index)) throw new Error("index.min.json dizi değil (repo.json ile karışmış)");
+              // sources boşsa Kototoro "0 etkin kaynak" gösterir ve kurulum yapılmaz.
+              if (index.length < 1) throw new Error("index.min.json boş dizi");
+              const sources = index[0].sources;
+              if (!Array.isArray(sources) || sources.length < 1) {
+                console.error("::error::index[0].sources boş (Kototoro 0 etkin kaynak gösterir)");
+                process.exit(1);
+              }
+              const sourceNames = sources.map(function (s) { return s && s.name; }).filter(Boolean).join(",");
               const meta = JSON.parse(fs.readFileSync(".verify-repo.json", "utf8"));
               if (!meta || typeof meta !== "object" || Array.isArray(meta)) throw new Error("repo.json nesne değil");
               if (!meta.meta || typeof meta.meta.name !== "string" || !meta.meta.name) throw new Error("repo.json meta.name yok");
               if (typeof meta.meta.website !== "string" || !meta.meta.website) throw new Error("repo.json meta.website yok");
               if (typeof meta.meta.signingKeyFingerprint !== "string" || !meta.meta.signingKeyFingerprint) throw new Error("repo.json signingKeyFingerprint yok");
-              console.log("index.min.json dizi (" + index.length + " kayıt), repo.json meta.name=" + meta.meta.name);
+              console.log("index.min.json dizi (" + index.length + " kayıt), kaynaklar=" + sourceNames + ", repo.json meta.name=" + meta.meta.name);
             '
           }
           trap 'rm -f .verify-index.min.json .verify-repo.json' EXIT

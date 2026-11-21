@@ -12,6 +12,11 @@
 //!   {name, pkg, apk, lang, code, version, nsfw, sources}. Ek alan yazılmaz:
 //!   Aniyomi indeksi bu 8 anahtarla ayrıştırır. Kototoro eklenti listesini
 //!   `"${repo.baseUrl}/index.min.json"` adresinden bu biçimde çeker.
+//!   `sources` boş kalırsa Kototoro "0 etkin kaynak" gösterir ve kurulum
+//!   yapılmaz: kaynaklar `--catalogue` (varsayılan
+//!   `pulsar-video/data/video-catalogue.json`) dosyasından doldurulur.
+//!   Yalnız `config` nesnesi BOŞ OLMAYAN kayıtlar yazılır; DTO alanları
+//!   `{"name": <zorunlu>, "lang": <opsiyonel>}` — `id` yazılmaz.
 //! - `repo.json` Kototoro `fetchRepoDetails`'ın İLK denediği adrestir ve gövdeyi
 //!   `RepoMetaWrapperDto` olarak ayrıştırır: {"index_v2": null, "meta": {name,
 //!   shortName, website, signingKeyFingerprint}}. Başarısız olursa `index.pb`ye
@@ -31,6 +36,7 @@ use std::process::ExitCode;
 
 const DEFAULT_APK_DIR: &str = "pulsar-video/extension/build/outputs/apk/release";
 const DEFAULT_OUT: &str = "pulsar-video/repo";
+const DEFAULT_CATALOGUE: &str = "pulsar-video/data/video-catalogue.json";
 
 /// Eklenti listesi (kök DİZİ). Kototoro/Aniyomi `"${repo.baseUrl}/index.min.json"`
 /// adresinden çeker.
@@ -111,6 +117,7 @@ fn name_from_package(pkg: &str) -> String {
 pub fn run(root: &Path, argv: &[String]) -> ExitCode {
     let mut apk_dir: Option<String> = None;
     let mut out: Option<String> = None;
+    let mut catalogue: Option<String> = None;
     let mut dry = false;
     let mut i = 0;
     while i < argv.len() {
@@ -121,6 +128,16 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
                     Some(v) => apk_dir = Some(v.clone()),
                     None => {
                         eprintln!("HATA: --apk-dir için dizin gerekli");
+                        return ExitCode::from(64);
+                    }
+                }
+            }
+            "--catalogue" => {
+                i += 1;
+                match argv.get(i) {
+                    Some(v) => catalogue = Some(v.clone()),
+                    None => {
+                        eprintln!("HATA: --catalogue için dosya yolu gerekli");
                         return ExitCode::from(64);
                     }
                 }
@@ -146,6 +163,7 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
 
     let apk_dir = root.join(apk_dir.unwrap_or_else(|| DEFAULT_APK_DIR.to_string()));
     let out = root.join(out.unwrap_or_else(|| DEFAULT_OUT.to_string()));
+    let catalogue = root.join(catalogue.unwrap_or_else(|| DEFAULT_CATALOGUE.to_string()));
 
     let mut apks: Vec<PathBuf> = match std::fs::read_dir(&apk_dir) {
         Ok(rd) => rd
@@ -199,6 +217,20 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
     }
     infos.sort_by(|a, b| a.package.cmp(&b.package));
 
+    // `sources` indeksten gelir; boş dizi Kototoro'da "0 etkin kaynak" demektir.
+    let sources = match load_catalogue_sources(&catalogue) {
+        Ok(s) => s,
+        Err(e) => {
+            eprintln!("HATA: katalog okunamadı ({}): {e}", catalogue.display());
+            return ExitCode::FAILURE;
+        }
+    };
+    println!(
+        "[kaynak] {} kaynak (katalog: {})",
+        sources.len(),
+        catalogue.display()
+    );
+
     let entries: Vec<Value> = infos
         .iter()
         .map(|info| {
@@ -210,7 +242,7 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
                 "code": info.version_code,
                 "version": info.version_name,
                 "nsfw": info.nsfw,
-                "sources": [],
+                "sources": sources.clone(),
             })
         })
         .collect();
@@ -315,6 +347,59 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
         infos.len()
     );
     ExitCode::SUCCESS
+}
+
+/// Katalogdan indekse yazılacak `sources` DTO'larını üretir.
+///
+/// Kural: `config` nesnesi **boş olmayan** kayıtlar alınır. `config` boş/eksik
+/// kayıt ölçülmemiş demektir; eklentide çalışmaz, sayıyı da şişirir.
+/// Kototoro `ExtensionIndexDto.toAvailableExtension` alanları `name` ve `lang`
+/// üzerinden okur (`sourceNames`, `declaredLanguages`); `id` yazılmaz.
+fn load_catalogue_sources(path: &Path) -> Result<Vec<Value>, String> {
+    let text = match std::fs::read_to_string(path) {
+        Ok(t) => t,
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound => {
+            eprintln!(
+                "UYARI: katalog yok ({}); sources boş yazılacak",
+                path.display()
+            );
+            return Ok(Vec::new());
+        }
+        Err(e) => return Err(format!("okunamadı: {e}")),
+    };
+    let doc: Value = serde_json::from_str(&text).map_err(|e| format!("geçersiz JSON: {e}"))?;
+    let records = doc
+        .get("sources")
+        .and_then(Value::as_array)
+        .ok_or_else(|| "kök nesnede sources dizisi yok".to_string())?;
+
+    let mut out = Vec::new();
+    for rec in records {
+        let config_nonempty = rec
+            .get("config")
+            .and_then(Value::as_object)
+            .map(|c| !c.is_empty())
+            .unwrap_or(false);
+        if !config_nonempty {
+            continue;
+        }
+        let name = match rec.get("name").and_then(Value::as_str) {
+            Some(n) if !n.is_empty() => n,
+            _ => {
+                eprintln!("UYARI: config'i dolu ama name'i yok kayıt atlandı");
+                continue;
+            }
+        };
+        let mut src = serde_json::Map::new();
+        src.insert("name".to_string(), Value::String(name.to_string()));
+        if let Some(lang) = rec.get("lang").and_then(Value::as_str) {
+            if !lang.is_empty() {
+                src.insert("lang".to_string(), Value::String(lang.to_string()));
+            }
+        }
+        out.push(Value::Object(src));
+    }
+    Ok(out)
 }
 
 fn inspect_apk(path: &Path) -> Result<ApkInfo, String> {
