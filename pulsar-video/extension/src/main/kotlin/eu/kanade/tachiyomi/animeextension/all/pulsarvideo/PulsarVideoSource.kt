@@ -135,12 +135,55 @@ class PulsarVideoSource(
         val doc = response.asJsoup()
         val sel = config.optString("hosterSelector", "")
         if (sel.isBlank()) return emptyList()
+        // Bazı siteler hoster URL'sini href yerine bir nitelikte (ör. data-video)
+        // ve Base64 gömülü olarak verir. hosterUrlAttr boşsa davranış eskisiyle
+        // birebir aynı kalır: yalnız a[href] okunur.
+        val urlAttr = config.optString("hosterUrlAttr", "").trim()
+        val urlBase64 = config.opt("hosterUrlBase64").let { v ->
+            when (v) {
+                is Boolean -> v
+                is Number -> v.toInt() == 1
+                is String -> v.trim() == "1" || v.trim().equals("true", ignoreCase = true)
+                else -> false
+            }
+        }
         return doc.select(sel).mapNotNull { el ->
-            val a = if (el.tagName() == "a") el else el.selectFirst("a[href]") ?: return@mapNotNull null
-            val url = a.absUrl("href").ifBlank { a.attr("href") }
+            val a = when {
+                el.tagName() == "a" -> el
+                urlAttr.isNotBlank() -> el.selectFirst("a[$urlAttr]") ?: return@mapNotNull null
+                else -> el.selectFirst("a[href]") ?: return@mapNotNull null
+            }
+            val rawUrl = if (urlAttr.isNotBlank()) {
+                a.attr(urlAttr)
+            } else {
+                a.absUrl("href").ifBlank { a.attr("href") }
+            }
+            val url = if (urlBase64 && rawUrl.isNotBlank()) {
+                decodeHosterUrl(rawUrl) ?: return@mapNotNull null
+            } else {
+                rawUrl
+            }
             if (url.isBlank()) return@mapNotNull null
             Hoster(url, a.text().ifBlank { "embed" })
         }
+    }
+
+    /** Base64 (standart veya URL-safe alfabe) hoster URL'sini çözer; dolguyu tamamlar. */
+    private fun decodeHosterUrl(raw: String): String? {
+        val normalized = raw.trim()
+            .replace('-', '+')
+            .replace('_', '/')
+            .replace("\n", "")
+            .replace("\r", "")
+        if (normalized.isEmpty()) return null
+        val padding = (4 - normalized.length % 4) % 4
+        return runCatching {
+            val bytes = android.util.Base64.decode(
+                normalized + "=".repeat(padding),
+                android.util.Base64.DEFAULT,
+            )
+            String(bytes, Charsets.UTF_8).trim()
+        }.getOrNull()?.takeIf { it.isNotBlank() }
     }
 
     // Aniyomi v16 sezon listesi bekliyor; bu kaynaklarda sezon ayrimi yok.
