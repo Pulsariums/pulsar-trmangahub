@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T10:58:22Z",
+  "generated": "2026-11-21T11:06:07Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -22075,9 +22075,23 @@
       "nsfw": 0,
       "domain": "lectorhub.j5z.xyz",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T11:05:35.912Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T11:05:35.912Z"
+      }
     },
     "4851494886996968982": {
       "id": 4851494886996968982,
@@ -34733,9 +34747,23 @@
       "nsfw": 0,
       "domain": "katamanga.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T11:05:35.912Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T11:05:35.912Z"
+      }
     },
     "7799671096902519693": {
       "id": 7799671096902519693,
