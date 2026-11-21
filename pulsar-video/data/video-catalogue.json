@@ -46,24 +46,6 @@
       "status": "unmeasured",
       "config": {},
       "not": "OLU HOST: kok adres kendine 301 dongusu kuruyor, www nginx varsayilan sayfasi donuyor. Icerik allmanga.to'ya tasinmis; allmanga.to Nuxt SPA, HTML'de kart/anime linki 0. GraphQL POST gerektiginden config yazilamadi."
-    },
-    {
-      "id": "animesuge.lol",
-      "name": "AnimeSuge",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "animesuge.lol",
-      "baseUrl": "https://animesuge.lol",
-      "engine": "video",
-      "status": "measured_partial",
-      "config": {
-        "listPath": "/",
-        "itemSelector": "a[href*='/anime/']",
-        "episodeSelector": "a[href*='/watch/']",
-        "hosterSelector": "iframe",
-        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-      },
-      "not": "liste/bolum olculdu; embed iframe fairuseonly; video cozumu host cozucu gerektirebilir"
     }
   ]
 }
