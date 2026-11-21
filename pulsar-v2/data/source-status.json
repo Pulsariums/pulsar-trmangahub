@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T11:06:07Z",
+  "generated": "2026-11-21T19:33:02Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -1050,12 +1050,11 @@
       "lang": "ru",
       "nsfw": 0,
       "domain": "acomics.ru",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
+      "packages": [],
+      "state": "dead",
       "device_step": "list",
-      "reason": "LISTE_DUZELT: Bolum listesi HTMLde yok (JS menu, data-issue-count=205); okuyucu gorselleri data-src=/manga/content/comics/..."
+      "reason": "LISTE_DUZELT: Bolum listesi HTMLde yok (JS menu, data-issue-count=205); okuyucu gorselleri data-src=/manga/content/comics/...",
+      "kapali": true
     },
     "1376568239241029358": {
       "id": 1376568239241029358,
@@ -18820,6 +18819,32 @@
       },
       "kapali": true
     },
+    "4261578293782511821": {
+      "id": 4261578293782511821,
+      "kind": "catalogue",
+      "title": "",
+      "lang": "ru",
+      "nsfw": 0,
+      "domain": "acomics.ru",
+      "packages": [
+        "global"
+      ],
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-21T19:32:48Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-21T19:32:48Z"
+      }
+    },
     "4262606449626957027": {
       "id": 4262606449626957027,
       "kind": "engine",
@@ -19536,10 +19561,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "rizzfables.com",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -19553,7 +19576,8 @@
         "ms": 0,
         "detail": "",
         "at": "2026-11-17T10:02:04Z"
-      }
+      },
+      "kapali": true
     },
     "4372588988758856223": {
       "id": 4372588988758856223,
@@ -21571,11 +21595,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "drakecomic.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "reason": "ESKI_DOMAIN: drakecomic.org drakecomic.net adresine yonlendiriyor; Next.js, seri sayfasi /collections/<slug> ama HTML de bolum linki yok (flight verisi)."
+      "packages": [],
+      "state": "dead",
+      "reason": "ESKI_DOMAIN: drakecomic.org drakecomic.net adresine yonlendiriyor; Next.js, seri sayfasi /collections/<slug> ama HTML de bolum linki yok (flight verisi).",
+      "kapali": true
     },
     "4690519039882039315": {
       "id": 4690519039882039315,
@@ -29684,6 +29707,32 @@
         "at": "2026-11-20T21:52:40Z"
       }
     },
+    "6317475901129395470": {
+      "id": 6317475901129395470,
+      "kind": "catalogue",
+      "title": "",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "rizzfables.com",
+      "packages": [
+        "global"
+      ],
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-21T19:32:48Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-21T19:32:48Z"
+      }
+    },
     "6336788940996830678": {
       "id": 6336788940996830678,
       "kind": "engine",
@@ -34018,6 +34067,32 @@
         "ms": 0,
         "detail": "retest: liste 0 / bölüm 0 / sayfa 0",
         "at": "2026-11-20T21:52:40Z"
+      }
+    },
+    "7524055972417861405": {
+      "id": 7524055972417861405,
+      "kind": "catalogue",
+      "title": "",
+      "lang": "id",
+      "nsfw": 0,
+      "domain": "komikmu.top",
+      "packages": [
+        "global"
+      ],
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel harness",
+        "at": "2026-11-21T19:32:48Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "yerel harness (list/chapters/pages>0)",
+        "at": "2026-11-21T19:32:48Z"
       }
     },
     "7527354308421653932": {
@@ -38857,6 +38932,18 @@
         "at": "2026-11-17T18:44:56Z"
       }
     },
+    "8798867856205443111": {
+      "id": 8798867856205443111,
+      "kind": "catalogue",
+      "title": "Drake Scans",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "drakecomic.org",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "880006159466720824": {
       "id": 880006159466720824,
       "kind": "engine",
@@ -40033,11 +40120,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikmu.top",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "reason": "LISTE_DUZELT: Detay sayfasinda chapternum metinleri var ama bolum hrefi yok, bolum secici olculemedi."
+      "packages": [],
+      "state": "dead",
+      "reason": "LISTE_DUZELT: Detay sayfasinda chapternum metinleri var ama bolum hrefi yok, bolum secici olculemedi.",
+      "kapali": true
     },
     "914231297451265265": {
       "id": 914231297451265265,

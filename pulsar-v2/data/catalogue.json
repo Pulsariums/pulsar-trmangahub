@@ -7,27 +7,6 @@
   ],
   "sources": [
     {
-      "id": "drakecomic.org",
-      "name": "Drake Scans",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "drakecomic.org",
-      "baseUrl": "https://drakecomic.net",
-      "engine": "custom",
-      "config": {
-        "listPath": "/",
-        "itemSelector": "div[data-card-set-item]",
-        "chapterSelector": "a[href*=\"/chapter/\"]",
-        "readerSelector": "img[src*=\"/uploads/series/\"]"
-      },
-      "verified_by_user": false,
-      "origins": [
-        "pulsar_olcum"
-      ],
-      "selector_verified": true,
-      "dead": false
-    },
-    {
       "id": "komikmu.top",
       "lang": "id",
       "nsfw": 0,
