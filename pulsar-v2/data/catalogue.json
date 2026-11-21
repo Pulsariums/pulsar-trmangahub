@@ -7,6 +7,136 @@
   ],
   "sources": [
     {
+      "id": "assortedscans.com",
+      "name": "Assorted Scans",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "assortedscans.com",
+      "baseUrl": "https://assortedscans.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/reader/",
+        "itemSelector": "section.series",
+        "chapterSelector": "div.chapter a",
+        "readerSelector": "#page-image",
+        "pageNextSelector": "a[rel=next]",
+        "searchUrl": "https://assortedscans.com/search/?q={query}"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "furyosociety.com",
+      "name": "FuryoSociety",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "furyosociety.com",
+      "baseUrl": "https://furyosociety.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/mangas",
+        "itemSelector": "div.grid-item-container",
+        "chapterSelector": "a[href*='/read/']",
+        "readerSelector": "img.open"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "komikav.net",
+      "name": "Komikav",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "komikav.net",
+      "baseUrl": "https://komikav.net",
+      "engine": "custom",
+      "config": {
+        "listPath": "/comic-list/",
+        "itemSelector": "div.overflow-hidden.rounded-md",
+        "chapterSelector": "a[href*='/chapter-']",
+        "readerSelector": "img.imgku"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "lectorhub.j5z.xyz",
+      "name": "LectorHub",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "lectorhub.j5z.xyz",
+      "baseUrl": "https://lectorhub.j5z.xyz",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "article.release-card",
+        "chapterSelector": "a[href*='/leer/']",
+        "readerSelector": "img.reader-page-image"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "mundomanhwa.com",
+      "name": "Mundo Manhwa",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "mundomanhwa.com",
+      "baseUrl": "https://mundomanhwa.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.page-item-detail",
+        "chapterSelector": "li.wp-manga-chapter a",
+        "readerSelector": "div.reading-content img",
+        "searchUrl": "https://mundomanhwa.com/?s={query}&post_type=wp-manga",
+        "searchMethod": "GET"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "katamanga.com",
+      "name": "MangaKakalot",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "katamanga.com",
+      "baseUrl": "https://www.katamanga.com",
+      "engine": "custom",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "a[href^=\"/manga/\"]",
+        "chapterSelector": "a[href*=\"/chapter-\"]",
+        "pageUrlAllow": "storage\\.waitst\\.com"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "pulsar_olcum"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
       "id": "afroditscans.com",
       "name": "Afrodit Scans",
       "lang": "tr",

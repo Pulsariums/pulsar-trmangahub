@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T10:24:04Z",
+  "generated": "2026-11-21T10:52:01Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -1634,11 +1634,10 @@
       "lang": "id",
       "nsfw": 0,
       "domain": "komikav.net",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "reason": "JS_RENDER: Qwik; detay q-data.json icindeki bolum dizisi obf _objs referanslariyla geliyor."
+      "packages": [],
+      "state": "dead",
+      "reason": "JS_RENDER: Qwik; detay q-data.json icindeki bolum dizisi obf _objs referanslariyla geliyor.",
+      "kapali": true
     },
     "1376833596686797612": {
       "id": 1376833596686797612,
@@ -4909,6 +4908,18 @@
       },
       "device_step": "list",
       "kapali": true
+    },
+    "177199669003950121": {
+      "id": 177199669003950121,
+      "kind": "catalogue",
+      "title": "FuryoSociety",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "furyosociety.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "177199669003950156": {
       "id": 177199669003950156,
@@ -8888,10 +8899,9 @@
       "lang": "fr",
       "nsfw": 0,
       "domain": "furyosociety.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "2503547837178658661": {
       "id": 2503547837178658661,
@@ -11320,11 +11330,10 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "mundomanhwa.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "pages"
+      "packages": [],
+      "state": "dead",
+      "device_step": "pages",
+      "kapali": true
     },
     "3207069200167402538": {
       "id": 3207069200167402538,
@@ -13636,7 +13645,7 @@
       "nsfw": 0,
       "domain": "www.mangakakalot.gg",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -13652,7 +13661,8 @@
         "at": "2026-11-17T08:09:33Z"
       },
       "device_step": "list",
-      "reason": "DIGER: 301 -> https://www.kakamanga.com/"
+      "reason": "DIGER: 301 -> https://www.kakamanga.com/",
+      "kapali": true
     },
     "3758401624049605436": {
       "id": 3758401624049605436,
@@ -21826,10 +21836,9 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "assortedscans.com",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "4791120656448657499": {
       "id": 4791120656448657499,
@@ -22043,6 +22052,18 @@
         "detail": "yerel harness (list/chapters/pages>0)",
         "at": "2026-11-17T18:44:56Z"
       }
+    },
+    "4851494886996968977": {
+      "id": 4851494886996968977,
+      "kind": "catalogue",
+      "title": "LectorHub",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "lectorhub.j5z.xyz",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "4851494886996968982": {
       "id": 4851494886996968982,
@@ -23465,11 +23486,10 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "www.mangakakalot.gg",
-      "packages": [
-        "test"
-      ],
-      "state": "pending",
-      "device_step": "list"
+      "packages": [],
+      "state": "dead",
+      "device_step": "list",
+      "kapali": true
     },
     "5453758092271858575": {
       "id": 5453758092271858575,
@@ -30567,23 +30587,9 @@
       "nsfw": 0,
       "domain": "assortedscans.com",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T22:00:11.445Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T22:00:11.445Z"
-      }
+      "state": "pending"
     },
     "661348012455677696": {
       "id": 661348012455677696,
@@ -33929,6 +33935,18 @@
       "sorun": "cloudflare",
       "reason": "CF: cerez gerekiyor (olculemedi)"
     },
+    "7524045765057135158": {
+      "id": 7524045765057135158,
+      "kind": "catalogue",
+      "title": "Komikav",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "komikav.net",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "7524045765057135272": {
       "id": 7524045765057135272,
       "kind": "catalogue",
@@ -34665,6 +34683,18 @@
         "at": "2026-11-20T21:52:40Z"
       }
     },
+    "7798531410727846913": {
+      "id": 7798531410727846913,
+      "kind": "catalogue",
+      "title": "MangaKakalot",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "katamanga.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
+    },
     "7799671096902519693": {
       "id": 7799671096902519693,
       "kind": "catalogue",
@@ -34754,10 +34784,9 @@
       "lang": "es",
       "nsfw": 0,
       "domain": "lectorhub.j5z.xyz",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
+      "packages": [],
+      "state": "dead",
+      "kapali": true
     },
     "7831196751013046814": {
       "id": 7831196751013046814,
@@ -38823,6 +38852,18 @@
       },
       "device_step": "list",
       "kapali": true
+    },
+    "8816980852211307881": {
+      "id": 8816980852211307881,
+      "kind": "catalogue",
+      "title": "Mundo Manhwa",
+      "lang": "en",
+      "nsfw": 0,
+      "domain": "mundomanhwa.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending"
     },
     "8816980852211307886": {
       "id": 8816980852211307886,
