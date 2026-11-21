@@ -3561,7 +3561,9 @@
         "itemSelector": "",
         "chapterSelector": ".listing-chapters_wrap li.wp-manga-chapter",
         "readerSelector": "",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -3583,7 +3585,9 @@
         "itemSelector": "article.manga-card",
         "chapterSelector": "a[href*=\"/chapter-\"]",
         "readerSelector": "img[src*=\"/assets/images/chapters/\"]",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -3605,7 +3609,9 @@
         "itemSelector": "",
         "chapterSelector": "",
         "readerSelector": ".chapterbody img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -3651,7 +3657,9 @@
         "itemSelector": "article.webtoon-card",
         "chapterSelector": "a[href*=\"/chapter-\"]",
         "readerSelector": "img[src*=\"/assets/images/chapters/\"]",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -4375,7 +4383,9 @@
         "itemSelector": "div.card",
         "chapterSelector": "a[href^=\"/read/\"]",
         "readerSelector": ".pages img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -4553,7 +4563,9 @@
         "chapterSelector": "ul.chapter_list li a",
         "readerSelector": "#image",
         "searchUrl": "https://www.mangatown.com/search?name={query}",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -4596,7 +4608,9 @@
         "itemSelector": "",
         "chapterSelector": "",
         "readerSelector": "",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -4712,7 +4726,9 @@
         "itemSelector": "",
         "chapterSelector": "",
         "readerSelector": "",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -4735,7 +4751,9 @@
         "chapterSelector": "strong a[href^=\"/comics/\"]",
         "readerSelector": ".jb-image img",
         "searchUrl": "https://multporn.net/search?r=3&search_api_views_fulltext={query}",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -5404,7 +5422,9 @@
         "itemSelector": "",
         "chapterSelector": "",
         "readerSelector": "",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -5495,7 +5515,9 @@
         "itemSelector": "",
         "chapterSelector": "",
         "readerSelector": "",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -5776,7 +5798,9 @@
         "readerSelector": "img[src*=\"/photos/\"]",
         "searchUrl": "https://en.xchina.co/search?q={query}",
         "searchMethod": "GET",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -6097,7 +6121,9 @@
         "itemSelector": "article.comic",
         "chapterSelector": "",
         "readerSelector": "",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -6391,7 +6417,9 @@
         "searchJsonUrl": "url",
         "searchJsonTitle": "title",
         "http1": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -6412,7 +6440,9 @@
         "itemSelector": "",
         "chapterSelector": "",
         "readerSelector": "",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -6726,7 +6756,9 @@
         "chapterSelector": "div.list-chapters a",
         "readerSelector": "img.lazy",
         "searchUrl": "https://manhwa18.com/tim-kiem?q={query}",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "selector_verified": true,
       "origins": [
@@ -12670,7 +12702,9 @@
         "readerSelector": "img.wp-manga-chapter-img",
         "searchUrl": "https://toonily.com/?s={query}&post_type=wp-manga",
         "engine": "custom",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -12764,7 +12798,9 @@
         "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": ".reading-content .wp-manga-chapter-img",
         "searchUrl": "/?s={query}&post_type=wp-manga",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -12929,7 +12965,9 @@
         "itemSelector": "a[href*=\"/manga/\"]",
         "chapterSelector": "a[href*=\"/capitulo-\"]",
         "readerSelector": "img.wp-manga-chapter-img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -13879,7 +13917,9 @@
         "readerSelector": "img[src*=\"i.eahentai.com/file\"]",
         "searchUrl": "https://eahentai.com/search?q={query}",
         "searchMethod": "GET",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -13907,7 +13947,9 @@
         "searchUrl": "https://eggporncomics.com/search",
         "searchMethod": "POST",
         "searchBody": "SearchForm[query]={query}",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -13932,7 +13974,9 @@
         "readerSelector": "img#img_gallery_big",
         "searchUrl": "https://en.thehentai.net/?s={query}",
         "searchMethod": "GET",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14140,7 +14184,9 @@
         "readerSelector": ".entry-content img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14163,7 +14209,9 @@
         "readerSelector": "a.fancybox",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14187,7 +14235,9 @@
         "pageNextSelector": "a.image-next",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14213,7 +14263,9 @@
         "singleChapterName": "Galeri",
         "chapterApiUrl": "{id}",
         "chapterApiIdPattern": "^(/.+)$",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14239,7 +14291,9 @@
         "singleChapterName": "Galeri",
         "chapterApiUrl": "{id}",
         "chapterApiIdPattern": "^(/.+)$",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14263,7 +14317,9 @@
         "readerSelector": "a.fullimg",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14285,7 +14341,9 @@
         "itemSelector": "div.comic-image",
         "readerSelector": "img.galleryImage",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14354,7 +14412,9 @@
         "itemSelector": "article.masonry-blog-item",
         "readerSelector": ".wpb_gallery img",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14376,7 +14436,9 @@
         "itemSelector": "a.group[href^=\"/articles/\"]",
         "readerSelector": "div.space-y-10 img",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14398,7 +14460,9 @@
         "itemSelector": "div.gallery-card",
         "chapterSelector": "a[href*=\"/gallery/open/\"]",
         "readerSelector": "#imageSlider img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14420,7 +14484,9 @@
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "div.page-break img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14442,7 +14508,9 @@
         "itemSelector": "article.hx-card",
         "chapterSelector": "div#chapter-list a.hx-ep",
         "readerSelector": "div.hx-pages img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14486,7 +14554,9 @@
         "itemSelector": "div.latest-item",
         "chapterSelector": "ul.chapter-list a",
         "readerSelector": "div.reading-content img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14508,7 +14578,9 @@
         "itemSelector": "div.post",
         "readerSelector": "div.single-post img",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14530,7 +14602,9 @@
         "itemSelector": "a.archive-card-link",
         "readerSelector": "a.gallery-item",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14622,7 +14696,9 @@
         "itemSelector": "article.hnv-gallery-card",
         "chapterSelector": "div#js-thumbs-grid a[href^=\"/g/\"]",
         "readerSelector": "div.hnv-reader__image img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14644,7 +14720,9 @@
         "itemSelector": "div.inner_thumb > a[href^=\"/gallery/\"]",
         "chapterSelector": "div#thumbs_gallery_div a[href^=\"/view/\"]",
         "readerSelector": "div.gview img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14666,7 +14744,9 @@
         "itemSelector": "div.item.transition",
         "readerSelector": "div.thumbs a[href*=\"#page\"] img",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -14919,7 +14999,9 @@
         "itemSelector": "a.hz-gallery-card__cover",
         "chapterSelector": "a[href^=\"/g/\"]",
         "readerSelector": "img#readerImg",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -15035,7 +15117,9 @@
         "itemSelector": "div.thumb",
         "readerSelector": "div.content img.full",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -15128,7 +15212,9 @@
         "singleChapter": true,
         "chapterApiUrl": "{id}",
         "chapterApiIdPattern": "^(/.+)$",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -15152,7 +15238,9 @@
         "singleChapter": true,
         "chapterApiUrl": "{id}",
         "chapterApiIdPattern": "^(.+)$",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -15219,7 +15307,9 @@
         "itemSelector": "div.p-wrap",
         "readerSelector": "div.entry-content img",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -15307,7 +15397,9 @@
         "itemSelector": "ul.list-gallery.has-mobile-menu > li",
         "readerSelector": "ul.list-gallery.css img",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -15329,7 +15421,9 @@
         "itemSelector": "div.entry",
         "readerSelector": ".wp-block-gallery img",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -15424,7 +15518,9 @@
         "itemSelector": "a[href^=\"/photo/\"]",
         "singleChapter": true,
         "readerSelector": "div[data-cols-grid] img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -15447,7 +15543,9 @@
         "itemSelector": "div.box_thumb",
         "singleChapter": true,
         "readerSelector": "div.post_image img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -15470,7 +15568,9 @@
         "itemSelector": "div.thumb-conteudo",
         "singleChapter": true,
         "readerSelector": "div.post-texto img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -15865,7 +15965,9 @@
         "itemSelector": "div.item",
         "chapterSelector": "a[href*='-chapter-']",
         "readerSelector": "div.page-chapter img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -15985,7 +16087,9 @@
         "searchUrl": "https://melapelacomics.com/?s={query}",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16008,7 +16112,9 @@
         "readerSelector": "ul.list-gallery.static a",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16099,7 +16205,9 @@
         "readerSelector": "img.msacwl-img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16122,7 +16230,9 @@
         "readerSelector": "div#post-hentai img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16147,7 +16257,9 @@
         "pageNextLimit": 30,
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16172,7 +16284,9 @@
         "pageNextLimit": 30,
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16194,7 +16308,9 @@
         "itemSelector": "div.latest-item",
         "chapterSelector": "a[href*=\"/chapter-\"]",
         "readerSelector": "div.reading-content img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16217,7 +16333,9 @@
         "chapterSelector": "a.gallerythumb",
         "readerSelector": "#image-container img",
         "searchUrl": "https://nhentai.to/search/?q={query}",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16264,7 +16382,9 @@
         "chapterSelector": "div.gt_th",
         "readerSelector": "#fimg",
         "searchUrl": "https://nhentai.xxx/search/?key={query}",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16355,7 +16475,9 @@
         "readerSelector": "img#strip",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16401,7 +16523,9 @@
         "readerSelector": ".photo-item img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16425,7 +16549,9 @@
         "itemSelector": "div.site-manga-card",
         "readerSelector": "img.site-reader__image",
         "searchUrl": "https://rokuhentai.com/?q={query}",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16448,7 +16574,9 @@
         "listPath": "/",
         "itemSelector": "div.item.thumb",
         "readerSelector": "a.item[data-album-viewer] img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16471,7 +16599,9 @@
         "readerSelector": "img.gallery-img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16493,7 +16623,9 @@
         "itemSelector": "article.manga-container",
         "chapterSelector": "a.content-link",
         "readerSelector": "div[data-testid=\"pages-overview\"] img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16538,7 +16670,9 @@
         "readerSelector": "img.attachment-full",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16561,7 +16695,9 @@
         "readerSelector": "div.entry img[data-lazy-src]",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16605,7 +16741,9 @@
         "itemSelector": "div.gridPosts",
         "chapterSelector": "div.thumbnails a",
         "readerSelector": "img#img_gallery_big",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16742,7 +16880,9 @@
         "readerSelector": "div.block-images-comix img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16765,7 +16905,9 @@
         "readerSelector": "img[src*=\"img.xchina.io/photos/\"]",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16811,7 +16953,9 @@
         "readerSelector": "ul.xfieldimagegallery a",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16834,7 +16978,9 @@
         "readerSelector": "a[itemprop=\"contentUrl\"]",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16879,7 +17025,9 @@
         "readerSelector": "div.jpeg img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16947,7 +17095,9 @@
         "itemSelector": "a.p-flink",
         "readerSelector": "figure.wp-block-image img",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16969,7 +17119,9 @@
         "itemSelector": "a[href*=\"/content_comix/\"]",
         "readerSelector": "a.fancybox",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -16991,7 +17143,9 @@
         "itemSelector": "a.tpg-post-link",
         "readerSelector": "div.entry-content img",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17013,7 +17167,9 @@
         "itemSelector": "a[href^=\"/kk\"]",
         "readerSelector": "img.alazy",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17101,7 +17257,9 @@
         "itemSelector": "a.p-flink",
         "chapterSelector": "a.p-flink",
         "readerSelector": "figure.wp-block-image img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17123,7 +17281,9 @@
         "itemSelector": "a.titulo",
         "readerSelector": "figure.dgwt-jg-item a",
         "singleChapter": true,
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17147,7 +17307,9 @@
         "singleChapter": true,
         "singleChapterName": "Galeri",
         "searchUrl": "https://fsicomics.com/?s={query}",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17170,7 +17332,9 @@
         "readerSelector": "a[href*=\"cdn.ftvhunter.com/content/\"]",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17193,7 +17357,9 @@
         "readerSelector": ".entry-content img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17493,7 +17659,9 @@
         "singleChapter": true,
         "searchUrl": "https://hentaipaw.com/articles/search?q={query}",
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17737,7 +17905,9 @@
         "readerSelector": "div.imgHolder img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17761,7 +17931,9 @@
         "singleChapter": true,
         "singleChapterName": "Galeri",
         "chapterApiUrl": "{url}",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17804,7 +17976,9 @@
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17828,7 +18002,9 @@
         "singleChapter": true,
         "singleChapterName": "Galeri",
         "chapterSelector": "div[data-dd-content=\"nav-lang\"] a[data-lang=\"en\"]",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17852,7 +18028,9 @@
         "singleChapter": true,
         "singleChapterName": "Galeri",
         "chapterApiUrl": "{url}",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17875,7 +18053,9 @@
         "readerSelector": "div.block-images-comix img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17899,7 +18079,9 @@
         "readerSelector": "#gallery-1 img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17943,7 +18125,9 @@
         "itemSelector": "div.manga-item",
         "chapterSelector": "div.chapter-item",
         "readerSelector": "div.read-content img",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -17966,7 +18150,9 @@
         "listPath": "/",
         "itemSelector": "div.video-conteudo",
         "searchUrl": "https://revistasequadrinhos.com/?s={query}",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -18121,7 +18307,9 @@
         "readerSelector": "img[src*=\"img.xchina.io/photos/\"]",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
@@ -18201,7 +18389,9 @@
         "singleChapterName": "Galeri",
         "pageJsExpr": "JSON.stringify(html.match(/books\\/\\d+\\/\\d+\\.(?:jpe?g|png|webp|avif)/g)||[])",
         "pageJsFirst": "1",
-        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "tlsFragment": true,
+        "tlsFragmentSize": 1
       },
       "verified_by_user": false,
       "origins": [
