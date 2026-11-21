@@ -860,7 +860,7 @@ class PulsarSource(
             val seq = seqPages(doc, chapterUrl)
             if (seq.isNotEmpty()) return seq
         }
-        val imageUrls = pageImagesFrom(doc, html).toMutableList()
+        val imageUrls = pageImagesFrom(doc, html, chapterUrl).toMutableList()
 
         // Çok sayfalı okuyucu zinciri: bazı sitelerde bölüm tek HTML değil, ayrı
         // belgelerden oluşur (niadd: /chapter/x/123/ -> /chapter/x/123-2.html ...).
@@ -888,7 +888,7 @@ class PulsarSource(
                 if (pageDir(next) != chapterDir) break
                 // 2. sayfa ve sonrası hata verirse elde edilen görsellerle dön.
                 val fetched = runCatching { fetchPageDocument(next, currentUrl) }.getOrNull() ?: break
-                val imgs = pageImagesFrom(fetched.first, fetched.second)
+                val imgs = pageImagesFrom(fetched.first, fetched.second, fetched.third, allowJs = false)
                 if (imgs.isEmpty()) break
                 imageUrls.addAll(imgs)
                 currentDoc = fetched.first
@@ -910,7 +910,20 @@ class PulsarSource(
 
     // Tek bir bölüm belgesinden görsel adreslerini çıkarır. İlk sayfa ve zincirin
     // sonraki sayfaları aynı yolu kullanır (davranış tek yerde kalır).
-    private fun pageImagesFrom(doc: Document, html: String): List<String> {
+    private fun pageImagesFrom(
+        doc: Document,
+        html: String,
+        pageUrl: String = baseUrl,
+        allowJs: Boolean = true,
+    ): List<String> {
+        // Sayfa listesi DOM/API'de değil, sayfadaki küçük bir JS hesabında olabilir
+        // ("/g/<id>/" + n, atob(...), şablon birleştirme). pageJsExpr boşsa bu yol hiç
+        // çalışmaz ve davranış eskisiyle birebir aynıdır. pageJsFirst işaretliyse JS
+        // sonucu diğer yolların hepsinden önce gelir.
+        val jsPages = if (allowJs) jsPageList(html, pageUrl) else emptyList()
+        if (jsPages.isNotEmpty() && config.optString("pageJsFirst", "").isNotBlank()) {
+            return jsPages
+        }
         val scriptPages = EngineRegistry.scriptJsonPages(
             html,
             config.optString("pageScriptSelector", ""),
@@ -937,16 +950,65 @@ class PulsarSource(
         return if (scriptFirst) {
             scriptPages
         } else {
+            // JS sonucu rawImages'tan önce denenir: DOM'daki <img> adresleri çoğu sitede
+            // gerçek sayfa değil (kapak/reklam), JS hesabı ise tam listeyi verir.
             EngineRegistry.parsePages(
                 doc,
                 config.optString("readerSelector", ""),
                 baseUrl,
                 config.optString("pageUrlTemplate", ""),
             )
+                .ifEmpty { jsPages }
                 .ifEmpty { EngineRegistry.rawImages(html, baseUrl) }
                 .ifEmpty { scriptPages }
                 .ifEmpty { rscPages }
         }
+    }
+
+    // Görsel uzantısı ölçütü: .jpg/.jpeg/.png/.webp/.avif (sorgu dizesi olabilir).
+    private val imagePageExt = Regex("\\.(?:jpe?g|png|webp|avif)(?:[?#]|$)", RegexOption.IGNORE_CASE)
+
+    // pageJsExpr: sayfa adresleri sayfadaki küçük bir hesabın sonucudur. Script `html`,
+    // `url`, `baseUrl` global değişkenleriyle çalışır; sonucu JSON dizi ya da satır
+    // satır metin olabilir. Adresler absoluteUrl ile mutlaklaştırılır, ardından yalnız
+    // görsel uzantılılar (pageUrlAllow doluysa ona uyanlar) tutulur. En fazla 400 sayfa.
+    private fun jsPageList(html: String, pageUrl: String): List<String> {
+        val expr = config.optString("pageJsExpr", "").trim()
+        if (expr.isEmpty()) return emptyList()
+        val raw = PulsarJs.eval(
+            expr,
+            mapOf("html" to html, "url" to pageUrl, "baseUrl" to baseUrl),
+        ) ?: return emptyList()
+        val allow = config.optString("pageUrlAllow", "").trim()
+            .takeIf { it.isNotEmpty() }
+            ?.let { runCatching { Regex(it) }.getOrNull() }
+        val out = LinkedHashSet<String>()
+        for (item in jsPageItems(raw)) {
+            val full = EngineRegistry.absoluteUrl(item, baseUrl)
+            if (full.isEmpty()) continue
+            // pageUrlAllow verilmişse ölçüt odur; yoksa görsel uzantısı aranır.
+            val keep = if (allow != null) allow.containsMatchIn(full) else imagePageExt.containsMatchIn(full)
+            if (!keep) continue
+            out.add(full)
+            if (out.size >= 400) break
+        }
+        return out.toList()
+    }
+
+    // JS sonucunu adres listesine açar: JSON dizisi ise elemanlar, düz metinse satır ya
+    // da virgülle ayrılmış parçalar. Tırnaklar kırpılır, boş parçalar atılır.
+    private fun jsPageItems(raw: String): List<String> {
+        val text = raw.trim()
+        if (text.startsWith("[")) {
+            val arr = runCatching { JSONArray(text) }.getOrNull()
+            if (arr != null) {
+                return (0 until arr.length())
+                    .mapNotNull { arr.optString(it, "").trim().ifEmpty { null } }
+            }
+        }
+        return text.split('\n', ',', ' ', '\t')
+            .map { it.trim().trim('"', '\'') }
+            .filter { it.isNotEmpty() }
     }
 
     // Sayfa zincirindeki "sonraki" bağlantısını çözer. Göreli href geçerli sayfa

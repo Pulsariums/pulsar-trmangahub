@@ -91,6 +91,9 @@ dependencies {
     implementation("com.github.clquwu:kotatsu-parsers-redo:$parsersRef")
     implementation("org.jsoup:jsoup:1.17.2")
     implementation("org.json:json:20240303")
+    // Rhino: config'teki pageJsExpr ifadelerini yorumlar. Sayfa listesi sayfadaki
+    // küçük bir JS hesabının sonucu olan siteler için — tarayıcı değil, hesap motoru.
+    implementation("org.mozilla:rhino:1.7.15")
     // org.json'in return-types'inda @Nullable annotation sınıfıreferans veriyor;
     // derleme sınıfyolunda jspecify olmadan tip çıkarımı patlıyor. Hostta yok —
     // compileOnly yeter (APK'ya gimez).
