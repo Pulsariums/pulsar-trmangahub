@@ -99,4 +99,12 @@ jobs:
       - name: Verify published index
         run: |
           sleep 5
-          curl -fsS "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/pulsar-video/repo/index.min.json" | head -c 600
+          base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/pulsar-video/repo"
+          # İstemciler depo adresini bu adlarla sırayla dener; dördü de yayında olmalı.
+          for f in index.min.json index.json repo.json plugins.json; do
+            code=$(curl -sS -o /dev/null -w '%{http_code}' "$base/$f")
+            echo "$f -> $code"
+            test "$code" = "200" || { echo "::error::$f yayında değil ($code)"; exit 1; }
+          done
+          curl -fsS "$base/index.min.json" | head -c 600
+          echo

@@ -5,6 +5,8 @@
 //! versionName/versionCode, `tachiyomi.animeextension.*` meta verileri çıkarılır.
 //!
 //! Çıktı: `<out>/apk/<paket>.apk` kopyaları ve `<out>/index.min.json`.
+//! Aynı içerik `index.json`, `repo.json`, `plugins.json` adlarına da yazılır:
+//! istemciler depo adresini bu adlarla sırayla dener (404 → sıradaki ad).
 //! `index.min.json` Aniyomi'nin yayınladığı biçimdir: kök bir DİZİ, her öğe
 //! {name, pkg, apk, lang, code, version, nsfw, sources}. Ek alan yazılmaz:
 //! Aniyomi indeksi bu 8 anahtarla ayrıştırır (bkz. rapor/kanıt).
@@ -20,6 +22,11 @@ use std::process::ExitCode;
 
 const DEFAULT_APK_DIR: &str = "pulsar-video/extension/build/outputs/apk/release";
 const DEFAULT_OUT: &str = "pulsar-video/repo";
+
+/// Aniyomi/Kototoro istemcileri depo adresini bu dosya adlarıyla arar
+/// (`ExtensionRepoUrls.indexFileNames`); biri 404 dönerse sıradakine geçer.
+/// Dördü de birebir aynı içeriği taşır: tek doğruluk kaynağı `index.min.json`.
+const INDEX_FILE_NAMES: [&str; 4] = ["index.min.json", "index.json", "repo.json", "plugins.json"];
 
 #[derive(Default, Debug)]
 struct ManifestInfo {
@@ -205,7 +212,9 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
                 info.package
             );
         }
-        println!("[dry]  yazılacak: {}/index.min.json", out.display());
+        for name in INDEX_FILE_NAMES {
+            println!("[dry]  yazılacak: {}/{name}", out.display());
+        }
         return ExitCode::SUCCESS;
     }
 
@@ -233,12 +242,21 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
             return ExitCode::FAILURE;
         }
     }
-    let index_path = out.join("index.min.json");
-    if let Err(e) = std::fs::write(&index_path, format!("{text}\n")) {
-        eprintln!("HATA: {} yazılamadı: {e}", index_path.display());
-        return ExitCode::FAILURE;
+    // Dört ad da aynı baytları alır; istemci hangisini denerse aynı indeksi görür.
+    let body = format!("{text}\n");
+    for name in INDEX_FILE_NAMES {
+        let index_path = out.join(name);
+        if let Err(e) = std::fs::write(&index_path, &body) {
+            eprintln!("HATA: {} yazılamadı: {e}", index_path.display());
+            return ExitCode::FAILURE;
+        }
     }
-    println!("[ok] {} APK + {}", infos.len(), index_path.display());
+    println!(
+        "[ok] {} APK + {} indeks dosyası ({})",
+        infos.len(),
+        INDEX_FILE_NAMES.len(),
+        INDEX_FILE_NAMES.join(", ")
+    );
     ExitCode::SUCCESS
 }
 
