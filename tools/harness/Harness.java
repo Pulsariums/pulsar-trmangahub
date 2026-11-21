@@ -44,6 +44,8 @@ import org.skepsun.kototoro.source.host.MihonJarRegistry;
 public final class Harness {
 
     private static final long CALL_TIMEOUT_SECONDS = 90L;
+    /** Ad ile eşleştirme ön eki: `@name:<parça>`. */
+    private static final String NAME_PREFIX = "@name:";
 
     public static void main(String[] args) {
         if (args.length < 2 && System.getenv("HARNESS_DUMP") == null) {
@@ -54,7 +56,18 @@ public final class Harness {
         String jarArg = args[0];
         List<String> domains = new ArrayList<>();
         for (int i = 1; i < args.length; i++) {
-            String d = args[i].trim().toLowerCase(Locale.ROOT).replaceFirst("^www\\.", "");
+            String raw = args[i].trim();
+            // `@name:<parça>` motor kaynaklarını ad ile eşleştirir; büyük/küçük
+            // harf korunur ki çıktı satırındaki "domain" alanı verilen değerle
+            // birebir aynı olsun (normalizeName zaten harfe duyarsızdır).
+            if (isNameQuery(raw)) {
+                String part = raw.substring(NAME_PREFIX.length()).trim();
+                if (!part.isEmpty()) {
+                    domains.add(NAME_PREFIX + part);
+                }
+                continue;
+            }
+            String d = raw.toLowerCase(Locale.ROOT).replaceFirst("^www\\.", "");
             if (!d.isEmpty()) {
                 domains.add(d);
             }
@@ -173,8 +186,11 @@ public final class Harness {
             Object instance = findSource(instances, domain, entry);
             if (instance == null) {
                 // Katalogda olup 288'lik çalıştırılabilir listede kaynağı olmayan
-                // domainler site hatası değil, kapsam dışıdır.
-                String reason = entry != null ? "KAPSAM_DISI" : "KATALOG_DISI";
+                // domainler site hatası değil, kapsam dışıdır. `@name:` sorgusunda
+                // ise kaynak adı hiçbir örnekle eşleşmemiştir.
+                String reason = isNameQuery(domain)
+                        ? "AD_ESLESMEDI"
+                        : (entry != null ? "KAPSAM_DISI" : "KATALOG_DISI");
                 return errorLine(domain, 0, 0, 0, reason, "");
             }
             if (!(instance instanceof CatalogueSource)) {
@@ -182,10 +198,19 @@ public final class Harness {
                         "kaynak CatalogueSource değil: " + instance.getClass().getName(), "");
             }
             CatalogueSource source = (CatalogueSource) instance;
+            // Motor kaynakları (PulsarKotatsuSource) yalnız yeni suspend API'yi
+            // (getPopularManga/getMangaUpdate/getPageList) uygular; HttpSource'un
+            // legacy fetch* yolu bu sınıfta bilinçli olarak UnsupportedOperation
+            // atar. Katalog kaynakları ise legacy yolu kullanır; iki yol ayrı
+            // tutulur ki domain davranışı birebir aynı kalsın.
+            boolean engine = isEngineSource(instance);
 
-            MangasPage page = source.fetchPopularManga(1)
-                    .timeout(CALL_TIMEOUT_SECONDS, TimeUnit.SECONDS)
-                    .toBlocking().first();
+            MangasPage page = engine
+                    ? (MangasPage) callSuspend(instance, "getPopularManga",
+                            new Class<?>[]{int.class}, 1)
+                    : source.fetchPopularManga(1)
+                            .timeout(CALL_TIMEOUT_SECONDS, TimeUnit.SECONDS)
+                            .toBlocking().first();
             List<SManga> manga = page != null ? page.getMangas() : new ArrayList<>();
             int listCount = manga.size();
             if (listCount == 0) {
@@ -204,15 +229,28 @@ public final class Harness {
                 SManga candidate = manga.get(i);
                 attemptedSeries++;
                 try {
-                    SManga details = source.fetchMangaDetails(candidate)
-                            .timeout(CALL_TIMEOUT_SECONDS, TimeUnit.SECONDS)
-                            .toBlocking().first();
-                    if (details == null) {
-                        details = candidate;
+                    List<SChapter> candidateChapters;
+                    if (engine) {
+                        // Detay + bölüm tek çağrıda; motor kaynağı parser'dan
+                        // ikisini birlikte döndürür.
+                        eu.kanade.tachiyomi.source.model.SMangaUpdate update =
+                                (eu.kanade.tachiyomi.source.model.SMangaUpdate) callSuspend(
+                                        instance, "getMangaUpdate",
+                                        new Class<?>[]{SManga.class, List.class,
+                                                boolean.class, boolean.class},
+                                        candidate, new ArrayList<SChapter>(), true, true);
+                        candidateChapters = update != null ? update.getChapters() : null;
+                    } else {
+                        SManga details = source.fetchMangaDetails(candidate)
+                                .timeout(CALL_TIMEOUT_SECONDS, TimeUnit.SECONDS)
+                                .toBlocking().first();
+                        if (details == null) {
+                            details = candidate;
+                        }
+                        candidateChapters = source.fetchChapterList(details)
+                                .timeout(CALL_TIMEOUT_SECONDS, TimeUnit.SECONDS)
+                                .toBlocking().first();
                     }
-                    List<SChapter> candidateChapters = source.fetchChapterList(details)
-                            .timeout(CALL_TIMEOUT_SECONDS, TimeUnit.SECONDS)
-                            .toBlocking().first();
                     int candidateCount = candidateChapters != null ? candidateChapters.size() : 0;
                     if (candidateCount > 0) {
                         sampled = candidate;
@@ -251,9 +289,12 @@ public final class Harness {
                 }
                 probed++;
                 try {
-                    List<Page> pages = source.fetchPageList(chapters.get(index))
-                            .timeout(CALL_TIMEOUT_SECONDS, TimeUnit.SECONDS)
-                            .toBlocking().first();
+                    List<Page> pages = engine
+                            ? (List<Page>) callSuspend(instance, "getPageList",
+                                    new Class<?>[]{SChapter.class}, chapters.get(index))
+                            : source.fetchPageList(chapters.get(index))
+                                    .timeout(CALL_TIMEOUT_SECONDS, TimeUnit.SECONDS)
+                                    .toBlocking().first();
                     pageCount = pages != null ? pages.size() : 0;
                     // Sahte geçiş koruması: sayfa listesi HTML belgesi döndürüyorsa
                     // okuyucuda kırık görsel olur. Yalnız kesin text/html reddedilir;
@@ -286,13 +327,36 @@ public final class Harness {
     /**
      * Kaynak örneğini domain ile eşleştirir.
      *
-     * Sıra: (a) kaynağın katalog `domain` alanı, (b) katalog domain/lang'inden
-     * hesaplanan `pulsar/...` id'si, (c) baseUrl host'u (alt domainler dahil),
-     * (d) katalog adı. 288'lik listede `PulsarSource` (katalog kaynaklı) ve
-     * `PulsarKotatsuSource` (Kotatsu parser kaynaklı) karışık gelir; id/host
-     * eşleşmesi ikisini de yakalar.
+     * `@name:<parça>` verilirse katalog kaydı yoktur; kaynak adı normalize
+     * edilmiş hâliyle parçayı içeren ilk örnek döner (katalog kaynakları önce,
+     * motor kaynakları sonra). Motor kaynakları (`PulsarKotatsuSource`)
+     * `domain=null`, `baseUrl=""` bildirdiği için katalog id/host eşleşmesi
+     * onları yakalayamıyordu.
+     *
+     * Domain modunda sıra: (a) kaynağın katalog `domain` alanı, (b) katalog
+     * domain/lang'inden hesaplanan `pulsar/...` id'si, (c) baseUrl host'u (alt
+     * domainler dahil), (d) katalog adı. 288'lik listede `PulsarSource`
+     * (katalog kaynaklı) ve `PulsarKotatsuSource` (Kotatsu parser kaynaklı)
+     * karışık gelir; id/host eşleşmesi ikisini de yakalar.
      */
     private static Object findSource(List<Object> instances, String domain, JSONObject entry) {
+        List<Object> ordered = orderedSources(instances);
+
+        // (n) ad: `@name:<parça>` — normalize edilmiş ad parçayı içeriyorsa.
+        if (isNameQuery(domain)) {
+            String needle = normalizeName(domain.substring(NAME_PREFIX.length()));
+            if (needle.isEmpty()) {
+                return null;
+            }
+            for (Object candidate : ordered) {
+                String candidateName = normalizeName(nameOf(candidate));
+                if (!candidateName.isEmpty() && candidateName.contains(needle)) {
+                    return candidate;
+                }
+            }
+            return null;
+        }
+
         String lang = entry != null
                 ? entry.optString("lang", "tr").toLowerCase(Locale.ROOT)
                 : "tr";
@@ -310,14 +374,6 @@ public final class Harness {
         // denenir. Aksi hâlde aynı host'u taşıyan @Broken motor kaynağı eşleşip
         // UnsupportedOperationException veriyor ve çalışan katalog kaydı hiç test
         // edilmiyordu (§30'daki aynı tuzak). Motor kaynakları yine de yedek sırada.
-        List<Object> ordered = new ArrayList<>();
-        for (Object candidate : instances) {
-            if (isCatalogueSource(candidate)) ordered.add(candidate);
-        }
-        for (Object candidate : instances) {
-            if (!isCatalogueSource(candidate)) ordered.add(candidate);
-        }
-
         // (a) katalog domain alanı
         for (Object candidate : ordered) {
             String candidateDomain = domainOf(candidate);
@@ -352,6 +408,119 @@ public final class Harness {
             }
         }
         return null;
+    }
+
+    /** `@name:` ile ad eşleştirme sorgusu mu? (Ön ek harfe duyarsız.) */
+    private static boolean isNameQuery(String value) {
+        return value != null && value.length() > NAME_PREFIX.length()
+                && value.regionMatches(true, 0, NAME_PREFIX, 0, NAME_PREFIX.length());
+    }
+
+    /** Katalog kaynakları önce, motor kaynakları sonra. */
+    private static List<Object> orderedSources(List<Object> instances) {
+        List<Object> ordered = new ArrayList<>();
+        for (Object candidate : instances) {
+            if (isCatalogueSource(candidate)) ordered.add(candidate);
+        }
+        for (Object candidate : instances) {
+            if (!isCatalogueSource(candidate)) ordered.add(candidate);
+        }
+        return ordered;
+    }
+
+    /** Motor (Kotatsu parser köprüsü) kaynağı mı? */
+    private static boolean isEngineSource(Object source) {
+        return source != null
+                && source.getClass().getSimpleName().equals("PulsarKotatsuSource");
+    }
+
+    /**
+     * Kotlin suspend metodunu çağırır ve sonucu bekler.
+     *
+     * Çağrı ayrı bir daemon iş parçacığında koşar: parser içinde bloklayan ağ
+     * çağrısı olsa bile {@link #CALL_TIMEOUT_SECONDS} sınırı işler. Askıya
+     * alınan (COROUTINE_SUSPENDED) çağrılar sürekli devam ettirilir.
+     */
+    private static Object callSuspend(Object target, String methodName,
+                                      Class<?>[] parameterTypes, Object... args) throws Throwable {
+        final Object[] result = new Object[1];
+        final Throwable[] failure = new Throwable[1];
+        Thread worker = new Thread(() -> {
+            try {
+                result[0] = invokeSuspend(target, methodName, parameterTypes, args);
+            } catch (Throwable t) {
+                failure[0] = t;
+            }
+        }, "harness-suspend-" + methodName);
+        worker.setDaemon(true);
+        worker.start();
+        worker.join(TimeUnit.SECONDS.toMillis(CALL_TIMEOUT_SECONDS));
+        if (worker.isAlive()) {
+            throw new java.util.concurrent.TimeoutException(methodName + " zaman aşımı");
+        }
+        if (failure[0] != null) {
+            throw failure[0];
+        }
+        return result[0];
+    }
+
+    private static Object invokeSuspend(Object target, String methodName,
+                                         Class<?>[] parameterTypes, Object... args) throws Throwable {
+        Class<?>[] signature = new Class<?>[parameterTypes.length + 1];
+        System.arraycopy(parameterTypes, 0, signature, 0, parameterTypes.length);
+        signature[parameterTypes.length] = kotlin.coroutines.Continuation.class;
+        Method method = target.getClass().getMethod(methodName, signature);
+
+        BlockingContinuation continuation = new BlockingContinuation();
+        Object[] callArgs = new Object[args.length + 1];
+        System.arraycopy(args, 0, callArgs, 0, args.length);
+        callArgs[args.length] = continuation;
+
+        Object immediate;
+        try {
+            immediate = method.invoke(target, callArgs);
+        } catch (java.lang.reflect.InvocationTargetException e) {
+            throw e.getCause();
+        }
+        if (immediate == kotlin.coroutines.intrinsics.CoroutineSingletons.COROUTINE_SUSPENDED) {
+            continuation.await();
+            if (continuation.failure != null) {
+                throw continuation.failure;
+            }
+            return continuation.value;
+        }
+        if (immediate instanceof kotlin.Result.Failure) {
+            throw ((kotlin.Result.Failure) immediate).exception;
+        }
+        return immediate;
+    }
+
+    /** Suspend çağrısının sonucunu toplayan tek kullanımlık continuation. */
+    private static final class BlockingContinuation implements kotlin.coroutines.Continuation<Object> {
+
+        private final java.util.concurrent.CountDownLatch latch =
+                new java.util.concurrent.CountDownLatch(1);
+        private volatile Object value;
+        private volatile Throwable failure;
+
+        @Override
+        public kotlin.coroutines.CoroutineContext getContext() {
+            return kotlin.coroutines.EmptyCoroutineContext.INSTANCE;
+        }
+
+        @Override
+        public void resumeWith(Object result) {
+            if (result instanceof kotlin.Result.Failure) {
+                failure = ((kotlin.Result.Failure) result).exception;
+            } else {
+                value = result;
+            }
+            latch.countDown();
+        }
+
+        void await() throws InterruptedException {
+            latch.await();
+        }
     }
 
     private static List<Object> addCatalogueOnlySources(List<Object> instances,

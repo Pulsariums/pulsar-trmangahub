@@ -190,3 +190,62 @@ değerlendirilmeli.
 
 Doğrulama: `grep -c '^# KAYNAK ' .work/ghostchk/<paket>-dump.txt` (global 245, global18 283,
 test 116, test18 51, tr 48, tr18 4); `grep ' id=' .work/ghostchk/*-dump.txt`.
+
+## Motor kaynakları (id/ad eşleştirmesi)
+
+Ölçüm: `tools/harness/run.sh`; yayındaki **v265** APK'ları (`.work/tam4/apk/`, 21:07 snapshot).
+Kapsam: paketlerdeki **244 motor kaynağı** (`PulsarKotatsuSource`), `@name:<kaynak adı>` ile
+ad üzerinden eşleştirildi. Ölçüt aynı: `list>0 && chapters>0 && pages>0` ve `hata` boş.
+
+Kod: `tools/harness/Harness.java` `findSource` (satır 342) `@name:` modu; motor kaynağı yalnız
+yeni suspend API'yi uyguladığı için `callSuspend` (satır 444) ile `getPopularManga` /
+`getMangaUpdate` / `getPageList` çağrılıyor (satır 206'daki `engine` dalı). Katalog
+kaynaklarının legacy yolu değişmedi.
+
+### Paket tablosu
+
+| Paket | Test | Geçti | Kaldı | Geçme |
+|---|---:|---:|---:|---:|
+| tr | 10 | 7 | 3 | %70 |
+| tr18 | 0 | 0 | 0 | — |
+| global | 95 | 83 | 12 | %87 |
+| global18 | 22 | 22 | 0 | %100 |
+| test | 90 | 10 | 80 | %11 |
+| test18 | 27 | 11 | 16 | %41 |
+| **Toplam** | **244** | **133** | **111** | **%55** |
+
+`source_map.name` görünen adla eşleşmeyen 17 kaynak `source_map.title` ile (2 tanesi
+baseUrl host'u ile) yeniden koşuldu ve sonuç birleştirildi; 244 satırın 244'ü de tekil.
+`tr18` paketinde KATALOG_DISI motor kaynağı yok (0).
+
+### Hata sınıfları
+
+| Sınıf | Sayı |
+|---|---:|
+| `HttpStatusException` | 39 |
+| `popüler liste boş` | 21 |
+| `NotFoundException` | 13 |
+| `sayfa 0` (hata yok) | 13 |
+| `IOException` (`Cloudflare bypass currently disabled` dahil) | 9 |
+| `UnknownHostException` | 5 |
+| `bölüm listesi boş` | 4 |
+| `SocketTimeoutException` | 3 |
+| `CertificateExpiredException` | 2 |
+| `ProtocolException` | 1 |
+| `SSLException` | 1 |
+| **Geçti (hata yok)** | **133** |
+
+Notlar:
+- `source_map.json`'da `broken=false` süzgeci uygulansaydı liste **224** kalırdı. 244 hedefi
+  ve önceki bölümdeki 244 id için **20 `@Broken` kaynağı da** koşuldu. Bunlardan
+  `RIZZCOMIC` ve `ANIBEL` geçti; kalan 18'i hata verdi.
+- Motor kaynakları `HttpSource`'un legacy `fetch*` yolunda `UnsupportedOperationException`
+  atıyor; bu yüzden harness'a suspend yol eklendi. Ayrıca uygulamanın gömülü `parser-api`
+  sürümü APK'nın `kotatsu-parsers-redo` sürümünden eski (`newParserInstance(MangaSource)`
+  vs `MangaParserSource`); koşuda `PARSERS_JAR` (kotatsu-parsers-redo.jar) sınıf yolunun
+  başına eklendi. `tools/harness/run.sh` depoda izlenmiyor (untracked).
+- `SODSAIME` (Thai görünen ad) ve `TRUYENTRANHDAMMYY` yalnız baseUrl host'u ile test
+  edilebildi: APK'da görünen adları `???????` / `Truy?n Tranh ?am M?` (Unicode kaybı),
+  `source_map.name` ile eşleşmiyor.
+- Ham veri: `.work/motor/sonuc.json` → `pulsar-v2/data/testler/2026-11-21-motor-tarama.json`;
+  loglar `.work/motor/t4-*.log`.
