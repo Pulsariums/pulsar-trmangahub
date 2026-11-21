@@ -1,5 +1,5 @@
 {
-  "catalogue_after": 681,
+  "catalogue_after": 671,
   "catalogue_before": 798,
   "dropped": [
     {
@@ -52,6 +52,13 @@
       "nsfw": 0
     },
     {
+      "domain": "shadowceviri.blogspot.com",
+      "kept": "ShadowCeviri",
+      "lang": "tr",
+      "name": "Shadow Çeviri",
+      "nsfw": 0
+    },
+    {
       "domain": "demonicscans.org",
       "kept": "DemonicScans",
       "lang": "en",
@@ -66,10 +73,38 @@
       "nsfw": 0
     },
     {
+      "domain": "hanman18.com",
+      "kept": "Hanman18",
+      "lang": "zh",
+      "name": "Hanman18",
+      "nsfw": 1
+    },
+    {
+      "domain": "hentaiukr.com",
+      "kept": "HentaiUkr",
+      "lang": "uk",
+      "name": "HentaiUkr",
+      "nsfw": 1
+    },
+    {
+      "domain": "lectorhentai.com",
+      "kept": "LectorHentai",
+      "lang": "es",
+      "name": "LectorHentai",
+      "nsfw": 1
+    },
+    {
       "domain": "maid.my.id",
       "kept": "MaidId",
       "lang": "id",
       "name": "MaidId",
+      "nsfw": 0
+    },
+    {
+      "domain": "mangabats.com",
+      "kept": "MangaBat",
+      "lang": "en",
+      "name": "MangaBat",
       "nsfw": 0
     },
     {
@@ -91,6 +126,13 @@
       "kept": "ZinManga.net",
       "lang": "en",
       "name": "ZinManga.net",
+      "nsfw": 0
+    },
+    {
+      "domain": "remanga.org",
+      "kept": "Реманга",
+      "lang": "ru",
+      "name": "Реманга",
       "nsfw": 0
     },
     {
@@ -794,6 +836,13 @@
       "nsfw": 1
     },
     {
+      "domain": "euphoriascan.com",
+      "kept": "EuphoriaScan",
+      "lang": "pt",
+      "name": "Euphoria Scan",
+      "nsfw": 1
+    },
+    {
       "domain": "komikindo.ch",
       "kept": "KomikIndo.ch",
       "lang": "id",
@@ -820,6 +869,27 @@
       "lang": "id",
       "name": "Sekte Doujin",
       "nsfw": 1
+    },
+    {
+      "domain": "mihentai.com",
+      "kept": "MiHentai",
+      "lang": "id",
+      "name": "Mihentai",
+      "nsfw": 1
+    },
+    {
+      "domain": "sayhentaii.art",
+      "kept": "SayHentai",
+      "lang": "vi",
+      "name": "Say Hentai",
+      "nsfw": 1
+    },
+    {
+      "domain": "mangalami.com",
+      "kept": "LamiManga",
+      "lang": "th",
+      "name": "mangalami.com",
+      "nsfw": 0
     }
   ],
   "dropped_ids": [
@@ -830,12 +900,18 @@
     6742627070718581513,
     381484129732438666,
     7652509331851274426,
+    6620039325110469985,
     8230647377971906276,
     5452887278882590031,
+    1079335891060482737,
+    4587021830589594478,
+    7199847461939925125,
     4434136942147328383,
+    6072456827135650688,
     4063768058096310907,
     513391446834079432,
     4799276220939522567,
+    4543072178093183112,
     6983378665536208517,
     5558312473456395594,
     5558312473516245713,
@@ -936,13 +1012,17 @@
     4871458201540002697,
     4345487257700612863,
     7521499901022487047,
+    8399921646016000819,
     2661323974230789189,
     1910862088388825602,
     1843907598759145760,
-    5922755793366266846
+    5922755793366266846,
+    947646064643117123,
+    3864261013583477357,
+    6080646864642055960
   ],
   "engine_keys": 860,
-  "generated": "2026-11-21T19:46:35Z",
+  "generated": "2026-11-21T21:28:19Z",
   "mirrors": 17,
   "note": "Ayni host+dil+nsfw motor kaynagi katalogdan dusuruldu; tasinmis alan adlari mirrors'a yazildi."
 }
