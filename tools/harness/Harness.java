@@ -300,8 +300,20 @@ public final class Harness {
             addHosts(hosts, entry.optJSONArray("mirrors"));
         }
 
-        // (a) katalog domain alanı
+        // Katalog kaynağı (PulsarSource) motor kaynağından (PulsarKotatsuSource) ÖNCE
+        // denenir. Aksi hâlde aynı host'u taşıyan @Broken motor kaynağı eşleşip
+        // UnsupportedOperationException veriyor ve çalışan katalog kaydı hiç test
+        // edilmiyordu (§30'daki aynı tuzak). Motor kaynakları yine de yedek sırada.
+        List<Object> ordered = new ArrayList<>();
         for (Object candidate : instances) {
+            if (isCatalogueSource(candidate)) ordered.add(candidate);
+        }
+        for (Object candidate : instances) {
+            if (!isCatalogueSource(candidate)) ordered.add(candidate);
+        }
+
+        // (a) katalog domain alanı
+        for (Object candidate : ordered) {
             String candidateDomain = domainOf(candidate);
             if (candidateDomain != null) {
                 String candidateHost = hostOfUrl(candidateDomain.toLowerCase(Locale.ROOT));
@@ -312,14 +324,14 @@ public final class Harness {
         }
 
         // (b) id
-        for (Object candidate : instances) {
+        for (Object candidate : ordered) {
             if (idOf(candidate) == expectedId) {
                 return candidate;
             }
         }
 
         // (c) baseUrl host
-        for (Object candidate : instances) {
+        for (Object candidate : ordered) {
             String host = hostOfUrl(baseUrlOf(candidate));
             if (host != null && hosts.contains(host)) {
                 return candidate;
@@ -327,7 +339,7 @@ public final class Harness {
         }
 
         // (d) ad
-        for (Object candidate : instances) {
+        for (Object candidate : ordered) {
             String candidateName = normalizeName(nameOf(candidate));
             if (!candidateName.isEmpty() && candidateName.equals(expectedName)) {
                 return candidate;
@@ -642,6 +654,11 @@ public final class Harness {
         }
     }
 
+    /** Katalog (veri-güdümlü) kaynağı mı? Motor kaynağı `PulsarKotatsuSource`'tur. */
+    private static boolean isCatalogueSource(Object candidate) {
+        return candidate != null && candidate.getClass().getSimpleName().equals("PulsarSource");
+    }
+
     /**
      * Sayfa adresi gerçekten görsel mi? Yalnız kesin `text/html` reddedilir.
      *
@@ -662,8 +679,10 @@ public final class Harness {
             c.setRequestProperty("User-Agent",
                     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36");
             int code = c.getResponseCode();
-            if (code == 405 || code == 501) {
-                // HEAD desteklenmiyor: kesin karar verme.
+            // Yalnız 200 + text/html KESİN reddedilir. 401/403/405/5xx belirsizdir:
+            // hotlink koruması (2xstorage: referersiz 403 text/html, refererli 200 webp)
+            // ve oturum çerezi isteyen uçlar aksi hâlde çalışan kaynağı düşürür.
+            if (code != 200 && code != 206) {
                 return false;
             }
             String ct = c.getContentType();
