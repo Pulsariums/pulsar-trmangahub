@@ -17720,6 +17720,64 @@
       ],
       "selector_verified": true,
       "dead": false
+    },
+    {
+      "id": "6028517731014373149",
+      "name": "TIBIU漫画",
+      "lang": "zh",
+      "nsfw": 1,
+      "domain": "comic.tibiu.net",
+      "baseUrl": "https://comic.tibiu.net",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listJsonUrl": "https://comic.tibiu.net/api/homepagedata",
+        "listJsonItems": "data.latest",
+        "listJsonUrlField": "url",
+        "listJsonUrlTemplate": "{slug}",
+        "listJsonTitle": "name",
+        "listJsonCover": "pic",
+        "chapterApiUrl": "https://comic.tibiu.net/api/comic/chapter?mid={id}",
+        "chapterApiIdPattern": "/comic/(\\d+)",
+        "chapterApiItems": "data",
+        "chapterApiFieldUrl": "link",
+        "chapterApiFieldName": "name",
+        "pageApiUrl": "https://comic.tibiu.net/index.php/api/data/pic?cid={2}",
+        "pageApiIdPattern": "/chapter/(\\d+)/(\\d+)",
+        "pageApiItems": "data",
+        "pageApiFieldUrl": "img"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "keiyoushi_index"
+      ],
+      "selector_verified": true,
+      "dead": false
+    },
+    {
+      "id": "4116931674173505341",
+      "name": "MyAdultComics",
+      "lang": "en",
+      "nsfw": 1,
+      "domain": "myadultcomics.com",
+      "baseUrl": "https://myadultcomics.com",
+      "engine": "custom",
+      "config": {
+        "engine": "custom",
+        "listPath": "/",
+        "itemSelector": "td.list_container",
+        "singleChapter": true,
+        "singleChapterName": "Galeri",
+        "pageJsExpr": "JSON.stringify(html.match(/books\\/\\d+\\/\\d+\\.(?:jpe?g|png|webp|avif)/g)||[])",
+        "pageJsFirst": "1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
+      },
+      "verified_by_user": false,
+      "origins": [
+        "keiyoushi_index"
+      ],
+      "selector_verified": true,
+      "dead": false
     }
   ]
 }

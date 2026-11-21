@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T21:54:46Z",
+  "generated": "2026-11-21T10:24:04Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -7979,6 +7979,32 @@
         "at": "2026-11-16T22:05:11.851283Z"
       },
       "device_step": "details"
+    },
+    "2371034526545812021": {
+      "id": 2371034526545812021,
+      "kind": "catalogue",
+      "title": "TIBIU漫画",
+      "lang": "zh",
+      "nsfw": 1,
+      "domain": "comic.tibiu.net",
+      "packages": [
+        "global18"
+      ],
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T10:23:55Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T10:23:55Z"
+      }
     },
     "237533157448430333": {
       "id": 237533157448430333,
@@ -31659,6 +31685,32 @@
         "at": "2026-11-13T17:07:52Z"
       },
       "dead": true
+    },
+    "6829187311431360684": {
+      "id": 6829187311431360684,
+      "kind": "catalogue",
+      "title": "MyAdultComics",
+      "lang": "en",
+      "nsfw": 1,
+      "domain": "myadultcomics.com",
+      "packages": [
+        "global18"
+      ],
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T10:23:55Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T10:23:55Z"
+      }
     },
     "6837757301787680956": {
       "id": 6837757301787680956,
