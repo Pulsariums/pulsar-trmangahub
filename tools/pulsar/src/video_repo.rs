@@ -4,12 +4,21 @@
 //! Her APK'nın ikili `AndroidManifest.xml` (AXML) dosyası okunur; paket adı,
 //! versionName/versionCode, `tachiyomi.animeextension.*` meta verileri çıkarılır.
 //!
-//! Çıktı: `<out>/apk/<paket>.apk` kopyaları ve `<out>/index.min.json`.
-//! Aynı içerik `index.json`, `repo.json`, `plugins.json` adlarına da yazılır:
-//! istemciler depo adresini bu adlarla sırayla dener (404 → sıradaki ad).
-//! `index.min.json` Aniyomi'nin yayınladığı biçimdir: kök bir DİZİ, her öğe
-//! {name, pkg, apk, lang, code, version, nsfw, sources}. Ek alan yazılmaz:
-//! Aniyomi indeksi bu 8 anahtarla ayrıştırır (bkz. rapor/kanıt).
+//! Çıktı: `<out>/apk/<paket>.apk` kopyaları, `<out>/index.min.json` (eklenti
+//! DİZİSİ) ve `<out>/repo.json` (depo META NESNESİ). İki dosya farklı şemadır;
+//! aynı baytları taşıyamazlar:
+//!
+//! - `index.min.json` Aniyomi'nin yayınladığı biçimdir: kök bir DİZİ, her öğe
+//!   {name, pkg, apk, lang, code, version, nsfw, sources}. Ek alan yazılmaz:
+//!   Aniyomi indeksi bu 8 anahtarla ayrıştırır. Kototoro eklenti listesini
+//!   `"${repo.baseUrl}/index.min.json"` adresinden bu biçimde çeker.
+//! - `repo.json` Kototoro `fetchRepoDetails`'ın İLK denediği adrestir ve gövdeyi
+//!   `RepoMetaWrapperDto` olarak ayrıştırır: {"index_v2": null, "meta": {name,
+//!   shortName, website, signingKeyFingerprint}}. Başarısız olursa `index.pb`ye
+//!   düşer (bu depoda yok) → kullanıcı depo eklerken hata alır. Bu yüzden
+//!   `repo.json` asla dizi değil, bu nesne olmalıdır.
+//! - `index.json` ve `plugins.json` ÜRETİLMEZ: `plugins.json` Cloudstream'in
+//!   adıdır, `index.json` gereksizdir. Eski çıktılarda kalmışlarsa silinirler.
 //!
 //! Manga tarafında AXML okuyan kod yoktu (grep: tools/pulsar/src/*.rs içinde
 //! AndroidManifest geçmiyor); ayrıştırıcı burada, bağımlılık yalnız `zip`
@@ -23,10 +32,26 @@ use std::process::ExitCode;
 const DEFAULT_APK_DIR: &str = "pulsar-video/extension/build/outputs/apk/release";
 const DEFAULT_OUT: &str = "pulsar-video/repo";
 
-/// Aniyomi/Kototoro istemcileri depo adresini bu dosya adlarıyla arar
-/// (`ExtensionRepoUrls.indexFileNames`); biri 404 dönerse sıradakine geçer.
-/// Dördü de birebir aynı içeriği taşır: tek doğruluk kaynağı `index.min.json`.
-const INDEX_FILE_NAMES: [&str; 4] = ["index.min.json", "index.json", "repo.json", "plugins.json"];
+/// Eklenti listesi (kök DİZİ). Kototoro/Aniyomi `"${repo.baseUrl}/index.min.json"`
+/// adresinden çeker.
+const INDEX_FILE: &str = "index.min.json";
+
+/// Depo meta verisi (kök NESNE). Kototoro `fetchRepoDetails` önce bunu çeker ve
+/// `RepoMetaWrapperDto` olarak ayrıştırır; ayrıştırma başarısızsa `index.pb`ye
+/// düşer (bu depoda yok) → "depo eklenemedi" hatası.
+const REPO_META_FILE: &str = "repo.json";
+
+/// Artık üretilmeyen adlar. Eski çıktılarda kalırlarsa yanlış (dizi) baytlarla
+/// yayında kalırlar; üretim sırasında silinirler.
+const LEGACY_FILE_NAMES: [&str; 2] = ["index.json", "plugins.json"];
+
+/// `repo.json` meta alanları. Manga deposunun (`pulsar-v2/repo/repo.json`)
+/// yayındaki değerleriyle aynı imza parmak izi kullanılır.
+const REPO_NAME: &str = "Pulsar Video";
+const REPO_SHORT_NAME: &str = "Pulsar";
+const REPO_WEBSITE: &str = "https://github.com/Pulsariums/pulsar-trmangahub";
+const SIGNING_KEY_FINGERPRINT: &str =
+    "55468803fc00aa073be9f40599d28644207688a447672934df661c57207b50f6";
 
 #[derive(Default, Debug)]
 struct ManifestInfo {
@@ -200,8 +225,26 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
         }
     };
 
+    let repo_meta = json!({
+        "index_v2": null,
+        "meta": {
+            "name": REPO_NAME,
+            "shortName": REPO_SHORT_NAME,
+            "website": REPO_WEBSITE,
+            "signingKeyFingerprint": SIGNING_KEY_FINGERPRINT,
+        },
+    });
+    let meta_text = match serde_json::to_string_pretty(&repo_meta) {
+        Ok(t) => t,
+        Err(e) => {
+            eprintln!("HATA: repo.json üretilemedi: {e}");
+            return ExitCode::FAILURE;
+        }
+    };
+
     println!("[index] {} uzantı", infos.len());
     println!("{text}");
+    println!("[repo] {REPO_NAME} ({REPO_SHORT_NAME}) imza={SIGNING_KEY_FINGERPRINT}");
 
     if dry {
         for info in &infos {
@@ -212,8 +255,10 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
                 info.package
             );
         }
-        for name in INDEX_FILE_NAMES {
-            println!("[dry]  yazılacak: {}/{name}", out.display());
+        println!("[dry]  yazılacak: {}/{INDEX_FILE}", out.display());
+        println!("[dry]  yazılacak: {}/{REPO_META_FILE}", out.display());
+        for name in LEGACY_FILE_NAMES {
+            println!("[dry]  silinecek (varsa): {}/{name}", out.display());
         }
         return ExitCode::SUCCESS;
     }
@@ -242,20 +287,32 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
             return ExitCode::FAILURE;
         }
     }
-    // Dört ad da aynı baytları alır; istemci hangisini denerse aynı indeksi görür.
-    let body = format!("{text}\n");
-    for name in INDEX_FILE_NAMES {
-        let index_path = out.join(name);
-        if let Err(e) = std::fs::write(&index_path, &body) {
-            eprintln!("HATA: {} yazılamadı: {e}", index_path.display());
-            return ExitCode::FAILURE;
+    // İki dosya iki ayrı şema: index DİZİ, repo.json NESNE.
+    let index_path = out.join(INDEX_FILE);
+    if let Err(e) = std::fs::write(&index_path, format!("{text}\n")) {
+        eprintln!("HATA: {} yazılamadı: {e}", index_path.display());
+        return ExitCode::FAILURE;
+    }
+    let meta_path = out.join(REPO_META_FILE);
+    if let Err(e) = std::fs::write(&meta_path, format!("{meta_text}\n")) {
+        eprintln!("HATA: {} yazılamadı: {e}", meta_path.display());
+        return ExitCode::FAILURE;
+    }
+    for name in LEGACY_FILE_NAMES {
+        let stale = out.join(name);
+        if stale.exists() {
+            match std::fs::remove_file(&stale) {
+                Ok(()) => println!("[temiz] eski dosya silindi: {name}"),
+                Err(e) => {
+                    eprintln!("HATA: {} silinemedi: {e}", stale.display());
+                    return ExitCode::FAILURE;
+                }
+            }
         }
     }
     println!(
-        "[ok] {} APK + {} indeks dosyası ({})",
-        infos.len(),
-        INDEX_FILE_NAMES.len(),
-        INDEX_FILE_NAMES.join(", ")
+        "[ok] {} APK + {INDEX_FILE} (dizi) + {REPO_META_FILE} (meta nesnesi)",
+        infos.len()
     );
     ExitCode::SUCCESS
 }

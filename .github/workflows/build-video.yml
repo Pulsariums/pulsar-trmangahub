@@ -100,11 +100,23 @@ jobs:
         run: |
           sleep 5
           base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/pulsar-video/repo"
-          # İstemciler depo adresini bu adlarla sırayla dener; dördü de yayında olmalı.
-          for f in index.min.json index.json repo.json plugins.json; do
+          # İki dosya, iki ayrı şema: index.min.json eklenti DİZİSİ,
+          # repo.json Kototoro'nun ayrıştırdığı META NESNESİ.
+          for f in index.min.json repo.json; do
             code=$(curl -sS -o /dev/null -w '%{http_code}' "$base/$f")
             echo "$f -> $code"
             test "$code" = "200" || { echo "::error::$f yayında değil ($code)"; exit 1; }
           done
-          curl -fsS "$base/index.min.json" | head -c 600
-          echo
+          curl -fsS "$base/index.min.json" -o /tmp/pulsar-index.min.json
+          curl -fsS "$base/repo.json" -o /tmp/pulsar-repo.json
+          node -e '
+            const fs = require("fs");
+            const index = JSON.parse(fs.readFileSync("/tmp/pulsar-index.min.json", "utf8"));
+            if (!Array.isArray(index)) throw new Error("index.min.json dizi değil");
+            const meta = JSON.parse(fs.readFileSync("/tmp/pulsar-repo.json", "utf8"));
+            if (!meta || typeof meta !== "object" || Array.isArray(meta)) throw new Error("repo.json nesne değil");
+            if (!meta.meta || typeof meta.meta.name !== "string" || !meta.meta.name) throw new Error("repo.json meta.name yok");
+            if (typeof meta.meta.website !== "string" || !meta.meta.website) throw new Error("repo.json meta.website yok");
+            if (typeof meta.meta.signingKeyFingerprint !== "string" || !meta.meta.signingKeyFingerprint) throw new Error("repo.json signingKeyFingerprint yok");
+            console.log("index.min.json dizi (" + index.length + " kayıt), repo.json meta.name=" + meta.meta.name);
+          '
