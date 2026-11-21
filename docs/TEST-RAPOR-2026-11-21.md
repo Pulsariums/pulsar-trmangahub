@@ -249,3 +249,29 @@ Notlar:
   `source_map.name` ile eşleşmiyor.
 - Ham veri: `.work/motor/sonuc.json` → `pulsar-v2/data/testler/2026-11-21-motor-tarama.json`;
   loglar `.work/motor/t4-*.log`.
+
+## Nihai tarama (akşam, düzeltmeler sonrası)
+
+Aynı harness, aynı APK'lar (build `2f7f58e` + 5 tamir terfisi). 739 domain-mapped kaynak:
+
+| Paket | Ölçülen | Geçti | Geçme |
+|---|---:|---:|---:|
+| tr | 48 | 45 | %94 |
+| tr18 | 4 | 3 | %75 |
+| global | 243 | 219 | %90 |
+| global18 | 283 | 276 | %98 |
+| test | 111 | 17 | %15 |
+| test18 | 50 | 20 | %40 |
+| **Toplam** | **739** | **580** | **%78** |
+
+Sabah aynı kapsamda **127/739 (%17)** idi; fark tamamen ağ katmanı düzeltmelerinden:
+DoH (301 kaynak), tlsFragment (95 kaynak), otomatik motor yedekleri ve 5 config tamiri.
+
+Motor kaynakları ayrı yoldan (`@name:`) ölçüldü: **244 denendi, 133 geçti (%55)**
+(yukarıdaki "Motor kaynakları" bölümü). Bu ikinci ölçüm ilk kümeyle kısmen örtüşür; **toplanmaz**.
+
+Kalan 159 hatanın sınıfları: `HttpStatusException` 39 (403/404), liste boş 28, hata metni boş 24,
+bölüm listesi boş 14, `NotFoundException` 13, `UnknownHost` 12, `IOException` 10, timeout 5.
+Bunların büyük kısmı `test`/`test18` havuzunda (bilinçli olarak yayına alınmamış adaylar).
+
+Ham veri: `pulsar-v2/data/testler/2026-11-21-final-tarama.json`.
