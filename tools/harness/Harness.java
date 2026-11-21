@@ -64,7 +64,13 @@ public final class Harness {
         MihonJarRegistry registry = null;
         FileSourcePreferenceStore preferences = null;
         try {
-            Path root = Paths.get("").toAbsolutePath();
+            // Paralel koşu: her süreç kendi kök dizinini kullanır (HARNESS_ROOT),
+            // aksi hâlde iki JVM aynı `.work/harness-tmp/preferences` kilidine
+            // takılıp "Preference directory already has an owner" veriyor.
+            String rootOverride = System.getenv("HARNESS_ROOT");
+            Path root = (rootOverride == null || rootOverride.isBlank())
+                    ? Paths.get("").toAbsolutePath()
+                    : Paths.get(rootOverride).toAbsolutePath();
             Path work = root.resolve(".work").resolve("harness-tmp");
             Path compat = work.resolve("compat");
             Path prefsDir = work.resolve("preferences");
