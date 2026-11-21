@@ -220,9 +220,13 @@ class PulsarSource(
         val itemsKey = config.optString("listJsonItems", "")
         // Alan yolu boş kaldığında kök dizi öğe listesidir: /wp-json/wp/v2/comic gibi
         // uçlar gövdeyi doğrudan [ ... ] döndürüyor (vixenlogic). JSONObject yolu aynen durur.
-        val arr = root?.let { r ->
-            if (itemsKey.isBlank()) r.optJSONArray("data") else r.optJSONArray(itemsKey)
-        } ?: runCatching { JSONArray(text.trim()) }.getOrNull()
+        // listJsonItems düz anahtar da olabilir yol da ("data.latest", "props.paginate.data").
+        val arr = (if (root != null) {
+            EngineRegistry.jsonPath(root, itemsKey.ifBlank { "data" })
+        } else {
+            null
+        }) as? JSONArray
+            ?: runCatching { JSONArray(text.trim()) }.getOrNull()
             ?: return MangasPage(emptyList(), hasNextPage = false)
         val titleKey = config.optString("listJsonTitle", "title")
         val slugKey = config.optString("listJsonUrlField", "slug")
@@ -230,12 +234,12 @@ class PulsarSource(
         val coverKey = config.optString("listJsonCover", "")
         val mangas = (0 until arr.length()).mapNotNull { i ->
             val o = arr.optJSONObject(i) ?: return@mapNotNull null
-            val slug = o.optString(slugKey).trim()
+            val slug = jsonField(o, slugKey).trim()
             if (slug.isEmpty() || template.isBlank()) return@mapNotNull null
             SManga.create().apply {
                 url = template.replace("{slug}", slug)
-                title = o.optString(titleKey).trim()
-                thumbnail_url = if (coverKey.isBlank()) null else realImageUrl(o.optString(coverKey))
+                title = jsonField(o, titleKey).trim()
+                thumbnail_url = if (coverKey.isBlank()) null else realImageUrl(jsonField(o, coverKey))
             }
         }
         return MangasPage(mangas, hasNextPage = mangas.size >= 10)
@@ -279,13 +283,17 @@ class PulsarSource(
         val arrayKey = config.optString("searchJsonItems", "")
         if (arrayKey.isBlank()) return popularMangaParse(response)
         val text = response.body?.string().orEmpty()
-        val arr = runCatching { JSONObject(text).optJSONArray(arrayKey) }.getOrNull()
+        // searchJsonItems düz anahtar ya da yol olabilir ("hits", "data.results",
+        // "data.items[0].list"). Kök dizi cevabı da kabul edilir.
+        val root = runCatching { JSONObject(text) }.getOrNull()
+        val arr = (if (root != null) EngineRegistry.jsonPath(root, arrayKey) else null) as? JSONArray
+            ?: runCatching { JSONArray(text.trim()) }.getOrNull()
             ?: return MangasPage(emptyList(), hasNextPage = false)
         val urlKey = config.optString("searchJsonUrl", "url")
         val titleKey = config.optString("searchJsonTitle", "title")
         val mangas = (0 until arr.length()).mapNotNull { i ->
             val o = arr.optJSONObject(i) ?: return@mapNotNull null
-            val raw = o.optString(urlKey).trim()
+            val raw = jsonField(o, urlKey).trim()
             if (raw.isEmpty()) return@mapNotNull null
             val prefix = config.optString("searchJsonPathPrefix", "")
             val u = if (prefix.isNotEmpty() && !raw.startsWith("http") && !raw.startsWith("/")) {
@@ -295,7 +303,7 @@ class PulsarSource(
             }
             SManga.create().apply {
                 url = relativize(u)
-                title = o.optString(titleKey).trim()
+                title = jsonField(o, titleKey).trim()
             }
         }
         return MangasPage(mangas, hasNextPage = false)
@@ -328,6 +336,21 @@ class PulsarSource(
         if (!url.startsWith("http")) return url
         val path = url.substringAfter("://").substringAfter('/', "")
         return if (hostOf(url) == hostOf(baseUrl)) "/" + path else url
+    }
+
+    // Config alanı düz anahtar da olabilir JSON yolu da ("data.latest",
+    // "hits[].document.slug", "items[0].url"). Yolda '.'/'[' yoksa eski
+    // optString davranışı aynen işler; yol varsa EngineRegistry.jsonPath çözer.
+    private fun jsonField(o: Any?, key: String): String {
+        val k = key.trim()
+        if (k.isEmpty()) return ""
+        if (!k.contains('.') && !k.contains('[')) {
+            return (o as? JSONObject)?.optString(k) ?: ""
+        }
+        return when (val v = EngineRegistry.jsonPath(o, k)) {
+            null, is JSONObject, is JSONArray -> ""
+            else -> v.toString()
+        }
     }
 
     // ---- URL birleştirme -------------------------------------------------
@@ -373,14 +396,11 @@ class PulsarSource(
     private fun apiChapters(response: Response): List<SChapter> {
         val text = response.body?.string().orEmpty()
         val itemsKey = config.optString("chapterApiItems", "data")
-        // chapterApiItems noktalı yol olabilir: "data.chapters". Gövde kök dizi ise
-        // alan yolu uygulanmaz, dizinin kendisi bölüm listesidir.
+        // chapterApiItems düz anahtar ya da yol olabilir: "data.chapters",
+        // "data.items[0].chapters". Gövde kök dizi ise alan yolu uygulanmaz,
+        // dizinin kendisi bölüm listesidir.
         val rootObj = runCatching { JSONObject(text) }.getOrNull()
-        var node: Any? = rootObj
-        for (part in itemsKey.split('.')) {
-            node = (node as? JSONObject)?.opt(part)
-        }
-        val arr = node as? JSONArray
+        val arr = (if (rootObj != null) EngineRegistry.jsonPath(rootObj, itemsKey) else null) as? JSONArray
             ?: runCatching { JSONArray(text.trim()) }.getOrNull()
             ?: return emptyList()
         val nameKey = config.optString("chapterApiFieldName", "name")
@@ -394,15 +414,15 @@ class PulsarSource(
         for (i in 0 until arr.length()) {
             val o = arr.optJSONObject(i) ?: continue
             val raw = if (urlTemplate.isNotBlank()) {
-                val v = o.optString(numKey).trim()
+                val v = jsonField(o, numKey).trim()
                 if (v.isEmpty()) "" else urlTemplate.replace("{id}", apiId).replace("{value}", v)
             } else {
-                o.optString(urlKey).trim()
+                jsonField(o, urlKey).trim()
             }
             if (raw.isEmpty()) continue
-            val num = o.optString(numKey).replace(',', '.').toFloatOrNull() ?: 0f
+            val num = jsonField(o, numKey).replace(',', '.').toFloatOrNull() ?: 0f
             val numText = if (num % 1f == 0f) num.toInt().toString() else num.toString()
-            val title = (if (urlTemplate.isBlank()) o.optString(nameKey).trim() else "")
+            val title = (if (urlTemplate.isBlank()) jsonField(o, nameKey).trim() else "")
                 .ifBlank { "Bölüm $numText" }
             val ch = SChapter.create().apply {
                 url = relativize(raw)
@@ -503,14 +523,14 @@ class PulsarSource(
                 "TANI4 api url=${response.request.url} len=${text.length} ilk=${text.take(160)}",
             )
         }
-        // pageApiItems noktalı yol olabilir: "data.images".
-        var node: Any? = root
-        if (root != null) {
-            for (part in config.optString("pageApiItems", "images").split('.')) {
-                node = (node as? JSONObject)?.opt(part)
-            }
-        }
-        val arr = node as? org.json.JSONArray ?: rootArr
+        // pageApiItems düz anahtar ya da yol olabilir: "data.images",
+        // "props.paginate.data", "chapters[].images".
+        val arr = (if (root != null) {
+            EngineRegistry.jsonPath(root, config.optString("pageApiItems", "images"))
+        } else {
+            null
+        }) as? org.json.JSONArray
+            ?: rootArr
             ?: throw IllegalStateException("TANI4 dizi yok: ${config.optString("pageApiItems")} url=${response.request.url}")
         val urlField = config.optString("pageApiFieldUrl", "")
         val out = ArrayList<Page>(arr.length())
@@ -518,7 +538,7 @@ class PulsarSource(
             val raw = if (urlField.isBlank()) {
                 arr.optString(i)
             } else {
-                arr.optJSONObject(i)?.optString(urlField).orEmpty()
+                jsonField(arr.optJSONObject(i), urlField)
             }
             if (raw.isBlank()) continue
             val u = absolute(raw)
@@ -792,6 +812,34 @@ class PulsarSource(
         )
     }
 
+    // Sayfa sayısını JS ile hesaplayan galeriler (hentaiforce /view/<id>/<n>,
+    // hentaifox /g/<id>/<n>/): "sonraki" bağlantısı href taşımaz, sayfa zinciri
+    // bu yüzden kurulamaz. pageSeqUrl şablonunda {url} bölüm adresi, {n} sayfa
+    // numarasıdır; adet pageSeqCount ya da pageSeqCountSelector'ün metninden gelir.
+    private fun seqPages(doc: Document, chapterUrl: String): List<Page> {
+        val template = config.optString("pageSeqUrl", "").trim()
+        if (template.isEmpty()) return emptyList()
+        val count = config.optInt("pageSeqCount", 0).takeIf { it > 0 }
+            ?: seqCountFrom(doc)
+            ?: return emptyList()
+        val start = config.optInt("pageSeqStart", 1).let { if (it > 0) it else 1 }
+        val total = count.coerceAtMost(400)
+        return (0 until total).map { i ->
+            val n = start + i
+            val u = template.replace("{url}", chapterUrl).replace("{n}", n.toString())
+            Page(i, chapterUrl, absolute(u))
+        }
+    }
+
+    private fun seqCountFrom(doc: Document): Int? {
+        val sel = config.optString("pageSeqCountSelector", "").trim()
+        if (sel.isEmpty()) return null
+        val el = doc.selectFirst(sel) ?: return null
+        val attr = config.optString("pageSeqCountAttr", "").trim()
+        val raw = if (attr.isEmpty() || attr.equals("text", ignoreCase = true)) el.text() else el.attr(attr)
+        return Regex("\\d+").find(raw)?.value?.toIntOrNull()?.takeIf { it > 0 }
+    }
+
     // Pages
     override fun pageListParse(response: Response): List<Page> {
         if (config.optBoolean("pageQwik", false)) {
@@ -807,6 +855,11 @@ class PulsarSource(
         val html = response.body?.string().orEmpty()
         val doc = Jsoup.parse(html, baseUrl)
         val chapterUrl = response.request.url.toString()
+        // pageSeqFirst doluysa sayısal dizi diğer yollardan önce denenir.
+        if (config.optString("pageSeqFirst", "").isNotBlank()) {
+            val seq = seqPages(doc, chapterUrl)
+            if (seq.isNotEmpty()) return seq
+        }
         val imageUrls = pageImagesFrom(doc, html).toMutableList()
 
         // Çok sayfalı okuyucu zinciri: bazı sitelerde bölüm tek HTML değil, ayrı
@@ -844,6 +897,12 @@ class PulsarSource(
             }
         }
 
+        // readerSelector/script/chain yolları sayfa bulamadıysa sayısal dizi devreye girer.
+        if (imageUrls.isEmpty()) {
+            val seq = seqPages(doc, chapterUrl)
+            if (seq.isNotEmpty()) return seq
+        }
+
         return imageUrls.mapIndexed { index, imgUrl ->
             Page(index, chapterUrl, imgUrl)
         }
@@ -862,6 +921,15 @@ class PulsarSource(
             config.optString("pageScriptContains", ""),
             config.optString("pageUrlBase", ""),
         )
+        // Next.js App Router siteleri sayfa dizisini RSC "flight" metnine gömüyor
+        // (hentailek, pornhwareader). pageRscKey boşsa (varsayılan) hiç çalışmaz.
+        val rscPages = EngineRegistry.rscPageImages(
+            html,
+            config.optString("pageRscKey", ""),
+            config.optString("pageRscUrlField", ""),
+            config.optString("pageUrlBase", "").ifBlank { baseUrl },
+            config.optString("pageUrlAllow", ""),
+        )
         // Bazı sitelerde DOM içindeki <img> adresleri doğrudan çalışmıyor (Amanga: .link
         // originde 403). Site kendi okuyucusunda <script> içindedir ve proxy adresi
         // üretir; "pageScriptFirst" işaretliyse script sonucu DOM içeriğinden önce gelir.
@@ -877,6 +945,7 @@ class PulsarSource(
             )
                 .ifEmpty { EngineRegistry.rawImages(html, baseUrl) }
                 .ifEmpty { scriptPages }
+                .ifEmpty { rscPages }
         }
     }
 

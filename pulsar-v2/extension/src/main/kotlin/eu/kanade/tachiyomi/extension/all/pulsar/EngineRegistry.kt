@@ -4,6 +4,7 @@ import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.json.JSONArray
+import org.json.JSONObject
 
 data class ParsedManga(
     val title: String,
@@ -82,6 +83,94 @@ object EngineRegistry {
         if (u.startsWith("http")) return u
         if (u.startsWith("//")) return "https:$u"
         return baseUrl.trimEnd('/') + "/" + u.trimStart('/')
+    }
+
+    // ---- JSON yol çözücü ----------------------------------------------------
+    // Config alanları düz anahtar da olabilir yol da: "data.latest",
+    // "props.paginate.data", "items[0].images", "chapters[].images",
+    // "data.items[2].url". Yolda '.'/'[' yoksa davranış eskisiyle aynıdır
+    // (düz anahtar). Kök dizi ise yol "[0]" / "[]" ile başlayabilir; "[]"
+    // kalan yolu her elemana uygular ve dizi sonuçları düzleştirilir.
+    // Bulunamayan yol null döner, istisna atmaz.
+    private object JsonWildcard
+
+    fun jsonPath(root: Any?, path: String): Any? {
+        if (root == null) return null
+        val p = path.trim()
+        if (p.isEmpty()) return root
+        if (!p.contains('.') && !p.contains('[')) {
+            val o = root as? JSONObject ?: return null
+            return jsonNotNull(o.opt(p))
+        }
+        return jsonWalk(root, jsonPathTokens(p), 0)
+    }
+
+    private fun jsonNotNull(v: Any?): Any? =
+        if (v == null || v === JSONObject.NULL) null else v
+
+    private fun jsonWalk(node: Any?, tokens: List<Any>, i: Int): Any? {
+        if (i >= tokens.size) return jsonNotNull(node)
+        return when (val t = tokens[i]) {
+            is Int -> {
+                val arr = node as? JSONArray ?: return null
+                if (t < 0 || t >= arr.length()) null else jsonWalk(arr.opt(t), tokens, i + 1)
+            }
+            JsonWildcard -> {
+                val arr = node as? JSONArray ?: return null
+                val out = JSONArray()
+                for (k in 0 until arr.length()) {
+                    when (val v = jsonWalk(arr.opt(k), tokens, i + 1)) {
+                        null -> {}
+                        is JSONArray -> for (m in 0 until v.length()) {
+                            jsonNotNull(v.opt(m))?.let { out.put(it) }
+                        }
+                        else -> out.put(v)
+                    }
+                }
+                out
+            }
+            else -> {
+                val obj = node as? JSONObject ?: return null
+                jsonWalk(obj.opt(t.toString()), tokens, i + 1)
+            }
+        }
+    }
+
+    private fun jsonPathTokens(path: String): List<Any> {
+        val out = ArrayList<Any>()
+        val sb = StringBuilder()
+        var i = 0
+        while (i < path.length) {
+            val c = path[i]
+            when {
+                c == '.' -> {
+                    if (sb.isNotEmpty()) { out.add(sb.toString()); sb.setLength(0) }
+                    i++
+                }
+                c == '[' -> {
+                    if (sb.isNotEmpty()) { out.add(sb.toString()); sb.setLength(0) }
+                    val end = path.indexOf(']', i + 1)
+                    if (end < 0) {
+                        sb.append(path, i, path.length)
+                        i = path.length
+                    } else {
+                        val inner = path.substring(i + 1, end).trim()
+                        val idx = inner.toIntOrNull()
+                        out.add(
+                            when {
+                                inner.isEmpty() -> JsonWildcard
+                                idx != null -> idx
+                                else -> inner
+                            },
+                        )
+                        i = end + 1
+                    }
+                }
+                else -> { sb.append(c); i++ }
+            }
+        }
+        if (sb.isNotEmpty()) out.add(sb.toString())
+        return out
     }
 
     // Galeri detay sayfalarinda paylasim/reklam baglantilari bolum adayi
@@ -676,6 +765,54 @@ object EngineRegistry {
             out.add(ParsedChapter(name = name, url = url, chapterNumber = number, dateUpload = 0L))
         }
         return out
+    }
+
+    /**
+     * Next.js App Router siteleri sayfa görsellerini HTML'e değil RSC "flight"
+     * metnine gömüyor (hentailek: pages:[{...}], pornhwareader: çift kaçışlı
+     * \"pages\"). pageRscKey dizinin anahtarı, pageRscUrlField elemanlardaki
+     * adres alanıdır (boşsa önce src, sonra url denenir). Yalnız görsel
+     * uzantılı ya da pageUrlAllow ile eşleşen değerler alınır; en fazla 400.
+     */
+    fun rscPageImages(
+        html: String,
+        key: String,
+        urlField: String,
+        urlBase: String,
+        allowPattern: String = "",
+    ): List<String> {
+        if (key.isBlank()) return emptyList()
+        val allow = if (allowPattern.isBlank()) null else runCatching { Regex(allowPattern) }.getOrNull()
+        val fields = if (urlField.isNotBlank()) listOf(urlField) else listOf("src", "url")
+        val base = urlBase.trimEnd('/')
+        val out = LinkedHashSet<String>()
+        // Kaçış tek (hentailek) ya da çift (pornhwareader) katmanlı olabilir.
+        val text = rscText(html)
+        for (raw in listOf(text, text.replace("\\\"", "\""))) {
+            if (raw.isEmpty()) continue
+            val arr = arrayAfter(raw, key) ?: continue
+            for (i in 0 until arr.length()) {
+                val v = rscFieldValue(arr.opt(i), fields) ?: continue
+                val full = when {
+                    v.startsWith("http") -> v
+                    v.startsWith("//") -> "https:$v"
+                    base.isBlank() -> v
+                    else -> absoluteUrl(v, base)
+                }
+                addPageUrl(out, full, allow, base)
+                if (out.size >= 400) return out.toList()
+            }
+            if (out.isNotEmpty()) break
+        }
+        return out.toList()
+    }
+
+    private fun rscFieldValue(el: Any?, fields: List<String>): String? = when (el) {
+        is JSONObject -> fields.firstNotNullOfOrNull { f ->
+            el.optString(f).trim().ifEmpty { null }
+        }
+        is String -> el.trim().ifEmpty { null }
+        else -> null
     }
 
     // Nyx Scans gibi siteler bölüm listesini DOM'a değil gömülü RSC/Qwik durumuna
