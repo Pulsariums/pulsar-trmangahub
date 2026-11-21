@@ -148,15 +148,32 @@ class PulsarVideoSource(
             }
         }
         return doc.select(sel).mapNotNull { el ->
-            val a = when {
-                el.tagName() == "a" -> el
-                urlAttr.isNotBlank() -> el.selectFirst("a[$urlAttr]") ?: return@mapNotNull null
-                else -> el.selectFirst("a[href]") ?: return@mapNotNull null
-            }
-            val rawUrl = if (urlAttr.isNotBlank()) {
-                a.attr(urlAttr)
+            // URL kaynağı sırayla: (1) hosterUrlAttr, (2) <a href>, (3) <iframe src>,
+            // (4) öğenin içindeki ilk a[href], yoksa ilk iframe[src].
+            // 4. adım embed'in <a> ile verilmediği siteler (ör. animesuge) içindir.
+            val target: org.jsoup.nodes.Element
+            val rawUrl: String
+            if (urlAttr.isNotBlank()) {
+                val attrEl = if (el.hasAttr(urlAttr)) el else el.selectFirst("[$urlAttr]")
+                    ?: return@mapNotNull null
+                target = attrEl
+                rawUrl = attrEl.attr(urlAttr)
+            } else if (el.tagName() == "a") {
+                target = el
+                rawUrl = el.absUrl("href").ifBlank { el.attr("href") }
+            } else if (el.tagName() == "iframe") {
+                target = el
+                rawUrl = iframeSrc(el)
             } else {
-                a.absUrl("href").ifBlank { a.attr("href") }
+                val a = el.selectFirst("a[href]")
+                if (a != null) {
+                    target = a
+                    rawUrl = a.absUrl("href").ifBlank { a.attr("href") }
+                } else {
+                    val iframe = el.selectFirst("iframe[src]") ?: return@mapNotNull null
+                    target = iframe
+                    rawUrl = iframeSrc(iframe)
+                }
             }
             val url = if (urlBase64 && rawUrl.isNotBlank()) {
                 decodeHosterUrl(rawUrl) ?: return@mapNotNull null
@@ -164,7 +181,25 @@ class PulsarVideoSource(
                 rawUrl
             }
             if (url.isBlank()) return@mapNotNull null
-            Hoster(url, a.text().ifBlank { "embed" })
+            val label = if (target.tagName() == "iframe") {
+                target.attr("title").ifBlank { "embed" }
+            } else {
+                target.text().ifBlank { "embed" }
+            }
+            Hoster(url, label)
+        }
+    }
+
+    /** iframe src'sini mutlaklaştırır; `absUrl` boşsa baseUrl'e göre çözer. */
+    private fun iframeSrc(el: org.jsoup.nodes.Element): String {
+        el.absUrl("src").takeIf { it.isNotBlank() }?.let { return it }
+        val src = el.attr("src").trim()
+        return when {
+            src.startsWith("http://") || src.startsWith("https://") -> src
+            src.startsWith("//") -> "https:$src"
+            src.startsWith("/") -> "$baseUrl$src"
+            src.isBlank() -> ""
+            else -> "$baseUrl/$src"
         }
     }
 
