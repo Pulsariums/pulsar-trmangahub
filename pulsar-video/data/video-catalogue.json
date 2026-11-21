@@ -3,37 +3,6 @@
   "updated": "2026-11-21",
   "sources": [
     {
-      "id": "9anime.org.lv",
-      "name": "9Anime",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "9anime.org.lv",
-      "baseUrl": "https://9anime.org.lv",
-      "engine": "video",
-      "status": "video_unresolved",
-      "config": {
-        "listPath": "/anime/",
-        "itemSelector": "div.bsx",
-        "titleAttr": "title",
-        "coverSelector": "img.ts-post-image",
-        "episodeSelector": ".eplister ul li a",
-        "hosterSelector": "iframe[src*='newplayer']"
-      },
-      "not": "Olculdu (2026-11-20): liste /anime/ 30 kart div.bsx; baslik a[title]; detay .eplister 18 bolum; bolumde iframe gogoanime.me.uk/newplayer.php. VIDEO COZULMEDI: gogo player JS ile kuruluyor, CloudStream jar'inda GogoHelper var ama ExtractorApi degil (getUrl yok) -> koprüyle cagrilamaz."
-    },
-    {
-      "id": "gogoanime3.net",
-      "name": "GogoAnime",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "gogoanime3.net",
-      "baseUrl": "https://gogoanime3.net",
-      "engine": "video",
-      "status": "unmeasured",
-      "config": {},
-      "not": "302 -> yonlendirme; hedef alan adi olculmedi."
-    },
-    {
       "id": "gogoanime.onl",
       "name": "GogoAnime",
       "lang": "en",

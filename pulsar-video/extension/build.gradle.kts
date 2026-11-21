@@ -14,8 +14,8 @@ android {
         minSdk = 23
         targetSdk = 35
         // Aniyomi/Kototoro: versionName "<extLib>.<patch>" kontratı.
-        versionCode = (project.findProperty("pulsarVersionCode") as String? ?: "1").toInt()
-        versionName = project.findProperty("pulsarVersionName") as String? ?: "1.0.1"
+        versionCode = (project.findProperty("pulsarVersionCode") as String? ?: "2").toInt()
+        versionName = project.findProperty("pulsarVersionName") as String? ?: "1.0.2"
     }
 
     buildTypes {
