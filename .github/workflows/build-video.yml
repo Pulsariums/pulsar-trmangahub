@@ -1,7 +1,8 @@
 name: Build Pulsar Video (Aniyomi eklentisi)
 
 # Manga paketlerinden bağımsız: yalnız pulsar-video/extension derlenir.
-# Manuel tetiklenir; artefakt commit etmez (önce derleme/ABI doğrulaması).
+# APK, depodaki imza anahtarıyla imzalanır; `pulsar video-repo` Aniyomi
+# index.min.json'unu üretir ve artefaktlar main'e commit edilir.
 on:
   workflow_dispatch:
     inputs:
@@ -13,6 +14,13 @@ on:
         description: 'versionCode'
         required: false
         default: '1'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-video
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -47,9 +55,48 @@ jobs:
             -PpulsarVersionName="${{ inputs.versionName }}" \
             -PpulsarVersionCode="${{ inputs.versionCode }}"
 
+      # İmzasız APK Aniyomi'ye kurulamaz: manga tarafıyla aynı depo anahtarı.
+      - name: Sign release APK (committed key)
+        run: |
+          set -euo pipefail
+          test -f signing/pulsar.keystore || { echo "::error::signing/pulsar.keystore yok"; exit 1; }
+          APKSIGNER="$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -1)"
+          for apk in pulsar-video/extension/build/outputs/apk/release/*.apk; do
+            "$APKSIGNER" sign --ks signing/pulsar.keystore --ks-key-alias pulsar \
+              --ks-pass pass:pulsarmangahub --key-pass pass:pulsarmangahub "$apk"
+            "$APKSIGNER" verify --print-certs "$apk" | head -5
+          done
+
+      - name: Build pulsar tool (video-repo)
+        run: cargo build --release --manifest-path tools/pulsar/Cargo.toml
+
+      - name: Generate Aniyomi repo (index + APK copies)
+        run: ./tools/pulsar/target/release/pulsar video-repo
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: pulsar-video-apk
           path: pulsar-video/extension/build/outputs/apk/release/*.apk
           if-no-files-found: error
+
+      - name: Commit and push artifacts
+        run: |
+          git config user.name "pulsar-build-bot"
+          git config user.email "noreply@pulsariums.dev"
+          git add pulsar-video/repo
+          git commit -m "build(video): aniyomi deposu (index + imzali APK)" || echo "degisiklik yok"
+          # Başka bir koşu araya girerse: rebase et; APK/index çakışmasında
+          # BU koşunun ürettiği dosyalar kalsın (rebase'te "theirs" = bizim commit).
+          if ! git pull --rebase --autostash origin main; then
+            echo "::warning::rebase çakıştı; üretilen depo korunuyor"
+            git checkout --theirs -- pulsar-video/repo 2>/dev/null || true
+            git add pulsar-video/repo
+            GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+          fi
+          git push origin HEAD:main
+
+      - name: Verify published index
+        run: |
+          sleep 5
+          curl -fsS "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/pulsar-video/repo/index.min.json" | head -c 600
