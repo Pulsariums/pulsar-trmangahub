@@ -23,7 +23,7 @@ Ham veri: `.work/tam/sonuc.json`, log'lar `.work/tam/<paket>.log`.
 | Sınıf | Sayı | Ne demek |
 |---|---:|---|
 | `UnknownHostException` | **301** | DNS çözümlenemedi. **301'in 301'i katalogda kayıtlı** → yerel ISP DNS bloğu (TR). DoH ile curl 301/403 dönüyor, yani site sağlam. |
-| `KATALOG_DISI` | **243** | Paket listesinde id var ama **hiçbir kaynak örneği yok**. 20'si katalogda (merge düşürmüş), **223'ü katalogda hiç yok** → hayalet id. |
+| `KATALOG_DISI` | **243** | **DÜZELTME:** hayalet değiller. 244 id'nin tamamı motor (`PulsarKotatsuSource`) kaynağı ve paketlerde örneği kuruluyor (HARNESS_DUMP ile TR 48/48, GLOBAL 245/245 doğrulandı). Harness motor kaynaklarını `domain`/`baseUrl` ile eşleştirdiği için (`domain=null`, `baseUrl=""`) test edemiyor. |
 | `SocketTimeoutException` | 20 | 6 paralel işçi + zayıf bağlantı; tekrar denenmeli. |
 | `UnsupportedOperationException` | 20 | Motorun `@Broken` kaynağı (aynı host'lu katalog kaydı yok). |
 | `KAPSAM_DISI` | 12 | Kaynak başka pakette yayında; test yanlış pakette koştu (ölçüm hatası, kaynak hatası değil). |
@@ -46,7 +46,7 @@ Ham veri: `.work/tam/sonuc.json`, log'lar `.work/tam/<paket>.log`.
 ## Sıradaki işler
 
 - (A) 301 DNS'li kayda `dnsOverHttps: https://cloudflare-dns.com/dns-query` ekle → build → aynı 301'i yeniden test et.
-- (B) 223 hayalet id'yi defterde `dead` işaretle (paketlerden çıkar) — karar bekliyor.
+- (B) ~~Hayalet id temizliği~~ — **iptal**: 244 id motor kaynağı, silmek gerileme olur. Yerine: harness motor kaynaklarını id ile eşleştirebilsin.
 - (C) 20 `@Broken` motor kaynağı için katalog karşılığı yaz (bugün 6'sı yapıldı, kalanlar ölçülü).
 - (D) 20 timeout'u tek işçiyle tekrar dene.
 
@@ -128,3 +128,65 @@ Katalogda 95 domainin 95'i de bulundu (`CONFIG=95`, bulunamayan 0); her kayda ya
 | eahentai.com | reset | 46/40/42 |
 
 Ham veri: `.work/tam3/sonuc.json` → `pulsar-v2/data/testler/2026-11-21-tlsf-sonrasi.json`; log'lar `.work/tam3/<paket>.log`.
+
+## Timeout tekrarı (20 kaynak)
+
+Ölçüm: aynı harness, yayındaki APK'lar **v1.6.265 (versionCode 265)** — `.work/tam4/apk/<paket>.apk`.
+Kapsam: ilk taramada `SocketTimeoutException` alan **20 domain** + DoH tekrarında aynı sınıfa düşen
+2 domain (`manhwaclub.net`, `toontop.io`) = birleşik veride **22 domain**. Ölçüt aynı:
+`list>0 && chapters>0 && pages>0` ve `hata` boş.
+
+**Sonuç: 20 kaynakta 0/20 → 16/20; birleşik 22 domainde 18/22 (%82).**
+
+### Paket tablosu
+
+| Paket | Test | Geçti | Kaldı | Geçme |
+|---|---:|---:|---:|---:|
+| global | 1 | 1 | 0 | %100 |
+| global18 | 16 | 16 | 0 | %100 |
+| tr | 1 | 1 | 0 | %100 |
+| test18 | 4 | 0 | 4 | %0 |
+| **Toplam (22)** | **22** | **18** | **4** | **%82** |
+
+### Kalan 4 kaynak
+
+| Domain | Paket | Sonuç | Sınıf |
+|---|---|---|---|
+| 20.allhen.online | test18 | 78/17/0 | sayfa 0 (timeout bitti) |
+| comics18.org | test18 | 24/1/0 | sayfa 0 (timeout bitti) |
+| 3hentai.net | test18 | 0/0/0 | popüler liste boş |
+| ohjoysextoy.com | test18 | 4/0/0 | bölüm listesi boş |
+
+Timeout sınıfı bu 22 domainde 0'a indi; kalan 4'ü farklı sınıflarda (ikisi sayfa üretmiyor,
+ikisi liste/bölüm boş). Geçenler `source-status.json`'da **terfi ettirilmedi** (kapsam dışı).
+
+Ham veri: `.work/tam4/sonuc.json`; log'lar `.work/tam4/<paket>.log`; APK/JAR/sınıf dizinleri
+`.work/tam4/manifest.json`.
+
+## Hayalet iddiasının denetimi (242 kayıt) — defter değişikliği YAPILMADI
+
+Üç JSON birleştirildi (domain başına en iyi sonuç), `hata == "KATALOG_DISI"` → **242 domain**
+(`.work/tam/hayalet-son.txt`, 242 satır). Bu domainler `source-status.json`'da **244 id**'ye
+karşılık geliyor (`mangasusuku.com` ve `mangaread.org` ikişer paket id'si taşıyor).
+İddia: bu id'lerin "motorda örneği yok". Denetim bunu **çürüttü**:
+
+1. v265 APK'larında `HARNESS_DUMP=1` ile paket başına kurulan kaynak örnekleri döküldü.
+   Paket id sayısı ile kurulan örnek sayısı **birebir eşit**:
+   TR 48/48, TR18 4/4, GLOBAL 245/245, GLOBAL18 283/283, TEST 116/116, TEST18 51/51.
+2. 244 id'nin **244'ü de** dökümde `PulsarKotatsuSource` örneği olarak var
+   (ör. `4234251771760310115` MangaRead, `1608873353115070792` MangaEffect,
+   `1608885718281838973` MangaSusuku).
+3. `KATALOG_DISI` bir harness eşleştirme yanılgısı: motor kaynakları `domain=null`,
+   `baseUrl=""` bildiriyor; harness yalnız katalogdan türetilmiş id ile eşleştiriyor, bu id'ler
+   ise `pulsar-kotatsu/<AD>/<dil>` hash'i. Yani kayıt yokluğu değil, **eşleşememe**.
+4. `PulsarSourceFactory.createSources()` zaten `all.filter { it.id in allowed }` yapıyor:
+   paket listesindeki her id kurulan bir kaynağa karşılık gelmek zorunda; sayaç eşitliği bunu doğruluyor.
+
+Bu yüzden `source-status.json` üzerinde `dead/kapali/sorun/packages` değişikliği **yapılmadı**,
+pipeline (`06_prepare_assets.py` → `merge` → `status` → `embed`) **koşulmadı**, commit/push/build
+**atılmadı**. 242 id'yi kapatmak, çalışan 244 kaynağı paketlerden silmek olurdu.
+Not: bu 244 id'nin 20'si `source_map.json`'da `broken=true` (upstream `@Broken`); ayrı iş olarak
+değerlendirilmeli.
+
+Doğrulama: `grep -c '^# KAYNAK ' .work/ghostchk/<paket>-dump.txt` (global 245, global18 283,
+test 116, test18 51, tr 48, tr18 4); `grep ' id=' .work/ghostchk/*-dump.txt`.
