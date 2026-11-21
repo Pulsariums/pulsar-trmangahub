@@ -12,6 +12,7 @@ mod merge;
 mod quarantine;
 mod status;
 mod sweep;
+mod video_mega;
 mod video_repo;
 
 const CONFIG_REL: &str = "pulsar-v2/config/upstreams.json";
@@ -410,6 +411,7 @@ fn main() -> ExitCode {
         (Some("listpath"), _) => listpath::run(&root, &args[1..]),
         (Some("sweep"), _) => sweep::run(&root, &args[1..]),
         (Some("video-repo"), _) => video_repo::run(&root, &args[1..]),
+        (Some("video-mega"), _) => video_mega::run(&root, &args[1..]),
         _ => {
             eprintln!("kullanım:");
             eprintln!("  pulsar sources list");
@@ -425,6 +427,7 @@ fn main() -> ExitCode {
             eprintln!("  pulsar sweep --jar <dosya.jar> --package <ad> --version-code <n> [--site <domain>]...");
             eprintln!("    ortak: [--java <yol>] [--app <dizin>] [--catalogue <yol>] [--timeout sn] [--apk-dir <dizin>] [--debug] [--engine]");
             eprintln!("  pulsar video-repo [--apk-dir <dizin>] [--out <dizin>] [--catalogue <yol>] [--dry-run]");
+            eprintln!("  pulsar video-mega [--sources <json>] [--out <dizin>] [--dry-run]");
             eprintln!("  pulsar merge [--map <source_map.json>] [--catalogue <catalogue.json>] [--dry-run]");
             ExitCode::from(64)
         }
