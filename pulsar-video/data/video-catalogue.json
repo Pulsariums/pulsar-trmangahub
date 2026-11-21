@@ -46,6 +46,25 @@
       "status": "unmeasured",
       "config": {},
       "not": "OLU HOST: kok adres kendine 301 dongusu kuruyor, www nginx varsayilan sayfasi donuyor. Icerik allmanga.to'ya tasinmis; allmanga.to Nuxt SPA, HTML'de kart/anime linki 0. GraphQL POST gerektiginden config yazilamadi."
+    },
+    {
+      "id": "aniworld.to",
+      "name": "AniWorld",
+      "lang": "de",
+      "nsfw": 0,
+      "domain": "aniworld.to",
+      "baseUrl": "https://aniworld.to",
+      "engine": "video",
+      "status": "measured",
+      "config": {
+        "listPath": "/",
+        "itemSelector": "div.coverListItem",
+        "titleAttr": "title",
+        "episodeSelector": "a[data-episode-id]",
+        "episodeNameAttr": "title",
+        "hosterSelector": "a.watchEpisode"
+      },
+      "not": "Zincir: /anime/stream/<slug>/staffel-1/episode-1 -> a.watchEpisode -> /redirect/... -> vidmoly embed -> file:'...master.m3u8' (motorun m3u8 regex'i yakalar). Ayni bolumde VOE/Filemoon/Doodstream de var; onlarin govdesinde duz akis YOK, uygulamada Vidmoly secilmeli."
     }
   ]
 }

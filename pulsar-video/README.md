@@ -35,6 +35,7 @@ APK'yı `repo/apk/` altına kopyalar. CI (`build-video.yml`) her derlemede bu do
 | Kaynak | Durum | Kanıt / sebep |
 |---|---|---|
 | `gogoanime.onl` | **yayında (ölçülmüş)** | liste 57 → bölüm `ul#episode_related` → hoster `a[data-video]` (base64) → vidmoly embed → `master.m3u8` **200 `application/vnd.apple.mpegurl`** |
+| `aniworld.to` | **yayında (ölçülmüş)** | liste 63 → bölüm 7 (`a[data-episode-id]`) → hoster 8 (`a.watchEpisode`) → `/redirect/...` → vidmoly → `master.m3u8` **200 `application/vnd.apple.mpegurl`** |
 | `animesuge.lol` | yok — embed'de düz m3u8 yok, çözücü yok | `player.fairuseonly.xyz/embed` 200, gövdede m3u8/mp4 0; Kototoro'da fairuseonly çözücü yok |
 | `animepahe.com` | yok | Cloudflare WAF her uçta 403 |
 | `allanime.day` | yok | kök 301 döngüsü; içerik `allmanga.to` Nuxt + GraphQL |
