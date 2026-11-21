@@ -106,7 +106,8 @@
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "div.reading-content img",
         "searchUrl": "https://mundomanhwa.com/?s={query}&post_type=wp-manga",
-        "searchMethod": "GET"
+        "searchMethod": "GET",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -1872,7 +1873,8 @@
         "readerSelector": "img[src*=\"/page-\"]",
         "pageScriptContains": "readerImages",
         "pageJsonArray": "readerImages",
-        "pageScriptFirst": "1"
+        "pageScriptFirst": "1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -3064,7 +3066,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": ".reading-content img"
+        "readerSelector": ".reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -3230,7 +3233,8 @@
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -3556,7 +3560,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": ".listing-chapters_wrap li.wp-manga-chapter",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -3577,7 +3582,8 @@
         "listPath": "/",
         "itemSelector": "article.manga-card",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "img[src*=\"/assets/images/chapters/\"]"
+        "readerSelector": "img[src*=\"/assets/images/chapters/\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -3598,7 +3604,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ".chapterbody img"
+        "readerSelector": ".chapterbody img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -3643,7 +3650,8 @@
         "listPath": "/",
         "itemSelector": "article.webtoon-card",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "img[src*=\"/assets/images/chapters/\"]"
+        "readerSelector": "img[src*=\"/assets/images/chapters/\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -3666,7 +3674,8 @@
         "chapterSelector": "li.wp-manga-chapter",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "readerSelector": "div.reading-content img.wp-manga-chapter-img",
-        "searchUrl": "https://hentaixyuri.com/?s={query}&post_type=wp-manga"
+        "searchUrl": "https://hentaixyuri.com/?s={query}&post_type=wp-manga",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -3733,7 +3742,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": ".chapters-list li.li-manga-chapter a",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -3850,7 +3860,8 @@
         "searchMethod": "POST",
         "searchJsonUrl": "url",
         "searchJsonTitle": "title",
-        "searchBody": "query={query}"
+        "searchBody": "query={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4185,7 +4196,8 @@
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "div.reading-content img.wp-manga-chapter-img",
         "searchUrl": "https://manga18x.net/?s={query}&post_type=wp-manga",
-        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4318,7 +4330,8 @@
         "listPath": "/series",
         "itemSelector": "a[href^=\"/series/\"]",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": ".image-container img"
+        "readerSelector": ".image-container img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4339,7 +4352,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4360,7 +4374,8 @@
         "listPath": "/",
         "itemSelector": "div.card",
         "chapterSelector": "a[href^=\"/read/\"]",
-        "readerSelector": ".pages img"
+        "readerSelector": ".pages img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4381,7 +4396,8 @@
         "listPath": "/manga",
         "itemSelector": ".media-left a[href*=\"/manga/\"]",
         "chapterSelector": "ul.list-group a[href*=\"/chapter/\"]",
-        "readerSelector": "img[src*=\"mghcdn.com\"]"
+        "readerSelector": "img[src*=\"mghcdn.com\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4422,7 +4438,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "li.row.less div.chapter",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4512,7 +4529,8 @@
         "listPath": "/",
         "itemSelector": "a[href*=\"/manga/\"]",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4534,7 +4552,8 @@
         "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "ul.chapter_list li a",
         "readerSelector": "#image",
-        "searchUrl": "https://www.mangatown.com/search?name={query}"
+        "searchUrl": "https://www.mangatown.com/search?name={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4576,7 +4595,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4596,7 +4616,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": ".wp-manga-chapter a",
-        "readerSelector": ".reading-content img"
+        "readerSelector": ".reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4668,7 +4689,8 @@
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4689,7 +4711,8 @@
         "listPath": "/comics",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4711,7 +4734,8 @@
         "itemSelector": "strong a[href^=\"/comics/\"]",
         "chapterSelector": "strong a[href^=\"/comics/\"]",
         "readerSelector": ".jb-image img",
-        "searchUrl": "https://multporn.net/search?r=3&search_api_views_fulltext={query}"
+        "searchUrl": "https://multporn.net/search?r=3&search_api_views_fulltext={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4776,7 +4800,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "ul.cl-list li.cl-item a.cl-row",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4796,7 +4821,8 @@
         "listPath": "/",
         "itemSelector": ".card",
         "chapterSelector": "a[href*='/capitulo/']",
-        "readerSelector": "img[src*='imagesolymp']"
+        "readerSelector": "img[src*='imagesolymp']",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4843,7 +4869,8 @@
         "listPath": "/all-mangas",
         "itemSelector": "article.philia-home-card",
         "chapterSelector": ".chapter-row a",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4887,7 +4914,8 @@
         "listPath": "/",
         "itemSelector": ".item-card",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": ".r-page-img"
+        "readerSelector": ".r-page-img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4909,7 +4937,8 @@
         "itemSelector": ".page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": ".reading-content img.wp-manga-chapter-img",
-        "chapterAjaxUrl": "{url}ajax/chapters/"
+        "chapterAjaxUrl": "{url}ajax/chapters/",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4929,7 +4958,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4950,7 +4980,8 @@
         "listPath": "/",
         "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "a[href*=\"/chapter/\"]",
-        "readerSelector": "img.js-page"
+        "readerSelector": "img.js-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -4997,7 +5028,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5017,7 +5049,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": "div.reader-area img"
+        "readerSelector": "div.reader-area img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5069,7 +5102,8 @@
         "searchUrl": "https://spiderscans.xyz/wp-json/spiderscans/v1/search?q={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5092,7 +5126,8 @@
         "itemSelector": "a.falco-card",
         "chapterSelector": "a[href*=\"/capitulo-\"]",
         "readerSelector": "div.cap-canvas",
-        "searchUrl": "https://falcoscan.net/comics?search={query}"
+        "searchUrl": "https://falcoscan.net/comics?search={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5168,7 +5203,8 @@
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader",
         "pageJsonArray": "images",
-        "searchUrl": "https://violetmanga.com/?s={query}"
+        "searchUrl": "https://violetmanga.com/?s={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5345,7 +5381,8 @@
         "chapterSelector": "a[href*=\"manga-reader\"]",
         "readerSelector": "img[src*=\"hennojin-manga\"]",
         "searchUrl": "https://hennojin.com/home/?s={query}",
-        "searchMethod": "GET"
+        "searchMethod": "GET",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5366,7 +5403,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5386,7 +5424,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": "div.reading-content img.wp-manga-chapter-img"
+        "readerSelector": "div.reading-content img.wp-manga-chapter-img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5455,7 +5494,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5482,7 +5522,8 @@
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
         "searchJsonTitle": "title",
-        "http1": true
+        "http1": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5619,7 +5660,8 @@
         "chapterAjaxUrl": "{url}/chapters.html",
         "chapterAjaxMethod": "GET",
         "pageNextSelector": "div.btn-next a",
-        "pageNextLimit": 200
+        "pageNextLimit": 200,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5689,7 +5731,8 @@
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "img.wp-manga-chapter-img",
-        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5709,7 +5752,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "a[href*=\"/capitulo-\"]",
-        "readerSelector": "img.wp-manga-chapter-img"
+        "readerSelector": "img.wp-manga-chapter-img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5731,7 +5775,8 @@
         "chapterSelector": "a[href^=\"/photo/\"]",
         "readerSelector": "img[src*=\"/photos/\"]",
         "searchUrl": "https://en.xchina.co/search?q={query}",
-        "searchMethod": "GET"
+        "searchMethod": "GET",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5756,7 +5801,8 @@
         "pageApiUrl": "https://api.ysk-comics.com/api/v1/chapters/{1}/images",
         "pageApiIdPattern": "chapter/([^/?#]+)",
         "pageApiItems": "data",
-        "searchUrl": "https://ysk-comics.com/en/search?query={query}"
+        "searchUrl": "https://ysk-comics.com/en/search?query={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5804,7 +5850,8 @@
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
         "searchJsonTitle": "title",
-        "chapterAjaxUrl": "https://mangaxhentai.com/wp-admin/admin-ajax.php?action=manga_get_chapters&manga=2878"
+        "chapterAjaxUrl": "https://mangaxhentai.com/wp-admin/admin-ajax.php?action=manga_get_chapters&manga=2878",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5864,7 +5911,8 @@
         "listPath": "/",
         "itemSelector": "a[href^=\"/series/\"]:not([href*=\"/chapter-\"])",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "img[src*=\"/axis/pages/\"]"
+        "readerSelector": "img[src*=\"/axis/pages/\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5885,7 +5933,8 @@
         "itemSelector": ".item-thumb.hover-details.c-image-hover",
         "chapterSelector": "",
         "readerSelector": "img.wp-manga-chapter-img",
-        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -5905,7 +5954,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6046,7 +6096,8 @@
         "listPath": "/",
         "itemSelector": "article.comic",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6339,7 +6390,8 @@
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
         "searchJsonTitle": "title",
-        "http1": true
+        "http1": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6359,7 +6411,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6419,7 +6472,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": "img"
+        "readerSelector": "img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6439,7 +6493,8 @@
         "listPath": "/",
         "itemSelector": ".manga-list-2-item-title a",
         "chapterSelector": "ul.detail-main-list li a",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6460,7 +6515,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6502,7 +6558,8 @@
         "chapterSelector": "div.chapter a",
         "readerSelector": "",
         "pageScriptSelector": "script",
-        "pageJsonArray": "thzq"
+        "pageJsonArray": "thzq",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6564,7 +6621,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6624,7 +6682,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6644,7 +6703,8 @@
         "listPath": "/",
         "itemSelector": "div.page-item-detail.manga",
         "chapterSelector": ".chapter-item a",
-        "readerSelector": ".reading-content img.wp-manga-chapter-img"
+        "readerSelector": ".reading-content img.wp-manga-chapter-img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6665,7 +6725,8 @@
         "itemSelector": ".thumb-item-flow a",
         "chapterSelector": "div.list-chapters a",
         "readerSelector": "img.lazy",
-        "searchUrl": "https://manhwa18.com/tim-kiem?q={query}"
+        "searchUrl": "https://manhwa18.com/tim-kiem?q={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6686,7 +6747,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6789,7 +6851,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6831,7 +6894,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6851,7 +6915,8 @@
         "listPath": "/",
         "itemSelector": "li a[href^=\"/manga/\"]",
         "chapterSelector": "a[href*=\"/chapter/\"]",
-        "readerSelector": ".js-pages-container img"
+        "readerSelector": ".js-pages-container img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6872,7 +6937,8 @@
         "listPath": "/manga/berserk/",
         "itemSelector": "",
         "chapterSelector": "a[href*=\"/chapter/\"]",
-        "readerSelector": "img.pages__img"
+        "readerSelector": "img.pages__img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6915,7 +6981,8 @@
         "listPath": "/",
         "itemSelector": "a.block[href^=\"/manga/\"]",
         "chapterSelector": "div.grid.grid-cols-4.items-center",
-        "readerSelector": "img.js-page"
+        "readerSelector": "img.js-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -6980,7 +7047,8 @@
         "listPath": "/",
         "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "a.text-sm[href*=\"/chapter/\"]",
-        "readerSelector": "img.js-page"
+        "readerSelector": "img.js-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7023,7 +7091,8 @@
         "listPath": "/",
         "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "a.text-sm[href*=\"/chapter/\"]",
-        "readerSelector": "img.js-page"
+        "readerSelector": "img.js-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7044,7 +7113,8 @@
         "listPath": "/",
         "itemSelector": "a.block[href^=\"/manga/\"]",
         "chapterSelector": "div.grid.grid-cols-4.items-center",
-        "readerSelector": "img.js-page"
+        "readerSelector": "img.js-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7087,7 +7157,8 @@
         "listPath": "/",
         "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
-        "readerSelector": "img.js-page"
+        "readerSelector": "img.js-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7108,7 +7179,8 @@
         "listPath": "/",
         "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "div.bg-bg-secondary.p-3.rounded.mb-3.shadow a[href*=\"/chapter/\"]",
-        "readerSelector": "img.js-page"
+        "readerSelector": "img.js-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7151,7 +7223,8 @@
         "listPath": "/",
         "itemSelector": "ul.list-reset a[href*=\"/manga/\"]",
         "chapterSelector": "a[href*=\"/chapter/\"][class*=\"text-text-normal\"]",
-        "readerSelector": "img.js-page"
+        "readerSelector": "img.js-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7172,7 +7245,8 @@
         "itemSelector": "a[href^=\"/manga/\"]",
         "chapterSelector": "table.table tbody tr a[href*=\"/chapter/\"]",
         "readerSelector": "img.pages__img",
-        "searchUrl": "https://ww7.readopm.com/?s={query}"
+        "searchUrl": "https://ww7.readopm.com/?s={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7193,7 +7267,8 @@
         "listPath": "/",
         "itemSelector": "a.block[href^=\"/manga/\"]",
         "chapterSelector": "a[href*=\"/chapter/\"]",
-        "readerSelector": "img.js-page"
+        "readerSelector": "img.js-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7236,7 +7311,8 @@
         "listPath": "/",
         "itemSelector": "a.block[href^=\"/manga/\"]",
         "chapterSelector": "div.grid.grid-cols-4.items-center",
-        "readerSelector": "img.js-page"
+        "readerSelector": "img.js-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7257,7 +7333,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7277,7 +7354,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7297,7 +7375,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7346,7 +7425,8 @@
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
         "searchJsonTitle": "title",
-        "chapterAjaxUrl": "https://mangatop.org/wp-admin/admin-ajax.php?action=manga_get_chapters&manga=69876"
+        "chapterAjaxUrl": "https://mangatop.org/wp-admin/admin-ajax.php?action=manga_get_chapters&manga=69876",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7368,7 +7448,8 @@
         "chapterSelector": "div.chapter-item a",
         "readerSelector": ".reading-content img",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "searchUrl": "https://topmanhua.net/?s={query}&post_type=wp-manga"
+        "searchUrl": "https://topmanhua.net/?s={query}&post_type=wp-manga",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7389,7 +7470,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7430,7 +7512,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7624,7 +7707,8 @@
         "listPath": "/",
         "itemSelector": "a[href*=\"/comic/\"]",
         "chapterSelector": "a[href*=\"/capitulo-\"]",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7644,7 +7728,8 @@
         "listPath": "/",
         "itemSelector": ".up-card",
         "chapterSelector": ".lc-row a",
-        "readerSelector": "#all img.lazy-smart"
+        "readerSelector": "#all img.lazy-smart",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7666,7 +7751,8 @@
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "titleSelector": ".post-title h1"
+        "titleSelector": ".post-title h1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7686,7 +7772,8 @@
         "listPath": "/manga/",
         "itemSelector": "a.series",
         "chapterSelector": "#chapterlist .eph-num a",
-        "readerSelector": "#readerarea img"
+        "readerSelector": "#readerarea img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7748,7 +7835,8 @@
         "listPath": "/comic",
         "itemSelector": "a.latest-v2-media",
         "chapterSelector": "a[href*=\"/chapter/\"]",
-        "readerSelector": "img.reader-list-image"
+        "readerSelector": "img.reader-list-image",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7841,7 +7929,8 @@
         "searchUrl": "https://kumapoi.info/?s={query}&post_type=wp-manga",
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader.run",
-        "pageJsonArray": "sources.0.images"
+        "pageJsonArray": "sources.0.images",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7882,7 +7971,8 @@
         "listPath": "/comic-list/",
         "itemSelector": "div.overflow-hidden.rounded-lg",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "img.imgku"
+        "readerSelector": "img.imgku",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -7903,7 +7993,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8091,7 +8182,8 @@
         "listPath": "/",
         "itemSelector": "div.contentInner figure",
         "chapterSelector": "",
-        "readerSelector": "img.episode-page"
+        "readerSelector": "img.episode-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8132,7 +8224,8 @@
         "listPath": "/",
         "itemSelector": "a[href*=\"/manga/\"][title]",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8173,7 +8266,8 @@
         "listPath": "/comics/",
         "itemSelector": "div.work-nav__image a",
         "chapterSelector": "a[href*=\"/works/comics/\"]",
-        "readerSelector": "img[id^=\"p\"]"
+        "readerSelector": "img[id^=\"p\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8234,7 +8328,8 @@
         "listPath": "/lista-de-mangas/",
         "itemSelector": ".itemP",
         "chapterSelector": "a[href*=\"chapter/?id=\"]",
-        "readerSelector": "img.manga_image"
+        "readerSelector": "img.manga_image",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8339,7 +8434,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "li.chapter-item",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8359,7 +8455,8 @@
         "listPath": "/",
         "itemSelector": ".manga-item",
         "chapterSelector": "a[href*=\"capitulo-\"]",
-        "readerSelector": "img.wp-manga-chapter-img"
+        "readerSelector": "img.wp-manga-chapter-img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8408,7 +8505,8 @@
         "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": "",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "titleSelector": "h1"
+        "titleSelector": "h1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8434,7 +8532,8 @@
         "searchBody": "title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8454,7 +8553,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "li.flex.justify-between",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8474,7 +8574,8 @@
         "listPath": "/ru/catalog",
         "itemSelector": "a[href*=\"/ru/manga/\"]",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8523,7 +8624,8 @@
         "listPath": "/ru/catalog",
         "itemSelector": "a[href*=\"/ru/manga/\"]",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8543,7 +8645,8 @@
         "listPath": "/",
         "itemSelector": "div.card.shadow a[href^=\"/manga/\"]",
         "chapterSelector": "a[href*=\"/chapter/\"]",
-        "readerSelector": "img.page-image"
+        "readerSelector": "img.page-image",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8604,7 +8707,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8624,7 +8728,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "",
-        "readerSelector": ""
+        "readerSelector": "",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8664,7 +8769,8 @@
         "listPath": "/",
         "itemSelector": "a.series",
         "chapterSelector": "#chapterlist .eph-num a",
-        "readerSelector": "#readerarea img"
+        "readerSelector": "#readerarea img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8704,7 +8810,8 @@
         "listPath": "/",
         "itemSelector": "",
         "chapterSelector": "div.chapter-item a",
-        "readerSelector": ".reading-content img"
+        "readerSelector": ".reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8724,7 +8831,8 @@
         "listPath": "/",
         "itemSelector": "div.listupd div.uta",
         "chapterSelector": "div.eph-num a",
-        "readerSelector": "#readerarea img"
+        "readerSelector": "#readerarea img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8744,7 +8852,8 @@
         "listPath": "/",
         "itemSelector": "div.page-item-detail.text",
         "chapterSelector": "ul.main.version-chap li.wp-manga-chapter a",
-        "readerSelector": ".reading-content img"
+        "readerSelector": ".reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8764,7 +8873,8 @@
         "listPath": "/",
         "itemSelector": "a.manga-card",
         "chapterSelector": "a.chapter-card-link",
-        "readerSelector": "[data-reader-protected] img"
+        "readerSelector": "[data-reader-protected] img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -8787,7 +8897,8 @@
         "readerSelector": "",
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader.run",
-        "pageJsonArray": "sources.0.images"
+        "pageJsonArray": "sources.0.images",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -12371,7 +12482,8 @@
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
         "readerSelector": "div.reading-content img",
-        "searchUrl": "https://mangazin.org/?s={query}&post_type=wp-manga"
+        "searchUrl": "https://mangazin.org/?s={query}&post_type=wp-manga",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -12417,7 +12529,8 @@
         "itemSelector": "a.jtip",
         "chapterSelector": "#nt_listchapter li.row",
         "readerSelector": ".reading-detail img",
-        "titleSelector": "h1.title-detail"
+        "titleSelector": "h1.title-detail",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -12446,7 +12559,8 @@
         "searchBody": "action=wp-manga-search-manga&title={query}",
         "searchJsonItems": "data",
         "searchJsonUrl": "url",
-        "searchJsonTitle": "title"
+        "searchJsonTitle": "title",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "selector_verified": true,
       "origins": [
@@ -12555,7 +12669,8 @@
         "chapterSelector": ".wp-manga-chapter",
         "readerSelector": "img.wp-manga-chapter-img",
         "searchUrl": "https://toonily.com/?s={query}&post_type=wp-manga",
-        "engine": "custom"
+        "engine": "custom",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -12624,7 +12739,8 @@
         "itemSelector": "div.page-item-detail",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "readerSelector": "img.wp-manga-chapter-img",
-        "engine": "custom"
+        "engine": "custom",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -12647,7 +12763,8 @@
         "itemSelector": ".page-item-detail",
         "chapterSelector": ".wp-manga-chapter a",
         "readerSelector": ".reading-content .wp-manga-chapter-img",
-        "searchUrl": "/?s={query}&post_type=wp-manga"
+        "searchUrl": "/?s={query}&post_type=wp-manga",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -12724,7 +12841,8 @@
         "pageScriptContains": "\"images\":[",
         "pageJsonArray": "images",
         "pageUrlAllow": "rx\\.toontop\\.io",
-        "pageScriptFirst": "1"
+        "pageScriptFirst": "1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -12746,7 +12864,8 @@
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "a[href*='capitulo-']",
         "readerSelector": "img.wp-manga-chapter-img",
-        "searchUrl": "https://mundomanhwa.com/?s={query}&post_type=wp-manga"
+        "searchUrl": "https://mundomanhwa.com/?s={query}&post_type=wp-manga",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -12809,7 +12928,8 @@
       "config": {
         "itemSelector": "a[href*=\"/manga/\"]",
         "chapterSelector": "a[href*=\"/capitulo-\"]",
-        "readerSelector": "img.wp-manga-chapter-img"
+        "readerSelector": "img.wp-manga-chapter-img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -12998,7 +13118,8 @@
       "config": {
         "itemSelector": "div.bsx",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "readerSelector": "#readerarea img"
+        "readerSelector": "#readerarea img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13060,7 +13181,8 @@
         "listPath": "/",
         "itemSelector": "a[href^=\"/manhua/\"]",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "img[alt^=\"Chapter image\"]"
+        "readerSelector": "img[alt^=\"Chapter image\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13083,7 +13205,8 @@
         "chapterSelector": "li.wp-manga-chapter",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
         "readerSelector": "div.reading-content img",
-        "searchUrl": "https://mangaowl.io/?s={query}&post_type=wp-manga"
+        "searchUrl": "https://mangaowl.io/?s={query}&post_type=wp-manga",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13107,7 +13230,8 @@
         "readerSelector": "#readerarea",
         "pageScriptSelector": "#readerarea",
         "pageJsonArray": "sources.0.images",
-        "searchUrl": "?s={query}"
+        "searchUrl": "?s={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13131,7 +13255,8 @@
         "readerSelector": "#readerarea",
         "pageScriptSelector": "#readerarea",
         "pageJsonArray": "sources.0.images",
-        "searchUrl": "?s={query}"
+        "searchUrl": "?s={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13612,7 +13737,8 @@
         "listPath": "/",
         "itemSelector": "div.group.relative",
         "chapterSelector": "a[href*=\"/chapter/\"]",
-        "readerSelector": "img[alt^=\"Page\"]"
+        "readerSelector": "img[alt^=\"Page\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13633,7 +13759,8 @@
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13656,7 +13783,8 @@
         "chapterSelector": "div.eph-num a",
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader.run",
-        "pageJsonArray": "images"
+        "pageJsonArray": "images",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13678,7 +13806,8 @@
         "itemSelector": "div.page-listing-item",
         "chapterSelector": "a[href*=\"/chapter-\"]",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13701,7 +13830,8 @@
         "chapterSelector": "div.eph-num a",
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader.run",
-        "pageJsonArray": "images"
+        "pageJsonArray": "images",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13723,7 +13853,8 @@
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13747,7 +13878,8 @@
         "chapterSelector": "a.group.relative",
         "readerSelector": "img[src*=\"i.eahentai.com/file\"]",
         "searchUrl": "https://eahentai.com/search?q={query}",
-        "searchMethod": "GET"
+        "searchMethod": "GET",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13774,7 +13906,8 @@
         "pageNextLimit": 60,
         "searchUrl": "https://eggporncomics.com/search",
         "searchMethod": "POST",
-        "searchBody": "SearchForm[query]={query}"
+        "searchBody": "SearchForm[query]={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -13798,7 +13931,8 @@
         "chapterSelector": "div.thumbnails a",
         "readerSelector": "img#img_gallery_big",
         "searchUrl": "https://en.thehentai.net/?s={query}",
-        "searchMethod": "GET"
+        "searchMethod": "GET",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14005,7 +14139,8 @@
         "itemSelector": "div.p-wrap.p-grid-1",
         "readerSelector": ".entry-content img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14027,7 +14162,8 @@
         "itemSelector": "div.block-images-comix-set",
         "readerSelector": "a.fancybox",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14050,7 +14186,8 @@
         "readerSelector": "div.gallery-page img",
         "pageNextSelector": "a.image-next",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14075,7 +14212,8 @@
         "singleChapter": true,
         "singleChapterName": "Galeri",
         "chapterApiUrl": "{id}",
-        "chapterApiIdPattern": "^(/.+)$"
+        "chapterApiIdPattern": "^(/.+)$",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14100,7 +14238,8 @@
         "singleChapter": true,
         "singleChapterName": "Galeri",
         "chapterApiUrl": "{id}",
-        "chapterApiIdPattern": "^(/.+)$"
+        "chapterApiIdPattern": "^(/.+)$",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14123,7 +14262,8 @@
         "itemSelector": "div.thumb",
         "readerSelector": "a.fullimg",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14144,7 +14284,8 @@
         "listPath": "/",
         "itemSelector": "div.comic-image",
         "readerSelector": "img.galleryImage",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14165,7 +14306,8 @@
         "listPath": "category/hentai-recenti/doujinshi/",
         "itemSelector": "article.post-card",
         "readerSelector": "a.comic__page img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14189,7 +14331,8 @@
         "pageJsonArray": "image",
         "pageScriptFirst": "1",
         "readerSelector": "div.icon-overlay img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14210,7 +14353,8 @@
         "listPath": "category/fumetti-porno/",
         "itemSelector": "article.masonry-blog-item",
         "readerSelector": ".wpb_gallery img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14231,7 +14375,8 @@
         "listPath": "/",
         "itemSelector": "a.group[href^=\"/articles/\"]",
         "readerSelector": "div.space-y-10 img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14252,7 +14397,8 @@
         "listPath": "comics",
         "itemSelector": "div.gallery-card",
         "chapterSelector": "a[href*=\"/gallery/open/\"]",
-        "readerSelector": "#imageSlider img"
+        "readerSelector": "#imageSlider img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14273,7 +14419,8 @@
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": "div.page-break img"
+        "readerSelector": "div.page-break img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14294,7 +14441,8 @@
         "listPath": "/",
         "itemSelector": "article.hx-card",
         "chapterSelector": "div#chapter-list a.hx-ep",
-        "readerSelector": "div.hx-pages img"
+        "readerSelector": "div.hx-pages img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14315,7 +14463,8 @@
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "div.chapter-item a",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14336,7 +14485,8 @@
         "listPath": "/",
         "itemSelector": "div.latest-item",
         "chapterSelector": "ul.chapter-list a",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14357,7 +14507,8 @@
         "listPath": "/",
         "itemSelector": "div.post",
         "readerSelector": "div.single-post img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14378,7 +14529,8 @@
         "listPath": "/",
         "itemSelector": "a.archive-card-link",
         "readerSelector": "a.gallery-item",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14399,7 +14551,8 @@
         "listPath": "/",
         "itemSelector": "div.thumb-conteudo",
         "readerSelector": "div.post-texto img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14422,7 +14575,8 @@
         "chapterSelector": "a[href*=\"-chapter-\"]",
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader.run",
-        "pageJsonArray": "images"
+        "pageJsonArray": "images",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14445,7 +14599,8 @@
         "chapterSelector": "a[href*=\"-chapter-\"]",
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader.run",
-        "pageJsonArray": "images"
+        "pageJsonArray": "images",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14466,7 +14621,8 @@
         "listPath": "/",
         "itemSelector": "article.hnv-gallery-card",
         "chapterSelector": "div#js-thumbs-grid a[href^=\"/g/\"]",
-        "readerSelector": "div.hnv-reader__image img"
+        "readerSelector": "div.hnv-reader__image img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14487,7 +14643,8 @@
         "listPath": "/",
         "itemSelector": "div.inner_thumb > a[href^=\"/gallery/\"]",
         "chapterSelector": "div#thumbs_gallery_div a[href^=\"/view/\"]",
-        "readerSelector": "div.gview img"
+        "readerSelector": "div.gview img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14508,7 +14665,8 @@
         "listPath": "/",
         "itemSelector": "div.item.transition",
         "readerSelector": "div.thumbs a[href*=\"#page\"] img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14529,7 +14687,8 @@
         "listPath": "/",
         "itemSelector": "div.item",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "img.lazy"
+        "readerSelector": "img.lazy",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14551,7 +14710,8 @@
         "itemSelector": "div.thumb-conteudo",
         "singleChapter": true,
         "readerSelector": "ul.post-fotos img",
-        "listExcludeUrl": "t[.]me"
+        "listExcludeUrl": "t[.]me",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14573,7 +14733,8 @@
         "itemSelector": "article.card",
         "chapterSelector": "a[href$=\"/page-1\"]",
         "readerSelector": "img[data-reader-image]",
-        "pageNextSelector": "a[data-reader-next]"
+        "pageNextSelector": "a[data-reader-next]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14598,7 +14759,8 @@
         "pageJsonUrlField": "page_image",
         "pageScriptContains": "page_image",
         "pageScriptFirst": "1",
-        "searchUrl": "https://hentaimode.com/buscar?s={query}"
+        "searchUrl": "https://hentaimode.com/buscar?s={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14620,7 +14782,8 @@
         "itemSelector": "a[href*='/gallery/g']",
         "singleChapter": true,
         "readerSelector": "div.reading-pages-content img",
-        "searchUrl": "https://hentaipill.com/search?q={query}"
+        "searchUrl": "https://hentaipill.com/search?q={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14641,7 +14804,8 @@
         "listPath": "/",
         "itemSelector": "div.video",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": "div.page-chapter img"
+        "readerSelector": "div.page-chapter img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14663,7 +14827,8 @@
         "itemSelector": "div.page-item-detail, div.c-tabs-item__content",
         "chapterSelector": "div.chapter-item",
         "readerSelector": "div.reading-content img",
-        "searchUrl": "https://hentaiteca.online/?s={query}&post_type=wp-manga"
+        "searchUrl": "https://hentaiteca.online/?s={query}&post_type=wp-manga",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14685,7 +14850,8 @@
         "itemSelector": "a.doujin-item",
         "singleChapter": true,
         "readerSelector": "img[alt*='หน้า']",
-        "searchUrl": "https://hentaithai.com/search?q={query}"
+        "searchUrl": "https://hentaithai.com/search?q={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14707,7 +14873,8 @@
         "itemSelector": "a.number-even, a.number-odd",
         "singleChapter": true,
         "readerSelector": "img[data-layer]",
-        "searchUrl": "https://hentaithai.net/search?q={query}"
+        "searchUrl": "https://hentaithai.net/search?q={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14729,7 +14896,8 @@
         "itemSelector": "div.thumb-conteudo:not(.rod-native-legacy-simple-card)",
         "readerSelector": "a[href*=\"/galeria?\"] img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14750,7 +14918,8 @@
         "listPath": "/",
         "itemSelector": "a.hz-gallery-card__cover",
         "chapterSelector": "a[href^=\"/g/\"]",
-        "readerSelector": "img#readerImg"
+        "readerSelector": "img#readerImg",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14772,7 +14941,8 @@
         "itemSelector": "article.hzel-card",
         "readerSelector": "div.gff-gallery img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14793,7 +14963,8 @@
         "listPath": "/",
         "itemSelector": "a.ssr-card",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "main#reader img"
+        "readerSelector": "main#reader img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14818,7 +14989,8 @@
         "pageScriptSelector": "script",
         "pageScriptContains": "pages=[",
         "pageJsonArray": "pages",
-        "pageScriptFirst": "1"
+        "pageScriptFirst": "1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14840,7 +15012,8 @@
         "itemSelector": ".novo-card-item",
         "readerSelector": "img.galeriaConteudoImg",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14861,7 +15034,8 @@
         "listPath": "/",
         "itemSelector": "div.thumb",
         "readerSelector": "div.content img.full",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14884,7 +15058,8 @@
         "readerSelector": "div.post-body img",
         "singleChapter": true,
         "chapterApiUrl": "{id}",
-        "chapterApiIdPattern": "^(.+)$"
+        "chapterApiIdPattern": "^(.+)$",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14905,7 +15080,8 @@
         "listPath": "/",
         "itemSelector": "div.mh-item",
         "chapterSelector": "a[href^=\"/chapter/\"]",
-        "readerSelector": "div.comicpage img"
+        "readerSelector": "div.comicpage img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14927,7 +15103,8 @@
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "div.chapter-item a",
         "readerSelector": "div.reading-content img",
-        "searchUrl": "https://ikuhentai.net/?s={query}&post_type=wp-manga"
+        "searchUrl": "https://ikuhentai.net/?s={query}&post_type=wp-manga",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14950,7 +15127,8 @@
         "readerSelector": "figure.pswp-gallery__item a",
         "singleChapter": true,
         "chapterApiUrl": "{id}",
-        "chapterApiIdPattern": "^(/.+)$"
+        "chapterApiIdPattern": "^(/.+)$",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14973,7 +15151,8 @@
         "readerSelector": "div.gthumb img",
         "singleChapter": true,
         "chapterApiUrl": "{id}",
-        "chapterApiIdPattern": "^(.+)$"
+        "chapterApiIdPattern": "^(.+)$",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -14995,7 +15174,8 @@
         "itemSelector": "a.ink-card",
         "chapterSelector": "#ink-ch-list a",
         "readerSelector": "div.reading-content img",
-        "searchUrl": "/?s={query}&post_type=wp-manga"
+        "searchUrl": "/?s={query}&post_type=wp-manga",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15016,7 +15196,8 @@
         "listPath": "/comic/",
         "itemSelector": "div.comic-thumbnail-in-archive",
         "readerSelector": "#comic img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15037,7 +15218,8 @@
         "listPath": "/",
         "itemSelector": "div.p-wrap",
         "readerSelector": "div.entry-content img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15058,7 +15240,8 @@
         "listPath": "/",
         "itemSelector": ".comic-list-item",
         "chapterSelector": "a.chapter-link",
-        "readerSelector": "img.manga-page"
+        "readerSelector": "img.manga-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15079,7 +15262,8 @@
         "listPath": "/",
         "itemSelector": "article.custom-article",
         "readerSelector": ".post-content img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15100,7 +15284,8 @@
         "listPath": "/",
         "itemSelector": ".mh-item",
         "chapterSelector": "a[href*=\"/chapter/\"]",
-        "readerSelector": ".comicpage img"
+        "readerSelector": ".comicpage img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15121,7 +15306,8 @@
         "listPath": "/",
         "itemSelector": "ul.list-gallery.has-mobile-menu > li",
         "readerSelector": "ul.list-gallery.css img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15142,7 +15328,8 @@
         "listPath": "/",
         "itemSelector": "div.entry",
         "readerSelector": ".wp-block-gallery img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15165,7 +15352,8 @@
         "readerSelector": ".article-fulltext img",
         "singleChapter": true,
         "pageNextSelector": "a.pagination-link:not(.is-current)",
-        "pageNextLimit": 3
+        "pageNextLimit": 3,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15186,7 +15374,8 @@
         "listPath": "/",
         "itemSelector": "div.uta",
         "chapterSelector": ".chbox a",
-        "readerSelector": "#readerarea img"
+        "readerSelector": "#readerarea img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15211,7 +15400,8 @@
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader.run",
         "pageJsonArray": "images",
-        "pageScriptFirst": "1"
+        "pageScriptFirst": "1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15233,7 +15423,8 @@
         "listPath": "photos",
         "itemSelector": "a[href^=\"/photo/\"]",
         "singleChapter": true,
-        "readerSelector": "div[data-cols-grid] img"
+        "readerSelector": "div[data-cols-grid] img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15255,7 +15446,8 @@
         "listPath": "",
         "itemSelector": "div.box_thumb",
         "singleChapter": true,
-        "readerSelector": "div.post_image img"
+        "readerSelector": "div.post_image img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15277,7 +15469,8 @@
         "listPath": "",
         "itemSelector": "div.thumb-conteudo",
         "singleChapter": true,
-        "readerSelector": "div.post-texto img"
+        "readerSelector": "div.post-texto img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15299,7 +15492,8 @@
         "listPath": "leer-manhwa-18",
         "itemSelector": "div.latest-item",
         "chapterSelector": "ul.chapter-list li a",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15320,7 +15514,8 @@
         "listPath": "/",
         "itemSelector": "a.module-poster-item",
         "chapterSelector": "a.module-play-list-link",
-        "readerSelector": "div.img-wrap img"
+        "readerSelector": "div.img-wrap img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15341,7 +15536,8 @@
         "listPath": "/",
         "itemSelector": "a.manga-card",
         "chapterSelector": "a[href*=\"/chuong/\"]",
-        "readerSelector": "img[src*=\"/storage/manga/chapters/\"]"
+        "readerSelector": "img[src*=\"/storage/manga/chapters/\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15385,7 +15581,8 @@
         "readerSelector": "#arcbox img",
         "pageNextSelector": "#pageNum a.a1[href]",
         "pageNextLimit": 10,
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15406,7 +15603,8 @@
         "listPath": "/",
         "itemSelector": "div[data-content-type=\"manga\"]",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "img[src*=\"cdn.manga-th.net\"]"
+        "readerSelector": "img[src*=\"cdn.manga-th.net\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15428,7 +15626,8 @@
         "listPath": "/",
         "itemSelector": "div.recentCard",
         "chapterSelector": "a[href*=\"chapter-\"]",
-        "readerSelector": "div.page-chapter img"
+        "readerSelector": "div.page-chapter img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15451,7 +15650,8 @@
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15473,7 +15673,8 @@
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15495,7 +15696,8 @@
         "listPath": "/",
         "itemSelector": "article",
         "readerSelector": ".entry-content img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15519,7 +15721,8 @@
         "readerSelector": ".entry-content img",
         "singleChapter": true,
         "chapterApiUrl": "{id}",
-        "chapterApiIdPattern": "^(.+)$"
+        "chapterApiIdPattern": "^(.+)$",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15541,7 +15744,8 @@
         "listPath": "/",
         "itemSelector": "a.manga-card",
         "chapterSelector": "a.chapter-card",
-        "readerSelector": "img.manga-page"
+        "readerSelector": "img.manga-page",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15563,7 +15767,8 @@
         "listPath": "/",
         "itemSelector": "div.manga-vertical",
         "chapterSelector": "a[href*='/chapter-']",
-        "readerSelector": "img.lazy"
+        "readerSelector": "img.lazy",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15586,7 +15791,8 @@
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15611,7 +15817,8 @@
         "readerSelector": "div#readerarea img",
         "pageScriptSelector": "script",
         "pageScriptContains": "ts_reader",
-        "pageJsonArray": "images"
+        "pageJsonArray": "images",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15634,7 +15841,8 @@
         "itemSelector": "div.item__wrap",
         "chapterSelector": "li.wp-manga-chapter a",
         "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
-        "readerSelector": "img.wp-manga-chapter-img"
+        "readerSelector": "img.wp-manga-chapter-img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15656,7 +15864,8 @@
         "listPath": "/",
         "itemSelector": "div.item",
         "chapterSelector": "a[href*='-chapter-']",
-        "readerSelector": "div.page-chapter img"
+        "readerSelector": "div.page-chapter img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15678,7 +15887,8 @@
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "ul.row-content-chapter a",
-        "readerSelector": "div.read-content img"
+        "readerSelector": "div.read-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15702,7 +15912,8 @@
         "chapterSelector": "a[href*='/chapter-']",
         "pageApiUrl": "https://manhwax.pro/api/chapter/{1}/{2}",
         "pageApiIdPattern": "/([^/]+)/(chapter-[^/]+)$",
-        "pageApiItems": "images"
+        "pageApiItems": "images",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15723,7 +15934,8 @@
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "a[href*='/chuong/']",
-        "readerSelector": "img.chapter-img:not([data-src])"
+        "readerSelector": "img.chapter-img:not([data-src])",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15748,7 +15960,8 @@
         "pageNextPattern": "-\\d+\\.html",
         "pageNextLimit": 60,
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15771,7 +15984,8 @@
         "readerSelector": "div.entry-content figure.wp-block-gallery img",
         "searchUrl": "https://melapelacomics.com/?s={query}",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15793,7 +16007,8 @@
         "itemSelector": "ul.list-gallery.has-mobile-menu li",
         "readerSelector": "ul.list-gallery.static a",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15815,7 +16030,8 @@
         "itemSelector": "div.inz-col",
         "readerSelector": "div.manga-content img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15836,7 +16052,8 @@
         "listPath": "/",
         "itemSelector": "div.item__wrap",
         "chapterSelector": "a[href*='/bolum-']",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15858,7 +16075,8 @@
         "itemSelector": "article.item-list",
         "readerSelector": "div.entry img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15880,7 +16098,8 @@
         "itemSelector": "article.hentry",
         "readerSelector": "img.msacwl-img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15902,7 +16121,8 @@
         "itemSelector": "a[href*=\"/fanzine/mo\"], a[href*=\"/magazine/mo\"]",
         "readerSelector": "div#post-hentai img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15926,7 +16146,8 @@
         "pageNextSelector": "a#js__pagination__next",
         "pageNextLimit": 30,
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15950,7 +16171,8 @@
         "pageNextSelector": "a#js__pagination__next",
         "pageNextLimit": 30,
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15971,7 +16193,8 @@
         "listPath": "/",
         "itemSelector": "div.latest-item",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -15993,7 +16216,8 @@
         "itemSelector": "div.gallery",
         "chapterSelector": "a.gallerythumb",
         "readerSelector": "#image-container img",
-        "searchUrl": "https://nhentai.to/search/?q={query}"
+        "searchUrl": "https://nhentai.to/search/?q={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16016,7 +16240,8 @@
         "singleChapter": true,
         "singleChapterName": "Galeri",
         "readerSelector": "a.gallerythumb img",
-        "searchUrl": "https://nhentai.website/search/?q={query}"
+        "searchUrl": "https://nhentai.website/search/?q={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16038,7 +16263,8 @@
         "itemSelector": "div.gallery_item",
         "chapterSelector": "div.gt_th",
         "readerSelector": "#fimg",
-        "searchUrl": "https://nhentai.xxx/search/?key={query}"
+        "searchUrl": "https://nhentai.xxx/search/?key={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16060,7 +16286,8 @@
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "div.chapter-item",
         "readerSelector": "div.reading-content img",
-        "searchUrl": "https://nhentaiyaoi.com/?s={query}&post_type=wp-manga"
+        "searchUrl": "https://nhentaiyaoi.com/?s={query}&post_type=wp-manga",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16081,7 +16308,8 @@
         "listPath": "/",
         "itemSelector": "a.ImgA",
         "chapterSelector": "ul.Drama li",
-        "readerSelector": "div.img-wrap img"
+        "readerSelector": "div.img-wrap img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16103,7 +16331,8 @@
         "itemSelector": "a.gallery-item",
         "readerSelector": "div.article-page-list img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16125,7 +16354,8 @@
         "itemSelector": "a:has(img[src*='media.oglaf.com/archive/'])",
         "readerSelector": "img#strip",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16147,7 +16377,8 @@
         "itemSelector": ".nv-post-wrap",
         "readerSelector": ".entry-content img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16169,7 +16400,8 @@
         "itemSelector": "article.gallery-item",
         "readerSelector": ".photo-item img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16192,7 +16424,8 @@
         "listPath": "/",
         "itemSelector": "div.site-manga-card",
         "readerSelector": "img.site-reader__image",
-        "searchUrl": "https://rokuhentai.com/?q={query}"
+        "searchUrl": "https://rokuhentai.com/?q={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16214,7 +16447,8 @@
         "singleChapterName": "Galeri",
         "listPath": "/",
         "itemSelector": "div.item.thumb",
-        "readerSelector": "a.item[data-album-viewer] img"
+        "readerSelector": "a.item[data-album-viewer] img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16236,7 +16470,8 @@
         "itemSelector": "li.comix",
         "readerSelector": "img.gallery-img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16257,7 +16492,8 @@
         "listPath": "2-mangas",
         "itemSelector": "article.manga-container",
         "chapterSelector": "a.content-link",
-        "readerSelector": "div[data-testid=\"pages-overview\"] img"
+        "readerSelector": "div[data-testid=\"pages-overview\"] img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16278,7 +16514,8 @@
         "listPath": "manga/",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": ".wp-manga-chapter a",
-        "readerSelector": ".reading-content img"
+        "readerSelector": ".reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16300,7 +16537,8 @@
         "itemSelector": "div.thumb",
         "readerSelector": "img.attachment-full",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16322,7 +16560,8 @@
         "itemSelector": "div.entry-body",
         "readerSelector": "div.entry img[data-lazy-src]",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16343,7 +16582,8 @@
         "listPath": "/",
         "itemSelector": "div.animepost",
         "chapterSelector": "div.eps",
-        "readerSelector": "div.reader-area img"
+        "readerSelector": "div.reader-area img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16364,7 +16604,8 @@
         "listPath": "/",
         "itemSelector": "div.gridPosts",
         "chapterSelector": "div.thumbnails a",
-        "readerSelector": "img#img_gallery_big"
+        "readerSelector": "img#img_gallery_big",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16385,7 +16626,8 @@
         "listPath": "/",
         "itemSelector": "div.latest-item",
         "chapterSelector": "ul.chapter-list a",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16431,7 +16673,8 @@
         "chapterSelector": "div.chap-grid a.chap:not(.first)",
         "pageApiUrl": "https://webtoonhentai.org/api-proxy/v1/chapter?url=https%3A%2F%2Fmanhwa18.cc%2Fwebtoon%2F{1}%2F{2}",
         "pageApiIdPattern": "read/([^/]+)/(chapter-\\d+)",
-        "pageApiItems": "pages"
+        "pageApiItems": "pages",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16452,7 +16695,8 @@
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": "div.reading-content img"
+        "readerSelector": "div.reading-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16474,7 +16718,8 @@
         "itemSelector": "li.gallary_item",
         "readerSelector": "div.pic_box img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16496,7 +16741,8 @@
         "itemSelector": "div.block-images-comix-set",
         "readerSelector": "div.block-images-comix img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16518,7 +16764,8 @@
         "itemSelector": "a.group",
         "readerSelector": "img[src*=\"img.xchina.io/photos/\"]",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16540,7 +16787,8 @@
         "itemSelector": "div.items-row",
         "readerSelector": "div.article-fulltext img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16562,7 +16810,8 @@
         "itemSelector": "a.thumb",
         "readerSelector": "ul.xfieldimagegallery a",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16584,7 +16833,8 @@
         "itemSelector": "article.post",
         "readerSelector": "a[itemprop=\"contentUrl\"]",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16605,7 +16855,8 @@
         "listPath": "/manga",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": "div.reading-content img.wp-manga-chapter-img"
+        "readerSelector": "div.reading-content img.wp-manga-chapter-img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16627,7 +16878,8 @@
         "itemSelector": "div.gallery",
         "readerSelector": "div.jpeg img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16648,7 +16900,8 @@
         "listPath": "/yaoi",
         "itemSelector": "div.item-summary",
         "chapterSelector": "li.wp-manga-chapter a",
-        "readerSelector": "div.reading-content img.wp-manga-chapter-img"
+        "readerSelector": "div.reading-content img.wp-manga-chapter-img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16693,7 +16946,8 @@
         "listPath": "/",
         "itemSelector": "a.p-flink",
         "readerSelector": "figure.wp-block-image img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16714,7 +16968,8 @@
         "listPath": "/",
         "itemSelector": "a[href*=\"/content_comix/\"]",
         "readerSelector": "a.fancybox",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16735,7 +16990,8 @@
         "listPath": "/",
         "itemSelector": "a.tpg-post-link",
         "readerSelector": "div.entry-content img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16756,7 +17012,8 @@
         "listPath": "/",
         "itemSelector": "a[href^=\"/kk\"]",
         "readerSelector": "img.alazy",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16777,7 +17034,8 @@
         "listPath": "/",
         "itemSelector": "a.fenix-glow",
         "chapterSelector": "a[href*=\"/capitulo-\"]",
-        "readerSelector": "img[phx-r]"
+        "readerSelector": "img[phx-r]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16798,7 +17056,8 @@
         "listPath": "/",
         "itemSelector": "a.comic-card",
         "chapterSelector": "a[href*=\"origin=chapter-list\"]",
-        "readerSelector": "div.comic_page_image img"
+        "readerSelector": "div.comic_page_image img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16819,7 +17078,8 @@
         "listPath": "/",
         "itemSelector": "a.thumb-srcbox",
         "readerSelector": "a.imageclick-imgbox img",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16840,7 +17100,8 @@
         "listPath": "/",
         "itemSelector": "a.p-flink",
         "chapterSelector": "a.p-flink",
-        "readerSelector": "figure.wp-block-image img"
+        "readerSelector": "figure.wp-block-image img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16861,7 +17122,8 @@
         "listPath": "/",
         "itemSelector": "a.titulo",
         "readerSelector": "figure.dgwt-jg-item a",
-        "singleChapter": true
+        "singleChapter": true,
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16884,7 +17146,8 @@
         "readerSelector": ".entry-content img",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "searchUrl": "https://fsicomics.com/?s={query}"
+        "searchUrl": "https://fsicomics.com/?s={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16906,7 +17169,8 @@
         "itemSelector": "ul.list-gallery.static > li",
         "readerSelector": "a[href*=\"cdn.ftvhunter.com/content/\"]",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16928,7 +17192,8 @@
         "itemSelector": "div.ngg-album-compact",
         "readerSelector": ".entry-content img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16950,7 +17215,8 @@
         "itemSelector": "ul.best > li",
         "readerSelector": "img.lazy",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16971,7 +17237,8 @@
         "listPath": "",
         "itemSelector": "div.bsx",
         "chapterSelector": ".eph-num a",
-        "readerSelector": ".readercontent img"
+        "readerSelector": ".readercontent img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -16994,7 +17261,8 @@
         "chapterSelector": "a.chapter-link",
         "pageScriptSelector": "script",
         "pageScriptContains": "const imageUrls",
-        "pageJsonArray": "imageUrls"
+        "pageJsonArray": "imageUrls",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17015,7 +17283,8 @@
         "listPath": "/comics",
         "itemSelector": "div.comic-rows-videos-div",
         "chapterSelector": "a[data-page]",
-        "readerSelector": "img[src*=\"nhentai.net/galleries\"]"
+        "readerSelector": "img[src*=\"nhentai.net/galleries\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17178,7 +17447,8 @@
       "config": {
         "listPath": "/",
         "itemSelector": "div.ori-card",
-        "chapterSelector": "a.ori-chl-num"
+        "chapterSelector": "a.ori-chl-num",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17198,7 +17468,8 @@
       "config": {
         "listPath": "/",
         "itemSelector": "div.post-title",
-        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17221,7 +17492,8 @@
         "chapterSelector": "div.grid.w-fit",
         "singleChapter": true,
         "searchUrl": "https://hentaipaw.com/articles/search?q={query}",
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17242,7 +17514,8 @@
         "engine": "madara",
         "listPath": "manga",
         "itemSelector": "div.page-item-detail",
-        "chapterSelector": "a[href*=\"-bolum/\"]"
+        "chapterSelector": "a[href*=\"-bolum/\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17263,7 +17536,8 @@
         "engine": "custom",
         "listPath": "",
         "itemSelector": "a[href^=\"/title/\"]",
-        "chapterSelector": "a[href*=\"/chapter/\"]"
+        "chapterSelector": "a[href*=\"/chapter/\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17285,7 +17559,8 @@
         "listPath": "",
         "itemSelector": "a.upload-card",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17307,7 +17582,8 @@
         "listPath": "/",
         "itemSelector": ".pm-item",
         "chapterSelector": ".series-chapterlist a",
-        "readerSelector": ".reader-area img"
+        "readerSelector": ".reader-area img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17328,7 +17604,8 @@
         "listPath": "/",
         "itemSelector": "div.bsx",
         "chapterSelector": "#chapterlist li a",
-        "readerSelector": "#readerarea img"
+        "readerSelector": "#readerarea img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17348,7 +17625,8 @@
       "config": {
         "listPath": "/",
         "itemSelector": "div.listupd div.bs",
-        "chapterSelector": "a[href*=\"-bolum/\"]"
+        "chapterSelector": "a[href*=\"-bolum/\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17368,7 +17646,8 @@
       "config": {
         "listPath": "/manga/",
         "itemSelector": "div.page-item-detail",
-        "chapterSelector": "div.chapter-item"
+        "chapterSelector": "div.chapter-item",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17388,7 +17667,8 @@
       "config": {
         "listPath": "/comic/",
         "itemSelector": "div.page-item-detail",
-        "chapterSelector": "div.chapter-item"
+        "chapterSelector": "div.chapter-item",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17409,7 +17689,8 @@
         "listPath": "/",
         "itemSelector": "a[href^='/serie/']",
         "listExcludeUrl": "/chapter/",
-        "chapterSelector": "a[href*='/chapter/']"
+        "chapterSelector": "a[href*='/chapter/']",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17432,7 +17713,8 @@
         "readerSelector": "a.fileThumb",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "chapterApiUrl": "{url}"
+        "chapterApiUrl": "{url}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17454,7 +17736,8 @@
         "itemSelector": "div.card",
         "readerSelector": "div.imgHolder img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17477,7 +17760,8 @@
         "readerSelector": "a[data-fancybox=\"images\"]",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "chapterApiUrl": "{url}"
+        "chapterApiUrl": "{url}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17498,7 +17782,8 @@
         "listPath": "/",
         "itemSelector": "div[itemProp=\"itemListElement\"]",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "img.chapter-img"
+        "readerSelector": "img.chapter-img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17518,7 +17803,8 @@
       "config": {
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
-        "chapterSelector": "li.wp-manga-chapter"
+        "chapterSelector": "li.wp-manga-chapter",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17541,7 +17827,8 @@
         "readerSelector": "a.rel-link",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "chapterSelector": "div[data-dd-content=\"nav-lang\"] a[data-lang=\"en\"]"
+        "chapterSelector": "div[data-dd-content=\"nav-lang\"] a[data-lang=\"en\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17564,7 +17851,8 @@
         "readerSelector": "a.ss-image",
         "singleChapter": true,
         "singleChapterName": "Galeri",
-        "chapterApiUrl": "{url}"
+        "chapterApiUrl": "{url}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17586,7 +17874,8 @@
         "itemSelector": "div.block-images-comix-set",
         "readerSelector": "div.block-images-comix img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17609,7 +17898,8 @@
         "listExcludeUrl": "hqporno\\.com\\.br",
         "readerSelector": "#gallery-1 img",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17630,7 +17920,8 @@
         "listPath": "/",
         "itemSelector": "figure.clearfix",
         "chapterSelector": "div.list-chapter nav ul li",
-        "readerSelector": "img[alt^=\"Page \"]"
+        "readerSelector": "img[alt^=\"Page \"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17651,7 +17942,8 @@
         "listPath": "/",
         "itemSelector": "div.manga-item",
         "chapterSelector": "div.chapter-item",
-        "readerSelector": "div.read-content img"
+        "readerSelector": "div.read-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17673,7 +17965,8 @@
         "singleChapterName": "Galeri",
         "listPath": "/",
         "itemSelector": "div.video-conteudo",
-        "searchUrl": "https://revistasequadrinhos.com/?s={query}"
+        "searchUrl": "https://revistasequadrinhos.com/?s={query}",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17693,7 +17986,8 @@
       "config": {
         "listPath": "/series",
         "itemSelector": "div.manhwa-card",
-        "chapterSelector": "a.chapter-item"
+        "chapterSelector": "a.chapter-item",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17714,7 +18008,8 @@
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
         "chapterSelector": "div.wp-manga-chapter a",
-        "chapterAjaxUrl": "{url}ajax/chapters/?t=1"
+        "chapterAjaxUrl": "{url}ajax/chapters/?t=1",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17734,7 +18029,8 @@
       "config": {
         "listPath": "/",
         "itemSelector": "a.rk-cover-card",
-        "chapterSelector": "a[href*=/chapter/]"
+        "chapterSelector": "a[href*=/chapter/]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17754,7 +18050,8 @@
       "config": {
         "listPath": "/",
         "itemSelector": "div.page-item-detail",
-        "chapterSelector": "li.wp-manga-chapter a"
+        "chapterSelector": "li.wp-manga-chapter a",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17776,7 +18073,8 @@
         "listPath": "/",
         "itemSelector": ".card-manga",
         "chapterSelector": "#chapterList a",
-        "readerSelector": "#viewer img"
+        "readerSelector": "#viewer img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17798,7 +18096,8 @@
         "listPath": "/",
         "itemSelector": ".card-manga",
         "chapterSelector": "a[href*=\"/chapter-\"]",
-        "readerSelector": "#chapter-content img"
+        "readerSelector": "#chapter-content img",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17821,7 +18120,8 @@
         "itemSelector": "a[href^=\"/photo/\"]",
         "readerSelector": "img[src*=\"img.xchina.io/photos/\"]",
         "singleChapter": true,
-        "singleChapterName": "Galeri"
+        "singleChapterName": "Galeri",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
@@ -17842,7 +18142,8 @@
         "engine": "custom",
         "listPath": "/",
         "itemSelector": ".manga-grid-card",
-        "chapterSelector": "a[href*=\"/manhwa-18/\"][href*=\"chap-\"]"
+        "chapterSelector": "a[href*=\"/manhwa-18/\"][href*=\"chap-\"]",
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query"
       },
       "verified_by_user": false,
       "origins": [
