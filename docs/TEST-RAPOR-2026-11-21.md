@@ -91,3 +91,40 @@ Notlar:
 - Kapsam dışı ek koşular: test'te 2 (`KAPSAM_DISI`), test18'de 2 (`UnsupportedOperationException`), global18'de 1 (`toomtam-manga.com`, `KAPSAM_DISI`). Bunlar ilk taramada da aynı sınıftaydı, 301'e dahil değil.
 - Ölçüm sırasında `origin/main` `87cdf77`'ye ilerledi (`73d526e`: motorda sistem DNS düşünce otomatik DoH yedeği). Bu bölümdeki sayılar katalog düzeyindeki DoH düzeltmesini ölçen `80e3137` APK'larına aittir; motor düzeyindeki yedek bu ölçüme dahil değil.
 - Ham veri: `.work/tam2/sonuc.json` → `pulsar-v2/data/testler/2026-11-21-doh-sonrasi.json`; log'lar `.work/tam2/<paket>.log`.
+
+## tlsFragment sonrası (95 kaynak)
+
+Ölçüm: aynı harness; `df7d5ab` katalog düzeltmesi + build `44929442723` APK'ları (versionCode 264).
+Kapsam: DoH sonrası `SocketException: Connection reset` alan **95 domain** (`.work/tam/tlsf-gerekli.txt`);
+paket dağılımı global 2 + global18 93 (`euphoriascan.com` global18'de ölçüldü).
+Katalogda 95 domainin 95'i de bulundu (`CONFIG=95`, bulunamayan 0); her kayda yalnız
+`"tlsFragment": true, "tlsFragmentSize": 1` eklendi. Ölçüt aynı: `list>0 && chapters>0 && pages>0`;
+`HARNESS_SAYFA_HTML` hiç tetiklenmedi (0 satır).
+
+**Sonuç: 0/95 → 94/95 (%99).** `SocketException: Connection reset` sınıfı 95 → 0.
+
+### Paket tablosu
+
+| Paket | Test | Geçti | Kaldı | Geçme |
+|---|---:|---:|---:|---:|
+| global | 2 | 2 | 0 | %100 |
+| global18 | 93 | 92 | 1 | %99 |
+| **Toplam** | **95** | **94** | **1** | **%99** |
+
+### Kalan hata sınıfları (95 domain)
+
+| Sınıf | Sayı | Not |
+|---|---:|---|
+| `pages=0` (hata yok) | 1 | metarthunter.com — liste 60, bölüm 18 var, sayfa 0. TLS değil; okuyucu seçici arızası, tekrar koşuda aynı (list 60 / bölüm 18 / sayfa 0). |
+
+İlk 5 domain (önce → sonra, list/bölüm/sayfa):
+
+| Domain | Önce | Sonra |
+|---|---|---|
+| de.fsicomics.com | reset | 19/1/22 |
+| de.wporncomics.com | reset | 20/1/44 |
+| doujins.com | reset | 4/1/37 |
+| e621.net | reset | 73/1/1 |
+| eahentai.com | reset | 46/40/42 |
+
+Ham veri: `.work/tam3/sonuc.json` → `pulsar-v2/data/testler/2026-11-21-tlsf-sonrasi.json`; log'lar `.work/tam3/<paket>.log`.
