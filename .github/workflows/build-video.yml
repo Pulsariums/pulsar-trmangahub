@@ -98,25 +98,36 @@ jobs:
 
       - name: Verify published index
         run: |
-          sleep 5
           base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/pulsar-video/repo"
           # İki dosya, iki ayrı şema: index.min.json eklenti DİZİSİ,
           # repo.json Kototoro'nun ayrıştırdığı META NESNESİ.
-          for f in index.min.json repo.json; do
-            code=$(curl -sS -o /dev/null -w '%{http_code}' "$base/$f")
-            echo "$f -> $code"
-            test "$code" = "200" || { echo "::error::$f yayında değil ($code)"; exit 1; }
+          # raw.githubusercontent CDN'i birkaç dakika eski gövdeleri tutabilir
+          # (Cache-Control: max-age=300): şema kontrolü geçene kadar tekrar denenir.
+          check() {
+            for f in index.min.json repo.json; do
+              code=$(curl -sS -m 30 -o /dev/null -w '%{http_code}' "$base/$f")
+              echo "$f -> $code"
+              test "$code" = "200" || { echo "::error::$f yayında değil ($code)"; return 1; }
+            done
+            curl -fsS -m 30 "$base/index.min.json" -o .verify-index.min.json || return 1
+            curl -fsS -m 30 "$base/repo.json" -o .verify-repo.json || return 1
+            node -e '
+              const fs = require("fs");
+              const index = JSON.parse(fs.readFileSync(".verify-index.min.json", "utf8"));
+              if (!Array.isArray(index)) throw new Error("index.min.json dizi değil (repo.json ile karışmış)");
+              const meta = JSON.parse(fs.readFileSync(".verify-repo.json", "utf8"));
+              if (!meta || typeof meta !== "object" || Array.isArray(meta)) throw new Error("repo.json nesne değil");
+              if (!meta.meta || typeof meta.meta.name !== "string" || !meta.meta.name) throw new Error("repo.json meta.name yok");
+              if (typeof meta.meta.website !== "string" || !meta.meta.website) throw new Error("repo.json meta.website yok");
+              if (typeof meta.meta.signingKeyFingerprint !== "string" || !meta.meta.signingKeyFingerprint) throw new Error("repo.json signingKeyFingerprint yok");
+              console.log("index.min.json dizi (" + index.length + " kayıt), repo.json meta.name=" + meta.meta.name);
+            '
+          }
+          trap 'rm -f .verify-index.min.json .verify-repo.json' EXIT
+          for attempt in 1 2 3 4 5 6 7 8 9 10 11 12; do
+            echo "deneme $attempt/12"
+            if check; then exit 0; fi
+            sleep 30
           done
-          curl -fsS "$base/index.min.json" -o /tmp/pulsar-index.min.json
-          curl -fsS "$base/repo.json" -o /tmp/pulsar-repo.json
-          node -e '
-            const fs = require("fs");
-            const index = JSON.parse(fs.readFileSync("/tmp/pulsar-index.min.json", "utf8"));
-            if (!Array.isArray(index)) throw new Error("index.min.json dizi değil");
-            const meta = JSON.parse(fs.readFileSync("/tmp/pulsar-repo.json", "utf8"));
-            if (!meta || typeof meta !== "object" || Array.isArray(meta)) throw new Error("repo.json nesne değil");
-            if (!meta.meta || typeof meta.meta.name !== "string" || !meta.meta.name) throw new Error("repo.json meta.name yok");
-            if (typeof meta.meta.website !== "string" || !meta.meta.website) throw new Error("repo.json meta.website yok");
-            if (typeof meta.meta.signingKeyFingerprint !== "string" || !meta.meta.signingKeyFingerprint) throw new Error("repo.json signingKeyFingerprint yok");
-            console.log("index.min.json dizi (" + index.length + " kayıt), repo.json meta.name=" + meta.meta.name);
-          '
+          echo "::error::yayındaki depo dosyaları 12 denemede doğrulanamadı"
+          exit 1
