@@ -8,6 +8,7 @@ import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.source.online.HttpSource
 import okhttp3.Dns
 import okhttp3.Headers
+import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Protocol
@@ -18,12 +19,16 @@ import org.json.JSONArray
 import org.json.JSONObject
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
+import java.io.IOException
 import java.net.InetAddress
 import java.net.InetSocketAddress
 import java.net.Proxy
+import java.net.SocketException
 import java.net.UnknownHostException
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.TimeUnit
+import javax.net.ssl.SSLException
+import javax.net.ssl.SSLHandshakeException
 
 class PulsarSource(
     private val rawConfig: JSONObject,
@@ -148,7 +153,13 @@ class PulsarSource(
 
     override val supportsLatest: Boolean = true
 
-    override val client: OkHttpClient by lazy {
+    // Ag katmani iki istemciye ayrilir:
+    //  baseClient     : mevcut kurulum (proxy, DoH yedegi, ayarliysa tlsFragment).
+    //  fragmentClient : ayni ayarlar + her zaman parcali ClientHello.
+    // client = baseClient + TLS reset yakalayan interceptor; reset olursa istek
+    // bir kez fragmentClient ile tekrarlanir. Boylece her kaynaga tlsFragment
+    // yazmak gerekmez.
+    private val baseClient: OkHttpClient by lazy {
         network.client.newBuilder()
             .connectTimeout(15, TimeUnit.SECONDS)
             .readTimeout(20, TimeUnit.SECONDS)
@@ -193,6 +204,75 @@ class PulsarSource(
                 checkNotNull(result)
             }
             .build()
+    }
+
+    /** baseClient ayarlarini kopyalar, ustune her zaman parcali TLS koyar. */
+    private val fragmentClient: OkHttpClient by lazy {
+        baseClient.newBuilder()
+            .apply {
+                defaultTrustManager()?.let { tm ->
+                    sslSocketFactory(TlsFragmentingSocketFactory(tlsFragmentSize), tm)
+                }
+            }
+            .build()
+    }
+
+    override val client: OkHttpClient by lazy {
+        // tlsFragment zaten aciksa ilk istemci de parcalar; yedege gerek yok.
+        if (tlsFragment) {
+            baseClient
+        } else {
+            baseClient.newBuilder()
+                .addInterceptor(TlsRetryInterceptor(fragmentClient))
+                .build()
+        }
+    }
+
+    /**
+     * TLS el sikismasi DPI tarafindan sifirlandiginda istegi parcali ClientHello
+     * gonderdigi icin gecen istemciyle bir kez tekrarlar. Parcalama da
+     * basarisizsa ozgun istisna yukari firlatilir; cagiranin davranisi degismez.
+     *
+     * Sonsuz dongu korumasi: fragmentClient bu interceptor'i icermez; ayrica
+     * X-Pulsar-Tls-Retry basligini tasiyan istek yeniden denenmez.
+     */
+    private class TlsRetryInterceptor(private val fragmentClient: OkHttpClient) : Interceptor {
+        override fun intercept(chain: Interceptor.Chain): Response {
+            val request = chain.request()
+            try {
+                return chain.proceed(request)
+            } catch (e: IOException) {
+                // Yalniz TLS/SNI kaynakli resetlerde yedege gec.
+                if (!isTlsReset(e)) throw e
+                // Bu istek zaten parcali denemeyle gonderildiyse tekrar etme.
+                if (request.header(RETRY_HEADER) != null) throw e
+                val retry = request.newBuilder()
+                    .header(RETRY_HEADER, "1")
+                    .build()
+                return fragmentClient.newCall(retry).execute()
+            }
+        }
+
+        /** Istisna zinciri TLS el sikismasi / baglanti sifirlama izi tasiyor mu? */
+        private fun isTlsReset(e: IOException): Boolean {
+            var cur: Throwable? = e
+            while (cur != null) {
+                when (cur) {
+                    is SSLHandshakeException -> return true
+                    is SSLException -> return true
+                    is SocketException -> {
+                        val msg = cur.message.orEmpty().lowercase()
+                        if (msg.contains("reset") || msg.contains("broken pipe")) return true
+                    }
+                }
+                cur = cur.cause
+            }
+            return false
+        }
+
+        private companion object {
+            const val RETRY_HEADER = "X-Pulsar-Tls-Retry"
+        }
     }
 
     // Mihon eklentileri kaynak başına başlık gönderebilir (Referer/Cookie/UA).
