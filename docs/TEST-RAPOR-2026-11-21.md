@@ -56,3 +56,38 @@ Ham veri: `.work/tam/sonuc.json`, log'lar `.work/tam/<paket>.log`.
 grep -c '^{"domain"' .work/tam/*.log
 python -I -X utf8 -c "import json;print(len(json.load(open('.work/tam/sonuc.json',encoding='utf-8'))))"
 ```
+
+## DoH sonrası (301 kaynak)
+
+Ölçüm: aynı harness, build `80e3137` APK'ları; katalogdaki `dnsOverHttps: https://cloudflare-dns.com/dns-query` (commit `55dfa9e`) ile.
+Kapsam: ilk taramada `UnknownHostException` alan **301 (domain, paket) çifti** — global 78 + global18 223.
+`doh-gerekli.txt` 300 tekil domain tutuyor; 301. çift `mundomanhwa.com`'un iki pakette de bulunmasından geliyor.
+Ölçüt aynı: `list>0 && chapters>0 && pages>0`.
+
+**Sonuç: 0/301 → 192/301 (%64).** `UnknownHostException` sınıfı 301 → 3.
+
+### Paket tablosu
+
+| Paket | Test | Geçti | Kaldı | Geçme |
+|---|---:|---:|---:|---:|
+| global | 78 | 70 | 8 | %90 |
+| global18 | 223 | 122 | 101 | %55 |
+| **Toplam** | **301** | **192** | **109** | **%64** |
+
+### Kalan hata sınıfları (301 çift)
+
+| Sınıf | Sayı | Not |
+|---|---:|---|
+| `SocketException: Connection reset` | 95 | DNS değil: TLS bağlantısı sıfırlanıyor. `curl --doh-url ...` ile de aynı (`curl: (35) Recv failure: Connection was reset`) → SNI/ISP engeli. |
+| `UnknownHostException` | 3 | topcomicporno.com, truyenhentai18.net, truyenhentaiz.net — DoH'a rağmen çözümlenemedi. |
+| `sayfa=0` (hata yok) | 4 | xoxocomic.com, hentaizone.me, miku-doujin.com, pawchive.pw — liste ve bölüm var, sayfa boş. |
+| `bölüm listesi boş` | 3 | mangahere.onl, mangaonline.fun, mangatoday.fun |
+| `SocketTimeoutException` | 2 | manhwaclub.net, toontop.io |
+| `IOException: Cloudflare bypass currently disabled` | 1 | novelstreams.com |
+| `popüler liste boş` | 1 | one-manga.com |
+
+Notlar:
+- `OK` (hata alanı boş) 196 çiftin 4 tanesi sayfa üretmediği için geçmedi; kalan 192 geçti.
+- Kapsam dışı ek koşular: test'te 2 (`KAPSAM_DISI`), test18'de 2 (`UnsupportedOperationException`), global18'de 1 (`toomtam-manga.com`, `KAPSAM_DISI`). Bunlar ilk taramada da aynı sınıftaydı, 301'e dahil değil.
+- Ölçüm sırasında `origin/main` `87cdf77`'ye ilerledi (`73d526e`: motorda sistem DNS düşünce otomatik DoH yedeği). Bu bölümdeki sayılar katalog düzeyindeki DoH düzeltmesini ölçen `80e3137` APK'larına aittir; motor düzeyindeki yedek bu ölçüme dahil değil.
+- Ham veri: `.work/tam2/sonuc.json` → `pulsar-v2/data/testler/2026-11-21-doh-sonrasi.json`; log'lar `.work/tam2/<paket>.log`.
