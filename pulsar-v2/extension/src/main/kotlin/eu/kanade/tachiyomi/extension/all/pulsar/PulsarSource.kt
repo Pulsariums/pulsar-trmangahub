@@ -21,6 +21,8 @@ import org.jsoup.nodes.Document
 import java.net.InetAddress
 import java.net.InetSocketAddress
 import java.net.Proxy
+import java.net.UnknownHostException
+import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.TimeUnit
 
 class PulsarSource(
@@ -52,6 +54,17 @@ class PulsarSource(
     //  dnsOverHttps  : DoH ucu, or. "https://cloudflare-dns.com/dns-query"
     private val proxyUrl: String = config.optString("proxyUrl", "").trim()
     private val dohUrl: String = config.optString("dnsOverHttps", "").trim()
+
+    // DoH yedegi (BILINCLI DAVRANIS DEGISIKLIGI): dnsOverHttps yazilmayan TUM
+    // kaynaklarda da sistem DNS'i cozemezse sorgu varsayilan DoH ucuna
+    // tekrarlanir; boylece her kaynaga ayar yazmak gerekmez. "off" yazilirsa
+    // yedek tamamen kapanir (eski davranis: yalniz sistem DNS'i).
+    private val dohFallbackEndpoint: String? =
+        if (dohUrl.equals("off", ignoreCase = true)) {
+            null
+        } else {
+            dohUrl.ifBlank { "https://cloudflare-dns.com/dns-query" }
+        }
     // SNI/DPI atlatma: TLS ClientHello'yu parcalayarak gonder (VPN degil).
     private val tlsFragment: Boolean = config.optBoolean("tlsFragment", false)
     private val tlsFragmentSize: Int = config.optInt("tlsFragmentSize", 1).coerceIn(1, 64)
@@ -78,27 +91,58 @@ class PulsarSource(
         f.trustManagers.filterIsInstance<javax.net.ssl.X509TrustManager>().firstOrNull()
     }.getOrNull()
 
-    /** DoH ile A kaydi cozer; uç hata verirse sistem DNS'ine duser. */
-    private class DohDns(private val endpoint: String) : Dns {
+    /**
+     * Once sistem DNS'i denenir (ek gecikme yok); cozulemezse sorgu DoH ile
+     * tekrarlanir ve sonuc surec omru boyunca bellekte tutulur. DoH da
+     * basarisizsa ozgun UnknownHostException firlatilir; boylece cagiran
+     * tarafin hata davranisi degismez.
+     *
+     * Ayarli DoH kullanan kaynaklar da bu siniftan gecer: tek kod yolu.
+     */
+    private class DohFallbackDns(private val endpoint: String) : Dns {
         private val bootstrap = OkHttpClient()
-        private val fallback = Dns.SYSTEM
 
         override fun lookup(hostname: String): List<InetAddress> {
-            if (hostname == "localhost") return fallback.lookup(hostname)
-            return try {
-                val url = endpoint.trimEnd('/') + "?name=" + hostname + "&type=A"
-                val req = Request.Builder().url(url).header("Accept", "application/dns-json").build()
-                bootstrap.newCall(req).execute().use { resp ->
-                    val body = resp.body?.string().orEmpty()
-                    val ips = Regex("\"data\"\\s*:\\s*\"([0-9.]+)\"")
-                        .findAll(body)
-                        .mapNotNull { m -> runCatching { InetAddress.getByName(m.groupValues[1]) }.getOrNull() }
-                        .toList()
-                    if (ips.isNotEmpty()) ips else fallback.lookup(hostname)
-                }
-            } catch (_: Exception) {
-                fallback.lookup(hostname)
+            if (hostname == "localhost") return Dns.SYSTEM.lookup(hostname)
+
+            var systemFailure: UnknownHostException? = null
+            try {
+                val system = Dns.SYSTEM.lookup(hostname)
+                if (system.isNotEmpty()) return system
+            } catch (e: UnknownHostException) {
+                systemFailure = e
             }
+
+            // Ayni host icin basarili DoH sonucu surec omru boyunca gecerlidir.
+            CACHE[hostname]?.let { return it }
+
+            val resolved = lookupDoh(hostname)
+            if (resolved.isNotEmpty()) {
+                CACHE[hostname] = resolved
+                return resolved
+            }
+            // DoH da cozemedi: sistemin ozgun hatasini koru (bos sonucta uret).
+            throw systemFailure ?: UnknownHostException(hostname)
+        }
+
+        /** DoH JSON yanitindan A kayitlarini okur; herhangi bir hata bos listedir. */
+        private fun lookupDoh(hostname: String): List<InetAddress> = try {
+            val url = endpoint.trimEnd('/') + "?name=" + hostname + "&type=A"
+            val req = Request.Builder().url(url).header("Accept", "application/dns-json").build()
+            bootstrap.newCall(req).execute().use { resp ->
+                val body = resp.body?.string().orEmpty()
+                Regex("\"data\"\\s*:\\s*\"([0-9.]+)\"")
+                    .findAll(body)
+                    .mapNotNull { m -> runCatching { InetAddress.getByName(m.groupValues[1]) }.getOrNull() }
+                    .toList()
+            }
+        } catch (_: Exception) {
+            emptyList()
+        }
+
+        private companion object {
+            // Bellek ici onbellek: surec (eklenti sinif yukleyici) omru boyunca yasar.
+            val CACHE = ConcurrentHashMap<String, List<InetAddress>>()
         }
     }
 
@@ -112,7 +156,9 @@ class PulsarSource(
             .apply {
                 // DPI/proxy: yalniz bu kaynak icin gecerli, digerlerini etkilemez.
                 proxyFromConfig()?.let { proxy(it) }
-                if (dohUrl.isNotBlank()) dns(DohDns(dohUrl))
+                // DNS: once sistem, cozulemezse DoH yedegi. "off" ise hic
+                // kurulmaz (eski davranis: yalniz sistem DNS'i).
+                dohFallbackEndpoint?.let { dns(DohFallbackDns(it)) }
                 if (tlsFragment) {
                     // DPI SNI'ya bakip baglantiyi kesiyorsa ClientHello'yu bol.
                     defaultTrustManager()?.let { tm ->
