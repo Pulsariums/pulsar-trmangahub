@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T19:39:28Z",
+  "generated": "2026-11-21T19:46:35Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -5080,9 +5080,23 @@
       "nsfw": 0,
       "domain": "luacomic.org",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T19:46:33Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T19:46:33Z"
+      }
     },
     "1845278797031432533": {
       "id": 1845278797031432533,
@@ -8840,9 +8854,23 @@
       "nsfw": 1,
       "domain": "metarthunter.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T19:46:33Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T19:46:33Z"
+      }
     },
     "2462254973344388239": {
       "id": 2462254973344388239,
@@ -22310,9 +22338,23 @@
       "nsfw": 1,
       "domain": "comics18.org",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T19:46:33Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T19:46:33Z"
+      }
     },
     "4905759526647334211": {
       "id": 4905759526647334211,
@@ -22443,9 +22485,23 @@
       "nsfw": 1,
       "domain": "ohjoysextoy.com",
       "packages": [
-        "test18"
+        "global18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T19:46:33Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T19:46:33Z"
+      }
     },
     "4974835479241504833": {
       "id": 4974835479241504833,
@@ -38602,9 +38658,23 @@
       "nsfw": 1,
       "domain": "3hentai.net",
       "packages": [
-        "test18"
+        "tr18"
       ],
-      "state": "pending"
+      "state": "active",
+      "health": {
+        "status": "ok",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T19:46:33Z"
+      },
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "",
+        "at": "2026-11-21T19:46:33Z"
+      }
     },
     "8714264625714073827": {
       "id": 8714264625714073827,
@@ -38910,18 +38980,6 @@
         "detail": "yerel harness (list/chapters/pages>0)",
         "at": "2026-11-17T18:44:56Z"
       }
-    },
-    "8798867856205443111": {
-      "id": 8798867856205443111,
-      "kind": "catalogue",
-      "title": "Drake Scans",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "drakecomic.org",
-      "packages": [
-        "test"
-      ],
-      "state": "pending"
     },
     "880006159466720824": {
       "id": 880006159466720824,
