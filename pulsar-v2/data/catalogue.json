@@ -2589,9 +2589,13 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "div.manga-card, div.bsx, div.page-item-detail",
-        "chapterSelector": "div.chapter-item, li.wp-manga-chapter, div.eph-num",
-        "readerSelector": "div.page-break img, div#readerarea img, #init-manga-single-chapter img"
+        "itemSelector": "div.doujin-col",
+        "chapterApiUrl": "{url}",
+        "singleChapter": true,
+        "singleChapterName": "Galeri",
+        "pageJsExpr": "JSON.stringify(html.replace(/t\\.jpg/g,'.jpg').match(/https:\\/\\/s1\\.3hentai\\.net\\/[a-z0-9]+\\/[0-9]+\\.jpg/g)||[])",
+        "pageJsFirst": "1",
+        "pageUrlAllow": "s1\\.3hentai\\.net/[a-z0-9]+/[0-9]+\\.jpg"
       },
       "altDomains": [],
       "verified_by_user": false,
@@ -6447,9 +6451,10 @@
       "config": {
         "engine": "custom",
         "listPath": "/",
-        "itemSelector": "",
-        "chapterSelector": "",
-        "readerSelector": ""
+        "itemSelector": "a[title][href^=\"/series/\"]",
+        "pageJsExpr": "JSON.stringify(html.match(/https:\\/\\/media\\.luacomic\\.org\\/file\\/[A-Za-z0-9]+\\/uploads\\/[A-Za-z0-9\\/_.-]+\\/(?:page_)?[0-9]{1,4}\\.(?:webp|jpe?g|png)/g)||[])",
+        "pageJsFirst": "1",
+        "pageUrlAllow": "media\\.luacomic\\.org/.*/[0-9]{1,4}\\.(webp|jpe?g|png)$"
       },
       "selector_verified": true,
       "origins": [
@@ -6879,10 +6884,12 @@
       "engine": "custom",
       "config": {
         "engine": "custom",
-        "listPath": "/",
-        "itemSelector": ".comicthumbwrap",
-        "chapterSelector": "",
-        "readerSelector": ".comicpane img"
+        "listPath": "/category/comic/",
+        "itemSelector": ".comicarchiveframe",
+        "readerSelector": ".comicpane img",
+        "chapterApiUrl": "{url}",
+        "singleChapter": true,
+        "singleChapterName": "Galeri"
       },
       "selector_verified": true,
       "origins": [
@@ -14195,9 +14202,11 @@
       "baseUrl": "https://comics18.org",
       "engine": "custom",
       "config": {
+        "engine": "custom",
         "listPath": "/",
         "itemSelector": "div.wp-show-posts-inner",
-        "readerSelector": "div.entry-content img",
+        "listExcludeUrl": "cambio-de-contrasena-zona-vip",
+        "readerSelector": "div.entry-content img[src*=\"fullcomics18.org\"]",
         "singleChapter": true,
         "singleChapterName": "Galeri"
       },
@@ -16167,9 +16176,11 @@
       "baseUrl": "https://www.metarthunter.com",
       "engine": "custom",
       "config": {
+        "engine": "custom",
         "listPath": "/",
-        "itemSelector": "ul.list-gallery.has-mobile-menu li",
-        "readerSelector": "ul.list-gallery.static a",
+        "itemSelector": "li[style*=\"--ratio\"]",
+        "readerSelector": "ul.list-gallery.static.css a",
+        "chapterApiUrl": "{url}",
         "singleChapter": true,
         "singleChapterName": "Galeri",
         "dnsOverHttps": "https://cloudflare-dns.com/dns-query",

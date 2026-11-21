@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T19:33:02Z",
+  "generated": "2026-11-21T19:39:28Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -5080,16 +5080,9 @@
       "nsfw": 0,
       "domain": "luacomic.org",
       "packages": [
-        "global"
+        "test"
       ],
-      "state": "active",
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-17T10:02:04Z"
-      }
+      "state": "pending"
     },
     "1845278797031432533": {
       "id": 1845278797031432533,
@@ -8847,23 +8840,9 @@
       "nsfw": 1,
       "domain": "metarthunter.com",
       "packages": [
-        "global18"
+        "test18"
       ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "harness (list/chapters/pages>0)",
-        "at": "2026-11-20T20:54:48Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "",
-        "at": "2026-11-20T20:54:48Z"
-      }
+      "state": "pending"
     },
     "2462254973344388239": {
       "id": 2462254973344388239,
