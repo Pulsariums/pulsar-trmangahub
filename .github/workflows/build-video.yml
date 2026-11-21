@@ -9,11 +9,11 @@ on:
       versionName:
         description: 'versionName (<extLib>.<patch>)'
         required: false
-        default: '1.0.2'
+        default: '16.1'
       versionCode:
         description: 'versionCode'
         required: false
-        default: '2'
+        default: '3'
 
 permissions:
   contents: write
