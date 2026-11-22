@@ -168,14 +168,17 @@ class PulsarKotatsuVideoSource(
 
     // Host'un SEpisode tabanlı varsayılan yolu videoListParse(Response) tek
     // başına bölüm bağlamı taşımaz. Liste burada, bölümü bilen yolda üretilir.
+    // NOT: derleme ABI'si (extensions-lib 59418e2) bu iki üyeyi tanımıyor;
+    // `override` yazılamaz. JVM imzaları host ABI'sindeki açık/soyut üyelerle
+    // birebir aynı olduğundan çalışma anında sanal dağıtım bu metotlara düşer.
     @Suppress("OVERRIDE_DEPRECATION")
-    override suspend fun getVideoList(episode: SEpisode): List<Video> =
+    suspend fun getVideoList(episode: SEpisode): List<Video> =
         getHosterList(episode).flatMap { it.videoList.orEmpty() }
 
-    // AnimeHttpSource v16'da abstract olan tek argümanlı üye (AbstractMethodError
-    // kaynağı). Bölüm bilinmediği için yanıt gövdesindeki doğrudan akışlar
-    // çıkarılır; bulunamazsa boş liste döner.
-    override fun videoListParse(response: Response): List<Video> {
+    // AnimeHttpSource v16 host ABI'sinde soyut olan tek argümanlı üye
+    // (AbstractMethodError kaynağı). Bölüm bilinmediği için yanıt gövdesindeki
+    // doğrudan akışlar çıkarılır; bulunamazsa boş liste döner.
+    fun videoListParse(response: Response): List<Video> {
         val body = runCatching { response.body?.string().orEmpty() }.getOrDefault("")
         return Regex("""https?://[^"'\s]+\.(?:m3u8|mp4)[^"'\s]*""")
             .findAll(body)
