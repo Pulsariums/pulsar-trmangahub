@@ -2,7 +2,9 @@
 // Kototoro/Aniyomi bu APK'yı `tachiyomi.animeextension` feature'ı ile tanır.
 plugins {
     id("com.android.application") version "8.7.3"
-    id("org.jetbrains.kotlin.android") version "2.1.0"
+    // kototoro-parsers jar'ı Kotlin 2.2.10 ile derlenmiş: metadata'sını
+    // okuyabilmek için derleyici aynı hatta olmalı.
+    id("org.jetbrains.kotlin.android") version "2.2.10"
 }
 
 android {
@@ -42,6 +44,20 @@ dependencies {
     // okhttp: Aniyomi lib compileOnly veriyor; derleme icin acikca eklenir (calisma aninda host saglar).
     compileOnly("com.squareup.okhttp3:okhttp:4.12.0")
     compileOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
-    implementation("org.jsoup:jsoup:1.18.3")
+
+    // Nyora taktiği (video): kototoro-parsers kayıt defterindeki onlarca video
+    // parser'ı tek APK'ya gömülür. JitPack'te 1.7 jar'ı yok (pom 404); master
+    // derlemesi (c12cf9d0e9, 2026-11-20) ContentParser API'sini taşıyor.
+    // Host'un sağladığı kütüphaneler paketlenmesin: yalnız parser kodu girer.
+    implementation("com.github.skepsun:kototoro-parsers:master-SNAPSHOT") {
+        exclude(group = "com.squareup.okhttp3")
+        exclude(group = "com.squareup.okio")
+        exclude(group = "org.jetbrains.kotlinx")
+        exclude(group = "org.jetbrains.kotlin")
+        exclude(group = "androidx.collection")
+        exclude(group = "org.json")
+    }
+
+    implementation("org.jsoup:jsoup:1.21.2")
     implementation("org.json:json:20240303")
 }
