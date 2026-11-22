@@ -31,6 +31,11 @@ import org.skepsun.kototoro.parsers.model.RATING_UNKNOWN
 import org.skepsun.kototoro.parsers.model.SortOrder
 import org.skepsun.kototoro.parsers.util.generateUid
 import org.skepsun.kototoro.parsers.util.toAbsoluteUrl
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.withTimeoutOrNull
 import java.util.concurrent.ConcurrentHashMap
 
 /**
@@ -72,6 +77,24 @@ class PulsarKotatsuVideoSource(
     private val context by lazy { PulsarVideoLoaderContext(networkClient, cookieJar) }
     private val parser: ContentParser by lazy { context.newParserInstance(parserSource) }
 
+    /**
+     * Bölüm eşlemesi: `getEpisodeList` sırasında parser'ın döndürdüğü özgün
+     * [ContentChapter] nesneleri, üretilen `SChapter.url` anahtarıyla saklanır.
+     * `getPages` bu nesnelerin `id`/`url` alanlarına ihtiyaç duyar; SChapter'dan
+     * yeniden üretilen kopya parser'a yetmiyor. LRU, 2000 kayıt.
+     */
+    private val chapterCache = object : LinkedHashMap<String, ContentChapter>(256, 0.75f, true) {
+        override fun removeEldestEntry(
+            eldest: MutableMap.MutableEntry<String, ContentChapter>?,
+        ): Boolean = size > MAX_CHAPTER_CACHE
+    }
+
+    /**
+     * Kapak zenginleştirme önbelleği: içerik url'si -> kapak ("" = kapak yok).
+     * Aynı içerik için `getDetails` tekrar sorulmaz; 1000 kayıtta sıfırlanır.
+     */
+    private val coverCache = ConcurrentHashMap<String, String>()
+
     /** Host'un kendi indirmeleri (kapak/video) için de aynı katman. */
     override val client: OkHttpClient
         get() = networkClient
@@ -95,7 +118,51 @@ class PulsarKotatsuVideoSource(
         // offset daima pageSize'ın katı olmalı, yoksa sayfa atlanır.
         val entries = parser.getList((page - 1) * pageStep(), order, filter)
         // url/title boş kayıtlar hostta ValidationException üretir; atlanır.
-        return AnimesPage(entries.mapNotNull { it.toSAnimeOrNull() }, entries.isNotEmpty())
+        val pairs = entries.mapNotNull { content ->
+            content.toSAnimeOrNull()?.let { content to it }
+        }
+        enrichMissingCovers(pairs)
+        return AnimesPage(pairs.map { it.second }, entries.isNotEmpty())
+    }
+
+    /**
+     * Liste kapakları AES ile şifreli gelir; parser çözemezse (ağ/AES hatası)
+     * `coverUrl` null kalır. Kapaksız oranı %50'yi geçerse en fazla 10 öğe için
+     * `getDetails` ile kapak tamamlanır. Paralel, 8 sn sınırlı; hata sessizce
+     * atlanır ve sonuç url bazında önbelleklenir.
+     */
+    private suspend fun enrichMissingCovers(pairs: List<Pair<Content, SAnime>>) {
+        if (pairs.isEmpty()) return
+        val missing = pairs.filter { it.second.thumbnail_url.isNullOrBlank() }
+        // Yarıdan fazlası kapaksız değilse ek istek yapılmaz.
+        if (missing.size * 2 <= pairs.size) return
+        val targets = missing.take(MAX_COVER_ENRICH)
+        val resolved = withTimeoutOrNull(COVER_ENRICH_TIMEOUT_MS) {
+            coroutineScope {
+                targets.map { (content, _) ->
+                    async(Dispatchers.IO) {
+                        val cached = coverCache[content.url]
+                        val cover = if (cached != null) {
+                            cached.ifEmpty { null }
+                        } else {
+                            val details = runCatching { parser.getDetails(content) }.getOrNull()
+                            val value = details?.let { coverUrlOf(it) }?.takeIf { it.isNotBlank() }
+                            if (coverCache.size >= MAX_COVER_CACHE) coverCache.clear()
+                            coverCache[content.url] = value.orEmpty()
+                            value
+                        }
+                        content.url to cover
+                    }
+                }.awaitAll()
+            }
+        }
+        if (resolved == null) return
+        val byUrl = pairs.associateBy { it.first.url }
+        resolved.forEach { (url, cover) ->
+            if (!cover.isNullOrBlank()) {
+                byUrl[url]?.second?.thumbnail_url = cover
+            }
+        }
     }
 
     override suspend fun getPopularAnime(page: Int): AnimesPage =
@@ -143,7 +210,10 @@ class PulsarKotatsuVideoSource(
             .asReversed()
             .mapNotNull { chapter ->
                 // url'i boş bölüm hostta ValidationException üretir.
-                chapter.takeIf { it.url.isNotBlank() }?.toSEpisode()
+                if (chapter.url.isBlank()) return@mapNotNull null
+                val episode = chapter.toSEpisode()
+                synchronized(chapterCache) { chapterCache[episode.url] = chapter }
+                episode
             }
     }
 
@@ -151,7 +221,8 @@ class PulsarKotatsuVideoSource(
 
     @Suppress("OVERRIDE_DEPRECATION")
     override suspend fun getHosterList(episode: SEpisode): List<Hoster> {
-        val pages = runCatching { parser.getPages(episode.toLibChapter()) }
+        val knownChapter = synchronized(chapterCache) { chapterCache[episode.url] }
+        val pages = runCatching { parser.getPages(knownChapter ?: episode.toLibChapter()) }
             .getOrElse { return emptyList() }
         val videos = pages.mapNotNull { page ->
             val url = page.url.takeIf { it.startsWith("http") } ?: return@mapNotNull null
@@ -243,6 +314,18 @@ class PulsarKotatsuVideoSource(
     private companion object {
         /** PulsarVideoSource'daki varsayılan yedek uçla aynı. */
         const val DEFAULT_DOH_ENDPOINT = "https://cloudflare-dns.com/dns-query"
+
+        /** Özgün ContentChapter eşlemesinin üst sınırı (LRU). */
+        const val MAX_CHAPTER_CACHE = 2000
+
+        /** Kapak zenginleştirmede en fazla kaç öğe için getDetails çağrılır. */
+        const val MAX_COVER_ENRICH = 10
+
+        /** Kapak önbelleğinin üst sınırı; aşılırsa sıfırlanır. */
+        const val MAX_COVER_CACHE = 1000
+
+        /** Kapak zenginleştirmesinin toplam süre sınırı. */
+        const val COVER_ENRICH_TIMEOUT_MS = 8_000L
     }
 
     private fun isDirectStream(url: String): Boolean {
@@ -279,11 +362,23 @@ class PulsarKotatsuVideoSource(
         toSAnime(fallbackTitle = title, fallbackUrl = url)
             .takeIf { it.url.isNotBlank() && it.title.isNotBlank() }
 
-    /** Parser'ın verdiği kapak göreliyse mutlaklaştırır; ikisi de boşsa null. */
+    /**
+     * Parser'ın verdiği kapak göreliyse mutlaklaştırır; ikisi de boşsa null.
+     * `file:`/`content:`/`data:` adresleri parser tarafından üretilmiş yerel
+     * kaynaklardır (ör. Cg51 AES çözümü geçici dosya döndürür); mutlaklaştırma
+     * bunları bozar, olduğu gibi bırakılır.
+     */
     private fun coverUrlOf(content: Content): String? {
         val raw = content.largeCoverUrl?.takeIf { it.isNotBlank() }
             ?: content.coverUrl?.takeIf { it.isNotBlank() }
-        return raw?.toAbsoluteUrl(parser.domain)
+            ?: return null
+        val lower = raw.lowercase()
+        return when {
+            lower.startsWith("http://") || lower.startsWith("https://") -> raw
+            lower.startsWith("file:") || lower.startsWith("content:") ||
+                lower.startsWith("data:") -> raw
+            else -> raw.toAbsoluteUrl(parser.domain)
+        }
     }
 
     private fun SAnime.toLib(): Content {
