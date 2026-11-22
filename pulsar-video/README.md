@@ -46,7 +46,7 @@ Harici Aniyomi depoları:
 - `https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json` (248 eklenti)
 - `https://raw.githubusercontent.com/aniyomiorg/aniyomi-extensions/repo/index.min.json` (3 eklenti)
 
-Çıktılar: `repo/index.min.json` **yalnız** kendi eklentimizi taşır (göreli `apk` + pakete göre 17/25 `sources`);
+Çıktılar: `repo/index.min.json` **yalnız** kendi eklentimizi taşır (göreli `apk` + pakete göre 9/18 `sources`);
 `cs/repo.json` + `cs/plugins.json` CloudStream birleşimi (`url` mutlak); `jar/index.min.json`
 (`apk` = `plugin.jar`, göreli) + indirilmiş `jar/apk/plugin.jar`; `mega-report.json` harici/atlanan
 kayıtları "harici depo olarak eklenmeli" diye işaretler.
@@ -55,8 +55,8 @@ kayıtları "harici depo olarak eklenmeli" diye işaretler.
 
 | Paket | applicationId | nsfw | Kaynaklar |
 |---|---|---|---|
-| **Pulsar Video** | `eu.kanade.tachiyomi.animeextension.all.pulsarvideo` | `0` | `ContentType.VIDEO` parser'ları + config (GogoAnime/AniWorld) — indekste 17 |
-| **Pulsar Video 18+** | `eu.kanade.tachiyomi.animeextension.all.pulsarvideo18` | `1` | `ContentType.HENTAI_VIDEO` parser'ları — indekste 25 (config kaynakları normal kayda yazılır) |
+| **Pulsar Video** | `eu.kanade.tachiyomi.animeextension.all.pulsarvideo` | `0` | `ContentType.VIDEO` parser'ları + config (GogoAnime/AniWorld) — indekste 9 |
+| **Pulsar Video 18+** | `eu.kanade.tachiyomi.animeextension.all.pulsarvideo18` | `1` | `ContentType.HENTAI_VIDEO` parser'ları — indekste 18 (config kaynakları normal kayda yazılır) |
 
 ## Kaynak durumu (2026-11-21)
 

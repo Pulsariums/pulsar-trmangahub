@@ -7,6 +7,30 @@ import org.skepsun.kototoro.parsers.model.ContentParserSource
 import org.skepsun.kototoro.parsers.model.ContentType
 
 /**
+ * 2026-11-22 iki turlu denetimde (aralarında 3 sn, 20 sn/deneme) **her iki
+ * denemede de** liste boş, kapak 0 ya da `getPages` <= 0 dönen parser'lar.
+ * Denetim ayrıntısı: `pulsar-video/data/parser-audit-2026-11-22.json` ve
+ * `.work/audit/retry-2026-11-22.json`. Tek denemede geçen parser burada yoktur.
+ */
+internal val EXCLUDED_PARSERS: Set<String> = setOf(
+    "AGEDM",
+    "ANIMESHENTAI",
+    "CG51",
+    "DM456",
+    "FANQIE",
+    "FANTUAN",
+    "HANIME",
+    "HONGGUO",
+    "JIBI",
+    "PIMPBUNNY",
+    "PORN3DX",
+    "REDECANAIS",
+    "TNAFLIX",
+    "UZVOD",
+    "YHDM",
+)
+
+/**
  * Kaynak listesi APK'ya gömülü `VIDEO_CATALOGUE` JSON'undan okunur.
  * Manga tarafındaki `PulsarSourceFactory` deseninin video eşi.
  *
@@ -49,7 +73,8 @@ class PulsarVideoSourceFactory : AnimeSourceFactory {
             } else {
                 source.contentType == ContentType.VIDEO
             }
-            if (source.isBroken || !matchesFlavor) {
+            // İki turlu denetimde düşen parser'lar; contentType uygun olsa da yayına alınmaz.
+            if (source.isBroken || !matchesFlavor || source.name in EXCLUDED_PARSERS) {
                 null
             } else {
                 val lang = cfg.optString("lang", source.locale.ifBlank { "all" })
