@@ -58,8 +58,23 @@ class PulsarKotatsuVideoSource(
     override val lang: String,
 ) : AnimeHttpSource() {
 
-    private val context = PulsarVideoLoaderContext()
+    private val cookieJar = MemoryCookieJar()
+
+    /**
+     * Parser'lara verilecek istemci. PulsarVideoSource ile aynı ağ katmanı:
+     * DoH yedeği (sistem DNS'i çözmezse), TLS reset/trust-anchor yakalayan
+     * interceptor ve parçalı ClientHello yedeği. Parser kaynakları isteklerini
+     * `AbstractContentParser` üzerinden `context.httpClient` ile kurduğu için
+     * bu istemci onlara doğrudan geçer.
+     */
+    private val networkClient: OkHttpClient by lazy { buildNetworkClient() }
+
+    private val context by lazy { PulsarVideoLoaderContext(networkClient, cookieJar) }
     private val parser: ContentParser by lazy { context.newParserInstance(parserSource) }
+
+    /** Host'un kendi indirmeleri (kapak/video) için de aynı katman. */
+    override val client: OkHttpClient
+        get() = networkClient
 
     override val name: String = parserSource.title +
         if (parserSource.contentType == ContentType.HENTAI_VIDEO) " [18+]" else ""
@@ -79,7 +94,8 @@ class PulsarKotatsuVideoSource(
         // PagedContentParser offset'i kendi pageSize'iyle sayfaya çevirir;
         // offset daima pageSize'ın katı olmalı, yoksa sayfa atlanır.
         val entries = parser.getList((page - 1) * pageStep(), order, filter)
-        return AnimesPage(entries.map { it.toSAnime() }, entries.isNotEmpty())
+        // url/title boş kayıtlar hostta ValidationException üretir; atlanır.
+        return AnimesPage(entries.mapNotNull { it.toSAnimeOrNull() }, entries.isNotEmpty())
     }
 
     override suspend fun getPopularAnime(page: Int): AnimesPage =
@@ -109,8 +125,14 @@ class PulsarKotatsuVideoSource(
     // ---- Detay / bölümler --------------------------------------------------
 
     @Suppress("OVERRIDE_DEPRECATION")
-    override suspend fun getAnimeDetails(anime: SAnime): SAnime =
-        parser.getDetails(anime.toLib()).toSAnime()
+    override suspend fun getAnimeDetails(anime: SAnime): SAnime {
+        val lib = anime.toLib()
+        // Parser boş url/title döndürürse girişteki değerlere düşülür.
+        return parser.getDetails(lib).toSAnime(
+            fallbackTitle = anime.title.ifBlank { lib.title },
+            fallbackUrl = anime.url.ifBlank { lib.publicUrl },
+        )
+    }
 
     @Suppress("OVERRIDE_DEPRECATION")
     override suspend fun getEpisodeList(anime: SAnime): List<SEpisode> {
@@ -119,7 +141,10 @@ class PulsarKotatsuVideoSource(
         return (full.chapters ?: emptyList())
             .sortedBy { it.number }
             .asReversed()
-            .map { it.toSEpisode() }
+            .mapNotNull { chapter ->
+                // url'i boş bölüm hostta ValidationException üretir.
+                chapter.takeIf { it.url.isNotBlank() }?.toSEpisode()
+            }
     }
 
     // ---- Video -------------------------------------------------------------
@@ -140,6 +165,24 @@ class PulsarKotatsuVideoSource(
 
     @Suppress("OVERRIDE_DEPRECATION")
     override suspend fun getVideoList(hoster: Hoster): List<Video> = hoster.videoList.orEmpty()
+
+    // Host'un SEpisode tabanlı varsayılan yolu videoListParse(Response) tek
+    // başına bölüm bağlamı taşımaz. Liste burada, bölümü bilen yolda üretilir.
+    @Suppress("OVERRIDE_DEPRECATION")
+    override suspend fun getVideoList(episode: SEpisode): List<Video> =
+        getHosterList(episode).flatMap { it.videoList.orEmpty() }
+
+    // AnimeHttpSource v16'da abstract olan tek argümanlı üye (AbstractMethodError
+    // kaynağı). Bölüm bilinmediği için yanıt gövdesindeki doğrudan akışlar
+    // çıkarılır; bulunamazsa boş liste döner.
+    override fun videoListParse(response: Response): List<Video> {
+        val body = runCatching { response.body?.string().orEmpty() }.getOrDefault("")
+        return Regex("""https?://[^"'\s]+\.(?:m3u8|mp4)[^"'\s]*""")
+            .findAll(body)
+            .map { Video(it.value, "auto") }
+            .take(20)
+            .toList()
+    }
 
     // ---- Aniyomi v16 ABI'sinin zorunlu Request/Parse iskeleti --------------
     // Veri parser'dan geldiği için ağ isteği üretilmez; suspend metotlar
@@ -163,6 +206,42 @@ class PulsarKotatsuVideoSource(
     private fun <T> unsupportedParse(): T =
         throw UnsupportedOperationException("Pulsar parser kaynağı yanıt ayrıştırmaz")
 
+    // ---- Ağ katmanı: DPI/DNS engeli (PulsarVideoSource ile aynı) -----------
+
+    /**
+     * Host istemcisini temel alır; üstüne DoH yedeği, TLS reset/trust-anchor
+     * yakalayan interceptor ve parçalı ClientHello yedeği koyar. Parser'lar
+     * isteklerini `context.httpClient` üzerinden kurduğu için bu istemci
+     * onlara geçer; kaynak içinde ayrı istemci kurulmaz.
+     */
+    private fun buildNetworkClient(): OkHttpClient {
+        val base = super.client.newBuilder()
+            .cookieJar(cookieJar)
+            .followRedirects(true)
+            .followSslRedirects(true)
+            .dns(PulsarVideoSource.DohFallbackDns(DEFAULT_DOH_ENDPOINT))
+            .build()
+        val trust = defaultTrustManager() ?: return base
+        val fragmenting = base.newBuilder()
+            .sslSocketFactory(TlsFragmentingSocketFactory(1), trust)
+            .build()
+        return base.newBuilder()
+            .addInterceptor(PulsarVideoSource.TlsRetryInterceptor(fragmenting))
+            .build()
+    }
+
+    private fun defaultTrustManager(): javax.net.ssl.X509TrustManager? = runCatching {
+        val f = javax.net.ssl.TrustManagerFactory
+            .getInstance(javax.net.ssl.TrustManagerFactory.getDefaultAlgorithm())
+        f.init(null as java.security.KeyStore?)
+        f.trustManagers.filterIsInstance<javax.net.ssl.X509TrustManager>().firstOrNull()
+    }.getOrNull()
+
+    private companion object {
+        /** PulsarVideoSource'daki varsayılan yedek uçla aynı. */
+        const val DEFAULT_DOH_ENDPOINT = "https://cloudflare-dns.com/dns-query"
+    }
+
     private fun isDirectStream(url: String): Boolean {
         val path = url.substringBefore('?').lowercase()
         return path.endsWith(".m3u8") || path.endsWith(".mp4") || url.contains(".m3u8?")
@@ -174,10 +253,13 @@ class PulsarKotatsuVideoSource(
 
     // ---- Dönüşümler --------------------------------------------------------
 
-    private fun Content.toSAnime(): SAnime = SAnime.create().apply {
-        url = this@toSAnime.url
-        title = this@toSAnime.title
-        thumbnail_url = this@toSAnime.largeCoverUrl ?: this@toSAnime.coverUrl
+    private fun Content.toSAnime(
+        fallbackTitle: String = "",
+        fallbackUrl: String = "",
+    ): SAnime = SAnime.create().apply {
+        url = this@toSAnime.url.ifBlank { this@toSAnime.publicUrl }.ifBlank { fallbackUrl }
+        title = this@toSAnime.title.ifBlank { fallbackTitle }
+        thumbnail_url = coverUrlOf(this@toSAnime)
         description = this@toSAnime.description
         genre = this@toSAnime.tags.joinToString(", ") { it.title }.ifBlank { null }
         status = when (this@toSAnime.state) {
@@ -187,6 +269,18 @@ class PulsarKotatsuVideoSource(
             ContentState.PAUSED -> SAnime.ON_HIATUS
             else -> SAnime.UNKNOWN
         }
+    }
+
+    /** Liste için: zorunlu alanı boş kalan kayıt hostta patlamasın, atlansın. */
+    private fun Content.toSAnimeOrNull(): SAnime? =
+        toSAnime(fallbackTitle = title, fallbackUrl = url)
+            .takeIf { it.url.isNotBlank() && it.title.isNotBlank() }
+
+    /** Parser'ın verdiği kapak göreliyse mutlaklaştırır; ikisi de boşsa null. */
+    private fun coverUrlOf(content: Content): String? {
+        val raw = content.largeCoverUrl?.takeIf { it.isNotBlank() }
+            ?: content.coverUrl?.takeIf { it.isNotBlank() }
+        return raw?.toAbsoluteUrl(parser.domain)
     }
 
     private fun SAnime.toLib(): Content {
@@ -240,15 +334,10 @@ class PulsarKotatsuVideoSource(
  * kullandığı yüzey gerçek; WebView/Bitmap isteyen yollar bilinçli olarak
  * desteklenmiyor — o parser'lar zaten bu APK'da listelenmez.
  */
-private class PulsarVideoLoaderContext : ContentLoaderContext() {
-
-    override val cookieJar: CookieJar = MemoryCookieJar()
-
-    override val httpClient: OkHttpClient = OkHttpClient.Builder()
-        .cookieJar(cookieJar)
-        .followRedirects(true)
-        .followSslRedirects(true)
-        .build()
+private class PulsarVideoLoaderContext(
+    override val httpClient: OkHttpClient,
+    override val cookieJar: CookieJar,
+) : ContentLoaderContext() {
 
     override fun newParserInstance(source: ContentSource): ContentParser {
         require(source is ContentParserSource) { "parser kaynağı değil: $source" }

@@ -336,7 +336,7 @@ class PulsarVideoSource(
      * Sonsuz dongu korumasi: fragmentClient bu interceptor'i icermez; ayrica
      * X-Pulsar-Tls-Retry basligini tasiyan istek yeniden denenmez.
      */
-    private class TlsRetryInterceptor(private val fragmentClient: OkHttpClient) : Interceptor {
+    internal class TlsRetryInterceptor(private val fragmentClient: OkHttpClient) : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
             val request = chain.request()
             try {
@@ -416,7 +416,7 @@ class PulsarVideoSource(
      *
      * Ayarli DoH kullanan kaynaklar da bu siniftan gecer: tek kod yolu.
      */
-    private class DohFallbackDns(private val endpoint: String) : Dns {
+    internal class DohFallbackDns(private val endpoint: String) : Dns {
         private val bootstrap = OkHttpClient()
 
         override fun lookup(hostname: String): List<InetAddress> {
