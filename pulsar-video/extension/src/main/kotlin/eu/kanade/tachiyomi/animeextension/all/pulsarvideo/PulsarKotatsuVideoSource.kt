@@ -11,6 +11,7 @@ import okhttp3.Cookie
 import okhttp3.CookieJar
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
+import okhttp3.Request
 import okhttp3.Response
 import org.skepsun.kototoro.parsers.ContentLoaderContext
 import org.skepsun.kototoro.parsers.ContentParser
@@ -139,6 +140,28 @@ class PulsarKotatsuVideoSource(
 
     @Suppress("OVERRIDE_DEPRECATION")
     override suspend fun getVideoList(hoster: Hoster): List<Video> = hoster.videoList.orEmpty()
+
+    // ---- Aniyomi v16 ABI'sinin zorunlu Request/Parse iskeleti --------------
+    // Veri parser'dan geldiği için ağ isteği üretilmez; suspend metotlar
+    // yukarıda doğrudan override edildi. Host bu yardımcıları çağırmaz.
+
+    override fun popularAnimeRequest(page: Int): Request = unsupportedRequest()
+    override fun popularAnimeParse(response: Response): AnimesPage = unsupportedParse()
+    override fun latestUpdatesRequest(page: Int): Request = unsupportedRequest()
+    override fun latestUpdatesParse(response: Response): AnimesPage = unsupportedParse()
+    override fun searchAnimeRequest(page: Int, query: String, filters: AnimeFilterList): Request =
+        unsupportedRequest()
+    override fun searchAnimeParse(response: Response): AnimesPage = unsupportedParse()
+    override fun animeDetailsParse(response: Response): SAnime = unsupportedParse()
+    override fun episodeListParse(response: Response): List<SEpisode> = unsupportedParse()
+    override fun seasonListParse(response: Response): List<SAnime> = unsupportedParse()
+    override fun hosterListParse(response: Response): List<Hoster> = unsupportedParse()
+
+    private fun unsupportedRequest(): Request =
+        throw UnsupportedOperationException("Pulsar parser kaynağı istek üretmez")
+
+    private fun <T> unsupportedParse(): T =
+        throw UnsupportedOperationException("Pulsar parser kaynağı yanıt ayrıştırmaz")
 
     private fun isDirectStream(url: String): Boolean {
         val path = url.substringBefore('?').lowercase()
