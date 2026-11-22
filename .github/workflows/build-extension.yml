@@ -107,7 +107,7 @@ jobs:
           cp pulsar-v2/repo-build/apk/*.apk apk/
           cp pulsar-v2/repo-build/index.min.json index.min.json
           cp pulsar-v2/repo-build/repo.json repo.json
-          rm -rf pulsar-v2/repo/apk pulsar-v2/repo/icon
+          rm -rf pulsar-v2/repo/apk
           mkdir -p pulsar-v2/repo/apk
           cp pulsar-v2/repo-build/apk/*.apk pulsar-v2/repo/apk/
           cp pulsar-v2/repo-build/index.min.json pulsar-v2/repo/index.min.json
