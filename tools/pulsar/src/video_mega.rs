@@ -5,21 +5,28 @@
 //!   {"aniyomi":[{name,url}], "cloudstream":[url...], "jar":[{name,index}]}
 //!
 //! Çıktılar (`--out`, varsayılan `pulsar-video`):
-//! - `repo/index.min.json`  Aniyomi DİZİSİ: uzak iki indeks `pkg` bazında
-//!   birleştirilir (en yüksek `code` kazanır), göreli `apk` yolları
-//!   `<index-kök>/apk/<dosya>` olarak mutlaklaştırılır; mevcut yerel kayıt
-//!   (göreli apk taşıyanlar) listenin BAŞINA eklenir. `repo/repo.json` meta
-//!   nesnesi zaten varsa AYNEN korunur, yoksa Pulsar Video meta'sı yazılır.
+//! - `repo/index.min.json`  Aniyomi DİZİSİ; YALNIZ yerel kayıtlar (göreli
+//!   `apk` taşıyanlar) yazılır. Uzak Aniyomi indeksleri birleştirilmez:
+//!   Kototoro `apk` alanını DOSYA ADI kabul eder ve indirmeyi
+//!   `<repo-kök>/apk/<apk>` olarak kurar (`ExtensionRepoService.kt:421-422`,
+//!   `ExtensionInstallService.kt:96-101`); uzak kayıtların `apk` alanı çoğu
+//!   zaman mutlak URL olduğundan birleşik indekste 404 üretir. Bu yüzden uzak
+//!   kayıtlar yalnız SAYILIR ve `mega-report.json`'da
+//!   "harici depo olarak eklenmeli" diye işaretlenir.
+//!   `repo/repo.json` meta nesnesi zaten varsa AYNEN korunur, yoksa yazılır.
 //! - `cs/repo.json`      CloudStream depo nesnesi; `pluginLists` tüm
 //!   kaynaklardan toplanmış, mutlaklaştırılmış, tekilleştirilmiş listedir.
 //! - `cs/plugins.json`   Tüm pluginLists'in birleşik plugin DİZİSİ; `pkg`
 //!   (`internalName`) bazında en yüksek `version` kazanır, `url` mutlaktır.
-//! - `jar/index.min.json` JAR indeksi; `apk` mutlak (`.../repo/apk/plugin.jar`).
+//! - `jar/index.min.json` JAR indeksi; `apk` GÖRELİ dosya adı (`plugin.jar`).
+//! - `jar/apk/<dosya>`   JAR'ın kendisi indirilir (yerelleştirme): Kototoro
+//!   depo köküne `<repo>/apk/<apk>` isteği atar, uzak URL'yi bileşen olarak
+//!   kabul etmez.
 //! - `mega-report.json`  Atlanan kaynaklar (URL + hata) ve sayılar.
 //!
 //! Ağ erişimi `curl` alt süreciyle yapılır (depodaki diğer komutlarla aynı
-//! yöntem); yeni bir HTTP bağımlılığı eklenmez. APK indirilmez, yalnız mutlak
-//! URL üretilir.
+//! yöntem); yeni bir HTTP bağımlılığı eklenmez. APK indirilmez; yalnız JAR
+//! (tek dosya, ~1 MB) indirilir.
 
 use serde_json::{json, Value};
 use std::cmp::Ordering;
@@ -71,6 +78,43 @@ fn http_get(url: &str) -> Result<Vec<u8>, String> {
 fn fetch_json(url: &str) -> Result<Value, String> {
     let bytes = http_get(url)?;
     serde_json::from_slice(&bytes).map_err(|e| format!("JSON degil: {e}"))
+}
+
+/// Bir ikili dosyayi `dest`'e indirir; yazilan bayt sayisini dondurur.
+fn http_download(url: &str, dest: &Path) -> Result<u64, String> {
+    if let Some(parent) = dest.parent() {
+        std::fs::create_dir_all(parent)
+            .map_err(|e| format!("{} olusturulamadi: {e}", parent.display()))?;
+    }
+    let status = Command::new("curl")
+        .args(["-fsSL", "--retry", "2", "--max-time", "300", "-o"])
+        .arg(dest)
+        .arg(url)
+        .status()
+        .map_err(|e| format!("curl calistirilamadi: {e}"))?;
+    if !status.success() {
+        let _ = std::fs::remove_file(dest);
+        return Err(format!("curl cikis kodu {:?}", status.code()));
+    }
+    let size = std::fs::metadata(dest)
+        .map_err(|e| format!("boyut okunamadi: {e}"))?
+        .len();
+    if size == 0 {
+        let _ = std::fs::remove_file(dest);
+        return Err("bos dosya indirildi".to_string());
+    }
+    Ok(size)
+}
+
+/// JAR `apk` alanini goreli dosya adina indirger: `plugin.jar`,
+/// `apk/plugin.jar`, `https://host/x/apk/plugin.jar` -> `plugin.jar`.
+fn jar_rel_name(apk: &str) -> String {
+    apk.rsplit('/')
+        .next()
+        .unwrap_or(apk)
+        .trim()
+        .trim_start_matches("./")
+        .to_string()
 }
 
 fn is_absolute(url: &str) -> bool {
@@ -163,7 +207,7 @@ fn aniyomi_step(out_repo: &Path, doc: &Value, dry: bool) -> Result<(Step, usize)
         sources_total: sources.len(),
         ..Step::default()
     };
-    let mut map: BTreeMap<String, Value> = BTreeMap::new();
+    let mut external: usize = 0;
 
     for src in &sources {
         let url = src.get("url").and_then(Value::as_str).unwrap_or("");
@@ -181,33 +225,26 @@ fn aniyomi_step(out_repo: &Path, doc: &Value, dry: bool) -> Result<(Step, usize)
             Ok(Value::Array(records)) => {
                 st.sources_ok += 1;
                 st.records += records.len();
+                let mut valid = 0usize;
                 for rec in records {
                     if !valid_aniyomi(&rec) {
                         st.invalid += 1;
                         continue;
                     }
-                    let pkg = rec
-                        .get("pkg")
-                        .and_then(Value::as_str)
-                        .unwrap_or("")
-                        .to_string();
-                    let code = rec.get("code").and_then(Value::as_i64).unwrap_or(i64::MIN);
-                    let mut rec = rec;
-                    if let Some(apk) = rec.get("apk").and_then(Value::as_str).map(str::to_string) {
-                        if let Some(obj) = rec.as_object_mut() {
-                            obj.insert("apk".to_string(), Value::String(resolve_apk(url, &apk)));
-                        }
-                    }
-                    let replace = match map.get(&pkg) {
-                        Some(prev) => {
-                            prev.get("code").and_then(Value::as_i64).unwrap_or(i64::MIN) < code
-                        }
-                        None => true,
-                    };
-                    if replace {
-                        map.insert(pkg, rec);
-                    }
+                    valid += 1;
+                    external += 1;
+                    // Uzak kayit INDEKSE YAZILMAZ: Kototoro `apk` alanini dosya
+                    // adi kabul edip `<repo-kok>/apk/<apk>` indirir; uzak
+                    // kayitlarin apk'si mutlak URL'dir ve bu adres 404 olur.
+                    st.skipped.push(json!({
+                        "kind":"aniyomi",
+                        "name": rec.get("name").and_then(Value::as_str).unwrap_or(""),
+                        "pkg": rec.get("pkg").and_then(Value::as_str).unwrap_or(""),
+                        "url": url,
+                        "error":"harici depo olarak eklenmeli",
+                    }));
                 }
+                println!("[aniyomi] harici {name}: {valid} kayit indekse yazilmadi");
             }
             Ok(_) => st.skipped.push(
                 json!({"kind":"aniyomi","name":name,"url":url,"error":"kok dizi degil"}),
@@ -218,9 +255,12 @@ fn aniyomi_step(out_repo: &Path, doc: &Value, dry: bool) -> Result<(Step, usize)
         }
     }
 
-    // Mevcut yerel kayıtlar (apk'si mutlak OLMAYANlar) listenin başına gelir.
+    // Indekse YALNIZ yerel kayitlar girer (apk'si GORELI olanlar). Onceki
+    // kosudan kalan mutlak-apk kayitlari atilir; onlar tam olarak Kototoro'da
+    // 404 ureten birlesik kayitlardir.
     let index_path = out_repo.join(INDEX_FILE);
     let mut local: Vec<Value> = Vec::new();
+    let mut seen_pkg: HashSet<String> = HashSet::new();
     if let Ok(text) = std::fs::read_to_string(&index_path) {
         if let Ok(Value::Array(arr)) = serde_json::from_str::<Value>(&text) {
             for rec in arr {
@@ -232,24 +272,28 @@ fn aniyomi_step(out_repo: &Path, doc: &Value, dry: bool) -> Result<(Step, usize)
                 if !relative {
                     continue;
                 }
-                if let Some(pkg) = rec.get("pkg").and_then(Value::as_str) {
-                    map.remove(pkg);
+                let pkg = rec
+                    .get("pkg")
+                    .and_then(Value::as_str)
+                    .unwrap_or("")
+                    .to_string();
+                if pkg.is_empty() || !seen_pkg.insert(pkg) {
+                    continue;
                 }
                 local.push(rec);
             }
         }
     }
 
-    let remote_unique = map.len();
-    let mut merged = local.clone();
-    merged.extend(map.into_values());
-    st.unique = merged.len();
-    if merged.is_empty() {
-        return Err("aniyomi birlestirmesi bos".to_string());
+    st.unique = local.len();
+    if local.is_empty() {
+        return Err("yerel kayit yok: once `pulsar video-repo` calistirilmali \
+                    (repo/apk/<eklenti>.apk + goreli apk)"
+            .to_string());
     }
 
     if !dry {
-        write_json(&index_path, &Value::Array(merged.clone()), false)?;
+        write_json(&index_path, &Value::Array(local.clone()), false)?;
         // repo.json META NESNESİDİR; mevcut dosya varsa baytları korunur.
         let meta_path = out_repo.join(REPO_META_FILE);
         if !meta_path.exists() {
@@ -267,14 +311,8 @@ fn aniyomi_step(out_repo: &Path, doc: &Value, dry: bool) -> Result<(Step, usize)
     }
 
     println!(
-        "[aniyomi] kaynak={}/{} kayit={} tekil={} yerel={} toplam={} gecersiz={}",
-        st.sources_ok,
-        st.sources_total,
-        st.records,
-        remote_unique,
-        local.len(),
-        st.unique,
-        st.invalid
+        "[aniyomi] kaynak={}/{} okunan={} harici={} yazilan={} gecersiz={}",
+        st.sources_ok, st.sources_total, st.records, external, st.unique, st.invalid
     );
     Ok((st, local.len()))
 }
@@ -455,6 +493,8 @@ fn jar_step(out_jar: &Path, doc: &Value, dry: bool) -> (usize, usize, Vec<Value>
     let mut map: BTreeMap<String, Value> = BTreeMap::new();
     let mut skipped: Vec<Value> = Vec::new();
     let mut ok = 0usize;
+    let mut downloaded = 0usize;
+    let mut bytes = 0u64;
 
     for src in &sources {
         let url = src
@@ -479,17 +519,25 @@ fn jar_step(out_jar: &Path, doc: &Value, dry: bool) -> (usize, usize, Vec<Value>
                         continue;
                     }
                     let mut rec = rec;
-                    if let Some(apk) = rec.get("apk").and_then(Value::as_str).map(str::to_string) {
-                        if let Some(obj) = rec.as_object_mut() {
-                            obj.insert("apk".to_string(), Value::String(resolve_apk(url, &apk)));
-                        }
-                    }
                     let key = rec
                         .get("pkg")
                         .and_then(Value::as_str)
                         .unwrap_or("")
                         .to_string();
                     if key.is_empty() {
+                        continue;
+                    }
+                    let apk = rec
+                        .get("apk")
+                        .and_then(Value::as_str)
+                        .unwrap_or("")
+                        .to_string();
+                    // Goreli ad: Kototoro `<repo-kok>/apk/<apk>` ister.
+                    let rel = jar_rel_name(&apk);
+                    if rel.is_empty() || rel == "." || rel == ".." || rel.contains("..") {
+                        skipped.push(json!({
+                            "kind":"jar","name":name,"url":url,"error":"apk adi gecersiz"
+                        }));
                         continue;
                     }
                     let code = rec.get("code").and_then(Value::as_i64).unwrap_or(i64::MIN);
@@ -499,9 +547,29 @@ fn jar_step(out_jar: &Path, doc: &Value, dry: bool) -> (usize, usize, Vec<Value>
                         }
                         None => true,
                     };
-                    if replace {
-                        map.insert(key, rec);
+                    if !replace {
+                        continue;
                     }
+                    // Dosyayi YERELLEŞTİR: uzak URL bileşen olarak kullanılamaz.
+                    if !dry {
+                        let src_url = resolve_apk(url, &apk);
+                        match http_download(&src_url, &out_jar.join("apk").join(&rel)) {
+                            Ok(n) => {
+                                downloaded += 1;
+                                bytes += n;
+                            }
+                            Err(e) => {
+                                skipped.push(json!({
+                                    "kind":"jar","name":name,"url":src_url,"error":e
+                                }));
+                                continue;
+                            }
+                        }
+                    }
+                    if let Some(obj) = rec.as_object_mut() {
+                        obj.insert("apk".to_string(), Value::String(rel));
+                    }
+                    map.insert(key, rec);
                 }
             }
             Ok(_) => skipped.push(json!({
@@ -519,7 +587,14 @@ fn jar_step(out_jar: &Path, doc: &Value, dry: bool) -> (usize, usize, Vec<Value>
             return (ok, 0, skipped);
         }
     }
-    println!("[jar] kaynak={}/{} kayit={}", ok, sources.len(), unique);
+    println!(
+        "[jar] kaynak={}/{} kayit={} indirilen={} bayt={}",
+        ok,
+        sources.len(),
+        unique,
+        downloaded,
+        bytes
+    );
     (ok, unique, skipped)
 }
 
@@ -612,6 +687,7 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
         println!("[dry]  yazilacak: {}/cs/{REPO_META_FILE}", out_dir.display());
         println!("[dry]  yazilacak: {}/cs/{CS_PLUGINS_FILE}", out_dir.display());
         println!("[dry]  yazilacak: {}/jar/{INDEX_FILE}", out_dir.display());
+        println!("[dry]  indirilecek: {}/jar/apk/<dosya>", out_dir.display());
         println!("[dry]  yazilacak: {}/{REPORT_FILE}", out_dir.display());
         return ExitCode::SUCCESS;
     }

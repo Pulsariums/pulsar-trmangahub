@@ -30,6 +30,23 @@ bu yüzden sürümler `16.x`. `versionCode` her yayında artmalı — aksi hâld
 Üretim: `pulsar video-repo` (Rust) — APK'dan paket/sürüm/manifest okur, `repo.json` + `index.min.json` yazar,
 APK'yı `repo/apk/` altına kopyalar. CI (`build-video.yml`) her derlemede bu dosyaları commit eder.
 
+## Mega depo (CloudStream + JAR, Aniyomi hariç)
+
+`pulsar video-mega` (CI: `.github/workflows/mega.yml`) CloudStream pluginlerini ve Kototoro JAR'ını
+bu klasörde birleştirir; **Aniyomi depoları birleştirilemez** — Kototoro `apk` alanını dosya adı kabul
+edip indirmeyi `<depo-kök>/apk/<apk>` olarak kurar (`ExtensionRepoService.kt:421-422`,
+`ExtensionInstallService.kt:96-101`); uzak kayıtların `apk` alanı mutlak URL olduğu için birleşik
+indekste 404 verir — bu yüzden harici Aniyomi depolarını ayrı ekle, CloudStream ve JAR birleşik gelir.
+Harici Aniyomi depoları:
+
+- `https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json` (248 eklenti)
+- `https://raw.githubusercontent.com/aniyomiorg/aniyomi-extensions/repo/index.min.json` (3 eklenti)
+
+Çıktılar: `repo/index.min.json` **yalnız** kendi eklentimizi taşır (göreli `apk` + 42 `sources`);
+`cs/repo.json` + `cs/plugins.json` CloudStream birleşimi (`url` mutlak); `jar/index.min.json`
+(`apk` = `plugin.jar`, göreli) + indirilmiş `jar/apk/plugin.jar`; `mega-report.json` harici/atlanan
+kayıtları "harici depo olarak eklenmeli" diye işaretler.
+
 ## Kaynak durumu (2026-11-21)
 
 | Kaynak | Durum | Kanıt / sebep |

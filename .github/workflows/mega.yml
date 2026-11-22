@@ -1,13 +1,17 @@
-name: Mega video deposu (Aniyomi + CloudStream + JAR)
+name: Mega video deposu (CloudStream + JAR + yerel Aniyomi eklentisi)
 
-# Farklı depoları tek çatı altında birleştirir; APK indirmez, yalnız mutlak
-# URL'ler üretir:
-#   repo/index.min.json  Aniyomi (uzak 2 index + yerel Pulsar Video eklentisi)
+# CloudStream + JAR depolarını birleştirir; Aniyomi indeksine YALNIZ yerel
+# eklentiyi yazar. Uzak Aniyomi depoları BİRLEŞTİRİLEMEZ: Kototoro `apk`
+# alanını dosya adı kabul edip `<repo-kök>/apk/<apk>` indirir, uzak kayıtların
+# mutlak apk URL'si 404 üretir (ExtensionRepoService.kt:421-422 ->
+# ExtensionInstallService.kt:96-101).
+#   repo/index.min.json  Aniyomi (yalnız yerel Pulsar Video eklentisi, göreli apk)
 #   repo/repo.json       mevcut meta (korunur)
 #   cs/repo.json         CloudStream mega depo (pluginLists)
-#   cs/plugins.json      birleşik plugin dizisi
-#   jar/index.min.json   JAR indeksi (apk mutlak)
-#   mega-report.json     atlanan kaynaklar
+#   cs/plugins.json      birleşik plugin dizisi (url mutlak)
+#   jar/index.min.json   JAR indeksi (apk göreli: plugin.jar)
+#   jar/apk/plugin.jar   JAR'ın kendisi (indirilir, ~1 MB)
+#   mega-report.json     harici/atlanan kaynaklar
 on:
   workflow_dispatch:
   schedule:
@@ -52,29 +56,38 @@ jobs:
         run: |
           base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/pulsar-video"
           check() {
-            for f in repo/index.min.json repo/repo.json cs/repo.json cs/plugins.json jar/index.min.json; do
+            for f in repo/index.min.json repo/repo.json cs/repo.json cs/plugins.json \
+                     jar/index.min.json jar/apk/plugin.jar; do
               code=$(curl -sS -m 30 -o /dev/null -w '%{http_code}' "$base/$f")
               echo "$f -> $code"
               test "$code" = 200 || return 1
             done
-            n=$(curl -fsS -m 30 "$base/repo/index.min.json" | jq 'length') || return 1
-            echo "aniyomi kayit: $n"
-            test "$n" -ge 200 || { echo "::error::aniyomi kayit sayisi dusuk ($n)"; return 1; }
-            apk=$(curl -fsS -m 30 "$base/repo/index.min.json" \
-                  | jq -r '[.[] | select(.apk | startswith("http"))][0].apk')
-            test -n "$apk" -a "$apk" != "null" || { echo "::error::mutlak apk URL yok"; return 1; }
-            code=$(curl -sS -m 30 -o /dev/null -w '%{http_code}' "$apk")
-            echo "ornek apk -> $code $apk"
+            # Aniyomi indeksi YALNIZ yerel eklentiyi içerir: Kototoro `apk`
+            # alanını dosya adı kabul edip `<repo-kök>/apk/<apk>` indirir.
+            idx=$(curl -fsS -m 30 "$base/repo/index.min.json") || return 1
+            n=$(printf '%s' "$idx" | jq 'length') || return 1
+            apk=$(printf '%s' "$idx" | jq -r '.[0].apk // ""') || return 1
+            src=$(printf '%s' "$idx" | jq '.[0].sources | length') || return 1
+            echo "aniyomi kayit: $n, apk: $apk, sources: $src"
+            test "$n" -eq 1 || { echo "::error::aniyomi indeksi 1 kayit olmali ($n)"; return 1; }
+            case "$apk" in http*) echo "::error::apk goreli olmali: $apk"; return 1 ;; esac
+            test "$src" -ge 40 || { echo "::error::sources eksik ($src)"; return 1; }
+            code=$(curl -sS -m 30 -o /dev/null -w '%{http_code}' "$base/repo/apk/$apk")
+            echo "kurulacak apk -> $code repo/apk/$apk"
             test "$code" = 200 || return 1
+
             lists=$(curl -fsS -m 30 "$base/cs/repo.json" | jq '.pluginLists | length') || return 1
             plugins=$(curl -fsS -m 30 "$base/cs/plugins.json" | jq 'length') || return 1
             echo "cs pluginLists: $lists, plugin: $plugins"
             test "$lists" -ge 10 -a "$plugins" -ge 100 || { echo "::error::cloudstream birlestirmesi kucuk"; return 1; }
+
+            # JAR yerelleştirilmiş: apk göreli, dosya depoda duruyor.
             jar=$(curl -fsS -m 30 "$base/jar/index.min.json" | jq -r '.[0].apk') || return 1
-            case "$jar" in https://*) ;; *) echo "::error::jar apk mutlak degil: $jar"; return 1 ;; esac
-            code=$(curl -sS -m 30 -o /dev/null -w '%{http_code}' "$jar")
-            echo "jar apk -> $code $jar"
-            test "$code" = 200 || return 1
+            echo "jar apk: $jar"
+            test "$jar" = "plugin.jar" || { echo "::error::jar apk goreli plugin.jar olmali: $jar"; return 1; }
+            jar_size=$(curl -fsS -m 30 -o /dev/null -w '%{size_download}' "$base/jar/apk/plugin.jar") || return 1
+            echo "jar boyut: $jar_size"
+            test "$jar_size" -ge 100000 || { echo "::error::jar boyutu kucuk ($jar_size)"; return 1; }
           }
           for attempt in $(seq 1 12); do
             echo "deneme $attempt/12"

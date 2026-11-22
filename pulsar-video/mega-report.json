@@ -1,6 +1,1763 @@
 {
   "skipped": [
     {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Google Drive",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.googledrive",
+      "url": "https://raw.githubusercontent.com/aniyomiorg/aniyomi-extensions/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: GoogleDriveIndex",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.googledriveindex",
+      "url": "https://raw.githubusercontent.com/aniyomiorg/aniyomi-extensions/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Jellyfin",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.jellyfin",
+      "url": "https://raw.githubusercontent.com/aniyomiorg/aniyomi-extensions/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeOnsen",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.animeonsen",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeWorld India",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.animeworldindia",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeXin",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.animexin",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AniZone",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.anizone",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: ChineseAnime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.chineseanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Debrid Index",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.debridindex",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Google Drive",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.googledrive",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: GoogleDriveIndex",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.googledriveindex",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Hentai Torrent (Torrent)",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.hentaitorrent",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Jable",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.jable",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: JavGG",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.javgg",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Jav Guru",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.javguru",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Jellyfin",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.jellyfin",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Kartoons",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.kartoons",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: LMAnime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.lmanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: MissAV",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.missav",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Movy",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.movy",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: MyReadingManga",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.myreadingmanga",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Newgrounds",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.newgrounds",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Nyaa (Torrent)",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.nyaatorrent",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: PTorrent (Torrent)",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.ptorrent",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: RouVideo",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.rouvideo",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: StreamingCommunity",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.streamingcommunity",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Stremio",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.stremio",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Subsplease",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.subsplease",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: SupJav",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.supjav",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Torbox",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.torbox",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Torrentio (Torrent / Debrid)",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.torrentio",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Torrentio Anime (Torrent / Debrid)",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.torrentioanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Xnxx",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.xnxx",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Xvideos",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.xvideos",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: YFantasy",
+      "pkg": "eu.kanade.tachiyomi.animeextension.all.yfantasy",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anime4up",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.anime4up",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anime Blkom",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.animeblkom",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Animeiat",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.animeiat",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeLek",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.animelek",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Animerco",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.animerco",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: ArabAnime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.arabanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Arab Seed",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.arabseed",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: asia2tv",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.asia2tv",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Cimaleek",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.cimaleek",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Egy Dead",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.egydead",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: FASELHD",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.faselhd",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Okanime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.okanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Tuktuk Cinema",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.tuktukcinema",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: WIT ANIME",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ar.witanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: FilmiFen",
+      "pkg": "eu.kanade.tachiyomi.animeextension.bg.filmifen",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anime-Base",
+      "pkg": "eu.kanade.tachiyomi.animeextension.de.animebase",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anime-Loads",
+      "pkg": "eu.kanade.tachiyomi.animeextension.de.animeloads",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anime-Stream",
+      "pkg": "eu.kanade.tachiyomi.animeextension.de.animestream",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeToast",
+      "pkg": "eu.kanade.tachiyomi.animeextension.de.animetoast",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AniWorld",
+      "pkg": "eu.kanade.tachiyomi.animeextension.de.aniworld",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: FilmPalast",
+      "pkg": "eu.kanade.tachiyomi.animeextension.de.filmpalast",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Kinoking",
+      "pkg": "eu.kanade.tachiyomi.animeextension.de.kinoking",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Kool",
+      "pkg": "eu.kanade.tachiyomi.animeextension.de.kool",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Moflix-Stream",
+      "pkg": "eu.kanade.tachiyomi.animeextension.de.moflixstream",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Movie4k",
+      "pkg": "eu.kanade.tachiyomi.animeextension.de.movie4k",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Serienstream",
+      "pkg": "eu.kanade.tachiyomi.animeextension.de.serienstream",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anichi",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.anichi",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AniDB",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.anidb",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AniHQ",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.anihq",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anikage",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.anikage",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anikoto",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.anikoto",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AniKuro",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.anikuro",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AniList",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.anilist",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeGG",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.animegg",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeKhor",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.animekhor",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Animenosub",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.animenosub",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimePahe",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.animepahe",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeParadise",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.animeparadise",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeSogo",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.animesogo",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeTake",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.animetake",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeToki",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.animetoki",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AniPM",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.anipm",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AniWave (Unoriginal)",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.aniwave",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AniWaves.ru",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.aniwaves",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AsiaFlix",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.asiaflix",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AV1Encodes",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.av1encodes",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: BLZone",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.blzone",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Cinejoy",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.cinejoy",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: DonghuaStream",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.donghuastream",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Gotaku",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.gotaku",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: haho.moe",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.hahomoe",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: hanime.tv",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.hanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: HentaiHaven",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.hentaihaven",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: HentaiMama",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.hentaimama",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: HexaWatch",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.hexawatch",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Hstream",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.hstream",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Kayoanime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.kayoanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: KickAssAnime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.kickassanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: KimoiTV",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.kimoitv",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: KissKH",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.kisskh",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeKai (Unoriginal)",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.kotokai",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: LuciferDonghua",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.luciferdonghua",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Mapple",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.mapple",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: MKissa",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.mkissa",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: MoviesMod",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.moviesmod",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: My Running Man",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.myrunningman",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: 123Anime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.onetwothreeanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Oppai Stream",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.oppaistream",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: PinoyMoviePedia",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.pinoymoviepedia",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Re:ANIME",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.reanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Rule34Video",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.rule34video",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Senshi",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.senshi",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: ShuttleTV",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.shuttletv",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: UHD Movies",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.uhdmovies",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: UniqueStream",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.uniquestream",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: WcoAnimeDub",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.wcoanimedub",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: WcoAnimeSub",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.wcoanimesub",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: WcoForever",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.wcoforever",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Wcofun",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.wcofun",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: WCOStream",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.wcostream",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: WcoTv",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.wcotv",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: XAnime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.en.xanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeAv1",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.animeav1",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeBum",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.animebum",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Animejl",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.animejl",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeLatinoHD",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.animelatinohd",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeMovil",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.animemovil",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Animenix",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.animenix",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeOnline.Ninja",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.animeonlineninja",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeYT.es",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.animeytes",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AsiaLiveAction",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.asialiveaction",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: az-animex",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.azanimex",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: BeatZ Anime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.beatzanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Cine24h",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.cine24h",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: CineCalidad",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.cinecalidad",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Cineplus123",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.cineplus123",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Cuevana",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.cuevana",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Cuevana3Ch",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.cuevanach",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: DeTodoPeliculas",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.detodopeliculas",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Doramasflix",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.doramasflix",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Doramasyt",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.doramasyt",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: EnNovelas (Dead)",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.ennovelas",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: EstrenosDoramas",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.estrenosdoramas",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: FanPelis",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.fanpelis",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: FlixLatam",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.flixlatam",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Gnula",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.gnula",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Hackstore",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.hackstore",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Hentaijk",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.hentaijk",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Hentaila",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.hentaila",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: HentaiTk",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.hentaitk",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: HomeCine",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.homecine",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Jkanime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.jkanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Jkhentai",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.jkhentai",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Katanime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.katanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: LACartoons",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.lacartoons",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: LaMovie",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.lamovie",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Latanime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.latanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: LegionAnime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.legionanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: LocoPelis",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.locopelis",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: MetroSeries",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.metroseries",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: MhdFlix",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.mhdflix",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: MonosChinos",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.monoschinos",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: MundoDonghua",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.mundodonghua",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Pandrama",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.pandrama",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: PelisForte",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.pelisforte",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: PelisPlusHD",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.pelisplushd",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: PelisPlusPh",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.pelisplusph",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: PelisPlusTo",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.pelisplusto",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Samato's Den: Videos",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.samatodenvideos",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: SeriesKao",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.serieskao",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: SoloLatino",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.sololatino",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: TioanimeH",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.tioanimeh",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Tiodonghua.com",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.tiodonghua",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: VeoHentai",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.veohentai",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: VerAni.me",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.veranime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: VerAnimes",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.veranimes",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: VerPelisTop",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.verpelistop",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: VerSeriesOnline",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.verseriesonline",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: zeroanime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.zeroanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Zonaleros",
+      "pkg": "eu.kanade.tachiyomi.animeextension.es.zonaleros",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anime-Sama",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.animesama",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeVostFr",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.animevostfr",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: EmpireStreaming",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.empirestreaming",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: FRAnime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.franime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: French Anime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.frenchanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: HDS",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.hds",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: JetAnime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.jetanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: MyKdrama",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.mykdrama",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: OtakuFR",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.otakufr",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Voiranime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.voiranime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: VoirCartoon",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.voircartoon",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Vostfree",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.vostfree",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Wiflix",
+      "pkg": "eu.kanade.tachiyomi.animeextension.fr.wiflix",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: YoMovies",
+      "pkg": "eu.kanade.tachiyomi.animeextension.hi.yomovies",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeIndo",
+      "pkg": "eu.kanade.tachiyomi.animeextension.id.animeindo",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Kuramanime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.id.kuramanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Kuronime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.id.kuronime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: MiniOppai",
+      "pkg": "eu.kanade.tachiyomi.animeextension.id.minioppai",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: NeoNime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.id.neonime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: NimeGami",
+      "pkg": "eu.kanade.tachiyomi.animeextension.id.nimegami",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Oploverz",
+      "pkg": "eu.kanade.tachiyomi.animeextension.id.oploverz",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: OtakuDesu",
+      "pkg": "eu.kanade.tachiyomi.animeextension.id.otakudesu",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Samehadaku",
+      "pkg": "eu.kanade.tachiyomi.animeextension.id.samehadaku",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anime Saturn",
+      "pkg": "eu.kanade.tachiyomi.animeextension.it.animesaturn",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeUnity",
+      "pkg": "eu.kanade.tachiyomi.animeextension.it.animeunity",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: ANIMEWORLD.tv",
+      "pkg": "eu.kanade.tachiyomi.animeextension.it.animeworld",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AniPlay",
+      "pkg": "eu.kanade.tachiyomi.animeextension.it.aniplay",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Hentai Saturn",
+      "pkg": "eu.kanade.tachiyomi.animeextension.it.hentaisaturn",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Toonitalia",
+      "pkg": "eu.kanade.tachiyomi.animeextension.it.toonitalia",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: VVVVID",
+      "pkg": "eu.kanade.tachiyomi.animeextension.it.vvvvid",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Aniweek",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ko.aniweek",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: desu-online",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pl.desuonline",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Docchi",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pl.docchi",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: OgladajAnime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pl.ogladajanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anime Fire",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.animefire",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeIto",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.animeito",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimePlayer",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.animeplayer",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeQ",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.animeq",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Animes Digital",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.animesdigital",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimesDrive",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.animesdrive",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Animes Online CC",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.animesonlinecc",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimesOnlineCloud",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.animesonlinecloud",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anitube",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.anitube",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: BetterAnimeIo",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.betteranimeio",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: DattebayoBR",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.dattebayobr",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Donghua no Sekai",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.donghuanosekai",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Doramogo",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.doramogo",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Fun Anime TV",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.funanimetv",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Goyabu",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.goyabu",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Meus Animes",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.meusanimes",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Muito Hentai",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.muitohentai",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Pi Fansubs",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.pifansubs",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: SmartAnimes",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.smartanimes",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: SushiAnimes",
+      "pkg": "eu.kanade.tachiyomi.animeextension.pt.sushianimes",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeGO.studio",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ru.animego",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Animelib",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ru.animelib",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Animevost",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ru.animevost",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Jutsu TV",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ru.jutsu",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: HDRezka",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ru.rezka",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: YummyAnime",
+      "pkg": "eu.kanade.tachiyomi.animeextension.ru.yummyanime",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AnimeBalkan",
+      "pkg": "eu.kanade.tachiyomi.animeextension.sr.animebalkan",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anime Srbija",
+      "pkg": "eu.kanade.tachiyomi.animeextension.sr.animesrbija",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Animeler",
+      "pkg": "eu.kanade.tachiyomi.animeextension.tr.animeler",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anizm",
+      "pkg": "eu.kanade.tachiyomi.animeextension.tr.anizm",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: AsyaAnimeleri",
+      "pkg": "eu.kanade.tachiyomi.animeextension.tr.asyaanimeleri",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: TRAnimeCI",
+      "pkg": "eu.kanade.tachiyomi.animeextension.tr.tranimeci",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: TR Anime Izle",
+      "pkg": "eu.kanade.tachiyomi.animeextension.tr.tranimeizle",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: UAKino",
+      "pkg": "eu.kanade.tachiyomi.animeextension.uk.uakino",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: UFDub",
+      "pkg": "eu.kanade.tachiyomi.animeextension.uk.ufdub",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Anime1.me",
+      "pkg": "eu.kanade.tachiyomi.animeextension.zh.anime1",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Cycity",
+      "pkg": "eu.kanade.tachiyomi.animeextension.zh.cycity",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Hanime1.me",
+      "pkg": "eu.kanade.tachiyomi.animeextension.zh.hanime1",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: iyf",
+      "pkg": "eu.kanade.tachiyomi.animeextension.zh.iyf",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Nivod",
+      "pkg": "eu.kanade.tachiyomi.animeextension.zh.nivod",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Xfani",
+      "pkg": "eu.kanade.tachiyomi.animeextension.zh.xfani",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
+      "error": "harici depo olarak eklenmeli",
+      "kind": "aniyomi",
+      "name": "Aniyomi: Xiaoxintv",
+      "pkg": "eu.kanade.tachiyomi.animeextension.zh.xiaoxintv",
+      "url": "https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json"
+    },
+    {
       "error": "curl cikis kodu Some(22)",
       "kind": "cloudstream",
       "name": "",
