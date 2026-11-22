@@ -353,18 +353,30 @@ class PulsarVideoSource(
             }
         }
 
-        /** Istisna zinciri TLS el sikismasi / baglanti sifirlama izi tasiyor mu? */
+        /** Istisna zinciri TLS el sikismasi / baglanti sifirlama / sertifika izi tasiyor mu? */
         private fun isTlsReset(e: IOException): Boolean {
             var cur: Throwable? = e
             while (cur != null) {
                 when (cur) {
                     is SSLHandshakeException -> return true
                     is SSLException -> return true
+                    is java.security.cert.CertificateException -> return true
                     is SocketException -> {
                         val msg = cur.message.orEmpty().lowercase()
                         if (msg.contains("reset") || msg.contains("broken pipe")) return true
                     }
                 }
+                // Sertifika/trust-anchor hatasi SNI tabanli MITM'in isaretidir: araya
+                // giren katman baglantiyi kendi sertifikasiyla keser, Android bunu
+                // "Trust anchor for certification path not found" / CertPathValidator
+                // olarak IOException seklinde dondurur. Parcali ClientHello ilk denemede
+                // bunu engellemediginde yedege gecip tekrar denenir.
+                val msg = cur.message.orEmpty().lowercase()
+                if (msg.contains("trust anchor") ||
+                    msg.contains("certpathvalidator") ||
+                    msg.contains("certificate") ||
+                    msg.contains("certpath")
+                ) return true
                 cur = cur.cause
             }
             return false
