@@ -55,8 +55,8 @@ kayıtları "harici depo olarak eklenmeli" diye işaretler.
 
 | Paket | applicationId | nsfw | Kaynaklar |
 |---|---|---|---|
-| **Pulsar Video** | `eu.kanade.tachiyomi.animeextension.all.pulsarvideo` | `0` | `ContentType.VIDEO` parser'ları + config (GogoAnime/AniWorld) — 17 |
-| **Pulsar Video 18+** | `eu.kanade.tachiyomi.animeextension.all.pulsarvideo18` | `1` | yalnız `ContentType.HENTAI_VIDEO` parser'ları — 25 |
+| **Pulsar Video** | `eu.kanade.tachiyomi.animeextension.all.pulsarvideo` | `0` | `ContentType.VIDEO` parser'ları + config (GogoAnime/AniWorld) — indekste 17 |
+| **Pulsar Video 18+** | `eu.kanade.tachiyomi.animeextension.all.pulsarvideo18` | `1` | `ContentType.HENTAI_VIDEO` parser'ları — indekste 25 (config kaynakları normal kayda yazılır) |
 
 ## Kaynak durumu (2026-11-21)
 
