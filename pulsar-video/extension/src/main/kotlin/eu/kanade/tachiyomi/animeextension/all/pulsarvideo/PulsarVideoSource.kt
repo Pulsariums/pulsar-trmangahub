@@ -104,10 +104,21 @@ class PulsarVideoSource(
 
     override fun animeDetailsParse(response: Response): SAnime {
         val doc = response.asJsoup()
+        // Bos secici Jsoup'ta ValidationException ("String must not be empty")
+        // firlatir; alanlar config'de yoksa sorgu hic calistirilmaz.
+        val titleSel = config.optString("detailsTitleSelector", "h1").ifBlank { "h1" }
+        val descSel = config.optString("detailsDescSelector", "").trim()
+        val genreSel = config.optString("detailsGenreSelector", "").trim()
         return SAnime.create().apply {
-            title = doc.selectFirst(config.optString("detailsTitleSelector", "h1"))?.text().orEmpty()
-            description = doc.selectFirst(config.optString("detailsDescSelector", ""))?.text()
-            genre = doc.select(config.optString("detailsGenreSelector", "")).joinToString(", ") { it.text() }
+            url = relativize(response.request.url.toString())
+            title = doc.selectFirst(titleSel)?.text()?.trim().orEmpty()
+                .ifBlank { doc.title().trim() }
+                .ifBlank { response.request.url.pathSegments.lastOrNull { it.isNotBlank() }.orEmpty() }
+                .ifBlank { "?" }
+            description = descSel.takeIf { it.isNotEmpty() }?.let { doc.selectFirst(it)?.text() }
+            genre = genreSel.takeIf { it.isNotEmpty() }
+                ?.let { doc.select(it).joinToString(", ") { el -> el.text() } }
+                .orEmpty()
         }
     }
 
@@ -121,8 +132,11 @@ class PulsarVideoSource(
         if (sel.isBlank()) return emptyList()
         return doc.select(sel).mapIndexedNotNull { idx, el ->
             val a = if (el.tagName() == "a") el else el.selectFirst("a[href]") ?: return@mapIndexedNotNull null
+            // Bos url hostta ayni ValidationException'i uretir: ogeyi atla.
+            val rawUrl = a.absUrl("href").ifBlank { a.attr("href") }
+            if (rawUrl.isBlank()) return@mapIndexedNotNull null
             SEpisode.create().apply {
-                setUrlWithoutDomain(a.absUrl("href").ifBlank { a.attr("href") })
+                setUrlWithoutDomain(rawUrl)
                 name = config.optString("episodeNameAttr", "").let { attr ->
                     if (attr.isNotBlank()) el.attr(attr) else a.text()
                 }.ifBlank { "Bölüm ${idx + 1}" }
@@ -467,6 +481,16 @@ class PulsarVideoSource(
         .url(if (url.startsWith("http")) url else "$baseUrl/${url.trimStart('/')}")
         .headers(headers)
         .build()
+
+    /** Ayni hosttaki mutlak URL'yi site-kokune gore goreli hale getirir. */
+    private fun relativize(url: String): String {
+        if (!url.startsWith("http")) return url
+        val path = url.substringAfter("://").substringAfter('/', "")
+        return if (hostOf(url) == hostOf(baseUrl)) "/$path" else url
+    }
+
+    private fun hostOf(u: String): String =
+        u.substringAfter("://", u).substringBefore('/').removePrefix("www.").lowercase()
 
     private fun Response.asJsoup(): Document = Jsoup.parse(body?.string().orEmpty(), baseUrl)
 }
