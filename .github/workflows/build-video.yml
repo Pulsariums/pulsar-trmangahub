@@ -63,11 +63,11 @@ jobs:
           set -euo pipefail
           test -f signing/pulsar.keystore || { echo "::error::signing/pulsar.keystore yok"; exit 1; }
           APKSIGNER="$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -1)"
-          rm -rf .video-apk
-          mkdir -p .video-apk
-          find pulsar-video/extension/build/outputs/apk -type f -path '*/release/*.apk' -exec cp -v {} .video-apk/ \;
-          test "$(find .video-apk -name '*.apk' | wc -l)" = "2" || { echo "::error::iki flavor APK bekleniyordu"; exit 1; }
-          for apk in .video-apk/*.apk; do
+          rm -rf video-apk
+          mkdir -p video-apk
+          find pulsar-video/extension/build/outputs/apk -type f -path '*/release/*.apk' -exec cp -v {} video-apk/ \;
+          test "$(find video-apk -name '*.apk' | wc -l)" = "2" || { echo "::error::iki flavor APK bekleniyordu"; exit 1; }
+          for apk in video-apk/*.apk; do
             "$APKSIGNER" sign --ks signing/pulsar.keystore --ks-key-alias pulsar \
               --ks-pass pass:pulsarmangahub --key-pass pass:pulsarmangahub "$apk"
             "$APKSIGNER" verify --print-certs "$apk" | head -5
@@ -77,13 +77,13 @@ jobs:
         run: cargo build --release --manifest-path tools/pulsar/Cargo.toml
 
       - name: Generate Aniyomi repo (2 records + APK copies)
-        run: ./tools/pulsar/target/release/pulsar video-repo --apk-dir .video-apk
+        run: ./tools/pulsar/target/release/pulsar video-repo --apk-dir video-apk
 
       - name: Upload APKs
         uses: actions/upload-artifact@v4
         with:
           name: pulsar-video-apk
-          path: .video-apk/*.apk
+          path: video-apk/*.apk
           if-no-files-found: error
 
       - name: Commit and push artifacts
