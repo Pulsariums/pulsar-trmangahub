@@ -1,19 +1,20 @@
 name: Build Pulsar Video (Aniyomi eklentisi)
 
 # Manga paketlerinden bağımsız: yalnız pulsar-video/extension derlenir.
-# APK, depodaki imza anahtarıyla imzalanır; `pulsar video-repo` Aniyomi
-# index.min.json'unu üretir ve artefaktlar main'e commit edilir.
+# İki ürün lezzeti (standart / adult) aynı sürüm ve imzayla üretilir;
+# `pulsar video-repo` iki kayıtlı Aniyomi index.min.json'unu yazar ve
+# artefaktlar main'e commit edilir.
 on:
   workflow_dispatch:
     inputs:
       versionName:
         description: 'versionName (<extLib>.<patch>)'
         required: false
-        default: '16.1'
+        default: '16.9'
       versionCode:
         description: 'versionCode'
         required: false
-        default: '3'
+        default: '11'
 
 permissions:
   contents: write
@@ -48,20 +49,25 @@ jobs:
             ~/.gradle/wrapper
           key: pulsar-video-gradle-${{ hashFiles('pulsar-video/extension/**/*.kts') }}
 
-      - name: Build video extension
+      - name: Build video extension (standart + adult)
         working-directory: pulsar-video/extension
         run: |
-          gradle --no-daemon assembleRelease \
+          gradle --no-daemon assembleStandartRelease assembleAdultRelease \
             -PpulsarVersionName="${{ inputs.versionName }}" \
             -PpulsarVersionCode="${{ inputs.versionCode }}"
 
       # İmzasız APK Aniyomi'ye kurulamaz: manga tarafıyla aynı depo anahtarı.
-      - name: Sign release APK (committed key)
+      # Flavor çıktıları ayrı dizinlerde; ikisi de düz bir dizine toplanıp imzalanır.
+      - name: Stage and sign release APKs (committed key)
         run: |
           set -euo pipefail
           test -f signing/pulsar.keystore || { echo "::error::signing/pulsar.keystore yok"; exit 1; }
           APKSIGNER="$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -1)"
-          for apk in pulsar-video/extension/build/outputs/apk/release/*.apk; do
+          rm -rf .video-apk
+          mkdir -p .video-apk
+          find pulsar-video/extension/build/outputs/apk -type f -path '*/release/*.apk' -exec cp -v {} .video-apk/ \;
+          test "$(find .video-apk -name '*.apk' | wc -l)" = "2" || { echo "::error::iki flavor APK bekleniyordu"; exit 1; }
+          for apk in .video-apk/*.apk; do
             "$APKSIGNER" sign --ks signing/pulsar.keystore --ks-key-alias pulsar \
               --ks-pass pass:pulsarmangahub --key-pass pass:pulsarmangahub "$apk"
             "$APKSIGNER" verify --print-certs "$apk" | head -5
@@ -70,14 +76,14 @@ jobs:
       - name: Build pulsar tool (video-repo)
         run: cargo build --release --manifest-path tools/pulsar/Cargo.toml
 
-      - name: Generate Aniyomi repo (index + APK copies)
-        run: ./tools/pulsar/target/release/pulsar video-repo
+      - name: Generate Aniyomi repo (2 records + APK copies)
+        run: ./tools/pulsar/target/release/pulsar video-repo --apk-dir .video-apk
 
-      - name: Upload APK
+      - name: Upload APKs
         uses: actions/upload-artifact@v4
         with:
           name: pulsar-video-apk
-          path: pulsar-video/extension/build/outputs/apk/release/*.apk
+          path: .video-apk/*.apk
           if-no-files-found: error
 
       - name: Commit and push artifacts
@@ -96,7 +102,7 @@ jobs:
           fi
           git push origin HEAD:main
 
-      - name: Verify published index
+      - name: Verify published index (2 packages)
         run: |
           base="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/pulsar-video/repo"
           # İki dosya, iki ayrı şema: index.min.json eklenti DİZİSİ,
@@ -111,27 +117,40 @@ jobs:
             done
             curl -fsS -m 30 "$base/index.min.json" -o .verify-index.min.json || return 1
             curl -fsS -m 30 "$base/repo.json" -o .verify-repo.json || return 1
+            rm -f .verify-apks.txt
             node -e '
               const fs = require("fs");
               const index = JSON.parse(fs.readFileSync(".verify-index.min.json", "utf8"));
               if (!Array.isArray(index)) throw new Error("index.min.json dizi değil (repo.json ile karışmış)");
-              // sources boşsa Kototoro "0 etkin kaynak" gösterir ve kurulum yapılmaz.
-              if (index.length < 1) throw new Error("index.min.json boş dizi");
-              const sources = index[0].sources;
-              if (!Array.isArray(sources) || sources.length < 1) {
-                console.error("::error::index[0].sources boş (Kototoro 0 etkin kaynak gösterir)");
-                process.exit(1);
-              }
-              const sourceNames = sources.map(function (s) { return s && s.name; }).filter(Boolean).join(",");
+              if (index.length !== 2) throw new Error("index.min.json 2 kayıt olmalı, " + index.length + " bulundu");
+              const normal = index.find(function (e) { return e.nsfw === 0; });
+              const adult = index.find(function (e) { return e.nsfw === 1; });
+              if (!normal) throw new Error("nsfw=0 (Pulsar Video) kaydı yok");
+              if (!adult) throw new Error("nsfw=1 (Pulsar Video 18+) kaydı yok");
+              if (normal.pkg !== "eu.kanade.tachiyomi.animeextension.all.pulsarvideo") throw new Error("normal paket adı yanlış: " + normal.pkg);
+              if (adult.pkg !== "eu.kanade.tachiyomi.animeextension.all.pulsarvideo18") throw new Error("18+ paket adı yanlış: " + adult.pkg);
+              index.forEach(function (e) {
+                if (!e.apk || e.apk.indexOf("/") !== -1) throw new Error("apk alanı göreli dosya adı değil: " + e.apk);
+                if (!Array.isArray(e.sources) || e.sources.length < 1) throw new Error(e.pkg + " sources boş");
+              });
               const meta = JSON.parse(fs.readFileSync(".verify-repo.json", "utf8"));
               if (!meta || typeof meta !== "object" || Array.isArray(meta)) throw new Error("repo.json nesne değil");
               if (!meta.meta || typeof meta.meta.name !== "string" || !meta.meta.name) throw new Error("repo.json meta.name yok");
               if (typeof meta.meta.website !== "string" || !meta.meta.website) throw new Error("repo.json meta.website yok");
               if (typeof meta.meta.signingKeyFingerprint !== "string" || !meta.meta.signingKeyFingerprint) throw new Error("repo.json signingKeyFingerprint yok");
-              console.log("index.min.json dizi (" + index.length + " kayıt), kaynaklar=" + sourceNames + ", repo.json meta.name=" + meta.meta.name);
-            '
+              console.log("index.min.json 2 kayıt: " + normal.name + " nsfw=0 sources=" + normal.sources.length +
+                ", " + adult.name + " nsfw=1 sources=" + adult.sources.length +
+                ", repo.json meta.name=" + meta.meta.name);
+              fs.writeFileSync(".verify-apks.txt", index.map(function (e) { return e.apk; }).join("\n") + "\n");
+            ' || return 1
+            test -s .verify-apks.txt || return 1
+            while IFS= read -r apk; do
+              code=$(curl -sS -m 30 -o /dev/null -w '%{http_code}' "$base/apk/$apk")
+              echo "apk/$apk -> $code"
+              test "$code" = "200" || { echo "::error::APK yayında değil: $apk ($code)"; return 1; }
+            done < .verify-apks.txt
           }
-          trap 'rm -f .verify-index.min.json .verify-repo.json' EXIT
+          trap 'rm -f .verify-index.min.json .verify-repo.json .verify-apks.txt' EXIT
           for attempt in 1 2 3 4 5 6 7 8 9 10 11 12; do
             echo "deneme $attempt/12"
             if check; then exit 0; fi

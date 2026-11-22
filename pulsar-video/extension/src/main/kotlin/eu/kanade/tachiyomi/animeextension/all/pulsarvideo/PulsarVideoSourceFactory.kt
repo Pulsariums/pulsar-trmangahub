@@ -4,6 +4,7 @@ import eu.kanade.tachiyomi.animesource.AnimeSource
 import eu.kanade.tachiyomi.animesource.AnimeSourceFactory
 import org.json.JSONObject
 import org.skepsun.kototoro.parsers.model.ContentParserSource
+import org.skepsun.kototoro.parsers.model.ContentType
 
 /**
  * Kaynak listesi APK'ya gömülü `VIDEO_CATALOGUE` JSON'undan okunur.
@@ -17,6 +18,9 @@ import org.skepsun.kototoro.parsers.model.ContentParserSource
  *    tek bozuk kayıt tüm listeyi düşürmez.
  */
 class PulsarVideoSourceFactory : AnimeSourceFactory {
+
+    /** `standart` paket normal videoları, `adult` paket yalnız 18+ parser'ları taşır. */
+    private val adult: Boolean = BuildConfig.FLAVOR == "adult"
 
     override fun createSources(): List<AnimeSource> {
         val root = JSONObject(VIDEO_CATALOGUE)
@@ -38,7 +42,14 @@ class PulsarVideoSourceFactory : AnimeSourceFactory {
         if (enumName.isEmpty()) return null
         return runCatching {
             val source = ContentParserSource.valueOf(enumName)
-            if (source.isBroken) {
+            // ContentType parser kaynağının kendi türüdür (ContentSource.contentType).
+            // 18+ paket yalnız HENTAI_VIDEO, normal paket yalnız VIDEO taşır.
+            val matchesFlavor = if (adult) {
+                source.contentType == ContentType.HENTAI_VIDEO
+            } else {
+                source.contentType == ContentType.VIDEO
+            }
+            if (source.isBroken || !matchesFlavor) {
                 null
             } else {
                 val lang = cfg.optString("lang", source.locale.ifBlank { "all" })

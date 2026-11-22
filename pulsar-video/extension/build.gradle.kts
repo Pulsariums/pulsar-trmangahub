@@ -12,15 +12,38 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "eu.kanade.tachiyomi.animeextension.all.pulsarvideo"
         minSdk = 23
         targetSdk = 35
         // Aniyomi/Kototoro: versionName "<extLib>.<patch>" kontratı.
-        versionCode = (project.findProperty("pulsarVersionCode") as String? ?: "3").toInt()
-        versionName = project.findProperty("pulsarVersionName") as String? ?: "16.1"
+        versionCode = (project.findProperty("pulsarVersionCode") as String? ?: "11").toInt()
+        versionName = project.findProperty("pulsarVersionName") as String? ?: "16.9"
         // `aniyomix.extensionLib` = Aniyomi eklenti ABI sürümü. Loader bunu
         // Float/Double olarak okur, string kabul etmez; sayı olarak verilir.
         manifestPlaceholders["pulsarExtLib"] = 16
+    }
+
+    // İki paket (Mihon tr/tr18 deseninin video eşi). Aynı kod, aynı sürüm,
+    // aynı imza; yalnız applicationId, görünen ad ve nsfw bayrağı ayrı.
+    // Fabrika parser listesini BuildConfig.FLAVOR ile süzer.
+    flavorDimensions += "paket"
+    productFlavors {
+        create("standart") {
+            dimension = "paket"
+            applicationId = "eu.kanade.tachiyomi.animeextension.all.pulsarvideo"
+            manifestPlaceholders["pulsarNsfwInt"] = "0"
+            manifestPlaceholders["pulsarLabel"] = "Pulsar Video"
+        }
+        create("adult") {
+            dimension = "paket"
+            applicationId = "eu.kanade.tachiyomi.animeextension.all.pulsarvideo18"
+            manifestPlaceholders["pulsarNsfwInt"] = "1"
+            manifestPlaceholders["pulsarLabel"] = "Pulsar Video 18+"
+        }
+    }
+
+    buildFeatures {
+        // BuildConfig.FLAVOR fabrikada paket ayrımı için okunur.
+        buildConfig = true
     }
 
     buildTypes {

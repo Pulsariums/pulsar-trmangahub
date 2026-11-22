@@ -1,6 +1,7 @@
 //! `pulsar video-repo` — Aniyomi deposu (index + APK kopyası) üretimi.
 //!
-//! Girdi: `pulsar-video/extension/build/outputs/apk/release/*.apk` (ya da `--apk-dir`).
+//! Girdi: `pulsar-video/extension/build/outputs/apk/**/*.apk` (ya da `--apk-dir`;
+//! alt dizinler de taranır — `standart/release` + `adult/release`).
 //! Her APK'nın ikili `AndroidManifest.xml` (AXML) dosyası okunur; paket adı,
 //! versionName/versionCode, `tachiyomi.animeextension.*` meta verileri çıkarılır.
 //!
@@ -13,10 +14,15 @@
 //!   Aniyomi indeksi bu 8 anahtarla ayrıştırır. Kototoro eklenti listesini
 //!   `"${repo.baseUrl}/index.min.json"` adresinden bu biçimde çeker.
 //!   `sources` boş kalırsa Kototoro "0 etkin kaynak" gösterir ve kurulum
-//!   yapılmaz: kaynaklar `--catalogue` (varsayılan
-//!   `pulsar-video/data/video-catalogue.json`) dosyasından doldurulur.
-//!   Yalnız `config` nesnesi BOŞ OLMAYAN kayıtlar yazılır; DTO alanları
-//!   `{"name": <zorunlu>, "lang": <opsiyonel>}` — `id` yazılmaz.
+//!   yapılmaz. Kaynaklar paket türüne göre iki dosyadan doldurulur:
+//!   - `--sources` (varsayılan `pulsar-video/data/video-sources.json`):
+//!     kototoro-parsers enum'undan çıkarılmış `video` / `hentai_video` adları.
+//!   - `--catalogue` (varsayılan `pulsar-video/data/video-catalogue.json`):
+//!     yalnız `config` nesnesi BOŞ OLMAYAN, parser OLMAYAN kaynaklar; bunlar
+//!     iki pakette de bulunur (GogoAnime/AniWorld).
+//!   Normal paket (`nsfw=0`) = config + `video`; 18+ paket (`nsfw=1`) =
+//!   `hentai_video`. DTO alanları `{"name": <zorunlu>, "lang": <opsiyonel>}` —
+//!   `id` yazılmaz.
 //! - `repo.json` Kototoro `fetchRepoDetails`'ın İLK denediği adrestir ve gövdeyi
 //!   `RepoMetaWrapperDto` olarak ayrıştırır: {"index_v2": null, "meta": {name,
 //!   shortName, website, signingKeyFingerprint}}. Başarısız olursa `index.pb`ye
@@ -34,9 +40,10 @@ use sha2::{Digest, Sha256};
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
 
-const DEFAULT_APK_DIR: &str = "pulsar-video/extension/build/outputs/apk/release";
+const DEFAULT_APK_DIR: &str = "pulsar-video/extension/build/outputs/apk";
 const DEFAULT_OUT: &str = "pulsar-video/repo";
 const DEFAULT_CATALOGUE: &str = "pulsar-video/data/video-catalogue.json";
+const DEFAULT_SOURCES: &str = "pulsar-video/data/video-sources.json";
 
 /// Eklenti listesi (kök DİZİ). Kototoro/Aniyomi `"${repo.baseUrl}/index.min.json"`
 /// adresinden çeker.
@@ -114,10 +121,25 @@ fn name_from_package(pkg: &str) -> String {
         .to_string()
 }
 
+/// APK'ları alt dizinlerle birlikte toplar (flavor çıktıları
+/// `apk/standart/release` ve `apk/adult/release` altındadır).
+fn collect_apks(dir: &Path, out: &mut Vec<PathBuf>) -> std::io::Result<()> {
+    for entry in std::fs::read_dir(dir)? {
+        let path = entry?.path();
+        if path.is_dir() {
+            collect_apks(&path, out)?;
+        } else if path.extension().and_then(|x| x.to_str()) == Some("apk") {
+            out.push(path);
+        }
+    }
+    Ok(())
+}
+
 pub fn run(root: &Path, argv: &[String]) -> ExitCode {
     let mut apk_dir: Option<String> = None;
     let mut out: Option<String> = None;
     let mut catalogue: Option<String> = None;
+    let mut sources_file: Option<String> = None;
     let mut dry = false;
     let mut i = 0;
     while i < argv.len() {
@@ -138,6 +160,16 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
                     Some(v) => catalogue = Some(v.clone()),
                     None => {
                         eprintln!("HATA: --catalogue için dosya yolu gerekli");
+                        return ExitCode::from(64);
+                    }
+                }
+            }
+            "--sources" => {
+                i += 1;
+                match argv.get(i) {
+                    Some(v) => sources_file = Some(v.clone()),
+                    None => {
+                        eprintln!("HATA: --sources için dosya yolu gerekli");
                         return ExitCode::from(64);
                     }
                 }
@@ -164,18 +196,13 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
     let apk_dir = root.join(apk_dir.unwrap_or_else(|| DEFAULT_APK_DIR.to_string()));
     let out = root.join(out.unwrap_or_else(|| DEFAULT_OUT.to_string()));
     let catalogue = root.join(catalogue.unwrap_or_else(|| DEFAULT_CATALOGUE.to_string()));
+    let sources_file = root.join(sources_file.unwrap_or_else(|| DEFAULT_SOURCES.to_string()));
 
-    let mut apks: Vec<PathBuf> = match std::fs::read_dir(&apk_dir) {
-        Ok(rd) => rd
-            .filter_map(|e| e.ok())
-            .map(|e| e.path())
-            .filter(|p| p.extension().and_then(|x| x.to_str()) == Some("apk"))
-            .collect(),
-        Err(e) => {
-            eprintln!("HATA: APK dizini okunamadı ({}): {e}", apk_dir.display());
-            return ExitCode::FAILURE;
-        }
-    };
+    let mut apks: Vec<PathBuf> = Vec::new();
+    if let Err(e) = collect_apks(&apk_dir, &mut apks) {
+        eprintln!("HATA: APK dizini okunamadı ({}): {e}", apk_dir.display());
+        return ExitCode::FAILURE;
+    }
     apks.sort();
     if apks.is_empty() {
         eprintln!("HATA: {} içinde APK yok", apk_dir.display());
@@ -218,22 +245,40 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
     infos.sort_by(|a, b| a.package.cmp(&b.package));
 
     // `sources` indeksten gelir; boş dizi Kototoro'da "0 etkin kaynak" demektir.
-    let sources = match load_catalogue_sources(&catalogue) {
+    // Config kaynakları (GogoAnime/AniWorld) iki pakette de bulunur.
+    let config_sources = match load_catalogue_sources(&catalogue) {
         Ok(s) => s,
         Err(e) => {
             eprintln!("HATA: katalog okunamadı ({}): {e}", catalogue.display());
             return ExitCode::FAILURE;
         }
     };
+    let (video_sources, hentai_sources) = match load_parser_sources(&sources_file) {
+        Ok(s) => s,
+        Err(e) => {
+            eprintln!("HATA: kaynak listesi okunamadı ({}): {e}", sources_file.display());
+            return ExitCode::FAILURE;
+        }
+    };
     println!(
-        "[kaynak] {} kaynak (katalog: {})",
-        sources.len(),
-        catalogue.display()
+        "[kaynak] config={} video={} hentai_video={} (katalog: {}, parser: {})",
+        config_sources.len(),
+        video_sources.len(),
+        hentai_sources.len(),
+        catalogue.display(),
+        sources_file.display()
     );
 
     let entries: Vec<Value> = infos
         .iter()
         .map(|info| {
+            let sources = if info.nsfw == 1 {
+                hentai_sources.clone()
+            } else {
+                let mut list = config_sources.clone();
+                list.extend(video_sources.iter().cloned());
+                list
+            };
             json!({
                 "name": info.name,
                 "pkg": info.package,
@@ -242,7 +287,7 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
                 "code": info.version_code,
                 "version": info.version_name,
                 "nsfw": info.nsfw,
-                "sources": sources.clone(),
+                "sources": sources,
             })
         })
         .collect();
@@ -349,12 +394,12 @@ pub fn run(root: &Path, argv: &[String]) -> ExitCode {
     ExitCode::SUCCESS
 }
 
-/// Katalogdan indekse yazılacak `sources` DTO'larını üretir.
+/// Katalogdan **config tabanlı** `sources` DTO'larını üretir (iki pakette de).
 ///
-/// Kural: `config` nesnesi **boş olmayan** kayıtlar alınır. `config` boş/eksik
-/// kayıt ölçülmemiş demektir; eklentide çalışmaz, sayıyı da şişirir.
-/// Kototoro `ExtensionIndexDto.toAvailableExtension` alanları `name` ve `lang`
-/// üzerinden okur (`sourceNames`, `declaredLanguages`); `id` yazılmaz.
+/// Kural: parser OLMAYAN ve `config` nesnesi **boş olmayan** kayıtlar alınır.
+/// `config` boş/eksik kayıt ölçülmemiş demektir; eklentide çalışmaz, sayıyı da
+/// şişirir. Parser kaynakları `video-sources.json`'dan gelir; burada tekrar
+/// yazılmaz (aksi hâlde 18+ pakete sızarlar).
 fn load_catalogue_sources(path: &Path) -> Result<Vec<Value>, String> {
     let text = match std::fs::read_to_string(path) {
         Ok(t) => t,
@@ -375,6 +420,9 @@ fn load_catalogue_sources(path: &Path) -> Result<Vec<Value>, String> {
 
     let mut out = Vec::new();
     for rec in records {
+        if rec.get("engine").and_then(Value::as_str) == Some("parser") {
+            continue;
+        }
         let config_nonempty = rec
             .get("config")
             .and_then(Value::as_object)
@@ -400,6 +448,62 @@ fn load_catalogue_sources(path: &Path) -> Result<Vec<Value>, String> {
         out.push(Value::Object(src));
     }
     Ok(out)
+}
+
+/// `video-sources.json`'dan `(video, hentai_video)` DTO listelerini üretir.
+///
+/// Dosya yoksa iki liste de boş döner (uydurma yok); bozuk JSON hata sayılır.
+/// Öğeler `{"name","lang"}` nesnesi ya da düz ad string'i olabilir.
+fn load_parser_sources(path: &Path) -> Result<(Vec<Value>, Vec<Value>), String> {
+    let text = match std::fs::read_to_string(path) {
+        Ok(t) => t,
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound => {
+            eprintln!(
+                "UYARI: parser kaynak listesi yok ({}); parser sources boş yazılacak",
+                path.display()
+            );
+            return Ok((Vec::new(), Vec::new()));
+        }
+        Err(e) => return Err(format!("okunamadı: {e}")),
+    };
+    let doc: Value = serde_json::from_str(&text).map_err(|e| format!("geçersiz JSON: {e}"))?;
+    Ok((
+        parse_source_list(doc.get("video")),
+        parse_source_list(doc.get("hentai_video")),
+    ))
+}
+
+fn parse_source_list(value: Option<&Value>) -> Vec<Value> {
+    let Some(items) = value.and_then(Value::as_array) else {
+        return Vec::new();
+    };
+    let mut out = Vec::new();
+    for item in items {
+        let mut src = serde_json::Map::new();
+        match item {
+            Value::String(name) if !name.is_empty() => {
+                src.insert("name".to_string(), Value::String(name.clone()));
+            }
+            Value::Object(obj) => {
+                let Some(name) = obj.get("name").and_then(Value::as_str) else {
+                    eprintln!("UYARI: parser kaynağında name yok, atlandı");
+                    continue;
+                };
+                if name.is_empty() {
+                    continue;
+                }
+                src.insert("name".to_string(), Value::String(name.to_string()));
+                if let Some(lang) = obj.get("lang").and_then(Value::as_str) {
+                    if !lang.is_empty() {
+                        src.insert("lang".to_string(), Value::String(lang.to_string()));
+                    }
+                }
+            }
+            _ => continue,
+        }
+        out.push(Value::Object(src));
+    }
+    out
 }
 
 fn inspect_apk(path: &Path) -> Result<ApkInfo, String> {

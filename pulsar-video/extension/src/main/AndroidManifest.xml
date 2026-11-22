@@ -9,7 +9,7 @@
 
     <application
         android:allowBackup="false"
-        android:label="Pulsar Video">
+        android:label="${pulsarLabel}">
 
         <!-- ZORUNLU: yükleyici bu sınıfı no-arg kurucu ile örnekler, sonra
              `as? AnimeSource` / `as? AnimeSourceFactory` yapar. Bu yüzden
@@ -23,13 +23,13 @@
 
         <meta-data
             android:name="tachiyomi.animeextension.nsfw"
-            android:value="0" />
+            android:value="${pulsarNsfwInt}" />
 
         <!-- Görünen ad ve ABI sürümü (Aniyomi manifest anahtarları).
              extensionLib sayı olarak verilir; yükleyici Float/Double bekler. -->
         <meta-data
             android:name="aniyomix.name"
-            android:value="Pulsar Video" />
+            android:value="${pulsarLabel}" />
 
         <meta-data
             android:name="aniyomix.extensionLib"

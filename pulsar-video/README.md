@@ -3,6 +3,9 @@
 Manga paketlerinden bağımsız, **Aniyomi formatında** ayrı bir eklenti. Kototoro ve Aniyomi,
 `tachiyomi.animeextension` feature'ı olan APK'ları yükler
 (`AniyomiExtensionLoader.kt`: feature `tachiyomi.animeextension`, anahtarlar `.class`, `.factory`, `.nsfw`).
+Aynı kod tabanı iki pakete ayrılır: **Pulsar Video** (normal) ve **Pulsar Video 18+** (hentai).
+Fabrika parser kaynaklarını `ContentType` alanına göre süzer; config tabanlı kaynaklar (GogoAnime,
+AniWorld) iki pakette de bulunur.
 
 ## Kurulum (Kototoro / Aniyomi)
 
@@ -19,9 +22,10 @@ Depoda iki dosya var:
 - `repo.json` — metadata; Kototoro depo eklerken **önce** bunu çeker ve
   `{index_v2, meta:{name, shortName, website, signingKeyFingerprint}}` şemasını arar
   (`ExtensionRepoService.kt:182-201`). Yanlış biçimde 404/`index.pb` yoluna düşer.
-- `index.min.json` — eklenti dizisi (`name, pkg, apk, lang, code, version, nsfw, sources[]`).
-  `sources` alanı `data/video-catalogue.json`'daki config'i dolu kayıtlardan üretilir; boş kalırsa
-  Kototoro "0 kaynak" gösterir ve kuruluma geçmez.
+- `index.min.json` — eklenti dizisi (`name, pkg, apk, lang, code, version, nsfw, sources[]`), **iki kayıt**.
+  `sources` alanı `data/video-sources.json`'daki parser adlarından (`video` / `hentai_video`) ve
+  `data/video-catalogue.json`'daki config'i dolu kayıtlardan üretilir; boş kalırsa Kototoro
+  "0 kaynak" gösterir ve kuruluma geçmez.
 
 Sürüm kuralı: `versionName = <lib>.<yama>`. Kototoro lib aralığı **12–16**
 (`AniyomiExtensionLoader.LIB_VERSION_MIN/MAX`; sürümü `versionName.substringBefore('.')` ile okur),
@@ -42,10 +46,17 @@ Harici Aniyomi depoları:
 - `https://raw.githubusercontent.com/yuzono/anime-repo/repo/index.min.json` (248 eklenti)
 - `https://raw.githubusercontent.com/aniyomiorg/aniyomi-extensions/repo/index.min.json` (3 eklenti)
 
-Çıktılar: `repo/index.min.json` **yalnız** kendi eklentimizi taşır (göreli `apk` + 42 `sources`);
+Çıktılar: `repo/index.min.json` **yalnız** kendi eklentimizi taşır (göreli `apk` + pakete göre 17/25 `sources`);
 `cs/repo.json` + `cs/plugins.json` CloudStream birleşimi (`url` mutlak); `jar/index.min.json`
 (`apk` = `plugin.jar`, göreli) + indirilmiş `jar/apk/plugin.jar`; `mega-report.json` harici/atlanan
 kayıtları "harici depo olarak eklenmeli" diye işaretler.
+
+## Paketler
+
+| Paket | applicationId | nsfw | Kaynaklar |
+|---|---|---|---|
+| **Pulsar Video** | `eu.kanade.tachiyomi.animeextension.all.pulsarvideo` | `0` | `ContentType.VIDEO` parser'ları + config (GogoAnime/AniWorld) — 17 |
+| **Pulsar Video 18+** | `eu.kanade.tachiyomi.animeextension.all.pulsarvideo18` | `1` | yalnız `ContentType.HENTAI_VIDEO` parser'ları — 25 |
 
 ## Kaynak durumu (2026-11-21)
 
