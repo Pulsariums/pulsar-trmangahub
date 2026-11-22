@@ -297,7 +297,7 @@ class PulsarKotatsuVideoSource(
             .build()
         val trust = defaultTrustManager() ?: return base
         val fragmenting = base.newBuilder()
-            .sslSocketFactory(TlsFragmentingSocketFactory(1), trust)
+            .sslSocketFactory(TlsFragmentingSocketFactory(), trust)
             .build()
         return base.newBuilder()
             .addInterceptor(PulsarVideoSource.TlsRetryInterceptor(fragmenting))

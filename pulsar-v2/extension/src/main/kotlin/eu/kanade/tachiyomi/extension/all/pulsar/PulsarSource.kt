@@ -68,11 +68,20 @@ class PulsarSource(
         if (dohUrl.equals("off", ignoreCase = true)) {
             null
         } else {
+            // DohFallbackDns uca cloudflare/dns.google/quad9 yedeklerini kendisi ekler.
             dohUrl.ifBlank { "https://cloudflare-dns.com/dns-query" }
         }
     // SNI/DPI atlatma: TLS ClientHello'yu parcalayarak gonder (VPN degil).
     private val tlsFragment: Boolean = config.optBoolean("tlsFragment", false)
-    private val tlsFragmentSize: Int = config.optInt("tlsFragmentSize", 1).coerceIn(1, 64)
+    // Parca boyutlari ("1,2" gibi virgullu liste; en fazla 4 parca, 1-64 bayt).
+    // BILINCLI DAVRANIS DEGISIKLIGI: tlsFragmentSizes yoksa varsayilan [1,2]'dir;
+    // tek baytlik bolme bazi ara katmanlarda yeniden birlestiriliyordu.
+    private val tlsFragmentSizes: IntArray =
+        TlsFragmentingSocketFactory.parseFragmentSizes(config.optString("tlsFragmentSizes", ""))
+    // Parcalar arasi taban gecikme (ms); 0 gecikmeyi kapatir.
+    private val tlsFragmentDelay: Int = config
+        .optInt("tlsFragmentDelay", TlsFragmentingSocketFactory.DEFAULT_FRAGMENT_DELAY_MS)
+        .coerceIn(0, 100)
 
     private fun proxyFromConfig(): Proxy? {
         if (proxyUrl.isBlank()) return null
@@ -98,14 +107,16 @@ class PulsarSource(
 
     /**
      * Once sistem DNS'i denenir (ek gecikme yok); cozulemezse sorgu DoH ile
-     * tekrarlanir ve sonuc surec omru boyunca bellekte tutulur. DoH da
+     * tekrarlanir. Uclar sirayla denenir (ayarli uc varsa o, sonra cloudflare,
+     * dns.google, quad9); basarili sonuc 10 dk bellekte tutulur. DoH da
      * basarisizsa ozgun UnknownHostException firlatilir; boylece cagiran
      * tarafin hata davranisi degismez.
      *
      * Ayarli DoH kullanan kaynaklar da bu siniftan gecer: tek kod yolu.
      */
-    private class DohFallbackDns(private val endpoint: String) : Dns {
+    private class DohFallbackDns(configuredEndpoint: String? = null) : Dns {
         private val bootstrap = OkHttpClient()
+        private val endpoints: List<String> = buildEndpoints(configuredEndpoint)
 
         override fun lookup(hostname: String): List<InetAddress> {
             if (hostname == "localhost") return Dns.SYSTEM.lookup(hostname)
@@ -118,36 +129,86 @@ class PulsarSource(
                 systemFailure = e
             }
 
-            // Ayni host icin basarili DoH sonucu surec omru boyunca gecerlidir.
-            CACHE[hostname]?.let { return it }
+            // Basarili DoH sonucu 10 dk gecerlidir (TTL).
+            CACHE[hostname]?.let { entry ->
+                if (entry.expiresAt > System.currentTimeMillis()) return entry.addresses
+                CACHE.remove(hostname)
+            }
 
             val resolved = lookupDoh(hostname)
             if (resolved.isNotEmpty()) {
-                CACHE[hostname] = resolved
+                CACHE[hostname] = CacheEntry(resolved, System.currentTimeMillis() + CACHE_TTL_MS)
                 return resolved
             }
             // DoH da cozemedi: sistemin ozgun hatasini koru (bos sonucta uret).
             throw systemFailure ?: UnknownHostException(hostname)
         }
 
-        /** DoH JSON yanitindan A kayitlarini okur; herhangi bir hata bos listedir. */
-        private fun lookupDoh(hostname: String): List<InetAddress> = try {
+        /**
+         * Uclari sirayla dener. Yanit basarisiz (HTTP 4xx/5xx), Status != 0
+         * veya A kaydi yoksa sonraki uca gecilir; hepsi basarisizsa bos liste.
+         */
+        private fun lookupDoh(hostname: String): List<InetAddress> {
+            for (endpoint in endpoints) {
+                val result = queryEndpoint(endpoint, hostname)
+                if (result.isNotEmpty()) return result
+            }
+            return emptyList()
+        }
+
+        private fun queryEndpoint(endpoint: String, hostname: String): List<InetAddress> = try {
             val url = endpoint.trimEnd('/') + "?name=" + hostname + "&type=A"
             val req = Request.Builder().url(url).header("Accept", "application/dns-json").build()
             bootstrap.newCall(req).execute().use { resp ->
-                val body = resp.body?.string().orEmpty()
-                Regex("\"data\"\\s*:\\s*\"([0-9.]+)\"")
-                    .findAll(body)
-                    .mapNotNull { m -> runCatching { InetAddress.getByName(m.groupValues[1]) }.getOrNull() }
-                    .toList()
+                if (!resp.isSuccessful) {
+                    emptyList()
+                } else {
+                    val body = resp.body?.string().orEmpty()
+                    val status = STATUS.find(body)?.groupValues?.get(1)?.toIntOrNull()
+                    // dns-json sozlesmesi: Status==0 basarili; alan yoksa govdeye guven.
+                    if (status != null && status != 0) {
+                        emptyList()
+                    } else {
+                        A_RECORD.findAll(body)
+                            .mapNotNull { m ->
+                                runCatching { InetAddress.getByName(m.groupValues[1]) }
+                                    .getOrNull()
+                            }
+                            .filterIsInstance<java.net.Inet4Address>()
+                            .toList()
+                    }
+                }
             }
         } catch (_: Exception) {
             emptyList()
         }
 
+        private data class CacheEntry(val addresses: List<InetAddress>, val expiresAt: Long)
+
         private companion object {
+            const val CACHE_TTL_MS = 10L * 60L * 1000L
+            const val DEFAULT_CLOUDFLARE = "https://cloudflare-dns.com/dns-query"
+
+            /** Siralama: ayarli uc (varsa), sonra cloudflare -> google -> quad9. */
+            val DEFAULT_ENDPOINTS = listOf(
+                DEFAULT_CLOUDFLARE,
+                "https://dns.google/resolve",
+                "https://dns.quad9.net:5053/dns-query",
+            )
+
+            fun buildEndpoints(configured: String?): List<String> {
+                val list = ArrayList<String>()
+                val configuredTrimmed = configured?.trim().orEmpty()
+                if (configuredTrimmed.isNotEmpty()) list.add(configuredTrimmed)
+                list.addAll(DEFAULT_ENDPOINTS)
+                return list.distinct()
+            }
+
+            val A_RECORD = Regex("\"data\"\\s*:\\s*\"([0-9.]+)\"")
+            val STATUS = Regex("\"Status\"\\s*:\\s*(\\d+)")
+
             // Bellek ici onbellek: surec (eklenti sinif yukleyici) omru boyunca yasar.
-            val CACHE = ConcurrentHashMap<String, List<InetAddress>>()
+            val CACHE = ConcurrentHashMap<String, CacheEntry>()
         }
     }
 
@@ -173,7 +234,7 @@ class PulsarSource(
                 if (tlsFragment) {
                     // DPI SNI'ya bakip baglantiyi kesiyorsa ClientHello'yu bol.
                     defaultTrustManager()?.let { tm ->
-                        sslSocketFactory(TlsFragmentingSocketFactory(tlsFragmentSize), tm)
+                        sslSocketFactory(TlsFragmentingSocketFactory(tlsFragmentSizes, tlsFragmentDelay), tm)
                     }
                 }
             }
@@ -211,7 +272,7 @@ class PulsarSource(
         baseClient.newBuilder()
             .apply {
                 defaultTrustManager()?.let { tm ->
-                    sslSocketFactory(TlsFragmentingSocketFactory(tlsFragmentSize), tm)
+                    sslSocketFactory(TlsFragmentingSocketFactory(tlsFragmentSizes, tlsFragmentDelay), tm)
                 }
             }
             .build()
@@ -239,16 +300,26 @@ class PulsarSource(
     private class TlsRetryInterceptor(private val fragmentClient: OkHttpClient) : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
             val request = chain.request()
+            // Bu istek zaten parcali denemeyle gonderildiyse tekrar etme.
+            if (request.header(RETRY_HEADER) != null) return chain.proceed(request)
+
+            val retry = request.newBuilder()
+                .header(RETRY_HEADER, "1")
+                .build()
+            val host = request.url.host
+
+            // Bu host son 30 dk icinde TLS'te sifirlandiysa duz denemeyi atla:
+            // her istekte iki deneme yapmak gecikme ve yuk getiriyordu.
+            if (TlsFragmentSticky.isSticky(host)) {
+                return fragmentClient.newCall(retry).execute()
+            }
+
             try {
                 return chain.proceed(request)
             } catch (e: IOException) {
                 // Yalniz TLS/SNI kaynakli resetlerde yedege gec.
                 if (!isTlsReset(e)) throw e
-                // Bu istek zaten parcali denemeyle gonderildiyse tekrar etme.
-                if (request.header(RETRY_HEADER) != null) throw e
-                val retry = request.newBuilder()
-                    .header(RETRY_HEADER, "1")
-                    .build()
+                TlsFragmentSticky.mark(host)
                 return fragmentClient.newCall(retry).execute()
             }
         }
