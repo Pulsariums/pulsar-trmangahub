@@ -18,6 +18,9 @@ android {
         // Aniyomi/Kototoro: versionName "<extLib>.<patch>" kontratı.
         versionCode = (project.findProperty("pulsarVersionCode") as String? ?: "3").toInt()
         versionName = project.findProperty("pulsarVersionName") as String? ?: "16.1"
+        // `aniyomix.extensionLib` = Aniyomi eklenti ABI sürümü. Loader bunu
+        // Float/Double olarak okur, string kabul etmez; sayı olarak verilir.
+        manifestPlaceholders["pulsarExtLib"] = 16
     }
 
     buildTypes {
