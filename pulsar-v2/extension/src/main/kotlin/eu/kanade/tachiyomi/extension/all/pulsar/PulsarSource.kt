@@ -429,6 +429,10 @@ class PulsarSource(
             ?: return MangasPage(emptyList(), hasNextPage = false)
         val urlKey = config.optString("searchJsonUrl", "url")
         val titleKey = config.optString("searchJsonTitle", "title")
+        // Kapak: searchJsonCover boşsa listJsonCover'a düş (aynı sitede liste ve
+        // arama aynı JSON şemasını kullanıyor). İkisi de boşsa kapak null kalır.
+        val coverKey = config.optString("searchJsonCover", "")
+            .ifBlank { config.optString("listJsonCover", "") }
         val mangas = (0 until arr.length()).mapNotNull { i ->
             val o = arr.optJSONObject(i) ?: return@mapNotNull null
             val raw = jsonField(o, urlKey).trim()
@@ -442,6 +446,7 @@ class PulsarSource(
             SManga.create().apply {
                 url = relativize(u)
                 title = jsonField(o, titleKey).trim()
+                thumbnail_url = if (coverKey.isBlank()) null else realImageUrl(jsonField(o, coverKey))
             }
         }
         return MangasPage(mangas, hasNextPage = false)
