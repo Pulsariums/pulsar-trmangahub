@@ -100,5 +100,12 @@ yani ölçülmemiş kaynak kullanıcıya görünmez.
 - AES-128 HLS: anahtar ucu ayrı istek ister; motor desteği eklenmeli.
 - Embed çözücüler site başına değişir; obfuscated player'larda `hosterExtractor` (Kototoro'nun gömülü
   CloudStream çözücüleri) gerekir — stok Aniyomi'de bu sınıflar yoktur.
-- Bu ağda HLS/SNI engeli yaygın; manga motorundaki otomatik DoH + TLS parçalama yedeği video sınıfında
-  henüz yok (yalnız config ile `dnsOverHttps`/`tlsFragment` açılabiliyor).
+- Bu ağda HLS/SNI engeli yaygın. Video sınıfı manga motoruyla aynı katmanları uygular:
+  **sistem DNS'i → DoH yedeği** (çözülemezse), **TLS reset/trust-anchor yakalayan interceptor**
+  (istek parçalı ClientHello ile bir kez tekrarlanır) ve **boş sonuç yedeği** (engel sayfası
+  200 dönerse aynı çağrı DoH-öncelikli istemciyle tekrarlanır). `dnsOverHttps`/`tlsFragment`
+  config alanları tek tek de açılabilir.
+- **Kapak ve video oynatma** uygulamanın kendi istemcisinden geçer; eklentinin DoH/TLS katmanı
+  bu isteklere uygulanmaz. Görsel/akış sunucusu SNI ile engelliyse kapak ve oynatma cihaz
+  tarafında düşer — kaynak listesi/ayrıntısı çalışsa bile (2026-11-23 cihaz testi: Jable,
+  HohoJ, 黄果短剧).
