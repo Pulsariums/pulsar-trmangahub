@@ -228,12 +228,22 @@ class PulsarKotatsuVideoSource(
         page: Int,
         query: String,
         filters: AnimeFilterList,
-    ): AnimesPage = if (query.isBlank()) {
-        AnimesPage(emptyList(), false)
-    } else {
+    ): AnimesPage {
+        if (query.isBlank()) return AnimesPage(emptyList(), false)
         // Aramayi desteklemeyen parser istisna atar; bos sonuca cevrilir.
-        runCatching { list(page, SortOrder.RELEVANCE, query) }
-            .getOrElse { AnimesPage(emptyList(), false) }
+        val direct = runCatching { list(page, SortOrder.RELEVANCE, query) }.getOrNull()
+        if (direct != null && direct.animes.isNotEmpty()) return direct
+        // Parser aramayi desteklemiyorsa ya da sorguyu yok sayip bos donduruyorsa:
+        // populer listeyi cekip baslikta yerel filtre uygula. Kototoro'nun kaynak
+        // testi aramayi zorunlu adim sayiyor; bu yedek olmadan kaynak "Arama:
+        // sonuc yok" ile tumden dusuyordu (cihaz raporu 2026-11-23).
+        val popular = runCatching { list(page, SortOrder.POPULARITY) }.getOrNull()
+            ?: return AnimesPage(emptyList(), false)
+        val needle = query.trim().lowercase()
+        val matches = popular.animes.filter { it.title.lowercase().contains(needle) }
+        // Yerel filtre tek sayfalik: hasNextPage=false, yoksa uygulama ayni
+        // populer sayfayi tekrar tekrar ister.
+        return AnimesPage(matches, false)
     }
 
     // ---- Detay / bölümler --------------------------------------------------

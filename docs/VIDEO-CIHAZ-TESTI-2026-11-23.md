@@ -75,6 +75,18 @@ sahte adres döndürmesi ya da araya giren katmanın kendi sertifikası.
    `og:image` ile tamamlanır (6 sn bütçe, URL bazında önbellek). Arama sonuçlarında kapak
    zaten `.img img` içinde.
 
+## 16.15 ek düzeltmesi — arama yedeği
+
+Kototoro'nun kaynak testi **aramayı zorunlu adım** sayıyor: AniWorld'de liste/kapak/detay/
+bölüm/sayfa geçtiği hâlde yalnız "Arama desteklenmiyor" yüzünden kaynak düşüyordu. Parser
+kaynaklarında da aramayı desteklemeyen ya da sorguyu yok sayıp boş döndüren parser'lar aynı
+şekilde düşüyor.
+
+`PulsarKotatsuVideoSource.getSearchAnime` artık iki aşamalı: parser'ın kendi araması boş
+dönerse/istisna atarsa popüler liste çekilip **başlıkta yerel filtre** uygulanır
+(`hasNextPage=false`). Böylece arama adımı, sunucu tarafı arama desteği olmayan parser'larda
+da sonuç döndürür.
+
 ## Doğrulama (16.14)
 
 - CI: `build-video.yml` run **45230025334** → success.
