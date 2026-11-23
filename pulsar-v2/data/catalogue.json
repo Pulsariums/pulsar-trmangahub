@@ -6207,7 +6207,7 @@
         "listPath": "/",
         "itemSelector": "a.image",
         "chapterSelector": "ul.series-action-btn.display-flex.flex-direction-column.justify-content-start > li.item",
-        "readerSelector": ""
+        "readerSelector": "img.chapter_img"
       },
       "selector_verified": true,
       "origins": [
@@ -18192,7 +18192,7 @@
       "baseUrl": "https://readmanga18.com",
       "engine": "custom",
       "config": {
-        "listPath": "/",
+        "listPath": "/manga/",
         "itemSelector": "div.manga-item",
         "chapterSelector": "div.chapter-item",
         "readerSelector": "div.read-content img",

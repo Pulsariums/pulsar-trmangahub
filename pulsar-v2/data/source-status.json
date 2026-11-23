@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T21:28:22Z",
+  "generated": "2026-11-23T19:21:35Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -170,26 +170,6 @@
         "detail": "",
         "at": "2026-11-20T20:54:48Z"
       }
-    },
-    "1079335891060482737": {
-      "id": 1079335891060482737,
-      "kind": "catalogue",
-      "title": "Hanman18",
-      "lang": "zh",
-      "nsfw": 1,
-      "domain": "hanman18.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "pages: IOException: Unable to resolve host \"azmin.manga18.club\": No address associated with hostname",
-        "at": "2026-11-17T08:34:35Z"
-      },
-      "device_step": "pages",
-      "reason": "PAGE_SCRIPT: Bolum gorselleri inline scriptte atob(slides_p_path[...]) ile base64 cozuluyor",
-      "unreachable": true
     },
     "1084418383174697768": {
       "id": 1084418383174697768,
@@ -2543,8 +2523,7 @@
         "detail": "tarama: liste 0 / bolum 0 / sayfa 0 — pop?ler liste bo?",
         "at": "2026-11-21T21:28:11Z"
       },
-      "reason": "",
-      "sorun": ""
+      "reason": "SERBEST: Seri detayi /webtoon/{slug}/, bolum /chapter/{slug}/; bolum sayfasinda okuyucu gorseli yok, 4 img site varligi."
     },
     "1376968403079460822": {
       "id": 1376968403079460822,
@@ -2686,8 +2665,7 @@
         "detail": "",
         "at": "2026-11-21T21:28:11Z"
       },
-      "reason": "",
-      "sorun": ""
+      "reason": "JS_RENDER: api.remanga.org/api/titles 404, /api/v1/titles 404, remanga.org/api/search 404, RSC 307; denenen uclar sonucsuz"
     },
     "1377020372809438008": {
       "id": 1377020372809438008,
@@ -5364,8 +5342,7 @@
         "detail": "tarama: liste 20 / bolum 0 / sayfa 0 — b?l?m listesi bo?",
         "at": "2026-11-21T21:28:11Z"
       },
-      "sorun": "",
-      "reason": ""
+      "sorun": "login"
     },
     "1854510220106965266": {
       "id": 1854510220106965266,
@@ -6204,8 +6181,7 @@
         "at": "2026-11-21T21:28:11Z"
       },
       "device_step": "search",
-      "reason": "",
-      "sorun": ""
+      "reason": "SERBEST: Bölüm listesi şablonda Blogger label feed ile JS çekiliyor (label adı doğrulanamadı), bölüm görselleri HTML içinde 25 adet."
     },
     "2121025303286850185": {
       "id": 2121025303286850185,
@@ -9177,8 +9153,7 @@
         "detail": "",
         "at": "2026-11-21T21:28:11Z"
       },
-      "reason": "",
-      "sorun": ""
+      "reason": "JS_RENDER: Bolum listesi ve sayfalar jQuery ajax (/admin-ajax) ile geliyor; HTML'de gorsel yok."
     },
     "2450931751361286841": {
       "id": 2450931751361286841,
@@ -15051,23 +15026,6 @@
         "at": "2026-11-17T10:02:04Z"
       }
     },
-    "3864261013583477357": {
-      "id": 3864261013583477357,
-      "kind": "catalogue",
-      "title": "Say Hentai",
-      "lang": "vi",
-      "nsfw": 1,
-      "domain": "sayhentaii.art",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "retest: liste 0 / bölüm 0 / sayfa 0",
-        "at": "2026-11-20T21:52:40Z"
-      }
-    },
     "386746428516970468": {
       "id": 386746428516970468,
       "kind": "catalogue",
@@ -17218,8 +17176,7 @@
         "detail": "",
         "at": "2026-11-21T21:28:11Z"
       },
-      "reason": "",
-      "sorun": ""
+      "reason": "JS_RENDER: mangabats.com -> www.mangabats.com; kart bloklari var ama seri href'i yok (yalniz /history, /images), liste JS ile doluyor."
     },
     "4118551129163381075": {
       "id": 4118551129163381075,
@@ -19352,9 +19309,8 @@
         "detail": "tarama: liste 0 / bolum 0 / sayfa 0 — UnknownHostException: Bilinen b?yle bir ana bilgisayar yok (mugimanga.com)",
         "at": "2026-11-21T21:28:11Z"
       },
-      "reason": "",
-      "unreachable": true,
-      "sorun": ""
+      "reason": "SERBEST: Site giriş zorunlu (title: Giriş Gerekli); REST türlerinde manga/series CPT yok, yalnız post/page açık.",
+      "unreachable": true
     },
     "4250602956249399538": {
       "id": 4250602956249399538,
@@ -21571,25 +21527,6 @@
       },
       "dead": true
     },
-    "4543072178093183112": {
-      "id": 4543072178093183112,
-      "kind": "catalogue",
-      "title": "Реманга",
-      "lang": "ru",
-      "nsfw": 0,
-      "domain": "remanga.org",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: popüler liste boş",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "list",
-      "reason": "JS_RENDER: api.remanga.org/api/titles 404, /api/v1/titles 404, remanga.org/api/search 404, RSC 307; denenen uclar sonucsuz"
-    },
     "4550544076198380891": {
       "id": 4550544076198380891,
       "kind": "engine",
@@ -21874,23 +21811,6 @@
         "ms": 0,
         "detail": "",
         "at": "2026-11-20T20:54:48Z"
-      }
-    },
-    "4587021830589594478": {
-      "id": 4587021830589594478,
-      "kind": "catalogue",
-      "title": "HentaiUkr",
-      "lang": "uk",
-      "nsfw": 1,
-      "domain": "hentaiukr.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "retest: liste 60 / bölüm 1 / sayfa 0",
-        "at": "2026-11-20T21:52:40Z"
       }
     },
     "4594533042031966534": {
@@ -22467,8 +22387,7 @@
         "detail": "tarama: liste 42 / bolum 381 / sayfa 0 — hata yok",
         "at": "2026-11-21T21:28:11Z"
       },
-      "reason": "",
-      "sorun": ""
+      "reason": "JS_RENDER: Tema 'liliana' kendi crypto.js'ini yukluyor ve kart icerigi JS ile cozuluyor; all-manga sayfasinda seri href'i yok, denenen: /all-manga/1 HTML, inline JSON, /api/ izi."
     },
     "4762073486097970610": {
       "id": 4762073486097970610,
@@ -24054,10 +23973,8 @@
       "lang": "en",
       "nsfw": 0,
       "domain": "comichubfree.com",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -24066,12 +23983,13 @@
         "at": "2026-11-17T19:55:06Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T19:55:06Z"
-      }
+        "detail": "ilk sayfa 200 image/jpeg ama 80x104 PNG yer tutucu (2.4KB); baska seride gorsel 404 text/html",
+        "at": "2026-11-23T19:21:31Z"
+      },
+      "reason": "MEDYA: site görselleri yer tutucu/404 (2026-11-23)"
     },
     "5375533859116180188": {
       "id": 5375533859116180188,
@@ -25453,8 +25371,7 @@
         "at": "2026-11-21T21:28:11Z"
       },
       "device_step": "pages",
-      "reason": "",
-      "sorun": ""
+      "reason": "PAGE_SCRIPT: Bolum gorselleri inline scriptte atob(slides_p_path[...]) ile base64 cozuluyor"
     },
     "5785631191583536485": {
       "id": 5785631191583536485,
@@ -25927,8 +25844,7 @@
         "detail": "tarama: liste 20 / bolum 8 / sayfa 0 — hata yok",
         "at": "2026-11-21T21:28:11Z"
       },
-      "reason": "",
-      "sorun": ""
+      "reason": "LISTE_DUZELT: Detay ve bolum istekleri iki denemede 25s zaman asimina ugradi, bolum secici olculemedi."
     },
     "5788353350203111296": {
       "id": 5788353350203111296,
@@ -26164,8 +26080,7 @@
         "detail": "tarama: liste 0 / bolum 0 / sayfa 0 — HttpStatusException: . Status=405, URL=[https://luxmanga.net/wp-admin/admin-ajax.php]",
         "at": "2026-11-21T21:28:11Z"
       },
-      "reason": "",
-      "sorun": ""
+      "reason": "JS_RENDER: Vite SPA; /assets/api-QA2PVF0c.js icinde /works/{slug} var ama /works/, /api/works/, api.luxmanga.net/api/works, /v1/works hepsi 404; gorsel ucu bulunamadi."
     },
     "5789618909581566450": {
       "id": 5789618909581566450,
@@ -27772,8 +27687,7 @@
         "detail": "tarama: liste 0 / bolum 0 / sayfa 0 — NotFoundException: . Status=404, URL=[https://woopread.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-21T21:28:11Z"
       },
-      "reason": "",
-      "sorun": ""
+      "reason": "SERBEST: Novel sitesi: bolum sayfasi 316KB metin, gorsel sayfa yok; seri/bolum linkleri HTML de calisiyor."
     },
     "5798654863193396278": {
       "id": 5798654863193396278,
@@ -29371,19 +29285,6 @@
         "at": "2026-11-17T18:44:56Z"
       }
     },
-    "6072456827135650688": {
-      "id": 6072456827135650688,
-      "kind": "catalogue",
-      "title": "MangaBat",
-      "lang": "en",
-      "nsfw": 0,
-      "domain": "mangabats.com",
-      "packages": [],
-      "state": "engelli",
-      "device_step": "covers",
-      "sorun": "cloudflare",
-      "reason": "CF: cerez gerekiyor (olculemedi)"
-    },
     "6074095230818574849": {
       "id": 6074095230818574849,
       "kind": "catalogue",
@@ -29571,32 +29472,6 @@
         "ms": 0,
         "detail": "liste 0 / bölüm 0 / sayfa 0",
         "at": "2026-11-17T18:44:56Z"
-      }
-    },
-    "6080646864642055960": {
-      "id": 6080646864642055960,
-      "kind": "catalogue",
-      "title": "mangalami.com",
-      "lang": "th",
-      "nsfw": 0,
-      "domain": "mangalami.com",
-      "packages": [
-        "global"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T22:00:11.445Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T22:00:11.445Z"
       }
     },
     "6084020956957541828": {
@@ -30129,8 +30004,7 @@
         "detail": "tarama: liste 0 / bolum 0 / sayfa 0 — pop?ler liste bo?",
         "at": "2026-11-21T21:28:11Z"
       },
-      "reason": "",
-      "sorun": ""
+      "reason": "JS render (veri istemcide)"
     },
     "6175751919463125781": {
       "id": 6175751919463125781,
@@ -31717,24 +31591,6 @@
       },
       "device_step": "list",
       "kapali": true
-    },
-    "6620039325110469985": {
-      "id": 6620039325110469985,
-      "kind": "catalogue",
-      "title": "Shadow Çeviri",
-      "lang": "tr",
-      "nsfw": 0,
-      "domain": "shadowceviri.blogspot.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "liste/sayfa bos (harness)",
-        "at": "2026-11-17T18:04:21Z"
-      },
-      "reason": "SERBEST: Bölüm listesi şablonda Blogger label feed ile JS çekiliyor (label adı doğrulanamadı), bölüm görselleri HTML içinde 25 adet."
     },
     "6620603193106345631": {
       "id": 6620603193106345631,
@@ -33734,10 +33590,8 @@
       "lang": "all",
       "nsfw": 1,
       "domain": "moondaisyscans.pro",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "",
@@ -33746,12 +33600,13 @@
         "at": "2026-11-20T21:34:30Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-20T21:34:30Z"
-      }
+        "detail": "üye girişi kilidi: ts_reader images:[] / görüntülemek için giriş yapınız",
+        "at": "2026-11-23T19:18:14Z"
+      },
+      "reason": "MEDYA: sayfa görselleri yalnız üye girişinde; iki bölümde de images:[] (2026-11-23)"
     },
     "7116985965262136829": {
       "id": 7116985965262136829,
@@ -34063,25 +33918,6 @@
         "at": "2026-11-21T21:28:11Z"
       },
       "device_step": "list"
-    },
-    "7199847461939925125": {
-      "id": 7199847461939925125,
-      "kind": "catalogue",
-      "title": "LectorHentai",
-      "lang": "es",
-      "nsfw": 1,
-      "domain": "lectorhentai.com",
-      "packages": [],
-      "state": "failed",
-      "device": {
-        "status": "fail",
-        "http_code": "",
-        "ms": 0,
-        "detail": "harness: liste 25 / bölüm 22 / sayfa 0",
-        "at": "2026-11-17T19:55:06Z"
-      },
-      "device_step": "pages",
-      "reason": "JS_RENDER: Bolum listesi ve sayfalar jQuery ajax (/admin-ajax) ile geliyor; HTML'de gorsel yok."
     },
     "7206313674903334634": {
       "id": 7206313674903334634,
@@ -37381,10 +37217,8 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "lunarx.to",
-      "packages": [
-        "tr"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -37393,12 +37227,13 @@
         "at": "2026-11-17T22:49:58Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "yerel harness (list/chapters/pages>0)",
-        "at": "2026-11-17T22:49:58Z"
-      }
+        "detail": "CDN imzalı yol: vault.lunarx.to referersiz 403, refererli 404; okuyucu /api/cdn/p + eC token istiyor",
+        "at": "2026-11-23T19:18:14Z"
+      },
+      "reason": "MEDYA: pageApi data.images mutlak URL döndürüyor ama CDN imza istiyor; config ile çözülemez (2026-11-23 ölçümü)"
     },
     "8170497644902480619": {
       "id": 8170497644902480619,
@@ -37664,8 +37499,7 @@
         "at": "2026-11-21T21:28:11Z"
       },
       "device_step": "list",
-      "reason": "",
-      "sorun": ""
+      "reason": "BULUNAMADI: GET api.golgebahcesi.com/api/chapters/{slug}/{chapter}=200 fakat 241 sayfanin url alani bos (imageEnc:true), gorseller istemcide cozuluyor."
     },
     "8226934736647195750": {
       "id": 8226934736647195750,
@@ -38240,32 +38074,6 @@
         "at": "2026-11-16T22:05:11.851283Z"
       },
       "dead": true
-    },
-    "8399921646016000819": {
-      "id": 8399921646016000819,
-      "kind": "catalogue",
-      "title": "Euphoria Scan",
-      "lang": "pt",
-      "nsfw": 1,
-      "domain": "euphoriascan.com",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T22:00:11.445Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T22:00:11.445Z"
-      }
     },
     "8400532630224716727": {
       "id": 8400532630224716727,
@@ -41469,32 +41277,6 @@
       "domain": "toomtam-manga.com",
       "packages": [
         "global"
-      ],
-      "state": "active",
-      "health": {
-        "status": "ok",
-        "http_code": "200",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T22:00:11.445Z"
-      },
-      "device": {
-        "status": "pass",
-        "http_code": "",
-        "ms": 0,
-        "detail": "yerel harness",
-        "at": "2026-11-17T22:00:11.445Z"
-      }
-    },
-    "947646064643117123": {
-      "id": 947646064643117123,
-      "kind": "catalogue",
-      "title": "Mihentai",
-      "lang": "id",
-      "nsfw": 1,
-      "domain": "mihentai.com",
-      "packages": [
-        "global18"
       ],
       "state": "active",
       "health": {
