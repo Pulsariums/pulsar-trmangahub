@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23T19:21:35Z",
+  "generated": "2026-11-23T19:30:19Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -9109,10 +9109,8 @@
       "lang": "all",
       "nsfw": 1,
       "domain": "colorcitotoons.site",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "",
@@ -9121,12 +9119,13 @@
         "at": "2026-11-20T21:52:40Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "",
-        "at": "2026-11-20T21:52:40Z"
-      }
+        "detail": "orijin görselleri 404 (nutritivas.online ve wsrv.nl katmanı)",
+        "at": "2026-11-23T19:30:01Z"
+      },
+      "reason": "MEDYA: sayfa görsel URL'leri 404 text/html / 404 application/json (2026-11-23)"
     },
     "245090160632924176": {
       "id": 245090160632924176,
@@ -41196,10 +41195,8 @@
       "lang": "all",
       "nsfw": 1,
       "domain": "allporncomics.co",
-      "packages": [
-        "global18"
-      ],
-      "state": "active",
+      "packages": [],
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -41208,12 +41205,13 @@
         "at": "2026-11-20T18:56:14Z"
       },
       "device": {
-        "status": "pass",
+        "status": "fail",
         "http_code": "",
         "ms": 0,
-        "detail": "yerel harness (18+ dalgasi)",
-        "at": "2026-11-20T18:56:14Z"
-      }
+        "detail": "görseller orijinde 404: WP-manga/data ağacı (01.jpg/01.webp/001.jpg, refererli/referersiz)",
+        "at": "2026-11-23T19:30:01Z"
+      },
+      "reason": "MEDYA: bölüm HTML 200, img src var; görsel dosyaları sunucuda 404 (2026-11-23)"
     },
     "925134491016928900": {
       "id": 925134491016928900,
