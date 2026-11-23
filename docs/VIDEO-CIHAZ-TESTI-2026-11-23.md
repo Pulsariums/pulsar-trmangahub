@@ -87,20 +87,26 @@ dönerse/istisna atarsa popüler liste çekilip **başlıkta yerel filtre** uygu
 (`hasNextPage=false`). Böylece arama adımı, sunucu tarafı arama desteği olmayan parser'larda
 da sonuç döndürür.
 
-## Doğrulama (16.14)
+## Doğrulama (16.14 → 16.15)
 
-- CI: `build-video.yml` run **45230025334** → success.
-- Yayın: `repo/index.min.json` → iki kayıt **16.14 / code 16**, `nsfw` 0/1, kaynak 9/18.
-- APK'lar: `...pulsarvideo.apk` 1 906 063 B **200**, `...pulsarvideo18.apk` 1 906 063 B **200**
-  (md5 farklı: `08fe156b…` / `77103114…`).
+- CI: `build-video.yml` run **45230025334** (16.14) → success; run **45232606132** (16.15) → success.
+- Yayın: `repo/index.min.json` → iki kayıt **16.15 / code 17**, `nsfw` 0/1, kaynak 9/18.
+- APK'lar: `...pulsarvideo.apk` **200**, `...pulsarvideo18.apk` **200**;
+  md5 `4677612e…` / `f14bfb0d…` (16.14'ten farklı: `08fe156b…` / `77103114…`).
 - DEX'te yeni kod doğrulandı: `ajax/search`, `searchJsonTitle`, `keyword={query}`,
-  `preferDoh`, `X-Pulsar-Tls-Retry`.
+  `preferDoh`, `X-Pulsar-Tls-Retry`; manifest sürümü `16.15`.
+- DEX boyutu 5 132 972 / 5 132 968 B (flavor başına 4 B fark = BuildConfig bayrağı).
 
 ## Bilinen sınır (düzeltilemez)
 
 - **Kapak ve video oynatma** uygulamanın kendi istemcisinden geçer; eklentinin DoH/TLS
-  katmanı bu isteklere uygulanmaz. Jable/HohoJ kapakları, 黄果短剧 `octet-stream` kapağı bu
-  yüzden cihazda düşebilir.
-- HentaiPlay parser'ı hiç kapak döndürmüyor (masaüstünde 0/513).
+  katmanı bu isteklere uygulanmaz.
+- Jable (`assets-cdn.jable.tv`) ve HohoJ (`cdn-1.ggjav.com`) kapak URL'leri masaüstünde
+  **200 `image/jpeg`**; cihazda düşmeleri uygulama istemcisinin ağ yolundan.
+- 黄果短剧 kapağı (`pic.qnlycc.cn`) sunucudan **`binary/octet-stream`** olarak geliyor
+  (masaüstünde de). Test `Content-Type` ile karar verdiği için bu adım düşüyor; baytlar
+  görsel olsa da uygulama tarafında ayrı bir düzeltme gerekir.
+- HentaiPlay parser'ı listede kapak döndürmüyor (masaüstünde 0/513); detayda kapak var,
+  bu yüzden adaptörün kapak zenginleştirmesi ilk 10 kartı tamamlıyor.
 - MissAV/Jable gibi Cloudflare arkasındaki siteler cihazda "Just a moment" challenge'ı
   dönebilir; eklentide JS yok.
