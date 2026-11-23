@@ -275,6 +275,7 @@ public final class Harness {
             int[] probeIndexes = {0, chapterCount / 2, chapterCount - 1};
             int pageCount = 0;
             int probed = 0;
+            String firstImageUrl = null;
             for (int i = 0; i < probeIndexes.length && probed < 3; i++) {
                 int index = probeIndexes[i];
                 boolean duplicate = false;
@@ -303,6 +304,7 @@ public final class Harness {
                     if (pageCount > 0) {
                         String img = pages.get(0).getImageUrl();
                         if (img == null || img.isEmpty()) img = pages.get(0).getUrl();
+                        firstImageUrl = img;
                         if (isHtmlPage(img)) {
                             System.err.println("HARNESS_SAYFA_HTML " + domain + " #" + index + " " + img);
                             pageCount = 0;
@@ -316,6 +318,10 @@ public final class Harness {
                 if (pageCount > 0) {
                     break;
                 }
+            }
+
+            if (System.getenv("HARNESS_MEDYA") != null && pageCount > 0 && firstImageUrl != null) {
+                medyaCheck(domain, instance, firstImageUrl);
             }
 
             return jsonLine(domain, listCount, chapterCount, pageCount, "", sample);
@@ -842,8 +848,38 @@ public final class Harness {
      * uygulamada her biri kırık görsel olur. Ağ hatasında true döneriz: yanlış
      * negatif üretip çalışan kaynağı düşürmek daha kötü.
      */
-    private static boolean isHtmlPage(String url) {
-        if (url == null || !url.startsWith("http")) return false;
+    /**
+     * HARNESS_MEDYA=1: ilk sayfanın görsel adresini kaynağın KENDİ istemcisiyle
+     * indirir (Mihon okuyucuda sayfa görselini source.client ile çeker) ve
+     * durum / content-type / boyut yazar. `pages>0` görselin gerçekten
+     * açıldığını kanıtlamıyor; bu ölçüm onu kanıtlar.
+     */
+    private static void medyaCheck(String domain, Object instance, String url) {
+        if (url == null || !url.startsWith("http")) {
+            System.err.println("HARNESS_MEDYA " + domain + " YOK " + (url == null ? "" : url));
+            return;
+        }
+        try {
+            Method getClient = instance.getClass().getMethod("getClient");
+            okhttp3.OkHttpClient client = (okhttp3.OkHttpClient) getClient.invoke(instance);
+            int slash = url.indexOf('/', 8);
+            String referer = (slash > 0 ? url.substring(0, slash) : url) + "/";
+            okhttp3.Request req = new okhttp3.Request.Builder()
+                    .url(url)
+                    .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
+                    .header("Referer", referer)
+                    .build();
+            try (okhttp3.Response r = client.newCall(req).execute()) {
+                String ct = r.header("Content-Type", "");
+                long len = r.body() != null ? r.body().contentLength() : -1L;
+                System.err.println("HARNESS_MEDYA " + domain + " " + r.code() + " " + ct + " " + len + " " + url);
+            }
+        } catch (Throwable t) {
+            System.err.println("HARNESS_MEDYA " + domain + " HATA " + shortError(t));
+        }
+    }
+
+    private static boolean isHtmlPage(String url) {        if (url == null || !url.startsWith("http")) return false;
         java.net.HttpURLConnection c = null;
         try {
             c = (java.net.HttpURLConnection) URI.create(url).toURL().openConnection();
