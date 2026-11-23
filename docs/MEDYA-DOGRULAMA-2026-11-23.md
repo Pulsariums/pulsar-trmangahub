@@ -55,8 +55,23 @@ Bayt kontrolü (`-r 0-16`, ilk 8 bayt):
 `comichubfree.com`, `lunarx.to`, `moondaisyscans.pro`, `readmanga18.com`,
 `truyenhentai18.net`, `truyenhentaiz.net`, `allporncomics.co`, `colorcitotoons.site`,
 `rokuhentai.com`. Hepsi `kind=catalogue` → config ile tamir edilebilir.
-Öneriler `.work/tamir-medya/<domain>.json` altına yazılıyor; katalog ancak doğrulandıktan
-sonra değişecek.
+
+## Uygulanan tamirler (1.6.278)
+
+| Kaynak | İşlem | Doğrulama |
+|---|---|---|
+| `readmanga18.com` | `listPath` `/` → `/manga/` (asset'te doğrulandı) | `/manga/` ilk seri görseli **200 image/jpeg 2,39 MB**; harness'ın örneklediği "18+" serisi hâlâ 404 (seri bazlı ölü, site tarafı) |
+| `truyenhentai18.net` | `readerSelector` → `#viewer img:not([src*="bn.png"])` | **harness (yeni APK): 200 image/webp** |
+| `truyenhentaiz.net` | `readerSelector` → `#chapter-content img:not([src*="bn.png"])` | **harness (yeni APK): 200 image/webp** |
+| `lunarx.to` | `failed` | CDN imzalı yol: referersiz 403, refererli 404 |
+| `moondaisyscans.pro` | `failed` | üye girişi kilidi (`images:[]`, "giriş yapınız") |
+| `comichubfree.com` (yayındaki kayıt: MyComicList) | `failed` | gerçek `data-src` 200 ama gövde 80×104 PNG yer tutucu (2,4 KB) |
+| `allporncomics.co` | `failed` | `WP-manga/data` görselleri orijinde 404 |
+| `colorcitotoons.site` | `failed` | orijin görselleri 404 (nutritivas/wsrv) |
+| `rokuhentai.com` | **aktif bırakıldı** | seçici doğru; görseller `/_images/` CF challenge arkasında (cihazda WebView çözücü var) |
+
+Yayın (1.6.278): tr 48 / tr18 6 / global 261 / global18 299.
+Ölçüm verisi: `pulsar-v2/data/testler/2026-11-23-medya.json`.
 
 ## Video: gerçek akış URL'leri
 
