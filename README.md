@@ -2,7 +2,7 @@
 
 **Hem Mihon / Tachiyomi (APK) hem de Kototoro (JAR) için Bağımsız, Çok Dilli Manga Depoları**
 
-Bu depo iki ayrı dağıtım hattı sunar:
+Bu depo üç ayrı dağıtım hattı sunar (manga için ikisi, video için biri):
 1. **Kototoro için Klasik JAR Deposu:** Kototoro uygulamasının yerel uzantı sistemiyle %100 uyumlu, 4 modüler `.jar` paketi (`tr`, `tr_nsfw`, `global`, `global_nsfw`).
 2. **Mihon için Yeni Birleşik APK Deposu (Pulsar-V2):** Nyora tekniğiyle tek APK altında toplanmış, sıfır sunucu bağımlılıklı otomatik tamirli eklenti deposu.
 
@@ -38,6 +38,24 @@ Mihon yüklü cihazınızdan tek tıkla eklemek için:
    ```
    *(kök ayna adres: `https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/index.min.json`)*
 4. **Gözat → Eklentiler** sekmesinden dilediğiniz paketi kurun.
+
+---
+
+## 🎬 3. Video (Anime) Kaynakları — Kototoro / Aniyomi
+
+Manga paketlerinden bağımsız, **Aniyomi formatında** ayrı bir eklenti: **Pulsar Video** (normal) ve **Pulsar Video 18+**. Kototoro ve Aniyomi'de çalışır.
+
+Depo adresi:
+```text
+https://raw.githubusercontent.com/Pulsariums/pulsar-trmangahub/main/pulsar-video/repo
+```
+
+Kototoro → Ayarlar → Kaynaklar → Depo ekle → adresi yapıştır. Ayrıntılar, kaynak durumları ve CloudStream / JAR birleşik deposu: [pulsar-video/README.md](pulsar-video/README.md)
+
+| Paket | İçerik | Kaynak |
+|---|---|---|
+| **Pulsar Video** | GogoAnime, AniWorld ve diğer normal video siteleri | **9** |
+| **Pulsar Video 18+** | Yetişkin video siteleri | **18** |
 
 ---
 
