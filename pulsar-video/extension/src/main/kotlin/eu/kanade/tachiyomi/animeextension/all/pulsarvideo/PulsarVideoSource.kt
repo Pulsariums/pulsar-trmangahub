@@ -11,8 +11,10 @@ import eu.kanade.tachiyomi.animesource.model.Video
 import eu.kanade.tachiyomi.animesource.online.AnimeHttpSource
 import okhttp3.Dns
 import okhttp3.Interceptor
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.Response
 import java.io.IOException
 import java.net.InetAddress
@@ -20,12 +22,15 @@ import java.net.InetSocketAddress
 import java.net.Proxy
 import java.net.SocketException
 import java.net.UnknownHostException
+import java.net.URLEncoder
 import java.util.concurrent.ConcurrentHashMap
 import javax.net.ssl.SSLException
 import javax.net.ssl.SSLHandshakeException
+import org.json.JSONArray
 import org.json.JSONObject
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
+import org.jsoup.nodes.Element
 
 /**
  * Veri-güdümlü video kaynağı (Aniyomi `AnimeHttpSource`).
@@ -42,6 +47,9 @@ class PulsarVideoSource(
 ) : AnimeHttpSource() {
 
     private val config: JSONObject = rawConfig.optJSONObject("config") ?: JSONObject()
+
+    /** Detay sayfasından tamamlanan kapaklar: içerik url'si -> kapak ("" = yok). */
+    private val detailCoverCache = ConcurrentHashMap<String, String>()
 
     override val name: String = rawConfig.optString("name", "Pulsar Video")
     override val baseUrl: String = rawConfig.optString("baseUrl", "").trimEnd('/')
@@ -64,39 +72,187 @@ class PulsarVideoSource(
     }
 
     override fun popularAnimeParse(response: Response): AnimesPage {
-        val doc = response.asJsoup()
-        val sel = config.optString("itemSelector", "")
-        if (sel.isBlank()) return AnimesPage(emptyList(), false)
-        val items = doc.select(sel).mapNotNull { el ->
-            val a = el.selectFirst("a[href]") ?: return@mapNotNull null
-            SAnime.create().apply {
-                setUrlWithoutDomain(a.absUrl("href").ifBlank { a.attr("href") })
-                val titleAttr = config.optString("titleAttr", "")
-                title = if (titleAttr.isNotBlank()) {
-                    a.attr(titleAttr).ifBlank { el.attr(titleAttr) }
-                } else {
-                    el.selectFirst(config.optString("titleSelector", ""))?.text()
-                        ?: a.text()
-                }.ifBlank { "?" }
-                thumbnail_url = el.selectFirst("img")?.let { img ->
-                    img.absUrl("data-src").ifBlank { img.absUrl("src") }
-                }
-            }
-        }
+        val items = parseItems(
+            doc = response.asJsoup(),
+            itemSelector = config.optString("itemSelector", ""),
+            titleAttr = config.optString("titleAttr", ""),
+            coverSelector = config.optString("coverSelector", ""),
+        )
+        enrichCoversFromDetails(items)
         return AnimesPage(items, items.isNotEmpty())
     }
 
     override fun latestUpdatesRequest(page: Int) = popularAnimeRequest(page)
     override fun latestUpdatesParse(response: Response) = popularAnimeParse(response)
 
+    /**
+     * Arama üç biçimi destekler:
+     *  1) GET şablonu: `searchUrl` içinde `{query}` / `{page}`.
+     *  2) POST formu: `searchMethod: "POST"` + `searchBody` ("keyword={query}").
+     *  3) JSON yanıtı: `searchJsonTitle` doluysa gövde JSON dizisi/nesnesi olarak
+     *     okunur (`searchJsonUrl` = bağlantı alanı, `searchJsonCover` = kapak alanı).
+     * HTML sonuçlar `searchItemSelector`/`searchTitleAttr`/`searchCoverSelector`
+     * ile ayrıştırılır; boş bırakılanlar liste seçicilerine düşer.
+     */
     override fun searchAnimeRequest(page: Int, query: String, filters: AnimeFilterList): Request {
         val tpl = config.optString("searchUrl", "")
         if (tpl.isBlank()) throw Exception("Arama desteklenmiyor")
-        val url = tpl.replace("{query}", query).replace("{page}", page.toString())
-        return req(if (url.startsWith("http")) url else "$baseUrl$url")
+        val url = template(tpl, query, page).let { if (it.startsWith("http")) it else "$baseUrl$it" }
+        if (config.optString("searchMethod", "GET").trim().uppercase() == "POST") {
+            val body = template(
+                config.optString("searchBody", "q={query}"),
+                query,
+                page,
+                formEncoded = true,
+            )
+            return Request.Builder()
+                .url(url)
+                .headers(headers)
+                .post(body.toRequestBody("application/x-www-form-urlencoded".toMediaTypeOrNull()))
+                .build()
+        }
+        return req(url)
     }
 
-    override fun searchAnimeParse(response: Response) = popularAnimeParse(response)
+    override fun searchAnimeParse(response: Response): AnimesPage {
+        val jsonTitle = config.optString("searchJsonTitle", "").trim()
+        if (jsonTitle.isNotEmpty()) return jsonSearchParse(response, jsonTitle)
+        val items = parseItems(
+            doc = response.asJsoup(),
+            itemSelector = config.optString("searchItemSelector", "")
+                .ifBlank { config.optString("itemSelector", "") },
+            titleAttr = config.optString("searchTitleAttr", "")
+                .ifBlank { config.optString("titleAttr", "") },
+            coverSelector = config.optString("searchCoverSelector", "")
+                .ifBlank { config.optString("coverSelector", "") },
+        )
+        return AnimesPage(items, items.isNotEmpty())
+    }
+
+    /** Ortak HTML liste ayrıştırıcısı; liste ve arama aynı kodu kullanır. */
+    private fun parseItems(
+        doc: Document,
+        itemSelector: String,
+        titleAttr: String,
+        coverSelector: String,
+    ): List<SAnime> {
+        if (itemSelector.isBlank()) return emptyList()
+        return doc.select(itemSelector).mapNotNull { el ->
+            val a = el.selectFirst("a[href]") ?: return@mapNotNull null
+            val href = a.absUrl("href").ifBlank { a.attr("href") }
+            if (href.isBlank()) return@mapNotNull null
+            SAnime.create().apply {
+                setUrlWithoutDomain(href)
+                title = if (titleAttr.isNotBlank()) {
+                    a.attr(titleAttr).ifBlank { el.attr(titleAttr) }
+                } else {
+                    el.selectFirst(config.optString("titleSelector", ""))?.text()
+                        ?: a.text()
+                }.ifBlank { "?" }
+                thumbnail_url = coverOf(el, coverSelector)
+            }
+        }
+    }
+
+    /** Kapak: `coverSelector` (boşsa ilk `img`), önce data-src sonra src. */
+    private fun coverOf(el: Element, coverSelector: String): String? {
+        val img = el.selectFirst(coverSelector.ifBlank { "img" }) ?: return null
+        return img.absUrl("data-src").ifBlank { img.absUrl("src") }
+            .ifBlank { img.attr("data-src").ifBlank { img.attr("src") } }
+            .takeIf { it.isNotBlank() }
+    }
+
+    /**
+     * JSON arama yanıtı (ör. AniWorld `/ajax/search` → `[{title, description, link}]`).
+     * Kök dizi ya da `searchJsonArray` ile adlandırılmış dizi okunur; başlıktaki
+     * HTML (`<em>Naruto</em>`) temizlenir.
+     */
+    private fun jsonSearchParse(response: Response, titleKey: String): AnimesPage {
+        val text = response.body?.string().orEmpty().trim()
+        val arr: JSONArray = runCatching {
+            if (text.startsWith("[")) JSONArray(text) else JSONObject(text)
+                .optJSONArray(config.optString("searchJsonArray", ""))
+        }.getOrNull() ?: return AnimesPage(emptyList(), false)
+        val urlKey = config.optString("searchJsonUrl", "link")
+        val coverKey = config.optString("searchJsonCover", "").trim()
+        val root = config.optString("searchJsonBaseUrl", "").ifBlank { baseUrl }
+        val items = (0 until arr.length()).mapNotNull { i ->
+            val o = arr.optJSONObject(i) ?: return@mapNotNull null
+            val rawTitle = o.optString(titleKey, "").trim()
+            val link = o.optString(urlKey, "").trim()
+            if (rawTitle.isBlank() || link.isBlank()) return@mapNotNull null
+            SAnime.create().apply {
+                setUrlWithoutDomain(link)
+                title = Jsoup.parse(rawTitle).text().trim().ifBlank { "?" }
+                thumbnail_url = coverKey
+                    .takeIf { it.isNotEmpty() }
+                    ?.let { k -> o.optString(k, "").trim().takeIf { it.isNotEmpty() } }
+                    ?.let { absolute(it, root) }
+            }
+        }
+        return AnimesPage(items, items.isNotEmpty())
+    }
+
+    /**
+     * Kapaksız liste kartları için detay sayfasından kapak tamamlar
+     * (`coverFromDetail: true`). GogoAnime listesinde görsel yok; detayda
+     * `og:image` var. İlk `coverEnrichLimit` kart için en fazla
+     * `coverEnrichBudgetMs` süre harcanır, sonuç URL bazında önbelleklenir.
+     */
+    private fun enrichCoversFromDetails(items: List<SAnime>) {
+        if (!config.optBoolean("coverFromDetail", false)) return
+        val missing = items.filter { it.thumbnail_url.isNullOrBlank() }
+        if (missing.isEmpty()) return
+        val limit = config.optInt("coverEnrichLimit", 6).coerceIn(0, 20)
+        if (limit == 0) return
+        val budget = config.optInt("coverEnrichBudgetMs", 6_000).coerceIn(500, 20_000)
+        val selector = config.optString("coverMetaSelector", "meta[property=og:image]")
+        val deadline = System.currentTimeMillis() + budget
+        var done = 0
+        for (anime in missing) {
+            if (done >= limit || System.currentTimeMillis() > deadline) break
+            val cached = detailCoverCache[anime.url]
+            if (cached != null) {
+                if (cached.isNotBlank()) anime.thumbnail_url = cached
+                done++
+                continue
+            }
+            val cover = runCatching {
+                client.newCall(req(anime.url)).execute().use { resp ->
+                    if (!resp.isSuccessful) return@use ""
+                    val el = Jsoup.parse(resp.body?.string().orEmpty(), baseUrl)
+                        .selectFirst(selector) ?: return@use ""
+                    el.attr("content").ifBlank { el.absUrl("src").ifBlank { el.attr("src") } }
+                }
+            }.getOrDefault("")
+            if (detailCoverCache.size >= MAX_DETAIL_COVER_CACHE) detailCoverCache.clear()
+            detailCoverCache[anime.url] = cover
+            if (cover.isNotBlank()) anime.thumbnail_url = cover
+            done++
+        }
+    }
+
+    /** `{query}`/`{page}` yer tutucularını doldurur. */
+    private fun template(
+        tpl: String,
+        query: String,
+        page: Int,
+        formEncoded: Boolean = false,
+    ): String {
+        val q = if (formEncoded) {
+            runCatching { URLEncoder.encode(query, "UTF-8") }.getOrDefault(query)
+        } else {
+            query
+        }
+        return tpl.replace("{query}", q).replace("{page}", page.toString())
+    }
+
+    private fun absolute(value: String, root: String): String = when {
+        value.startsWith("http://") || value.startsWith("https://") -> value
+        value.startsWith("//") -> "https:$value"
+        value.startsWith("/") -> root.trimEnd('/') + value
+        else -> root.trimEnd('/') + "/" + value
+    }
 
     // ---- Detay ------------------------------------------------------------
 
@@ -329,10 +485,20 @@ class PulsarVideoSource(
             .build()
     }
 
-    /** baseClient ayarlarini kopyalar, ustune her zaman parcali TLS koyar. */
+    /**
+     * baseClient ayarlarini kopyalar, ustune her zaman parcali TLS koyar.
+     *
+     * BILINCLI DAVRANIS DEGISIKLIGI: yedek istemci **DoH-oncelikli** DNS kullanir.
+     * Engelli sitelerde ISP DNS'i NXDOMAIN yerine sahte/bayat bir IP dondurebiliyor;
+     * bu durumda istek hicbir zaman DoH'a dusmuyor ve TLS "trust anchor" /
+     * "connection reset" ile bitiyordu (cihaz raporu 2026-11-23: 15/18 18+ kaynak).
+     * Ilk deneme (baseClient) sistem DNS'iyle hizli kalir; yalniz TLS hatasindan
+     * sonraki yedek deneme DoH ile gercek IP'yi alir.
+     */
     private val fragmentClient: OkHttpClient by lazy {
         baseClient.newBuilder()
             .apply {
+                dohFallbackEndpoint?.let { dns(DohFallbackDns(it, preferDoh = true)) }
                 defaultTrustManager()?.let { tm ->
                     sslSocketFactory(TlsFragmentingSocketFactory(tlsFragmentSizes, tlsFragmentDelay), tm)
                 }
@@ -450,12 +616,30 @@ class PulsarVideoSource(
      *
      * Ayarli DoH kullanan kaynaklar da bu siniftan gecer: tek kod yolu.
      */
-    internal class DohFallbackDns(configuredEndpoint: String? = null) : Dns {
+    internal class DohFallbackDns(
+        configuredEndpoint: String? = null,
+        private val preferDoh: Boolean = false,
+    ) : Dns {
         private val bootstrap = OkHttpClient()
         private val endpoints: List<String> = buildEndpoints(configuredEndpoint)
 
         override fun lookup(hostname: String): List<InetAddress> {
             if (hostname == "localhost") return Dns.SYSTEM.lookup(hostname)
+
+            // Yedek istemci: once DoH. ISP DNS'i sahte IP dondurse bile gercek
+            // adres elde edilir; DoH uclarinin hepsi duserse sistem DNS'ine donulur.
+            if (preferDoh) {
+                CACHE[hostname]?.let { entry ->
+                    if (entry.expiresAt > System.currentTimeMillis()) return entry.addresses
+                    CACHE.remove(hostname)
+                }
+                val resolved = lookupDoh(hostname)
+                if (resolved.isNotEmpty()) {
+                    CACHE[hostname] = CacheEntry(resolved, System.currentTimeMillis() + CACHE_TTL_MS)
+                    return resolved
+                }
+                return Dns.SYSTEM.lookup(hostname)
+            }
 
             var systemFailure: UnknownHostException? = null
             try {
@@ -546,6 +730,11 @@ class PulsarVideoSource(
             // Bellek ici onbellek: surec (eklenti sinif yukleyici) omru boyunca yasar.
             val CACHE = ConcurrentHashMap<String, CacheEntry>()
         }
+    }
+
+    private companion object {
+        /** Detaydan tamamlanan kapak önbelleğinin üst sınırı. */
+        const val MAX_DETAIL_COVER_CACHE = 500
     }
 
     private fun req(url: String): Request = Request.Builder()

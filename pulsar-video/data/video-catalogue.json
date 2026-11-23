@@ -15,13 +15,18 @@
         "listPath": "/anime",
         "itemSelector": "ul#anime-list-items li",
         "titleAttr": "title",
+        "searchUrl": "https://gogoanime.onl/search?keyword={query}",
+        "searchItemSelector": "div.last_episodes ul.items li",
+        "searchCoverSelector": ".img img",
+        "coverFromDetail": true,
+        "coverMetaSelector": "meta[property=og:image]",
         "episodeSelector": "ul#episode_related li a",
         "hosterSelector": "div.anime_muti_link ul li a",
         "hosterUrlAttr": "data-video",
         "hosterUrlBase64": "1",
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
       },
-      "not": "2026-11-21: liste/detay/bolum olculdu; vidmoly embed -> master.m3u8 200 mpegurl. Liste ul#anime-list-items li (div.img=0, gorsel yok -> coverSelector yok); hoster linkleri div.anime_muti_link ul li a[href='#'][data-video] base64."
+      "not": "2026-11-21: liste/detay/bolum olculdu; vidmoly embed -> master.m3u8 200 mpegurl. Liste ul#anime-list-items li (div.img=0, gorsel yok); hoster linkleri div.anime_muti_link ul li a[href='#'][data-video] base64. 2026-11-23: arama /search?keyword= (form action) -> div.last_episodes ul.items li, kartta .img img kapak var; liste kapagi detay sayfasindaki og:image'den tamamlanir (coverFromDetail)."
     },
     {
       "id": "animepahe.com",
@@ -60,11 +65,17 @@
         "listPath": "/",
         "itemSelector": "div.coverListItem",
         "titleAttr": "title",
+        "searchUrl": "https://aniworld.to/ajax/search",
+        "searchMethod": "POST",
+        "searchBody": "keyword={query}",
+        "searchJsonTitle": "title",
+        "searchJsonUrl": "link",
+        "searchJsonBaseUrl": "https://aniworld.to",
         "episodeSelector": "a[data-episode-id]",
         "episodeNameAttr": "title",
         "hosterSelector": "a.watchEpisode"
       },
-      "not": "Zincir: /anime/stream/<slug>/staffel-1/episode-1 -> a.watchEpisode -> /redirect/... -> vidmoly embed -> file:'...master.m3u8' (motorun m3u8 regex'i yakalar). Ayni bolumde VOE/Filemoon/Doodstream de var; onlarin govdesinde duz akis YOK, uygulamada Vidmoly secilmeli."
+      "not": "Zincir: /anime/stream/<slug>/staffel-1/episode-1 -> a.watchEpisode -> /redirect/... -> vidmoly embed -> file:'...master.m3u8' (motorun m3u8 regex'i yakalar). Ayni bolumde VOE/Filemoon/Doodstream de var; onlarin govdesinde duz akis YOK, uygulamada Vidmoly secilmeli. 2026-11-23: /search?q= sunucu tarafinda sonuc dondurmuyor (JS); arama POST /ajax/search {keyword} -> JSON [{title,description,link}]."
     },
     {"id":"parser.aniworld","name":"AniWorld","lang":"en","nsfw":0,"domain":"aniworld.to","engine":"parser","parser":"ANIWORLD","config":{"parser":"ANIWORLD"},"not":"kototoro-parsers ANIWORLD (ContentType.VIDEO). getPages dogrudan m3u8 dondurur (Vidmoly); digerleri embed olarak etiketlenir."},
     {"id":"parser.agedm","name":"AGE动漫","lang":"zh","nsfw":0,"engine":"parser","parser":"AGEDM","config":{"parser":"AGEDM"}},

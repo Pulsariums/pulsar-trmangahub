@@ -74,8 +74,26 @@ class PulsarKotatsuVideoSource(
      */
     private val networkClient: OkHttpClient by lazy { buildNetworkClient() }
 
+    /**
+     * "Temiz" istemci: **DoH-oncelikli** DNS + parcali ClientHello + ayni TLS
+     * yedegi. ISP DNS'i engelli sitede NXDOMAIN yerine sahte IP / engel sayfasi
+     * dondurebiliyor; bu durumda TLS hatasi olusmadigi icin interceptor devreye
+     * girmiyor ve liste "bos" gorunuyor (cihaz raporu 2026-11-23: 8 kaynakta
+     * "Liste bos", ayni kaynaklar masaustunde 30/30 kart veriyor). Bu yuzden
+     * bos sonuc/istisna alinan kaynakta ayni cagri temiz istemciyle bir kez
+     * tekrarlanir ve kaynak o andan sonra temiz istemciye sabitlenir.
+     */
+    private val cleanClient: OkHttpClient by lazy { buildNetworkClient(preferDoh = true) }
+
     private val context by lazy { PulsarVideoLoaderContext(networkClient, cookieJar) }
     private val parser: ContentParser by lazy { context.newParserInstance(parserSource) }
+
+    private val cleanContext by lazy { PulsarVideoLoaderContext(cleanClient, cookieJar) }
+    private val cleanParser: ContentParser by lazy { cleanContext.newParserInstance(parserSource) }
+
+    /** Ilk deneme engel sayfasina dustuyse kaynak temiz istemciye gecer. */
+    @Volatile
+    private var useClean = false
 
     /**
      * Bölüm eşlemesi: `getEpisodeList` sırasında parser'ın döndürdüğü özgün
@@ -106,7 +124,33 @@ class PulsarKotatsuVideoSource(
 
     // ---- Liste -------------------------------------------------------------
 
-    private fun pageStep(): Int = (parser as? PagedContentParser)?.pageSize ?: 30
+    private fun pageStep(): Int = (activeParser() as? PagedContentParser)?.pageSize ?: 30
+
+    private fun activeParser(): ContentParser = if (useClean) cleanParser else parser
+
+    /**
+     * Parser çağrısını yürütür; sonuç boşsa ya da istisna atarsa aynı çağrı
+     * DoH-öncelikli istemciyle bir kez tekrarlanır. Tekrar başarılı olursa
+     * kaynak temiz istemciye sabitlenir (`useClean`), böylece sonraki adımlar
+     * da engel sayfasına düşmez.
+     */
+    private suspend fun <T> parserCall(
+        empty: (T) -> Boolean,
+        block: suspend (ContentParser) -> T,
+    ): T {
+        if (useClean) return block(cleanParser)
+        val first = try {
+            block(parser)
+        } catch (e: Exception) {
+            val retried = block(cleanParser)
+            useClean = true
+            return retried
+        }
+        if (!empty(first)) return first
+        val retried = block(cleanParser)
+        if (!empty(retried)) useClean = true
+        return retried
+    }
 
     private suspend fun list(page: Int, order: SortOrder, query: String? = null): AnimesPage {
         val filter = if (query.isNullOrBlank()) {
@@ -116,7 +160,8 @@ class PulsarKotatsuVideoSource(
         }
         // PagedContentParser offset'i kendi pageSize'iyle sayfaya çevirir;
         // offset daima pageSize'ın katı olmalı, yoksa sayfa atlanır.
-        val entries = parser.getList((page - 1) * pageStep(), order, filter)
+        val offset = (page - 1) * pageStep()
+        val entries = parserCall(empty = { it.isEmpty() }) { p -> p.getList(offset, order, filter) }
         // url/title boş kayıtlar hostta ValidationException üretir; atlanır.
         val pairs = entries.mapNotNull { content ->
             content.toSAnimeOrNull()?.let { content to it }
@@ -145,7 +190,9 @@ class PulsarKotatsuVideoSource(
                         val cover = if (cached != null) {
                             cached.ifEmpty { null }
                         } else {
-                            val details = runCatching { parser.getDetails(content) }.getOrNull()
+                            val details = runCatching {
+                                parserCall(empty = { false }) { p -> p.getDetails(content) }
+                            }.getOrNull()
                             val value = details?.let { coverUrlOf(it) }?.takeIf { it.isNotBlank() }
                             if (coverCache.size >= MAX_COVER_CACHE) coverCache.clear()
                             coverCache[content.url] = value.orEmpty()
@@ -195,17 +242,20 @@ class PulsarKotatsuVideoSource(
     override suspend fun getAnimeDetails(anime: SAnime): SAnime {
         val lib = anime.toLib()
         // Parser boş url/title döndürürse girişteki değerlere düşülür.
-        return parser.getDetails(lib).toSAnime(
-            fallbackTitle = anime.title.ifBlank { lib.title },
-            fallbackUrl = anime.url.ifBlank { lib.publicUrl },
-        )
+        return parserCall(empty = { false }) { p -> p.getDetails(lib) }
+            .toSAnime(
+                fallbackTitle = anime.title.ifBlank { lib.title },
+                fallbackUrl = anime.url.ifBlank { lib.publicUrl },
+            )
     }
 
     @Suppress("OVERRIDE_DEPRECATION")
     override suspend fun getEpisodeList(anime: SAnime): List<SEpisode> {
-        val full = parser.getDetails(anime.toLib())
+        val chapters = parserCall(empty = { it.isEmpty() }) { p ->
+            p.getDetails(anime.toLib()).chapters ?: emptyList()
+        }
         // Kronolojik artan -> Mihon'un beklediği en-yeni-önce sırası.
-        return (full.chapters ?: emptyList())
+        return chapters
             .sortedBy { it.number }
             .asReversed()
             .mapNotNull { chapter ->
@@ -222,8 +272,11 @@ class PulsarKotatsuVideoSource(
     @Suppress("OVERRIDE_DEPRECATION")
     override suspend fun getHosterList(episode: SEpisode): List<Hoster> {
         val knownChapter = synchronized(chapterCache) { chapterCache[episode.url] }
-        val pages = runCatching { parser.getPages(knownChapter ?: episode.toLibChapter()) }
-            .getOrElse { return emptyList() }
+        val pages = runCatching {
+            parserCall(empty = { it.isEmpty() }) { p ->
+                p.getPages(knownChapter ?: episode.toLibChapter())
+            }
+        }.getOrElse { return emptyList() }
         val videos = pages.mapNotNull { page ->
             val url = page.url.takeIf { it.startsWith("http") } ?: return@mapNotNull null
             val label = page.preview?.takeIf { it.isNotBlank() } ?: hostOf(url)
@@ -288,15 +341,18 @@ class PulsarKotatsuVideoSource(
      * isteklerini `context.httpClient` üzerinden kurduğu için bu istemci
      * onlara geçer; kaynak içinde ayrı istemci kurulmaz.
      */
-    private fun buildNetworkClient(): OkHttpClient {
+    private fun buildNetworkClient(preferDoh: Boolean = false): OkHttpClient {
         val base = super.client.newBuilder()
             .cookieJar(cookieJar)
             .followRedirects(true)
             .followSslRedirects(true)
-            .dns(PulsarVideoSource.DohFallbackDns(DEFAULT_DOH_ENDPOINT))
+            .dns(PulsarVideoSource.DohFallbackDns(DEFAULT_DOH_ENDPOINT, preferDoh))
             .build()
         val trust = defaultTrustManager() ?: return base
+        // Yedek istemci DoH-oncelikli: ISP DNS'i sahte IP dondurunce ilk deneme
+        // TLS'te duser; yedekte gercek adres + parcali ClientHello kullanilir.
         val fragmenting = base.newBuilder()
+            .dns(PulsarVideoSource.DohFallbackDns(DEFAULT_DOH_ENDPOINT, preferDoh = true))
             .sslSocketFactory(TlsFragmentingSocketFactory(), trust)
             .build()
         return base.newBuilder()
@@ -343,7 +399,10 @@ class PulsarKotatsuVideoSource(
         fallbackTitle: String = "",
         fallbackUrl: String = "",
     ): SAnime = SAnime.create().apply {
-        url = this@toSAnime.url.ifBlank { this@toSAnime.publicUrl }.ifBlank { fallbackUrl }
+        // publicUrl = içeriğin GERÇEK sayfa adresi (Kotatsu sözleşmesi). `url` çoğu
+        // parser'da yalnız kimliktir ("/NSFS-530"), detay isteği onunla 404 verir
+        // (MemoJav 2026-11-23: /NSFS-530 -> 301 -> /NSFS-530 404). Önce publicUrl.
+        url = this@toSAnime.publicUrl.ifBlank { this@toSAnime.url }.ifBlank { fallbackUrl }
         title = this@toSAnime.title.ifBlank { fallbackTitle }
         thumbnail_url = coverUrlOf(this@toSAnime)
         description = this@toSAnime.description
