@@ -28,6 +28,9 @@ import java.net.UnknownHostException
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.TimeUnit
 import javax.net.ssl.SSLException
+
+/** Bos liste yedegi istegi isaretleyen baslik: ayni istek iki kez tekrarlanmasin. */
+private const val EMPTY_RETRY_HEADER = "X-Pulsar-Empty-Retry"
 import javax.net.ssl.SSLHandshakeException
 
 class PulsarSource(
@@ -114,12 +117,31 @@ class PulsarSource(
      *
      * Ayarli DoH kullanan kaynaklar da bu siniftan gecer: tek kod yolu.
      */
-    private class DohFallbackDns(configuredEndpoint: String? = null) : Dns {
+    internal class DohFallbackDns(
+        configuredEndpoint: String? = null,
+        private val preferDoh: Boolean = false,
+    ) : Dns {
         private val bootstrap = OkHttpClient()
         private val endpoints: List<String> = buildEndpoints(configuredEndpoint)
 
         override fun lookup(hostname: String): List<InetAddress> {
             if (hostname == "localhost") return Dns.SYSTEM.lookup(hostname)
+
+            // Yedek istemci: once DoH. ISP DNS'i NXDOMAIN yerine sahte/bayat bir IP
+            // dondurebiliyor; o durumda istek TLS'te "trust anchor" ya da reset ile
+            // bitiyor ve eski yedek (yalniz parcali ClientHello) ayni IP'ye gidiyordu.
+            if (preferDoh) {
+                CACHE[hostname]?.let { entry ->
+                    if (entry.expiresAt > System.currentTimeMillis()) return entry.addresses
+                    CACHE.remove(hostname)
+                }
+                val resolved = lookupDoh(hostname)
+                if (resolved.isNotEmpty()) {
+                    CACHE[hostname] = CacheEntry(resolved, System.currentTimeMillis() + CACHE_TTL_MS)
+                    return resolved
+                }
+                return Dns.SYSTEM.lookup(hostname)
+            }
 
             var systemFailure: UnknownHostException? = null
             try {
@@ -267,10 +289,13 @@ class PulsarSource(
             .build()
     }
 
-    /** baseClient ayarlarini kopyalar, ustune her zaman parcali TLS koyar. */
+    /** baseClient ayarlarini kopyalar, ustune her zaman parcali TLS koyar.
+     *  DNS, yedek istemcide DoH-onceliklidir: ISP DNS'i sahte IP dondurse bile
+     *  gercek adres elde edilir (video tarafiyla ayni desen, 2026-11-23). */
     private val fragmentClient: OkHttpClient by lazy {
         baseClient.newBuilder()
             .apply {
+                dohFallbackEndpoint?.let { dns(DohFallbackDns(it, preferDoh = true)) }
                 defaultTrustManager()?.let { tm ->
                     sslSocketFactory(TlsFragmentingSocketFactory(tlsFragmentSizes, tlsFragmentDelay), tm)
                 }
@@ -297,7 +322,7 @@ class PulsarSource(
      * Sonsuz dongu korumasi: fragmentClient bu interceptor'i icermez; ayrica
      * X-Pulsar-Tls-Retry basligini tasiyan istek yeniden denenmez.
      */
-    private class TlsRetryInterceptor(private val fragmentClient: OkHttpClient) : Interceptor {
+    internal class TlsRetryInterceptor(private val fragmentClient: OkHttpClient) : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
             val request = chain.request()
             // Bu istek zaten parcali denemeyle gonderildiyse tekrar etme.
@@ -399,7 +424,28 @@ class PulsarSource(
         return Request.Builder().url(url).headers(headers).build()
     }
 
-    override fun popularMangaParse(response: Response): MangasPage {
+    override fun popularMangaParse(response: Response): MangasPage =
+        retryIfEmpty(response) { parsePopularPage(it) }
+
+    /**
+     * Liste bos dondugunde ayni istegi bir kez **DoH-oncelikli + parcali** istemciyle
+     * tekrarlar. ISP engeli bazen TLS hatasi degil, 200 + engel sayfasi uretiyor;
+     * o durumda interceptor devreye girmiyor ve kaynak "populer liste bos" oluyordu
+     * (video tarafinda ayni desen, cihaz raporu 2026-11-23).
+     */
+    private fun retryIfEmpty(response: Response, parse: (Response) -> MangasPage): MangasPage {
+        val first = parse(response)
+        if (first.mangas.isNotEmpty()) return first
+        if (response.request.header(EMPTY_RETRY_HEADER) != null) return first
+        val retry = response.request.newBuilder().header(EMPTY_RETRY_HEADER, "1").build()
+        return runCatching {
+            fragmentClient.newCall(retry).execute().use { r ->
+                if (!r.isSuccessful) first else parse(r)
+            }
+        }.getOrDefault(first)
+    }
+
+    private fun parsePopularPage(response: Response): MangasPage {
         if (config.optString("listJsonUrl", "").isNotBlank()) {
             return jsonListParse(response)
         }
@@ -488,9 +534,14 @@ class PulsarSource(
             .build()
     }
 
-    override fun searchMangaParse(response: Response): MangasPage {
+    override fun searchMangaParse(response: Response): MangasPage =
+        retryIfEmpty(response) { parseSearchPage(it) }
+
+    private fun parseSearchPage(response: Response): MangasPage {
         val arrayKey = config.optString("searchJsonItems", "")
-        if (arrayKey.isBlank()) return popularMangaParse(response)
+        // HTML arama: ayni ayristirici; ic ice tekrar olmasin diye popularMangaParse degil
+        // govde fonksiyonu cagrilir.
+        if (arrayKey.isBlank()) return parsePopularPage(response)
         val text = response.body?.string().orEmpty()
         // searchJsonItems düz anahtar ya da yol olabilir ("hits", "data.results",
         // "data.items[0].list"). Kök dizi cevabı da kabul edilir.

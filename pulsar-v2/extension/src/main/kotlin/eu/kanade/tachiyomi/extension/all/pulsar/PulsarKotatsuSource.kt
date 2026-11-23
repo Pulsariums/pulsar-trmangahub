@@ -7,7 +7,9 @@ import eu.kanade.tachiyomi.source.model.SChapter
 import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.source.model.SMangaUpdate
 import eu.kanade.tachiyomi.source.online.HttpSource
+import okhttp3.OkHttpClient
 import okhttp3.Request
+import org.koitharu.kotatsu.parsers.MangaParser
 import org.koitharu.kotatsu.parsers.model.MangaParserSource
 import org.koitharu.kotatsu.parsers.model.MangaState
 import org.koitharu.kotatsu.parsers.model.SortOrder
@@ -39,29 +41,109 @@ class PulsarKotatsuSource(
         PulsarPatches.TITLE_OVERRIDES[parserSource.name] ?: parserSource.title.ifBlank { parserSource.name }
     override val supportsLatest = true
 
-    private val context by lazy { PulsarContext(network.client) }
+    /**
+     * Parser'lara verilen istemci. Otelin `network.client`'i tek basina DoH/TLS
+     * katmani tasimiyor; bu yuzden manga motoru (PulsarSource) ile ayni yigdiz:
+     * sistem DNS -> DoH yedegi, TLS reset/trust-anchor yakalayan interceptor,
+     * parcali ClientHello. 2026-11-23: video tarafinda ayni duzeltme 10 kaynagi
+     * "liste bos/reset/trust-anchor" sinifindan cikardi.
+     */
+    private val networkClient: OkHttpClient by lazy { buildClient(preferDoh = false) }
+
+    /** Yedek istemci: DoH-oncelikli + parcali; bos sonuc/istisna tekrarinda kullanilir. */
+    private val cleanClient: OkHttpClient by lazy { buildClient(preferDoh = true) }
+
+    private val context by lazy { PulsarContext(networkClient) }
     private val parser by lazy { context.newParserInstance(parserSource).also { context.bindParser(it) } }
 
-    override val baseUrl by lazy { runCatching { "https://" + parser.domain }.getOrDefault("") }
-    override val client get() = context.httpClient
+    private val cleanContext by lazy { PulsarContext(cleanClient) }
+    private val cleanParser by lazy {
+        cleanContext.newParserInstance(parserSource).also { cleanContext.bindParser(it) }
+    }
+
+    @Volatile
+    private var useClean = false
+
+    private fun activeParser() = if (useClean) cleanParser else parser
+
+    private fun buildClient(preferDoh: Boolean): OkHttpClient {
+        val base = network.client.newBuilder()
+            .followRedirects(true)
+            .followSslRedirects(true)
+            .dns(PulsarSource.DohFallbackDns(null, preferDoh))
+            .build()
+        val trust = defaultTrustManager() ?: return base
+        if (preferDoh) {
+            return base.newBuilder()
+                .sslSocketFactory(TlsFragmentingSocketFactory(), trust)
+                .build()
+        }
+        val fragmenting = base.newBuilder()
+            .dns(PulsarSource.DohFallbackDns(null, preferDoh = true))
+            .sslSocketFactory(TlsFragmentingSocketFactory(), trust)
+            .build()
+        return base.newBuilder()
+            .addInterceptor(PulsarSource.TlsRetryInterceptor(fragmenting))
+            .build()
+    }
+
+    private fun defaultTrustManager(): javax.net.ssl.X509TrustManager? = runCatching {
+        val f = javax.net.ssl.TrustManagerFactory
+            .getInstance(javax.net.ssl.TrustManagerFactory.getDefaultAlgorithm())
+        f.init(null as java.security.KeyStore?)
+        f.trustManagers.filterIsInstance<javax.net.ssl.X509TrustManager>().firstOrNull()
+    }.getOrNull()
+
+    override val baseUrl by lazy { runCatching { "https://" + activeParser().domain }.getOrDefault("") }
+    override val client get() = if (useClean) cleanContext.httpClient else context.httpClient
+
+    /**
+     * Parser cagrisini yurutur; sonuc bos ya da istisna ise ayni cagri DoH-oncelikli
+     * istemciyle bir kez tekrarlanir. Basariliysa kaynak yedek istemciye sabitlenir.
+     */
+    private suspend fun <T> parserCall(
+        empty: (T) -> Boolean,
+        block: suspend (MangaParser) -> T,
+    ): T {
+        if (useClean) return block(cleanParser)
+        val first = try {
+            block(parser)
+        } catch (e: Exception) {
+            val retried = block(cleanParser)
+            useClean = true
+            return retried
+        }
+        if (!empty(first)) return first
+        val retried = block(cleanParser)
+        if (!empty(retried)) useClean = true
+        return retried
+    }
 
     private suspend fun list(page: Int, order: SortOrder, query: String?): MangasPage {
         val filter = if (query.isNullOrBlank()) LibFilter.EMPTY else LibFilter(query = query)
-        val entries = parser.getList((page - 1) * PAGE_STEP, order, filter)
+        val entries = parserCall(empty = { it.isEmpty() }) { p ->
+            p.getList((page - 1) * PAGE_STEP, order, filter)
+        }
         return MangasPage(entries.map { it.toSManga() }, hasNextPage = entries.isNotEmpty())
     }
 
     override suspend fun getPopularManga(page: Int): MangasPage = list(page, SortOrder.POPULARITY, null)
     override suspend fun getLatestUpdates(page: Int): MangasPage = list(page, SortOrder.UPDATED, null)
     // Bazi parser'lar aramayi desteklemiyor (SEARCH_NOT_SUPPORTED) ya da en az 3 karakter istiyor (ComicK/HoneyManga); istisna yerine bos sonuc donuyoruz.
-    override suspend fun getSearchManga(page: Int, query: String, filters: FilterList): MangasPage =
-        if (query.isBlank()) {
-            MangasPage(emptyList(), hasNextPage = false)
-        } else {
-            runCatching { list(page, SortOrder.RELEVANCE, query) }.getOrElse { e ->
-                if (e is IllegalArgumentException) MangasPage(emptyList(), hasNextPage = false) else throw e
-            }
-        }
+    // Kototoro kaynak testi aramayi zorunlu adim sayiyor: parser'in aramasi bos
+    // donerse populer liste cekilip baslikta yerel filtre uygulanir (video ile ayni).
+    override suspend fun getSearchManga(page: Int, query: String, filters: FilterList): MangasPage {
+        if (query.isBlank()) return MangasPage(emptyList(), hasNextPage = false)
+        val direct = runCatching { list(page, SortOrder.RELEVANCE, query) }.getOrNull()
+        if (direct != null && direct.mangas.isNotEmpty()) return direct
+        val popular = runCatching { list(page, SortOrder.POPULARITY, null) }.getOrNull()
+            ?: return MangasPage(emptyList(), hasNextPage = false)
+        val needle = query.trim().lowercase()
+        return MangasPage(
+            popular.mangas.filter { it.title.lowercase().contains(needle) },
+            hasNextPage = false,
+        )
+    }
 
     override suspend fun getMangaUpdate(
         manga: SManga,
@@ -69,7 +151,7 @@ class PulsarKotatsuSource(
         fetchDetails: Boolean,
         fetchChapters: Boolean,
     ): SMangaUpdate {
-        val full = parser.getDetails(manga.toLib())
+        val full = parserCall(empty = { false }) { p -> p.getDetails(manga.toLib()) }
         return SMangaUpdate(
             manga = full.toSManga(),
             chapters = (full.chapters ?: emptyList()).toMihonChapters(),
@@ -124,9 +206,10 @@ class PulsarKotatsuSource(
             url = chapter.url, scanlator = chapter.scanlator, uploadDate = 0, branch = null,
             source = parserSource,
         )
-        return parser.getPages(lib).mapIndexed { i, p ->
-            val raw = p.url.ifBlank { parser.getPageUrl(p) }
-            Page(i, "", raw.toAbsoluteUrl(parser.domain))
+        val pages = parserCall(empty = { it.isEmpty() }) { p -> p.getPages(lib) }
+        return pages.mapIndexed { i, p ->
+            val raw = p.url.ifBlank { activeParser().getPageUrl(p) }
+            Page(i, "", raw.toAbsoluteUrl(activeParser().domain))
         }
     }
 
