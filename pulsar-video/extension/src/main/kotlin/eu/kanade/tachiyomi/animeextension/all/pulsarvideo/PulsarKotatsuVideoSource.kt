@@ -287,15 +287,41 @@ class PulsarKotatsuVideoSource(
                 p.getPages(knownChapter ?: episode.toLibChapter())
             }
         }.getOrElse { return emptyList() }
+        // Bazi parser'larda sayfa bir "sunucu" yer tutucusudur (or. HentaiPlay:
+        // preview="Server 0", url=""); gercek akis adresi getPageUrl ile cozulur.
+        val active = activeParser()
         val videos = pages.mapNotNull { page ->
-            val url = page.url.takeIf { it.startsWith("http") } ?: return@mapNotNull null
+            val raw = if (page.url.startsWith("http")) {
+                page.url
+            } else {
+                runCatching {
+                    withTimeoutOrNull(PAGE_URL_TIMEOUT_MS) { active.getPageUrl(page) }.orEmpty()
+                }.getOrDefault("")
+            }
+            val url = raw.takeIf { it.startsWith("http") } ?: return@mapNotNull null
             val label = page.preview?.takeIf { it.isNotBlank() } ?: hostOf(url)
             val kind = if (isDirectStream(url)) "stream" else "embed"
-            Video(url, "$label · $kind")
+            Video(url, "$label · $kind", headers = playbackHeaders)
         }.sortedBy { if (isDirectStream(it.videoUrl)) 0 else 1 }
         if (videos.isEmpty()) return emptyList()
         return listOf(Hoster(hosterUrl = episode.url, hosterName = name, videoList = videos))
     }
+
+    /**
+     * Oynatma isteklerine eklenecek basliklar. Kanit (2026-11-23): Erome akisi
+     * referersiz 403, `Referer: https://www.erome.com/` ile 206 video/mp4;
+     * FPO.XXX refererli 302→200.
+     */
+    private val playbackHeaders: okhttp3.Headers by lazy {
+        okhttp3.Headers.Builder()
+            .set("User-Agent", PLAYBACK_UA)
+            .set("Referer", "$baseUrl/")
+            .build()
+    }
+
+    override fun headersBuilder() = super.headersBuilder()
+        .set("User-Agent", PLAYBACK_UA)
+        .set("Referer", "$baseUrl/")
 
     @Suppress("OVERRIDE_DEPRECATION")
     override suspend fun getVideoList(hoster: Hoster): List<Video> = hoster.videoList.orEmpty()
@@ -392,6 +418,14 @@ class PulsarKotatsuVideoSource(
 
         /** Kapak zenginleştirmesinin toplam süre sınırı. */
         const val COVER_ENRICH_TIMEOUT_MS = 8_000L
+
+        /** Oynatma/istek başlıklarında kullanılan masaüstü UA. */
+        const val PLAYBACK_UA =
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
+                "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+
+        /** Yer tutucu sayfa için `getPageUrl` çağrısının üst sınırı. */
+        const val PAGE_URL_TIMEOUT_MS = 15_000L
     }
 
     private fun isDirectStream(url: String): Boolean {
