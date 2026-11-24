@@ -1,5 +1,6 @@
 package eu.kanade.tachiyomi.extension.all.pulsar
 
+import eu.kanade.tachiyomi.extension.all.pulsar.native.HipmhSource
 import eu.kanade.tachiyomi.extension.all.pulsar.native.WebmotaSource
 import eu.kanade.tachiyomi.source.Source
 import org.json.JSONObject
@@ -23,6 +24,7 @@ internal object PulsarNative {
         return when (key) {
             // Hasat edilen Mihon kaynakları (Copy20, 2026-11-24)
             "webmota" -> WebmotaSource(item, lang)
+            "hipmh" -> HipmhSource(item, lang)
             else -> null
         }
     }

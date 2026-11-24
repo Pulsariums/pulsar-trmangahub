@@ -18520,6 +18520,25 @@
         "mihon_copy20_2026-11-24"
       ],
       "not": "Mihon Copy20 (tachiyomi-zh.baozimanhuaplus v1.6.6) hasadi; native sinif WebmotaSource. Liste /api/bzmhq/amp_comic_list (JSON 36), detay ?section_slot=0 SSR bolum listesi, bolum bagi /user/page_direct (302), okuyucu amp-state JSON. Statik app basliklari, imza yok."
+    },
+    {
+      "id": "m.hipmh.com",
+      "name": "嬉皮漫畫",
+      "lang": "zh",
+      "nsfw": 0,
+      "domain": "m.hipmh.com",
+      "baseUrl": "https://m.hipmh.com",
+      "engine": "native",
+      "native": "hipmh",
+      "status": "measured",
+      "config": {
+        "engine": "native"
+      },
+      "selector_verified": true,
+      "origins": [
+        "mihon_copy20_2026-11-24"
+      ],
+      "not": "Mihon Copy20 (tachiyomi-zh.hipmh v1.6.1) hasadi; native sinif HipmhSource. Liste HTML /popularity, son guncelleme+arama hipapi1.s3file.top JSON, bolum /v1/manga/chapters, okuyucu reader.hipmh.top + /v2/chapter (images kodlu string -> cozucu)."
     }
   ]
 }
