@@ -133,3 +133,19 @@ harness ile doğrulanıp global18'e terfi ettirilecek; geçmezse `failed` işare
 
 Kural: Mihon eklentisi HTML/JSON ile config'e çevrilebiliyorsa alınır; istemci tarafı JS,
 giriş kilidi veya imzalı API varsa **parser yazılmadıkça** alınmaz (uydurma seçici yazılmaz).
+
+### Native kaynak sonucu (2026-11-24)
+
+Config motoruna sığmayanlar için `engine: native` yolu eklendi (`PulsarNative` kayıt defteri +
+`PulsarSource` türevleri). Bytecode tersine mühendislik raporları: `.work/arsiv/mihon/copy20/spec/`.
+
+| Kaynak | Sınıf | Durum | Harness |
+|---|---|---|---|
+| 包子漫画+ (tw.webmota.com) | `WebmotaSource` | **global yayında** | liste 36 / bölüm 242 / sayfa 1; görsel 200 `image/webp` 156 KB |
+| 嬉皮漫畫 (m.hipmh.com) | `HipmhSource` | **global yayında** | liste 18 / bölüm 50 / sayfa 19; görsel 200 `image/webp` 212 KB |
+| 拷贝漫画 (copy3000.com) | — | alınmadı | bölüm uçları HTTP 210 "korsan istemci"; jeton WebView `/system/config` ile alınıyor, saf HTTP ile alınamadı |
+| vomic漫+ (vomicmh.com) | — | alınmadı | okuyucu `/c/getChapterInfo` 401 — giriş zorunlu |
+
+`HipmhSource` görsel `images` alanı şifre değil: `qM9`/`Z7` önek-sonek, `Vx`/`pL0` işaretleri,
+7'lik parça ters çevirme ve özel alfabeli Base64 ile deterministik çözülüyor
+(sunucu yanıtıyla doğrulandı: 200 `image/webp`).

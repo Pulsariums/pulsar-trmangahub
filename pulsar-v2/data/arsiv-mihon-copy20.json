@@ -16,7 +16,7 @@
    "sha256": "b05df0a61a305cf7025c99a277767d192a253437c34f7b0f69a58527c67cf298",
    "baseUrl": "https://www.copy3000.com",
    "convertible": false,
-   "reason": "Liste kartlarında kapak yok (sıralama blokları metin+link); bölüm HTML'inde sayfa görseli yok; api.copy3000.com/api/v3/... HTTP 210 'korsan istemci/1 saat' kilidi döndürüyor."
+   "reason": "Liste kartlarında kapak yok (sıralama blokları metin+link); bölüm HTML'inde sayfa görseli yok; api.copy3000.com/api/v3/... HTTP 210 'korsan istemci/1 saat' kilidi döndürüyor. BOLUM UCLARI HTTP 210 (korsan istemci) ile kapali; jeton WebView /system/config uzerinden aliniyor, saf HTTP ile alinamadi."
   },
   {
    "pkg": "eu.kanade.tachiyomi.extension.zh.vomicmh",
@@ -26,7 +26,7 @@
    "sha256": "10783faa2f85f2da6a2bc1607ad4a6a4b7440e1472641c39db177212d24ffad4",
    "baseUrl": "https://vomicmh.com/",
    "convertible": false,
-   "reason": "Okuyucu giriş istiyor: RSC isLogin:false, getChapterInfo 401; arama /so/search 404."
+   "reason": "Okuyucu giriş istiyor: RSC isLogin:false, getChapterInfo 401; arama /so/search 404. Okuyucu ucu /c/getChapterInfo 401 (giris zorunlu)."
   },
   {
    "pkg": "eu.kanade.tachiyomi.extension.zh.baozimanhuaplus",
@@ -36,7 +36,10 @@
    "sha256": "fab25b18306a3a9152e6a08892d31069e98df40d729d983a7a6ca9840ce28c32",
    "baseUrl": "https://tw.webmota.com/",
    "convertible": false,
-   "reason": "Liste 108 kart (div.comics-card) ama bölüm listesi Nuxt istemci tarafında; uç bulunamadı."
+   "reason": "tw.webmota.com native sinif olarak yazildi (JSON liste + section_slot=0 bolum + amp-state okuyucu); harness 36/242/1, gorsel 200 image/webp.",
+   "implemented": true,
+   "catalogueId": "tw.webmota.com",
+   "nativeClass": "WebmotaSource"
   },
   {
    "pkg": "eu.kanade.tachiyomi.extension.zh.manwayuplus",
@@ -57,8 +60,11 @@
    "sha256": "8b5045228a9a1fcfe4c24afc6563454c8e0dd67a616ccd789deb10ec9549a9c0",
    "baseUrl": "https://m.hipmh.com",
    "convertible": false,
-   "reason": "Liste 36 kart HTML'de; bölüm API'den (hipapi1.s3file.top/v1/manga/chapters) ama okuyucu sayfa görselleri istemcide üretiliyor; /v1/manga/chapter/<hid> 404."
+   "reason": "m.hipmh.com native sinif olarak yazildi (HTML liste + JSON API + kodlu images cozucusu); harness 18/50/19, gorsel 200 image/webp.",
+   "implemented": true,
+   "catalogueId": "m.hipmh.com",
+   "nativeClass": "HipmhSource"
   }
  ],
- "not": "sha256 alanları arşivlenen APK'ların baytlarına aittir. Dönüştürülebilir tek kaynak manwayuplus (manwauu.cc); katalog kaydı ve test süreci ayrı yürür."
+ "not": "sha256 alanları arşivlenen APK'ların baytlarına aittir. Dönüştürülebilir tek kaynak manwayuplus (manwauu.cc); katalog kaydı ve test süreci ayrı yürür. webmota ve hipmh native sinif olarak yayina alindi (global); copy3000 ve vomicmh HTTP ile cozulemedi."
 }
