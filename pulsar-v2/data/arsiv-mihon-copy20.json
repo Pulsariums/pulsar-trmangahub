@@ -1,0 +1,64 @@
+{
+ "generated": "2026-11-24",
+ "repo": "https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/index.min.json",
+ "repoMeta": {
+  "name": "TheNano",
+  "website": "https://littlesurvival.github.io/copymanga-copy20/",
+  "signingKeyFingerprint": "896d1ca35175c42baf61b1a157e4354df9568beed4ccc82a03762d1167005e79"
+ },
+ "archive": ".work/arsiv/mihon/copy20/ (APK + dönüştürülmüş JAR; git dışı)",
+ "sources": [
+  {
+   "pkg": "eu.kanade.tachiyomi.extension.zh.copymanga",
+   "name": "拷贝漫画",
+   "version": "1.6.87",
+   "apk": "tachiyomi-zh.copymanga-v1.6.87.apk",
+   "sha256": "b05df0a61a305cf7025c99a277767d192a253437c34f7b0f69a58527c67cf298",
+   "baseUrl": "https://www.copy3000.com",
+   "convertible": false,
+   "reason": "Liste kartlarında kapak yok (sıralama blokları metin+link); bölüm HTML'inde sayfa görseli yok; api.copy3000.com/api/v3/... HTTP 210 'korsan istemci/1 saat' kilidi döndürüyor."
+  },
+  {
+   "pkg": "eu.kanade.tachiyomi.extension.zh.vomicmh",
+   "name": "vomic漫+",
+   "version": "1.6.4",
+   "apk": "tachiyomi-zh.vomicmh-v1.6.4.apk",
+   "sha256": "10783faa2f85f2da6a2bc1607ad4a6a4b7440e1472641c39db177212d24ffad4",
+   "baseUrl": "https://vomicmh.com/",
+   "convertible": false,
+   "reason": "Okuyucu giriş istiyor: RSC isLogin:false, getChapterInfo 401; arama /so/search 404."
+  },
+  {
+   "pkg": "eu.kanade.tachiyomi.extension.zh.baozimanhuaplus",
+   "name": "包子漫画+",
+   "version": "1.6.6",
+   "apk": "tachiyomi-zh.baozimanhuaplus-v1.6.6.apk",
+   "sha256": "fab25b18306a3a9152e6a08892d31069e98df40d729d983a7a6ca9840ce28c32",
+   "baseUrl": "https://tw.webmota.com/",
+   "convertible": false,
+   "reason": "Liste 108 kart (div.comics-card) ama bölüm listesi Nuxt istemci tarafında; uç bulunamadı."
+  },
+  {
+   "pkg": "eu.kanade.tachiyomi.extension.zh.manwayuplus",
+   "name": "漫蛙2+",
+   "version": "1.6.10",
+   "apk": "tachiyomi-zh.manwayuplus-v1.6.10.apk",
+   "sha256": "91ab04cc2b1a03f3499e0bce4a66ccd5d437381b119611f9e009e6201432db88",
+   "baseUrl": "https://manwari.cc/",
+   "convertible": true,
+   "catalogueId": "manwauu.cc",
+   "reason": "manwari.cc 301 -> manwauu.cc. Liste a[href^=/comic/] 60, bölüm div.chapter-item 30, okuyucu imzasız JSON /api/comic/image/{chapterId} -> data.images[].url (200 image/jpeg 305904 B). Kart kapağı div.thumb_img[data-src]; kartta <img> yok -> kapak boş kalabilir."
+  },
+  {
+   "pkg": "eu.kanade.tachiyomi.extension.zh.hipmh",
+   "name": "嬉皮漫畫",
+   "version": "1.6.1",
+   "apk": "tachiyomi-zh.hipmh-v1.6.1.apk",
+   "sha256": "8b5045228a9a1fcfe4c24afc6563454c8e0dd67a616ccd789deb10ec9549a9c0",
+   "baseUrl": "https://m.hipmh.com",
+   "convertible": false,
+   "reason": "Liste 36 kart HTML'de; bölüm API'den (hipapi1.s3file.top/v1/manga/chapters) ama okuyucu sayfa görselleri istemcide üretiliyor; /v1/manga/chapter/<hid> 404."
+  }
+ ],
+ "not": "sha256 alanları arşivlenen APK'ların baytlarına aittir. Dönüştürülebilir tek kaynak manwayuplus (manwauu.cc); katalog kaydı ve test süreci ayrı yürür."
+}

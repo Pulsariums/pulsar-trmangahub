@@ -35,7 +35,6 @@ Kototoro/Mihon/Aniyomi bunları tüketmez. Bizim tarafa doğrudan girenler:
 | Kohi-den, komikku-app, nana-xd, Secozzi, mihonapp, KudoAni (Aniyomi) | — | 404 | — | Ölü/taşınmış. |
 
 ### Mihon'u "tamamlamak" için iki yol
-
 **A) Uygulamaya depo ekle (dakikalar).** Eksik olan tek canlı Mihon deposu
 **CopyManga Copy20** (5 kaynak). Adres:
 `https://raw.githubusercontent.com/LittleSurvival/copymanga-copy20/repo/index.min.json`
@@ -114,3 +113,23 @@ Kototoro `index.min.json`'a düşüyor — v2 geçişi bizim tarafta zorunlu de�
 | url (çöp kayıt) | IReader | `https://www.google.com/url/index.min.json` | ekli |
 | IReaderorg/IReader-extensions | IReader | `https://raw.githubusercontent.com/IReaderorg/IReader-extensions/repov2/…` | ekli |
 | XIU2 Yuedu | Legado | `https://cdn.jsdmirror.com/gh/XIU2/Yuedu/shuyuan` | yeni |
+
+## CopyManga Copy20 hasadı (2026-11-24)
+
+Mihon listesindeki tek canlı eksik depo (**TheNano / Copy20**, 5 eklenti, APK'lar 200) indirildi,
+JAR'a çevrildi ve kaynakları tek tek ölçüldü. Arşiv: `.work/arsiv/mihon/copy20/` (git dışı).
+Provenance + sha256: `pulsar-v2/data/arsiv-mihon-copy20.json`.
+
+| Eklenti | Site | Ölçüm | Sonuç |
+|---|---|---|---|
+| 拷贝漫画 | copy3000.com | liste kapaksız; bölüm HTML'inde görsel yok; API HTTP 210 anti-piracy kilidi | **dönüştürülemez** |
+| vomic漫+ | vomicmh.com | okuyucu giriş istiyor (RSC isLogin:false, getChapterInfo 401) | **dönüştürülemez** |
+| 包子漫画+ | tw.webmota.com | liste 108 kart; bölüm listesi Nuxt istemci tarafı, uç yok | **dönüştürülemez** |
+| **漫蛙2+** | manwari.cc → **manwauu.cc** | liste 60 / bölüm 30 / okuyucu JSON `/api/comic/image/{chapterId}` → `data.images[].url` (200 image/jpeg 305 KB) | **dönüştürüldü** |
+| 嬉皮漫畫 | m.hipmh.com | liste 36 kart; bölüm API'de; okuyucu sayfaları istemcide üretiliyor | **dönüştürülemez** |
+
+Dönüştürülen tek kaynak `manwauu.cc` adıyla kataloğa eklendi (nsfw=1). Test paketinde
+harness ile doğrulanıp global18'e terfi ettirilecek; geçmezse `failed` işaretlenecek.
+
+Kural: Mihon eklentisi HTML/JSON ile config'e çevrilebiliyorsa alınır; istemci tarafı JS,
+giriş kilidi veya imzalı API varsa **parser yazılmadıkça** alınmaz (uydurma seçici yazılmaz).
