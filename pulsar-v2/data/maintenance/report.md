@@ -1,7 +1,7 @@
 # Pulsar otomatik bakım raporu
 
-- Üretim: 2026-11-17T14:29:36Z  |  kaynak sonucu: 0
-- Özet: dogrulandi:30, gecici-erişim-hata:27, host-açıldı:2, karantina-kalktı:1, quarantine:44, repair:1, watch:90
+- Üretim: 2026-11-24T15:57:14Z  |  kaynak sonucu: 0
+- Özet: dogrulandi:49, gecici-erişim-hata:35, host-açıldı:4, karantina-kalktı:5, quarantine:45, repair:1, watch:94
 
 | Kaynak | Sınıf | Karar | Detay |
 |---|---|---|---|
@@ -13,11 +13,12 @@
 | AnisaManga (4645282634064046819) | SWEEP | quarantine | sweep: anisamanga.com ölü (erişilemedi(URLError)); 0 aday doğrulanamadı |
 | ArcuraFansub (6427620697796849177) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | ArmoniScans (7894614281626720954) | SWEEP | watch | sweep: erişilemedi(TimeoutError) (kesin ölüm değil, izlenir) |
-| AsemiFansub (8477234751942924198) | SWEEP | quarantine | asemifansub.com marka-farkli-yonlendirme(quoterivers.com) |
+| AsemiFansub (8477234751942924198) | SWEEP | quarantine | asemifansub.com marka-farkli-yonlendirme(theworldschools.org) |
 | AsuraScansTR (8039923198974129014) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
-| AthenaManga (111322155383399025) | SWEEP | watch | sweep: yanit-401 (kesin ölüm değil, izlenir) |
+| AthenaManga (111322155383399025) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | Atikrost (5780285915019996741) | SWEEP | quarantine | www.mangaoku.org marka-farkli-yonlendirme(mangaoku.com.tr) |
 | AyaToon (1376577409108611807) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
+| CloverManga (5943193894247680779) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | CultureSubs (3731345054251723521) | SWEEP | quarantine | sweep: culturesubs.com ölü (erişilemedi(URLError)); 0 aday doğrulanamadı |
 | DeccalScans (6079771261904476856) | SWEEP | quarantine | sweep: fuchscans.com ölü (erişilemedi(URLError)); 0 aday doğrulanamadı |
 | DomalFansub (4623752850376877027) | SWEEP | quarantine | domalfansb.com.tr marka-farkli-yonlendirme(5744422763.channelpl.com) |
@@ -27,8 +28,6 @@
 | EsoManga (5783543145789372133) | SWEEP | quarantine | sweep: esomanga.com ölü (yanit-401); 0 aday doğrulanamadı |
 | Gafeland (5784698602441107348) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | GaiaToon (5784701058565822220) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
-| GarciaManga (2776111846383631153) | SWEEP | karantina-kalktı | sweep: sağlam |
-| garciamanga.com (2776111846383631153) | SWEEP | host-açıldı | sweep: sağlam |
 | GhostFansub (8226934736647195750) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | GloryManga (6912615781364678293) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | Grimelek (5785150848886155708) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
@@ -46,6 +45,7 @@
 | LaviniaFansub (8378971690294176887) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
 | LichSubs (5789005791492500131) | SWEEP | quarantine | www.kuroimanga.com canlı görünüyor AMA upstream @Broken |
 | LilyumFansub (3678974139357715977) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
+| LunaScans (4225231225069731944) | SWEEP | karantina-kalktı | sweep: sağlam |
 | Mangacim (5789623240606888229) | SWEEP | quarantine | sweep: mangacim.com.tr ölü (erişilemedi(URLError)); 0 aday doğrulanamadı |
 | Mangacix (5789623240607215930) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | MangaEfendisi (5824161584162899529) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
@@ -56,25 +56,29 @@
 | Mangaoku (5789623240952523411) | SWEEP | quarantine | mangaoku.info canlı görünüyor AMA upstream @Broken |
 | MangaOkusana (3758482848022057842) | SWEEP | quarantine | sweep: mangaokusana.com ölü (manga-izi-yok); 0 aday doğrulanamadı |
 | MangaOkuTr (2134596331978282453) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
-| MangaRuhu (4234251772225348094) | SWEEP | quarantine | mangaruhu.com marka-farkli-yonlendirme(mangaruhu.net) |
+| MangaRuhu (4234251772225348094) | SWEEP | quarantine | mangaruhu.com marka-farkli-yonlendirme(ruhmanga.net) |
 | MangaSehri.com (2134596436329422687) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | MangaSehri.net (5835612613850101406) | SWEEP | quarantine | sweep: manga-sehri.net ölü (spam-icerik); 0 aday doğrulanamadı |
-| MangaSiginagi (5835717275901038433) | SWEEP | quarantine | sweep: mangasiginagi.com ölü (yanit-401); 0 aday doğrulanamadı |
+| MangaSiginagi (5835717275901038433) | SWEEP | quarantine | mangasiginagi.com canlı görünüyor AMA upstream @Broken |
 | MangaTilkisi (3758613085871119009) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | MangaTr (1376874560920005520) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
 | MangaWt.com (1376874560922835665) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | MangaWt.net (1608889112777444179) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
-| Manwe (673270465301806234) | SWEEP | quarantine | sweep: manwe.pro ölü (erişilemedi(RemoteDisconnected)); 0 aday doğrulanamadı |
+| MangaDenizi (3758899467340376098) | SWEEP | karantina-kalktı | sweep: sağlam |
+| Manwe (673270465301806234) | SWEEP | quarantine | sweep: manwe.pro ölü (yanit-456); 0 aday doğrulanamadı |
 | Mikrokosmosfb (1956357450137632728) | SWEEP | watch | sweep: yanit-429 (kesin ölüm değil, izlenir) |
 | MilaSub (1376881324213826323) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
-| MindaFansub (7907717461407418534) | SWEEP | quarantine | sweep: mindafansub.online ölü (spam-yonlendirme); 1 aday doğrulanamadı |
-| MoonDaisyScans (2264580951411441594) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
+| MindaFansub (7907717461407418534) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
+| MoonDaisyScans (2264580951411441594) | SWEEP | quarantine | sweep: moondaisyscans.biz ölü (spam-yonlendirme); 0 aday doğrulanamadı |
 | NabiScans (4259345160785297062) | SWEEP | repair->nabicix.com | sweep tamiri: aday doğrulandı (ok) |
 | NirvanaManga (343839699839506457) | SWEEP | watch | sweep: yanit-521 (kesin ölüm değil, izlenir) |
+| niverafansub.org (3076140639542878834) | SWEEP | host-açıldı | sweep: sağlam |
 | NoxScans (5790821884388407577) | SWEEP | quarantine | sweep: www.noxscans.com ölü (manga-izi-yok); 0 aday doğrulanamadı |
 | NyxManga (5791086114124500337) | SWEEP | quarantine | sweep: nyxmanga.com ölü (yanit-401); 0 aday doğrulanamadı |
 | OpiaToon (5791654679194078693) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | PatiManga (4310637861291484852) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
+| PiedpiperFansub (3581135968918069737) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
+| piedpiperfansubyy.me (1153896383471563721) | SWEEP | host-açıldı | sweep: sağlam |
 | PrunusScans (5425569062261084453) | SWEEP | quarantine | sweep: prunusscans.com ölü (erişilemedi(URLError)); 0 aday doğrulanamadı |
 | Raindrop Fansub (5888421834799938159) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
 | RobinManga (6418857290741556046) | SWEEP | quarantine | sweep: www.guildknives.com ölü (erişilemedi(URLError)); 1 aday doğrulanamadı |
@@ -82,18 +86,19 @@
 | RuyaManga (4377972755806414361) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | SadScans (5794532813292313368) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | SarcasmScans (1348804626010052830) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
-| ShadowCeviri (2121016891599622380) | SWEEP | watch | sweep: yanit-429 (kesin ölüm değil, izlenir) |
-| SnscoeurTurkey (1610469579808167756) | SWEEP | watch | sweep: yanit-429 (kesin ölüm değil, izlenir) |
 | StrayFansub (6379770814877065740) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | SummerToon (7368085083996674415) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
+| TarotScans (7651742155925383372) | SWEEP | karantina-kalktı | sweep: sağlam |
 | TempestFansub.Com (7366855138145938403) | SWEEP | quarantine | sweep: tempestscans.net ölü (erişilemedi(URLError)); 1 aday doğrulanamadı |
 | tempestmangas.com (5067175583958641562) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | TempestScans (3807978410042868468) | SWEEP | quarantine | adumanga.com marka-farkli-yonlendirme(riddles-with-answers.com) |
+| TilkiScans (7849977061084682679) | SWEEP | karantina-kalktı | sweep: sağlam |
 | TimeNaight (7850641826358118318) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
 | TitanManga (7856273789128595632) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | TrWebtoon (4426281071318329362) | SWEEP | quarantine | trwebtoon.com marka-farkli-yonlendirme(trmanga.com) |
 | ViyaFansub (212318319699807184) | SWEEP | quarantine | sweep: viyafansub.com ölü (erişilemedi(URLError)); 0 aday doğrulanamadı |
 | WebtoonHatti (6359063432093703606) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
+| WebtoonTr (4491309248779553622) | SWEEP | karantina-kalktı | sweep: sağlam |
 | YaoiBar (1377191865684637297) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | YaoiFlix (5799459692662431969) | SWEEP | quarantine | yaoiflix.me marka-farkli-yonlendirme(5744422763.channelpl.com) |
 | YaoiMangaOku (2912196475858692337) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
@@ -105,41 +110,47 @@
 | AlliedFansub (891763215572096733) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | anikiga.com (2268549974061786227) | SWEEP | host-açıldı | sweep: sağlam |
 | Arcura Fansub (3194760788292645390) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
+| AthenaManga (5925244894679392886) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
+| Averis Fansub (3488647577143589694) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
 | DeccalScans (2503547837178658661) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
 | Dragon Ball Multiverse (8652051024894671152) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
 | Elder Manga (1203470067124874019) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | Eleceed Türkiye (2919132306397933009) | SWEEP | quarantine | eleceedturkiye.com marka-farkli-yonlendirme(nabicix.com) |
 | Eski Mangalar (3105018861730110456) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
+| Gafeland (3179435076707922441) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | Gaiatoon (5447717829511226753) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | HoiFansub (6877555224237718104) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
-| JuraTempest (4707537438786051688) | SWEEP | quarantine | juratempe.st marka-farkli-yonlendirme(m.youtube.com) |
+| JuraTempest (4707537438786051688) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
 | Koreli Scans (1869704280753989197) | SWEEP | quarantine | nabimanga.com marka-farkli-yonlendirme(nabicix.com) |
 | LaviniaFansub (845371345206609558) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
 | Limon Manga (1461972285187368456) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | Manga Kulesi (4826777915948697530) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | Manga Portalı (8901726653993792036) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | Manga-TR (4062366187196257270) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
-| MangaDot (4063816157291029180) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
+| MangaDenizi (8131725821546908076) | SWEEP | watch | sweep: yanit-503 (kesin ölüm değil, izlenir) |
 | MangaKazani (4329973151094502235) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
+| MangaRuhu (2139896355107159006) | SWEEP | quarantine | ruhmanga.com marka-farkli-yonlendirme(ruhmanga.net) |
 | MangaWT (8461894771860958934) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
+| ww16.mangaoku.info (4021130600798442386) | SWEEP | host-açıldı | sweep: sağlam |
 | Mangitto (8462394428445828805) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | MerlinToon (661348012455677696) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
+| Mikrokosmos Fansub (6174331399853269477) | SWEEP | watch | sweep: yanit-429 (kesin ölüm değil, izlenir) |
 | MilaSub (3102562105875263557) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | Minda Fansub (7567809191033269015) | SWEEP | watch | sweep: yanit-502 (kesin ölüm değil, izlenir) |
 | NoxScans (4231843737385138446) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
 | OkuToon (798888619164960500) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | Ori Manga (1579611945590569251) | SWEEP | watch | sweep: yanit-503 (kesin ölüm değil, izlenir) |
-| Pati Manga (670740038008065849) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
+| PatiManga (670740038008065849) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | Raindrop Fansub (357698414057326452) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
 | RavenScans (6279075557994312388) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | RobinManga (3154568042786734518) | SWEEP | watch | sweep: erişilemedi(URLError) (kesin ölüm değil, izlenir) |
-| Shadow Çeviri (6620039325110469985) | SWEEP | watch | sweep: yanit-429 (kesin ölüm değil, izlenir) |
+| SadScans (258218291388547981) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | Tenshi Manga (796370516133815754) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | TimeNaight (5863442274693704416) | SWEEP | watch | sweep: manga-izi-yok (kesin ölüm değil, izlenir) |
 | TitanManga (5117503242233509669) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | TrWebtoon (2178892498027704727) | SWEEP | quarantine | trwebtoon.com marka-farkli-yonlendirme(trmanga.com) |
 | Uzay Manga (3541806057642489392) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
-| Yaoi Flix (3212366893365143622) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
+| Webtoon Hatti (4061344289012005112) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
+| Yaoi Flix (3212366893365143622) | SWEEP | quarantine | yaoiflix.fit marka-farkli-yonlendirme(yaoiflix.nl) |
 | Yaoi Manga Oku (6718632900011266890) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
 | ZenithScans (4274410594283057355) | SWEEP | watch | sweep: yanit-503 (kesin ölüm değil, izlenir) |
-| gafeland (3179435076707922441) | SWEEP | watch | sweep: yanit-403 (kesin ölüm değil, izlenir) |
