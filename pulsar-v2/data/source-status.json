@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23T19:30:19Z",
+  "generated": "2026-11-24T18:00:35Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -4814,8 +4814,7 @@
         "at": "2026-11-17T10:02:04Z"
       },
       "reason": "Domain canli ama icerik yok: /manga/99-in-love-2/ 673 bayt donuyor ve govde DEMO version only includes 4 pages diyor; yayinda gercek seri/bolum yok.",
-      "dead": true,
-      "kapali": true
+      "dead": true
     },
     "1722921089165749142": {
       "id": 1722921089165749142,
@@ -7417,7 +7416,7 @@
       "nsfw": 0,
       "domain": "ruhmanga.com",
       "packages": [],
-      "state": "failed",
+      "state": "dead",
       "device": {
         "status": "fail",
         "http_code": "",
@@ -7425,7 +7424,8 @@
         "detail": "bolumler uye/coin kilitli",
         "at": "2026-11-19T10:50:55Z"
       },
-      "reason": "bolumler uye/coin kilitli"
+      "reason": "bolumler uye/coin kilitli",
+      "kapali": true
     },
     "2145489765485420150": {
       "id": 2145489765485420150,
@@ -11725,7 +11725,8 @@
       "packages": [],
       "state": "engelli",
       "sorun": "cloudflare",
-      "reason": "CF: cerez gerekiyor (olculemedi)"
+      "reason": "CF: cerez gerekiyor (olculemedi)",
+      "kapali": true
     },
     "3214236158395279214": {
       "id": 3214236158395279214,
@@ -14293,11 +14294,12 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "www.mangadenizi.net",
-      "packages": [],
-      "state": "dead",
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
       "device_step": "list",
-      "reason": "kopya: ayni domainde calisan katalog kaydi var",
-      "kapali": true
+      "reason": "kopya: ayni domainde calisan katalog kaydi var"
     },
     "3758907033275771070": {
       "id": 3758907033275771070,
@@ -17936,7 +17938,7 @@
       "nsfw": 1,
       "domain": "tuhafscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -17951,8 +17953,7 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list",
-      "kapali": true
+      "device_step": "list"
     },
     "4226106584062559336": {
       "id": 4226106584062559336,
@@ -19357,15 +19358,14 @@
       "nsfw": 0,
       "domain": "nabiscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "failed",
       "device": {
         "status": "fail",
         "http_code": "",
         "ms": 0,
         "detail": "HttpStatusException: . Status=400, URL=[https://www.nabicix.com/wp-admin/admin-ajax.php]",
         "at": "2026-11-17T15:05:59.415241Z"
-      },
-      "kapali": true
+      }
     },
     "4261578293782511821": {
       "id": 4261578293782511821,
@@ -21039,6 +21039,26 @@
       "device_step": "list",
       "reason": "harness: popüler liste boş"
     },
+    "4438781150391522406": {
+      "id": 4438781150391522406,
+      "kind": "catalogue",
+      "title": "漫蛙2+",
+      "lang": "zh",
+      "nsfw": 1,
+      "domain": "manwauu.cc",
+      "packages": [
+        "test18"
+      ],
+      "state": "pending",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel curl: liste 60 / bölüm 30 / görsel 200 image/jpeg",
+        "at": "2026-11-24T18:00:21Z"
+      },
+      "reason": "mihon_copy20 hasadı; test paketinde doğrulanacak"
+    },
     "4443273864042127108": {
       "id": 4443273864042127108,
       "kind": "catalogue",
@@ -21343,10 +21363,11 @@
       "lang": "tr",
       "nsfw": 0,
       "domain": "webtoontr.net",
-      "packages": [],
-      "state": "dead",
-      "reason": "kopya: ayni domainde calisan katalog kaydi var",
-      "kapali": true
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "reason": "kopya: ayni domainde calisan katalog kaydi var"
     },
     "4491758654893492698": {
       "id": 4491758654893492698,
@@ -35258,7 +35279,7 @@
       "nsfw": 0,
       "domain": "www.tarotscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "failed",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -35273,8 +35294,7 @@
         "detail": "list: ",
         "at": "2026-11-17T08:09:33Z"
       },
-      "device_step": "list",
-      "kapali": true
+      "device_step": "list"
     },
     "7663701235462277388": {
       "id": 7663701235462277388,
@@ -35949,15 +35969,14 @@
       "nsfw": 0,
       "domain": "www.tilkiscans.com",
       "packages": [],
-      "state": "dead",
+      "state": "failed",
       "device": {
         "status": "cloudflare",
         "http_code": "",
         "ms": 0,
         "detail": "covers+pages Cloudflare - cihaz 2026-11-16T21:42Z",
         "at": "2026-11-16T21:42:28Z"
-      },
-      "kapali": true
+      }
     },
     "7850418808484344907": {
       "id": 7850418808484344907,
@@ -36075,8 +36094,7 @@
         "at": "2026-11-17T18:15:56Z"
       },
       "reason": "Park/el degistirmis: 302 surveymrs.com adresine yonlendiriyor, icerik yok.",
-      "dead": true,
-      "kapali": true
+      "dead": true
     },
     "7894614281626720954": {
       "id": 7894614281626720954,

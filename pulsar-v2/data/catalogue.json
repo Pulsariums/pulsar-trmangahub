@@ -16094,6 +16094,37 @@
       "dead": false
     },
     {
+      "id": "manwauu.cc",
+      "name": "漫蛙2+",
+      "lang": "zh",
+      "nsfw": 1,
+      "domain": "manwauu.cc",
+      "baseUrl": "https://manwauu.cc",
+      "engine": "custom",
+      "status": "measured",
+      "config": {
+        "dnsOverHttps": "https://cloudflare-dns.com/dns-query",
+        "listPath": "/",
+        "itemSelector": "a[href^='/comic/']",
+        "chapterSelector": "div.chapter-item",
+        "pageApiUrl": "https://manwauu.cc/api/comic/image/{1}",
+        "pageApiIdPattern": "/(\\d+)$",
+        "pageApiItems": "data.images",
+        "pageApiFieldUrl": "url",
+        "searchUrl": "https://manwauu.cc/api/search?keyword={query}",
+        "searchJsonItems": "data.list",
+        "searchJsonUrl": "id",
+        "searchJsonTitle": "title",
+        "searchJsonPathPrefix": "https://manwauu.cc/comic",
+        "searchJsonCover": "cover"
+      },
+      "selector_verified": true,
+      "origins": [
+        "mihon_copy20_2026-11-24"
+      ],
+      "not": "Mihon Copy20 (tachiyomi-zh.manwayuplus v1.6.10) hasadı. manwari.cc 301 -> manwauu.cc. Liste a[href^=/comic/] 60, bölüm div.chapter-item 30, okuyucu imzasız JSON /api/comic/image/{chapterId} -> data.images[].url (ölçüldü: 200 image/jpeg 305904 B, FF D8 FF E0). Kart kapağı div.thumb_img[data-src] içinde, kartta <img> yok -> kapak boş kalabilir."
+    },
+    {
       "id": "mehentai.live",
       "name": "Mehentai",
       "lang": "all",
