@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24T19:07:22Z",
+  "generated": "2026-11-24T19:14:32Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -23234,9 +23234,9 @@
       "nsfw": 0,
       "domain": "m.hipmh.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -23244,7 +23244,13 @@
         "detail": "yerel curl: liste 18 / bolum 5 / gorsel 200 image/webp 212140",
         "at": "2026-11-24T19:05:44Z"
       },
-      "reason": "mihon_copy20 hasadi; test paketinde dogrulanacak"
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: liste 18 / bolum 50 / sayfa 19 (image/webp 200, 212140 B)",
+        "at": "2026-11-24T19:14:31Z"
+      }
     },
     "503588840434121011": {
       "id": 503588840434121011,
