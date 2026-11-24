@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24T18:05:38Z",
+  "generated": "2026-11-24T18:50:42Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -33228,6 +33228,26 @@
       },
       "device_step": "list",
       "kapali": true
+    },
+    "7012293859137126277": {
+      "id": 7012293859137126277,
+      "kind": "catalogue",
+      "title": "包子漫画+",
+      "lang": "zh",
+      "nsfw": 0,
+      "domain": "tw.webmota.com",
+      "packages": [
+        "test"
+      ],
+      "state": "pending",
+      "health": {
+        "status": "ok",
+        "http_code": "200",
+        "ms": 0,
+        "detail": "yerel curl: liste 36 / bolum 266 / okuyucu amp-state",
+        "at": "2026-11-24T18:49:50Z"
+      },
+      "reason": "mihon_copy20 hasadi; test paketinde dogrulanacak"
     },
     "7016559135046000239": {
       "id": 7016559135046000239,

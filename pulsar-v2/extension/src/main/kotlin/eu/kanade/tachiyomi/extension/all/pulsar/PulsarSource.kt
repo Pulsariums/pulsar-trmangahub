@@ -33,7 +33,7 @@ import javax.net.ssl.SSLHandshakeException
 /** Bos liste yedegi istegi isaretleyen baslik: ayni istek iki kez tekrarlanmasin. */
 private const val EMPTY_RETRY_HEADER = "X-Pulsar-Empty-Retry"
 
-class PulsarSource(
+open class PulsarSource(
     private val rawConfig: JSONObject,
     override val lang: String
 ) : HttpSource() {

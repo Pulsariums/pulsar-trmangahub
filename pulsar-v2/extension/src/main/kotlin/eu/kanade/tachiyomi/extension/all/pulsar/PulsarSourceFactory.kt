@@ -85,7 +85,14 @@ class PulsarSourceFactory : SourceFactory {
                 }
                 if (PulsarPatches.isDeadHost(domain, alt)) continue   // probe ölü dedi
 
-                runCatching { list.add(PulsarSource(item, itemLang)) }
+                runCatching {
+                    if (item.optString("engine") == "native") {
+                        // Config'in ifade edemediği site: elle yazılmış sınıf.
+                        PulsarNative.create(item, itemLang)?.let { list.add(it) }
+                    } else {
+                        list.add(PulsarSource(item, itemLang))
+                    }
+                }
             }
             list
         }.getOrDefault(emptyList())
