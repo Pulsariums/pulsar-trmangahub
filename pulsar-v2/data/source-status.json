@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24T18:50:42Z",
+  "generated": "2026-11-24T18:59:26Z",
   "sources": {
     "1011099944966201016": {
       "id": 1011099944966201016,
@@ -33237,9 +33237,9 @@
       "nsfw": 0,
       "domain": "tw.webmota.com",
       "packages": [
-        "test"
+        "global"
       ],
-      "state": "pending",
+      "state": "active",
       "health": {
         "status": "ok",
         "http_code": "200",
@@ -33247,7 +33247,13 @@
         "detail": "yerel curl: liste 36 / bolum 266 / okuyucu amp-state",
         "at": "2026-11-24T18:49:50Z"
       },
-      "reason": "mihon_copy20 hasadi; test paketinde dogrulanacak"
+      "device": {
+        "status": "pass",
+        "http_code": "",
+        "ms": 0,
+        "detail": "harness: liste 36 / bolum 242 / sayfa 1 (image/webp 200, 156768 B)",
+        "at": "2026-11-24T18:59:18Z"
+      }
     },
     "7016559135046000239": {
       "id": 7016559135046000239,
